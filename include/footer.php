@@ -43,27 +43,32 @@
             	<div class="footer-top">
                 	<div class="row">
                     	<div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                            <div class="logo" style="padding-top: 0;">
+                    <a href="index.html">
+                    	<img src="assets/images/logo.png" alt="Z1" title="Z1" />
+                    </a>
+                </div>
                         	<h4 class="h4">About us</h4>
                             <p>Zodiacal Overseas Pvt. Ltd. is an India based professional manufacturing and marketing company dealing in health products. Established in 2012, ZOPL has already created a strong presence in the global online sales market as well the domestic Indian market.</p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        	<h4 class="h4">Informations</h4>
+                        	<h4 class="h4">Quick Links</h4>
                             <ul>
-                            	<li><a href="#">About us</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; condition</a></li>
-                                <li><a href="#">My Account</a></li>
+                            	<li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">Video</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        	<h4 class="h4">Customer Services</h4>
+                        	<h4 class="h4">Disclaimer</h4>
                             <ul>
-                            	<li><a href="#">Request Personal Data</a></li>
-                                <li><a href="#">FAQ's</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Support Center</a></li>
+                            	<li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Returns & Refunds</a></li>
+                                <li><a href="#">Shipping & Delivery</a></li>
+                                <li><a href="#">My Account</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
@@ -93,7 +98,7 @@
                                 <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
                                 <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
                             </ul>
-<p>Powered By: Tectignis IT Solutions.</p>
+<p>Developed By: <a href="tectignis.in" target="_blank">Tectignis IT Solutions.</a></p>
                         </div>
                         <!--End Footer Payment Icon-->
                     </div>
