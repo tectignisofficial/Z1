@@ -339,7 +339,9 @@ input:focus ~ .bg-light {
 .btn-primary {
   border-color: #7367f0 !important;
   background-color: #7367f0 !important;
-  color: #fff !important; }
+  color: #fff !important;
+  font-size: 12px;
+  font-family: 'Montserrat'; }
 
 .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   color: #fff;

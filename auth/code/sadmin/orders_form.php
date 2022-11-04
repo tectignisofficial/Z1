@@ -16,7 +16,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
-
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <!-- END: Vendor CSS-->
@@ -36,6 +35,15 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+        .border-top-color {
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .pd-all-10-20 {
+            padding: 10px 20px;
+        }
+    </style>
     <!-- END: Custom CSS-->
 
 </head>
@@ -68,13 +76,14 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Ecommerce</h2>
+                            <h2 class="content-header-title float-start mb-0">Orders</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item">Ecommerce</li>
-                                    <li class="breadcrumb-item active">Report</li>
+                                    <li class="breadcrumb-item active">Ecommerce</li>
+                                    <li class="breadcrumb-item active">Orders</li>
+                                    <li class="breadcrumb-item active">Create an order</li>
                                 </ol>
                             </div>
                         </div>
@@ -85,143 +94,123 @@
                 <!-- Basic Horizontal form layout section start -->
                 <section id="basic-horizontal-layouts">
                     <div class="row">
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-8 col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Horizontal Form</h4>
+                                    <h4 class="card-title">Order information</h4>
                                 </div>
                                 <div class="card-body">
                                     <form class="form form-horizontal">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="first-name">First Name</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <input type="text" id="first-name" class="form-control" name="fname" placeholder="First Name" />
+                                                    <div class="col-sm-12">
+                                                        <input type="text" id="first-name" class="form-control"
+                                                            name="fname" placeholder="Search or Create a new Product" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="email-id">Email</label>
+                                                    <div class="col-sm-6">
+                                                        <label class="col-form-label" for="email-id">Note</label>
+                                                        <input type="email" id="email-id" class="form-control"
+                                                            name="email-id" placeholder="Note for order" />
                                                     </div>
-                                                    <div class="col-sm-9">
-                                                        <input type="email" id="email-id" class="form-control" name="email-id" placeholder="Email" />
+                                                    <div class="col-sm-6">
+                                                        <div class="table-wrap">
+                                                            <table
+                                                                class="table-normal table-none-border table-color-gray-text text-right">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="color-subtext">Amount</td>
+                                                                        <td class="pl10">0.00 ₹</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="#" class="hover-underline"
+                                                                                role="button"><span><i
+                                                                                        class="fa fa-plus-circle"></i>
+                                                                                    Add discount</span>
+                                                                                <!----></a>
+                                                                            <!---->
+                                                                        </td>
+                                                                        <td class="pl10">0.00 ₹</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="#" class="hover-underline"
+                                                                                role="button"><span><i
+                                                                                        class="fa fa-plus-circle"></i>
+                                                                                    Add shipping fee</span>
+                                                                                <!----></a>
+                                                                            <p class="mb0 font-size-12px">Default</p>
+                                                                        </td>
+                                                                        <td class="pl10">0.00 ₹</td>
+                                                                    </tr>
+                                                                    <tr class="text-no-bold">
+                                                                        <td>Extra Charge</td>
+                                                                        <td class="pl10"><input
+                                                                                type="text" id="extra_charge"
+                                                                                name="extra_charge" class="form-control"
+                                                                                style="height: 30px; text-align: right; width: 70px;">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="text-no-bold">
+                                                                        <td>Total amount</td>
+                                                                        <td class="pl10">0.00 ₹</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="contact-info">Mobile</label>
+                                            <div class="pd-all-10-20 border-top-color">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                                        <div class="flexbox-grid-default mt5 mb5">
+                                                            <div class="flexbox-auto-left p-r10"><i
+                                                                    class="fa fa-credit-card fa-1-5 color-blue"></i>
+                                                            </div>
+                                                            <div class="flexbox-auto-content">
+                                                                <div class="text-upper ws-nm">Confirm payment and create
+                                                                    order</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-9">
-                                                        <input type="number" id="contact-info" class="form-control" name="contact" placeholder="Mobile" />
-                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 text-right"><button
+                                                            type="reset" class="btn btn-primary me-1">Paid</button>
+                                                        <button type="reset" class="btn btn-outline-secondary">Pay
+                                                            Later</button></div>
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="password">Password</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <input type="password" id="password" class="form-control" name="password" placeholder="Password" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9 offset-sm-3">
-                                                <div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck1" />
-                                                        <label class="form-check-label" for="customCheck1">Remember me</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9 offset-sm-3">
-                                                <button type="reset" class="btn btn-primary me-1">Submit</button>
-                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-4 col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Horizontal Form with Icons</h4>
+                                    <h4 class="card-title">Customer information</h4>
                                 </div>
                                 <div class="card-body">
                                     <form class="form form-horizontal">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="fname-icon">First Name</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
+                                                    <div class="col-sm-12">
                                                         <div class="input-group input-group-merge">
-                                                            <span class="input-group-text"><i data-feather="user"></i></span>
-                                                            <input type="text" id="fname-icon" class="form-control" name="fname-icon" placeholder="First Name" />
+
+                                                            <input type="text" id="fname-icon" class="form-control"
+                                                                name="fname-icon"
+                                                                placeholder="Search or Create a Customer" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="email-icon">Email</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <div class="input-group input-group-merge">
-                                                            <span class="input-group-text"><i data-feather="mail"></i></span>
-                                                            <input type="email" id="email-icon" class="form-control" name="email-id-icon" placeholder="Email" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="contact-icon">Mobile</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <div class="input-group input-group-merge">
-                                                            <span class="input-group-text"><i data-feather="smartphone"></i></span>
-                                                            <input type="number" id="contact-icon" class="form-control" name="contact-icon" placeholder="Mobile" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-1 row">
-                                                    <div class="col-sm-3">
-                                                        <label class="col-form-label" for="pass-icon">Password</label>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <div class="input-group input-group-merge">
-                                                            <span class="input-group-text"><i data-feather="lock"></i></span>
-                                                            <input type="password" id="pass-icon" class="form-control" name="contact-icon" placeholder="Password" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9 offset-sm-3">
-                                                <div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck2" />
-                                                        <label class="form-check-label" for="customCheck2">Remember me</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-9 offset-sm-3">
+                                            <!-- <div class="col-sm-9 offset-sm-3">
                                                 <button type="reset" class="btn btn-primary me-1">Submit</button>
-                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </form>
                                 </div>
