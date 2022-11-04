@@ -129,12 +129,12 @@
             <thead>
               <tr role="row">
                 <th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 66px;" aria-label="Date: activate to sort column ascending">Order Date</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 115px;" aria-label="Name: activate to sort column ascending">Order No.</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 236px;" aria-label="Email: activate to sort column ascending">Customer</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 177px;" aria-label="Post: activate to sort column ascending">Country</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 30px;" aria-label="Date: activate to sort column ascending">Order Date</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 50px;" aria-label="Name: activate to sort column ascending">Order No.</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 200px;" aria-label="Email: activate to sort column ascending">Customer</th>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 50px;" aria-label="Post: activate to sort column ascending">Country</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Payment Method</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Status</th>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 70px;" aria-label="Status: activate to sort column ascending">Status</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Action</th>
             
             </tr>
