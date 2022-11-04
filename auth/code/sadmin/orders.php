@@ -164,14 +164,14 @@
                 <span class="badge rounded-pill  badge-light-success">Professional</span></td>
 
                 <td>
-                                                <button type="button" data-id="<?php echo $arr['id'] ?>"
-                                                    class="btn btn-outline-success feather-eye" data-bs-toggle="modal"
+                                                <button type="button" style="border : 0px solid #28C76F"
+                                                    class="btn btn-flat-success feather-eye" data-bs-toggle="modal"
                                                     data-bs-target="#addNewCard">
                                                     <i data-feather="eye"></i>
                                                 </button>
 
                                                 <a href="table.php?delid=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-outline-danger"><i
+                                                        type="button" class="btn btn-flat-danger"><i
                                                             data-feather="trash"></i></button></a>
 
 
@@ -188,14 +188,14 @@
                     <span class="badge rounded-pill  badge-light-success">Professional</span>
                 </td>
                 <td>
-                                                <button type="button" data-id="<?php echo $arr['id'] ?>"
-                                                    class="btn btn-outline-success feather-eye" data-bs-toggle="modal"
+                                                <button type="button" data-id=""
+                                                    class="btn btn-success feather-eye" data-bs-toggle="modal"
                                                     data-bs-target="#addNewCard">
                                                     <i data-feather="eye"></i>
                                                 </button>
 
-                                                <a href="table.php?delid=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-outline-danger"><i
+                                                <a href=""><button
+                                                        type="button" class="btn btn-danger"><i
                                                             data-feather="trash"></i></button></a>
 
 
