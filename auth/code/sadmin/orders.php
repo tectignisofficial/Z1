@@ -88,230 +88,144 @@
     </div>
     <!-- END: Main Menu-->
 
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
-        <div class="content-overlay"></div>
-        <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper container-xxl p-0">
-            <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">
-                                Orders
-                            </h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Ecommerce</li>
-                                    <li class="breadcrumb-item active">Orders</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
+    <div class="app-content content ">
+      <div class="content-overlay"></div>
+      <div class="header-navbar-shadow"></div>
+      <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+          <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+              <div class="col-12">
+                <h2 class="content-header-title float-start mb-0">Orders</h2>
+                <div class="breadcrumb-wrapper">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Orders
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="content-body"><!-- Ajax Sourced Server-side -->
+
+
+<!--/ Ajax Sourced Server-side -->
+
+<!-- Responsive Datatable -->
+<section id="responsive-datatable">
+  <div class="row">
     <div class="col-12">
       <div class="card">
         <div class="card-header border-bottom">
-          <h4 class="card-title">Responsive Datatable</h4>
+          <h4 class="card-title">Orders</h4>
         </div>
         <div class="card-datatable">
-          <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5"><div class="d-flex justify-content-between align-items-center mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_3_length"><label>Show <select name="DataTables_Table_3_length" aria-controls="DataTables_Table_3" class="form-select"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_3_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_3"></label></div></div></div><table class="dt-responsive table dataTable dtr-column collapsed" id="DataTables_Table_3" role="grid" aria-describedby="DataTables_Table_3_info" style="width: 1206px;">
+          <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5"><div class="d-flex justify-content-between align-items-center mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_3_length"><label>Show <select name="DataTables_Table_3_length" aria-controls="DataTables_Table_3" class="form-select"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_3_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_3"></label></div></div></div><table class="dt-responsive table dataTable dtr-column" id="DataTables_Table_3" role="grid" aria-describedby="DataTables_Table_3_info" style="width: 1443px;">
             <thead>
-              <tr role="row"><th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 21px;" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 71px;" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 236px;" aria-label="Email: activate to sort column ascending">Email</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 113px;" aria-label="Post: activate to sort column ascending">Post</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 95px;" aria-label="City: activate to sort column ascending">City</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 66px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Salary</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 28px;" aria-label="Age: activate to sort column ascending">Age</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 85px;" aria-label="Experience: activate to sort column ascending">Experience</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Status: activate to sort column ascending">Status</th></tr>
+              <tr role="row">
+                <th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 66px;" aria-label="Date: activate to sort column ascending">Order Date</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 115px;" aria-label="Name: activate to sort column ascending">Order No.</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 236px;" aria-label="Email: activate to sort column ascending">Customer</th>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 177px;" aria-label="Post: activate to sort column ascending">Country</th>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Payment Method</th>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Status</th></tr>
             </thead>
             <tfoot>
-              <tr><th class="control" rowspan="1" colspan="1" style=""></th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1">Post</th><th rowspan="1" colspan="1">City</th><th rowspan="1" colspan="1">Date</th><th rowspan="1" colspan="1">Salary</th><th rowspan="1" colspan="1">Age</th><th rowspan="1" colspan="1">Experience</th><th rowspan="1" colspan="1" style="display: none;">Status</th></tr>
+              <tr>
+                <th class="control" rowspan="1" colspan="1" style="display: none;"></th>
+              <th rowspan="1" colspan="1">Order Date</th>
+              <th rowspan="1" colspan="1">Order No.</th>
+              <th rowspan="1" colspan="1">Customer</th>
+              <th rowspan="1" colspan="1">Country</th>
+              <th rowspan="1" colspan="1">Payment Method</th>
+              <th rowspan="1" colspan="1">Status</th></tr>
             </tfoot>
-          <tbody><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Korrie O'Crevy</td><td>kocrevy0@thetimes.co.uk</td><td>Nuclear Power Engineer</td><td>Krasnosilka</td><td>09/23/2016</td><td>$23896.35</td><td>61</td><td>1 Year</td><td style="display: none;"><span class="badge rounded-pill  badge-light-success">Professional</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Bailie Coulman</td><td>bcoulman1@yolasite.com</td><td>VP Quality Control</td><td>Hinigaran</td><td>05/20/2018</td><td>$13633.69</td><td>63</td><td>3 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-success">Professional</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td><td>Operator</td><td>Golcowa</td><td>03/24/2018</td><td>$13076.28</td><td>66</td><td>6 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-info">Applied</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Dorolice Crossman</td><td>dcrossman3@google.co.jp</td><td>Cost Accountant</td><td>Paquera</td><td>12/03/2017</td><td>$12336.17</td><td>22</td><td>2 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-success">Professional</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Harmonia Nisius</td><td>hnisius4@gnu.org</td><td>Senior Cost Accountant</td><td>Lucan</td><td>08/25/2017</td><td>$10909.52</td><td>33</td><td>3 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-success">Professional</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td><td>Geologist</td><td>Maofan</td><td>06/01/2017</td><td>$17803.80</td><td>61</td><td>1 Year</td><td style="display: none;"><span class="badge rounded-pill badge-light-primary">Current</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Eileen Diehn</td><td>ediehn6@163.com</td><td>Environmental Specialist</td><td>Lampuyang</td><td>10/15/2017</td><td>$18991.67</td><td>59</td><td>9 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-danger">Rejected</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Richardo Aldren</td><td>raldren7@mtv.com</td><td>Senior Sales Associate</td><td>Skoghall</td><td>11/05/2016</td><td>$19230.13</td><td>55</td><td>5 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-danger">Rejected</span></td></tr><tr class="odd"><td class="control sorting_1" tabindex="0" style=""></td><td>Allyson Moakler</td><td>amoakler8@shareasale.com</td><td>Safety Technician</td><td>Mogilany</td><td>12/29/2018</td><td>$11677.32</td><td>39</td><td>9 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-info">Applied</span></td></tr><tr class="even"><td class="control sorting_1" tabindex="0" style=""></td><td>Merline Penhalewick</td><td>mpenhalewick9@php.net</td><td>Junior Executive</td><td>Kanuma</td><td>04/19/2019</td><td>$15939.52</td><td>23</td><td>3 Years</td><td style="display: none;"><span class="badge rounded-pill  badge-light-success">Professional</span></td></tr></tbody></table><div class="d-flex justify-content-between mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_3_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_3_previous"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_3_ellipsis"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="6" tabindex="0" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="7" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_3_next"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="8" tabindex="0" class="page-link">&nbsp;</a></li></ul></div></div></div></div>
+          <tbody>
+            <tr class="odd">
+            <td class="control sorting_1" tabindex="0" style="display: none;"></td>
+            <td>Korrie O'Crevy</td>
+            <td>kocrevy0@thetimes.co.uk</td>
+            <td>Nuclear Power Engineer</td>
+            <td>Krasnosilka</td>
+            <td>09/23/2016</td>
+            <td>
+                <span class="badge rounded-pill  badge-light-success">Professional</span></td>
+            </tr>
+            <tr class="even">
+                <td class="control sorting_1" tabindex="0" style="display: none;"></td>
+                <td>Bailie Coulman</td>
+                <td>bcoulman1@yolasite.com</td>
+                <td>VP Quality Control</td>
+                <td>Hinigaran</td>
+                <td>05/20/2018</td>
+                <td>
+                    <span class="badge rounded-pill  badge-light-success">Professional</span>
+                </td>
+                </tr>
+                <tr class="odd">
+                    <td class="control sorting_1" tabindex="0" style="display: none;"></td>
+                    <td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td>
+                    <td>Operator</td>
+                    <td>Golcowa</td>
+                    <td>03/24/2018</td>
+           
+                    <td>
+                        <span class="badge rounded-pill  badge-light-info">Applied</span>
+                    </td>
+                </tr>
+                        <tr class="even">
+                            <td class="control sorting_1" tabindex="0" style="display: none;"></td>
+                            <td>Dorolice Crossman</td>
+                            <td>dcrossman3@google.co.jp</td>
+                            <td>Cost Accountant</td>
+                            <td>Paquera</td>
+                            <td>12/03/2017</td>
+                      
+                            <td><span class="badge rounded-pill  badge-light-danger">Rejected</span>
+                        </td>
+                        </tr>
+                    </tr>
+                    <tr class="even">
+                        <td class="control sorting_1" tabindex="0" style="display: none;"></td>
+                        <td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td>
+                        <td>Geologist</td>
+                        <td>Maofan</td>
+                        <td>06/01/2017</td>
+                        <td><span class="badge rounded-pill badge-light-primary">Current</span></td>
+                    </tr>
+                    
+                    
+      
+                
+                
+                </tr>
+            </tbody>
+            </table>
+                
+                
+                
+                <div class="d-flex justify-content-between mx-0 row">
+                    <div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_3_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_3_previous"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_3_ellipsis"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="6" tabindex="0" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="7" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_3_next"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="8" tabindex="0" class="page-link">&nbsp;</a></li></ul>
+                
+                
+                
+                </div></div></div></div>
         </div>
       </div>
     </div>
   </div>
-            </div>
-            <div class="content-body">
-                <div class="row" id="basic-table">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header border-bottom">
-                                <h4 class="card-title">Responsive Datatable</h4>
+</section>
+<!--/ Responsive Datatable -->
 
-
-                                <a class="btn btn-primary" href="orders_form.php"><i class="fa fa-plus"></i> Create
-                                </a>
-                            </div>
-
-                            <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>CUSTOMER</th>
-                                            <th>AMOUNT</th>
-                                            <th>TAX AMOUNT</th>
-                                            <th>SHIPPING AMOUNT</th>
-                                            <th>PAYMENT METHOD</th>
-                                            <th>PAYMENT STATUS</th>
-                                            <th>STATUS</th>
-                                            <th>CREATED AT</th>
-                                            <th>ACTION</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td> </td>
-                                            <td> </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <a class="btn btn-outline-primary edit" href="">
-                                                    <i data-feather="edit"></i>
-                                                </a>
-
-                                                <a href=""><button type="button" class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
-
-
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <section id="responsive-datatable">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header border-bottom">
-                                    <h4 class="card-title">Responsive Datatable</h4>
-
-                                    <a class="btn btn-primary" href="orders_form.php"><i class="fa fa-plus"></i> Create
-                                    </a>
-                                </div>
-                                <div class="card-datatable">
-                                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
-                                        <div class="d-flex justify-content-between align-items-center mx-0 row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_length" id="DataTables_Table_3_length">
-                                                    <label>Show <select name="DataTables_Table_3_length"
-                                                            aria-controls="DataTables_Table_3" class="form-select">
-                                                            <option value="10">10</option>
-                                                            <option value="25">25</option>
-                                                            <option value="50">50</option>
-                                                            <option value="100">100</option>
-                                                        </select> entries</label></div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div id="DataTables_Table_3_filter" class="dataTables_filter">
-                                                    <label>Search:<input type="search" class="form-control"
-                                                            placeholder="" aria-controls="DataTables_Table_3"></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <table class="dt-responsive table dataTable dtr-column collapsed"
-                                            id="DataTables_Table_3" role="grid"
-                                            aria-describedby="DataTables_Table_3_info">
-                                            <thead>
-                                                <tr role="row">
-                                                    <th class="control sorting_disabled sorting_asc" rowspan="1"
-                                                        colspan="1" style="width: 2.86458px;" aria-label=""></th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 43.3438px;"
-                                                        aria-label="Name: activate to sort column ascending">Order No.</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 46.0104px;"
-                                                        aria-label="Email: activate to sort column ascending">Customer</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 40.5104px;"
-                                                        aria-label="Post: activate to sort column ascending">Tax Amount</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 34.8125px;"
-                                                        aria-label="City: activate to sort column ascending">Payment Method</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 39.5521px;"
-                                                        aria-label="Date: activate to sort column ascending">Status</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 58.8854px; display: none;"
-                                                        aria-label="Salary: activate to sort column ascending">Salary
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 32.8438px; display: none;"
-                                                        aria-label="Age: activate to sort column ascending">Age</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 91.4167px; display: none;"
-                                                        aria-label="Experience: activate to sort column ascending">
-                                                        Experience</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 56.0938px; display: none;"
-                                                        aria-label="Status: activate to sort column ascending">Status
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th class="control" rowspan="1" colspan="1" style=""></th>
-                                                    <th rowspan="1" colspan="1">Name</th>
-                                                    <th rowspan="1" colspan="1">Email</th>
-                                                    <th rowspan="1" colspan="1">Post</th>
-                                                    <th rowspan="1" colspan="1">City</th>
-                                                    <th rowspan="1" colspan="1">Date</th>
-                                                    <th rowspan="1" colspan="1" style="display: none;">Salary</th>
-                                                    <th rowspan="1" colspan="1" style="display: none;">Age</th>
-                                                    <th rowspan="1" colspan="1" style="display: none;">Experience</th>
-                                                    <th rowspan="1" colspan="1" style="display: none;">Status</th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
-                                                <tr class="odd">
-                                                    <td valign="top" colspan="6" class="dataTables_empty">Loading...
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="d-flex justify-content-between mx-0 row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_info" id="DataTables_Table_3_info" role="status"
-                                                    aria-live="polite">Showing 0 to 0 of 0 entries</div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_paginate paging_simple_numbers"
-                                                    id="DataTables_Table_3_paginate">
-                                                    <ul class="pagination">
-                                                        <li class="paginate_button page-item previous disabled"
-                                                            id="DataTables_Table_3_previous"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="0"
-                                                                tabindex="0" class="page-link">&nbsp;</a></li>
-                                                        <li class="paginate_button page-item next disabled"
-                                                            id="DataTables_Table_3_next"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="1"
-                                                                tabindex="0" class="page-link">&nbsp;</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
         </div>
+      </div>
     </div>
-    <!-- END: Content-->
 
 
 
