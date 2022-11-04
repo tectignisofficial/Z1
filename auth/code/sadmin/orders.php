@@ -163,7 +163,19 @@
             <td>
                 <span class="badge rounded-pill  badge-light-success">Professional</span></td>
 
-                <td>button </td>
+                <td>
+                                                <button type="button" data-id="<?php echo $arr['id'] ?>"
+                                                    class="btn btn-outline-success feather-eye" data-bs-toggle="modal"
+                                                    data-bs-target="#addNewCard">
+                                                    <i data-feather="eye"></i>
+                                                </button>
+
+                                                <a href="table.php?delid=<?php echo $arr['id']; ?>"><button
+                                                        type="button" class="btn btn-outline-danger"><i
+                                                            data-feather="trash"></i></button></a>
+
+
+                                            </td>
             </tr>
             <tr class="even">
                 <td class="control sorting_1" tabindex="0" style="display: none;"></td>

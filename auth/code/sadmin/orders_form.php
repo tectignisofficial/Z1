@@ -142,7 +142,7 @@
                                                                                         class="fa fa-plus-circle"></i>
                                                                                     Add shipping fee</span>
                                                                                 <!----></a>
-                                                                            <p class="mb0 font-size-12px">Default</p>
+                                                                            <p class="mb0 font-size-8px">Default</p>
                                                                         </td>
                                                                         <td class="pl10">0.00 ₹</td>
                                                                     </tr>
