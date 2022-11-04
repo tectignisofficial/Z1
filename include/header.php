@@ -75,7 +75,7 @@ $page=substr($_SERVER['SCRIPT_NAME'],strrpos($_SERVER['SCRIPT_NAME'],"/")+1);
                             </li>
                             <li class="lvl1 parent megamenu"><a href="blogs.php">Blogs <i class="anm anm-angle-down-l"><?= $page == 'blogs.php' ? 'active':'' ?></i></a>
                             </li>
-                            <li class="lvl1 parent megamenu"><a href="video.php">Videos <i class="anm anm-angle-down-l"><?= $page == 'video.php' ? 'active':'' ?></i></a>
+                            <li class="lvl1 parent megamenu"><a href="videos.php">Videos <i class="anm anm-angle-down-l"><?= $page == 'video.php' ? 'active':'' ?></i></a>
                             </li>
                             <li class="lvl1"><a href="shop.php"><b>Shop Now!</b> <i class="anm anm-angle-down-l"><?= $page == 'shop.php' ? 'active':'' ?></i></a></li>
                       </ul>
