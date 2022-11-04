@@ -194,10 +194,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product-single__meta">
                                     <h1 class="product-single__title">Product Layout Style1</h1>
-                                    <div class="product-nav clearfix">
-                                        <a href="#" class="next" title="Next"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i></a>
-                                    </div>
+                                   
                                     <div class="prInfoRow">
                                         <div class="product-stock"> <span class="instock ">In Stock</span> <span
                                                 class="outstock hide">Unavailable</span> </div>
@@ -276,8 +273,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="infolinks"><a href="#sizechart" class="sizelink btn"> Size Guide</a> <a
-                                            href="#productInquiry" class="emaillink btn"> Ask About this Product</a></p>
+                                  
                                     <!-- Product Action -->
                                     <div class="product-action clearfix">
                                         <div class="product-form__item--quantity">
@@ -752,399 +748,324 @@
                             <p class="sub-heading">You can stop autoplay, increase/decrease aniamtion speed and number
                                 of grid to show and products from store admin.</p>
                         </header>
-                        <div class="productPageSlider">
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                             <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                             <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                             <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                             <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                             <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1.jpg"
-                                            src="assets/images/product-images/product-image1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload"
-                                            data-src="assets/images/product-images/product-image1-1.jpg"
-                                            src="assets/images/product-images/product-image1-1.jpg" alt="image"
-                                            title="product">
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span>
-                                            <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                        method="post">
-                                        <button class="btn btn- addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="#" title="Quick View" class="quick-view" tabindex="0">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                      
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$500.00</span>
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                    <div class="product-review">
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                        <i class="font-13 fa fa-star-o"></i>
-                                    </div>
-                                    <!-- Variant -->
-                                    
-                                    <!-- End Variant -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
                         
+                        <div class="tabs-listing">
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content grid-products">
+        <div class="productSlider">
+            <div class="col-12 item">
+                <!-- start product image -->
+                <div class="product-image">
+                    <!-- start product image -->
+                    <a href="short-description.html">
+                        <!-- image -->
+                        <img class="primary blur-up lazyload"
+                            data-src="assets/images/product-images/product-image3.jpg"
+                            src="assets/images/product-images/product-image3.jpg"
+                            alt="image" title="product">
+                        <!-- End image -->
+                        <!-- Hover image -->
+                        <img class="hover blur-up lazyload"
+                            data-src="assets/images/product-images/product-image3-1.jpg"
+                            src="assets/images/product-images/product-image3-1.jpg"
+                            alt="image" title="product">
+                        <!-- End hover image -->
+                        <!-- product label -->
+                        <div class="product-labels rectangular"><span
+                                class="lbl pr-label2">Hot</span></div>
+                        <!-- End product label -->
+                    </a>
+                    <!-- end product image -->
+
+                    <!-- Start product button -->
+                    <form class="variants add" action="#"
+                        onclick="window.location.href='cart.html'" method="post">
+                        <button class="btn btn-addto-cart" type="button"
+                            tabindex="0">Add To Cart</button>
+                    </form>
+                    <div class="button-set">
+                        <a href="javascript:void(0)" title="Quick View"
+                            class="quick-view-popup quick-view" data-toggle="modal"
+                            data-target="#content_quickview">
+                            <i class="icon anm anm-search-plus-r"></i>
+                        </a>
+
+                    </div>
+                    <!-- end product button -->
+                </div>
+                <!-- end product image -->
+
+                <!--start product details -->
+                <div class="product-details text-center">
+                    <!-- product name -->
+                    <div class="product-name">
+                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                    </div>
+                    <!-- End product name -->
+                    <!-- product price -->
+                    <div class="product-price">
+                        <span class="price">$550.00</span>
+                    </div>
+                    <!-- End product price -->
+
+                    <div class="product-review">
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                    </div>
+                    <!-- Variant -->
+
+                    <!-- End Variant -->
+                </div>
+                <!-- End product details -->
+            </div>
+            <div class="col-12 item">
+                <!-- start product image -->
+                <div class="product-image">
+                    <!-- start product image -->
+                    <a href="short-description.html">
+                        <!-- image -->
+                        <img class="primary blur-up lazyload"
+                            data-src="assets/images/product-images/product-image4.jpg"
+                            src="assets/images/product-images/product-image4.jpg"
+                            alt="image" title="product" />
+                        <!-- End image -->
+                        <!-- Hover image -->
+                        <img class="hover blur-up lazyload"
+                            data-src="assets/images/product-images/product-image4-1.jpg"
+                            src="assets/images/product-images/product-image4-1.jpg"
+                            alt="image" title="product" />
+                        <!-- End hover image -->
+                        <!-- product label -->
+                        <div class="product-labels"><span
+                                class="lbl on-sale">Sale</span></div>
+                        <!-- End product label -->
+                    </a>
+                    <!-- end product image -->
+
+                    <!-- Start product button -->
+                    <form class="variants add" action="#"
+                        onclick="window.location.href='cart.html'" method="post">
+                        <button class="btn btn-addto-cart" type="button"
+                            tabindex="0">Add To Cart</button>
+                    </form>
+                    <div class="button-set">
+                        <a href="javascript:void(0)" title="Quick View"
+                            class="quick-view-popup quick-view" data-toggle="modal"
+                            data-target="#content_quickview">
+                            <i class="icon anm anm-search-plus-r"></i>
+                        </a>
+
+
+                    </div>
+                    <!-- end product button -->
+                </div>
+                <!-- end product image -->
+
+                <!--start product details -->
+                <div class="product-details text-center">
+                    <!-- product name -->
+                    <div class="product-name">
+                        <a href="short-description.html">Cape Dress</a>
+                    </div>
+                    <!-- End product name -->
+                    <!-- product price -->
+                    <div class="product-price">
+                        <span class="old-price">$900.00</span>
+                        <span class="price">$788.00</span>
+                    </div>
+                    <!-- End product price -->
+
+                    <div class="product-review">
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                    </div>
+                    <!-- Variant -->
+
+                    <!-- End Variant -->
+                </div>
+                <!-- End product details -->
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="tab2" class="tab_content grid-products">
+        <div class="productSlider">
+            <div class="col-12 item">
+                <!-- start product image -->
+                <div class="product-image">
+                    <!-- start product image -->
+                    <a href="short-description.html">
+                        <!-- image -->
+                        <img class="primary blur-up lazyload"
+                            data-src="assets/images/product-images/product-image3.jpg"
+                            src="assets/images/product-images/product-image3.jpg"
+                            alt="image" title="product">
+                        <!-- End image -->
+                        <!-- Hover image -->
+                        <img class="hover blur-up lazyload"
+                            data-src="assets/images/product-images/product-image3-1.jpg"
+                            src="assets/images/product-images/product-image3-1.jpg"
+                            alt="image" title="product">
+                        <!-- End hover image -->
+                        <!-- product label -->
+                        <div class="product-labels rectangular"><span
+                                class="lbl pr-label2">Hot</span></div>
+                        <!-- End product label -->
+                    </a>
+                    <!-- end product image -->
+
+                    <!-- Start product button -->
+                    <form class="variants add" action="#"
+                        onclick="window.location.href='cart.html'" method="post">
+                        <button class="btn btn-addto-cart" type="button"
+                            tabindex="0">Add To Cart</button>
+                    </form>
+                    <div class="button-set">
+                        <a href="javascript:void(0)" title="Quick View"
+                            class="quick-view-popup quick-view" data-toggle="modal"
+                            data-target="#content_quickview">
+                            <i class="icon anm anm-search-plus-r"></i>
+                        </a>
+                        <div class="wishlist-btn">
+                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                <i class="icon anm anm-heart-l"></i>
+                            </a>
                         </div>
+                        <div class="compare-btn">
+                            <a class="compare add-to-compare" href="compare.html"
+                                title="Add to Compare">
+                                <i class="icon anm anm-random-r"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end product button -->
+                </div>
+                <!-- end product image -->
+
+                <!--start product details -->
+                <div class="product-details text-center">
+                    <!-- product name -->
+                    <div class="product-name">
+                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                    </div>
+                    <!-- End product name -->
+                    <!-- product price -->
+                    <div class="product-price">
+                        <span class="price">$550.00</span>
+                    </div>
+                    <!-- End product price -->
+
+                    <div class="product-review">
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                    </div>
+                    <!-- Variant -->
+
+                    <!-- End Variant -->
+                </div>
+                <!-- End product details -->
+            </div>
+            <div class="col-12 item">
+                <!-- start product image -->
+                <div class="product-image">
+                    <!-- start product image -->
+                    <a href="short-description.html">
+                        <!-- image -->
+                        <img class="primary blur-up lazyload"
+                            data-src="assets/images/product-images/product-image4.jpg"
+                            src="assets/images/product-images/product-image4.jpg"
+                            alt="image" title="product" />
+                        <!-- End image -->
+                        <!-- Hover image -->
+                        <img class="hover blur-up lazyload"
+                            data-src="assets/images/product-images/product-image4-1.jpg"
+                            src="assets/images/product-images/product-image4-1.jpg"
+                            alt="image" title="product" />
+                        <!-- End hover image -->
+                        <!-- product label -->
+                        <div class="product-labels"><span
+                                class="lbl on-sale">Sale</span></div>
+                        <!-- End product label -->
+                    </a>
+                    <!-- end product image -->
+
+                    <!-- Start product button -->
+                    <form class="variants add" action="#"
+                        onclick="window.location.href='cart.html'" method="post">
+                        <button class="btn btn-addto-cart" type="button"
+                            tabindex="0">Add To Cart</button>
+                    </form>
+                    <div class="button-set">
+                        <a href="javascript:void(0)" title="Quick View"
+                            class="quick-view-popup quick-view" data-toggle="modal"
+                            data-target="#content_quickview">
+                            <i class="icon anm anm-search-plus-r"></i>
+                        </a>
+                        <div class="wishlist-btn">
+                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                <i class="icon anm anm-heart-l"></i>
+                            </a>
+                        </div>
+                        <div class="compare-btn">
+                            <a class="compare add-to-compare" href="compare.html"
+                                title="Add to Compare">
+                                <i class="icon anm anm-random-r"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end product button -->
+                </div>
+                <!-- end product image -->
+
+                <!--start product details -->
+                <div class="product-details text-center">
+                    <!-- product name -->
+                    <div class="product-name">
+                        <a href="short-description.html">Cape Dress</a>
+                    </div>
+                    <!-- End product name -->
+                    <!-- product price -->
+                    <div class="product-price">
+                        <span class="old-price">$900.00</span>
+                        <span class="price">$788.00</span>
+                    </div>
+                    <!-- End product price -->
+
+                    <div class="product-review">
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                        <i class="font-13 fa fa-star-o"></i>
+                    </div>
+                    <!-- Variant -->
+
+                    <!-- End Variant -->
+                </div>
+                <!-- End product details -->
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+
+
                     </div>
                     <!--End Related Product Slider-->
 

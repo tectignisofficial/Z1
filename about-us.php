@@ -38,19 +38,35 @@
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
                 	<div class="text-center mb-4">
-                        <h2 class="h2">Belle Multipurpose Bootstrap 4 Html Template</h2>
+                        <h2 class="h2">Zodiacal Overseas About us</h2>
                         <div class="rte-setting">
-                            <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong></p>
-                            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                            <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in 2012 as a professional manufacturing and marketing company dealing in various healthcare products based in India. With unique product and flawless marketing strategies, ZOPL has been a global market leader in the course of a very short span of time. Z1, Z-ONE & Z1 KNEEBRACE all our brands.</p>
                         </div>
                     </div>
                	</div>
             </div>
-            <div class="row">
-            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/about1.jpg" src="assets/images/about1.jpg" alt="About Us" /></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/about2.jpg" src="assets/images/about2.jpg" alt="About Us" /></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="assets/images/about3.jpg" src="assets/images/about3.jpg" alt="About Us" /></div>
+
+            <div class="section feature-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="feature-row">
+                            <div class="col-12 col-sm-12 col-md-6 feature-row__item">
+                                <img src="assets/images/fast-fashion_600x.jpg" alt="Fast Fashion Only available at BElle" title="Fast Fashion Only available at BElle">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
+                                <div class="row-text">
+                                    <h2 class="h1">Our USP</h2>
+                                    <div class="rte-setting featured-row__subtext">
+                                        <p>We at ZOPL ( Zodiacal Overseas Pvt. Ltd. ) make sure each and every product we manufacture and sell are based on the needs and convenience of our customers. We boast of manufacturing some of the most unquestionably superior quality healthcare products with utmost healing touch like knee braces, ankle braces & various varieties of supports not only in India but globally which sets us apart and makes us what we are today. You can now get the products right here at z1kneebrace.com.</p>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="row">
             	<div class="col-12">
                     <h2>Sed ut perspiciatis unde omnis iste natus error</h2>
