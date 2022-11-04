@@ -134,7 +134,10 @@
                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 236px;" aria-label="Email: activate to sort column ascending">Customer</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 177px;" aria-label="Post: activate to sort column ascending">Country</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Payment Method</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Status</th></tr>
+              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Status</th>
+            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Action</th>
+            
+            </tr>
             </thead>
             <tfoot>
               <tr>
@@ -144,7 +147,10 @@
               <th rowspan="1" colspan="1">Customer</th>
               <th rowspan="1" colspan="1">Country</th>
               <th rowspan="1" colspan="1">Payment Method</th>
-              <th rowspan="1" colspan="1">Status</th></tr>
+              <th rowspan="1" colspan="1">Status</th>
+              <th rowspan="1" colspan="1">Action</th>
+            </tr>
+
             </tfoot>
           <tbody>
             <tr class="odd">
@@ -156,6 +162,8 @@
             <td>09/23/2016</td>
             <td>
                 <span class="badge rounded-pill  badge-light-success">Professional</span></td>
+
+                <td>button </td>
             </tr>
             <tr class="even">
                 <td class="control sorting_1" tabindex="0" style="display: none;"></td>
@@ -167,6 +175,8 @@
                 <td>
                     <span class="badge rounded-pill  badge-light-success">Professional</span>
                 </td>
+                <td>button </td>
+
                 </tr>
                 <tr class="odd">
                     <td class="control sorting_1" tabindex="0" style="display: none;"></td>
@@ -178,6 +188,7 @@
                     <td>
                         <span class="badge rounded-pill  badge-light-info">Applied</span>
                     </td>
+                    <td>button </td>
                 </tr>
                         <tr class="even">
                             <td class="control sorting_1" tabindex="0" style="display: none;"></td>
@@ -187,8 +198,10 @@
                             <td>Paquera</td>
                             <td>12/03/2017</td>
                       
-                            <td><span class="badge rounded-pill  badge-light-danger">Rejected</span>
+                            <td>
+                                <span class="badge rounded-pill  badge-light-danger">Rejected</span>
                         </td>
+                        <td>button </td>
                         </tr>
                     </tr>
                     <tr class="even">
@@ -198,6 +211,7 @@
                         <td>Maofan</td>
                         <td>06/01/2017</td>
                         <td><span class="badge rounded-pill badge-light-primary">Current</span></td>
+                        <td>button </td>
                     </tr>
                     
                     
