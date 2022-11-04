@@ -129,9 +129,9 @@
             <thead>
               <tr role="row">
                 <th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 30px;" aria-label="Date: activate to sort column ascending">Order Date</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 50px;" aria-label="Name: activate to sort column ascending">Order No.</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 200px;" aria-label="Email: activate to sort column ascending">Customer</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 20px;" aria-label="Date: activate to sort column ascending">Order Date</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 30px;" aria-label="Name: activate to sort column ascending">Order No.</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 130px;" aria-label="Email: activate to sort column ascending">Customer</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 50px;" aria-label="Post: activate to sort column ascending">Country</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Payment Method</th>
               <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 70px;" aria-label="Status: activate to sort column ascending">Status</th>
@@ -156,7 +156,7 @@
             <tr class="odd">
             <td class="control sorting_1" tabindex="0" style="display: none;"></td>
             <td>Korrie O'Crevy</td>
-            <td>kocrevy0@thetimes.co.uk</td>
+            <td>kocrevy0</td>
             <td>Nuclear Power Engineer</td>
             <td>Krasnosilka</td>
             <td>09/23/2016</td>
@@ -180,7 +180,7 @@
             <tr class="even">
                 <td class="control sorting_1" tabindex="0" style="display: none;"></td>
                 <td>Bailie Coulman</td>
-                <td>bcoulman1@yolasite.com</td>
+                <td>bcoulman1</td>
                 <td>VP Quality Control</td>
                 <td>Hinigaran</td>
                 <td>05/20/2018</td>
@@ -204,7 +204,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                    <td>Stella Ganderton</td><td>sganderton2@tuttocitta.it</td>
+                    <td>Stella Ganderton</td>
+                    <td>sganderton2</td>
                     <td>Operator</td>
                     <td>Golcowa</td>
                     <td>03/24/2018</td>
@@ -217,7 +218,7 @@
                         <tr class="even">
                             <td class="control sorting_1" tabindex="0" style="display: none;"></td>
                             <td>Dorolice Crossman</td>
-                            <td>dcrossman3@google.co.jp</td>
+                            <td>dcrossman3</td>
                             <td>Cost Accountant</td>
                             <td>Paquera</td>
                             <td>12/03/2017</td>
@@ -230,7 +231,8 @@
                     </tr>
                     <tr class="even">
                         <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                        <td>Genevra Honeywood</td><td>ghoneywood5@narod.ru</td>
+                        <td>Genevra Honeywood</td>
+                        <td>ghoneywood5</td>
                         <td>Geologist</td>
                         <td>Maofan</td>
                         <td>06/01/2017</td>
