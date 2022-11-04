@@ -23,7 +23,8 @@
             .img1 {
                 display: none;
             }
-                        .img2 {
+
+            .img2 {
                 display: none;
             }
 
@@ -471,518 +472,544 @@
             <!--End Collection Box slider-->
 
             <!--Logo Slider-->
-            <div class="section logo-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="logo-bar">
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo1.png" alt="" title="" />
-                                </div>
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo2.png" alt="" title="" />
-                                </div>
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo3.png" alt="" title="" />
-                                </div>
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo4.png" alt="" title="" />
-                                </div>
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo5.png" alt="" title="" />
-                                </div>
-                                <div class="logo-bar__item">
-                                    <img src="assets/images/logo/brandlogo6.png" alt="" title="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Logo Slider-->
-
-
-            <!--Parallax Section-->
             <div class="section">
-                <div class="hero hero--large hero__overlay bg-size">
-                    <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg" alt="" />
-                    <div class="hero__inner">
-                        <div class="container" style="display: flex;">
-                            <div class="wrap-text left text-small font-bold">
-                                <h2 class="h2 mega-title">CUSTOMIZED KNEE BRACES</h2>
-                                <div class="rte-setting mega-subtitle">Customization is the key. In order to meet
-                                    customer needs and satisfaction, customizing our healthcare products is necessary.
-                                    One Size doesn’t fit all. Neither you nor us. Each and every customised Knee Braces
-                                    are designed in such a unique way to fit you perfectly. Our custom Knee Braces are
-                                    built to keep up with every move you make. We custom make your braces with durable
-                                    materials and quality craftsmanship with extra protection and that proper support
-                                    and comfort to ensure a speedy recovery.
-                                    Now, Rehab, Train or Play but with confidence.</div>
-                                <a href="#" class="btn">Purchase Now</a>
-                            </div>
-                            <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
-                                <img src="assets/images/product-images/" alt="" />
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Parallax Section-->
-
-            <!--Featured Product-->
-
-            <!--End Featured Product-->
-
-            <!--Parallax Section-->
-            <div class="section">
-                <div class="hero hero--large hero__overlay bg-size">
-                    <img class="bg-img blur-up" src="assets/images/parallax-banners/cosmetic-parallax.jpg" alt="" />
-                    <div class="hero__inner">
-                        <div class="container">
-                            <div class="wrap-text center text-large font-bold">
-                                <h2 class="h2 mega-title">Super Soft</h2>
-                                <div class="rte-setting mega-subtitle">You wouldn't believe how amazing<br> this maplly
-                                    lipstick are!</div>
-                                <a href="#" class="btn">Get Your set Today</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Parallax Section-->
-
-
-
-
-            <!--Feature Content-->
-            <div class="section feature-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="feature-row">
-                            <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                <img src="assets/images/fast-fashion_600x.jpg"
-                                    alt="Fast Fashion Only available at BElle"
-                                    title="Fast Fashion Only available at BElle" />
-                            </div>
-                            <div
-                                class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
-                                <div class="row-text">
-                                    <h2 class="h2">Fast Fashion Only available at BElle</h2>
-                                    <div class="rte-setting featured-row__subtext">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type specimen book.</p>
-                                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
-                                            for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
-                                            et Malorum" by Cicero are also reproduced in their exact original form,
-                                            accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                                    </div>
-                                    <a href="#" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Feature Content-->
-
-            <!--Hero Banner With Text-->
-            <div class="section hero hero--medium hero__overlay bg-size">
-                <img class="bg-img" src="assets/images/parallax-banners/jewellery-parallax.jpg" alt="" />
-                <div class="hero__inner">
-                    <div class="container" style="display:flex;">
-                        <div class="wrap-text text-small font-bold img2">
-                            <img src="assets/images/product-images/" alt="" />
-                        </div>
-                        <div class="wrap-text text-small font-bold">
-                            <h2 class="h2 mega-title">MAKE IT PERSONAL</h2>
-                            <div class="rte-setting mega-subtitle">Make your jewels even more meaningful by <br>
-                                personalizing them with a name, monogram, coordinates, date,<br> or a special message.
-                            </div>
-                            <a href="#" class="btn">personalize Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Hero Banner With Text-->
-
-
-
-            <!--Latest Blog-->
-            <div class="latest-blog section pt-100">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="section-header text-center">
-                                <h2 class="h2">Latest From our Blog</h2>
+                          <div class="prFeatures">
+                            <h1 class="mb-5" style="text-align:center">Benefits of Custom Knee Braces</h1>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                <img src="assets/images/credit-card.png" alt="Safe Payment" title="Safe Payment">
+                                <div class="details">
+                                    <h3>Structural support to the knee.</h3>They provide stability, additional support and a protection card for the knee in case of any injuries
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                <img src="assets/images/shield.png" alt="Confidence" title="Confidence">
+                                <div class="details">
+                                    <h3>Pain reliever in most of the OA cases.</h3>These restrict the movement of knee joints in all directions
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                <img src="assets/images/worldwide.png" alt="Worldwide Delivery" title="Worldwide Delivery">
+                                <div class="details">
+                                    <h3>Easy recovery from injury.</h3>These braces are used for preventing any injury in case of contact to ligament during sports.
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Logo Slider-->
+
+
+                <!--Parallax Section-->
+                <div class="section" style="padding-bottom: 0px;">
+                    <div class="hero hero--large hero__overlay bg-size">
+                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg" alt="" />
+                        <div class="hero__inner">
+                            <div class="container" style="display: flex;">
+                                <div class="wrap-text left text-small font-bold">
+                                    <h2 class="h2 mega-title">CUSTOMIZED KNEE BRACES</h2>
+                                    <div class="rte-setting mega-subtitle">Customization is the key. In order to meet
+                                        customer needs and satisfaction, customizing our healthcare products is
+                                        necessary.
+                                        One Size doesn’t fit all. Neither you nor us. Each and every customised Knee
+                                        Braces
+                                        are designed in such a unique way to fit you perfectly. Our custom Knee Braces
+                                        are
+                                        built to keep up with every move you make. We custom make your braces with
+                                        durable
+                                        materials and quality craftsmanship with extra protection and that proper
+                                        support
+                                        and comfort to ensure a speedy recovery.
+                                        Now, Rehab, Train or Play but with confidence.</div>
+                                    <a href="#" class="btn">Purchase Now</a>
+                                </div>
+                                <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
+                                    <img src="assets/images/product-images/" alt="" />
+
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="wrap-blog">
-                                <a href="blog-left-sidebar.html" class="article__grid-image">
-                                    <img src="assets/images/blog/post-img1.jpg" alt="It's all about how you wear"
-                                        title="It's all about how you wear" class="blur-up lazyloaded" />
-                                </a>
-                                <div class="article__grid-meta article__grid-meta--has-image">
-                                    <div class="wrap-blog-inner">
-                                        <h2 class="h3 article__title">
-                                            <a href="blog-left-sidebar.html">It's all about how you wear</a>
-                                        </h2>
-                                        <span class="article__date">May 02, 2017</span>
-                                        <div class="rte article__grid-excerpt">
-                                            I must explain to you how all this mistaken idea of denouncing pleasure and
-                                            praising pain was born and I will give you a complete account...
-                                        </div>
-                                        <ul class="list--inline article__meta-buttons">
-                                            <li><a href="blog-article.html">Read more</a></li>
-                                        </ul>
-                                    </div>
+                </div>
+                <!--End Parallax Section-->
+
+                <!--Featured Product-->
+
+                <!--End Featured Product-->
+
+                <!--Parallax Section-->
+                <div class="section" style="padding-top: 0px;">
+                    <div class="hero hero--large hero__overlay bg-size">
+                        <img class="bg-img blur-up" src="assets/images/parallax-banners/cosmetic-parallax.jpg" alt="" />
+                        <div class="hero__inner">
+                            <div class="container">
+                                <div class="wrap-text center text-large font-bold">
+                                    <h2 class="h2 mega-title">Super Soft</h2>
+                                    <div class="rte-setting mega-subtitle">You wouldn't believe how amazing<br> this
+                                        maplly
+                                        lipstick are!</div>
+                                    <a href="#" class="btn">Get Your set Today</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="wrap-blog">
-                                <a href="blog-left-sidebar.html" class="article__grid-image">
-                                    <img src="assets/images/blog/post-img2.jpg" alt="27 Days of Spring Fashion Recap"
-                                        title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded" />
-                                </a>
-                                <div class="article__grid-meta article__grid-meta--has-image">
-                                    <div class="wrap-blog-inner">
-                                        <h2 class="h3 article__title">
-                                            <a href="blog-right-sidebar.html">27 Days of Spring Fashion Recap</a>
-                                        </h2>
-                                        <span class="article__date">May 02, 2017</span>
-                                        <div class="rte article__grid-excerpt">
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab...
-                                        </div>
-                                        <ul class="list--inline article__meta-buttons">
-                                            <li><a href="blog-article.html">Read more</a></li>
-                                        </ul>
-                                    </div>
+                    </div>
+                </div>
+                <!--End Parallax Section-->
+
+
+
+
+                <!--Feature Content-->
+                <div class="section feature-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="feature-row">
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item">
+                                    <img src="assets/images/fast-fashion_600x.jpg"
+                                        alt="Fast Fashion Only available at BElle"
+                                        title="Fast Fashion Only available at BElle" />
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Latest Blog-->
-
-            <!--Testimonial Slider-->
-            <div class="section testimonial-slider">
-                <div class="container-fluid">
-                    <div class="quote-wraper">
-                        <!--Testimonial Slider Title-->
-                        <div class="section-header text-center">
-                            <h2 class="h2">What They're Saying</h2>
-                        </div>
-                        <!--End Testimonial Slider Title-->
-                        <!--Testimonial Slider Items-->
-                        <div class="quotes-slider">
-                            <div class="quotes-slide">
-                                <blockquote class="quotes-slider__text text-center">
-                                    <div class="rte-setting">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type specimen book.
-                                            <br><br>The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                                            below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                                            Bonorum et Malorum" by Cicero are also reproduced in their exact original
-                                            form, accompanied by English versions from the 1914 translation by H.
-                                            Rackham.</p>
-                                    </div>
-                                    <p class="authour">Happy Customer</span></p>
-                                </blockquote>
-                            </div>
-                            <div class="quotes-slide">
-                                <blockquote class="quotes-slider__text text-center">
-                                    <div class="rte-setting">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat.</p>
-                                    </div>
-                                    <p class="authour">Happy Customer</p>
-                                </blockquote>
-                            </div>
-                            <div class="quotes-slide">
-                                <blockquote class="quotes-slider__text text-center">
-                                    <div class="rte-setting">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                            cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                    <p class="authour">Happy Customer</span></p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <!--Testimonial Slider Items-->
-                    </div>
-                </div>
-            </div>
-            <!--End Testimonial Slider-->
-
-            <!--Store Feature-->
-            <div class="store-feature section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                            <ul class="display-table store-info">
-                                <li class="display-table-cell">
-                                    <i class="icon anm anm-truck-l"></i>
-                                    <h5>Free Shipping &amp; Return</h5>
-                                    <span class="sub-text">Free shipping on all US orders</span>
-                                </li>
-                                <li class="display-table-cell">
-                                    <i class="icon anm anm-dollar-sign-r"></i>
-                                    <h5>Money Guarantee</h5>
-                                    <span class="sub-text">30 days money back guarantee</span>
-                                </li>
-                                <li class="display-table-cell">
-                                    <i class="icon anm anm-comments-l"></i>
-                                    <h5>Online Support</h5>
-                                    <span class="sub-text">We support online 24/7 on day</span>
-                                </li>
-                                <li class="display-table-cell">
-                                    <i class="icon anm anm-credit-card-front-r"></i>
-                                    <h5>Secure Payments</h5>
-                                    <span class="sub-text">All payment are Secured and trusted.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Store Feature-->
-        </div>
-        <!--End Body Content-->
-        <?php include("include/footer.php");?>
-        <!--Quick View popup-->
-        <div class="modal fade quick-view-popup" id="content_quickview">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                            <div class="product-single">
-                                <!-- Start model close -->
-                                <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right"
-                                    title="close"><span class="icon icon anm anm-times-l"></span></a>
-                                <!-- End model close -->
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="product-details-img">
-                                            <div class="pl-20">
-                                                <img src="assets/images/product-detail-page/camelia-reversible-big1.jpg"
-                                                    alt="" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="product-single__meta">
-                                            <h2 class="product-single__title">Product Quick View Popup</h2>
-                                            <div class="prInfoRow">
-                                                <div class="product-stock"> <span class="instock ">In Stock</span> <span
-                                                        class="outstock hide">Unavailable</span> </div>
-                                                <div class="product-sku">SKU: <span
-                                                        class="variant-sku">19115-rdxs</span></div>
-                                            </div>
-                                            <p class="product-single__price product-single__price-product-template">
-                                                <span class="visually-hidden">Regular price</span>
-                                                <s id="ComparePrice-product-template"><span
-                                                        class="money">$600.00</span></s>
-                                                <span
-                                                    class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
-                                                    <span id="ProductPrice-product-template"><span
-                                                            class="money">$500.00</span></span>
-                                                </span>
+                                <div
+                                    class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
+                                    <div class="row-text">
+                                        <h2 class="h2">Fast Fashion Only available at BElle</h2>
+                                        <div class="rte-setting featured-row__subtext">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                1500s, when an unknown printer took a galley of type and scrambled it to
+                                                make a type specimen book.</p>
+                                            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced
+                                                below
+                                                for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
+                                                Bonorum
+                                                et Malorum" by Cicero are also reproduced in their exact original form,
+                                                accompanied by English versions from the 1914 translation by H. Rackham.
                                             </p>
-                                            <div class="product-single__description rte">
-                                                Belle Multipurpose Bootstrap 4 Html Template that will give you and your
-                                                customers a smooth shopping experience which can be used for various
-                                                kinds of stores such as fashion,...
+                                        </div>
+                                        <a href="#" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Feature Content-->
+
+                <!--Hero Banner With Text-->
+                <div class="section hero hero--medium hero__overlay bg-size">
+                    <img class="bg-img" src="assets/images/parallax-banners/jewellery-parallax.jpg" alt="" />
+                    <div class="hero__inner">
+                        <div class="container" style="display:flex;">
+                            <div class="wrap-text text-small font-bold img2">
+                                <img src="assets/images/product-images/" alt="" />
+                            </div>
+                            <div class="wrap-text text-small font-bold">
+                                <h2 class="h2 mega-title">MAKE IT PERSONAL</h2>
+                                <div class="rte-setting mega-subtitle">Make your jewels even more meaningful by <br>
+                                    personalizing them with a name, monogram, coordinates, date,<br> or a special
+                                    message.
+                                </div>
+                                <a href="#" class="btn">personalize Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Hero Banner With Text-->
+
+
+
+                <!--Latest Blog-->
+                <div class="latest-blog section pt-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="section-header text-center">
+                                    <h2 class="h2">Latest From our Blog</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="wrap-blog">
+                                    <a href="blog-left-sidebar.html" class="article__grid-image">
+                                        <img src="assets/images/blog/post-img1.jpg" alt="It's all about how you wear"
+                                            title="It's all about how you wear" class="blur-up lazyloaded" />
+                                    </a>
+                                    <div class="article__grid-meta article__grid-meta--has-image">
+                                        <div class="wrap-blog-inner">
+                                            <h2 class="h3 article__title">
+                                                <a href="blog-left-sidebar.html">It's all about how you wear</a>
+                                            </h2>
+                                            <span class="article__date">May 02, 2017</span>
+                                            <div class="rte article__grid-excerpt">
+                                                I must explain to you how all this mistaken idea of denouncing pleasure
+                                                and
+                                                praising pain was born and I will give you a complete account...
                                             </div>
+                                            <ul class="list--inline article__meta-buttons">
+                                                <li><a href="blog-article.html">Read more</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="wrap-blog">
+                                    <a href="blog-left-sidebar.html" class="article__grid-image">
+                                        <img src="assets/images/blog/post-img2.jpg"
+                                            alt="27 Days of Spring Fashion Recap"
+                                            title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded" />
+                                    </a>
+                                    <div class="article__grid-meta article__grid-meta--has-image">
+                                        <div class="wrap-blog-inner">
+                                            <h2 class="h3 article__title">
+                                                <a href="blog-right-sidebar.html">27 Days of Spring Fashion Recap</a>
+                                            </h2>
+                                            <span class="article__date">May 02, 2017</span>
+                                            <div class="rte article__grid-excerpt">
+                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium
+                                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab...
+                                            </div>
+                                            <ul class="list--inline article__meta-buttons">
+                                                <li><a href="blog-article.html">Read more</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Latest Blog-->
 
-                                            <form method="post" action="http://annimexweb.com/cart/add"
-                                                id="product_form_10508262282" accept-charset="UTF-8"
-                                                class="product-form product-form-product-template hidedropdown"
-                                                enctype="multipart/form-data">
+                <!--Testimonial Slider-->
+                <div class="section testimonial-slider">
+                    <div class="container-fluid">
+                        <div class="quote-wraper">
+                            <!--Testimonial Slider Title-->
+                            <div class="section-header text-center">
+                                <h2 class="h2">What They're Saying</h2>
+                            </div>
+                            <!--End Testimonial Slider Title-->
+                            <!--Testimonial Slider Items-->
+                            <div class="quotes-slider">
+                                <div class="quotes-slide">
+                                    <blockquote class="quotes-slider__text text-center">
+                                        <div class="rte-setting">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                1500s, when an unknown printer took a galley of type and scrambled it to
+                                                make a type specimen book.
+                                                <br><br>The standard chunk of Lorem Ipsum used since the 1500s is
+                                                reproduced
+                                                below for those interested. Sections 1.10.32 and 1.10.33 from "de
+                                                Finibus
+                                                Bonorum et Malorum" by Cicero are also reproduced in their exact
+                                                original
+                                                form, accompanied by English versions from the 1914 translation by H.
+                                                Rackham.</p>
+                                        </div>
+                                        <p class="authour">Happy Customer</span></p>
+                                    </blockquote>
+                                </div>
+                                <div class="quotes-slide">
+                                    <blockquote class="quotes-slider__text text-center">
+                                        <div class="rte-setting">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat.</p>
+                                        </div>
+                                        <p class="authour">Happy Customer</p>
+                                    </blockquote>
+                                </div>
+                                <div class="quotes-slide">
+                                    <blockquote class="quotes-slider__text text-center">
+                                        <div class="rte-setting">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                                esse
+                                                cillum dolore eu fugiat nulla pariatur.</p>
+                                        </div>
+                                        <p class="authour">Happy Customer</span></p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <!--Testimonial Slider Items-->
+                        </div>
+                    </div>
+                </div>
+                <!--End Testimonial Slider-->
 
-                                                <div class="swatch clearfix swatch-1 option2" data-option-index="1">
-                                                    <div class="product-form__item">
-                                                        <label class="header">Size: <span
-                                                                class="slVariant">XS</span></label>
-                                                        <div data-value="XS" class="swatch-element xs available">
-                                                            <input class="swatchInput" id="swatch-1-xs" type="radio"
-                                                                name="option-1" value="XS">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-xs"
-                                                                title="XS">XS</label>
-                                                        </div>
-                                                        <div data-value="S" class="swatch-element s available">
-                                                            <input class="swatchInput" id="swatch-1-s" type="radio"
-                                                                name="option-1" value="S">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-s"
-                                                                title="S">S</label>
-                                                        </div>
-                                                        <div data-value="M" class="swatch-element m available">
-                                                            <input class="swatchInput" id="swatch-1-m" type="radio"
-                                                                name="option-1" value="M">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-m"
-                                                                title="M">M</label>
-                                                        </div>
-                                                        <div data-value="L" class="swatch-element l available">
-                                                            <input class="swatchInput" id="swatch-1-l" type="radio"
-                                                                name="option-1" value="L">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-l"
-                                                                title="L">L</label>
-                                                        </div>
-                                                    </div>
+                <!--Store Feature-->
+                <div class="store-feature section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <ul class="display-table store-info">
+                                    <li class="display-table-cell">
+                                        <i class="icon anm anm-truck-l"></i>
+                                        <h5>Free Shipping &amp; Return</h5>
+                                        <span class="sub-text">Free shipping on all US orders</span>
+                                    </li>
+                                    <li class="display-table-cell">
+                                        <i class="icon anm anm-dollar-sign-r"></i>
+                                        <h5>Money Guarantee</h5>
+                                        <span class="sub-text">30 days money back guarantee</span>
+                                    </li>
+                                    <li class="display-table-cell">
+                                        <i class="icon anm anm-comments-l"></i>
+                                        <h5>Online Support</h5>
+                                        <span class="sub-text">We support online 24/7 on day</span>
+                                    </li>
+                                    <li class="display-table-cell">
+                                        <i class="icon anm anm-credit-card-front-r"></i>
+                                        <h5>Secure Payments</h5>
+                                        <span class="sub-text">All payment are Secured and trusted.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Store Feature-->
+            </div>
+            <!--End Body Content-->
+            <?php include("include/footer.php");?>
+            <!--Quick View popup-->
+            <div class="modal fade quick-view-popup" id="content_quickview">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div id="ProductSection-product-template" class="product-template__container prstyle1">
+                                <div class="product-single">
+                                    <!-- Start model close -->
+                                    <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right"
+                                        title="close"><span class="icon icon anm anm-times-l"></span></a>
+                                    <!-- End model close -->
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                            <div class="product-details-img">
+                                                <div class="pl-20">
+                                                    <img src="assets/images/product-detail-page/camelia-reversible-big1.jpg"
+                                                        alt="" />
                                                 </div>
-                                                <!-- Product Action -->
-                                                <div class="product-action clearfix">
-                                                    <div class="product-form__item--quantity">
-                                                        <div class="wrapQtyBtn">
-                                                            <div class="qtyField">
-                                                                <a class="qtyBtn minus" href="javascript:void(0);"><i
-                                                                        class="fa anm anm-minus-r"
-                                                                        aria-hidden="true"></i></a>
-                                                                <input type="text" id="Quantity" name="quantity"
-                                                                    value="1" class="product-form__input qty">
-                                                                <a class="qtyBtn plus" href="javascript:void(0);"><i
-                                                                        class="fa anm anm-plus-r"
-                                                                        aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                            <div class="product-single__meta">
+                                                <h2 class="product-single__title">Product Quick View Popup</h2>
+                                                <div class="prInfoRow">
+                                                    <div class="product-stock"> <span class="instock ">In Stock</span>
+                                                        <span class="outstock hide">Unavailable</span> </div>
+                                                    <div class="product-sku">SKU: <span
+                                                            class="variant-sku">19115-rdxs</span></div>
+                                                </div>
+                                                <p class="product-single__price product-single__price-product-template">
+                                                    <span class="visually-hidden">Regular price</span>
+                                                    <s id="ComparePrice-product-template"><span
+                                                            class="money">$600.00</span></s>
+                                                    <span
+                                                        class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
+                                                        <span id="ProductPrice-product-template"><span
+                                                                class="money">$500.00</span></span>
+                                                    </span>
+                                                </p>
+                                                <div class="product-single__description rte">
+                                                    Belle Multipurpose Bootstrap 4 Html Template that will give you and
+                                                    your
+                                                    customers a smooth shopping experience which can be used for various
+                                                    kinds of stores such as fashion,...
+                                                </div>
+
+                                                <form method="post" action="http://annimexweb.com/cart/add"
+                                                    id="product_form_10508262282" accept-charset="UTF-8"
+                                                    class="product-form product-form-product-template hidedropdown"
+                                                    enctype="multipart/form-data">
+
+                                                    <div class="swatch clearfix swatch-1 option2" data-option-index="1">
+                                                        <div class="product-form__item">
+                                                            <label class="header">Size: <span
+                                                                    class="slVariant">XS</span></label>
+                                                            <div data-value="XS" class="swatch-element xs available">
+                                                                <input class="swatchInput" id="swatch-1-xs" type="radio"
+                                                                    name="option-1" value="XS">
+                                                                <label class="swatchLbl medium rectangle"
+                                                                    for="swatch-1-xs" title="XS">XS</label>
+                                                            </div>
+                                                            <div data-value="S" class="swatch-element s available">
+                                                                <input class="swatchInput" id="swatch-1-s" type="radio"
+                                                                    name="option-1" value="S">
+                                                                <label class="swatchLbl medium rectangle"
+                                                                    for="swatch-1-s" title="S">S</label>
+                                                            </div>
+                                                            <div data-value="M" class="swatch-element m available">
+                                                                <input class="swatchInput" id="swatch-1-m" type="radio"
+                                                                    name="option-1" value="M">
+                                                                <label class="swatchLbl medium rectangle"
+                                                                    for="swatch-1-m" title="M">M</label>
+                                                            </div>
+                                                            <div data-value="L" class="swatch-element l available">
+                                                                <input class="swatchInput" id="swatch-1-l" type="radio"
+                                                                    name="option-1" value="L">
+                                                                <label class="swatchLbl medium rectangle"
+                                                                    for="swatch-1-l" title="L">L</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="product-form__item--submit">
-                                                        <button type="button" name="add"
-                                                            class="btn product-form__cart-submit">
-                                                            <span>Add to cart</span>
-                                                        </button>
+                                                    <!-- Product Action -->
+                                                    <div class="product-action clearfix">
+                                                        <div class="product-form__item--quantity">
+                                                            <div class="wrapQtyBtn">
+                                                                <div class="qtyField">
+                                                                    <a class="qtyBtn minus"
+                                                                        href="javascript:void(0);"><i
+                                                                            class="fa anm anm-minus-r"
+                                                                            aria-hidden="true"></i></a>
+                                                                    <input type="text" id="Quantity" name="quantity"
+                                                                        value="1" class="product-form__input qty">
+                                                                    <a class="qtyBtn plus" href="javascript:void(0);"><i
+                                                                            class="fa anm anm-plus-r"
+                                                                            aria-hidden="true"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-form__item--submit">
+                                                            <button type="button" name="add"
+                                                                class="btn product-form__cart-submit">
+                                                                <span>Add to cart</span>
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <!-- End Product Action -->
-                                            </form>
-                                            <div class="display-table shareRow">
+                                                    <!-- End Product Action -->
+                                                </form>
+                                                <div class="display-table shareRow">
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--End-product-single-->
                                 </div>
-                                <!--End-product-single-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--End Quick View popup-->
+            <!--End Quick View popup-->
 
-        <!-- Newsletter Popup -->
-        <div class="newsletter-wrap" id="popup-container">
-            <div id="popup-window">
-                <a class="btn closepopup"><i class="icon icon anm anm-times-l"></i></a>
-                <!-- Modal content-->
-                <div class="display-table splash-bg">
-                    <div class="display-table-cell width40"><img src="assets/images/newsletter-img.jpg"
-                            alt="Join Our Mailing List" title="Join Our Mailing List" /> </div>
-                    <div class="display-table-cell width60 text-center">
-                        <div class="newsletter-left">
-                            <h2>Join Our Mailing List</h2>
-                            <p>Sign Up for our exclusive email list and be the first to know about new products and
-                                special offers</p>
-                            <form action="#" method="post">
-                                <div class="input-group">
-                                    <input type="email" class="input-group__field newsletter__input" name="EMAIL"
-                                        value="" placeholder="Email address" required="">
-                                    <span class="input-group__btn">
-                                        <button type="submit" class="btn newsletter__submit" name="commit"
-                                            id="subscribeBtn"> <span
-                                                class="newsletter__submit-text--large">Subscribe</span> </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <ul class="list--inline site-footer__social-icons social-icons">
-                                <li><a class="social-icons__link" href="#" title="Facebook"><i
-                                            class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                                <li><a class="social-icons__link" href="#" title="Twitter"><i class="fa fa-twitter"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a class="social-icons__link" href="#" title="Pinterest"><i class="fa fa-pinterest"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a class="social-icons__link" href="#" title="Instagram"><i class="fa fa-instagram"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a class="social-icons__link" href="#" title="YouTube"><i class="fa fa-youtube"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a class="social-icons__link" href="#" title="Vimeo"><i class="fa fa-vimeo"
-                                            aria-hidden="true"></i></a></li>
-                            </ul>
+            <!-- Newsletter Popup -->
+            <div class="newsletter-wrap" id="popup-container">
+                <div id="popup-window">
+                    <a class="btn closepopup"><i class="icon icon anm anm-times-l"></i></a>
+                    <!-- Modal content-->
+                    <div class="display-table splash-bg">
+                        <div class="display-table-cell width40"><img src="assets/images/newsletter-img.jpg"
+                                alt="Join Our Mailing List" title="Join Our Mailing List" /> </div>
+                        <div class="display-table-cell width60 text-center">
+                            <div class="newsletter-left">
+                                <h2>Join Our Mailing List</h2>
+                                <p>Sign Up for our exclusive email list and be the first to know about new products and
+                                    special offers</p>
+                                <form action="#" method="post">
+                                    <div class="input-group">
+                                        <input type="email" class="input-group__field newsletter__input" name="EMAIL"
+                                            value="" placeholder="Email address" required="">
+                                        <span class="input-group__btn">
+                                            <button type="submit" class="btn newsletter__submit" name="commit"
+                                                id="subscribeBtn"> <span
+                                                    class="newsletter__submit-text--large">Subscribe</span> </button>
+                                        </span>
+                                    </div>
+                                </form>
+                                <ul class="list--inline site-footer__social-icons social-icons">
+                                    <li><a class="social-icons__link" href="#" title="Facebook"><i
+                                                class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" title="Twitter"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" title="Pinterest"><i
+                                                class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" title="Instagram"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" title="YouTube"><i class="fa fa-youtube"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" title="Vimeo"><i class="fa fa-vimeo"
+                                                aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- End Newsletter Popup -->
+
+            <!-- Including Jquery -->
+            <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+            <script src="assets/js/vendor/jquery.cookie.js"></script>
+            <script src="assets/js/vendor/wow.min.js"></script>
+            <!-- Including Javascript -->
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/popper.min.js"></script>
+            <script src="assets/js/lazysizes.js"></script>
+            <script src="assets/js/main.js"></script>
+            <!--For Newsletter Popup-->
+            <script>
+                jQuery(document).ready(function () {
+                    jQuery('.closepopup').on('click', function () {
+                        jQuery('#popup-container').fadeOut();
+                        jQuery('#modalOverly').fadeOut();
+                    });
+
+                    var visits = jQuery.cookie('visits') || 0;
+                    visits++;
+                    jQuery.cookie('visits', visits, {
+                        expires: 1,
+                        path: '/'
+                    });
+                    console.debug(jQuery.cookie('visits'));
+                    if (jQuery.cookie('visits') > 1) {
+                        jQuery('#modalOverly').hide();
+                        jQuery('#popup-container').hide();
+                    } else {
+                        var pageHeight = jQuery(document).height();
+                        jQuery('<div id="modalOverly"></div>').insertBefore('body');
+                        jQuery('#modalOverly').css("height", pageHeight);
+                        jQuery('#popup-container').show();
+                    }
+                    if (jQuery.cookie('noShowWelcome')) {
+                        jQuery('#popup-container').hide();
+                        jQuery('#active-popup').hide();
+                    }
+                });
+
+                jQuery(document).mouseup(function (e) {
+                    var container = jQuery('#popup-container');
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        container.fadeOut();
+                        jQuery('#modalOverly').fadeIn(200);
+                        jQuery('#modalOverly').hide();
+                    }
+                });
+            </script>
+            <!--End For Newsletter Popup-->
         </div>
-        <!-- End Newsletter Popup -->
-
-        <!-- Including Jquery -->
-        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="assets/js/vendor/jquery.cookie.js"></script>
-        <script src="assets/js/vendor/wow.min.js"></script>
-        <!-- Including Javascript -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/lazysizes.js"></script>
-        <script src="assets/js/main.js"></script>
-        <!--For Newsletter Popup-->
-        <script>
-            jQuery(document).ready(function () {
-                jQuery('.closepopup').on('click', function () {
-                    jQuery('#popup-container').fadeOut();
-                    jQuery('#modalOverly').fadeOut();
-                });
-
-                var visits = jQuery.cookie('visits') || 0;
-                visits++;
-                jQuery.cookie('visits', visits, {
-                    expires: 1,
-                    path: '/'
-                });
-                console.debug(jQuery.cookie('visits'));
-                if (jQuery.cookie('visits') > 1) {
-                    jQuery('#modalOverly').hide();
-                    jQuery('#popup-container').hide();
-                } else {
-                    var pageHeight = jQuery(document).height();
-                    jQuery('<div id="modalOverly"></div>').insertBefore('body');
-                    jQuery('#modalOverly').css("height", pageHeight);
-                    jQuery('#popup-container').show();
-                }
-                if (jQuery.cookie('noShowWelcome')) {
-                    jQuery('#popup-container').hide();
-                    jQuery('#active-popup').hide();
-                }
-            });
-
-            jQuery(document).mouseup(function (e) {
-                var container = jQuery('#popup-container');
-                if (!container.is(e.target) && container.has(e.target).length === 0) {
-                    container.fadeOut();
-                    jQuery('#modalOverly').fadeIn(200);
-                    jQuery('#modalOverly').hide();
-                }
-            });
-        </script>
-        <!--End For Newsletter Popup-->
-    </div>
 </body>
 
 <!-- belle/index.html   11 Nov 2019 12:20:55 GMT -->
