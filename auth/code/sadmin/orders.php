@@ -90,181 +90,313 @@
 
 
     <div class="app-content content ">
-      <div class="content-overlay"></div>
-      <div class="header-navbar-shadow"></div>
-      <div class="content-wrapper container-xxl p-0">
-        <div class="content-header row">
-          <div class="content-header-left col-md-9 col-12 mb-2">
-            <div class="row breadcrumbs-top">
-              <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Orders</h2>
-                <div class="breadcrumb-wrapper">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">Orders
-                    </li>
-                  </ol>
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-start mb-0">Orders</h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Orders
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
             </div>
-          </div>
+            <div class="content-body">
+                <!-- Ajax Sourced Server-side -->
 
+
+                <!--/ Ajax Sourced Server-side -->
+
+                <!-- Responsive Datatable -->
+                <section id="responsive-datatable">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header border-bottom">
+                                    <h4 class="card-title">Orders</h4>
+                                </div>
+                                <div class="card-datatable">
+                                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                        <div class="d-flex justify-content-between align-items-center mx-0 row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="dataTables_length" id="DataTables_Table_3_length">
+                                                    <label>Show <select name="DataTables_Table_3_length"
+                                                            aria-controls="DataTables_Table_3" class="form-select">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select> entries</label></div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <div id="DataTables_Table_3_filter" class="dataTables_filter">
+                                                    <label>Search:<input type="search" class="form-control"
+                                                            placeholder="" aria-controls="DataTables_Table_3"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="dt-responsive table dataTable dtr-column" id="DataTables_Table_3"
+                                            role="grid" aria-describedby="DataTables_Table_3_info"
+                                            style="width: 1443px;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="control sorting_disabled sorting_asc" rowspan="1"
+                                                        colspan="1" style="width: 0px; display: none;" aria-label="">
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 20px;"
+                                                        aria-label="Date: activate to sort column ascending">Order Date
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 30px;"
+                                                        aria-label="Name: activate to sort column ascending">Order No.
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 130px;"
+                                                        aria-label="Email: activate to sort column ascending">Customer
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 50px;"
+                                                        aria-label="Post: activate to sort column ascending">Country
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 62px;"
+                                                        aria-label="Salary: activate to sort column ascending">Payment
+                                                        Method</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 70px;"
+                                                        aria-label="Status: activate to sort column ascending">Status
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 82px;"
+                                                        aria-label="Status: activate to sort column ascending">Action
+                                                    </th>
+
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th class="control" rowspan="1" colspan="1" style="display: none;">
+                                                    </th>
+                                                    <th rowspan="1" colspan="1">Order Date</th>
+                                                    <th rowspan="1" colspan="1">Order No.</th>
+                                                    <th rowspan="1" colspan="1">Customer</th>
+                                                    <th rowspan="1" colspan="1">Country</th>
+                                                    <th rowspan="1" colspan="1">Payment Method</th>
+                                                    <th rowspan="1" colspan="1">Status</th>
+                                                    <th rowspan="1" colspan="1">Action</th>
+                                                </tr>
+
+                                            </tfoot>
+                                            <tbody>
+                                                <tr class="odd">
+                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
+                                                    </td>
+                                                    <td>Korrie O'Crevy</td>
+                                                    <td>kocrevy0</td>
+                                                    <td>Nuclear Power Engineer</td>
+                                                    <td>Krasnosilka</td>
+                                                    <td>09/23/2016</td>
+                                                    <td>
+                                                        <span
+                                                            class="badge rounded-pill  badge-light-success">Professional</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <button type="button" style="border : 0px solid #28C76F"
+                                                            class="btn btn-icon rounded-circle btn-flat-success feather-eye"
+                                                            data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                            <i data-feather="eye"></i>
+                                                        </button>
+
+                                                        <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
+                                                    </td>
+                                                    <td>Bailie Coulman</td>
+                                                    <td>bcoulman1</td>
+                                                    <td>VP Quality Control</td>
+                                                    <td>Hinigaran</td>
+                                                    <td>05/20/2018</td>
+                                                    <td>
+                                                        <span
+                                                            class="badge rounded-pill  badge-light-success">Professional</span>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" style="border : 0px solid #28C76F"
+                                                            class="btn btn-icon rounded-circle btn-flat-success feather-eye"
+                                                            data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                            <i data-feather="eye"></i>
+                                                        </button>
+
+                                                        <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
+                                                    </td>
+                                                    <td>Stella Ganderton</td>
+                                                    <td>sganderton2</td>
+                                                    <td>Operator</td>
+                                                    <td>Golcowa</td>
+                                                    <td>03/24/2018</td>
+
+                                                    <td>
+                                                        <span
+                                                            class="badge rounded-pill  badge-light-info">Applied</span>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" style="border : 0px solid #28C76F"
+                                                            class="btn btn-icon rounded-circle btn-flat-success feather-eye"
+                                                            data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                            <i data-feather="eye"></i>
+                                                        </button>
+
+                                                        <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
+                                                    </td>
+                                                    <td>Dorolice Crossman</td>
+                                                    <td>dcrossman3</td>
+                                                    <td>Cost Accountant</td>
+                                                    <td>Paquera</td>
+                                                    <td>12/03/2017</td>
+
+                                                    <td>
+                                                        <span
+                                                            class="badge rounded-pill  badge-light-danger">Rejected</span>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" style="border : 0px solid #28C76F"
+                                                            class="btn btn-icon rounded-circle btn-flat-success feather-eye"
+                                                            data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                            <i data-feather="eye"></i>
+                                                        </button>
+
+                                                        <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+                                                    </td>
+                                                </tr>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
+                                                    </td>
+                                                    <td>Genevra Honeywood</td>
+                                                    <td>ghoneywood5</td>
+                                                    <td>Geologist</td>
+                                                    <td>Maofan</td>
+                                                    <td>06/01/2017</td>
+                                                    <td><span
+                                                            class="badge rounded-pill badge-light-primary">Current</span>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" style="border : 0px solid #28C76F"
+                                                            class="btn btn-icon rounded-circle btn-flat-success feather-eye"
+                                                            data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                            <i data-feather="eye"></i>
+                                                        </button>
+
+                                                        <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+                                                    </td>
+                                                </tr>
+
+
+
+
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+                                        <div class="d-flex justify-content-between mx-0 row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="dataTables_info" id="DataTables_Table_3_info" role="status"
+                                                    aria-live="polite">Showing 1 to 10 of 100 entries</div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="DataTables_Table_3_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled"
+                                                            id="DataTables_Table_3_previous"><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="0"
+                                                                tabindex="0" class="page-link">&nbsp;</a></li>
+                                                        <li class="paginate_button page-item active"><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="1"
+                                                                tabindex="0" class="page-link">1</a></li>
+                                                        <li class="paginate_button page-item "><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="2"
+                                                                tabindex="0" class="page-link">2</a></li>
+                                                        <li class="paginate_button page-item "><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="3"
+                                                                tabindex="0" class="page-link">3</a></li>
+                                                        <li class="paginate_button page-item "><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="4"
+                                                                tabindex="0" class="page-link">4</a></li>
+                                                        <li class="paginate_button page-item "><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="5"
+                                                                tabindex="0" class="page-link">5</a></li>
+                                                        <li class="paginate_button page-item disabled"
+                                                            id="DataTables_Table_3_ellipsis"><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="6"
+                                                                tabindex="0" class="page-link">…</a></li>
+                                                        <li class="paginate_button page-item "><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="7"
+                                                                tabindex="0" class="page-link">10</a></li>
+                                                        <li class="paginate_button page-item next"
+                                                            id="DataTables_Table_3_next"><a href="#"
+                                                                aria-controls="DataTables_Table_3" data-dt-idx="8"
+                                                                tabindex="0" class="page-link">&nbsp;</a></li>
+                                                    </ul>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/ Responsive Datatable -->
+
+            </div>
         </div>
-        <div class="content-body"><!-- Ajax Sourced Server-side -->
-
-
-<!--/ Ajax Sourced Server-side -->
-
-<!-- Responsive Datatable -->
-<section id="responsive-datatable">
-  <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header border-bottom">
-          <h4 class="card-title">Orders</h4>
-        </div>
-        <div class="card-datatable">
-          <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5"><div class="d-flex justify-content-between align-items-center mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_3_length"><label>Show <select name="DataTables_Table_3_length" aria-controls="DataTables_Table_3" class="form-select"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_3_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_3"></label></div></div></div><table class="dt-responsive table dataTable dtr-column" id="DataTables_Table_3" role="grid" aria-describedby="DataTables_Table_3_info" style="width: 1443px;">
-            <thead>
-              <tr role="row">
-                <th class="control sorting_disabled sorting_asc" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 20px;" aria-label="Date: activate to sort column ascending">Order Date</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 30px;" aria-label="Name: activate to sort column ascending">Order No.</th>
-                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 130px;" aria-label="Email: activate to sort column ascending">Customer</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 50px;" aria-label="Post: activate to sort column ascending">Country</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 62px;" aria-label="Salary: activate to sort column ascending">Payment Method</th>
-              <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 70px;" aria-label="Status: activate to sort column ascending">Status</th>
-            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" style="width: 82px;" aria-label="Status: activate to sort column ascending">Action</th>
-            
-            </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th class="control" rowspan="1" colspan="1" style="display: none;"></th>
-              <th rowspan="1" colspan="1">Order Date</th>
-              <th rowspan="1" colspan="1">Order No.</th>
-              <th rowspan="1" colspan="1">Customer</th>
-              <th rowspan="1" colspan="1">Country</th>
-              <th rowspan="1" colspan="1">Payment Method</th>
-              <th rowspan="1" colspan="1">Status</th>
-              <th rowspan="1" colspan="1">Action</th>
-            </tr>
-
-            </tfoot>
-          <tbody>
-            <tr class="odd">
-            <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-            <td>Korrie O'Crevy</td>
-            <td>kocrevy0</td>
-            <td>Nuclear Power Engineer</td>
-            <td>Krasnosilka</td>
-            <td>09/23/2016</td>
-            <td>
-                <span class="badge rounded-pill  badge-light-success">Professional</span></td>
-
-                <td>
-                                                <button type="button" style="border : 0px solid #28C76F"
-                                                    class="btn btn-flat-success feather-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#addNewCard">
-                                                    <i data-feather="eye"></i>
-                                                </button>
-
-                                                <a href="table.php?delid=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-flat-danger"><i
-                                                            data-feather="trash"></i></button></a>
-
-
-                                            </td>
-            </tr>
-            <tr class="even">
-                <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                <td>Bailie Coulman</td>
-                <td>bcoulman1</td>
-                <td>VP Quality Control</td>
-                <td>Hinigaran</td>
-                <td>05/20/2018</td>
-                <td>
-                    <span class="badge rounded-pill  badge-light-success">Professional</span>
-                </td>
-                <td>
-                                                <button type="button" data-id=""
-                                                    class="btn btn-success feather-eye" data-bs-toggle="modal"
-                                                    data-bs-target="#addNewCard">
-                                                    <i data-feather="eye"></i>
-                                                </button>
-
-                                                <a href=""><button
-                                                        type="button" class="btn btn-danger"><i
-                                                            data-feather="trash"></i></button></a>
-
-
-                                            </td>
-
-                </tr>
-                <tr class="odd">
-                    <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                    <td>Stella Ganderton</td>
-                    <td>sganderton2</td>
-                    <td>Operator</td>
-                    <td>Golcowa</td>
-                    <td>03/24/2018</td>
-           
-                    <td>
-                        <span class="badge rounded-pill  badge-light-info">Applied</span>
-                    </td>
-                    <td>button </td>
-                </tr>
-                        <tr class="even">
-                            <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                            <td>Dorolice Crossman</td>
-                            <td>dcrossman3</td>
-                            <td>Cost Accountant</td>
-                            <td>Paquera</td>
-                            <td>12/03/2017</td>
-                      
-                            <td>
-                                <span class="badge rounded-pill  badge-light-danger">Rejected</span>
-                        </td>
-                        <td>button </td>
-                        </tr>
-                    </tr>
-                    <tr class="even">
-                        <td class="control sorting_1" tabindex="0" style="display: none;"></td>
-                        <td>Genevra Honeywood</td>
-                        <td>ghoneywood5</td>
-                        <td>Geologist</td>
-                        <td>Maofan</td>
-                        <td>06/01/2017</td>
-                        <td><span class="badge rounded-pill badge-light-primary">Current</span></td>
-                        <td>button </td>
-                    </tr>
-                    
-                    
-      
-                
-                
-                </tr>
-            </tbody>
-            </table>
-                
-                
-                
-                <div class="d-flex justify-content-between mx-0 row">
-                    <div class="col-sm-12 col-md-6"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">Showing 1 to 10 of 100 entries</div></div><div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_3_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_3_previous"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item disabled" id="DataTables_Table_3_ellipsis"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="6" tabindex="0" class="page-link">…</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="7" tabindex="0" class="page-link">10</a></li><li class="paginate_button page-item next" id="DataTables_Table_3_next"><a href="#" aria-controls="DataTables_Table_3" data-dt-idx="8" tabindex="0" class="page-link">&nbsp;</a></li></ul>
-                
-                
-                
-                </div></div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ Responsive Datatable -->
-
-        </div>
-      </div>
     </div>
 
 
