@@ -521,7 +521,7 @@
                                 <a href="#" class="btn">Purchase Now</a>
                             </div>
                             <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
-                                <img src="assets/images/product-images/auto-parts-p-img4.jpg" alt="" />
+                                <img src="assets/images/product-images/" alt="" />
 
 
                             </div>
@@ -596,7 +596,7 @@
                 <div class="hero__inner">
                     <div class="container" style="display:flex;">
                         <div class="wrap-text text-small font-bold img2">
-                            <img src="assets/images/product-images/auto-parts-p-img4.jpg" alt="" />
+                            <img src="assets/images/product-images/" alt="" />
                         </div>
                         <div class="wrap-text text-small font-bold">
                             <h2 class="h2 mega-title">MAKE IT PERSONAL</h2>
@@ -609,6 +609,7 @@
                 </div>
             </div>
             <!--End Hero Banner With Text-->
+
 
 
             <!--Latest Blog-->
