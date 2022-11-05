@@ -53,6 +53,7 @@
             content: " *";
             color: red;
         }
+
     </style>
     <!-- END: Custom CSS-->
 
@@ -114,18 +115,20 @@
                                             <div class="col-12">
                                                 <div class="mb-1 row">
                                                     <div class="col-sm-12">
-                                                        <label class="col-form-label" for="email-id">TITLE</label>
+                                                        <label class="control-label required"
+                                                            for="email-id">TITLE</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="fname" placeholder="Name" />
+                                                            name="fname" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-1 row">
                                                     <div class="col-sm-12">
-                                                        <label class="col-form-label" for="email-id">SLUG</label>
+                                                        <label class="control-label required"
+                                                            for="email-id">SLUG</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="fname" placeholder="Name" />
+                                                            name="fname" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,6 +136,19 @@
                                 </div>
                                 </form>
                             </div>
+                            <div class="card">
+                                <div class="pd-all-10-20 border-top-color">
+                                    <div class="widget-title">
+                                        <h4 class="card-title">Attributes List</h4>
+                                    </div>
+                                </div>
+                                <div class="widget-body">
+                                    
+                                </div>
+                            </div>
+                            
+
+
                         </div>
                         <div class="col-md-3 col-12">
                             <div class="card">
@@ -168,16 +184,6 @@
                                             <option value="pending">Pending</option>
                                         </select>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="pd-all-10-20 border-top-color">
-                                    <div class="widget-title">
-                                        <h4 class="card-title">Is featured?</h4>
-                                    </div>
-                                </div>
-                                <div class="widget-body">
-                                   
                                 </div>
                             </div>
                         </div>
