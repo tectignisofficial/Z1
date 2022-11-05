@@ -989,7 +989,7 @@ textarea:-ms-input-placeholder {
 }
 
 #header-cart #cart-title strong {
-  color: #031b41000;
+  color: #031b41;
 }
 
 #header-cart .variant-cart {
@@ -1024,7 +1024,7 @@ textarea:-ms-input-placeholder {
 
 #header-cart .priceRow {
   margin-top: 0;
-  color: #031b41000;
+  color: #031b41;
 }
 
 .mini-products-list {
@@ -1296,7 +1296,7 @@ textarea:-ms-input-placeholder {
   }
 
   #siteNav>li>a {
-    color: #031b41000;
+    color: #031b41;
     padding: 0 20px;
     text-transform: uppercase;
     line-height: 40px;
@@ -2236,7 +2236,7 @@ textarea:-ms-input-placeholder {
 }
 
 .variants.add button {
-  color: #031b41000;
+  color: #031b41;
   background-color: #ffffff;
   width: 100%;
   text-transform: uppercase;
@@ -2282,7 +2282,7 @@ a.quick-view,
 a.wishlist,
 .cartIcon,
 .add-to-compare {
-  color: #031b41000;
+  color: #031b41;
   background-color: #ffffff;
   border: 0;
   width: 35px;
@@ -2301,7 +2301,7 @@ a.wishlist:hover,
 .variants.add button:hover,
 .add-to-compare:hover {
   color: #ffffff;
-  background-color: #031b41000;
+  background-color: #031b41;
   opacity: 0.8;
 }
 
@@ -2366,7 +2366,7 @@ a.quick-view {
 
 .grid-products .item .product-price {
   margin: 5px 0;
-  color: #031b41000;
+  color: #031b41;
   font-weight: 600;
 }
 
@@ -2383,7 +2383,7 @@ a.quick-view {
 }
 
 .product-price .price {
-  color: #031b41000;
+  color: #031b41;
 }
 
 .product-price__sale,
@@ -2512,7 +2512,7 @@ a.quick-view {
 }
 
 .product-price__price {
-  color: #031b41000;
+  color: #031b41;
   font-weight: 600;
   display: inline-block;
 }
@@ -2523,7 +2523,7 @@ a.quick-view {
 .grid-products-hover-btn .cartIcon,
 .grid-products-hover-btn .add-to-compare {
   color: #ffffff;
-  background-color: #031b41000;
+  background-color: #031b41;
 }
 
 .grid-products-hover-gry a.quick-view,
@@ -2941,7 +2941,7 @@ a.quick-view {
 }
 
 .filterBox .filter-color .blue {
-  background-color: #031b410fe;
+  background-color: #031b41;
 }
 
 .filterBox .filter-color .pink {
@@ -3138,7 +3138,7 @@ a.quick-view {
 }
 
 .grid-products .item .swatches.color-style li .blue {
-  background-color: #031b410fe;
+  background-color: #031b41;
 }
 
 .grid-products .item .swatches.color-style li.rounded {
@@ -3656,7 +3656,7 @@ a.quick-view {
   padding: 0;
   line-height: 33px;
   float: right;
-  background: #031b41000;
+  background: #031b41;
   color: #ffffff;
   opacity: 0.9;
 }
@@ -5165,7 +5165,7 @@ table {
 }
 
 .tags-clouds li a {
-  color: #031b41000;
+  color: #031b41;
   display: block;
   border: 1px solid #ddd;
   padding: 5px 9px !important;
@@ -5213,7 +5213,7 @@ table {
 }
 
 .compare-page .table .remove-compare:hover {
-  color: #031b41000;
+  color: #031b41;
 }
 
 .compare-page .table .featured-image {
@@ -5680,7 +5680,7 @@ input.checkbox {
 
 .imgBnrOuter .inner .ttl {
   line-height: 25px;
-  color: #031b41000;
+  color: #031b41;
   font-size: 17px;
   display: inline-block;
   padding: 10px 20px;
@@ -5881,7 +5881,7 @@ input.checkbox {
 
 .layout-boxed .slideshow .slideshow__title {
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
-  color: #031b41000;
+  color: #031b41;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -5890,7 +5890,7 @@ input.checkbox {
 }
 
 .layout-boxed .slideshow .slideshow__subtitle {
-  color: #031b41000;
+  color: #031b41;
   font-weight: 300;
   font-size: 20px;
   text-transform: none;
@@ -6157,7 +6157,7 @@ input.checkbox {
 }
 
 .home7-shoes .slideshow .slideshow__title {
-  color: #031b41000;
+  color: #031b41;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -6166,7 +6166,7 @@ input.checkbox {
 }
 
 .home7-shoes .slideshow .slideshow__subtitle {
-  color: #031b41000;
+  color: #031b41;
   font-weight: 400;
   font-size: 18px;
   text-transform: none;
@@ -6195,7 +6195,7 @@ input.checkbox {
 
 .home7-shoes .footer-4 .footer-top h4,
 .home7-shoes .footer-4 .footer-top .h4 {
-  color: #031b41000;
+  color: #031b41;
   font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -6636,10 +6636,10 @@ body.home8-jewellery {
   28.12 Home 13 - Autoparts  ------------
   ---------------------------------------*/
 .store-feature-top {
-  background: #031b41000;
+  background: #031b41;
   padding: 7px !important;
   text-align: center;
-  border-bottom: 1px solid #031b41000;
+  border-bottom: 1px solid #031b41;
 }
 
 .flex {
@@ -6746,7 +6746,7 @@ body.home8-jewellery {
 }
 
 .home13-auto-parts .footer-2 .site-footer {
-  background-color: #031b41000;
+  background-color: #031b41;
 }
 
 .home13-auto-parts .footer-2 .footer-top h4,
@@ -7213,14 +7213,14 @@ body.home15-funiture-template {
   font-size: 20px;
   text-transform: uppercase;
   margin: 0 0 15px 0;
-  color: #031b41000;
+  color: #031b41;
   letter-spacing: 0.08em
 }
 
 .newsletter-left h2 {
   font-size: 20px;
   margin: 0 0 15px 0;
-  color: #031b41000;
+  color: #031b41;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -7284,7 +7284,7 @@ body.home15-funiture-template {
 
 .footer-2 .footer-top h4,
 .footer-2 .footer-top .h4 {
-  color: #031b41000;
+  color: #031b41;
   font-size: 15px;
   font-weight: 400;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -7314,7 +7314,7 @@ body.home15-funiture-template {
 
 .footer-4 .footer-top h4,
 .footer-4 .footer-top .h4 {
-  color: #031b41000;
+  color: #031b41;
   font-size: 15px;
   font-weight: 400;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -7367,7 +7367,7 @@ body.home15-funiture-template {
 
 .footer-5 .footer-top h4,
 .footer-5 .footer-top .h4 {
-  color: #031b41000;
+  color: #031b41;
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 15px;
