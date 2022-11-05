@@ -77,18 +77,19 @@
     ?>
     <!-- END: Main Menu-->
 
- 
 
-        <!-- BEGIN: Content-->
-        <div class="app-content content ">
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-					<ol class="breadcrumb">    
-                            <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item ">Ecommerce</li> 
-							<li class="breadcrumb-item active">New product</li>  
-            </ol>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item ">Ecommerce</li>
+                        <li class="breadcrumb-item active">New product</li>
+                    </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
                     <div class="mb-1 breadcrumb-right">
@@ -96,515 +97,322 @@
                 </div>
             </div>
             <div class="content-body">
-				<div class="row">
-                <div class="mb-1 col-md-9">
-                    <div class="card">
-                                <div class="card-body">
-									<form class="form-check">
-										<div class="mb-1">
-                                            <label class="form-label" for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" name="name" placeholder="Name" />
+                <div class="row">
+                    <div class="mb-1 col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-check">
+                                    <div class="mb-1">
+                                        <label class="form-label" for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" name="name"
+                                            placeholder="Name" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="desc">Description</label><br>
+                                        <div>
+                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
+                                            <button type="button" class="btn btn-info">Add Media</button>
                                         </div>
-										<div class="mb-1">
-                                            <label class="form-label" for="desc">Description</label><br>
-											<div>
-											<button type="button" class="btn btn-primary">Show/hide Editor</button>
-											<button type="button" class="btn btn-info">Add Media</button>
-											</div>
-											<br>
-                                            <input type="text" id="desc" class="form-control" name="desc" placeholder="Description" />
-                                        </div>
-										<div class="mb-1">
-                                            <label class="form-label" for="cont">Content</label><br>
-											<div>
-											<button type="button" class="btn btn-primary">Show/hide Editor</button>
-											<button type="button" class="btn btn-info">Add Media</button>
-											<div class="btn-group">
-                                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Info
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                <a class="dropdown-item" href="#">Payment info</a>
-                                                <a class="dropdown-item" href="#">Blog Posts</a>
-                                                <a class="dropdown-item" href="#">Contact form</a>
-												<a class="dropdown-item" href="#">Simple Slider</a>
-												<a class="dropdown-item" href="#">Feature Product Categories</a>
-												<a class="dropdown-item" href="#">Featured Brands</a>
-												<a class="dropdown-item" href="#">Product Collections</a>
-												<a class="dropdown-item" href="#">Trending Products</a>
-												<a class="dropdown-item" href="#">Product blocks</a>
-												<a class="dropdown-item" href="#">All products</a>
-												<a class="dropdown-item" href="#">All brands</a>
-												<a class="dropdown-item" href="#">Flash sale</a>
-												<a class="dropdown-item" href="#">Banners</a>
-												<a class="dropdown-item" href="#">Our features</a>
-												<a class="dropdown-item" href="#">Testimonials</a>
-												<a class="dropdown-item" href="#">Newsletter form</a>
-												<a class="dropdown-item" href="#">Featured News</a>
-												<a class="dropdown-item" href="#">Google maps</a>
-												<a class="dropdown-item" href="#">Youtube video</a>
+                                        <br>
+                                        <input type="text" id="desc" class="form-control" name="desc"
+                                            placeholder="Description" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="cont">Content</label><br>
+                                        <div>
+                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
+                                            <button type="button" class="btn btn-info">Add Media</button>
+                                            <div class="btn-group">
+                                                <button class="btn btn-info dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton3" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Info
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                                    <a class="dropdown-item" href="#">Payment info</a>
+                                                    <a class="dropdown-item" href="#">Blog Posts</a>
+                                                    <a class="dropdown-item" href="#">Contact form</a>
+                                                    <a class="dropdown-item" href="#">Simple Slider</a>
+                                                    <a class="dropdown-item" href="#">Feature Product Categories</a>
+                                                    <a class="dropdown-item" href="#">Featured Brands</a>
+                                                    <a class="dropdown-item" href="#">Product Collections</a>
+                                                    <a class="dropdown-item" href="#">Trending Products</a>
+                                                    <a class="dropdown-item" href="#">Product blocks</a>
+                                                    <a class="dropdown-item" href="#">All products</a>
+                                                    <a class="dropdown-item" href="#">All brands</a>
+                                                    <a class="dropdown-item" href="#">Flash sale</a>
+                                                    <a class="dropdown-item" href="#">Banners</a>
+                                                    <a class="dropdown-item" href="#">Our features</a>
+                                                    <a class="dropdown-item" href="#">Testimonials</a>
+                                                    <a class="dropdown-item" href="#">Newsletter form</a>
+                                                    <a class="dropdown-item" href="#">Featured News</a>
+                                                    <a class="dropdown-item" href="#">Google maps</a>
+                                                    <a class="dropdown-item" href="#">Youtube video</a>
+                                                </div>
                                             </div>
                                         </div>
-											</div>
-											<br>
-                                            <input type="text" id="cont" class="form-control" name="cont" placeholder="" />
+                                        <br>
+                                        <input type="text" id="cont" class="form-control" name="cont" placeholder="" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="images">Images</label><br>
+                                        <button id="select-files" class="btn btn-outline-primary mb-1">
+                                            <i data-feather="file"></i> Click me to select files
+                                        </button>
+                                        <div class="gallery-images-wrapper list-images">
+                                            <div class="images-wrapper" style="border: thin #000000">
+                                                <div data-name="images[]"
+                                                    class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
+                                                    <img src="http://ecommerce.sachinenterprise.in/vendor/core/core/base/images/placeholder.png"
+                                                        alt="Image" width="100">
+                                                    <br>
+                                                    <p style="color:#c3cfd8">Using button
+                                                        <strong>Select image</strong> to add more images.</p>
+                                                </div>
+                                                <input type="hidden" name="images[]">
+                                                <ul class="list-unstyled list-gallery-media-images hidden ui-sortable"
+                                                    style="">
+                                                </ul>
+                                            </div>
                                         </div>
-										<div class="mb-1">
-                                            <label class="form-label" for="images">Images</label><br>
-                                            <button id="select-files" class="btn btn-outline-primary mb-1">
-                                        <i data-feather="file"></i> Click me to select files
-                                    </button>
-										<div class="gallery-images-wrapper list-images">
-            						<div class="images-wrapper" style="border: thin #000000">
-        							<div data-name="images[]" class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
-           						    <img src="http://ecommerce.sachinenterprise.in/vendor/core/core/base/images/placeholder.png" alt="Image" width="100">
-            						<br>
-            						<p style="color:#c3cfd8">Using button
-                					<strong>Select image</strong> to add more images.</p>
-        							</div>
-        							<input type="hidden" name="images[]">
-       							    <ul class="list-unstyled list-gallery-media-images hidden ui-sortable" style="">
-                    				</ul>
-    								</div>
-									</div></div>
-									<div class="mb-1">
-                                            <label class="form-label" for="thmbnl">Video Thumbnail</label><br>
-                                            <button id="selecti" class="btn btn-outline-primary mb-1">
-                                        <i data-feather="file"></i> Click me to select Thumbnail
-                                    </button>
-                                        </div>
-										<div class="mb-1">
-                                            <label class="form-label" for="upld">Upload video</label><br>
-                                            <button id="selectv" class="btn btn-outline-primary mb-1">
-                                        <i data-feather="file"></i> Click me to select video
-                                    </button>
-                                        </div>
-										</form>
-							</div>
-                            </div> 
-					 <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Overview</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
+                                    </div>
+                                   
+                                    <div class="mb-1">
+                                        <label class="form-label" for="upld">Upload video</label><br>
+                                        <button id="selectv" class="btn btn-outline-primary mb-1">
+                                            <i data-feather="file"></i> Click me to select video
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Overview</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
                                         <div class="row">
-											<div class="row">
                                             <div class="col-4">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="SKU">SKU</label>
-                                                    <input type="text" id="SKU" class="form-control" name="fname" placeholder="" />
+                                                    <input type="text" id="SKU" class="form-control" name="fname"
+                                                        placeholder="" />
                                                 </div>
                                             </div>
-												<div class="col-4">
+                                            <div class="col-4">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="price">Price</label>
-                                                    <input type="text" id="price" class="form-control" name="fname" placeholder="" />
+                                                    <input type="text" id="price" class="form-control" name="fname"
+                                                        placeholder="" />
                                                 </div>
                                             </div>
-												<div class="col-4">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="pricesale">Price sale</label>
-                                                    <input type="text" id="pricesale" class="form-control" name="fname" placeholder="" />
-                                                </div>
-                                            </div>
-											</div>
-											<div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="from">From date</label>
-                                                    <input type="date" id="from" class="form-control" name="fname" placeholder="" />
-                                                </div>
-                                            </div>
-												<div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="to">To date</label>
-                                                    <input type="date" id="to" class="form-control" name="fname" placeholder="" />
-                                                </div>
-                                            </div>
-											</div>
-                                            <div class="col-12">
-                                                <div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck3" />
-                                                        <label class="form-check-label" for="customCheck3">With storehouse management</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Stock status</label>
-												<select class="form-select" id="basicSelect">
-                                            <option>In stock</option>
-                                            <option>Out of stock</option>
-                                            <option>On backorder</option>
-                                        </select>
-                                            </div>
-											<div class="col-12">
-                                                <label class="form-label">Shipping</label>
-                                            </div>
-											<div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="wei">Weight (g)</label>
-                                                    <input type="number" id="wei" class="form-control" name="fname" placeholder="0" />
-                                                </div>
-                                            </div>
-												<div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="len">Length (cm)</label>
-                                                    <input type="number" id="len" class="form-control" name="fname" placeholder="0" />
-                                                </div>
-                                            </div>
-											</div>
-											<div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="wide">Wide (cm)</label>
-                                                    <input type="number" id="wide" class="form-control" name="fname" placeholder="0" />
-                                                </div>
-                                            </div>
-												<div class="col-6">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="hei">Height (cm)</label>
-                                                    <input type="number" id="hei" class="form-control" name="fname" placeholder="0" />
-                                                </div>
-                                            </div>
-											</div>
+                                          
                                         </div>
-                                    </form>
-                                </div>
+                                       
+
+                                        <div class="col-12">
+                                            <label class="form-label">Stock status</label>
+                                            <select class="form-select" id="basicSelect">
+                                                <option>In stock</option>
+                                                <option>Out of stock</option>
+                                               
+                                            </select>
+                                        </div>
+                                       
+                                        
+                                    </div>
+                                </form>
                             </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Attributes</h4>
-									<p>Add new attributes</p>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<p>Adding new attributes helps the product to have many options, such as size or color.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Attributes</h4>
+                                <p>Add new attributes</p>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>Adding new attributes helps the product to have many options, such as
+                                                size or color.</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Related products</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label" for="sname">Related products</label>
+                                            <input type="text" id="sname" class="form-control" name="sname"
+                                                placeholder="search products" />
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="csname">Cross-selling products</label>
+                                            <input type="text" id="csname" class="form-control" name="csname"
+                                                placeholder="search products" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Search Engine Optimize</h4>
+                                <p>Edit SEO meta</p>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <p>Setup meta title & description to make your site easy to discovered on search
+                                        engines such as Google</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label" for="set">SEO Title</label>
+                                            <input type="text" id="set" class="form-control" name="set"
+                                                placeholder="seo title" />
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="sedes">SEO description</label>
+                                            <input type="text" id="sedes" class="form-control" name="sedes"
+                                                placeholder="seo description" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Publish</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-success">Save</button>
+                                            <button type="button" class="btn btn-info">Save & Edit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Tags</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <select class="form-select" id="sbasicSelect">
+                                                <option>Published</option>
+                                                <option>Draft</option>
+                                                <option>Pending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Is featured?</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-check form-check-success form-switch">
+                                                <input type="checkbox" checked class="form-check-input"
+                                                    id="customSwitch4" />
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Related products</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<label class="form-label" for="sname">Related products</label>
-                                            <input type="text" id="sname" class="form-control" name="sname" placeholder="search products" />
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Categories</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="tv" />
+                                                    <label class="form-check-label" for="tv">Knee Brace</label>
+                                                </div>
                                             </div>
-											<div class="col-12">
-												<label class="form-label" for="csname">Cross-selling products</label>
-                                            <input type="text" id="csname" class="form-control" name="csname" placeholder="search products" />
+                                    
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Label</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1" />
+                                                    <label class="form-check-label" for="customCheck1">New</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck2" />
+                                                    <label class="form-check-label" for="customCheck2">Hot</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck4" />
+                                                    <label class="form-check-label" for="customCheck4">Sale</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Search Engine Optimize</h4>
-									<p>Edit SEO meta</p>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-										<p>Setup meta title & description to make your site easy to discovered on search engines such as Google</p>
-                                        <div class="row">
-                                            <div class="col-12">
-												<label class="form-label" for="set">SEO Title</label>
-                                            <input type="text" id="set" class="form-control" name="set" placeholder="seo title" />
-                                            </div>
-											<div class="col-12">
-												<label class="form-label" for="sedes">SEO description</label>
-                                            <input type="text" id="sedes" class="form-control" name="sedes" placeholder="seo description" />
-                                            </div>
+                        </div>
+                       
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Tags</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="text" id="tname" class="form-control" name="tname"
+                                                placeholder="Write some tags" />
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
+                        </div>
+                    </div>
                 </div>
-				<div class="mb-1 col-md-3">
-                 <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Publish</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<button type="button" class="btn btn-success">Save</button>
-												<button type="button" class="btn btn-info">Save & Edit</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Tags</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<select class="form-select" id="sbasicSelect">
-                                            <option>Published</option>
-                                            <option>Draft</option>
-                                            <option>Pending</option>
-                                        </select>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Is featured?</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<div class="form-check form-check-success form-switch">
-                                                <input type="checkbox" checked class="form-check-input" id="customSwitch4" />
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Categories</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="tv" />
-                                                        <label class="form-check-label" for="tv">Television</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="mob" />
-                                                        <label class="form-check-label" for="mob">Mobile</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="hea" />
-                                                        <label class="form-check-label" for="hea">Headphones</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="wat" />
-                                                        <label class="form-check-label" for="wat">Watches</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="game" />
-                                                        <label class="form-check-label" for="game">Game</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Camera" />
-                                                        <label class="form-check-label" for="Camera">Camera</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Audio" />
-                                                        <label class="form-check-label" for="Audio">Audio</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Tablet" />
-                                                        <label class="form-check-label" for="Tablet">Tablet</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Accessories" />
-                                                        <label class="form-check-label" for="Accessories">Accessories</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Home" />
-                                                        <label class="form-check-label" for="Home">Home audio & Theater</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="smartbox" />
-                                                        <label class="form-check-label" for="smartbox">TV & smartbox</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Printer" />
-                                                        <label class="form-check-label" for="Printer">Printer</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="comp" />
-                                                        <label class="form-check-label" for="comp">Computer</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="fax" />
-                                                        <label class="form-check-label" for="fax">Fax Machine</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="mouse" />
-                                                        <label class="form-check-label" for="mouse">Mouse</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Brand</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<select class="form-select" id="bsbasicSelect">
-                                            <option>No brand</option>
-                                            <option>Fashion live</option>
-                                            <option>Handcrafted</option>
-											<option>Mestonix</option>
-											<option>Sunshine</option>
-											<option>Pure</option>
-											<option>Anfold</option>
-											<option>Automatic</option>
-                                        </select>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-						<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Product Collections</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="new" />
-                                                        <label class="form-check-label" for="new">New arrival</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="bes" />
-                                                        <label class="form-check-label" for="bes">best sellers</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="off" />
-                                                        <label class="form-check-label" for="off">Special offers</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Label</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck1" />
-                                                        <label class="form-check-label" for="customCheck1">New</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck2" />
-                                                        <label class="form-check-label" for="customCheck2">Hot</label>
-                                                    </div>
-                                                </div>
-												<div class="mb-1">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck4" />
-                                                        <label class="form-check-label" for="customCheck4">Sale</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Tax</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<select class="form-select" id="basbasicSelect">
-                                            <option>-select-</option>
-                                            <option>VAT</option>
-                                            <option>none</option>
-                                        </select>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-					<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Tags</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form form-vertical">
-                                        <div class="row">
-                                            <div class="col-12">
-												<input type="text" id="tname" class="form-control" name="tname" placeholder="Write some tags" />
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-              	</div>	
             </div>
         </div>
     </div>
-	</div>
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
