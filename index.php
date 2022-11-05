@@ -500,8 +500,8 @@
                         <div class="hero__inner">
                             <div class="container" style="display: flex;">
                                 <div class="wrap-text left text-small font-bold">
-                                    <h2 class="h2 mega-title">CUSTOMIZED KNEE BRACES</h2>
-                                    <div class="rte-setting mega-subtitle">Customization is the key. In order to meet
+                                    <h2 class="h2 mega-title" style="color:#ffffff">CUSTOMIZED KNEE BRACES</h2>
+                                    <div class="rte-setting mega-subtitle" style="color:#ffffff">Customization is the key. In order to meet
                                         customer needs and satisfaction, customizing our healthcare products is
                                         necessary.
                                         One Size doesn’t fit all. Neither you nor us. Each and every customised Knee
@@ -514,7 +514,7 @@
                                         support
                                         and comfort to ensure a speedy recovery.
                                         Now, Rehab, Train or Play but with confidence.</div>
-                                    <a href="#" class="btn">Purchase Now</a>
+                                    <a href="shop.php" class="btn" style="background-color:#ffffff; color:#000000"><b>Shop Now</b></a>
                                 </div>
                                 <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
                                     <img src="assets/images/product-images/" alt="" />
@@ -560,29 +560,20 @@
                         <div class="row">
                             <div class="feature-row">
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                    <img src="assets/images/fast-fashion_600x.jpg"
-                                        alt="Fast Fashion Only available at BElle"
-                                        title="Fast Fashion Only available at BElle" />
+                                    <img src="assets/images/K2 Comfortline Knee Orthosis.jpg"
+                                        alt="K2 Comfortline Knee Orthosis"
+                                        title="K2 Comfortline Knee Orthosis" />
                                 </div>
                                 <div
                                     class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
                                     <div class="row-text">
-                                        <h2 class="h2">Fast Fashion Only available at BElle</h2>
-                                        <div class="rte-setting featured-row__subtext">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the
-                                                1500s, when an unknown printer took a galley of type and scrambled it to
-                                                make a type specimen book.</p>
-                                            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                                                below
-                                                for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                                                Bonorum
-                                                et Malorum" by Cicero are also reproduced in their exact original form,
-                                                accompanied by English versions from the 1914 translation by H. Rackham.
+                                        <h2 class="h1"><b>K2 Comfortline Knee Orthosis</b></h2>
+                                        <div class="rte-setting featured-row__subtext" style="font-size:15px">
+                                            <b>The Effective Solution for the Sportsperson in you!</b>
+                                            <p>The Z1 K2 Comfortline is an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete stability and support for efficient aid and relief from sports injuries, ligament injuries and mild osteoarthritis.
                                             </p>
                                         </div>
-                                        <a href="#" class="btn">Shop Now</a>
+                                        <a href="shop.php" class="btn">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
