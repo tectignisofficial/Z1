@@ -213,7 +213,10 @@
                                                     <td>1200</td>
                                                     <td>12/10/22</td>
                                                     <td>Published</td>
-                                                    <td></td>
+                                                    <td><a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a></td>
 
                                                 </tr>
                                             </tbody>

@@ -187,8 +187,8 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th class="control" rowspan="1" colspan="1" style="display: none;">
-                                                    </th>
+                                                    <!-- <th class="control" rowspan="1" colspan="1" style="display: none;">
+                                                    </th> -->
                                                     <th rowspan="1" colspan="1">ID</th>
                                                     <th rowspan="1" colspan="1">PRODUCT</th>
                                                     <th rowspan="1" colspan="1">USER</th>
@@ -202,16 +202,19 @@
                                             </tfoot>
                                             <tbody>
                                                 <tr>
-                                                    <td class="control sorting_1" tabindex="0" style="display: none;">
-                                                    </td>
+                                                    <!-- <td class="control sorting_1" tabindex="0" style="display: none;">g
+                                                    </td> -->
                                                     <td>111</td>
                                                     <td>ABC</td>
                                                     <td>XYZ</td>
                                                     <td>3</td>
                                                     <td>DYGKHJYOIJU</td>  
-                                                    <td>Published<td>  
+                                                    <td>Published</td>  
                                                     <td>12/10/22</td> 
-                                                    <td></td>
+                                                    <td><a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
