@@ -38,7 +38,7 @@
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
                 	<div class="text-center mb-4">
-                        <h2 class="h2"><b>Zodiacal Overseas About us</b></h2>
+                        <h2 class="h2"><b>Our Story</b></h2>
                         <div class="rte-setting" style="font-size:15px">
                             <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in 2012 as a professional manufacturing and marketing company dealing in various healthcare products based in India. With unique product and flawless marketing strategies, ZOPL has been a global market leader in the course of a very short span of time. Z1, Z-ONE & Z1 KNEEBRACE all our brands.</p>
                         </div>
