@@ -517,7 +517,7 @@
                                     <a href="shop.php" class="btn" style="background-color:#ffffff; color:#000000"><b>Shop Now</b></a>
                                 </div>
                                 <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
-                                    <img src="assets/images/product-images/" alt="" />
+                                    <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png" alt="K2 Comfortline Knee Orthosis" />
 
 
                                 </div>
@@ -591,12 +591,10 @@
                                 <img src="assets/images/product-images/" alt="" />
                             </div>
                             <div class="wrap-text text-small font-bold">
-                                <h2 class="h2 mega-title">MAKE IT PERSONAL</h2>
-                                <div class="rte-setting mega-subtitle">Make your jewels even more meaningful by <br>
-                                    personalizing them with a name, monogram, coordinates, date,<br> or a special
-                                    message.
+                                <h2 class="h2 mega-title">SECURED PAYMENT GATEWAY</h2>
+                                <div class="rte-setting mega-subtitle">The website is configured with secured payment gateway. The gateway is encrypted with the latest security technology to ensure that all information submitted is safe and confidential. We also offer a variety of payment methods, including credit card, PayPal, and bank transfer. Customers can choose the payment method that best suits their needs. We are committed to providing our customers with the highest level of security and customer service. Thank you for choosing our website as your source for products and services.
                                 </div>
-                                <a href="#" class="btn">personalize Now</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -619,7 +617,7 @@
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="wrap-blog">
                                     <a href="blog-left-sidebar.html" class="article__grid-image">
-                                        <img src="assets/images/blog/z1kneebrace-blogs.jpg" alt="It's all about how you wear"
+                                        <img src="assets/images/blog/z1-k6-homepage.jpg" alt="It's all about how you wear"
                                             title="It's all about how you wear" class="blur-up lazyloaded" />
                                     </a>
                                     <div class="article__grid-meta article__grid-meta--has-image">
