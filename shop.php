@@ -148,12 +148,7 @@
                                         <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
                                             <button class="btn btn-addto-cart" type="button">Add To Cart</button>
                                         </form>
-                                        <div class="button-set">
-                                            <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                                        <i class="icon anm anm-search-plus-r"></i>
-                                                    </a>
-                                
-                                        </div>
+                                     
                                         <!-- end product button -->
                                     </div>
                                     <!-- end product image -->
@@ -206,12 +201,7 @@
                                         <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
                                             <button class="btn btn-addto-cart" type="button">Add To Cart</button>
                                         </form>
-                                        <div class="button-set">
-                                            <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                                        <i class="icon anm anm-search-plus-r"></i>
-                                                    </a>
-                                             
-                                        </div>
+                                    
                                         <!-- end product button -->
                                     </div>
                                     <!-- end product image -->
