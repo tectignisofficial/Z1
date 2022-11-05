@@ -138,7 +138,7 @@
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                                                        <a href="short-description.html">K2 Comfortline Knee Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -207,7 +207,7 @@
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">Cape Dress</a>
+                                                        <a href="short-description.html">K4 OsteoAlign Knee Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -467,7 +467,7 @@
                             <h1 class="mb-5" style="text-align:center">Benefits of Custom Knee Braces</h1>
                         <div class="row">
                             <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
-                                <img src="assets/images/credit-card.png" alt="Safe Payment" title="Safe Payment">
+                                <img src="assets/images/z1 knee.png" alt="Safe Payment" title="Safe Payment">
                                 <div class="details">
                                     <h3>Structural support to the knee.</h3>They provide stability, additional support and a protection card for the knee in case of any injuries
                                 </div>
@@ -479,13 +479,28 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
-                                <img src="assets/images/worldwide.png" alt="Worldwide Delivery" title="Worldwide Delivery">
+                                <img src="assets/images/z1 knee.png" alt="Worldwide Delivery" title="Worldwide Delivery">
                                 <div class="details">
                                     <h3>Easy recovery from injury.</h3>These braces are used for preventing any injury in case of contact to ligament during sports.
                                 </div>
                             </div>
+                            
                         
                         </div>
+                        <h3 class="h3">In the case of structural support for the knee, there are several kinds of knee braces available which include:</h3><br>
+                                        <div class="rte-setting featured-row__subtext" style="font-size:15px">
+                                            <li><b>Functional Braces:</b>
+                                            They provide stability, additional support and a protection card for the knee in case of any injuries.<br><br></li>
+                                            <li><b>Rehabilitative Braces:</b>
+                                            These restrict the movement of knee joints in all directions, making them heal quickly in case of any injuries.<br><br></li>
+                                           <li> <b>Prophylactic Braces:</b>
+                                            These braces are used for preventing any injury in case of contact to ligament during sports.<br><br></li>
+                                            <p>Braces using for pain relief, during osteoarthritis (cartilage in the body starts to deteriorate causing severe joint pain), or chronic pain due to swelling at joints, people find it using for comfort and immense pleasure.</p>
+                                            <p>At ZOPL (Zodiacal Overseas Pvt. Ltd.,) one can find a variety of custom knee braces to buy online according to the need and size of the knee for having a suitable fitting. As everyone is not having a knee of identical size, Z1 provides customized knee braces at affordable prices.</p>
+                                            <p>It has the best online delivery options to many countries, including the USA, Canada, Europe and India.</p>
+                                            <p>Z1 provides customized knee braces having lightweight, providing comfort and relieves pain at low prices.</p>
+                                            <p>At Z1, you can find braces with more durable designs with quality protection layers supporting the knee from injury accompanying speed recovery.</p>
+                                        </div>
                     </div>
                         </div>
                     </div>
@@ -496,7 +511,7 @@
                 <!--Parallax Section-->
                 <div class="section" style="padding-bottom: 0px;">
                     <div class="hero hero--large hero__overlay bg-size">
-                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg" alt="" />
+                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg" alt="K2 Comfortline Knee Orthosis" />
                         <div class="hero__inner">
                             <div class="container" style="display: flex;">
                                 <div class="wrap-text left text-small font-bold">
