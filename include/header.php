@@ -89,13 +89,13 @@
                         	<ul class="mini-products-list">
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    	<img src="assets/images/product-images/" alt="3/4 Sleeve Kimono Dress" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.php">Sleeve Kimono Dress</a>
-                                        <div class="variant-cart">Black / XL</div>
+                                        <a class="pName" href="cart.php">K2 Comfortline Knee Orthosis</a>
+                                        <div class="variant-cart">XL</div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
@@ -113,13 +113,13 @@
                                 </li>
                                 <li class="item">
                                 	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                    	<img src="assets/images/product-images/" alt="Elastic Waist Dress - Black / Small" title="" />
                                     </a>
                                     <div class="product-details">
                                     	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                         <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
-                                        <div class="variant-cart">Gray / XXL</div>
+                                        <a class="pName" href="cart.html">K2 Comfortline Knee Orthosis</a>
+                                        <div class="variant-cart">XXL</div>
                                         <div class="wrapQtyBtn">
                                             <div class="qtyField">
                                             	<span class="label">Qty:</span>
