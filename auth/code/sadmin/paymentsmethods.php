@@ -6,13 +6,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="description"
+        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Form Layouts - Vuexy - Bootstrap HTML admin template</title>
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
@@ -40,10 +43,11 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
+    data-menu="vertical-menu-modern" data-col="">
 
     <!-- BEGIN: Header-->
-   
+
     <!-- END: Header-->
     <?php 
     include("include/header.php");
@@ -56,17 +60,18 @@
     <!-- END: Main Menu-->
 
 
-    
+
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-					<ol class="breadcrumb">    
-                            <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item ">Payments</li> 
-							<li class="breadcrumb-item active">Payment methods</li>  
-            </ol>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item ">Payments</li>
+                        <li class="breadcrumb-item active">Payment methods</li>
+                    </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
                     <div class="mb-1 breadcrumb-right">
@@ -74,293 +79,124 @@
                 </div>
             </div>
             <div class="content-body">
-				<div class="row">
-				<div class="mb-1 col-md-3">
-                    <h4>Payment methods</h4>
-                    <p>Setup payment methods for website</p>                        
-              	</div>
-                <div class="mb-1 col-md-9">
-                    <div class="card">
-                                <div class="card-body">
-									<form class="form-check">
-										<div class="mb-1">
-                                            <label class="form-label" for="select-paymethod">Default Payment Method</label>
-                                            <select class="form-select" id="select-paymethod" required>
-                                                <option value="stripe">Stripe</option>
-                                                <option value="paypal">Paypal</option>
-                                                <option value="cod">Cash on Delivery (COD)</option>
-                                                <option value="banktransfer">Bank transfer</option>
-                                                <option value="razorpay">Razorpay</option>
-                                                <option value="paystack">Paystack</option>
-												<option value="mollie">Mollie</option>
-												<option value="sslcommerz">SslCommerz</option>
-                                            </select>
+                <div class="row">
+                    <div class="mb-1 col-md-3">
+                        <h4>Payment methods</h4>
+                        <p>Setup payment methods for website</p>
+                    </div>
+                    <div class="mb-1 col-md-9">
+                     
+                        
+                        <div class="row" id="table-1bordered">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="border-pay-col col-1"><i data-feather="database"></i>
+                                                    </td>
+                                                    <td>
+                                                        <div class="row">
+                                                            <div class="col-3" align="center"><br>
+                                                                <img class="filter-black"
+                                                                    src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/payment/images/ppcom.svg"
+                                                                    alt style="width: 70%;">
+                                                            </div>
+                                                            <div class="col-9">
+                                                           <a href="https://paypal.com"
+                                                                            target="_blank">PayPal</a>
+                                                               <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-12">
+                                                        <label class="col-form-label" for="email-id">TITLE</label>
+                                                        <input type="text" id="first-name" class="form-control" name="fname" placeholder="Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-12">
+                                                        <label class="col-form-label" for="email-id">SLUG</label>
+                                                        <input type="text" id="first-name" class="form-control" name="fname" placeholder="Name">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-										</form>
-							</div>
-                            </div>  
-					<div class="row" id="table-bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3">
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/payment/images/stripe.svg" alt style="width: 70%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <a href="https://stripe.com" target="_blank">Stripe</a>
-                                        <p>Customer can buy product and pay directly using Visa, Credit card via Stripe</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" align="right">
+                                                        <button type="button"
+                                                            class="btn btn-outline-dark">Settings</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-					<div class="row" id="table-1bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align= "center"><br>
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/payment/images/ppcom.svg" alt style="width: 70%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                      <a href="https://paypal.com" target="_blank">PayPal</a>
-                                        <p>Customer can buy product and pay directly via PayPal</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="row" id="table-2bordered">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="border-pay-col col-1"><i data-feather="database"></i>
+                                                    </td>
+                                                    <td>
+                                                        <div class="row">
+                                                            <div class="col-3" align="center"><br>
+                                                                <img class="filter-black"
+                                                                    src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/razorpay/images/razorpay.svg"
+                                                                    alt style="width: 80%;">
+                                                            </div>
+                                                            <div class="col-9">
+                                                                <ul><br>
+                                                                    <li>
+                                                                        <a href="https://razorpay.com"
+                                                                            target="_blank">Razorpay</a>
+                                                                        <p>Customer can buy product and pay directly
+                                                                            using Visa, Credit card via Razorpay</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" align="right">
+                                                        <div class="row">
+                                                            <div class="col-8" align="left"><br>
+                                                                <p>Use: Online payments via Razorpays</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <button type="button"
+                                                                    class="btn btn-outline-dark">Settings</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
+
                 </div>
-						<div class="row" id="table-2bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align="center"><br>
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/razorpay/images/razorpay.svg" alt style="width: 80%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <a href="https://razorpay.com" target="_blank">Razorpay</a>
-                    <p>Customer can buy product and pay directly using Visa, Credit card via Razorpay</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<div class="row">
-													<div class="col-8" align="left"><br>
-												<p>Use: Online payments via Razorpays</p>
-													</div>
-												<div class="col">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-													</div></div>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-						<div class="row" id="table-3bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align="center"><br>
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/paystack/images/paystack.png" alt style="width: 70%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <a href="https://paystack.com" target="_blank">Paystack</a>
-                                        <p>Customer can buy product and pay directly using Visa, Credit card via Paystack</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-						<div class="row" id="table-4bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align="center">
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/mollie/images/mollie.png" alt style="width: 70%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <a href="https://mollie.com" target="_blank">Mollie</a>
-                                        <p>Customer can buy product and pay directly using Visa, Credit card via Mollie</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-						<div class="row" id="table-5bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align="center"><br>
-                                <img class="filter-black" src="http://ecommerce.sachinenterprise.in/vendor/core/plugins/sslcommerz/images/sslcommerz.png" alt style="width: 70%;" >
-                            </div><div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <a href="https://sslcommerz.com" target="_blank">SslCommerz</a>
-                                        <p>Customer can buy product and pay directly using Visa, Credit card via SslCommerz</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-						<div class="row" id="table-6bordered">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                          <td class="border-pay-col col-1"><i data-feather="database"></i></td>
-                                            <td><div class="row">
-												<div class="col-3" align="center"><br>
-                                <h6>Payment<br>Methods</h6>	
-                            </div>
-												<div class="col-9">
-                                <ul><br>
-                                    <li>
-                                        <p>Guide customers to pay directly. You can choose to pay by delivery or bank transfer</p>
-                                    </li>
-                                </ul>
-											</div>
-												</div>
-                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="right">
-												<div class="row">
-													<div class="col-8" align="left"><br>
-												<p>Use: Cash on Delivery (COD)</p>
-													</div>
-												<div class="col">
-												<button type="button" class="btn btn-outline-dark">Edit</button>
-													</div></div>
-											</td>
-                                        </tr>
-										<tr>
-                                            <td colspan="2" align="right">
-												<div class="row">
-													<div class="col-8" align="left"><br>
-												<p>Use: Bank Transfer</p>
-													</div>
-												<div class="col">
-												<button type="button" class="btn btn-outline-dark">Settings</button>
-													</div></div>
-											</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-					
             </div>
         </div>
     </div>
-	</div>
     <!-- END: Content-->
-    
+
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
@@ -387,7 +223,7 @@
     <!-- END: Page JS-->
 
     <script>
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             if (feather) {
                 feather.replace({
                     width: 14,
