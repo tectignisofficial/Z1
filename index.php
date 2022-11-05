@@ -614,24 +614,6 @@
                 </div>
                 <!--Feature Content-->
 
-                <!--Hero Banner With Text-->
-                <div class="section hero hero--medium hero__overlay bg-size">
-                    <img class="bg-img" src="assets/images/parallax-banners/jewellery-parallax.jpg" alt="" />
-                    <div class="hero__inner">
-                        <div class="container" style="display:flex;">
-                            <div class="wrap-text text-small font-bold img2">
-                                <img src="assets/images/product-images/" alt="" />
-                            </div>
-                            <div class="wrap-text text-small font-bold">
-                                <h2 class="h2 mega-title">SECURED PAYMENT GATEWAY</h2>
-                                <div class="rte-setting mega-subtitle">The website is configured with secured payment gateway. The gateway is encrypted with the latest security technology to ensure that all information submitted is safe and confidential. We also offer a variety of payment methods, including credit card, PayPal, and bank transfer. Customers can choose the payment method that best suits their needs. We are committed to providing our customers with the highest level of security and customer service. Thank you for choosing our website as your source for products and services.
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Hero Banner With Text-->
 
 
                 <!--Testimonial Slider-->
@@ -707,7 +689,7 @@
                                     <li class="display-table-cell">
                                         <i class="icon anm anm-truck-l"></i>
                                         <h5>Free Shipping &amp; Return</h5>
-                                        <span class="sub-text">Free shipping on all US orders</span>
+                                        <span class="sub-text">Free shipping on all orders worldwide</span>
                                     </li>
                                     <li class="display-table-cell">
                                         <i class="icon anm anm-dollar-sign-r"></i>
