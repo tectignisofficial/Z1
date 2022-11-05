@@ -806,7 +806,7 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                             <div class="product-details-img">
                                                 <div class="pl-20">
-                                                    <img src="assets/images/product-detail-page/camelia-reversible-big1.jpg"
+                                                    <img src="assets/images/product-images/product-image1.jpg"
                                                         alt="" />
                                                 </div>
                                             </div>
