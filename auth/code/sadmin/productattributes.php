@@ -102,7 +102,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Products
+                                    <li class="breadcrumb-item active">Products Attributes
                                     </li>
                                 </ol>
                             </div>
@@ -124,7 +124,7 @@
                             <div class="card">
                                 <div class="card-header border-bottom">
                                     <h4 class="card-title">Orders</h4>
-                                    <a class="btn btn-primary" href="products_form.php"><i class="fa fa-plus"></i>
+                                    <a class="btn btn-primary" href="product_attributes_form.php"><i class="fa fa-plus"></i>
                                     Create
                                 </a>
                                 </div>
