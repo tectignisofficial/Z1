@@ -532,24 +532,7 @@
 
                 <!--End Featured Product-->
 
-                <!--Parallax Section-->
-                <div class="section" style="padding-top: 0px;">
-                    <div class="hero hero--large hero__overlay bg-size">
-                        <img class="bg-img blur-up" src="assets/images/parallax-banners/cosmetic-parallax.jpg" alt="" />
-                        <div class="hero__inner">
-                            <div class="container">
-                                <div class="wrap-text center text-large font-bold">
-                                    <h2 class="h2 mega-title">Super Soft</h2>
-                                    <div class="rte-setting mega-subtitle">You wouldn't believe how amazing<br> this
-                                        maplly
-                                        lipstick are!</div>
-                                    <a href="#" class="btn">Get Your set Today</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Parallax Section-->
+
 
 
 
@@ -583,23 +566,47 @@
                  <div class="section feature-content">
                     <div class="container">
                         <div class="row">
-                            <div class="feature-row">
-                              
+                            <div class="feature-row" >
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--right text-left">
-                                    <div class="row-text">
-                                        <h2 class="h1"><b>K2 Comfortline Knee Orthosis</b></h2>
+                                    <div class="row-text" style="margin-left:0px">
+                                        <h2 class="h1"><b>K4 OsteoAlign Knee Orthosis</b></h2>
                                         <div class="rte-setting featured-row__subtext" style="font-size:15px">
-                                            <b>The Effective Solution for the Sportsperson in you!</b>
-                                            <p>The Z1 K2 Comfortline is an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete stability and support for efficient aid and relief from sports injuries, ligament injuries and mild osteoarthritis.
+                                            <b>The Treatment your Knee needs!</b>
+                                            <p>The Z1 K4 OsteoAlign Knee Brace is a custom made OA Brace best suited for active patients as it offers a convenient and appropriate fit. It is an effective and non-invasive remedy for patients with mild to moderate osteoarthritis. What sets this offloading orthosis apart from others is that it effectively transfers body weight from thigh to calf without exerting much pressure on the knee joint and thus helps stabilize the knee and prevents further deterioration.
                                             </p>
                                         </div>
                                         <a href="shop.php" class="btn">Shop Now</a>
                                     </div>
                                 </div>
                                   <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                    <img src="assets/images/K2 Comfortline Knee Orthosis.jpg"
-                                        alt="K2 Comfortline Knee Orthosis"
-                                        title="K2 Comfortline Knee Orthosis" />
+                                    <img src="assets/images/K4 OsteoAlign Knee Orthosis.jpg"
+                                        alt="K4 OsteoAlign Knee Orthosis"
+                                        title="K4 OsteoAlign Knee Orthosis" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section feature-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="feature-row">
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item">
+                                    <img src="assets/images/K6 Dezire Knee Orthosis.jpg"
+                                        alt="K6 Dezire Knee Orthosis"
+                                        title="K6 Dezire Knee Orthosis" />
+                                </div>
+                                <div
+                                    class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
+                                    <div class="row-text">
+                                        <h2 class="h1"><b>K6 Dezire Knee Orthosis</b></h2>
+                                        <div class="rte-setting featured-row__subtext" style="font-size:15px">
+                                            <b>For that Never Give Up Attitude in you!</b>
+                                            <p>The Z1 K6 Dezire Knee Orthosis is extremely handy in making you feel complacent because of it’s lightweight and highly durable aluminum frame. It is very likely a wonderful product for all those who have pain in the knee as it is phenomenal in providing the coveted support and aid.
+                                            </p>
+                                        </div>
+                                        <a href="shop.php" class="btn">Shop Now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -626,68 +633,6 @@
                 </div>
                 <!--End Hero Banner With Text-->
 
-
-
-                <!--Latest Blog-->
-                <div class="latest-blog section pt-100">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="section-header text-center">
-                                    <h2 class="h2">Latest From our Blog</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                <div class="wrap-blog">
-                                    <a href="blog-left-sidebar.html" class="article__grid-image">
-                                        <img src="assets/images/blog/z1-k6-homepage.jpg" alt="It's all about how you wear"
-                                            title="It's all about how you wear" class="blur-up lazyloaded" />
-                                    </a>
-                                    <div class="article__grid-meta article__grid-meta--has-image">
-                                        <div class="wrap-blog-inner">
-                                            <h2 class="h3 article__title">
-                                                <a href="blog-left-sidebar.html">Why Z1 is the support you need!</a>
-                                            </h2>
-                                            <span class="article__date">May 02, 2017</span>
-                                            <div class="rte article__grid-excerpt">
-                                                Why Z1 is the support you need! Why Z1 is the support you need! Knee injuries can be some...
-                                            </div>
-                                            <ul class="list--inline article__meta-buttons">
-                                                <li><a href="blog-article.html">Read more</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                <div class="wrap-blog">
-                                    <a href="blog-left-sidebar.html" class="article__grid-image">
-                                        <img src="assets/images/blog/z1-k6-homepage.jpg"
-                                            alt="27 Days of Spring Fashion Recap"
-                                            title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded" />
-                                    </a>
-                                    <div class="article__grid-meta article__grid-meta--has-image">
-                                        <div class="wrap-blog-inner">
-                                            <h2 class="h3 article__title">
-                                                <a href="blog-right-sidebar.html">All you need to know about the perfect knee braces!</a>
-                                            </h2>
-                                            <span class="article__date">May 02, 2017</span>
-                                            <div class="rte article__grid-excerpt">
-                                               All you need to know about the perfect knee braces! Knees are essential and one of the most active parts .....
-                                            </div>
-                                            <ul class="list--inline article__meta-buttons">
-                                                <li><a href="blog-article.html">Read more</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Latest Blog-->
 
                 <!--Testimonial Slider-->
                 <div class="section testimonial-slider">
