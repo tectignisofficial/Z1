@@ -41,108 +41,35 @@
                 <!--End Sidebar-->
                 <!--Main Content-->
                 <div class="col-12 col-sm-12  main-col">
-                	<div class="custom-search">
-                        <form action="http://annimexweb.com/search" method="get" class="input-group search-header search" role="search" style="position: relative;">
-                            <input class="search-header__input search__input input-group__field" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
-                            <span class="input-group__btn"><button class="btnSearch" type="submit"> <i class="icon anm anm-search-l"></i> </button></span>
-                        </form>
-                    </div>
+                
                     <div class="blog--list-view">
                     	<div class="row">
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
                                 <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-1.jpg" src="assets/images/blog/blog-post-1.jpg" alt="It's all about how you wear"></a> 
-                                <h2 class="h3"><a href="blog-left-sidebar.html">It's all about how you wear</a></h2>
+                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/z1-k6-homepage.jpg" src="assets/images/blog/blog-post-1.jpg" alt="It's all about how you wear"></a> 
+                                <h2 class="h3"><a href="blog-left-sidebar.html">Why Z1 is the support you need!</a></h2>
                                 <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
                                     <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
                                 </ul>
                                 <div class="rte"> 
-                                    <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la m... </p>
+                                    <p>Why Z1 is the support you need! Why Z1 is the support you need! Knee injuries can be some... </p>
                                      </div>
                                 <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
                             </div>
                             
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
                                 <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-2.jpg" src="assets/images/blog/blog-post-2.jpg" alt="27 Days of Spring Fashion Recap"></a> 
-                                <h2 class="h3"><a href="blog-right-sidebar.html">27 Days of Spring Fashion Recap</a></h2>
+                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/z1kneebrace-blogs.jpg" src="assets/images/blog/blog-post-2.jpg" alt="27 Days of Spring Fashion Recap"></a> 
+                                <h2 class="h3"><a href="blog-right-sidebar.html">All you need to know about the perfect knee braces!</a></h2>
                                 <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
                                     <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
                                 </ul>
                                 <div class="rte"> 
-                                    <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la m... </p>
+                                    <p>All you need to know about the perfect knee braces! Knees are essential and one of the most active parts </p>
                                      </div>
                                 <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
                             </div>
-                            
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
-                                <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-3.jpg" src="assets/images/blog/blog-post-3.jpg" alt="How to Wear The Folds Trend Four Ways"></a> 
-                                <h2 class="h3"><a href="#">How to Wear The Folds Trend Four Ways</a></h2>
-                                <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
-                                    <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
-                                </ul>
-                                <div class="rte"> 
-                                    <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la m... </p>
-                                     </div>
-                                <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-                            </div>
-                            
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
-                                <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-4.jpg" src="assets/images/blog/blog-post-4.jpg" alt="Accusantium doloremque"></a> 
-                                <h2 class="h3"><a href="#">Accusantium doloremque</a></h2>
-                                <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
-                                    <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
-                                </ul>
-                                <div class="rte"> 
-                                    <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la m... </p>
-                                     </div>
-                                <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
-                                <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-5.jpg" src="assets/images/blog/blog-post-5.jpg" alt=""></a> 
-                                <h2 class="h3"><a href="#">Neque porro quisquam est</a></h2>
-                                <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
-                                    <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
-                                </ul>
-                                <div class="rte"> 
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                     </div>
-                                <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
-                                <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-6.jpg" src="assets/images/blog/blog-post-6.jpg" alt=""></a> 
-                                <h2 class="h3"><a href="#">Contrary to popular belief</a></h2>
-                                <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
-                                    <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
-                                </ul>
-                                <div class="rte"> 
-                                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum</p>
-                                     </div>
-                                <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 article"> 
-                                <!-- Article Image --> 
-                                 <a class="article_featured-image" href="#"><img class="blur-up lazyload" data-src="assets/images/blog/blog-post-7.jpg" src="assets/images/blog/blog-post-7.jpg" alt=""></a> 
-                                <h2 class="h3"><a href="#">The standard chunk of Lorem</a></h2>
-                                <ul class="publish-detail">                      
-                                    <li><i class="anm anm-user-al" aria-hidden="true"></i>  User</li>
-                                    <li><i class="icon anm anm-clock-r"></i> <time datetime="2017-05-02">May 02, 2017</time></li>
-                                </ul>
-                                <div class="rte"> 
-                                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum</p>
-                                     </div>
-                                <p><a href="#" class="btn btn-secondary btn--small">Read more <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-                            </div>
+                
                         </div>
                         <hr/>
                         <div class="pagination">
