@@ -74,9 +74,9 @@
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
-                            	<li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>D-114, 5th road Shakti Nagar,<br> Paota c road Jodhpur, Rajasthan 342010</p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>+91 7300044197</p></li>
+                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>info@z1kneebrace.com</p></li>
                             </ul>
                         </div>
                     </div>

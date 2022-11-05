@@ -13,12 +13,25 @@ $clientsecrete=$_POST['clientsecrete'];
 $clientid=$_POST['clientid'];
 
 $paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$clientid',`secrete`='$clientsecrete' WHERE `name`='paypal'");
+if($paypal==1){
+     echo '<script>alert("Successfully submitted");</script>';
+    header("location:paymentsmethods.php");
+}else {
+    echo '<script>alert("oops...somthing went wrong");</script>'; 
 }
+}
+
 if(isset($_POST['razorpayUpdate'])){
 $secrete=$_POST['secrete'];
 $key=$_POST['key'];
 
-$paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secrete`='$secrete' WHERE `name`='razorpay'");
+$razorpaysql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secrete`='$secrete' WHERE `name`='razorpay'");
+if($razorpay==1){
+     echo '<script>alert("Successfully submitted");</script>';
+    header("location:paymentsmethods.php");
+}else {
+    echo '<script>alert("oops...somthing went wrong");</script>'; 
+}
 }
 
 
@@ -225,6 +238,7 @@ $paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secr
                             <div class="col-12">
                                 <div class="card">
                                     <div class="table-responsive">
+                                        <form method="POST">
                                         <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
@@ -249,7 +263,7 @@ $paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secr
                                                                         <div class="mb-1 row">
                                                                             <div class="col-sm-12">
                                                                                 <input type="text" id="first-name"
-                                                                                    class="form-control" name="key"
+                                                                                    class="form-control"value="<?php echo $arr['secrete']?>" name="key"
                                                                                     placeholder="Key">
                                                                             </div>
                                                                         </div>
@@ -258,7 +272,7 @@ $paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secr
                                                                         <div class="mb-1  row">
                                                                             <div class="col-sm-12">
                                                                                 <input type="text" id="first-name"
-                                                                                    class="form-control" name="secrete"
+                                                                                    class="form-control" value="<?php echo $arr['secrete']?>" name="secrete"
                                                                                     placeholder="Secret">
                                                                             </div>
                                                                         </div>
@@ -276,14 +290,15 @@ $paypalsql=mysqli_query($conn, "UPDATE `paymentmethod` SET `id/key`='$key',`secr
                                                                 <p>Use: Online payments via Razorpays</p>
                                                             </div>
                                                             <div class="col">
-                                                                <button type="button"
-                                                                    class="btn btn-primary">Update</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary"name="razorpayUpdate">Update</button>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+</form>
                                     </div>
                                 </div>
                             </div>
