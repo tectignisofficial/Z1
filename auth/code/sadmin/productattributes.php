@@ -123,7 +123,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom">
-                                    <h4 class="card-title">Orders</h4>
+                                    <h4 class="card-title">Attributes</h4>
                                     <a class="btn btn-primary" href="product_attributes_form.php"><i
                                             class="fa fa-plus"></i>
                                         Create

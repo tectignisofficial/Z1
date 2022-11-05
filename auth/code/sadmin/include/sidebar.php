@@ -67,13 +67,9 @@
                         </li>
                         <li><a class="d-flex align-items-center" href="reviews.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Reviews</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="shipping.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Shipping</span></a>
-                        </li>
                         <li><a class="d-flex align-items-center" href="discount.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Discount</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="customers.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Customers</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="taxes.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Add">Taxes</span></a>
                         </li>
                     </ul>
                 </li>
