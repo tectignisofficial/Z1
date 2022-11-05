@@ -261,7 +261,7 @@
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                                                        <a href="short-description.html">K4 Comfortline Knee Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -322,7 +322,7 @@
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">Cape Dress</a>
+                                                        <a href="short-description.html">K2 Comfortline Knee Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
