@@ -50,79 +50,14 @@
 
         <!--Body Content-->
         <div id="page-content">
-            <!--Home slider-->
-            <!-- <div class="slideshow slideshow-wrapper pb-section sliderFull">
-                <div class="home-slideshow">
-                    <div class="slide">
-                        <div class="blur-up lazyload bg-size">
-                            <img class="blur-up lazyload bg-img"
-                                data-src="assets/images/slideshow-banners/belle-banner1.jpg"
-                                src="assets/images/slideshow-banners/belle-banner1.jpg" alt="The A-Z comfort with Z1 Braces."
-                                title="The A-Z comfort with Z1 Braces." />
-                            <div class="slideshow__text-wrap slideshow__overlay classic bottom">
-                                <div class="slideshow__text-content bottom">
-                                    <div class="wrap-caption center">
-                                        <h2 class="h1 mega-title slideshow__title">The A-Z comfort with Z1 Braces.</h2>
-                                        <span class="mega-subtitle slideshow__subtitle"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blur-up lazyload bg-size">
-                            <img class="blur-up lazyload bg-img"
-                                data-src="assets/images/slideshow-banners/belle-banner2.jpg"
-                                src="assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection"
-                                title="" />
-                            <div class="slideshow__text-wrap slideshow__overlay classic bottom">
-                                <div class="slideshow__text-content bottom">
-                                    <div class="wrap-caption center">
-                                        <h2 class="h1 mega-title slideshow__title"></h2>
-                                        <span class="h3 mega-title slideshow__title">The best friend who help you heal.</span>
-                                        <span class="h3 mega-title slideshow__title">Don't suffer, get a best friend!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blur-up lazyload bg-size">
-                            <img class="blur-up lazyload bg-img"
-                                data-src="assets/images/slideshow-banners/belle-banner2.jpg"
-                                src="assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection"
-                                title="" />
-                            <div class="slideshow__text-wrap slideshow__overlay classic bottom">
-                                <div class="slideshow__text-content bottom">
-                                    <div class="wrap-caption center">
-                                        <h2 class="h2 mega-title slideshow__title"></h2>
-                                        <span class="h2 mega-title slideshow__title">The lightweight comfortline that helps you through the tough times.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!--End Home slider-->
-
-
-
 <!--Home slider-->
 <div class="slideshow slideshow-wrapper pb-section">
         	<div class="home-slideshow">
             	<div class="slide">
                 	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/home2-default-banner1.jpg" src="assets/images/slideshow-banners/home2-default-banner1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/home2-default-banner1.jpg" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
                         <div class="slideshow__text-wrap slideshow__overlay classic middle">
                             <div class="slideshow__text-content middle">
-                            	<div class="container">
-                                    <div class="wrap-caption right">
-                                        <h2 class="h1 mega-title slideshow__title">Our New Collection</h2>
-                                        <span class="mega-subtitle slideshow__subtitle">Save up to 50% Off</span>
-                                        <span class="btn">Shop now</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -143,6 +78,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="slide">
+                	<div class="blur-up lazyload">
+                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/home2-default-banner1.jpg" src="assets/images/slideshow-banners/home2-default-banner1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                            <div class="slideshow__text-content middle">
+                            	<div class="container">
+                                    <div class="wrap-caption right">
+                                        <h2 class="h1 mega-title slideshow__title">The lightweight comfortline that helps you through the tough times.</h2>
+                                        <span class="btn">Shop now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
         </div>
         <!--End Home slider-->
