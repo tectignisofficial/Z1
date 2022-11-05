@@ -51,17 +51,17 @@
                                                 class="slick-slide slick-cloned" data-slick-index="-4"
                                                 aria-hidden="true" tabindex="-1">
                                                 <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible0.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible0.jpg"
+                                                    data-src="assets/images/product-images/product-image1-1.jpg"
+                                                    src="assets/images/product-images/product-image1-1.jpg"
                                                     alt="" />
                                             </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big2.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big2.jpg"
+                                            <a data-image="assets/images/product-images/product-image1-1.jpg"
+                                                data-zoom-image="assets/images/product-images/product-image1-1.jpg"
                                                 class="slick-slide slick-cloned" data-slick-index="-3"
                                                 aria-hidden="true" tabindex="-1">
                                                 <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible.jpg"
+                                                    data-src="assets/images/product-images/product-image2-1.jpg"
+                                                    src="assets/images/product-images/product-image2-1.jpg"
                                                     alt="" />
                                             </a>
                                             <a data-image="assets/images/product-detail-page/camelia-reversible-big3.jpg"
@@ -150,9 +150,9 @@
                                     <div class="zoompro-wrap product-zoom-right pl-20">
                                         <div class="zoompro-span">
                                             <img class="blur-up lazyload zoompro"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big1.jpg"
+                                                data-zoom-image="assets/images/product-images/product-image1.jpg"
                                                 alt=""
-                                                src="assets/images/product-detail-page/camelia-reversible-big1.jpg" />
+                                                src="assets/images/product-images/product-image1.jpg" />
                                         </div>
                                         <div class="product-labels"><span class="lbl on-sale">Sale</span><span
                                                 class="lbl pr-label1">new</span></div>
@@ -165,9 +165,9 @@
                                         </div>
                                     </div>
                                     <div class="lightboximages">
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big1.jpg"
+                                        <a href="assets/images/product-images/product-image1-1.jpg"
                                             data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big2.jpg"
+                                        <a href="assets/images/product-images/product-image1-1.jpg"
                                             data-size="1462x2048"></a>
                                         <a href="assets/images/product-detail-page/camelia-reversible-big3.jpg"
                                             data-size="1462x2048"></a>
@@ -193,7 +193,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product-single__meta">
-                                    <h1 class="product-single__title">Product Layout Style1</h1>
+                                    <h1 class="product-single__title">Z1 K2 Comfortline Knee Orthosis</h1>
                                    
                                     <div class="prInfoRow">
                                         <div class="product-stock"> <span class="instock ">In Stock</span> <span
@@ -208,11 +208,11 @@
                                     </div>
                                     <p class="product-single__price product-single__price-product-template">
                                         <span class="visually-hidden">Regular price</span>
-                                        <s id="ComparePrice-product-template"><span class="money">$600.00</span></s>
+                                        <s id="ComparePrice-product-template"><span class="money">₹10,928</span></s>
                                         <span
                                             class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
                                             <span id="ProductPrice-product-template"><span
-                                                    class="money">$500.00</span></span>
+                                                    class="money">₹9,928</span>
                                         </span>
                                         <span class="discount-badge"> <span class="devider">|</span>&nbsp;
                                             <span>You Save</span>
@@ -226,10 +226,10 @@
                                 </div>
                                 <div class="product-single__description rte">
                                     <ul>
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                        <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
-                                        <li>Neque porro quisquam est qui dolorem ipsum quia dolor</li>
-                                        <li>Lorem Ipsum is not simply random text.</li>
+                                        <li>A unique stainless steel reinforced plastic frame.</li>
+                                        <li>Flexible in the perfect areas to implement a flawless fit on the leg</li>
+                                        <li>Powerful and firm stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</li>
+                                        <li>Silicon coated neoprene frame liners and foam strap pads preventing orthosis from slipping down.</li>
                                     </ul>
                                 </div>
                                
@@ -406,17 +406,13 @@
                         <div class="tab-container">
                             <div id="tab1" class="tab-content">
                                 <div class="product-description rte">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen
-                                        book. It has survived not only five centuries, but also the leap into electronic
-                                        typesetting, remaining essentially unchanged.</p>
+                                    <p>
+The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis in the market and suitable for ligament injuries (such as ACL Knee Brace, PCL Knee Brace, MCL Knee Brace), Sports Injuries, Mild Osteoarthritis (OA) as well as for prevention of the knee joint from degeneration and maximizes comfort & minimizes brace migration. The brace construction is Low profile & Lightweight, which makes it extremely easy to use with daily activities.</p>
                                     <ul>
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                        <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
-                                        <li>Neque porro quisquam est qui dolorem ipsum quia dolor</li>
-                                        <li>Lorem Ipsum is not simply random text.</li>
-                                        <li>Free theme updates</li>
+                                        <li>A unique stainless steel reinforced plastic frame.</li>
+                                        <li>Flexible in the perfect areas to implement a flawless fit on the leg</li>
+                                        <li>Powerful and firm stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</li>
+                                        <li>Silicon coated neoprene frame liners and foam strap pads preventing orthosis from slipping down.</li>
                                     </ul>
                                     <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
                                     <p>You can change the position of any sections such as slider, banner, products,

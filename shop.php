@@ -171,7 +171,7 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#">3/4 Sleeve Kimono Dress</a>
+                                            <a href="#">Z1 K2 Comfortline Knee Orthosis</a>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
@@ -229,7 +229,7 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#">Paper Dress</a>
+                                            <a href="#">Z1 K4 OsteoAlign Knee Orthosis</a>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
