@@ -97,7 +97,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Orders</h2>
+                            <h2 class="content-header-title float-start mb-0">Products Attributes</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a>
@@ -124,9 +124,10 @@
                             <div class="card">
                                 <div class="card-header border-bottom">
                                     <h4 class="card-title">Orders</h4>
-                                    <a class="btn btn-primary" href="product_attributes_form.php"><i class="fa fa-plus"></i>
-                                    Create
-                                </a>
+                                    <a class="btn btn-primary" href="product_attributes_form.php"><i
+                                            class="fa fa-plus"></i>
+                                        Create
+                                    </a>
                                 </div>
                                 <div class="card-datatable">
                                     <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
@@ -162,7 +163,8 @@
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 30px;"
-                                                        aria-label="Name: activate to sort column ascending">TITle</TITle>
+                                                        aria-label="Name: activate to sort column ascending">TITle
+                                                        </TITle>
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
@@ -174,7 +176,8 @@
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">Created AT
+                                                        aria-label="Status: activate to sort column ascending">Created
+                                                        AT
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
@@ -208,9 +211,10 @@
                                                     <td>ABC XYZ</td>
                                                     <td>SIZE</td>
                                                     <td>1200</td>
-                                                    <td>12/10/22</td>  
-                                                    <td>Published</td>                                                 
-                                                                                        
+                                                    <td>12/10/22</td>
+                                                    <td>Published</td>
+                                                    <td></td>
+
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -257,9 +261,6 @@
                                                                 aria-controls="DataTables_Table_3" data-dt-idx="8"
                                                                 tabindex="0" class="page-link">&nbsp;</a></li>
                                                     </ul>
-
-
-
                                                 </div>
                                             </div>
                                         </div>
