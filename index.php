@@ -516,7 +516,7 @@
                                         Now, Rehab, Train or Play but with confidence.</div>
                                     <a href="shop.php" class="btn" style="background-color:#ffffff; color:#000000"><b>Shop Now</b></a>
                                 </div>
-                                <div class="wrap-text text-small font-bold img1" style="margin-left: 100px;">
+                                <div class="wrap-text text-small font-bold img1" style="margin-left: 200px;">
                                     <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png" alt="K2 Comfortline Knee Orthosis" />
 
 
@@ -575,6 +575,31 @@
                                         </div>
                                         <a href="shop.php" class="btn">Shop Now</a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="section feature-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="feature-row">
+                              
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--right text-left">
+                                    <div class="row-text">
+                                        <h2 class="h1"><b>K2 Comfortline Knee Orthosis</b></h2>
+                                        <div class="rte-setting featured-row__subtext" style="font-size:15px">
+                                            <b>The Effective Solution for the Sportsperson in you!</b>
+                                            <p>The Z1 K2 Comfortline is an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete stability and support for efficient aid and relief from sports injuries, ligament injuries and mild osteoarthritis.
+                                            </p>
+                                        </div>
+                                        <a href="shop.php" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                                  <div class="col-12 col-sm-12 col-md-6 feature-row__item">
+                                    <img src="assets/images/K2 Comfortline Knee Orthosis.jpg"
+                                        alt="K2 Comfortline Knee Orthosis"
+                                        title="K2 Comfortline Knee Orthosis" />
                                 </div>
                             </div>
                         </div>
