@@ -61,7 +61,7 @@
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner2" src="assets/images/slideshow-banners/z1kneebracebanner2" alt="z1 knee braces" title="z1 knee braces" />
+                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner2.jpg" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg" alt="z1 knee braces" title="z1 knee braces" />
                      
                     </div>
                 </div>
