@@ -38,7 +38,7 @@
         <div class="container">
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
-                	<div class="mb-4">
+                	<div class="">
                        <form method="post" action="#" id="CustomerLoginForm" accept-charset="UTF-8" class="contact-form">	
                           <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

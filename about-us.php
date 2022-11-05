@@ -28,7 +28,7 @@
     <div id="page-content">
     	<!--Page Title-->
     	<div class="page section-header text-center">
-			<div class="page-title mt-5">
+			<div class="page-title">
         		<div class="wrapper"><h1 class="page-width">About Us</h1></div>
       		</div>
 		</div>
