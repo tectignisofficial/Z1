@@ -53,6 +53,12 @@
 <!--Home slider-->
 <div class="slideshow slideshow-wrapper pb-section">
         	<div class="home-slideshow">
+            <div class="slide">
+                	<div class="blur-up lazyload">
+                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner.jpg" src="assets/images/slideshow-banners/z1kneebracebanner.jpg" alt="z1 knee braces" title="z1 knee braces" />
+                     
+                    </div>
+                </div>
             	<div class="slide">
                 	<div class="blur-up lazyload">
                         <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" alt="z1 knee braces" title="z1 knee braces" />
