@@ -91,12 +91,12 @@
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS.jpg" title="K2 COMFORTLINE KNEE ORTHOSIS.jpg" />
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS" title="K2 COMFORTLINE KNEE ORTHOSIS" />
                     </div>
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS.jpg" title="K2 COMFORTLINE KNEE ORTHOSIS.jpg" />
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K6-DEZIRE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K6-DEZIRE-KNEE-ORTHOSIS.jpg" alt="K6 DEZIRE KNEE ORTHOSIS" title="K6 DEZIRE KNEE ORTHOSIS" />
                     </div>
                 </div>
             </div>
