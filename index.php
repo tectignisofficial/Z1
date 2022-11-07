@@ -51,7 +51,7 @@
         <!--Body Content-->
         <div id="page-content">
 <!--Home slider-->
-<div class="slideshow slideshow-wrapper pb-section">
+<!-- <div class="slideshow slideshow-wrapper pb-section">
         	<div class="home-slideshow">
             <div class="slide">
                 	<div class="blur-up lazyload">
@@ -77,6 +77,23 @@
                     </div>
                 </div>
             
+            </div>
+        </div>
+    </div> -->
+
+    <div class="slideshow slideshow-wrapper pb-section sliderFull">
+        	<div class="home-slideshow">
+            	<div class="slide">
+                	<div class="blur-up lazyload bg-size">
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/belle-banner1.jpg" src="assets/images/slideshow-banners/belle-banner1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
+
+                    </div>
+                </div>
+                <div class="slide">
+                	<div class="blur-up lazyload bg-size">
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/belle-banner2.jpg" src="assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                    </div>
+                </div>
             </div>
         </div>
         <!--End Home slider-->
