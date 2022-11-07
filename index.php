@@ -85,18 +85,18 @@
         	<div class="home-slideshow">
             	<div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/belle-banner1.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS1.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS1.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS1" title="K2 COMFORTLINE KNEE ORTHOSIS1" />
 
                     </div>
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/belle-banner2.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS.jpg" title="K2 COMFORTLINE KNEE ORTHOSIS.jpg" />
                     </div>
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/belle-banner2.jpg" src="assets/images/slideshow-banners/K6-DEZIRE-KNEE-ORTHOSIS.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS.jpg" title="K2 COMFORTLINE KNEE ORTHOSIS.jpg" />
                     </div>
                 </div>
             </div>
