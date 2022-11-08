@@ -140,7 +140,7 @@ if($razorpay==1){
                                                                 <svg version="1.1" id="Layer_1"
                                                                     xmlns="http://www.w3.org/2000/svg"
                                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                                    y="0px" width="124px" height="33px"
+                                                                    y="0px" width="180px" height="150px"
                                                                     viewBox="0 0 124 33"
                                                                     enable-background="new 0 0 124 33"
                                                                     xml:space="preserve">
@@ -246,7 +246,7 @@ if($razorpay==1){
                                                     <td>
                                                         <div class="row">
                                                             <div class="col-3" align="center"><br>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="316"
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="180"
                                                                     height="67" fill="#072654" viewBox="0 0 1896 401">
                                                                     <path fill="#3395FF"
                                                                         d="M122.63 105.7l-15.75 57.97 90.15-58.3-58.96 219.98 59.88.05L285.05.48" />
