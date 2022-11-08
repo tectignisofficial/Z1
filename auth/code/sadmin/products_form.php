@@ -4,7 +4,8 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
     $cont=$_POST['cont'] ?? null;
-    $myfile=$_FILES['myfile']['name'];
+    $hoverfile=$_FILES['hoverfile']['name'];
+    $sizefile=$_FILES['sizefile']['name'];
     $myvideofile=$_POST['myvideofile'];
     $sku=$_POST['sku'] ?? null;
     $price=$_POST['price'] ?? null;
@@ -22,13 +23,22 @@ if(isset($_POST['submit'])){
     $tname=$_POST['tname'] ?? null;
 $loc="image/product_Image/".$myfile;
 move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
+move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc);
+move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc);
 
+
+foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
+
+    $myfile = $_FILES['myfile']['name'][$key];
+        $file_size =$_FILES['myfile']['size'][$key];
+        $file_tmp =$_FILES['myfile']['tmp_name'][$key];
+        $file_type=$_FILES['myfile']['type'][$key]; 
 if($attrname1 != ''){
     foreach($attrname1 as $inde => $naames){
         $s_attrname = $naames;
         $s_attrVal=$attrval1[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$myfile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+        $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$myfile','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
     }
 }
 else{
@@ -81,6 +91,26 @@ if($sql==1){
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link href=
+"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
+          rel="stylesheet" />
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+    <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script> -->
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+// <script src="https://cdn.quilljs.com/1.3.6/quill.min.js" type="text/javascript"></script>
+var quill = new Quill('#editor', {
+    modules: {
+        toolbar: '#toolbar'
+    },
+    theme: 'snow'
+}); -->
     <style>
         .widget-title {
             border-bottom: 1px solid #eeeeee;
@@ -184,7 +214,7 @@ if($sql==1){
                                             <button type="button" class="btn btn-info">Add Media</button>
                                         </div> -->
                                        
-                                        <input type="text" id="desc" class="form-control" name="desc"
+                                        <input type="text" id="myeditor" class="form-control" name="desc"
                                             placeholder="Description" />
                                     </div>
                                     <div class="mb-1">
@@ -222,17 +252,22 @@ if($sql==1){
                                             </div>
                                         </div> -->
                                        
-                                        <input type="text" id="cont" class="form-control" name="cont" placeholder="" />
+                                        <input type="text" id="cont" class="form-control" name="cont" placeholder=""/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="images">Images</label><br>
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                       
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.jpg,.png,.jpeg" multiple/>
                                         </div>
-                                        <input type="file" name="myfile" id="myfile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
+
+                                        <div class="upload-btn-wrapper">
+                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
+                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
@@ -250,7 +285,6 @@ if($sql==1){
                                             </div>
                                         </div>
                                     </div>
-                                   
                                     <!-- <div class="mb-1">
                                         <label class="form-label" for="upld">Upload video</label><br>
                                         <button id="selectv" class="btn btn-outline-primary mb-1">
@@ -258,6 +292,10 @@ if($sql==1){
                                         </button>
                                     </div> -->
                                     <div class="upload-btn-wrapper">
+                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
+                                        <input type="file" name="sizefile" id="sizefile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        </div>
+                                    <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
                                         <input type="text" name="myvideofile" class="form-control" placeholder="youtube video link"/>
                                         </div>
@@ -286,10 +324,7 @@ if($sql==1){
                                                         placeholder="" />
                                                 </div>
                                             </div>
-                                          
                                         </div>
-                                       
-
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
                                             <input type="number" class="form-control" name="stock" id="">
@@ -599,6 +634,19 @@ function get(val){
 });
 }
 
+    </script>
+    <script>
+    $(document).ready(function() {
+        $("#myeditor").summernote({
+            placeholder: "Write your content here",
+            height: 200,
+        });
+    });
+  
+    function showContent() {
+        document.getElementById("myContent").innerHTML = 
+        $("#myeditor").summernote("code");
+    }
     </script>
 </body>
 <!-- END: Body-->
