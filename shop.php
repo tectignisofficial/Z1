@@ -31,7 +31,7 @@ include('include/config.php');
     	<!--Collection Banner-->
     	<div class="collection-header">
 			<div class="collection-hero">
-        		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="assets/images/cat-women2.jpg" src="assets/images/cat-women2.jpg" alt="Women" title="Women" /></div>
+        		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="assets/images/z1kneebrace.jpg" src="assets/images/z1kneebrace.jpg" alt="Women" title="Women" /></div>
         		<div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Shop Now</h1></div>
       		</div>
 		</div>
@@ -94,9 +94,9 @@ include('include/config.php');
                 <!--Main Content-->
                 <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
                 	<div class="category-description">
-                    	<h3>Category Description</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                    	<h3>About us</h3>
+                        <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in 2012 as a professional manufacturing and marketing company dealing in various healthcare products based in India. With unique product and flawless marketing strategies, ZOPL has been a global market leader in the course of a very short span of time. Z1, Z-ONE & Z1 KNEEBRACE all our brands.</p>
+                        <p>Our braces and various other healthcare products are of the leading quality. We at Z1 guarantee on taking into consideration the needs of our customers and meeting them, providing them complete satisfaction by regular checks and up-gradation in the various processes involved.</p>
                     </div>
                     <hr>
                 	<div class="productList">
@@ -106,12 +106,6 @@ include('include/config.php');
                         	<div class="filters-toolbar-wrapper">
                             	<div class="row">
                                 	<div class="col-4 col-md-4 col-lg-4 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
-                                    	<a href="shop-left-sidebar.html" title="Grid View" class="change-view change-view--active">
-                                        	<img src="assets/images/grid.jpg" alt="Grid" />
-                                        </a>
-                                        <a href="shop-listview.html" title="List View" class="change-view">
-                                        	<img src="assets/images/list.jpg" alt="List" />
-                                        </a>
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
                                     	<span class="filters-toolbar__product-count">Showing: 22</span>
@@ -121,9 +115,6 @@ include('include/config.php');
                                       		<label for="SortBy" class="hidden">Sort</label>
                                       		<select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
                                                 <option value="title-ascending" selected="selected">Sort</option>
-                                                <option>Best Selling</option>
-                                                <option>Alphabetically, A-Z</option>
-                                                <option>Alphabetically, Z-A</option>
                                                 <option>Price, low to high</option>
                                                 <option>Price, high to low</option>
                                                 
@@ -163,12 +154,7 @@ include('include/config.php');
                                         <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
                                             <button class="btn btn-addto-cart" type="button">Add To Cart</button>
                                         </form>
-                                        <div class="button-set">
-                                            <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                                        <i class="icon anm anm-search-plus-r"></i>
-                                                    </a>
-                                
-                                        </div>
+                                     
                                         <!-- end product button -->
                                     </div>
                                     <!-- end product image -->

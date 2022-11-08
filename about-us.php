@@ -38,8 +38,8 @@
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
                 	<div class="text-center mb-4">
-                        <h2 class="h2">Zodiacal Overseas About us</h2>
-                        <div class="rte-setting">
+                        <h2 class="h2"><b>Our Story</b></h2>
+                        <div class="rte-setting" style="font-size:15px">
                             <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in 2012 as a professional manufacturing and marketing company dealing in various healthcare products based in India. With unique product and flawless marketing strategies, ZOPL has been a global market leader in the course of a very short span of time. Z1, Z-ONE & Z1 KNEEBRACE all our brands.</p>
                         </div>
                     </div>
@@ -55,8 +55,8 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
                                 <div class="row-text">
-                                    <h2 class="h1">Our USP</h2>
-                                    <div class="rte-setting featured-row__subtext">
+                                    <h2 class="h1" style="font-size:15px"><b>Our USP</b></h2>
+                                    <div class="rte-setting featured-row__subtext" style="font-size:15px">
                                         <p>We at ZOPL ( Zodiacal Overseas Pvt. Ltd. ) make sure each and every product we manufacture and sell are based on the needs and convenience of our customers. We boast of manufacturing some of the most unquestionably superior quality healthcare products with utmost healing touch like knee braces, ankle braces & various varieties of supports not only in India but globally which sets us apart and makes us what we are today. You can now get the products right here at z1kneebrace.com.</p>
                                     </div>
                                   
@@ -68,43 +68,16 @@
             </div>
 
             <div class="row">
-            	<div class="col-12">
-                    <h2>Sed ut perspiciatis unde omnis iste natus error</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain.</p>
-                    <p>simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.</p>
+            	<div class="col-6" style="font-size:15px">
+                    <h2 >WE ARE CERTIFIED BY</h2>
+                    <p>We are certified by ISO 9001:2015. All the products manufactured at Zodiacal Overseas Pvt. Ltd. hold the CE marking on all our manufactured products which ensures docility of safety, wellness, as well as environmentally friendly models for all the products, made and sold in European regions. We are also certified by FDA, The Food and Drug Administration of the United States Department of Health and Human Services. </p>
+                    <p>Our braces and various other healthcare products are of the leading quality. We at Z1 guarantee on taking into consideration the needs of our customers and meeting them, providing them complete satisfaction by regular checks and up-gradation in the various processes involved.</p>
                     <p></p>
                 </div>
-            </div>
-            
-            <div class="row">
-            	<div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
-                	<h2 class="h2">About Annimex Web</h2>
-                    <div class="rte-setting"><p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong></p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p></p>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></div>
+                <div class="col-6">
+                <img src="assets/images/aboutus.jpg" alt="" />
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                	<h2 class="h2">Contact Us</h2>
-                    <ul class="addressFooter">
-                        <li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque, 2568 steet, 23568 NY</p></li>
-                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                        <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
-                    </ul>
-                    <hr />
-                    <ul class="list--inline site-footer__social-icons social-icons">
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Facebook"><i class="icon icon-facebook"></i></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Twitter"><i class="icon icon-twitter"></i> <span class="icon__fallback-text">Twitter</span></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Pinterest"><i class="icon icon-pinterest"></i> <span class="icon__fallback-text">Pinterest</span></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Instagram"><i class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Tumblr"><i class="icon icon-tumblr-alt"></i> <span class="icon__fallback-text">Tumblr</span></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on YouTube"><i class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>
-                        <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Vimeo"><i class="icon icon-vimeo-alt"></i> <span class="icon__fallback-text">Vimeo</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            
+            </div>  
         </div>
         
     </div>

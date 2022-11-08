@@ -37,12 +37,8 @@
             	<div class="row">
                 	<div class="map-section__overlay-wrapper">
                         <div class="map-section__overlay">
-                            <h3 class="h4">Our store</h3>
-                            <div class="rte-setting">
-                                <p>123 Fake St.<br>Toronto, Canada</p>
-                                <p>Mon - Fri, 10am - 9pm<br>Saturday, 11am - 9pm<br>Sunday, 11am - 5pm</p>
-                            </div>
-                            <p><a href="https://maps.google.com/?daddr=80%20Spadina%20Ave,%20Toronto" class="btn btn--secondary btn--small" target="_blank">Get directions</a></p>
+                           
+                            <p><a href="https://maps.google.com/?daddr=80%20Spadina%20Ave,%20Toronto">Get directions</a></p>
                         </div>
                    	</div>
                 </div>
@@ -58,7 +54,7 @@
             <div class="row">
             	<div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-4">
                 	<h2>Drop Us A Line</h2>
-                    <p>Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500 </p>
+                    
                 	<div class="formFeilds contact-form form-vertical">
                       <form action="http://annimexweb.com/items/belle/assets/php/mail.php" method="post"  id="contact_form" class="contact-form">	
                       <div class="row">
@@ -108,9 +104,10 @@
                     </div>
                 	<hr />
                     <ul class="addressFooter">
-                        <li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque, 2568 steet, 23568 NY</p></li>
-                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                        <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                        <li><i class="icon anm anm-map-marker-al"></i><p>D-114, 5th road Shakti Nagar, Paota c road
+Jodhpur, Rajasthan 342010</p></li>
+                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>+91 7300044197</p></li>
+                        <li class="email"><i class="icon anm anm-envelope-l"></i><p>info@z1kneebrace.com</p></li>
                     </ul>
                     <hr />
                     <ul class="list--inline site-footer__social-icons social-icons">

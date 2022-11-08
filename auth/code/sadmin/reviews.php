@@ -122,6 +122,39 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                            <div class="card-header border-bottom row-12">
+
+<div class="col-1">
+    <div class="btn-group">
+        <button type="button"
+            class="btn btn-outline-primary dropdown-toggle waves-effect show"
+            data-bs-toggle="dropdown" aria-expanded="true">
+            Bulk actions
+        </button>
+        <ul class="dropdown-menu "
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
+            data-popper-placement="bottom-start">
+            <li><a class="dropdown-item" href="#">bulk changes</a></li>
+            <li><a class="dropdown-item" href="#">Delete</a></li>
+        </ul>
+    </div>
+</div>
+<div class="col-1">
+    <button type="button" class="btn btn-primary">Filters</button></div>
+<div class="col-2">
+    <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
+        <label><input type="search" class="form-control input-sm"
+                placeholder="Search..."
+                aria-controls="botble-page-tables-page-table"></label>
+    </div>
+</div>
+<div class="col-4"></div>
+<div class="col-1">
+</div>
+<button class="btn btn-info" tabindex="0"
+    aria-controls="botble-page-tables-page-table" type="button"><span><i
+            data-feather="refresh-cw"></i> reload</span></button>
+</div>
                                 <div class="card-datatable">
                                     <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
                                         <div class="d-flex justify-content-between align-items-center mx-0 row">
