@@ -91,26 +91,7 @@ if($sql==1){
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- <link href=
-"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
-          rel="stylesheet" />
-    <script src=
-"https://code.jquery.com/jquery-3.5.1.min.js">
-    </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
-    <script src=
-"https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-    </script> -->
-    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-// <script src="https://cdn.quilljs.com/1.3.6/quill.min.js" type="text/javascript"></script>
-var quill = new Quill('#editor', {
-    modules: {
-        toolbar: '#toolbar'
-    },
-    theme: 'snow'
-}); -->
+   
     <style>
         .widget-title {
             border-bottom: 1px solid #eeeeee;
@@ -635,19 +616,7 @@ function get(val){
 }
 
     </script>
-    <script>
-    $(document).ready(function() {
-        $("#myeditor").summernote({
-            placeholder: "Write your content here",
-            height: 200,
-        });
-    });
-  
-    function showContent() {
-        document.getElementById("myContent").innerHTML = 
-        $("#myeditor").summernote("code");
-    }
-    </script>
+   
 </body>
 <!-- END: Body-->
 

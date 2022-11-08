@@ -1,3 +1,9 @@
+<?php
+include('include/config.php');
+$productName=$_GET['name'];
+$sql=mysqli_query($conn,"select * from products where name='$productName'");
+$arr=mysqli_fetch_array($sql);
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -33,7 +39,7 @@
                 <div class="bredcrumbWrap">
                     <div class="container breadcrumbs">
                         <a href="index.html" title="Back to the home page">Home</a><span
-                            aria-hidden="true">›</span><span>Product Layout Style1</span>
+                            aria-hidden="true">›</span><span><?php echo $arr['name']; ?></span>
                     </div>
                 </div>
                 <!--End Breadcrumb-->
@@ -150,14 +156,14 @@
                                     <div class="zoompro-wrap product-zoom-right pl-20">
                                         <div class="zoompro-span">
                                             <img class="blur-up lazyload zoompro"
-                                                data-zoom-image="assets/images/product-images/product-image1.jpg"
+                                                data-zoom-image="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
                                                 alt=""
-                                                src="assets/images/product-images/product-image1.jpg" />
+                                                src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" />
                                         </div>
                                         <div class="product-labels"><span class="lbl on-sale">Sale</span><span
                                                 class="lbl pr-label1">new</span></div>
                                         <div class="product-buttons">
-                                            <a href="https://www.youtube.com/watch?v=93A2jOW5Mog"
+                                            <a href="https://www.youtube.com/watch?v=<?php echo $arr['video']; ?>"
                                                 class="btn popup-video" title="View Video"><i
                                                     class="icon anm anm-play-r" aria-hidden="true"></i></a>
                                             <a href="#" class="btn prlightbox" title="Zoom"><i
@@ -193,12 +199,12 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product-single__meta">
-                                    <h1 class="product-single__title">Z1 K2 Comfortline Knee Orthosis</h1>
+                                    <h1 class="product-single__title"><?php echo $arr['name'] ?></h1>
                                    
                                     <div class="prInfoRow">
-                                        <div class="product-stock"> <span class="instock ">In Stock</span> <span
+                                        <div class="product-stock"> <span class="instock "><?php $status=$arr['stock_status'];if($status==0){ echo 'Out Of Stock'; }else{ echo 'In Stock'; } ?></span> <span
                                                 class="outstock hide">Unavailable</span> </div>
-                                        <div class="product-sku">SKU: <span class="variant-sku">19115-rdxs</span></div>
+                                        <div class="product-sku">SKU: <span class="variant-sku"><?php echo $arr['sku'] ?></span></div>
                                         <div class="product-review"><a class="reviewLink" href="#tab2"><i
                                                     class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i
                                                     class="font-13 fa fa-star"></i><i
@@ -211,7 +217,7 @@
                                         <span
                                             class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
                                             <span id="ProductPrice-product-template"><span
-                                                    class="money">₹9,928</span>
+                                                    class="money">₹<?php echo $arr['price'] ?></span>
                                         </span>
                                     
                                     </p>
@@ -219,10 +225,7 @@
                                 </div>
                                 <div class="product-single__description rte">
                                     <ul>
-                                        <li>A unique stainless steel reinforced plastic frame.</li>
-                                        <li>Flexible in the perfect areas to implement a flawless fit on the leg</li>
-                                        <li>Powerful and firm stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</li>
-                                        <li>Silicon coated neoprene frame liners and foam strap pads preventing orthosis from slipping down.</li>
+                                    <?php echo $arr['content'] ?>
                                     </ul>
                                 </div>
                                
@@ -275,7 +278,7 @@
                                                     <a class="qtyBtn minus" href="javascript:void(0);"><i
                                                             class="fa anm anm-minus-r" aria-hidden="true"></i></a>
                                                     <input type="text" id="Quantity" name="quantity" value="1"
-                                                        class="product-form__input qty">
+                                                        class="product-form__input qty" readonly>
                                                     <a class="qtyBtn plus" href="javascript:void(0);"><i
                                                             class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                                 </div>
@@ -301,13 +304,13 @@
                                     <!-- End Product Action -->
                                 </form>
                                 <div class="display-table shareRow">
-                                    <div class="display-table-cell medium-up--one-third">
+                                    <!-- <div class="display-table-cell medium-up--one-third">
                                         <div class="wishlist-btn">
                                             <a class="wishlist add-to-wishlist" href="#" title="Add to Wishlist"><i
                                                     class="icon anm anm-heart-l" aria-hidden="true"></i> <span>Add to
                                                     Wishlist</span></a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="display-table-cell text-right">
                                         <div class="social-sharing">
                                             <a target="_blank" href="#"
@@ -342,12 +345,12 @@
                                     </div>
                                 </div>
 
-                                <p id="freeShipMsg" class="freeShipMsg" data-price="199"><i class="fa fa-truck"
+                                <!-- <p id="freeShipMsg" class="freeShipMsg" data-price="199"><i class="fa fa-truck"
                                         aria-hidden="true"></i> Express Shipping to USA, Europe, Canada, India & Australia.</p>
                                 <p class="shippingMsg"><li>Premium Quality Knee Braces.</li>
                                 </p>
                                 <p class="shippingMsg"><li>ISO, FDA & FIEO & CEO Certified Company.</li>
-                                </p>
+                                </p> -->
                                 <div class="paymnet-img">
                                     <img src="assets/images/payment-img.jpg" alt="Payment"></div>
                                

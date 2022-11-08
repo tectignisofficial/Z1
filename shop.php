@@ -1,7 +1,7 @@
 <?php
 include('include/config.php');
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <!-- belle/shop-grid-3.html   11 Nov 2019 12:39:06 GMT -->
@@ -137,12 +137,12 @@ include('include/config.php');
                                     <!-- start product image -->
                                     <div class="product-image">
                                         <!-- start product image -->
-                                        <a href="#">
+                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                             <!-- image -->
                                             <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" alt="image" title="product">
                                             <!-- End image -->
                                             <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" alt="image" title="product">
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
                                             <!-- End hover image -->
                                             <!-- product label -->
                                             <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
@@ -163,7 +163,7 @@ include('include/config.php');
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#"><?php echo $arr['name'];?></a>
+                                            <a href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name'];?></a>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
