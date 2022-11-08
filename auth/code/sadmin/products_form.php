@@ -27,7 +27,7 @@ move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc);
 
 
-foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
+// foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
 
     $myfile = $_FILES['myfile']['name'][$key];
         $file_size =$_FILES['myfile']['size'][$key];
