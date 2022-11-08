@@ -5,6 +5,7 @@ if(isset($_POST['register'])){
 
     $FullName=$_POST['customerName'];
     $customerPhone=$_POST['customerPhone'];
+    $customerEail=$_POST['customerPhone'];
 
 }
 
