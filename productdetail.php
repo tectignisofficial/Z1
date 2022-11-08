@@ -207,20 +207,13 @@
                                                     reviews</span></a></div>
                                     </div>
                                     <p class="product-single__price product-single__price-product-template">
-                                        <span class="visually-hidden">Regular price</span>
-                                        <s id="ComparePrice-product-template"><span class="money">₹10,928</span></s>
+                                       
                                         <span
                                             class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
                                             <span id="ProductPrice-product-template"><span
                                                     class="money">₹9,928</span>
                                         </span>
-                                        <span class="discount-badge"> <span class="devider">|</span>&nbsp;
-                                            <span>You Save</span>
-                                            <span id="SaveAmount-product-template" class="product-single__save-amount">
-                                                <span class="money">$100.00</span>
-                                            </span>
-                                            <span class="off">(<span>16</span>%)</span>
-                                        </span>
+                                    
                                     </p>
                                     
                                 </div>
@@ -350,16 +343,14 @@
                                 </div>
 
                                 <p id="freeShipMsg" class="freeShipMsg" data-price="199"><i class="fa fa-truck"
-                                        aria-hidden="true"></i> GETTING CLOSER! ONLY <b class="freeShip"><span
-                                            class="money" data-currency-usd="$199.00"
-                                            data-currency="USD">$199.00</span></b> AWAY FROM <b>FREE SHIPPING!</b></p>
-                                <p class="shippingMsg"><i class="fa fa-clock-o" aria-hidden="true"></i> ESTIMATED
-                                    DELIVERY BETWEEN <b id="fromDate">Wed. May 1</b> and <b id="toDate">Tue. May 7</b>.
+                                        aria-hidden="true"></i> Express Shipping to USA, Europe, Canada, India & Australia.</p>
+                                <p class="shippingMsg"><li>Premium Quality Knee Braces.</li>
                                 </p>
-                                <div class="userViewMsg" data-user="20" data-time="11000"><i class="fa fa-users"
-                                        aria-hidden="true"></i> <strong class="uersView">14</strong> PEOPLE ARE LOOKING
-                                    FOR THIS PRODUCT</div>
-                            </div>
+                                <p class="shippingMsg"><li>ISO, FDA & FIEO & CEO Certified Company.</li>
+                                </p>
+                                <div class="paymnet-img">
+                                    <img src="assets/images/payment-img.jpg" alt="Payment"></div>
+                               
                         </div>
                     </div>
                     <!--End-product-single-->
