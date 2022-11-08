@@ -96,7 +96,9 @@
 										<label><input type="search" class="form-control input-sm" placeholder="Search..." aria-controls="botble-page-tables-page-table"></label>
 									</div></div>
 									<div class="col-4"></div>
-									<button class="btn btn-info data-action" tabindex="0" aria-controls="botble-page-tables-page-table" type="button"><span><i data-feather="plus"></i>Create</span></button>
+									<a class="btn btn-primary" href="testimonials_form.php"><i class="fa fa-plus"></i>
+                                    Create
+                                </a>
 									<button class="btn btn-info" tabindex="0" aria-controls="botble-page-tables-page-table" type="button"><span><i data-feather="refresh-cw"></i> reload</span></button>
 									</div>
                                 
