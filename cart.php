@@ -1,3 +1,15 @@
+<?php
+session_start();
+include('include/config.php');
+
+if(isset($_GET['did'])){
+    foreach($_SESSION['shopping_cart'] as $keys => $values){
+        if($values['itemid'] == $_GET['did']){
+            unset($_SESSION['shopping_cart'][$keys]);
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -49,37 +61,47 @@
                                 </tr>
                             </thead>
                     		<tbody>
+                                <?php
+                                if(!empty($_SESSION['shopping_cart'])){
+                                    $total=0;
+                                    foreach($_SESSION['shopping_cart'] as $keys => $values){
+                                ?>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
                                     <td class="cart__image-wrapper cart-flex-item">
                                         <a href="#"><img class="cart__image" src="assets/images/product-images/product-image1.jpg" alt="Elastic Waist Dress - Navy / Small"></a>
                                     </td>
                                     <td class="cart__meta small--text-left cart-flex-item">
                                         <div class="list-view-item__title">
-                                            <a href="#">Elastic Waist Dress </a>
+                                            <a href="#"><?php echo $values['name']; ?></a>
                                         </div>
                                         
-                                        <div class="cart__meta-text">
+                                        <!-- <div class="cart__meta-text">
                                             Color: Navy<br>Size: Small<br>
-                                        </div>
+                                        </div> -->
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item">
-                                        <span class="money">$735.00</span>
+                                        <span class="money">$<?php echo $values['price']; ?></span>
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
-                                        <div class="cart__qty text-center">
+                                        <div><span class="quantity"><?php echo $values['quantity']; ?></span></div>
+                                        <!-- <div class="cart__qty text-center">
                                             <div class="qtyField">
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
                                                 <input class="cart__qty-input qty" type="text" name="updates[]" id="qty" value="1" pattern="[0-9]*">
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </td>
                                     <td class="text-right small--hide cart-price">
-                                        <div><span class="money">$735.00</span></div>
+                                        <div><span class="money"><?php echo number_format($values['quantity'] * $values['price'],2 ); ?></span></div>
                                     </td>
-                                    <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
+                                    <td class="text-center small--hide"><a href="cart.php?did=<?php echo $values['itemid'] ?>" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                 </tr>
-                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                <?php  
+                            $total= $total + ($values['quantity'] * $values['price']);    
+                            }
+                                } ?>
+                                <!-- <tr class="cart__row border-bottom line1 cart-flex border-top">
                                     <td class="cart__image-wrapper cart-flex-item">
                                         <a href="#"><img class="cart__image" src="assets/images/product-images/product-image3.jpg" alt="3/4 Sleeve Kimono Dress"></a>
                                     </td>
@@ -104,7 +126,7 @@
                                         <div><span class="money">$735.00</span></div>
                                     </td>
                                     <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
-                                </tr>
+                                </tr> -->
                              
                             </tbody>
                     		<tfoot>
@@ -131,7 +153,7 @@
                     <div class="solid-border">
                       <div class="row">
                       	<span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
-                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">$735.00</span></span>
+                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">$<?php if($_SESSION['shopping_cart']){ echo number_format($total,2);}else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                       <p class="cart_tearm">
