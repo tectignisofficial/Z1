@@ -80,12 +80,14 @@
                 <!--Mobile Logo-->
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                 	<div class="site-cart">
-                    	<a href="#;" class="site-header__cart" title="Cart">
-                        	<i class="icon anm anm-bag-l"></i>
-                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                    	<a href="cart.php" class="" title="Cart" style="font-size:20px">
+                        	<i class="icon anm anm-bag-l" ></i>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><?php
+                            $items_in_cart = is_array($_SESSION['shopping_cart']) ? count($_SESSION['shopping_cart']) : 0; echo $items_in_cart;
+                            ?></span>
                         </a>
                         <!--Minicart Popup-->
-                        <div id="header-cart" class="block block-cart">
+                        <!-- <div id="header-cart" class="block block-cart">
                         	<ul class="mini-products-list">
                                 <li class="item">
                                 	<a class="product-image" href="#">
@@ -141,11 +143,11 @@
                                 	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
                                 </div>
                                  <div class="buttonSet text-center">
-                                    <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
+                                    <a href="cart.php" class="btn btn-secondary btn--small">View Cart</a>
                                     <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!--EndMinicart Popup-->
                     </div>
                 </div>

@@ -1,8 +1,42 @@
 <?php
+session_start();
 include('include/config.php');
 $productName=$_GET['name'];
 $sql=mysqli_query($conn,"select * from products where name='$productName'");
 $arr=mysqli_fetch_array($sql);
+
+if(isset($_POST['addtocart'])){
+$quantity=$_POST['quantity'];
+$productname=$_POST['productname'];
+$price=$_POST['price'];
+
+if(isset($_SESSION['shopping_cart'])){
+$item_array_id=array_column($_SESSION['shopping_cart'], "name");
+if(!in_array($_GET['name'],$item_array_id)){
+    $count=count($_SESSION['shopping_cart']);
+    $item_arr=array(
+        'itemid'   => $_POST['productid'],
+        'name'     => $_GET['name'],
+        'quantity' => $_POST['quantity'],
+        'price'    => $_POST['price']
+    );
+    $_SESSION['shopping_cart'][$count] = $item_arr;
+    header('location:productdetail.php?name='.$productName);
+}
+else{
+    echo "<script>alert('already Added');</script";
+    header('location:productdetail.php?name='.$productName);
+}
+}else{
+    $item_arr=array(
+        'itemid'   => $_POST['productid'],
+        'name'     => $_GET['name'],
+        'quantity' => $_POST['quantity'],
+        'price'    => $_POST['price']
+    );
+    $_SESSION['shopping_cart'][0] = $item_arr;
+}
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -160,8 +194,7 @@ $arr=mysqli_fetch_array($sql);
                                                 alt=""
                                                 src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" />
                                         </div>
-                                        <div class="product-labels"><span class="lbl on-sale">Sale</span><span
-                                                class="lbl pr-label1">new</span></div>
+                                        <div class="product-labels"><span class="lbl on-sale"><?php echo $arr['label']; ?></span></div>
                                         <div class="product-buttons">
                                             <a href="https://www.youtube.com/watch?v=<?php echo $arr['video']; ?>"
                                                 class="btn popup-video" title="View Video"><i
@@ -229,7 +262,7 @@ $arr=mysqli_fetch_array($sql);
                                     </ul>
                                 </div>
                                
-                                <form method="post" action="http://annimexweb.com/cart/add"
+                                <form method="post" action=""
                                     id="product_form_10508262282" accept-charset="UTF-8"
                                     class="product-form product-form-product-template hidedropdown"
                                     enctype="multipart/form-data">
@@ -272,6 +305,10 @@ $arr=mysqli_fetch_array($sql);
                                   
                                     <!-- Product Action -->
                                     <div class="product-action clearfix">
+                                        <form action="" method="post">
+                                            <input type="hidden" name="productid" value="<?php echo $arr['id'] ?>">
+                                            <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
+                                            <input type="hidden" name="price" value="<?php echo $arr['price'] ?>">
                                         <div class="product-form__item--quantity">
                                             <div class="wrapQtyBtn">
                                                 <div class="qtyField">
@@ -286,7 +323,7 @@ $arr=mysqli_fetch_array($sql);
                                         </div>
                                         <div class="row">
                                         <div class="product-form__item--submit col-6">
-                                            <button type="button" name="add" class="shopify-payment-button__button shopify-payment-button__button--unbranded">
+                                            <button type="submit" id="addtocart"  name="addtocart" class="shopify-payment-button__button shopify-payment-button__button--unbranded">
                                                 <span>Add to cart</span>
                                             </button>
                                             
@@ -296,9 +333,8 @@ $arr=mysqli_fetch_array($sql);
                                                 class="shopify-payment-button__button shopify-payment-button__button--unbranded">Buy
                                                 it now</button>
                                         </div>
-
-
-                                </div>
+                                        </form>
+                                    </div>
                                    
                                     </div>
                                     <!-- End Product Action -->
@@ -400,8 +436,9 @@ $arr=mysqli_fetch_array($sql);
                         <div class="tab-container">
                             <div id="tab1" class="tab-content">
                                 <div class="product-description rte">
-                                    <p>
-The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis in the market and suitable for ligament injuries (such as ACL Knee Brace, PCL Knee Brace, MCL Knee Brace), Sports Injuries, Mild Osteoarthritis (OA) as well as for prevention of the knee joint from degeneration and maximizes comfort & minimizes brace migration. The brace construction is Low profile & Lightweight, which makes it extremely easy to use with daily activities.</p>
+                                <?php echo $arr['description'];?>
+                                    <!-- <p>
+                                        The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis in the market and suitable for ligament injuries (such as ACL Knee Brace, PCL Knee Brace, MCL Knee Brace), Sports Injuries, Mild Osteoarthritis (OA) as well as for prevention of the knee joint from degeneration and maximizes comfort & minimizes brace migration. The brace construction is Low profile & Lightweight, which makes it extremely easy to use with daily activities.</p>
                                     <ul>
                                         <li>A unique stainless steel reinforced plastic frame.</li>
                                         <li>Flexible in the perfect areas to implement a flawless fit on the leg</li>
@@ -440,7 +477,7 @@ The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis 
                                     <h3>Proin ut lacus eget elit molestie posuere.</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled.</p>
+                                        unknown printer took a galley of type and scrambled.</p> -->
                                 </div>
                             </div>
 
@@ -1313,7 +1350,14 @@ The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis 
             </div>
         </div>
     </div>
-
+<script>
+    // $(document).ready(function(){
+    //     $("#addtocart").click(function(){
+    //         $id=$(this).data('id');
+    //         $name=<?php echo $arr['name']; ?>
+    //     });
+    // });
+</script>
 </body>
 
 <!-- belle/product-layout-1.html   11 Nov 2019 12:42:26 GMT -->

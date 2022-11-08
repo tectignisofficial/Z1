@@ -159,7 +159,7 @@ include('include/config.php');
                                                 <!-- start product image -->
                                                 <div class="product-image">
                                                     <!-- start product image -->
-                                                    <a href="short-description.html">
+                                                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                                         <!-- image -->
                                                         <img class="primary blur-up lazyload"
                                                             data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
@@ -168,8 +168,8 @@ include('include/config.php');
                                                         <!-- End image -->
                                                         <!-- Hover image -->
                                                         <img class="hover blur-up lazyload"
-                                                            data-src="assets/images/product-images/product-image3-1.jpg"
-                                                            src="assets/images/product-images/product-image3-1.jpg"
+                                                            data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>"
+                                                            src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>"
                                                             alt="image" title="product">
                                                         <!-- End hover image -->
                                                         <!-- product label -->
@@ -195,7 +195,7 @@ include('include/config.php');
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html"><?php echo $arr['name'];?></a>
+                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name'];?></a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
