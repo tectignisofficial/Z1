@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+include('include/config.php');
+if(isset($_POST['register'])){
+
+
+    $FullName=$_POST['customerName'];
+    $customerPhone=$_POST['customerPhone'];
+    $customerEail=$_POST['customerPhone'];
+
+}
+
+?><!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <!-- belle/register.html   11 Nov 2019 12:22:27 GMT -->
@@ -54,26 +65,26 @@
                           <div class="row">
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <label for="FirstName">First Name</label>
-                                    <input type="text" name="customer[first_name]" placeholder="" id="FirstName" autofocus="">
+                                    <label for="FirstName">Full Name</label>
+                                    <input type="text" name="customerName" placeholder="" id="FirstName" autofocus="">
                                 </div>
                                </div>
                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <label for="LastName">Last Name</label>
-                                    <input type="text" name="customer[last_name]" placeholder="" id="LastName">
+                                    <label for="LastName">Phone No</label>
+                                    <input type="text" name="customerPhone" placeholder="" id="LastName">
                                 </div>
                                </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="customer[email]" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
+                                    <input type="email" name="customerEmail" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customer[password]" placeholder="" id="CustomerPassword" class="">                        	
+                                    <input type="password" value="" name="customerPassword" placeholder="" id="CustomerPassword" class="">                        	
                                 </div>
                             </div>
                           </div>
