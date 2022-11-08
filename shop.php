@@ -50,22 +50,7 @@ include('include/config.php');
                      
                         <!--End Price Filter-->
                         <!--Size Swatches-->
-                        <div class="sidebar_widget filterBox filter-widget size-swacthes">
-                            <div class="widget-title"><h2>Size</h2></div>
-                            <div class="filter-color swacth-list">
-                            	<ul>
-                                    <li><span class="swacth-btn checked">X</span></li>
-                                    <li><span class="swacth-btn">XL</span></li>
-                                    <li><span class="swacth-btn">XLL</span></li>
-                                    <li><span class="swacth-btn">M</span></li>
-                                    <li><span class="swacth-btn">L</span></li>
-                                    <li><span class="swacth-btn">S</span></li>
-                                    <li><span class="swacth-btn">XXXL</span></li>
-                                    <li><span class="swacth-btn">XXL</span></li>
-                                    <li><span class="swacth-btn">XS</span></span></li>
-                                </ul>
-                            </div>
-                        </div>
+                      
                         <!--End Size Swatches-->
                         <!--Color Swatches-->
                   
