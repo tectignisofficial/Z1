@@ -22,6 +22,16 @@ include('include/config.php');
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <style>
         @media screen and (max-width:990px) {
             .img1 {
@@ -54,8 +64,8 @@ include('include/config.php');
 
         <!--Body Content-->
         <div id="page-content">
-<!--Home slider-->
-<!-- <div class="slideshow slideshow-wrapper pb-section">
+            <!--Home slider-->
+            <!-- <div class="slideshow slideshow-wrapper pb-section">
         	<div class="home-slideshow">
             <div class="slide">
                 	<div class="blur-up lazyload">
@@ -85,35 +95,44 @@ include('include/config.php');
         </div>
     </div> -->
 
-    <div class="slideshow slideshow-wrapper pb-section sliderFull">
-        	<div class="home-slideshow">
-            	<div class="slide">
-                	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS01.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS01.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS1" title="K2 COMFORTLINE KNEE ORTHOSIS1" />
-                        <div class="slideshow__text-wrap slideshow__overlay classic bottom mt-5">
-                            <div class="slideshow__text-content bottom">
-                                <div class="wrap-caption center">
-                                        <h2 class="h1 mega-title slideshow__title">K2 COMFORTLINE KNEE ORTHOSIS1</h2>
-                                        <!-- <span class="mega-subtitle slideshow__subtitle">From Hight to low, classic or modern. We have you covered</span> -->
-                                        <a href="shop.php"><span class="btn">Shop now</span></a>
-                                    </div>
-                            </div>
-                        </div>
+            <div class="slideshow slideshow-wrapper pb-section sliderFull">
+                <section class="home hero">
+                    <div class="home-img">
+                        <img src="img/product1.png" class="one" />
                     </div>
-                </div>
-                <div class="slide">
-                	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K2-COMFORTLINE-KNEE-ORTHOSIS.jpg" alt="K2 COMFORTLINE KNEE ORTHOSIS" title="K2 COMFORTLINE KNEE ORTHOSIS" />
+
+                    <div class="home-text">
+                        <h1 style="color:white; font-weight: bold;">
+                            Z1 Knee <br />
+                            Braces
+                        </h1>
+                        <h5 style="color:white">The A-Z Comfort with Z1 Braces</h5>
+                        <!-- <h3 style="color:white">$199.00</h3> -->
+                        <a href="shop.php" class="shop">Shop Now</a>
                     </div>
-                </div>
-                <div class="slide">
-                	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/K6-DEZIRE-KNEE-ORTHOSIS.jpg" src="assets/images/slideshow-banners/K6-DEZIRE-KNEE-ORTHOSIS.jpg" alt="K6 DEZIRE KNEE ORTHOSIS" title="K6 DEZIRE KNEE ORTHOSIS" />
+                </section>
+
+                <div class="main">
+                    <div class="masterRow">
+                        <li>
+                            <img src="img/main1.png" onclick="slider('img/product1.png')" />
+                        </li>
+                    </div>
+
+                    <div class="masterRow row2">
+                        <li>
+                            <img src="img/main2.png" onclick="slider('img/product2.png')" />
+                        </li>
+                    </div>
+
+                    <div class="masterRow row3">
+                        <li>
+                            <img src="img/main3.png" onclick="slider('img/product3.png')" />
+                        </li>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--End Home slider-->
+            <!--End Home slider-->
 
 
 
@@ -155,7 +174,8 @@ include('include/config.php');
                                                         <!-- End hover image -->
                                                         <!-- product label -->
                                                         <div class="product-labels rectangular"><span
-                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
+                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span>
+                                                        </div>
                                                         <!-- End product label -->
                                                     </a>
                                                     <!-- end product image -->
@@ -166,7 +186,7 @@ include('include/config.php');
                                                         <button class="btn btn-addto-cart" type="button"
                                                             tabindex="0">Add To Cart</button>
                                                     </form>
-                                                  
+
                                                     <!-- end product button -->
                                                 </div>
                                                 <!-- end product image -->
@@ -198,7 +218,7 @@ include('include/config.php');
                                                 <!-- End product details -->
                                             </div>
                                             <?php } ?>
-                                            
+
 
 
                                         </div>
@@ -235,7 +255,7 @@ include('include/config.php');
                                                         <button class="btn btn-addto-cart" type="button"
                                                             tabindex="0">Add To Cart</button>
                                                     </form>
-                                                   
+
                                                     <!-- end product button -->
                                                 </div>
                                                 <!-- end product image -->
@@ -244,7 +264,8 @@ include('include/config.php');
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">K4 Comfortline Knee Orthosis</a>
+                                                        <a href="short-description.html">K4 Comfortline Knee
+                                                            Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -296,7 +317,7 @@ include('include/config.php');
                                                         <button class="btn btn-addto-cart" type="button"
                                                             tabindex="0">Add To Cart</button>
                                                     </form>
-                                                 
+
                                                     <!-- end product button -->
                                                 </div>
                                                 <!-- end product image -->
@@ -305,7 +326,8 @@ include('include/config.php');
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">K2 Comfortline Knee Orthosis</a>
+                                                        <a href="short-description.html">K2 Comfortline Knee
+                                                            Orthosis</a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -397,45 +419,61 @@ include('include/config.php');
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="prFeatures">
-                            <h1 class="mb-5" style="text-align:center">Benefits of Custom Knee Braces</h1>
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
-                                <img src="assets/images/z1 knee.png" alt="Safe Payment" title="Safe Payment">
-                                <div class="details">
-                                    <h3>Structural support to the knee.</h3>They provide stability, additional support and a protection card for the knee in case of any injuries
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
-                                <img src="assets/images/shield.png" alt="Confidence" title="Confidence">
-                                <div class="details">
-                                    <h3>Pain reliever in most of the OA cases.</h3>These restrict the movement of knee joints in all directions
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
-                                <img src="assets/images/z1 knee.png" alt="Worldwide Delivery" title="Worldwide Delivery">
-                                <div class="details">
-                                    <h3>Easy recovery from injury.</h3>These braces are used for preventing any injury in case of contact to ligament during sports.
-                                </div>
-                            </div>
-                            
-                        
-                        </div>
-                        <h3 class="h3">In the case of structural support for the knee, there are several kinds of knee braces available which include:</h3><br>
-                                        <div class="rte-setting featured-row__subtext" style="font-size:15px">
-                                            <li><b>Functional Braces:</b>
-                                            They provide stability, additional support and a protection card for the knee in case of any injuries.<br><br></li>
-                                            <li><b>Rehabilitative Braces:</b>
-                                            These restrict the movement of knee joints in all directions, making them heal quickly in case of any injuries.<br><br></li>
-                                           <li> <b>Prophylactic Braces:</b>
-                                            These braces are used for preventing any injury in case of contact to ligament during sports.<br><br></li>
-                                            <p>Braces using for pain relief, during osteoarthritis (cartilage in the body starts to deteriorate causing severe joint pain), or chronic pain due to swelling at joints, people find it using for comfort and immense pleasure.</p>
-                                            <p>At ZOPL (Zodiacal Overseas Pvt. Ltd.,) one can find a variety of custom knee braces to buy online according to the need and size of the knee for having a suitable fitting. As everyone is not having a knee of identical size, Z1 provides customized knee braces at affordable prices.</p>
-                                            <p>It has the best online delivery options to many countries, including the USA, Canada, Europe and India.</p>
-                                            <p>Z1 provides customized knee braces having lightweight, providing comfort and relieves pain at low prices.</p>
-                                            <p>At Z1, you can find braces with more durable designs with quality protection layers supporting the knee from injury accompanying speed recovery.</p>
+                            <div class="prFeatures">
+                                <h1 class="mb-5" style="text-align:center">Benefits of Custom Knee Braces</h1>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                        <img src="assets/images/z1 knee.png" alt="Safe Payment" title="Safe Payment">
+                                        <div class="details">
+                                            <h3>Structural support to the knee.</h3>They provide stability, additional
+                                            support and a protection card for the knee in case of any injuries
                                         </div>
-                    </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                        <img src="assets/images/shield.png" alt="Confidence" title="Confidence">
+                                        <div class="details">
+                                            <h3>Pain reliever in most of the OA cases.</h3>These restrict the movement
+                                            of knee joints in all directions
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 feature">
+                                        <img src="assets/images/z1 knee.png" alt="Worldwide Delivery"
+                                            title="Worldwide Delivery">
+                                        <div class="details">
+                                            <h3>Easy recovery from injury.</h3>These braces are used for preventing any
+                                            injury in case of contact to ligament during sports.
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <h3 class="h3">In the case of structural support for the knee, there are several kinds
+                                    of knee braces available which include:</h3><br>
+                                <div class="rte-setting featured-row__subtext" style="font-size:15px">
+                                    <li><b>Functional Braces:</b>
+                                        They provide stability, additional support and a protection card for the knee in
+                                        case of any injuries.<br><br></li>
+                                    <li><b>Rehabilitative Braces:</b>
+                                        These restrict the movement of knee joints in all directions, making them heal
+                                        quickly in case of any injuries.<br><br></li>
+                                    <li> <b>Prophylactic Braces:</b>
+                                        These braces are used for preventing any injury in case of contact to ligament
+                                        during sports.<br><br></li>
+                                    <p>Braces using for pain relief, during osteoarthritis (cartilage in the body starts
+                                        to deteriorate causing severe joint pain), or chronic pain due to swelling at
+                                        joints, people find it using for comfort and immense pleasure.</p>
+                                    <p>At ZOPL (Zodiacal Overseas Pvt. Ltd.,) one can find a variety of custom knee
+                                        braces to buy online according to the need and size of the knee for having a
+                                        suitable fitting. As everyone is not having a knee of identical size, Z1
+                                        provides customized knee braces at affordable prices.</p>
+                                    <p>It has the best online delivery options to many countries, including the USA,
+                                        Canada, Europe and India.</p>
+                                    <p>Z1 provides customized knee braces having lightweight, providing comfort and
+                                        relieves pain at low prices.</p>
+                                    <p>At Z1, you can find braces with more durable designs with quality protection
+                                        layers supporting the knee from injury accompanying speed recovery.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -445,12 +483,14 @@ include('include/config.php');
                 <!--Parallax Section-->
                 <div class="section" style="padding-bottom: 0px;">
                     <div class="hero hero--large hero__overlay bg-size">
-                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg" alt="K2 Comfortline Knee Orthosis" />
+                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg"
+                            alt="K2 Comfortline Knee Orthosis" />
                         <div class="hero__inner">
                             <div class="container" style="display: flex;">
                                 <div class="wrap-text left text-small font-bold">
                                     <h2 class="h2 mega-title" style="color:#ffffff">CUSTOMIZED KNEE BRACES</h2>
-                                    <div class="rte-setting mega-subtitle" style="color:#ffffff">Customization is the key. In order to meet
+                                    <div class="rte-setting mega-subtitle" style="color:#ffffff">Customization is the
+                                        key. In order to meet
                                         customer needs and satisfaction, customizing our healthcare products is
                                         necessary.
                                         One Size doesn’t fit all. Neither you nor us. Each and every customised Knee
@@ -463,10 +503,12 @@ include('include/config.php');
                                         support
                                         and comfort to ensure a speedy recovery.
                                         Now, Rehab, Train or Play but with confidence.</div>
-                                    <a href="shop.php" class="btn" style="background-color:#ffffff; color:#000000"><b>Shop Now</b></a>
+                                    <a href="shop.php" class="btn"
+                                        style="background-color:#ffffff; color:#000000"><b>Shop Now</b></a>
                                 </div>
                                 <div class="wrap-text text-small font-bold img1" style="margin-left: 200px;">
-                                    <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png" alt="K2 Comfortline Knee Orthosis" />
+                                    <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png"
+                                        alt="K2 Comfortline Knee Orthosis" />
 
 
                                 </div>
@@ -493,8 +535,7 @@ include('include/config.php');
                             <div class="feature-row">
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item">
                                     <img src="assets/images/K2 Comfortline Knee Orthosis.jpg"
-                                        alt="K2 Comfortline Knee Orthosis"
-                                        title="K2 Comfortline Knee Orthosis" />
+                                        alt="K2 Comfortline Knee Orthosis" title="K2 Comfortline Knee Orthosis" />
                                 </div>
                                 <div
                                     class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
@@ -502,7 +543,13 @@ include('include/config.php');
                                         <h2 class="h1"><b>K2 Comfortline Knee Orthosis</b></h2>
                                         <div class="rte-setting featured-row__subtext" style="font-size:15px">
                                             <b>The Effective Solution for the Sportsperson in you!</b>
-                                            <p>The Z1 K2 Comfortline is an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete stability and support for efficient aid and relief from sports injuries, ligament injuries and mild osteoarthritis.
+                                            <p>The Z1 K2 Comfortline is an utterly comforting, light in weight and an
+                                                easy to use knee brace. It renders rigid and durable support to your
+                                                knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto
+                                                the leg and takes the shape of the leg instantly. It is an everyday wear
+                                                knee orthosis that provides complete stability and support for efficient
+                                                aid and relief from sports injuries, ligament injuries and mild
+                                                osteoarthritis.
                                             </p>
                                         </div>
                                         <a href="shop.php" class="btn">Shop Now</a>
@@ -512,25 +559,31 @@ include('include/config.php');
                         </div>
                     </div>
                 </div>
-                 <div class="section feature-content">
+                <div class="section feature-content">
                     <div class="container">
                         <div class="row">
-                            <div class="feature-row" >
-                                <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--right text-left">
+                            <div class="feature-row">
+                                <div
+                                    class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--right text-left">
                                     <div class="row-text" style="margin-left:0px">
                                         <h2 class="h1"><b>K4 OsteoAlign Knee Orthosis</b></h2>
                                         <div class="rte-setting featured-row__subtext" style="font-size:15px">
                                             <b>The Treatment your Knee needs!</b>
-                                            <p>The Z1 K4 OsteoAlign Knee Brace is a custom made OA Brace best suited for active patients as it offers a convenient and appropriate fit. It is an effective and non-invasive remedy for patients with mild to moderate osteoarthritis. What sets this offloading orthosis apart from others is that it effectively transfers body weight from thigh to calf without exerting much pressure on the knee joint and thus helps stabilize the knee and prevents further deterioration.
+                                            <p>The Z1 K4 OsteoAlign Knee Brace is a custom made OA Brace best suited for
+                                                active patients as it offers a convenient and appropriate fit. It is an
+                                                effective and non-invasive remedy for patients with mild to moderate
+                                                osteoarthritis. What sets this offloading orthosis apart from others is
+                                                that it effectively transfers body weight from thigh to calf without
+                                                exerting much pressure on the knee joint and thus helps stabilize the
+                                                knee and prevents further deterioration.
                                             </p>
                                         </div>
                                         <a href="shop.php" class="btn">Shop Now</a>
                                     </div>
                                 </div>
-                                  <div class="col-12 col-sm-12 col-md-6 feature-row__item">
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item">
                                     <img src="assets/images/K4 OsteoAlign Knee Orthosis.jpg"
-                                        alt="K4 OsteoAlign Knee Orthosis"
-                                        title="K4 OsteoAlign Knee Orthosis" />
+                                        alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis" />
                                 </div>
                             </div>
                         </div>
@@ -541,8 +594,7 @@ include('include/config.php');
                         <div class="row">
                             <div class="feature-row">
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                    <img src="assets/images/K6 Dezire Knee Orthosis.jpg"
-                                        alt="K6 Dezire Knee Orthosis"
+                                    <img src="assets/images/K6 Dezire Knee Orthosis.jpg" alt="K6 Dezire Knee Orthosis"
                                         title="K6 Dezire Knee Orthosis" />
                                 </div>
                                 <div
@@ -551,7 +603,11 @@ include('include/config.php');
                                         <h2 class="h1"><b>K6 Dezire Knee Orthosis</b></h2>
                                         <div class="rte-setting featured-row__subtext" style="font-size:15px">
                                             <b>For that Never Give Up Attitude in you!</b>
-                                            <p>The Z1 K6 Dezire Knee Orthosis is extremely handy in making you feel complacent because of it’s lightweight and highly durable aluminum frame. It is very likely a wonderful product for all those who have pain in the knee as it is phenomenal in providing the coveted support and aid.
+                                            <p>The Z1 K6 Dezire Knee Orthosis is extremely handy in making you feel
+                                                complacent because of it’s lightweight and highly durable aluminum
+                                                frame. It is very likely a wonderful product for all those who have pain
+                                                in the knee as it is phenomenal in providing the coveted support and
+                                                aid.
                                             </p>
                                         </div>
                                         <a href="shop.php" class="btn">Shop Now</a>
@@ -679,8 +735,7 @@ include('include/config.php');
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                             <div class="product-details-img">
                                                 <div class="pl-20">
-                                                    <img src="assets/images/product-images/product-image1.jpg"
-                                                        alt="" />
+                                                    <img src="assets/images/product-images/product-image1.jpg" alt="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -880,6 +935,32 @@ include('include/config.php');
                         jQuery('#modalOverly').hide();
                     }
                 });
+            </script>
+            <script type="text/javascript">
+                function slider(anything) {
+                    document.querySelector(".one").src = anything;
+                }
+
+                let menu = document.querySelector("#menu-icon");
+                let navbar = document.querySelector(".navbar");
+
+                menu.onclick = () => {
+                    menu.classList.toggle("bx-x");
+                    navbar.classList.toggle("open");
+                };
+            </script>
+            <script type="text/javascript">
+                function slider(anything) {
+                    document.querySelector(".one").src = anything;
+                }
+
+                let menu = document.querySelector("#menu-icon");
+                let navbar = document.querySelector(".navbar");
+
+                menu.onclick = () => {
+                    menu.classList.toggle("bx-x");
+                    navbar.classList.toggle("open");
+                };
             </script>
             <!--End For Newsletter Popup-->
         </div>
