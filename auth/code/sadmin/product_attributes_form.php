@@ -1,3 +1,27 @@
+<?php
+include('../../../include/config.php');
+if(isset($_POST['submit'])){
+    $maintitle=$_POST['maintitle'];
+    $mainslug=$_POST['mainslug'];
+    $title=$_POST['title'];
+    $slug=$_POST['slug'];
+   
+    foreach($title as $index => $titles){
+        // $s_maintitle = $titles;
+        // $s_mainslug = $mainslug[$index];
+        $s_title = $titles;
+        $s_slug = $slug[$index];
+
+        $sql=mysqli_query($conn,"INSERT INTO `product_attribute`(`main_title`, `main_slug`, `title`, `slug`) VALUES ('$maintitle','$mainslug','$s_title','$s_slug')");
+       
+    }
+    if($sql==1){
+        echo '<script>alert("sucessfully submitted");</script>';
+    }else{
+        echo '<script>alert("something went wrong");</script>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -102,14 +126,17 @@
             <div class="content-body">
                 <!-- Basic Horizontal form layout section start -->
                 <section id="basic-horizontal-layouts">
+                <form class="form form-horizontal" method="post">
                     <div class="row">
+                   
                         <div class="col-md-9 col-12">
+                       
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title"></h4>
                                 </div>
                                 <div class="card-body">
-                                    <form class="form form-horizontal">
+                                    
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="mb-1 row">
@@ -117,7 +144,7 @@
                                                         <label class="control-label required"
                                                             for="email-id">TITLE</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="fname" />
+                                                            name="maintitle" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,13 +154,13 @@
                                                         <label class="control-label required"
                                                             for="email-id">SLUG</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="fname" />
+                                                            name="mainslug" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                 </div>
-                                </form>
+                               
                             </div>
                             <div class="card">
                                 <div class="row">
@@ -145,7 +172,7 @@
                                                     <div class="head-label">
                                                         <h6 class="mb-0">Attributes list</h6>
                                                     </div>
-                                                    <div class="dt-action-buttons text-end">
+                                                    <!-- <div class="dt-action-buttons text-end">
                                                         <div class="dt-buttons d-inline-flex"> <button
                                                                 class="dt-button create-new btn btn-primary"
                                                                 tabindex="0" aria-controls="DataTables_Table_0"
@@ -159,7 +186,7 @@
                                                                         <line x1="12" y1="5" x2="12" y2="19"></line>
                                                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                                                     </svg>Add New Attributes</span></button> </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <table
                                                     class="datatables-basic table dataTable no-footer dtr-column collapsed"
@@ -195,20 +222,25 @@
 
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr>
+                                                    <tbody class="tabletr">
+                                                        <!-- <tr>
                                                             <td>1</td>
-                                                            <td></td>
-                                                            <td>hkhu</td>
-                                                            <td> m</td>
+                                                            <td><input type="radio" name="defaultselect" value="1" selected></td>
+                                                            <td><input type="text" class="form-control" ></td>
+                                                            <td><input type="text" class="form-control"></td>
                                                             <td> <a href=""><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a></td>
-                                                        </tr>
+                                                        </tr> -->
                                                     </tbody>
+                                                    
                                                 </table>
-                                                <div class="d-flex justify-content-between mx-0 row">
+                                                <div class="dt-action-buttons mt-2" style="margin-left:20px">
+                                                      <button id="addattr" type="button"
+                                                                class="btn btn-primary">+ Add New Attributes</button> 
+                                                    </div>
+                                                <!-- <div class="d-flex justify-content-between mx-0 row">
                                                     <div class="col-sm-12 col-md-6">
                                                         <div class="dataTables_info" id="DataTables_Table_0_info"
                                                             role="status" aria-live="polite">Showing 1 to 7 of 100
@@ -260,12 +292,12 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal modal-slide-in fade" id="modals-slide-in">
+                                <!-- <div class="modal modal-slide-in fade" id="modals-slide-in">
                                     <div class="modal-dialog sidebar-sm">
                                         <form class="add-new-record modal-content pt-0">
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -293,8 +325,9 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
+                           
                         </div>
                         <div class="col-md-3 col-12">
                             <div class="card">
@@ -309,13 +342,14 @@
                                             <i class="fa fa-save"></i> Save
                                         </button>
                                         &nbsp;
-                                        <button type="submit" name="submit" value="apply" class="btn btn-success">
+                                        <!-- <button type="submit" name="submit" value="apply" class="btn btn-success">
                                             <i class="fa fa-check-circle"></i> Save &amp; Edit
-                                        </button>
+                                        </button> -->
                                     </div>
                                 </div>
+                              
                             </div>
-                            <div class="card">
+                            <!-- <div class="card">
                                 <div class="pd-all-10-20 border-top-color">
                                     <div class="widget-title">
                                         <h4 class="card-title"><label for="status" class="control-label required"
@@ -331,8 +365,10 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                           
                         </div>
+                        </form>
                 </section>
                 <!-- Basic Horizontal form layout section end -->
 
@@ -374,8 +410,24 @@
                     height: 14
                 });
             }
-        })
+        });
+
+        $(document).on('click','#addattr',function(){
+    $('.tabletr').append('<tr class="one">\
+    <td class="sno"></td>\
+    <td><input type="radio" name="defaultselect" value="1" selected></td>\
+    <td><input type="text" class="form-control" name="title[]"></td>\
+    <td><input type="text" class="form-control" name="slug[]"></td>\
+    <td>\
+    <button type="button" class="btn btn-icon rounded-circle btn-flat-danger cancleicon"><i  class="fa fa-trash"></i></button></td>\
+</tr>');
+});
+
+$(document).on('click','.cancleicon',function(){
+        $(this).closest('.one').remove();
+    })
     </script>
+    
 </body>
 <!-- END: Body-->
 

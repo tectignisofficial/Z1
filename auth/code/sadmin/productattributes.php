@@ -1,3 +1,6 @@
+<?php
+include('../../../include/config.php');
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -179,46 +182,36 @@
                                                         aria-label="Status: activate to sort column ascending">Created
                                                         AT
                                                     </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">STATUS
-                                                    </th>
+                                                   
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">ACTION
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th class="control" rowspan="1" colspan="1" style="display: none;">
-                                                    </th>
-                                                    <th rowspan="1" colspan="1">ID</th>
-                                                    <th rowspan="1" colspan="1">TITLE</th>
-                                                    <th rowspan="1" colspan="1">SLUG</th>
-                                                    <th rowspan="1" colspan="1">ORDER</th>
-                                                    <th rowspan="1" colspan="1">Created AT</th>
-                                                    <th rowspan="1" colspan="1">STATUS</th>
-                                                    <th rowspan="1" colspan="1">ACTION</th>
-                                                </tr>
-
-                                            </tfoot>
+                                           
                                             <tbody>
+                                                <?php
+                                                $sql=mysqli_query($conn,"select * from product_attribute group by main_title");
+                                                $count='1';
+                                                while($arr=mysqli_fetch_array($sql)){
+                                                ?>
                                                 <tr class="odd">
                                                     <td class="control sorting_1" tabindex="0" style="display: none;">
                                                     </td>
-                                                    <td>111</td>
-                                                    <td>ABC XYZ</td>
-                                                    <td>SIZE</td>
+                                                    <td><?php echo $count; ?></td>
+                                                    <td><?php echo $arr['main_title'] ?></td>
+                                                    <td><?php echo $arr['main_slug'] ?></td>
                                                     <td>1200</td>
-                                                    <td>12/10/22</td>
-                                                    <td>Published</td>
-                                                    <td><a href=""><button
+                                                    <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>
+                                                   
+                                                    <td><a href="api.php?did=<?php echo $arr['id'] ?>"><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a></td>
 
                                                 </tr>
+                                                <?php $count++; } ?>
                                             </tbody>
                                         </table>
 

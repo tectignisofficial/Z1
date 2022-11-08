@@ -1,7 +1,7 @@
+<?php include('../../../include/config.php') ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- END: Page CSS-->
-
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
@@ -70,8 +69,6 @@
             font-size: 1rem;
             border-radius: 0.358rem;
             transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s, border 0s;
-
-
         }
     </style>
 
@@ -97,7 +94,7 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Orders</h2>
+                            <h2 class="content-header-title float-start mb-0">Products</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a>
@@ -123,14 +120,14 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom">
-                                    <h4 class="card-title">Orders</h4>
+                                    <h4 class="card-title">Products</h4>
                                     <a class="btn btn-primary" href="products_form.php"><i class="fa fa-plus"></i>
                                     Create
                                 </a>
                                 </div>
                                 <div class="card-datatable">
                                     <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
-                                        <div class="d-flex justify-content-between align-items-center mx-0 row">
+                                        <!-- <div class="d-flex justify-content-between align-items-center mx-0 row">
                                             <div class="col-sm-12 col-md-6">
                                                 <div class="dataTables_length" id="DataTables_Table_3_length">
                                                     <label>Show <select name="DataTables_Table_3_length"
@@ -147,9 +144,8 @@
                                                             placeholder="" aria-controls="DataTables_Table_3"></label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <table class="dt-responsive table dataTable dtr-column" id="DataTables_Table_3"
-                                            role="grid" aria-describedby="DataTables_Table_3_info"
+                                        </div> -->
+                                        <table class="dt-responsive table dataTable dtr-column" id="example1"
                                             style="width: 1443px;">
                                             <thead>
                                                 <tr role="row">
@@ -198,90 +194,33 @@
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th class="control" rowspan="1" colspan="1" style="display: none;">
-                                                    </th>
-                                                    <th rowspan="1" colspan="1">ID</th>
-                                                    <th rowspan="1" colspan="1">THUMBNAIL</th>
-                                                    <th rowspan="1" colspan="1">NAME</th>
-                                                    <th rowspan="1" colspan="1">PRICE</th>
-                                                    <th rowspan="1" colspan="1">STOCK STATUS</th>
-                                                    <th rowspan="1" colspan="1">QUANTITIY</th>
-                                                    <th rowspan="1" colspan="1">SKU</th>
-                                                    <th rowspan="1" colspan="1">ORDER</th>
-                                                    <th rowspan="1" colspan="1">Created AT</th>
-                                                    <th rowspan="1" colspan="1">STATUS</th>
-                                                </tr>
-
-                                            </tfoot>
+                                           
                                             <tbody>
+                                                <?php
+                                                $sql=mysqli_query($conn,"select * from products");
+                                                $count=1;
+                                                while($arr=mysqli_fetch_array($sql)){
+                                                ?>
                                                 <tr class="odd">
                                                     <td class="control sorting_1" tabindex="0" style="display: none;">
                                                     </td>
-                                                    <td>111</td>
-                                                    <td>Img</td>
-                                                    <td>ABC XYZ</td>
-                                                    <td>1200</td>
-                                                    <td>In Stock</td>
-                                                    <td>2</td>
-                                                    <td>2hh</td>
+                                                    <td><?php $count; ?></td>
+                                                    <td><img src="image/product_Image/<?php echo $arr['image']; ?>" width="50" height="50"></td>
+                                                    <td><?php echo $arr['name']; ?></td>
+                                                    <td><?php echo $arr['price']; ?></td>
+                                                    <td><?php echo $arr['stock_status']; ?></td>
+                                                    <td><?php echo $arr['sku']; ?></td>
                                                     <td>0</td>
-                                                    <td>12/10/22</td>  
-                                                    <td>Published</td>                                                 
-                                                                                        
+                                                    <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>  
+                                                    <td><?php echo $arr['status']; ?></td> 
                                                 </tr>
+                                                <?php $count++; } ?>
                                             </tbody>
                                         </table>
 
 
 
-                                        <div class="d-flex justify-content-between mx-0 row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_info" id="DataTables_Table_3_info" role="status"
-                                                    aria-live="polite">Showing 1 to 10 of 100 entries</div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_paginate paging_simple_numbers"
-                                                    id="DataTables_Table_3_paginate">
-                                                    <ul class="pagination">
-                                                        <li class="paginate_button page-item previous disabled"
-                                                            id="DataTables_Table_3_previous"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="0"
-                                                                tabindex="0" class="page-link">&nbsp;</a></li>
-                                                        <li class="paginate_button page-item active"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="1"
-                                                                tabindex="0" class="page-link">1</a></li>
-                                                        <li class="paginate_button page-item "><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="2"
-                                                                tabindex="0" class="page-link">2</a></li>
-                                                        <li class="paginate_button page-item "><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="3"
-                                                                tabindex="0" class="page-link">3</a></li>
-                                                        <li class="paginate_button page-item "><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="4"
-                                                                tabindex="0" class="page-link">4</a></li>
-                                                        <li class="paginate_button page-item "><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="5"
-                                                                tabindex="0" class="page-link">5</a></li>
-                                                        <li class="paginate_button page-item disabled"
-                                                            id="DataTables_Table_3_ellipsis"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="6"
-                                                                tabindex="0" class="page-link">…</a></li>
-                                                        <li class="paginate_button page-item "><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="7"
-                                                                tabindex="0" class="page-link">10</a></li>
-                                                        <li class="paginate_button page-item next"
-                                                            id="DataTables_Table_3_next"><a href="#"
-                                                                aria-controls="DataTables_Table_3" data-dt-idx="8"
-                                                                tabindex="0" class="page-link">&nbsp;</a></li>
-                                                    </ul>
-
-
-
-                                                </div>
-                                            </div>
-                                        </div>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -354,6 +293,8 @@
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });
+
+        
     </script>
 
 

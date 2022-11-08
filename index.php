@@ -1,3 +1,7 @@
+<?php
+include('include/config.php');
+
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -92,6 +96,10 @@
                                 <div class="tab_container">
                                     <div id="tab1" class="tab_content grid-products">
                                         <div class="productSlider">
+                                            <?php
+                                            $sql=mysqli_query($conn,"select * from products");
+                                            while($arr=mysqli_fetch_array($sql)){
+                                            ?>
                                             <div class="col-12 item">
                                                 <!-- start product image -->
                                                 <div class="product-image">
@@ -99,8 +107,8 @@
                                                     <a href="short-description.html">
                                                         <!-- image -->
                                                         <img class="primary blur-up lazyload"
-                                                            data-src="assets/images/product-images/product-image3.jpg"
-                                                            src="assets/images/product-images/product-image3.jpg"
+                                                            data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
+                                                            src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
                                                             alt="image" title="product">
                                                         <!-- End image -->
                                                         <!-- Hover image -->
@@ -111,7 +119,7 @@
                                                         <!-- End hover image -->
                                                         <!-- product label -->
                                                         <div class="product-labels rectangular"><span
-                                                                class="lbl pr-label2">Hot</span></div>
+                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
                                                         <!-- End product label -->
                                                     </a>
                                                     <!-- end product image -->
@@ -138,12 +146,12 @@
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                                                        <a href="short-description.html"><?php echo $arr['name'];?></a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
                                                     <div class="product-price">
-                                                        <span class="price">$550.00</span>
+                                                        <span class="price">$<?php echo $arr['price'];?></span>
                                                     </div>
                                                     <!-- End product price -->
 
@@ -160,77 +168,8 @@
                                                 </div>
                                                 <!-- End product details -->
                                             </div>
-                                            <div class="col-12 item">
-                                                <!-- start product image -->
-                                                <div class="product-image">
-                                                    <!-- start product image -->
-                                                    <a href="short-description.html">
-                                                        <!-- image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="assets/images/product-images/product-image4.jpg"
-                                                            src="assets/images/product-images/product-image4.jpg"
-                                                            alt="image" title="product" />
-                                                        <!-- End image -->
-                                                        <!-- Hover image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="assets/images/product-images/product-image4-1.jpg"
-                                                            src="assets/images/product-images/product-image4-1.jpg"
-                                                            alt="image" title="product" />
-                                                        <!-- End hover image -->
-                                                        <!-- product label -->
-                                                        <div class="product-labels"><span
-                                                                class="lbl on-sale">Sale</span></div>
-                                                        <!-- End product label -->
-                                                    </a>
-                                                    <!-- end product image -->
-
-                                                    <!-- Start product button -->
-                                                    <form class="variants add" action="#"
-                                                        onclick="window.location.href='cart.html'" method="post">
-                                                        <button class="btn btn-addto-cart" type="button"
-                                                            tabindex="0">Add To Cart</button>
-                                                    </form>
-                                                    <div class="button-set">
-                                                        <a href="javascript:void(0)" title="Quick View"
-                                                            class="quick-view-popup quick-view" data-toggle="modal"
-                                                            data-target="#content_quickview">
-                                                            <i class="icon anm anm-search-plus-r"></i>
-                                                        </a>
-
-
-                                                    </div>
-                                                    <!-- end product button -->
-                                                </div>
-                                                <!-- end product image -->
-
-                                                <!--start product details -->
-                                                <div class="product-details text-center">
-                                                    <!-- product name -->
-                                                    <div class="product-name">
-                                                        <a href="short-description.html">Cape Dress</a>
-                                                    </div>
-                                                    <!-- End product name -->
-                                                    <!-- product price -->
-                                                    <div class="product-price">
-                                                        <span class="old-price">$900.00</span>
-                                                        <span class="price">$788.00</span>
-                                                    </div>
-                                                    <!-- End product price -->
-
-                                                    <div class="product-review">
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star-o"></i>
-                                                        <i class="font-13 fa fa-star-o"></i>
-                                                    </div>
-                                                    <!-- Variant -->
-
-                                                    <!-- End Variant -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-
+                                            <?php } ?>
+                                            
 
 
                                         </div>

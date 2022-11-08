@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include('include/config.php');
+
+?><!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <!-- belle/shop-grid-3.html   11 Nov 2019 12:39:06 GMT -->
@@ -135,20 +138,23 @@
                         <!--End Toolbar-->
                         <div class="grid-products grid--view-items">
                             <div class="row">
-                              
+                            <?php
+                                            $sql=mysqli_query($conn,"select * from products");
+                                            while($arr=mysqli_fetch_array($sql)){
+                                            ?>
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
                                     <!-- start product image -->
                                     <div class="product-image">
                                         <!-- start product image -->
                                         <a href="#">
                                             <!-- image -->
-                                            <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image3.jpg" src="assets/images/product-images/product-image3.jpg" alt="image" title="product">
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" alt="image" title="product">
                                             <!-- End image -->
                                             <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image3-1.jpg" src="assets/images/product-images/product-image3-1.jpg" alt="image" title="product">
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" alt="image" title="product">
                                             <!-- End hover image -->
                                             <!-- product label -->
-                                            <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span></div>
+                                            <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
                                             <!-- End product label -->
                                         </a>
                                         <!-- end product image -->
@@ -171,12 +177,12 @@
                                     <div class="product-details text-center">
                                         <!-- product name -->
                                         <div class="product-name">
-                                            <a href="#">Z1 K2 Comfortline Knee Orthosis</a>
+                                            <a href="#"><?php echo $arr['name'];?></a>
                                         </div>
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            <span class="price">$550.00</span>
+                                            <span class="price">$<?php echo $arr['price'];?></span>
                                         </div>
                                         <!-- End product price -->
                                         
@@ -193,64 +199,8 @@
                                     </div>
                                     <!-- End product details -->
                                 </div>
-                           
-                                <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                    <!-- start product image -->
-                                    <div class="product-image">
-                                        <!-- start product image -->
-                                        <a href="#">
-                                            <!-- image -->
-                                            <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image5.jpg" src="assets/images/product-images/product-image5.jpg" alt="image" title="product" />
-                                            <!-- End image -->
-                                            <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image5-1.jpg" src="assets/images/product-images/product-image5-1.jpg" alt="image" title="product" />
-                                            <!-- End hover image -->
-                                            <!-- product label -->
-                                            <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
-                                            <!-- End product label -->
-                                        </a>
-                                        <!-- end product image -->
-
-                                        <!-- Start product button -->
-                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                            <button class="btn btn-addto-cart" type="button">Add To Cart</button>
-                                        </form>
-                                        <div class="button-set">
-                                            <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                                        <i class="icon anm anm-search-plus-r"></i>
-                                                    </a>
-                                             
-                                        </div>
-                                        <!-- end product button -->
-                                    </div>
-                                    <!-- end product image -->
-
-                                    <!--start product details -->
-                                    <div class="product-details text-center">
-                                        <!-- product name -->
-                                        <div class="product-name">
-                                            <a href="#">Z1 K4 OsteoAlign Knee Orthosis</a>
-                                        </div>
-                                        <!-- End product name -->
-                                        <!-- product price -->
-                                        <div class="product-price">
-                                            <span class="price">$550.00</span>
-                                        </div>
-                                        <!-- End product price -->
-                                        
-                                        <div class="product-review">
-                                            <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
-                                            <i class="font-13 fa fa-star"></i>
-                                        </div>
-                                        <!-- Variant -->
-                                        
-                                        <!-- End Variant -->
-                                    </div>
-                                    <!-- End product details -->
-                                </div>
+                                 <?php } ?>
+                               
                                  
                             </div>
                         </div>
