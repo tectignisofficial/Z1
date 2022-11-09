@@ -1,3 +1,7 @@
+<?php 
+include('../../../include/config.php');
+ ?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -6,13 +10,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="description"
+        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Form Layouts - Vuexy - Bootstrap HTML admin template</title>
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
@@ -40,10 +47,11 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
+    data-menu="vertical-menu-modern" data-col="">
 
     <!-- BEGIN: Header-->
-   
+
     <!-- END: Header-->
     <?php 
     include("include/header.php");
@@ -60,10 +68,11 @@
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-					<ol class="breadcrumb">    
-                            <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Testimonials</li>  
-            </ol>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">Testimonials</li>
+                    </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
                     <div class="mb-1 breadcrumb-right">
@@ -76,52 +85,77 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-								
+
                                 <div class="card-header border-bottom row-12">
-									
-										<div class="col-1">
-                                   <div class="btn-group">
-                                            <button type="button" class="btn btn-outline-primary dropdown-toggle waves-effect show" data-bs-toggle="dropdown" aria-expanded="true">
+
+                                    <div class="col-1">
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
+                                                data-bs-toggle="dropdown" aria-expanded="true">
                                                 Bulk actions
                                             </button>
-                                            <ul class="dropdown-menu " style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);" data-popper-placement="bottom-start">
+                                            <ul class="dropdown-menu "
+                                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
+                                                data-popper-placement="bottom-start">
                                                 <li><a class="dropdown-item" href="#">bulk changes</a></li>
                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
                                             </ul>
-                                        </div> </div>
-									<div class="col-1">
-									<button type="button" class="btn btn-primary">Filters</button></div>
-									<div class="col-2">
-									<div id="botble-page-tables-page-table_filter" class="dataTables_filter">
-										<label><input type="search" class="form-control input-sm" placeholder="Search..." aria-controls="botble-page-tables-page-table"></label>
-									</div></div>
-									<div class="col-4"></div>
-									<a class="btn btn-primary" href="testimonials_form.php"><i class="fa fa-plus"></i>
-                                    Create
-                                </a>
-									<button class="btn btn-info" tabindex="0" aria-controls="botble-page-tables-page-table" type="button"><span><i data-feather="refresh-cw"></i> reload</span></button>
-									</div>
-                                
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <button type="button" class="btn btn-primary">Filters</button></div>
+                                    <div class="col-2">
+                                        <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
+                                            <label><input type="search" class="form-control input-sm"
+                                                    placeholder="Search..."
+                                                    aria-controls="botble-page-tables-page-table"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <a class="btn btn-primary" href="testimonials_form.php"><i class="fa fa-plus"></i>
+                                        Create
+                                    </a>
+                                    <button class="btn btn-info" tabindex="0"
+                                        aria-controls="botble-page-tables-page-table" type="button"><span><i
+                                                data-feather="refresh-cw"></i> reload</span></button>
+                                </div>
+
                                 <div class="card-datatable">
                                     <table class="dt-responsive table">
                                         <thead>
                                             <tr>
-												<th>SR NO.</th>
+                                                <th>SR NO.</th>
                                                 <th>NAME</th>
                                                 <th>COMPANY NAME</th>
                                                 <th>MESSAGE</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                        <?php
+                         $sql=mysqli_query($conn,"SELECT * FROM testimonial");
+                        $count=1;
+                         while($row=mysqli_fetch_array($sql)){ 
+                         ?>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-												<td></td>
-                                                <td></td>
-                                                <td><button type="button" class="btn btn-primary"><i data-feather="edit"></i></button>
-												<button type="button" class="btn btn-danger"><i data-feather="trash-2"></i></button></td>
+                                                <td><?php echo $count;?></td>
+                                                <td><?php echo $row['name'];?></td>
+                                                <td><?php echo $row['company_name'];?></td>
+                                                <td><?php echo $row['message'];?></td>
+                                                <td>
+                                                    <!-- <a href=""><button type="button"
+                                                            class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
+                                                                data-feather="edit"></i></button></a> -->
+
+                                                    <a href=""><button type="button"
+                                                            class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                data-feather="trash"></i></button></a>
+                                                </td>
                                             </tr>
-                                        
+                                            <?php $count++;  } ?>
+                                        </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -134,8 +168,8 @@
         </div>
     </div>
     <!-- END: Content-->
-    
-    
+
+
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
@@ -162,7 +196,7 @@
     <!-- END: Page JS-->
 
     <script>
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             if (feather) {
                 feather.replace({
                     width: 14,
