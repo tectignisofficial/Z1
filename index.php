@@ -65,36 +65,6 @@ include('include/config.php');
 
         <!--Body Content-->
         <div id="page-content">
-            <!--Home slider-->
-            <!-- <div class="slideshow slideshow-wrapper pb-section">
-        	<div class="home-slideshow">
-            <div class="slide">
-                	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner.jpg" src="assets/images/slideshow-banners/z1kneebracebanner.jpg" alt="z1 knee braces" title="z1 knee braces" />
-                     
-                    </div>
-                </div>
-            	<div class="slide">
-                	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" alt="z1 knee braces" title="z1 knee braces" />
-                     
-                    </div>
-                </div>
-                <div class="slide">
-                	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner3.jpg" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg" alt="z1 knee braces" title="z1 knee braces" />
-                     
-                    </div>
-                </div>
-                <div class="slide">
-                	<div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner2.jpg" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg" alt="z1 knee braces" title="z1 knee braces" />
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-    </div> -->
 
             <div class="slideshow slideshow-wrapper pb-section sliderFull">
                 <section class="home hero">
@@ -105,7 +75,6 @@ include('include/config.php');
                     <div class="home-text">
                         <h1 style="color:white; font-weight: bold;">
                             Don't Suffer, get a best friend! <br />
-                            
                         </h1>
                         <h5 style="color:white">The A-Z Comfort with Z1 Braces</h5>
                         <!-- <h3 style="color:white">$199.00</h3> -->
@@ -144,8 +113,8 @@ include('include/config.php');
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="section-header text-center">
-                                <h2 class="h2">New Arrivals</h2>
-                                <p>Browse the huge variety of our products</p>
+                                <h2 class="h2"><b style="font-size:35px">Our Products</b></h2>
+                                <p>The Treatment your Knee needs!</p>
                             </div>
                             <div class="tabs-listing">
 
