@@ -8,8 +8,8 @@ if(isset($_POST['submit'])){
   $sql=mysqli_query($conn,"INSERT INTO `newsletter`(`email`) VALUES ('$email')");
   if($sql==1){
     echo '<script>alert("Thank You...!");</script>';
-    header("location:index.php");
-}
+    // header("location:index.php");
+    }
 }
 ?>
     <!--Footer-->
