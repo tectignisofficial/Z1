@@ -30,6 +30,12 @@ if(isset($_GET['delid'])){
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- END: Page CSS-->    
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <!-- END: Vendor CSS-->
@@ -107,12 +113,7 @@ if(isset($_GET['delid'])){
                                 <div class="card-datatable">
                                     <table class="dt-responsive table">
                                         <thead>
-                                            <tr>
-                                                <th width="10px" class="text-left no-sort sorting_disabled"
-                                                    title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
-                                                    rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
-                                                        class="table-check-all" data-set=".dataTable .checkboxes"
-                                                        type="checkbox"></th>
+                                            <tr>                                                
                                                 <th>ID</th>
                                                 <th>NAME</th>
                                                 <th>EMAIL</th>
@@ -129,11 +130,6 @@ if(isset($_GET['delid'])){
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
                                             <tr>
-                                                <td width="10px" class="text-left no-sort sorting_disabled"
-                                                    title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
-                                                    rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
-                                                        class="table-check-all" data-set=".dataTable .checkboxes"
-                                                        type="checkbox"></td>
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['name'];?></td>
                                                 <td><?php echo $row['email'];?></td>

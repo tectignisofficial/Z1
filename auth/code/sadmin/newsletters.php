@@ -30,6 +30,12 @@ if(isset($_GET['delid'])){
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- END: Page CSS-->
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <!-- END: Vendor CSS-->
@@ -94,31 +100,15 @@ if(isset($_GET['delid'])){
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-
-                                <div class="card-header border-bottom row-12">                                  
-                                    <div class="col-2">
-                                        <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
-                                            <label><input type="search" class="form-control input-sm"
-                                                    placeholder="Search..."
-                                                    aria-controls="botble-page-tables-page-table"></label>
+                                <div class="card-header border-bottom row-12">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Newsletters</h4>
                                         </div>
-                                    </div>
-                                    <div class="col-4"></div>
-                                    <div class="col-1">
-                                        
-                                    </div>
-                                 
                                 </div>
-
                                 <div class="card-datatable">
-                                    <table class="dt-responsive table">
+                                    <table class="dt-responsive table" id="example1">
                                         <thead>
                                             <tr>
-                                                <th width="10px" class="text-left no-sort sorting_disabled"
-                                                    title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
-                                                    rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
-                                                        class="table-check-all" data-set=".dataTable .checkboxes"
-                                                        type="checkbox"></th>
                                                 <th>Sr No.</th>
                                                 <th>EMAIL</th>
                                                 <th>Action</th>
@@ -132,11 +122,6 @@ if(isset($_GET['delid'])){
                          ?>
 
                                             <tr>
-                                                <td width="10px" class="text-left no-sort sorting_disabled"
-                                                    title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
-                                                    rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
-                                                        class="table-check-all" data-set=".dataTable .checkboxes"
-                                                        type="checkbox"></td>
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['email'];?></td>
                                                 <td>
@@ -180,6 +165,19 @@ if(isset($_GET['delid'])){
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -188,8 +186,31 @@ if(isset($_GET['delid'])){
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Theme JS-->
 
-    <!-- BEGIN: Page JS-->
-    <!-- END: Page JS-->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
 
     <script>
         $(window).on('load', function () {
