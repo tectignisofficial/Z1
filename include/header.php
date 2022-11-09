@@ -83,7 +83,8 @@
                     	<a href="cart.php" class="" title="Cart" style="font-size:20px">
                         	<i class="icon anm anm-bag-l" ></i>
                             <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><?php
-                             if(is_array($_SESSION['shopping_cart'])){ echo count($_SESSION['shopping_cart']); }else { echo '0'; } 
+                            if(isset($_SESSION['shopping_cart'])){
+                            $items_in_cart = is_array($_SESSION['shopping_cart']) ? count($_SESSION['shopping_cart']) : 0; echo $items_in_cart; }
                             ?></span>
                         </a>
                         <!--Minicart Popup-->
