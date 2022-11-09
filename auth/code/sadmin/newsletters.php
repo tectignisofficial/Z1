@@ -1,5 +1,14 @@
 <?php 
 include('../../../include/config.php');
+
+if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from newsletter where id='$id'");
+    if($sql=1){
+      header("location:newsletters.php");
+    }
+    else{ echo "<script>alert('Failed to Delete')</script>"; }
+  }
  ?>
 
 <!DOCTYPE html>
@@ -162,16 +171,13 @@ include('../../../include/config.php');
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['email'];?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-danger btn-rounded btn-icon delbtn"><i
-                                                            data-feather="trash-2"></i></button>
-
-                                                    <!-- <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href="contact_us.php?delid=<?php echo $row['id']; ?>"
+                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        href="newsletters.php?delid=<?php echo $row['id']; ?>"
                                                         onclick="return checkDelete()"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $row['id']; ?>">
-                                                        <i class="fas fa-trash"></i></a> -->
-
+                                                        <i data-feather="trash-2"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <?php $count++; }  ?>
@@ -210,6 +216,7 @@ include('../../../include/config.php');
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
@@ -225,6 +232,31 @@ include('../../../include/config.php');
             }
         })
     </script>
+     <script>
+    $(document).ready(function () {
+      $('.delbtn').click(function (e) {
+        e.preventDefault();
+        let delid = $(this).data('id');
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Poof! Your imaginary file has been deleted!", {
+                icon: "success",
+              });
+              window.location.href = "newsletters.php?delid" + delid;
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          });
+      })
+    });
+  </script>
 </body>
 <!-- END: Body-->
 

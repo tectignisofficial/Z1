@@ -51,8 +51,6 @@
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="newsletters.php"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Newsletters</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="contact.php"><i data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Todo">Contact</span></a>
-                </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Ecommerce</span></a>
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="Report.php"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Report</span></a>
@@ -73,7 +71,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="contact.php"><i data-feather="save"></i><span class="menu-title text-truncate" data-i18n="File Manager">Contact</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="contact.php"><i data-feather="phone"></i><span class="menu-title text-truncate" data-i18n="File Manager">Contact</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Payments</span></a>
                     <ul class="menu-content">
