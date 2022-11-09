@@ -3,13 +3,13 @@ include('include/config.php');
 
 if(isset($_POST['submit'])){
 
-  $email=$_POST['email'];
+  $email_id=$_POST['email_id'];
  
-  $sql=mysqli_query($conn,"INSERT INTO `newsletter`(`email`) VALUES ('$email')");
+  $sql=mysqli_query($conn,"INSERT INTO `newsletter`(`email_id`) VALUES ('$email_id')");
   if($sql==1){
     echo '<script>alert("Thank You...!");</script>';
-    header("location:index.php");
-}
+    // header("location:index.php");
+    }
 }
 ?>
     <!--Footer-->
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
                                     </div>
                                     <form method="post">
                                         <div class="input-group">
-                                            <input type="email" class="input-group__field newsletter__input" name="email" id="email" value="" placeholder="Email address" required="">
+                                            <input type="email" class="input-group__field newsletter__input" name="email_id" id="email_id" value="" placeholder="Email address" required="">
                                             <span class="input-group__btn">
                                                 <button type="submit" class="btn newsletter__submit" name="submit" id="submit" id="Subscribe"><span class="newsletter__submit-text--large">Subscribe</span></button>
                                             </span>
@@ -67,21 +67,21 @@ if(isset($_POST['submit'])){
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Quick Links</h4>
                             <ul>
-                            	<li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Blogs</a></li>
-                                <li><a href="#">Video</a></li>
+                            	<li><a href="index.php">Home</a></li>
+                                <li><a href="about-us.php">About Us</a></li>
+                                <li><a href="contact-us.php">Contact Us</a></li>
+                                <li><a href="blogs.php">Blogs</a></li>
+                                <li><a href="videos.php">Video</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Disclaimer</h4>
                             <ul>
-                            	<li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Returns & Refunds</a></li>
-                                <li><a href="#">Shipping & Delivery</a></li>
-                                <li><a href="#">My Account</a></li>
+                            	<li><a href="privacy-policy.php" target="-blank">Privacy Policy</a></li>
+                                <li><a href="term-conditions.php" target="-blank">Terms & Conditions</a></li>
+                                <li><a href="returns-refund.php" target="-blank">Returns & Refunds</a></li>
+                                <li><a href="shipping-delivery.php" target="-blank">Shipping & Delivery</a></li>
+                                <li><a href="myaccount.php">My Account</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">

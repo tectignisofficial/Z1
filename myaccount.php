@@ -1,3 +1,57 @@
+<?php
+session_start();
+if(!isset($_SESSION['customerid'])) 
+{
+ header("Location:login.php"); 
+}
+include('include/config.php');
+
+
+$data=mysqli_query($conn,"SELECT * FROM `customers` WHERE id='".$_SESSION['customerid']."'");
+$row=mysqli_fetch_array($data);
+if(isset($_POST['update'])){
+
+
+    $FullName=$_POST['customerName'];
+    $customerPhone=$_POST['customerPhone'];
+
+
+    $sql=mysqli_query($conn, "UPDATE `customers` SET `name`='$FullName',`phone`='$customerPhone' WHERE id='".$_SESSION['customerid']."'");
+      if($sql==1){
+        echo '<script>alert("sucessfully submitted");</script>';
+        header('location:myaccount.php');
+    }else{
+        echo '<script>alert("something went wrong");</script>';
+    }
+
+
+
+}
+
+if(isset($_POST["changepassword"])){
+	$password=$_POST["confirmpassword"];
+	$newpassword=$_POST["newPassword"];
+
+
+	$sql = mysqli_query($conn,"SELECT * FROM customers WHERE id='".$_SESSION['customerid']."'") ;
+		$row=mysqli_fetch_assoc($sql); 
+		$verify=password_verify($password,$row['password']);
+	
+	$hashpassword=password_hash($newpassword,PASSWORD_BCRYPT);
+
+		if($verify==1){
+			$query=mysqli_query($conn,"UPDATE `customers` SET `password`='$hashpassword' WHERE id='".$_SESSION['customerid']."'");
+      if($query){
+        session_destroy();   // function that Destroys Session 
+        echo "<script>alert('Password Changed Successfully'),window.location='login.php';</script>";
+      }
+		}
+		else{
+			echo"<script>alert('Invalid Password');</script>";
+		}
+	
+	}
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -43,8 +97,8 @@
                     <div class="row align-items-center no-gutters">
                         <div class="col-xl-3 col-lg-3 col-md-12">
                             <div class="d-single-info">
-                                <p class="user-name">Hello <span class="font-weight-600">yourmail@info</span></p>
-                                <p>(not yourmail@info? <a class="font-weight-600" href="#">Log Out</a>)</p>
+                                <p class="user-name">Hello <span class="font-weight-600"><?php echo $row['name'] ?></span></p>
+                             
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-12">
@@ -78,7 +132,7 @@
               
                         <li><a class="nav-link" data-toggle="tab" href="#address">Addresses</a></li>
                         <li><a class="nav-link" data-toggle="tab" href="#changepassword">Change Password</a></li>
-                        <li><a class="nav-link" href="./login.html">logout</a></li>
+                        <li><a class="nav-link" href="logout.php">logout</a></li>
                     </ul>
                     <!-- End Nav tabs -->
                 </div>
@@ -89,11 +143,18 @@
                         <!-- Dashboard -->
                         <div id="changepassword" class="tab-pane fade">
                             <h3>Change Password</h3>
-                            <p>From your account dashboard. you can easily check &amp; view your
-                                <a class="text-decoration-underline" href="#">recent orders</a>, manage your
-                                <a class="text-decoration-underline" href="#">shipping and billing addresses</a> and
-                                <a class="text-decoration-underline" href="#">edit your password and account details.</a>
-                            </p>
+                            <form method="POST">
+                             <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-firstname">Current Password <span class="required-f">*</span></label>
+                                                <input name="confirmpassword" value="" id="input-firstname" class="form-control" type="text">
+                                            </div>
+                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-email">New Password<span class="required-f">*</span></label>
+                                                <input name="newPassword" value="" id="input-email" class="form-control" type="text">
+                                            </div>                                    <button type="submit" name="changepassword" class="btn margin-15px-top btn-primary">Save</button>
+</form>
+                                        </div>
                         </div>
                         <!-- End Dashboard -->
 
@@ -135,38 +196,6 @@
                         </div>
                         <!-- End Orders -->
 
-                        <!-- Downloads -->
-                        <div id="downloads" class="product-order tab-pane fade">
-                            <h3>Downloads</h3>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Downloads remaining</th>
-                                            <th>Expires</th>
-                                            <th>Download</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Minerva Dress black</td>
-                                            <td>July 22, 2018</td>
-                                            <td>never</td>
-                                            <td><a class="view" href="#">Click Here To Download Your File</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sueded Cotton Pant in Khaki</td>
-                                            <td>Dec 17, 2018</td>
-                                            <td>never</td>
-                                            <td><a class="view" href="#">Click Here To Download Your File</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- End Downloads -->
-
                         <!-- Address -->
                         <div id="address" class="address tab-pane">
                             <p class="xs-fon-13 margin-10px-bottom">The following addresses will be used on the checkout page by default.</p>
@@ -180,46 +209,34 @@
                         <div id="account-details" class="tab-pane fade active show">
                             <h3>Account details </h3>
                             <div class="account-login-form bg-light-gray padding-20px-all">
-                                <form>
+                                <form method="POST">
                                     <fieldset>
 
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-firstname">First Name <span class="required-f">*</span></label>
-                                                <input name="firstname" value="" id="input-firstname" class="form-control" type="text">
+                                                <label for="input-firstname">Name <span class="required-f">*</span></label>
+                                                <input name="customerName" value="<?php echo $row['name'] ?>" id="input-firstname" class="form-control" type="text">
                                             </div>
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-lastname">Last Name <span class="required-f">*</span></label>
-                                                <input name="lastname" value="" id="input-lastname" class="form-control" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-email">E-Mail <span class="required-f">*</span></label>
-                                                <input name="email" value="" id="input-email" class="form-control" type="email">
+                                                <input readonly name="customerEmail" value="<?php echo $row['email'] ?>" id="input-email" class="form-control" type="email">
                                             </div>
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-password">Password <span class="required-f">*</span></label>
-                                                <input name="password" value="" id="input-password" class="form-control" type="password">
-                                            </div>
+                                            
                                         </div>
                                         <div class="row">
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-telephone">Telephone <span class="required-f">*</span></label>
-                                                <input name="telephone" value="" id="input-telephone" class="form-control" type="tel">
+                                                <input name="customerPhone" value="<?php echo $row['phone'] ?>" id="input-telephone" class="form-control" type="tel">
                                             </div>
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label>Birthdate <span class="required-f">*</span></label>
-                                                <input name="birthdate" max="3000-12-31" min="1000-01-01" class="form-control" type="date">
-                                            </div>
+                                          
                                         </div>
-
+                                      
                                         <div class="row">
 
                                         </div>
                                     </fieldset>
 
-                                    <button type="submit" class="btn margin-15px-top btn-primary">Save</button>
+                                    <button type="submit" name="changepassword"class="btn margin-15px-top btn-primary">Save</button>
                                 </form>
 
                             </div>
