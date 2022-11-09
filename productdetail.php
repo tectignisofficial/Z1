@@ -77,7 +77,9 @@ else{
                     </div>
                 </div>
                 <!--End Breadcrumb-->
+<?php
 
+?>
                 <div id="ProductSection-product-template" class="product-template__container prstyle1 container">
                     <!--product-single-->
                     <div class="product-single">

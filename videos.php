@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('include/config.php');
+$sql=mysqli_query($conn,"select video from products");
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -37,9 +42,11 @@
         <div class="container">
         
             <div class="row">
-            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><iframe width="360" height="240" src="https://www.youtube.com/embed/shvune2bNhg" title="K2 & K6 Knee Brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><iframe width="360" height="240" src="https://www.youtube.com/embed/h0oStRoxUqw" title="K4 knee brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><iframe width="360" height="240" src="https://www.youtube.com/embed/rhrc2HZG8hU" title="K2 Knee brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <?php
+                while($arr=mysqli_fetch_array($sql)){
+                ?>
+            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><iframe width="360" height="240" src="https://www.youtube.com/embed/<?php echo $arr['video']; ?>" title="K2 & K6 Knee Brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+               <?php } ?>
             </div>
          
             
