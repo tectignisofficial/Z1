@@ -73,11 +73,11 @@
                 <div class="col-xl-2 col-lg-2 col-md-12 md-margin-20px-bottom">
                     <!-- Nav tabs -->
                     <ul class="nav flex-column dashboard-list" role="tablist">
-                        <li><a class="nav-link active" data-toggle="tab" href="#dashboard">Dashboard</a></li>
+                        <li><a class="nav-link active" data-toggle="tab" href="#account-details">Account details</a></li>
                         <li><a class="nav-link" data-toggle="tab" href="#orders">Orders</a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#downloads">Downloads</a></li>
+              
                         <li><a class="nav-link" data-toggle="tab" href="#address">Addresses</a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#account-details">Account details</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#changepassword">Change Password</a></li>
                         <li><a class="nav-link" href="./login.html">logout</a></li>
                     </ul>
                     <!-- End Nav tabs -->
@@ -87,8 +87,8 @@
                     <!-- Tab panes -->
                     <div class="tab-content dashboard-content padding-30px-all md-padding-15px-all" style="">
                         <!-- Dashboard -->
-                        <div id="dashboard" class="tab-pane fade active show">
-                            <h3>Dashboard </h3>
+                        <div id="changepassword" class="tab-pane fade">
+                            <h3>Change Password</h3>
                             <p>From your account dashboard. you can easily check &amp; view your
                                 <a class="text-decoration-underline" href="#">recent orders</a>, manage your
                                 <a class="text-decoration-underline" href="#">shipping and billing addresses</a> and
@@ -177,26 +177,12 @@
                         <!-- End Address -->
 
                         <!-- Account Details -->
-                        <div id="account-details" class="tab-pane fade">
+                        <div id="account-details" class="tab-pane fade active show">
                             <h3>Account details </h3>
                             <div class="account-login-form bg-light-gray padding-20px-all">
                                 <form>
                                     <fieldset>
-                                        <p>Already have an account? <a href="login.html"> Log in instead!</a></p>
 
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="form-group margin-15px-top col-md-12 col-lg-12 col-xl-12">
-                                                    <label class="control-label padding-10px-right"><strong>Title</strong></label>
-                                                    <label class="radio-inline">
-                                                        <input name="Mr" value="1" checked="checked" type="radio" class="padding-10px-right"> Mr. &nbsp;
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input name="Mrs" value="0" type="radio" class="padding-10px-right"> Mrs.
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-firstname">First Name <span class="required-f">*</span></label>
@@ -229,20 +215,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-12 col-lg-12 col-xl-12 required">
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" class="form-check-input" value="">Receive offers from our partners
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" class="form-check-input" value="">Sign up for our newsletter 
-                                                    </label>
-                                                    <p>You may unsubscribe at any moment. For that purpose, please find our contact info in the legal notice.</p><br>
 
-                                                </div>
-                                            </div>
                                         </div>
                                     </fieldset>
 

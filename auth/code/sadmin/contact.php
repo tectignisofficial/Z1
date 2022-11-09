@@ -140,9 +140,9 @@
                                                 <th>NAME</th>
                                                 <th>EMAIL</th>
                                                 <th>PHONE</th>
-                                                <th>CREATED AT</th>
-                                                <th>STATUS</th>
-                                                <th>OPERATIONS</th>
+                                                <th>SUBJECT</th>
+                                                <th>MESSAGE</th>
+                                                <th>ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody>

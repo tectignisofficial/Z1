@@ -5,11 +5,23 @@ if(isset($_POST['register'])){
 
     $FullName=$_POST['customerName'];
     $customerPhone=$_POST['customerPhone'];
-    $customerEail=$_POST['customerPhone'];
+    $customerEmail=$_POST['customerEmail'];
+    $customerPassword=$_POST['customerPassword'];
+
+    $password=password_hash($customerPassword,PASSWORD_BCRYPT);
+    $sql=mysqli_query($conn, "INSERT INTO `customers`(`name`, `phone`, `email`, `password`) VALUES ('$FullName','$customerPhone','$customerEmail','$password')");
+
+    if($sql==1){
+        echo '<script>alert("sucessfully submitted");</script>';
+        header('location:login.php');
+    }else{
+        echo '<script>alert("something went wrong");</script>';
+    }
 
 }
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <!-- belle/register.html   11 Nov 2019 12:22:27 GMT -->
@@ -90,7 +102,7 @@ if(isset($_POST['register'])){
                           </div>
                           <div class="row">
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" class="btn mb-3" value="Create">
+                                <input type="submit" class="btn mb-3" value="Create" name="register">
                             </div>
                          </div>
                      </form>

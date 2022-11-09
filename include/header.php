@@ -39,7 +39,7 @@
     	<div class="container-fluid">        
             <div class="row align-items-center">
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.html">
+                    <a href="index.php">
                     	<img src="assets/images/logo.png" alt="Z1" title="Z1" />
                     </a>
                 </div>
@@ -62,6 +62,8 @@
                             </li>
                             <li class="lvl1 parent megamenu"><a href="blogs.php">Blogs <i class="anm anm-angle-down-l"><?= $page == 'blogs.php' ? 'active':'' ?></i></a>
                             </li>
+                            <li class="lvl1 parent megamenu"><a href="reviews.php">Reviews <i class="anm anm-angle-down-l"><?= $page == 'reviews.php' ? 'active':'' ?></i></a>
+                            </li>
                             <li class="lvl1 parent megamenu"><a href="videos.php">Videos <i class="anm anm-angle-down-l"><?= $page == 'video.php' ? 'active':'' ?></i></a>
                             </li>
                             <li class="lvl1"><a href="shop.php"><b>Shop Now!</b> <i class="anm anm-angle-down-l"><?= $page == 'shop.php' ? 'active':'' ?></i></a></li>
@@ -72,7 +74,7 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 	<div class="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="assets/images/logo.png" alt="Z1" title="Z1" />
                         </a>
                     </div>
@@ -87,69 +89,6 @@
                             $items_in_cart = is_array($_SESSION['shopping_cart']) ? count($_SESSION['shopping_cart']) : 0; echo $items_in_cart; }
                             ?></span>
                         </a>
-                        <!--Minicart Popup-->
-                        <!-- <div id="header-cart" class="block block-cart">
-                        	<ul class="mini-products-list">
-                                <li class="item">
-                                	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/" alt="3/4 Sleeve Kimono Dress" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                    	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.php">K2 Comfortline Knee Orthosis</a>
-                                        <div class="variant-cart">XL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                            	<span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="priceRow">
-                                        	<div class="product-price">
-                                            	<span class="money">$59.00</span>
-                                            </div>
-                                         </div>
-									</div>
-                                </li>
-                                <li class="item">
-                                	<a class="product-image" href="#">
-                                    	<img src="assets/images/product-images/" alt="Elastic Waist Dress - Black / Small" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                    	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">K2 Comfortline Knee Orthosis</a>
-                                        <div class="variant-cart">XXL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                            	<span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                       	<div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">$99.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="total">
-                            	<div class="total-in">
-                                	<span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
-                                </div>
-                                 <div class="buttonSet text-center">
-                                    <a href="cart.php" class="btn btn-secondary btn--small">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!--EndMinicart Popup-->
                     </div>
                 </div>
         	</div>
@@ -165,7 +104,8 @@
             <li class="lvl1 parent megamenu"><a href="about-us.php">About us </a>
             <li class="lvl1 parent megamenu"><a href="contact-us.php">Contact us </a>
             <li class="lvl1 parent megamenu"><a href="blogs.php">Blogs </a>
-            <li class="lvl1 parent megamenu"><a href="video.php">Videos </a>
+            <li class="lvl1 parent megamenu"><a href="reviews.php">Reviews</a>
+            <li class="lvl1 parent megamenu"><a href="videos.php">Videos </a>
             <li class="lvl1"><a href="shop.php"><b>Shop Now!</b></a></li>
           <ul>
       </ul>

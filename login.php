@@ -1,3 +1,30 @@
+<?php
+include('include/config.php');
+if(isset($_POST['login'])){
+
+
+    $customerEmail=$_POST['customerEmail'];
+    $customerPassword=$_POST['customerPassword'];
+
+    $sql=mysqli_query($conn, "SELECT * FROM `customers` WHERE email='$customerEmail'");
+
+  if(mysqli_num_rows($sql)>0){
+		$row=mysqli_fetch_assoc($sql); 
+		$verify=password_verify($customerPassword,$row['password']);
+
+	 if($verify==1){
+	  $_SESSION['customerid']=$row['id'];
+       header('location:myaccount.php');
+
+     }else{
+         header('location:login.php');
+        
+     }
+    }
+}
+      ?>
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -39,24 +66,24 @@
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
                 	<div class="">
-                       <form method="post" action="#" id="CustomerLoginForm" accept-charset="UTF-8" class="contact-form">	
+                       <form method="post" id="CustomerLoginForm" accept-charset="UTF-8" class="contact-form">	
                           <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerEmail">Email</label>
-                                    <input type="email" name="customer[email]" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
+                                    <input type="email" name="customerEmail" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customer[password]" placeholder="" id="CustomerPassword" class="">                        	
+                                    <input type="password" value="" name="customerPassword" placeholder="" id="CustomerPassword" class="">                        	
                                 </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" class="btn mb-3" value="Sign In">
+                                <input type="submit" name="login" class="btn mb-3" value="Sign In">
                                 <p class="mb-4">
 									<a href="#" id="RecoverPassword">Forgot your password?</a> &nbsp; | &nbsp;
 								    <a href="register.php" id="customer_register_link">Create account</a>
