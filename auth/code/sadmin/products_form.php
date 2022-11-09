@@ -21,28 +21,36 @@ if(isset($_POST['submit'])){
     $knee=$_POST['knee'] ?? null;
     $label=$_POST['label'] ?? null;
     $tname=$_POST['tname'] ?? null;
-$loc="image/product_Image/".$myfile;
-move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
-move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc);
-move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc);
+$loc="image/product_Image/";
+// move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
+move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
+move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
 
-
+$images_name='';
+foreach ($_FILES["myfile"]["error"] as $key => $error) {
+    if ($error == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
+        $name = $_FILES["myfile"]["name"][$key];
+        move_uploaded_file($tmp_name, $loc.$name);
+        $images_name =$images_name.",".$name;
+    }
+}
 // foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
 
-    $myfile = $_FILES['myfile']['name'][$key];
-        $file_size =$_FILES['myfile']['size'][$key];
-        $file_tmp =$_FILES['myfile']['tmp_name'][$key];
-        $file_type=$_FILES['myfile']['type'][$key]; 
+    // $myfile = $_FILES['myfile']['name'][$key];
+    //     $file_size =$_FILES['myfile']['size'][$key];
+    //     $file_tmp =$_FILES['myfile']['tmp_name'][$key];
+    //     $file_type=$_FILES['myfile']['type'][$key]; 
 if($attrname1 != ''){
     foreach($attrname1 as $inde => $naames){
         $s_attrname = $naames;
         $s_attrVal=$attrval1[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$myfile','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+        $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$images_name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
     }
 }
 else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$myfile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$images_name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
 }
 
 if($sql==1){
