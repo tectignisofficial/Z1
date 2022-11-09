@@ -67,7 +67,7 @@
                             data-feather="phone"></i><span class="menu-title text-truncate"
                             data-i18n="File Manager">Contact</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="credit-card"></i><span
                             class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Payments</span></a>
                     <ul class="menu-content">
 
@@ -97,7 +97,7 @@
                 </li>
 
                 <li><a class="d-flex align-items-center" href="currency.php"><i
-                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-feather="dollar-sign"></i><span class="menu-item text-truncate"
                                     data-i18n="Account">Currency</span></a>
                         </li>
 
