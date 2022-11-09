@@ -1,16 +1,3 @@
-<?php 
-include('../../../include/config.php');
-
-if(isset($_GET['delid'])){
-    $id=mysqli_real_escape_string($conn,$_GET['delid']);
-    $sql=mysqli_query($conn,"delete from contact where id='$id'");
-    if($sql=1){
-      header("location:contact.php");
-    }
-    else{ echo "<script>alert('Failed to Delete')</script>"; }
-  }
-?>
-
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -79,13 +66,35 @@ if(isset($_GET['delid'])){
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
+
     <div class="app-content content ">
+
+     <!-- Edit Modal -->
+     <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title"> View Product</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body body1">
+        
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                        <li class="breadcrumb-item active">Contact us</li>
+                        <li class="breadcrumb-item active">Currency</li>
                     </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
@@ -95,7 +104,7 @@ if(isset($_GET['delid'])){
             </div>
             <div class="content-body">
                 <!-- Responsive Datatable -->
-                <section id="responsive-datatable"> 
+                <section id="responsive-datatable">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
@@ -114,39 +123,34 @@ if(isset($_GET['delid'])){
                                     <table class="dt-responsive table">
                                         <thead>
                                             <tr>                                                
-                                                <th>ID</th>
-                                                <th>NAME</th>
-                                                <th>EMAIL</th>
-                                                <th>PHONE</th>
-                                                <th>SUBJECT</th>
-                                                <th>MESSAGE</th>
+                                                <th>SR NO.</th>
+                                                <th>CURRENCY NAME</th>
+                                                <th>CURRENCY ICON</th>
+                                                <th>CONVERSION RATE</th>
+                                                <th>DEFAULT STATUS</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM contact");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
                                             <tr>
-                                                <td><?php echo $count;?></td>
-                                                <td><?php echo $row['name'];?></td>
-                                                <td><?php echo $row['email'];?></td>
-                                                <td><?php echo $row['phone'];?></td>
-                                                <td><?php echo $row['subject'];?></td>
-                                                <td><?php echo $row['message'];?></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                                               
                                                 <td>
-                                                <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href="contact.php?delid=<?php echo $row['id']; ?>"
-                                                        onclick="return checkDelete()"
-                                                        class="btn btn-primary btn-rounded btn-icon"
-                                                        data-id="=<?php echo $row['id']; ?>">
-                                                        <i data-feather="trash-2"></i>
-                                                    </a>
+                                                <button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
+                                                                    data-feather="edit"></i></button>
+
+                                                    <a href=""><button
+                                                                type="button"
+                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
+                                                                    data-feather="trash"></i></button></a>
+
                                                 </td>
                                             </tr>
-                                            <?php $count++;   } ?>
                                             </tboday>
 
                                     </table>
@@ -199,31 +203,26 @@ if(isset($_GET['delid'])){
             }
         })
     </script>
-    <script>
-        $(document).ready(function () {
-            $('.delbtn').click(function (e) {
-                e.preventDefault();
-                let delid = $(this).data('id');
-                swal({
-                        title: "Are you sure?",
-                        text: "Once deleted, you will not be able to recover this imaginary file!",
-                        icon: "warning",
-                        buttons: true,
-                        dangerMode: true,
-                    })
-                    .then((willDelete) => {
-                        if (willDelete) {
-                            swal("Poof! Your imaginary file has been deleted!", {
-                                icon: "success",
-                            });
-                            window.location.href = "contact.php?delid" + delid;
-                        } else {
-                            swal("Your imaginary file is safe!");
-                        }
-                    });
-            })
-        });
-    </script>
+
+<script>
+   $(document).ready(function(){
+         $('.btnmod1').click(function(){
+           let vid = $(this).data('id');
+
+           $.ajax({
+           url: 'currency.php',
+           type: 'post',
+           data: {vid: vid},
+           success: function(response1){ 
+             $('.body1').html(response1);
+             $('#myModal').modal('show'); 
+           }
+         });
+         });
+
+         });
+ </script>
+   
 </body>
 <!-- END: Body-->
 

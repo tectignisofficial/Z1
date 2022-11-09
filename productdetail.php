@@ -1,3 +1,4 @@
+<?php $baseurl= "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>
 <?php
 session_start();
 include('include/config.php');
@@ -374,30 +375,31 @@ height:2642px !important;
                                     </div> -->
                                     <div class="display-table-cell text-right">
                                         <div class="social-sharing">
-                                            <a target="_blank" href="#"
+                                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $baseurl; ?>"
                                                 class="btn btn--small btn--secondary btn--share share-facebook"
                                                 title="Share on Facebook">
                                                 <i class="fa fa-facebook-square" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Share</span>
                                             </a>
-                                            <a target="_blank" href="#"
+                                           
+                                            <a target="_blank" href="https://twitter.com/share?url=<?php echo $baseurl; ?>"
                                                 class="btn btn--small btn--secondary btn--share share-twitter"
                                                 title="Tweet on Twitter">
                                                 <i class="fa fa-twitter" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Tweet</span>
                                             </a>
-                                            <a href="#" title="Share on google+"
+                                            <a href="https://plus.google.com/share?url=<?php echo $baseurl; ?>" title="Share on google+"
                                                 class="btn btn--small btn--secondary btn--share">
                                                 <i class="fa fa-google-plus" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Google+</span>
                                             </a>
-                                            <a target="_blank" href="#"
+                                            <a target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo $baseurl; ?>"
                                                 class="btn btn--small btn--secondary btn--share share-pinterest"
                                                 title="Pin on Pinterest">
                                                 <i class="fa fa-pinterest" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Pin it</span>
                                             </a>
-                                            <a href="#" class="btn btn--small btn--secondary btn--share share-pinterest"
+                                            <a href="mailto:?subject=<?php echo $baseurl; ?>" class="btn btn--small btn--secondary btn--share share-pinterest"
                                                 title="Share by Email" target="_blank">
                                                 <i class="fa fa-envelope" aria-hidden="true"></i> <span
                                                     class="share-title" aria-hidden="true">Email</span>
@@ -806,26 +808,33 @@ height:2642px !important;
 <div class="tab_container">
     <div id="tab1" class="tab_content grid-products">
         <div class="productSlider">
+        <?php
+                                            $sql=mysqli_query($conn,"select * from products limit 4");
+                                            while($arr=mysqli_fetch_array($sql)){
+                                            ?>
             <div class="col-12 item">
                 <!-- start product image -->
                 <div class="product-image">
                     <!-- start product image -->
-                    <a href="short-description.html">
+                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                         <!-- image -->
-                        <img class="primary blur-up lazyload"
-                            data-src="assets/images/product-images/product-image3.jpg"
-                            src="assets/images/product-images/product-image3.jpg"
-                            alt="image" title="product">
-                        <!-- End image -->
-                        <!-- Hover image -->
-                        <img class="hover blur-up lazyload"
-                            data-src="assets/images/product-images/product-image3-1.jpg"
-                            src="assets/images/product-images/product-image3-1.jpg"
-                            alt="image" title="product">
-                        <!-- End hover image -->
+                        <?php
+                                                $image = $arr['image'];
+                                                $image = explode(',',$image);
+                                                foreach($image AS $imagess){
+                                                }
+
+                                                ?>
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" alt="image" title="product">
+                                            <!-- End image -->
+                                            <!-- Hover image -->
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
+                                            <!-- End hover image -->
                         <!-- product label -->
-                        <div class="product-labels rectangular"><span
-                                class="lbl pr-label2">Hot</span></div>
+                        <?php $label=$arr['label'];
+                                            if($label!=''){ ?>
+                                            <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
+                                            <?php } ?>
                         <!-- End product label -->
                     </a>
                     <!-- end product image -->
@@ -837,7 +846,7 @@ height:2642px !important;
                             tabindex="0">Add To Cart</button>
                     </form>
                     <div class="button-set">
-                        <a href="javascript:void(0)" title="Quick View"
+                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>" title="Quick View"
                             class="quick-view-popup quick-view" data-toggle="modal"
                             data-target="#content_quickview">
                             <i class="icon anm anm-search-plus-r"></i>
@@ -874,76 +883,7 @@ height:2642px !important;
                 </div>
                 <!-- End product details -->
             </div>
-            <div class="col-12 item">
-                <!-- start product image -->
-                <div class="product-image">
-                    <!-- start product image -->
-                    <a href="short-description.html">
-                        <!-- image -->
-                        <img class="primary blur-up lazyload"
-                            data-src="assets/images/product-images/product-image4.jpg"
-                            src="assets/images/product-images/product-image4.jpg"
-                            alt="image" title="product" />
-                        <!-- End image -->
-                        <!-- Hover image -->
-                        <img class="hover blur-up lazyload"
-                            data-src="assets/images/product-images/product-image4-1.jpg"
-                            src="assets/images/product-images/product-image4-1.jpg"
-                            alt="image" title="product" />
-                        <!-- End hover image -->
-                        <!-- product label -->
-                        <div class="product-labels"><span
-                                class="lbl on-sale">Sale</span></div>
-                        <!-- End product label -->
-                    </a>
-                    <!-- end product image -->
-
-                    <!-- Start product button -->
-                    <form class="variants add" action="#"
-                        onclick="window.location.href='cart.html'" method="post">
-                        <button class="btn btn-addto-cart" type="button"
-                            tabindex="0">Add To Cart</button>
-                    </form>
-                    <div class="button-set">
-                        <a href="javascript:void(0)" title="Quick View"
-                            class="quick-view-popup quick-view" data-toggle="modal"
-                            data-target="#content_quickview">
-                            <i class="icon anm anm-search-plus-r"></i>
-                        </a>
-
-
-                    </div>
-                    <!-- end product button -->
-                </div>
-                <!-- end product image -->
-
-                <!--start product details -->
-                <div class="product-details text-center">
-                    <!-- product name -->
-                    <div class="product-name">
-                        <a href="short-description.html">Cape Dress</a>
-                    </div>
-                    <!-- End product name -->
-                    <!-- product price -->
-                    <div class="product-price">
-                        <span class="old-price">$900.00</span>
-                        <span class="price">$788.00</span>
-                    </div>
-                    <!-- End product price -->
-
-                    <div class="product-review">
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star-o"></i>
-                        <i class="font-13 fa fa-star-o"></i>
-                    </div>
-                    <!-- Variant -->
-
-                    <!-- End Variant -->
-                </div>
-                <!-- End product details -->
-            </div>
+            <?php } ?>
 
 
 
@@ -1383,7 +1323,7 @@ height:2642px !important;
                 type:'post',
                 url:'auth/code/sadmin/api.php',
                 data:{size:size,
-                    productName:<?php echo $id; ?>},
+                    productName:<?php echo $productName; ?>},
                 success:function(response){
                     $("#sizequa").html(response);
                 }
