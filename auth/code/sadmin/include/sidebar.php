@@ -83,6 +83,11 @@
                     </ul>
                 </li>
 
+                <li><a class="d-flex align-items-center" href="currency.php"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Account">Currency</span></a>
+                        </li>
+
             </ul>
         </div>
     </div>
