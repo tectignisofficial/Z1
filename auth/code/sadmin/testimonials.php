@@ -106,20 +106,18 @@
                                     <table class="dt-responsive table">
                                         <thead>
                                             <tr>
-                                                <th width="10px" class="text-left no-sort sorting_disabled" title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>" rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input class="table-check-all" data-set=".dataTable .checkboxes" type="checkbox"></th>
-												<th>ID</th>
-                                                <th>IMAGE</th>
+												<th>SR NO.</th>
                                                 <th>NAME</th>
-                                                <th>CREATED AT</th>
-                                                <th>OPERATIONS</th>
+                                                <th>COMPANY NAME</th>
+                                                <th>MESSAGE</th>
+                                                <th>ACTION</th>
                                             </tr>
                                         </thead>
                                             <tr>
-                                                <td width="10px" class="text-left no-sort sorting_disabled" title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>" rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input class="table-check-all" data-set=".dataTable .checkboxes" type="checkbox"></td>
-                                                <td>1</td>
-                                                <td class="  column-key-image"><img src="http://ecommerce.sachinenterprise.in/storage/testimonials/4-150x150.jpg" width="70" alt="Image"></td>
-												<td>abc eee</td>
-                                                <td>03-05-2022</td>
+                                                <td></td>
+                                                <td></td>
+												<td></td>
+                                                <td></td>
                                                 <td><button type="button" class="btn btn-primary"><i data-feather="edit"></i></button>
 												<button type="button" class="btn btn-danger"><i data-feather="trash-2"></i></button></td>
                                             </tr>

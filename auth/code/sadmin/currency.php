@@ -171,10 +171,10 @@
                                                 <td></td>
                                                 <td></td>                                               
                                                 <td>
-                                                <button
+                                                <a href=""><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
-                                                                    data-feather="edit"></i></button>
+                                                                    data-feather="edit"></i></button></a>
 
                                                     <a href=""><button
                                                                 type="button"
