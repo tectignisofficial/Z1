@@ -7642,3 +7642,70 @@ body.home15-funiture-template {
   transition: filter 400ms, -webkit-filter 400ms;
   -webkit-transition: filter 400ms, -webkit-filter 400ms;
 }
+
+.dashboard-upper-info {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  margin-bottom: 40px;
+}
+
+.dashboard-upper-info p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.dashboard-upper-info .d-single-info {
+  border-right: 1px solid #ebebeb;
+  padding: 30px 20px;
+}
+
+.dashboard-upper-info [class*="col-"]:last-child .d-single-info {
+  border-right: 0;
+}
+
+.dashboard-list li a {
+  border-bottom: 1px solid #ebebeb;
+  color: #031b41;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.dashboard-list li a.active,
+.dashboard-list li a:hover {
+  color: #fff;
+  background-color: #031b41;
+}
+
+.dashboard-content {
+  border: 1px solid #ebebeb;
+  padding: 20px;
+}
+
+.dashboard-content h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 0;
+  letter-spacing: 0.8px;
+}
+
+.dashboard-content p {
+  margin: 0;
+}
+
+.dashboard-content .billing-address {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 15px 0 10px;
+}
+
+.dashboard-content .address .view:hover {
+  text-decoration: underline;
+}
