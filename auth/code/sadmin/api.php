@@ -17,4 +17,13 @@ if(isset($_GET['did'])){
     header('location:productattributes.php');
   }
 }
+
+if(isset($_POST['size'])){
+  $size=$_POST['size'];
+  $productName=$_POST['productName'];
+  $sql=mysqli_query($conn,"select * from products where id='$productName'");
+  $arr=mysqli_fetch_array($sql);
+  $stock=$arr['stock_status'];
+  echo '<p style="font-size:15px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"></i>'.$arr['stock_status'].' in Stock</p> ';
+}
 ?>

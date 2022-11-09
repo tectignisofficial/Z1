@@ -33,6 +33,7 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         $name = $_FILES["myfile"]["name"][$key];
         move_uploaded_file($tmp_name, $loc.$name);
         $images_name =$images_name.",".$name;
+        
     }
 }
 // foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){

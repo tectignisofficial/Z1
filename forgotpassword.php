@@ -1,27 +1,62 @@
 <?php
 include('include/config.php');
 session_start();
-if(isset($_POST['login'])){
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+if(isset($_POST['submit'])){
 
 
     $customerEmail=$_POST['customerEmail'];
-    $customerPassword=$_POST['customerPassword'];
+    $pass= rand(100000, 999999);
 
-    $sql=mysqli_query($conn, "SELECT * FROM `customers` WHERE email='$customerEmail' and email_verify='1'");
+   $to=$customerEmail;
+   $sub="Password";
+ 
+ $mail = new PHPMailer(true);
+ try {
+  //Server settings
+  $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+  $mail->isSMTP();                             
+  $mail->Host       = 'smtp-relay.sendinblue.com';    
+  $mail->SMTPAuth   = true;                           
+  $mail->Username   = 'tectignisitsolutions@gmail.com';           
+  $mail->Password   = 'Om2rkzEaA7N5Mcf4';                          
+  $mail->SMTPSecure = 'TLS';             
+  $mail->Port       = '587';                            
 
-  if(mysqli_num_rows($sql)>0){
-		$row=mysqli_fetch_assoc($sql); 
-		$verify=password_verify($customerPassword,$row['password']);
+  //Recipients
+  $mail->setFrom('naiduvedant@gmail.com', 'Z1 Knee Braces');
+  $mail->addAddress($customerEmail);    
+  
+  //Content
+  $mail->isHTML(true);                               
+  $mail->Subject = 'Password';
+  $mail->Body    = 'Login New Password  '.$customerEmail.' and '.$pass;
+  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-	 if($verify==1){
-	  $_SESSION['customerid']=$row['id'];
-       header('location:myaccount.php');
+  if($mail->send()){
+    $passwordhash=password_hash($pass,PASSWORD_BCRYPT);
 
-     }else{
-         header('location:login.php');
-        
-     }
+  $sql=mysqli_query($conn,"UPDATE `customers` SET `password`='$passwordhash' where email='$customerEmail'");
+    if($sql=1){
+      header("location:login.php");
     }
+    else{
+      echo "<script>alert('Something Wrong');</script>";
+    }
+  
+  }
+  
+} catch (Exception $e) {
+  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
 }
       ?>
 
@@ -58,7 +93,7 @@ if(isset($_POST['login'])){
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Login</h1></div>
+        		<div class="wrapper"><h1 class="page-width">Forgot Password</h1></div>
       		</div>
 		</div>
         <!--End Page Title-->
@@ -75,18 +110,13 @@ if(isset($_POST['login'])){
                                     <input type="email" name="customerEmail" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="">
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group">
-                                    <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customerPassword" placeholder="" id="CustomerPassword" class="">                        	
-                                </div>
-                            </div>
+                          
                           </div>
                           <div class="row">
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" name="login" class="btn mb-3" value="Sign In">
+                                <input type="submit" name="submit" class="btn mb-3" value="Submit">
                                 <p class="mb-4">
-									<a href="#" id="RecoverPassword">Forgot your password?</a> &nbsp; | &nbsp;
+									<a href="login.php" id="RecoverPassword">Login</a> &nbsp; | &nbsp;
 								    <a href="register.php" id="customer_register_link">Create account</a>
                                 </p>
                             </div>
