@@ -80,7 +80,7 @@ if(isset($_GET['delid'])){
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a>
                         </li>
-                        <li class="breadcrumb-item active">Contacts</li>
+                        <li class="breadcrumb-item active">Newsletters</li>
                     </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
@@ -95,25 +95,7 @@ if(isset($_GET['delid'])){
                         <div class="col-12">
                             <div class="card">
 
-                                <div class="card-header border-bottom row-12">
-
-                                    <div class="col-1">
-                                        <div class="btn-group">
-                                            <button type="button"
-                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
-                                                data-bs-toggle="dropdown" aria-expanded="true">
-                                                Bulk actions
-                                            </button>
-                                            <ul class="dropdown-menu "
-                                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
-                                                data-popper-placement="bottom-start">
-                                                <li><a class="dropdown-item" href="#">bulk changes</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="button" class="btn btn-primary">Filters</button></div>
+                                <div class="card-header border-bottom row-12">                                  
                                     <div class="col-2">
                                         <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
                                             <label><input type="search" class="form-control input-sm"
@@ -123,22 +105,9 @@ if(isset($_GET['delid'])){
                                     </div>
                                     <div class="col-4"></div>
                                     <div class="col-1">
-                                        <div class="btn-group">
-                                            <button class="btn btn-info dropdown-toggle" type="button"
-                                                id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <i data-feather="download"></i>Export
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                <a class="dropdown-item" href="#">Option 1</a>
-                                                <a class="dropdown-item" href="#">Option 2</a>
-                                                <a class="dropdown-item" href="#">Option 3</a>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
-                                    <button class="btn btn-info" tabindex="0"
-                                        aria-controls="botble-page-tables-page-table" type="button"><span><i
-                                                data-feather="refresh-cw"></i> reload</span></button>
+                                 
                                 </div>
 
                                 <div class="card-datatable">
@@ -232,31 +201,31 @@ if(isset($_GET['delid'])){
             }
         })
     </script>
-     <script>
-    $(document).ready(function () {
-      $('.delbtn').click(function (e) {
-        e.preventDefault();
-        let delid = $(this).data('id');
-        swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              swal("Poof! Your imaginary file has been deleted!", {
-                icon: "success",
-              });
-              window.location.href = "newsletters.php?delid" + delid;
-            } else {
-              swal("Your imaginary file is safe!");
-            }
-          });
-      })
-    });
-  </script>
+    <script>
+        $(document).ready(function () {
+            $('.delbtn').click(function (e) {
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "newsletters.php?delid" + delid;
+                        } else {
+                            swal("Your imaginary file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
 </body>
 <!-- END: Body-->
 

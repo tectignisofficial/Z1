@@ -1,3 +1,16 @@
+<?php 
+include('../../../include/config.php');
+
+if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from contact where id='$id'");
+    if($sql=1){
+      header("location:contact.php");
+    }
+    else{ echo "<script>alert('Failed to Delete')</script>"; }
+  }
+?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -82,24 +95,6 @@
                             <div class="card">
 
                                 <div class="card-header border-bottom row-12">
-
-                                    <div class="col-1">
-                                        <div class="btn-group">
-                                            <button type="button"
-                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
-                                                data-bs-toggle="dropdown" aria-expanded="true">
-                                                Bulk actions
-                                            </button>
-                                            <ul class="dropdown-menu "
-                                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
-                                                data-popper-placement="bottom-start">
-                                                <li><a class="dropdown-item" href="#">bulk changes</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="button" class="btn btn-primary">Filters</button></div>
                                     <div class="col-2">
                                         <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
                                             <label><input type="search" class="form-control input-sm"
@@ -107,26 +102,8 @@
                                                     aria-controls="botble-page-tables-page-table"></label>
                                         </div>
                                     </div>
-                                    <div class="col-4"></div>
-                                    <div class="col-1">
-                                        <div class="btn-group">
-                                            <button class="btn btn-info dropdown-toggle" type="button"
-                                                id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <i data-feather="download"></i>Export
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                <a class="dropdown-item" href="#">Option 1</a>
-                                                <a class="dropdown-item" href="#">Option 2</a>
-                                                <a class="dropdown-item" href="#">Option 3</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-info" tabindex="0"
-                                        aria-controls="botble-page-tables-page-table" type="button"><span><i
-                                                data-feather="refresh-cw"></i> reload</span></button>
+                                    <div class="col-4"></div>                                  
                                 </div>
-
                                 <div class="card-datatable">
                                     <table class="dt-responsive table">
                                         <thead>
@@ -146,25 +123,34 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php
+                         $sql=mysqli_query($conn,"SELECT * FROM contact");
+                        $count=1;
+                         while($row=mysqli_fetch_array($sql)){ 
+                         ?>
                                             <tr>
                                                 <td width="10px" class="text-left no-sort sorting_disabled"
                                                     title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
                                                     rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
                                                         class="table-check-all" data-set=".dataTable .checkboxes"
                                                         type="checkbox"></td>
-                                                <td>1</td>
-                                                <td>abc eee</td>
-                                                <td>default@uc.in</td>
-                                                <td>0123456789</td>
-                                                <td>03-05-2022</td>
+                                                <td><?php echo $count;?></td>
+                                                <td><?php echo $row['name'];?></td>
+                                                <td><?php echo $row['email'];?></td>
+                                                <td><?php echo $row['phone'];?></td>
+                                                <td><?php echo $row['subject'];?></td>
+                                                <td><?php echo $row['message'];?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-info">Published</button>
+                                                <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        href="contact.php?delid=<?php echo $row['id']; ?>"
+                                                        onclick="return checkDelete()"
+                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        data-id="=<?php echo $row['id']; ?>">
+                                                        <i data-feather="trash-2"></i>
+                                                    </a>
                                                 </td>
-                                                <td><button type="button" class="btn btn-primary"><i
-                                                            data-feather="edit"></i></button>
-                                                    <button type="button" class="btn btn-danger"><i
-                                                            data-feather="trash-2"></i></button></td>
                                             </tr>
+                                            <?php $count++;   } ?>
                                             </tboday>
 
                                     </table>
@@ -201,6 +187,7 @@
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
@@ -215,6 +202,31 @@
                 });
             }
         })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.delbtn').click(function (e) {
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "contact.php?delid" + delid;
+                        } else {
+                            swal("Your imaginary file is safe!");
+                        }
+                    });
+            })
+        });
     </script>
 </body>
 <!-- END: Body-->
