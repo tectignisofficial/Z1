@@ -104,8 +104,8 @@ include('include/config.php');
 
                     <div class="home-text">
                         <h1 style="color:white; font-weight: bold;">
-                            Z1 Knee <br />
-                            Braces
+                            Don't Suffer, get a best friend! <br />
+                            
                         </h1>
                         <h5 style="color:white">The A-Z Comfort with Z1 Braces</h5>
                         <!-- <h3 style="color:white">$199.00</h3> -->
