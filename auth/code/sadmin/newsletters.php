@@ -1,3 +1,7 @@
+<?php 
+include('../../../include/config.php');
+ ?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -137,32 +141,41 @@
                                                     rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
                                                         class="table-check-all" data-set=".dataTable .checkboxes"
                                                         type="checkbox"></th>
-                                                <th>ID</th>
+                                                <th>Sr No.</th>
                                                 <th>EMAIL</th>
-                                                <th>NAME</th>
-                                                <th>CREATED AT</th>
-                                                <th>STATUS</th>
-                                                <th>OPERATIONS</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tr>
-                                            <td width="10px" class="text-left no-sort sorting_disabled"
-                                                title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
-                                                rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
-                                                    class="table-check-all" data-set=".dataTable .checkboxes"
-                                                    type="checkbox"></td>
-                                            <td>1</td>
-                                            <td>default@uc.in</td>
-                                            <td></td>
-                                            <td>03-05-2022</td>
-                                            <td>
-                                                <span class="badge bg-info">Subscribed</span>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-danger"><i
-                                                        data-feather="trash-2"></i></button></td>
-                                        </tr>
+                                        <tbody>
+                                            <?php
+                         $sql=mysqli_query($conn,"SELECT * FROM newsletter");
+                        $count=1;
+                         while($row=mysqli_fetch_array($sql)){ 
+                         ?>
 
+                                            <tr>
+                                                <td width="10px" class="text-left no-sort sorting_disabled"
+                                                    title="<input class=&quot;table-check-all&quot; data-set=&quot;.dataTable .checkboxes&quot; type=&quot;checkbox&quot;>"
+                                                    rowspan="1" colspan="1" style="width: 10px;" aria-label=""><input
+                                                        class="table-check-all" data-set=".dataTable .checkboxes"
+                                                        type="checkbox"></td>
+                                                <td><?php echo $count;?></td>
+                                                <td><?php echo $row['email'];?></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-danger btn-rounded btn-icon delbtn"><i
+                                                            data-feather="trash-2"></i></button>
+
+                                                    <!-- <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        href="contact_us.php?delid=<?php echo $row['id']; ?>"
+                                                        onclick="return checkDelete()"
+                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        data-id="=<?php echo $row['id']; ?>">
+                                                        <i class="fas fa-trash"></i></a> -->
+
+                                                </td>
+                                            </tr>
+                                            <?php $count++; }  ?>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
