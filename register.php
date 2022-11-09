@@ -1,5 +1,18 @@
 <?php
 include('include/config.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+
+
+
+
 if(isset($_POST['register'])){
 
 
@@ -8,8 +21,35 @@ if(isset($_POST['register'])){
     $customerEmail=$_POST['customerEmail'];
     $customerPassword=$_POST['customerPassword'];
 
+     $to=$customerEmail;
+   $sub="Password";
+
     $password=password_hash($customerPassword,PASSWORD_BCRYPT);
-    $sql=mysqli_query($conn, "INSERT INTO `customers`(`name`, `phone`, `email`, `password`) VALUES ('$FullName','$customerPhone','$customerEmail','$password')");
+
+ $mail = new PHPMailer(true);
+ try {
+  //Server settings
+  $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+  $mail->isSMTP();                             
+  $mail->Host       = 'smtp-relay.sendinblue.com';    
+  $mail->SMTPAuth   = true;                           
+  $mail->Username   = 'tectignisitsolutions@gmail.com';           
+  $mail->Password   = 'Om2rkzEaA7N5Mcf4';                          
+  $mail->SMTPSecure = 'TLS';             
+  $mail->Port       = '587';                            
+
+  //Recipients
+  $mail->setFrom('naiduvedant@gmail.com', 'Z1 Knee Braces');
+  $mail->addAddress($customerEmail, $FullName);    
+  
+  //Content
+  $mail->isHTML(true);                               
+  $mail->Subject = 'Verify Email';
+  $mail->Body    = 'Click on this Link to Verify Your Email ID http://localhost/Z1/verify.php?email='.$customerEmail.'';
+  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+  if($mail->send()){
+  $sql=mysqli_query($conn, "INSERT INTO `customers`(`name`, `phone`, `email`, `password`) VALUES ('$FullName','$customerPhone','$customerEmail','$password')");
 
     if($sql==1){
         echo '<script>alert("sucessfully submitted");</script>';
@@ -17,6 +57,17 @@ if(isset($_POST['register'])){
     }else{
         echo '<script>alert("something went wrong");</script>';
     }
+  
+  }
+  
+} catch (Exception $e) {
+  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+
+
+
+   
 
 }
 
