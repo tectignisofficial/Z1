@@ -160,7 +160,6 @@ include("../../../include/config.php");
                                         <tr>
                                             <th>Sr no.</th>
                                             <th>Title</th>
-                                            <th>Content</th>
                                             <th>Image</th>
                                             <th>Action</th>
                                         </tr>
@@ -175,7 +174,6 @@ include("../../../include/config.php");
                                         <tr>
                                             <td><?php echo $count;?> </td>
                                             <td><?php echo $arr['title'];?> </td>
-                                            <td><?php echo $arr['content'];?> </td>
                                             <td><?php echo $arr['file'];?> </td>
 
                                             <td>
