@@ -1,13 +1,13 @@
 <?php
 include("../../../include/config.php");
 
-// if(isset($_GET['delid'])){
-//     $id=mysqli_real_escape_string($conn,$_GET['delid']);
-//     $sql=mysqli_query($conn,"UPDATE `blog` where id='$id'");
-//     if($sql=1){
-//       header("location:blogtable.php");
-//     }
-//   }
+  if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from blog where id='$id'");
+    if($sql=1){
+      header("location:blogtable.php");
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -174,7 +174,7 @@ include("../../../include/config.php");
                                         <tr>
                                             <td><?php echo $count;?> </td>
                                             <td><?php echo $arr['title'];?> </td>
-                                            <td><?php echo $arr['file'];?> </td>
+                                            <td><img src="dist/img/<?php echo $arr['file'];?>" width="70" alt="Image"></td>
 
                                             <td>
                                                 <a class="btn btn-outline-primary edit"
