@@ -124,20 +124,30 @@ include('include/config.php');
                                         <!-- start product image -->
                                         <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                             <!-- image -->
-                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" alt="image" title="product">
+                                            <?php
+                                                $image = $arr['image'];
+                                                $image = explode(',',$image);
+                                                foreach($image AS $imagess){
+                                                }
+
+                                                ?>
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" alt="image" title="product">
                                             <!-- End image -->
                                             <!-- Hover image -->
                                             <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
                                             <!-- End hover image -->
                                             <!-- product label -->
+                                            <?php $label=$arr['label'];
+                                            if($label!=''){ ?>
                                             <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
+                                            <?php } ?>
                                             <!-- End product label -->
                                         </a>
                                         <!-- end product image -->
 
                                         <!-- Start product button -->
                                         <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                            <button class="btn btn-addto-cart" type="button">Add To Cart</button>
+                                            <a href="productdetail.php?name=<?php echo $arr['name']; ?>" class="btn btn-addto-cart" type="button">Add To Cart</a>
                                         </form>
                                      
                                         <!-- end product button -->

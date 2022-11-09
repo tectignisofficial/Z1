@@ -1,24 +1,41 @@
 <?php 
 include("../../../include/config.php");
+$id=$_GET['eid'];
 
-if(isset($_POST['submit'])){
-    
+if(isset($_POST['update'])){
+
 $title=$_POST['title'];
 $content=$_POST['content'];
 $file=$_FILES['file']['name'];
 $tmp_name = $_FILES['file']['tmp_name']; 
 $loc="dist/img/".$file;
 move_uploaded_file($tmp_name, $loc);
-{
-        $sql=mysqli_query($conn,"INSERT INTO `blog`(`title`, `content`, `file`) VALUES ('$title','$content','$file')");
- }   
- if($sql==1){
+
+  
+if(empty($_FILES['file']['tmp_name']) && ($_POST['img']) && ($_GET['eid'])){
+    $id=$_GET['eid'];
+    $img = $_POST['img'];
+    
+    $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$img' WHERE id='$id'");
+   
+    }
+   
+  else if(!empty($_FILES['file']['tmp_name']) && ($_POST['img']) || !empty($_FILES['file']['tmp_name']) && (empty($_POST['img']) && ($_GET['eid']))){
+    $id=$_GET['eid'];
+move_uploaded_file($tmp_name, $loc);
+
+$sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$file' WHERE id='$id'");
+     
+
+  }
+
+  if($sql==1){
     header("location:blogtable.php");
  }else{
      mysqli_error($conn);
  }
+}
 
-    }  
 ?>
 
 <!DOCTYPE html>
@@ -107,6 +124,10 @@ move_uploaded_file($tmp_name, $loc);
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <?php 
+                                    $sql=mysqli_query($conn,"SELECT * FROM `blog` WHERE id='$id'");
+                                    $row=mysqli_fetch_array($sql);
+                                ?>
                                 <div class="card-body">
                                     <!-- Form -->
                                     <form action="" class="mt-2" method="post" enctype="multipart/form-data">
@@ -115,7 +136,7 @@ move_uploaded_file($tmp_name, $loc);
                                                 <div class="mb-2">
                                                     <label class="form-label" for="blog-edit-title">Title</label>
                                                     <input type="text" id="title" name="title" class="form-control"
-                                                        value="" />
+                                                        value="<?php echo $row['title']?>" />
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -123,10 +144,12 @@ move_uploaded_file($tmp_name, $loc);
                                                     <label class="form-label">Content</label>
                                                     <div id="">
                                                         <div id="blog-editor-container">
-                                                            <textarea name="content" id="content"
+                                                            <!-- <textarea name="content" id="content"
                                                                 class="editor form-control">
-
-                                                            </textarea>
+                                                            </textarea> -->
+                                                            <input type="text" name="content" id=""
+                                                                class="editor form-control"
+                                                                value="<?php echo $row['content']?>">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -135,25 +158,31 @@ move_uploaded_file($tmp_name, $loc);
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Featured Image</h4>
                                                     <div class="d-flex flex-column flex-md-row">
-                                                        <img src="dist/img/" id="blog-feature-image"
-                                                            class="rounded me-2 mb-1 mb-md-0" width="170" height="110"
-                                                            alt="&nbsp;&nbsp;Image" />
-                                                        <div class="featured-info">
-                                                            <large class="text-muted">Required image resolution 800x400,
+                                                        <?php
+                                                            if(isset($_GET['eid'])){
+                                                        ?>
+                                                        <img class="rounded me-2 mb-1 mb-md-0"
+                                                            src="dist/img/<?php echo $row['file']?>" width="180"
+                                                            height="140">
+                                                        <input type="hidden" value="<?php echo $row['file']?>"
+                                                            name="img">
+                                                        <?php }  ?>
+                                                             <div class="featured-info"> 
+                                                             <large class="text-muted">Required image resolution 800x400,
                                                                 image size
                                                                 10mb.</large>
                                                             <p class="my-80">
-                                                            </p>
-                                                            <div class="d-inline-block">
-                                                                <input class="form-control" type="file" id="file"
-                                                                    name="file" accept="" />
-                                                            </div>
+                                                                
+                                                            </p>                                                  
+                                                        <div class="d-inline-block">
+                                                            <input type="file" class="form-control" name="file">
+                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-50">
-                                                <button type="submit" id="submit" name="submit"
+                                                <button type="submit" id="update" name="update"
                                                     class="btn btn-primary me-1">
                                                     Save Changes
                                                 </button>

@@ -4,12 +4,17 @@ include('include/config.php');
 $productName=$_GET['name'];
 $sql=mysqli_query($conn,"select * from products where name='$productName'");
 $arr=mysqli_fetch_array($sql);
+$id=$arr['id'];
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
 $productname=$_POST['productname'];
 $price=$_POST['price'];
-
+if(!isset($_POST['option1'])){
+    echo "<script>alert('please');</script>";
+}
+else{
+ 
 if(isset($_SESSION['shopping_cart'])){
 $item_array_id=array_column($_SESSION['shopping_cart'], "name");
 if(!in_array($_GET['name'],$item_array_id)){
@@ -24,7 +29,7 @@ if(!in_array($_GET['name'],$item_array_id)){
     header('location:productdetail.php?name='.$productName);
 }
 else{
-    echo "<script>alert('already Added');</script";
+    echo "<script>alert('already Added');</script>";
     header('location:productdetail.php?name='.$productName);
 }
 }else{
@@ -36,7 +41,10 @@ else{
     );
     $_SESSION['shopping_cart'][0] = $item_arr;
 }
+
 }
+}
+
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -58,6 +66,16 @@ else{
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <style>
+        .slick-list{
+            height:489.141px !important;
+
+        }
+        .slick-track{
+height:2642px !important;
+        }
+        </style>
 </head>
 
 <body class="template-product belle">
@@ -88,16 +106,25 @@ else{
                                 <div class="product-details-img">
                                     <div class="product-thumb">
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big1.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big1.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="-4"
+                                            <?php
+                                            $images = $arr['image'];
+                                            $images = explode(',',$images);
+                                            $count=-5;
+                                            foreach($images AS $image){
+                                                echo '<a data-image="auth/code/sadmin/image/product_Image/'.$image.'"
+                                                data-zoom-image="auth/code/sadmin/image/product_Image/'.$image.'"
+                                                class="slick-slide slick-cloned " data-slick-index="'.$count.'"
                                                 aria-hidden="true" tabindex="-1">
                                                 <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-images/product-image1-1.jpg"
-                                                    src="assets/images/product-images/product-image1-1.jpg"
+                                                    data-src="auth/code/sadmin/image/product_Image/'.$image.'"
+                                                    src="auth/code/sadmin/image/product_Image/'.$image.'"
                                                     alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-images/product-image1-1.jpg"
+                                            </a>';
+                                            $count++;
+                                            }
+                                            ?>
+                                            
+                                              <!-- <a data-image="assets/images/product-images/product-image1-1.jpg"
                                                 data-zoom-image="assets/images/product-images/product-image1-1.jpg"
                                                 class="slick-slide slick-cloned" data-slick-index="-3"
                                                 aria-hidden="true" tabindex="-1">
@@ -105,7 +132,7 @@ else{
                                                     data-src="assets/images/product-images/product-image2-1.jpg"
                                                     src="assets/images/product-images/product-image2-1.jpg"
                                                     alt="" />
-                                            </a>
+                                            </a> 
                                             <a data-image="assets/images/product-detail-page/camelia-reversible-big3.jpg"
                                                 data-zoom-image="assets/images/product-detail-page/camelia-reversible-big3.jpg"
                                                 class="slick-slide slick-cloned" data-slick-index="-2"
@@ -186,15 +213,25 @@ else{
                                                     data-src="assets/images/product-detail-page/camelia-reversible5.jpg"
                                                     src="assets/images/product-detail-page/camelia-reversible5.jpg"
                                                     alt="" />
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                     <div class="zoompro-wrap product-zoom-right pl-20">
                                         <div class="zoompro-span">
-                                            <img class="blur-up lazyload zoompro"
-                                                data-zoom-image="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
+                                           
+                                                
+                                                <?php
+                                                $image = $arr['image'];
+                                                $image = explode(',',$image);
+                                                foreach($image AS $imagess){
+                                                    echo ' ';
+                                                }
+
+                                                ?>
+                                                <img class="blur-up lazyload zoompro"
+                                                data-zoom-image="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>"
                                                 alt=""
-                                                src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>" />
+                                                src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" />
                                         </div>
                                         <div class="product-labels"><span class="lbl on-sale"><?php echo $arr['label']; ?></span></div>
                                         <div class="product-buttons">
@@ -206,28 +243,15 @@ else{
                                         </div>
                                     </div>
                                     <div class="lightboximages">
-                                        <a href="assets/images/product-images/product-image1-1.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-images/product-image1-1.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big3.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible7-big.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big4.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big5.jpg"
-                                            data-size="1462x2048"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big6.jpg"
-                                            data-size="731x1024"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big7.jpg"
-                                            data-size="731x1024"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big8.jpg"
-                                            data-size="731x1024"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big9.jpg"
-                                            data-size="731x1024"></a>
-                                        <a href="assets/images/product-detail-page/camelia-reversible-big10.jpg"
-                                            data-size="731x1024"></a>
+                                        <?php
+                                        $image = $arr['image'];
+                                        $image = explode(',',$image);
+                                        foreach($image AS $imagess){
+                                            echo ' <a href="auth/code/sadmin/image/product_Image/'. $imagess.'"
+                                            data-size="1462x2048"></a>';
+                                        }
+                                        ?>
+                                       
                                     </div>
 
                                 </div>
@@ -268,46 +292,45 @@ else{
                                     id="product_form_10508262282" accept-charset="UTF-8"
                                     class="product-form product-form-product-template hidedropdown"
                                     enctype="multipart/form-data">
-                               
                                     <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                         <div class="product-form__item">
                                             <label class="header">Size: <span class="slVariant">XS</span></label>
                                             <div data-value="XS" class="swatch-element xs available">
-                                                <input class="swatchInput" id="swatch-1-xs" type="radio" name="option-1"
-                                                    value="XS">
+                                                <input class="swatchInput" id="swatch-1-xs" type="radio" name="option1"
+                                                    value="XS" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-xs"
                                                     title="XS">XS</label>
                                             </div>
                                             <div data-value="S" class="swatch-element s available">
-                                                <input class="swatchInput" id="swatch-1-s" type="radio" name="option-1"
-                                                    value="S">
+                                                <input class="swatchInput" id="swatch-1-s" type="radio" name="option1"
+                                                    value="S" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-s"
                                                     title="S">S</label>
                                             </div>
                                             <div data-value="M" class="swatch-element m available">
-                                                <input class="swatchInput" id="swatch-1-m" type="radio" name="option-1"
-                                                    value="M">
+                                                <input class="swatchInput" id="swatch-1-m" type="radio" name="option1"
+                                                    value="M" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-m"
                                                     title="M">M</label>
                                             </div>
                                             <div data-value="L" class="swatch-element l available">
-                                                <input class="swatchInput" id="swatch-1-l" type="radio" name="option-1"
-                                                    value="L">
+                                                <input class="swatchInput" id="swatch-1-l" type="radio" name="option1"
+                                                    value="L" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-l"
                                                     title="L">L</label>
                                             </div>
                                             <div data-value="XL" class="swatch-element xl available">
-                                                <input class="swatchInput" id="swatch-1-xl" type="radio" name="option-1"
-                                                    value="XL">
+                                                <input class="swatchInput" id="swatch-1-xl" type="radio" name="option1"
+                                                    value="XL" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-xl"
                                                     title="XL">XL</label>
                                             </div>
                                         </div>
                                     </div>
-                                  
+                                  <div id="sizequa"></div>
                                     <!-- Product Action -->
                                     <div class="product-action clearfix">
-                                        <form action="" method="post">
+                                       
                                             <input type="hidden" name="productid" value="<?php echo $arr['id'] ?>">
                                             <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
                                             <input type="hidden" name="price" value="<?php echo $arr['price'] ?>">
@@ -325,17 +348,17 @@ else{
                                         </div>
                                         <div class="row">
                                         <div class="product-form__item--submit col-6">
-                                            <button type="submit" id="addtocart"  name="addtocart" class="shopify-payment-button__button shopify-payment-button__button--unbranded">
+                                            <button type="submit" id="addtocart"  name="addtocart" class="shopify-payment-button__button shopify-payment-button__button--unbranded" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <span>Add to cart</span>
                                             </button>
                                             
                                         </div>
                                             <div class="shopify-payment-button col-6" data-shopify="payment-button">
                                             <button type="button"
-                                                class="shopify-payment-button__button shopify-payment-button__button--unbranded">Buy
+                                                class="shopify-payment-button__button shopify-payment-button__button--unbranded" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>Buy
                                                 it now</button>
                                         </div>
-                                        </form>
+                                       
                                     </div>
                                    
                                     </div>
@@ -650,7 +673,7 @@ else{
                             </div>
 
                             <div id="tab3" class="tab-content">
-                                <h3>WOMEN'S BODY SIZING CHART</h3>
+                                <!-- <h3>WOMEN'S BODY SIZING CHART</h3>
                                 <table>
                                     <tbody>
                                         <tr>
@@ -743,9 +766,9 @@ else{
                                             <td>46" - 49"</td>
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table> -->
                                 <div class="text-center">
-                                    <img src="assets/images/size.jpg" alt="" />
+                                    <img src="auth/code/sadmin/image/product_Image/<?php echo $arr['sizefile'] ?>" alt="" />
                                 </div>
                             </div>
 
@@ -1353,13 +1376,22 @@ else{
         </div>
     </div>
 <script>
-    // $(document).ready(function(){
-    //     $("#addtocart").click(function(){
-    //         $id=$(this).data('id');
-    //         $name=<?php echo $arr['name']; ?>
-    //     });
-    // });
+    $(document).ready(function(){
+        $(".swatchInput").click(function(){
+            let size=$(this).val();
+            $.ajax({
+                type:'post',
+                url:'auth/code/sadmin/api.php',
+                data:{size:size,
+                    productName:<?php echo $id; ?>},
+                success:function(response){
+                    $("#sizequa").html(response);
+                }
+            })
+        })
+    })
 </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </body>
 
 <!-- belle/product-layout-1.html   11 Nov 2019 12:42:26 GMT -->

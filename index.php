@@ -131,9 +131,16 @@ include('include/config.php');
                                                     <!-- start product image -->
                                                     <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                                         <!-- image -->
+                                                        <?php
+                                                $image = $arr['image'];
+                                                $image = explode(',',$image);
+                                                foreach($image AS $imagess){
+                                                }
+
+                                                ?>
                                                         <img class="primary blur-up lazyload"
-                                                            data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
-                                                            src="auth/code/sadmin/image/product_Image/<?php echo $arr['image'];?>"
+                                                            data-src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>"
+                                                            src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>"
                                                             alt="image" title="product">
                                                         <!-- End image -->
                                                         <!-- Hover image -->
@@ -143,18 +150,18 @@ include('include/config.php');
                                                             alt="image" title="product">
                                                         <!-- End hover image -->
                                                         <!-- product label -->
-                                                        <div class="product-labels rectangular"><span
-                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span>
-                                                        </div>
+                                                        <?php $label=$arr['label'];
+                                            if($label!=''){ ?>
+                                            <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
+                                            <?php } ?>
                                                         <!-- End product label -->
                                                     </a>
                                                     <!-- end product image -->
 
                                                     <!-- Start product button -->
-                                                    <form class="variants add" action="#"
-                                                        onclick="window.location.href='cart.html'" method="post">
-                                                        <button class="btn btn-addto-cart" type="button"
-                                                            tabindex="0">Add To Cart</button>
+                                                    <form class="variants add"  method="post">
+                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>" class="btn btn-addto-cart" type="button"
+                                                            tabindex="0">Add To Cart</a>
                                                     </form>
 
                                                     <!-- end product button -->
