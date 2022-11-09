@@ -68,7 +68,7 @@ include("../../../include/config.php");
         .dt-button {
             border: 1px solid !important;
             background-color: transparent;
-            margin:1%;
+            margin: 1%;
             display: inline-block;
             font-weight: 400;
             line-height: 1;
@@ -111,12 +111,12 @@ include("../../../include/config.php");
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-start mb-0">
-                                Offer Letter 
+                                Blog Table
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Letter</a></li>
-                                    <li class="breadcrumb-item active">Offer Letter</li>
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active">Blogs</li>
                                 </ol>
                             </div>
                         </div>
@@ -149,8 +149,9 @@ include("../../../include/config.php");
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Table</h4>
+                                <a href="blogs.php" class="btn btn-primary mb-1">Add New Blog
+                                </a>
 
-                               
                             </div>
 
                             <div class="card-body">
@@ -165,7 +166,7 @@ include("../../../include/config.php");
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php 
+                                        <?php 
                                     
                                     $sql=mysqli_query($conn,"select * from blog");
                                     $count=1;
@@ -179,7 +180,7 @@ include("../../../include/config.php");
 
                                             <td>
                                                 <a class="btn btn-outline-primary edit"
-                                                    href="blogs.php?eid=<?php echo $arr['id'] ?>">
+                                                    href="blogedit.php?eid=<?php echo $arr['id'] ?>">
                                                     <i data-feather="edit"></i>
                                                 </a>
 
