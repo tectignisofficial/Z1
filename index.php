@@ -608,54 +608,30 @@ include('include/config.php');
                             </div>
                             <!--End Testimonial Slider Title-->
                             <!--Testimonial Slider Items-->
+                           
                             <div class="quotes-slider">
+                           
+                                <?php
+                         $sql=mysqli_query($conn,"SELECT * FROM testimonial");
+                        $count=1;
+                         while($row=mysqli_fetch_array($sql)){ 
+                         ?>
                                 <div class="quotes-slide">
                                     <blockquote class="quotes-slider__text text-center">
+                                    <p class="authour"><?php echo $row['name'];?></span></p>
+
+                                    <p><?php echo $row['company_name'];?></p>
+
                                         <div class="rte-setting">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the
-                                                1500s, when an unknown printer took a galley of type and scrambled it to
-                                                make a type specimen book.
-                                                <br><br>The standard chunk of Lorem Ipsum used since the 1500s is
-                                                reproduced
-                                                below for those interested. Sections 1.10.32 and 1.10.33 from "de
-                                                Finibus
-                                                Bonorum et Malorum" by Cicero are also reproduced in their exact
-                                                original
-                                                form, accompanied by English versions from the 1914 translation by H.
-                                                Rackham.</p>
+                                            <p><?php echo $row['message'];?></p>
                                         </div>
-                                        <p class="authour">Happy Customer</span></p>
+                                      
+                                    
                                     </blockquote>
                                 </div>
-                                <div class="quotes-slide">
-                                    <blockquote class="quotes-slider__text text-center">
-                                        <div class="rte-setting">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat.</p>
-                                        </div>
-                                        <p class="authour">Happy Customer</p>
-                                    </blockquote>
-                                </div>
-                                <div class="quotes-slide">
-                                    <blockquote class="quotes-slider__text text-center">
-                                        <div class="rte-setting">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                                esse
-                                                cillum dolore eu fugiat nulla pariatur.</p>
-                                        </div>
-                                        <p class="authour">Happy Customer</span></p>
-                                    </blockquote>
-                                </div>
+                                <?php $count++;  } ?>
                             </div>
+                           
                             <!--Testimonial Slider Items-->
                         </div>
                     </div>
