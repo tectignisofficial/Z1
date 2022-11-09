@@ -3,16 +3,25 @@
         <div class="container-fluid">
             <div class="row">
             	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                    <form action="auth/code/sadmin/api.php" method="post">
                     <div class="currency-picker">
                         <span class="selected-currency">INR</span>
-                        <ul id="currencies">
+                        <select name="myselect" id="" class="form-control" onchange="this.form.submit()">
+                            <option value="INR">INR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="CAD">CAD</option>
+                            <option value="USD">USD</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                        <!-- <ul id="currencies">
                             <li data-currency="INR" class="selected">INR</li>
                             <li data-currency="GBP" class="">GBP</li>
                             <li data-currency="CAD" class="">CAD</li>
                             <li data-currency="USD" class="">USD</li>
                             <li data-currency="AUD" class="">AUD</li>
-                        </ul>
+                        </ul> -->
                     </div>
+                    </form>
                     <div class="language-dropdown">
                       
                     </div>

@@ -1,3 +1,11 @@
+<?php include('../../../include/config.php');
+if(isset($_GET['currid'])){
+    $currid=$_GET['currid'];
+    $sql=mysqli_query($conn,"delete from currency where id ='$currid'");
+    if($sql){
+        header('location:currency.php');
+    }
+} ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -152,6 +160,7 @@
                                     <div class="col-4"></div>                                  
                                 </div>
                                 <div class="card-datatable">
+                                   
                                     <table class="dt-responsive table">
                                         <thead>
                                             <tr>                                                
@@ -164,25 +173,31 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php
+                                    $sql=mysqli_query($conn,"select * from currency");
+                                    $count=1;
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>                                               
+                                                <td><?php echo $count; ?></td>
+                                                <td><?php echo $arr['currency_name'] ?></td>
+                                                <td><i class="<?php echo $arr['currency_icon'] ?>"></i></td>
+                                                <td><?php echo $arr['currency_rate'] ?></td>
+                                                <td><?php echo $arr['default_status'] ?></td>                                               
                                                 <td>
                                                 <a href=""><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
                                                                     data-feather="edit"></i></button></a>
 
-                                                    <a href=""><button
+                                                    <a href="currency.php?currid=<?php echo $arr['id']; ?>"><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
 
                                                 </td>
                                             </tr>
+                                            <?php $count++; } ?>
                                             </tboday>
 
                                     </table>
