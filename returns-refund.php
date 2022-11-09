@@ -42,7 +42,9 @@
     	<div class="page section-header text-center">
 			<div class="page-title">
         		<div class="wrapper"><h1 class="page-width">Returns & Refunds</h1>
-				<div class="breadcrumbs"><a href="" >Home</a> » <span class="current">Returns & Refunds</span></div>
+				<div class="breadcrumbs">
+                    
+                </div>
 				</div>
       		</div>
 		</div>

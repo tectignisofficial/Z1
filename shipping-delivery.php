@@ -22,20 +22,6 @@
 <div class="pageWrapper">
 <?php include("include/header.php");?>
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
     
     <!--Body Content-->
     <div id="page-content">
@@ -43,7 +29,9 @@
     	<div class="page section-header text-center">
 			<div class="page-title">
         		<div class="wrapper"><h1 class="page-width">Shipping & Delivery</h1>
-					<div class="breadcrumbs"><a href="" >Home</a> » <span class="current">Shipping & Delivery</span></div>
+					<div class="breadcrumbs">
+                        
+                    </div>
 				</div>
       		</div>
 		</div>

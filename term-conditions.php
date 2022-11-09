@@ -43,7 +43,9 @@
     	<div class="page section-header text-center">
 			<div class="page-title">
         		<div class="wrapper"><h1 class="page-width">Terms & Conditions</h1>
-				<div class="breadcrumbs"><a href="" >Home</a> » <span class="current">Terms & Conditions</span></div>
+				<div class="breadcrumbs">
+			
+				</div>
 				</div>
       		</div>
 		</div>
@@ -207,6 +209,7 @@
 					<p><strong></strong></p>
                     <h2>LEGAL DISCLAIMER</h2>
 					<p>Kindly note that additional duties/taxes might be accredited by customs or government authorities in some countries (like the UK) as well as in India. The seller, however, holds no responsibility at all for paying such duties/taxes and would sincerely not entertain or consider any claims for its reimbursement. These duties/taxes are directly payable by the buyer to the concerned authorities (if applicable).</p>
+					<p>If buyer deny to pay the duty amount, in that case the shipment will be destroyed at the destination. Product will not come back to origin and shipping and destroying charges of 60 USD per unit will be deducted and rest of the amount will be refunded.</p>
                 </div>
             </div>
 			
