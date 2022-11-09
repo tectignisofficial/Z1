@@ -19,7 +19,7 @@
                             data-feather="mail"></i><span class="menu-title text-truncate"
                             data-i18n="Email">Pages</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="blogs.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable.php"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Blogs</span></a>
                 </li>
