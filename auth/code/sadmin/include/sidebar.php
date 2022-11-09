@@ -76,8 +76,9 @@
                                     data-feather="circle"></i><span class="menu-item text-truncate"
                                     data-i18n="View">Email</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="socialmedia.php"><span
-                                    class="menu-item text-truncate" data-i18n="Account">Social Media</span></a>
+                        <li><a class="d-flex align-items-center" href="socialmedia.php"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Account">Social Media</span></a>
                         </li>
                     </ul>
                 </li>
