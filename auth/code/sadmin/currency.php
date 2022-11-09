@@ -66,7 +66,29 @@
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
+
     <div class="app-content content ">
+
+     <!-- Edit Modal -->
+     <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title"> View Product</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body body1">
+        
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
@@ -119,7 +141,7 @@
                                                 <td>
                                                 <a href=""><button
                                                                 type="button"
-                                                                class="btn btn-icon rounded-circle btn-flat-primary"><i
+                                                                class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
                                                                     data-feather="edit"></i></button></a>
 
                                                     <a href=""><button
@@ -181,6 +203,25 @@
             }
         })
     </script>
+
+<script>
+   $(document).ready(function(){
+         $('.btnmod1').click(function(){
+           let vid = $(this).data('id');
+
+           $.ajax({
+           url: 'currency.php',
+           type: 'post',
+           data: {vid: vid},
+           success: function(response1){ 
+             $('.body1').html(response1);
+             $('#myModal').modal('show'); 
+           }
+         });
+         });
+
+         });
+ </script>
    
 </body>
 <!-- END: Body-->
