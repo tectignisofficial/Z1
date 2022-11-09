@@ -24,12 +24,56 @@ if(isset($_POST['size'])){
   if($size=='XS'){
     $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
   $arr=mysqli_fetch_array($sql);
-  $stock=$arr['stock_status'];
-  echo '<p style="font-size:15px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"></i>'.$arr['stock_status'].' in Stock</p> ';
+  $stock=$arr['stock_status'] ?? NULL;
+  if($stock==''){
+    echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
+  }else{
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
   }
-  $sql=mysqli_query($conn,"select * from products where id='$productName'");
+  }
+  else if($size=='S'){
+    $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
   $arr=mysqli_fetch_array($sql);
-  $stock=$arr['stock_status'];
-  echo '<p style="font-size:15px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"></i>'.$arr['stock_status'].' in Stock</p> ';
+  $stock=$arr['stock_status'] ?? NULL;
+  if($stock==''){
+    echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
+  }else{
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
+  }
+  }
+  else if($size=='M'){
+    $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
+  $arr=mysqli_fetch_array($sql);
+  $stock=$arr['stock_status'] ?? NULL;
+  if($stock==''){
+    echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
+  }else{
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
+  }
+  }
+  else if($size=='L'){
+    $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
+  $arr=mysqli_fetch_array($sql);
+  $stock=$arr['stock_status'] ?? NULL;
+  if($stock==''){
+    echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
+  }else{
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
+  }
+  }
+  else if($size=='XL'){
+    $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
+  $arr=mysqli_fetch_array($sql);
+  $stock=$arr['stock_status'] ?? NULL;
+  if($stock==''){
+    echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
+  }else{
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
+  }
+  }
+
+}
+
+if(isset($_POST['myselect'])){
 }
 ?>

@@ -1319,16 +1319,25 @@ height:2642px !important;
     $(document).ready(function(){
         $(".swatchInput").click(function(){
             let size=$(this).val();
+            
+            let pro='<?php echo $productName ?>';
             $.ajax({
                 type:'post',
                 url:'auth/code/sadmin/api.php',
                 data:{size:size,
-                    productName:<?php echo $productName; ?>},
+                    productName:pro},
                 success:function(response){
+                   
                     $("#sizequa").html(response);
                 }
             })
-        })
+        });
+        $("#sizequa").change(function(){
+            let val=$("#sizequa").html();
+                    if(val=='Out of Stock'){
+                        $('.wrapQtyBtn').css('display','none');
+                    }
+        });
     })
 </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>

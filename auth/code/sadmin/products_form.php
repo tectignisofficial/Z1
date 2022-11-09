@@ -30,9 +30,9 @@ $images_name='';
 foreach ($_FILES["myfile"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
         $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
-        $name = $_FILES["myfile"]["name"][$key];
+        $filename = $_FILES["myfile"]["name"][$key];
         move_uploaded_file($tmp_name, $loc.$name);
-        $images_name =$images_name.",".$name;
+        $images_name =$images_name.",".$filename;
         
     }
 }
@@ -47,11 +47,11 @@ if($attrname1 != ''){
         $s_attrname = $naames;
         $s_attrVal=$attrval1[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$images_name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
     }
 }
 else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`name`, `description`, `content`, `image`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$name','$desc','$cont','$images_name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
 }
 
 if($sql==1){
@@ -364,12 +364,11 @@ if($sql==1){
                                 <!-- </form> -->
                             </div>
                         </div>
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Related products</h4>
                             </div>
                             <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
                                     <div class="row">
                                         <div class="col-12">
                                             <label class="form-label" for="sname">Related products</label>
@@ -382,9 +381,8 @@ if($sql==1){
                                                 placeholder="search products" />
                                         </div>
                                     </div>
-                                <!-- </form> -->
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Search Engine Optimize</h4>
@@ -594,6 +592,7 @@ $(document).on('click','#show_attributes',function(){
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
         <select class="form-control" onChange="get(this.value)" name="attrname[]">\
+        <option disabled selected></option>\
         <?php
         $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
         while($arr=mysqli_fetch_array($selsql)){ ?>
