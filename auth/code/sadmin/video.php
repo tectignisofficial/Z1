@@ -1,18 +1,32 @@
 <?php
 include('../../../include/config.php');
+
 if(isset($_POST['submit'])){
+
     $mainTitle=$_POST['mainTitle'];
     $mainUrl=$_POST['mainUrl'];
   
-        $sql=mysqli_query($conn,"INSERT INTO `video`(`title`, `name`, `url`) VALUES ('[value-2 ]','[value-3]','[value-4]')");
+        $sql=mysqli_query($conn,"INSERT INTO `video`(`name`, `url`) VALUES ('$mainTitle','$mainUrl')");
      
     
     if($sql==1){
         echo '<script>alert("sucessfully submitted");</script>';
+         header('location:video.php');
     }else{
         echo '<script>alert("something went wrong");</script>';
     }
 }
+
+
+
+if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from video where id='$id'");
+    if($sql=1){
+        header("location:video.php");
+    }
+    }
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
@@ -102,12 +116,12 @@ if(isset($_POST['submit'])){
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Orders</h2>
+                            <h2 class="content-header-title float-start mb-0">Videos</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Ecommerce</li>
+                                
                                     <li class="breadcrumb-item active">New Products</li>
                                 </ol>
                             </div>
@@ -150,10 +164,11 @@ if(isset($_POST['submit'])){
                                                     </div>
                                                 </div>
                                             </div>
-                                                <div class="dt-action-buttons">
-                                                        <button id="addattr" type="submit" class="btn btn-primary" nmae="submit">+ Add
-                                                            New Video</button>
+                                            <div class="dt-action-buttons">
+        <button id="addattr" type="submit" class="btn btn-primary" name="submit">+ Add New Video</button>
                                                     </div>
+                                                            
+                        </form>
                                         </div>
                                     </div>
 
@@ -162,20 +177,53 @@ if(isset($_POST['submit'])){
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="card">
-                                                <div id="DataTables_Table_0_wrapper"
-                                                    class="dataTables_wrapper dt-bootstrap5 no-footer">
-                                                    <div class="card-header border-bottom p-1">
-                                                        <div class="head-label">
-                                                            <h6 class="mb-0">Attributes list</h6>
-                                                        </div>
-                                                       
-                                                    </div>
-                                                    
-                                         
+                                                <div class="card-header">
+                                <h4 class="card-title"> Request A Quote</h4>
 
-                                                
-                                               
-                                                </div>
+                              
+                            </div>
+                            <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Sr no.</th>
+                    <th>Name</th>
+                    
+                    <th>URl</th>
+                            
+                    <th>Action</th>
+          
+                </tr>
+            </thead>
+            <tbody>
+                                    <?php 
+                        
+                        $sql=mysqli_query($conn,"select * from video");
+                        $count=1;
+                         while($arr=mysqli_fetch_array($sql)){
+                        ?>
+                                        <tr>
+                                        <td><?php echo $count;?> </td>
+                                        <td><?php echo $arr['name'];?> </td>
+                                       
+                                        <td><?php echo $arr['url'];?> </td>
+                                        
+                                         <td>
+
+
+                                    <a href="video.php?delid=<?php echo $arr['id']; ?>"><button type="button" class="btn btn-icon rounded-circle btn-flat-danger"><i data-feather="trash"></i></button></a>
+
+
+                                 
+                                   
+                                    
+
+                  </td>
+                                        </tr>
+                                        <?php $count++;  } ?>
+                                    </tbody>
+        </table>
+                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -183,8 +231,7 @@ if(isset($_POST['submit'])){
                                 </div>
 
                             </div>
-                         
-                       </form>
+                 
                 </section>
 
                 <!-- Basic Horizontal form layout section end -->
