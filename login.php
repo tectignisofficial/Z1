@@ -7,7 +7,7 @@ if(isset($_POST['login'])){
     $customerEmail=$_POST['customerEmail'];
     $customerPassword=$_POST['customerPassword'];
 
-    $sql=mysqli_query($conn, "SELECT * FROM `customers` WHERE email='$customerEmail'");
+    $sql=mysqli_query($conn, "SELECT * FROM `customers` WHERE email='$customerEmail' and email_verify='1'");
 
   if(mysqli_num_rows($sql)>0){
 		$row=mysqli_fetch_assoc($sql); 

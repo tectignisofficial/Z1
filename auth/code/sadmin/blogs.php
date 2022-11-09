@@ -1,3 +1,24 @@
+<?php 
+include("../../../include/config.php");
+
+if(isset($_POST['submit'])){
+    
+$title=$_POST['title'];
+$content=$_POST['content'];
+$file=$_FILES['file']['name'];
+$tmp_name = $_FILES['file']['tmp_name']; 
+$loc="dist/img/".$file;
+move_uploaded_file($tmp_name, $loc);
+
+if(empty($_FILES['file']['tmp_name'])){
+        
+move_uploaded_file($tmp_name, $loc);
+$sql=mysqli_query($conn,"INSERT INTO `blog`(`title`, `content`, `file`) VALUES ('$title','$content','$file')");
+ }
+    
+    }  
+?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -86,42 +107,23 @@
                             <div class="card">
                                 <div class="card-body">
                                     <!-- Form -->
-                                    <form action="javascript:;" class="mt-2">
+                                    <form action="" class="mt-2" method="post" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-md-12 col-12">
                                                 <div class="mb-2">
                                                     <label class="form-label" for="blog-edit-title">Title</label>
-                                                    <input type="text" id="blog-edit-title" class="form-control"
-                                                        value="The Best Features Coming to iOS and Web design" />
+                                                    <input type="text" id="title" name="title" class="form-control"
+                                                        value="" />
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="mb-2">
                                                     <label class="form-label">Content</label>
-                                                    <div id="blog-editor-wrapper">
+                                                    <div id="">
                                                         <div id="blog-editor-container">
-                                                            <div class="editor">
-                                                                <p>
-                                                                    Cupcake ipsum dolor sit. Amet dessert donut
-                                                                    candy chocolate bar cotton dessert candy
-                                                                    chocolate. Candy muffin danish. Macaroon
-                                                                    brownie jelly beans marzipan cheesecake oat
-                                                                    cake. Carrot cake macaroon chocolate cake.
-                                                                    Jelly brownie jelly. Marzipan pie sweet
-                                                                    roll.
-                                                                </p>
-                                                                <p><br /></p>
-                                                                <p>
-                                                                    Liquorice dragée cake chupa chups pie cotton
-                                                                    candy jujubes bear claw sesame snaps.
-                                                                    Fruitcake chupa chups chocolate bonbon lemon
-                                                                    drops croissant caramels lemon drops. Candy
-                                                                    jelly cake marshmallow jelly beans dragée
-                                                                    macaroon. Gummies sugar plum fruitcake.
-                                                                    Candy canes candy cupcake caramels cotton
-                                                                    candy jujubes fruitcake.
-                                                                </p>
-                                                            </div>
+                                                            <textarea  name="content" id="content" class="editor form-control">
+
+                                                            </textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -130,27 +132,28 @@
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Featured Image</h4>
                                                     <div class="d-flex flex-column flex-md-row">
-                                                        <img src="app-assets/images/slider/03.jpg"
-                                                            id="blog-feature-image" class="rounded me-2 mb-1 mb-md-0"
-                                                            width="170" height="110" alt="Blog Featured Image" />
+                                                        <img src="dist/img/<?php echo $file;?>" id="blog-feature-image"
+                                                            class="rounded me-2 mb-1 mb-md-0" width="170" height="110"
+                                                            alt="Blog Featured Image" />
                                                         <div class="featured-info">
                                                             <small class="text-muted">Required image resolution 800x400,
                                                                 image size
                                                                 10mb.</small>
                                                             <p class="my-50">
-                                                                <a href="#"
-                                                                    id="blog-image-text">C:\fakepath\banner.jpg</a>
+                                                                <a href="#" id="path"
+                                                                    name="path">C:\fakepath\banner.jpg</a>
                                                             </p>
                                                             <div class="d-inline-block">
-                                                                <input class="form-control" type="file"
-                                                                    id="file" name="file" accept="image/*" />
+                                                                <input class="form-control" type="file" id="file"
+                                                                    name="file" accept="" />
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-50">
-                                                <button type="submit" class="btn btn-primary me-1">
+                                                <button type="submit" id="submit" name="submit"
+                                                    class="btn btn-primary me-1">
                                                     Save Changes
                                                 </button>
                                             </div>

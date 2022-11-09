@@ -3,9 +3,9 @@ include("../../../include/config.php");
 
 // if(isset($_GET['delid'])){
 //     $id=mysqli_real_escape_string($conn,$_GET['delid']);
-//     $sql=mysqli_query($conn,"UPDATE `employee` SET `offer_letter`='0' where id='$id'");
+//     $sql=mysqli_query($conn,"UPDATE `blog` where id='$id'");
 //     if($sql=1){
-//       header("location:offerlettertable.php");
+//       header("location:blogtable.php");
 //     }
 //   }
 ?>
@@ -158,38 +158,40 @@ include("../../../include/config.php");
                                     <thead>
                                         <tr>
                                             <th>Sr no.</th>
-                                            <th>Name</th>
-                                            <th>Mobile No.</th>
-                                            <th>Email</th>
-                                            <th>Job Post</th>
+                                            <th>Title</th>
+                                            <th>Content</th>
+                                            <th>Image</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+                                    <?php 
+                                    
+                                    $sql=mysqli_query($conn,"select * from blog");
+                                    $count=1;
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
                                         <tr>
                                             <td><?php echo $count;?> </td>
-                                            <td><?php echo $arr['name'];?> </td>
-                                            <td><?php echo $arr['mobile'];?> </td>
-                                            <td><?php echo $arr['email'];?> </td>
-                                            <td><?php echo $arr['job_post'];?> </td>
+                                            <td><?php echo $arr['title'];?> </td>
+                                            <td><?php echo $arr['content'];?> </td>
+                                            <td><?php echo $arr['file'];?> </td>
+
                                             <td>
-                                                <a class="btn btn-outline-success eye" 
-                                                href="offerletter.php?eid=<?php echo $arr['id']; ?>">
-                                                    <i data-feather="eye"></i>
-                                                </a>
                                                 <a class="btn btn-outline-primary edit"
-                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
+                                                    href="blogs.php?eid=<?php echo $arr['id'] ?>">
                                                     <i data-feather="edit"></i>
                                                 </a>
 
-                                                <a href="offerlettertable.php?delid=<?php echo $arr['id']; ?>"><button
+                                                <a href="blogtable.php?delid=<?php echo $arr['id']; ?>"><button
                                                         type="button" class="btn btn-outline-danger"><i
                                                             data-feather="trash"></i></button></a>
 
 
                                             </td>
                                         </tr>
+                                        <?php $count++;  } ?>
+
                                     </tbody>
                                 </table>
 
