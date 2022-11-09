@@ -3,9 +3,9 @@ include('include/config.php');
 
 if(isset($_POST['submit'])){
 
-  $email=$_POST['email'];
+  $email_id=$_POST['email_id'];
  
-  $sql=mysqli_query($conn,"INSERT INTO `newsletter`(`email`) VALUES ('$email')");
+  $sql=mysqli_query($conn,"INSERT INTO `newsletter`(`email_id`) VALUES ('$email_id')");
   if($sql==1){
     echo '<script>alert("Thank You...!");</script>';
     // header("location:index.php");
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
                                     </div>
                                     <form method="post">
                                         <div class="input-group">
-                                            <input type="email" class="input-group__field newsletter__input" name="email" id="email" value="" placeholder="Email address" required="">
+                                            <input type="email" class="input-group__field newsletter__input" name="email_id" id="email_id" value="" placeholder="Email address" required="">
                                             <span class="input-group__btn">
                                                 <button type="submit" class="btn newsletter__submit" name="submit" id="submit" id="Subscribe"><span class="newsletter__submit-text--large">Subscribe</span></button>
                                             </span>

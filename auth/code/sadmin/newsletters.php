@@ -37,7 +37,14 @@ if(isset($_GET['delid'])){
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css" />
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -101,9 +108,7 @@ if(isset($_GET['delid'])){
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom row-12">
-                                        <div class="card-header">
                                             <h4 class="card-title">Newsletters</h4>
-                                        </div>
                                 </div>
                                 <div class="card-datatable">
                                     <table class="dt-responsive table" id="example1">
@@ -123,7 +128,7 @@ if(isset($_GET['delid'])){
 
                                             <tr>
                                                 <td><?php echo $count;?></td>
-                                                <td><?php echo $row['email'];?></td>
+                                                <td><?php echo $row['email_id'];?></td>
                                                 <td>
                                                     <a class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         href="newsletters.php?delid=<?php echo $row['id']; ?>"
