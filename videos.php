@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('include/config.php');
-$sql=mysqli_query($conn,"select video from products");
+$sql=mysqli_query($conn,"select url from video");
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -45,7 +45,12 @@ $sql=mysqli_query($conn,"select video from products");
                 <?php
                 while($arr=mysqli_fetch_array($sql)){
                 ?>
-            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><iframe width="360" height="240" src="https://www.youtube.com/embed/<?php echo $arr['video']; ?>" title="K2 & K6 Knee Brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            	<div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                  <iframe width="360" height="240" src="https://www.youtube.com/embed/<?php echo $arr['url']; ?>" title="K2 & K6 Knee Brace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    
+                 </iframe>
+                    
+                </div>
                <?php } ?>
             </div>
          
