@@ -71,18 +71,50 @@
 
      <!-- Edit Modal -->
      <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-md">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title"> View Product</h4>
+            <h4 class="modal-title"> Edit Currency</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
-          <div class="modal-body body1">
+          <div class="modal-body">                          
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-1 row">
+                                                <label for="colFormLabelLg" class="col-sm-4 col-form-label-lg">Currency Name</label>
+                                                <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="colFormLabel" placeholder="Normal Input" />
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label for="colFormLabelLg" class="col-sm-4 col-form-label-lg">Currency Icon</label>
+                                                <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="colFormLabel" placeholder="Normal Input" />
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label for="colFormLabelLg" class="col-sm-4 col-form-label-lg">Conversion Rate</label>
+                                                <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="colFormLabel" placeholder="Normal Input" />
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label for="colFormLabelLg" class="col-sm-4 col-form-label-lg">Default Status</label>
+                                                <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="colFormLabel" placeholder="Normal Input" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
         
-          </div>
+      
           <div class="modal-footer">
+          <button type="submit" id="update" name="update" class="btn btn-primary me-1"> Submit</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
