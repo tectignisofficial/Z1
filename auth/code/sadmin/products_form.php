@@ -577,17 +577,17 @@ if($sql==1){
         })
     </script>
     <script>
-        $(document).ready(function(){
-    $('#myfile').change(function(){
-        if(this.width != 1071 || this.height != 1500){
-        alert('Please upload proper image with exact size : 1071 x 1500px');
-       }
-    });
+//         $(document).ready(function(){
+//     $('#myfile').change(function(){
+//         if(this.width != 1071 || this.height != 1500){
+//         alert('Please upload proper image with exact size : 1071 x 1500px');
+//        }
+//     });
 
-    $(document).on('click','.cancleicon',function(){
-        $(this).closest('.atrb').remove();
-    })
-});
+//     $(document).on('click','.cancleicon',function(){
+//         $(this).closest('.atrb').remove();
+//     })
+// });
 
 // let a=0;
 $(document).on('click','#show_attributes',function(){
