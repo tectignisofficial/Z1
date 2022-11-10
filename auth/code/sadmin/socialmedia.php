@@ -19,23 +19,6 @@ if(isset($_POST['update'])){
 }
 ?>
 
- <!-- whatsapp -->   
-<?php
-    if(isset($_POST['whatsappNoBtn'])){
-
-        $whatsapp=$_POST['whatsappNo'];
-        
-          $sql="UPDATE `social_media` SET `whatsapp`='$whatsapp' ";
-        
-          if (mysqli_query($conn, $sql)){
-            header("location:socialmedia.php");
-         } else {
-            echo "connection failed !";
-        }
-         
-    }
-    ?>
-
     <!-- twitter -->
 <?php
         if(isset($_POST['twitterupdate'])){
@@ -302,31 +285,6 @@ if(isset($_POST['update'])){
                                         </div>
                                         <?php   } ?>
                                         </form>
-
-                                        <!-- whatsapp -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select whatsapp from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/whatsapp.png" alt="facebook" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="whatsappNo" id="whatsappNo" placeholder="enter link " value="<?php echo $arr['whatsapp'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="whatsappNoBtn" type="update">Update</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
 
                                         <!-- twitter -->
                                         <form method="post">
