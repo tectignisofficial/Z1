@@ -6,10 +6,13 @@
         <div class="container-fluid">
             <div class="row">
             	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                    <div class="col-5 col-sm-5 col-md-5 col-lg-5">
                     <form action="" method="post">
                     <div class="currency-picker">
                         <span class="selected-currency">INR</span>
-                        <select name="myselect" id="" class="form-control" onchange="this.form.submit()">
+                        
+                         <ul id="currencies">
+                            <select name="myselect" id="" class="form-control" onchange="this.form.submit()">
                         <option value=""></option>
                             <option value="INR">INR</option>
                             <option value="GBP">GBP</option>
@@ -17,19 +20,18 @@
                             <option value="USD">USD</option>
                             <option value="AUD">AUD</option>
                         </select>
-                        <!-- <ul id="currencies">
-                            <li data-currency="INR" class="selected">INR</li>
-                            <li data-currency="GBP" class="">GBP</li>
-                            <li data-currency="CAD" class="">CAD</li>
-                            <li data-currency="USD" class="">USD</li>
-                            <li data-currency="AUD" class="">AUD</li>
-                        </ul> -->
+                        </ul> 
                     </div>
                     </form>
-                    <div class="language-dropdown">
-                      
                     </div>
-                    <p class="phone-no"><i class="anm anm-phone-s"></i> +91 7300044197</p>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <!-- <div class="language-dropdown">
+                      
+                      </div> -->
+                      <p class="phone-no"><i class="anm anm-phone-s"></i> +91 7300044197</p>
+                    </div>
+                   
+                   
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
                 	<div class="text-center"><p class="top-header_middle-text"> Worldwide Express Shipping</p></div>

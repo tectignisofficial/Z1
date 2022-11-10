@@ -608,6 +608,10 @@ height:2642px !important;
                                                 </form>
                                             </div>
                                             <div class="spr-reviews">
+                                                <?php
+                                                $reviewsql=mysqli_query($conn,"select * from reviews");
+                                                while($fetchreview=mysqli_fetch_array($reviewsql)){
+                                                ?>
                                                 <div class="spr-review">
                                                     <div class="spr-review-header">
                                                         <span
@@ -617,71 +621,18 @@ height:2642px !important;
                                                                     class="font-13 fa fa-star"></i><i
                                                                     class="font-13 fa fa-star"></i><i
                                                                     class="font-13 fa fa-star"></i></span></span>
-                                                        <h3 class="spr-review-header-title">Lorem ipsum dolor sit amet
+                                                        <h3 class="spr-review-header-title"><?php echo $fetchreview['name']; ?>
                                                         </h3>
-                                                        <span class="spr-review-header-byline"><strong>dsacc</strong> on
-                                                            <strong>Apr 09, 2019</strong></span>
+                                                        <!-- <span class="spr-review-header-byline"><strong>dsacc</strong> on
+                                                            <strong>Apr 09, 2019</strong></span> -->
                                                     </div>
                                                     <div class="spr-review-content">
-                                                        <p class="spr-review-content-body">Lorem ipsum dolor sit amet,
-                                                            consectetur adipiscing elit, sed do eiusmod tempor
-                                                            incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                                            minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                            ut aliquip ex ea commodo consequat.</p>
+                                                        <p class="spr-review-content-body"><?php echo $fetchreview['description']; ?></p>
                                                     </div>
                                                 </div>
-                                                <div class="spr-review">
-                                                    <div class="spr-review-header">
-                                                        <span
-                                                            class="product-review spr-starratings spr-review-header-starratings"><span
-                                                                class="reviewLink"><i class="fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i></span></span>
-                                                        <h3 class="spr-review-header-title">Lorem Ipsum is simply dummy
-                                                            text of the printing</h3>
-                                                        <span
-                                                            class="spr-review-header-byline"><strong>larrydude</strong>
-                                                            on <strong>Dec 30, 2018</strong></span>
-                                                    </div>
-
-                                                    <div class="spr-review-content">
-                                                        <p class="spr-review-content-body">Sed ut perspiciatis unde
-                                                            omnis iste natus error sit voluptatem accusantium doloremque
-                                                            laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                                            inventore veritatis et quasi architecto beatae vitae dicta
-                                                            sunt explicabo.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="spr-review">
-                                                    <div class="spr-review-header">
-                                                        <span
-                                                            class="product-review spr-starratings spr-review-header-starratings"><span
-                                                                class="reviewLink"><i class="fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i><i
-                                                                    class="font-13 fa fa-star"></i></span></span>
-                                                        <h3 class="spr-review-header-title">Neque porro quisquam est qui
-                                                            dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                                                            velit...</h3>
-                                                        <span
-                                                            class="spr-review-header-byline"><strong>quoctri1905</strong>
-                                                            on <strong>Dec 30, 2018</strong></span>
-                                                    </div>
-
-                                                    <div class="spr-review-content">
-                                                        <p class="spr-review-content-body">Lorem Ipsum is simply dummy
-                                                            text of the printing and typesetting industry. Lorem Ipsum
-                                                            has been the industry's standard dummy text ever since the
-                                                            1500s, when an unknown printer took a galley of type and
-                                                            scrambled.<br>
-                                                            <br>Lorem Ipsum is simply dummy text of the printing and
-                                                            typesetting industry.</p>
-                                                    </div>
-                                                </div>
+                                                <?php } ?>
+                                             
+                                               
                                             </div>
                                         </div>
                                     </div>
