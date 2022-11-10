@@ -53,44 +53,63 @@ $id=$_GET['eid'];
             <!--Main Content-->
             <div class="container">
                 <div class="row">
-                    <?php 
+                <?php 
                                     
-                        $sql=mysqli_query($conn,"select * from blog where id='$id'");
-                        $count=1;
-                        while($arr=mysqli_fetch_array($sql)){
-                    ?>
-                    <!--Main Content-->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
-                        <div class="blog--list-view">
-                            <div class="article">
-                                <!-- Article Image -->
-                                <a class="article_featured-image" href="#"><img style="height:400px"class="blur-up ls-is-cached lazyloaded"
-                                        src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></a>
-                                <h1><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a></h1>
+                                    $sql=mysqli_query($conn,"select * from blog where id='$id'");
+                                    $count=1;
+                                    while($arr=mysqli_fetch_array($sql)){
+                                ?>
 
-                                <div class="rte">
-                                <?php echo $arr['content'];?>
+                    <!--Main Content-->
+                    <div class="container">
+                        <div class="row">
+                            <!--Main Content-->
+                            <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
+                                <div class="custom-search">
+                                    <form action="/search" method="get" class="input-group search-header search"
+                                        role="search" style="position: relative;">
+                                        <input class="search-header__input search__input input-group__field"
+                                            type="search" name="q" placeholder="Search" aria-label="Search"
+                                            autocomplete="off">
+                                        <span class="input-group__btn"><button class="btnSearch" type="submit"> <i
+                                                    class="icon anm anm-search-l"></i> </button></span>
+                                    </form>
                                 </div>
-                                <hr>
-                                <div class="blog-nav">
-                                    <div class="text-left">
-                                        <i class="icon icon-arrow-circle-left"></i>
-                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>" title="">Previous</a>
+                                <div class="blog--list-view blog--grid-load-more">
+                                    <div class="article" style="display: block;">
+                                        <!-- Article Image -->
+                                        <a class="article_featured-image" href="#"><img
+                                                class="blur-up ls-is-cached lazyloaded"
+                                                data-src="assets/images/blog/blog-post-1.jpg"
+                                                src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>"
+                                                alt="It's all about how you wear"></a>
+                                        <h2 class="h3"><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a>
+                                        </h2>
+                                     
+                                        <div class="rte">
+                                            <p><?php echo $arr['content'];?></p>
+                                        </div>
+                                        <p><a href="blogs.php?eid=<?php echo $arr['id'];?>" class="btn btn-secondary btn--small">Read more <i
+                                                    class="fa fa-caret-right" aria-hidden="true"></i></a></p>
                                     </div>
-                                    <div class="text-right">
-                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>" title="">Next</a>
-                                        <i class="icon icon-arrow-circle-right"></i>
+
+                                    <div class="loadmore-post">
+                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>;" class="btn loadMorepost">Load More</a>
                                     </div>
                                 </div>
                             </div>
+                            <!--End Main Content-->
+                            <!--Sidebar-->
+                            <!--End Sidebar-->
                         </div>
                     </div>
+                    <?php $count++;  } ?>
+
                     <!--End Main Content-->
                     <!--Sidebar-->
 
                     <!--End Sidebar-->
                 </div>
-                <?php $count++;  } ?>
             </div>
             <!--End Main Content-->
         </div>

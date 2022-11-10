@@ -4,7 +4,7 @@ include("../../../include/config.php");
 if(isset($_POST['submit'])){
     
 $title=$_POST['title'];
-$content=$_POST['content'];
+$content=mysqli_real_escape_string($conn,$_POST['content']);
 $file=$_FILES['file']['name'];
 $tmp_name = $_FILES['file']['tmp_name']; 
 $loc="dist/img/".$file;
@@ -121,12 +121,17 @@ move_uploaded_file($tmp_name, $loc);
                                             <div class="col-12">
                                                 <div class="mb-2">
                                                     <label class="form-label">Content</label>
-                                                    <div id="">
+                                                    <div id="blog-editor-wrapper">
                                                         <div id="blog-editor-container">
-                                                            <textarea name="content" id="content"
+                                                            <div name="content" id="content" class="editor">
+                                                                <p>
+
+                                                                </p>
+                                                            </div>
+                                                            <!-- <textarea name="content" id="content"
                                                                 class="editor form-control">
 
-                                                            </textarea>
+                                                            </textarea> -->
                                                         </div>
                                                     </div>
                                                 </div>
