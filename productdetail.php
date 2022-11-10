@@ -460,7 +460,7 @@ height:2642px !important;
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
                                 <img src="assets/images/phone-call.png" alt="Hotline" title="Hotline" />
                                 <div class="details">
-                                    <h3>Hotline</h3>Talk to help line for your question on 4141 456 789, 4125 666 888
+                                    <h3>Support</h3>Talk to help line for your question on +91 7300044197
                                 </div>
                             </div>
                         </div>
