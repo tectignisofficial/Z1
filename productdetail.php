@@ -472,7 +472,7 @@ height:2642px !important;
                             <li rel="tab1"><a class="tablink">Product Details</a></li>
                             <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                             <li rel="tab3"><a class="tablink">Size Chart</a></li>
-                            <li rel="tab4"><a class="tablink">Shipping &amp; Returns</a></li>
+                            <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                         </ul>
                         <div class="tab-container">
                             <div id="tab1" class="tab-content">
