@@ -610,7 +610,7 @@ include('include/config.php');
                         <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
-                                <h2 class="h2">What They're Saying</h2>
+                                <h2 class="h2">Testimonials</h2>
                             </div>
                             <!--End Testimonial Slider Title-->
                             <!--Testimonial Slider Items-->
