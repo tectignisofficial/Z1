@@ -256,14 +256,14 @@ if($sql==1){
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/*,.webp" multiple/>
+                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/webp" multiple/>
                                         </div>
                                         <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple/>
                                         </div>
 
                                         <div class="upload-btn-wrapper">
@@ -295,7 +295,7 @@ if($sql==1){
                                     </div> -->
                                     <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" name="sizefile" id="sizefile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" accept="image/png, image/jpeg, image/jpg"  name="sizefile" id="sizefile" />
                                         </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
