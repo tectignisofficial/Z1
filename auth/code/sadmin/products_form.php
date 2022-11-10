@@ -4,6 +4,7 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
     $cont=$_POST['cont'] ?? null;
+    $hightlightfile=$_FILES['hightlightfile']['name'];
     $hoverfile=$_FILES['hoverfile']['name'];
     $sizefile=$_FILES['sizefile']['name'];
     $myvideofile=$_POST['myvideofile'];
@@ -21,17 +22,18 @@ if(isset($_POST['submit'])){
     $knee=$_POST['knee'] ?? null;
     $label=$_POST['label'] ?? null;
     $tname=$_POST['tname'] ?? null;
-$loc="image/product_Image/";
+$loc="image/product_image_check/";
 // move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
+move_uploaded_file($_FILES['hightlightfile']['tmp_name'],$loc.$hightlightfile);
 
 $images_name='';
 foreach ($_FILES["myfile"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
         $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
         $filename = $_FILES["myfile"]["name"][$key];
-        move_uploaded_file($tmp_name, $loc.$name);
+        move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
         
     }
@@ -47,11 +49,11 @@ if($attrname1 != ''){
         $s_attrname = $naames;
         $s_attrVal=$attrval1[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
     }
 }
 else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
 }
 
 if($sql==1){
@@ -243,7 +245,7 @@ if($sql==1){
                                                     <a class="dropdown-item" href="#">Youtube video</a>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                    s    </div> -->
                                         <div class="mt-2">
         <textarea class="summernote form-control" name="cont"></textarea>
     </div>
@@ -254,14 +256,19 @@ if($sql==1){
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.jpg,.png,.jpeg" multiple/>
+                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/webp" multiple/>
                                         </div>
-                                        
+                                        <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
+                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple/>
+                                        </div>
+
+                                        <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
-                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"/>
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
@@ -288,7 +295,7 @@ if($sql==1){
                                     </div> -->
                                     <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" name="sizefile" id="sizefile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" />
                                         </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
@@ -577,22 +584,22 @@ if($sql==1){
         })
     </script>
     <script>
-        $(document).ready(function(){
-    $('#myfile').change(function(){
-        if(this.width != 1071 || this.height != 1500){
-        alert('Please upload proper image with exact size : 1071 x 1500px');
-       }
-    });
+//         $(document).ready(function(){
+//     $('#myfile').change(function(){
+//         if(this.width != 1071 || this.height != 1500){
+//         alert('Please upload proper image with exact size : 1071 x 1500px');
+//        }
+//     });
 
-    $(document).on('click','.cancleicon',function(){
-        $(this).closest('.atrb').remove();
-    })
-});
+//     $(document).on('click','.cancleicon',function(){
+//         $(this).closest('.atrb').remove();
+//     })
+// });
 
-// let a=0;
+let a=0;
 $(document).on('click','#show_attributes',function(){
-    // a++;
-    // if(a<=3){
+    a++;
+    if(a<=1){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
@@ -614,7 +621,7 @@ $(document).on('click','#show_attributes',function(){
         <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>\
     </div>\
 </div>');
-    // }
+    }
 });
  
 function get(val){
