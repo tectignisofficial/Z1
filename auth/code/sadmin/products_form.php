@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
     $knee=$_POST['knee'] ?? null;
     $label=$_POST['label'] ?? null;
     $tname=$_POST['tname'] ?? null;
-$loc="image/product_Image/";
+$loc="image/product_image_check/";
 // move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
@@ -243,7 +243,7 @@ if($sql==1){
                                                     <a class="dropdown-item" href="#">Youtube video</a>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                    s    </div> -->
                                         <div class="mt-2">
         <textarea class="summernote form-control" name="cont"></textarea>
     </div>

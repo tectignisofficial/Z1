@@ -133,10 +133,10 @@ include('include/config.php');
                                                 }
 
                                                 ?>
-                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" src="auth/code/sadmin/image/product_Image/<?php echo $imagess;?>" alt="image" title="product">
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>" src="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>" alt="image" title="product">
                                             <!-- End image -->
                                             <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_Image/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
                                             <!-- End hover image -->
                                             <!-- product label -->
                                             <?php $label=$arr['label'];

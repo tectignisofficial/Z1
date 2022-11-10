@@ -205,7 +205,7 @@
                                                     <td class="control sorting_1" tabindex="0" style="display: none;">
                                                     </td>
                                                     <td><?php $count; ?></td>
-                                                    <td><img src="image/product_Image/<?php echo $arr['image']; ?>" width="50" height="50"></td>
+                                                    <td><img src="image/product_image_check/<?php echo $arr['image']; ?>" width="50" height="50"></td>
                                                     <td><?php echo $arr['name']; ?></td>
                                                     <td><?php echo $arr['price']; ?></td>
                                                     <td><?php echo $arr['stock_status']; ?></td>
