@@ -48,7 +48,6 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
-                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink" >
                                     <i class="font-13 fa fa-star">
                                     </i>
@@ -130,7 +129,6 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
-                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink">
                                     <i class="font-13 fa fa-star">
                                     </i>
@@ -212,7 +210,6 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
-                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink" >
                                     <i class="font-13 fa fa-star">
                                     </i>
