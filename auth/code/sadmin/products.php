@@ -130,7 +130,7 @@ if(isset($_GET['did'])){
                                 </a>
                                 </div>
                                 <div class="card-datatable">
-                                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
+                                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5" style="padding:10px">
                                         <!-- <div class="d-flex justify-content-between align-items-center mx-0 row">
                                             <div class="col-sm-12 col-md-6">
                                                 <div class="dataTables_length" id="DataTables_Table_3_length">
@@ -217,7 +217,9 @@ if(isset($_GET['did'])){
                                                     <td>0</td>
                                                     <!-- <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>   -->
                                                     <td><?php echo $arr['status']; ?></td> 
-                                                    <td><a href="products.php?did=<?php echo $arr['id']; ?>" class="btn btn-ouline-danger"><i class="fa fa-trash"></i></a></td>
+                                                    <td>
+                                                    <a href="products.php?eid=<?php echo $arr['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-edit"></i></a>    
+                                                    <a href="products.php?did=<?php echo $arr['id']; ?>" class="btn btn-outline-danger" ><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                                 <?php $count++; } ?>
                                             </tbody>
