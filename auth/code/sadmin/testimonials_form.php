@@ -1,4 +1,20 @@
 <?php
+include('../../../include/config.php');
+
+if(isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $company_name=$_POST['company'];
+    $message=$_POST['message'];
+   
+    $sql=mysqli_query($conn,"INSERT INTO `testimonial`(`name`, `company_name`, `message`) VALUES ('$name','$company_name','$message')");
+    if($sql==1){
+      echo '<script>alert("Successfully submitted");</script>';
+      header("location:testimonials.php");
+  }else {
+      echo '<script>alert("oops...somthing went wrong");</script>';
+  }
+          
+  }
 ?>
 
 <!DOCTYPE html>
@@ -136,18 +152,18 @@
                                             placeholder="Name" />
                                     </div>
                                     <div class="mb-1">
-                                        <label class="form-label" for="position">Position/ Company</label>
+                                        <label class="form-label" for="company">Company Name</label>
                                         <!-- <div>
                                             <button type="button" class="btn btn-primary">Show/hide Editor</button>
                                             <button type="button" class="btn btn-info">Add Media</button>
                                         </div> -->
                                        
-                                        <input type="text" id="myeditor" class="form-control" name="position"
-                                            placeholder="Position/Company" />
+                                        <input type="text" id="myeditor" class="form-control" name="company"
+                                            placeholder="Company Name" />
                                     </div>
                                     <div class="mb-1">
-                                        <label class="form-label" for="content">Content</label>                                                                         
-                                        <textarea type="text" id="content" style="height:10%;" class="form-control" name="content" placeholder=""></textarea>
+                                        <label class="form-label" for="content">Message</label>                                                                         
+                                        <textarea type="text" id="content" style="height:10%;" class="form-control" name="message" placeholder="Message"></textarea>
                                     </div>
                                 <!-- </form> -->
                             </div>
