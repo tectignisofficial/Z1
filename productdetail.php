@@ -527,14 +527,8 @@ height:2642px !important;
                                     <div class="spr-container">
                                         <div class="spr-header clearfix">
                                             <div class="spr-summary">
-                                                <span class="product-review"><a class="reviewLink"><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star-o"></i><i
-                                                            class="font-13 fa fa-star-o"></i> </a><span
-                                                        class="spr-summary-actions-togglereviews">Based on 6
-                                                        reviews456</span></span>
+                                                <span class="product-review">
+                                                    
                                                 <span class="spr-summary-actions">
                                                     <a href="#" class="spr-summary-actions-newreview btn">Write a
                                                         review</a>
