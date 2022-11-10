@@ -1,3 +1,7 @@
+<?php
+include('include/config.php');
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -18,6 +22,78 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .ratingCheck {
+            display: flex;
+            transform: rotateY(180deg);
+            justify-content: center;
+        }
+
+        .ratingCheck label {
+            display: block;
+            cursor: pointer;
+            width: 20px;
+            background: #f8f9fa;
+        }
+
+        .ratingCheck label:before {
+            content: '\f005';
+            font-family: FontAwesome;
+            position: relative;
+            display: block;
+            font-size: 15px;
+        }
+
+        .ratingCheck label:after {
+            content: '\f005';
+            font-family: FontAwesome;
+            position: absolute;
+            display: block;
+            font-size: 15px;
+            color: #ff344f;
+            top: 0;
+            opacity: 0;
+            transition: .5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+        }
+
+        .ratingCheck input {
+            display: none;
+        }
+
+        .ratingCheck>.fff {
+            color: #f7ab38f2;
+        }
+
+        .pagination .active .fa-circle {
+            color: #ff344f !important;
+        }
+
+        /* show star */
+        :root {
+            --star-size: 60px;
+            --star-color: #fff;
+            --star-colors: #676767;
+            --star-background: #ff344f;
+        }
+
+        .Stars1 {
+            --percent: calc(var(--rating) / 5 * 100%);
+
+            display: inline-block;
+            font-size: 22px;
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+        }
+
+        .Stars1:before {
+            content: '★★★★★';
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-colors) var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 
 <body class="page-template belle">
@@ -38,7 +114,7 @@
             </div>
             <!--End Page Title-->
 
-        <!--Client Review-->
+            <!--Client Review-->
             <div class="section" style="padding-top: -0px;">
                 <div class="container">
                     <div class="row">
@@ -48,6 +124,7 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
+                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink" >
                                     <i class="font-13 fa fa-star">
                                     </i>
@@ -118,9 +195,9 @@
                     </div>
                 </div>
             </div>
-                <!--End Logo Slider-->
+            <!--End Logo Slider-->
 
-                <div class="section" style="padding-top: -0px;">
+            <div class="section" style="padding-top: -0px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -129,6 +206,7 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
+                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink">
                                     <i class="font-13 fa fa-star">
                                     </i>
@@ -210,6 +288,7 @@
                                 <div class="quote-wraper">
                             <!--Testimonial Slider Title-->
                             <div class="section-header text-center">
+                                <h2 class="h2">What They're Saying</h2>
                                 <a class="product-review reviewLink" >
                                     <i class="font-13 fa fa-star">
                                     </i>
@@ -284,29 +363,29 @@
 
 
 
-            </div>
-            <!--End Body Content-->
         </div>
         <!--End Body Content-->
+    </div>
+    <!--End Body Content-->
 
-        <!--Footer-->
-        <?php include("include/footer.php");?>
-        <!--End Footer-->
-        <!--Scoll Top-->
-        <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
-        <!--End Scoll Top-->
+    <!--Footer-->
+    <?php include("include/footer.php");?>
+    <!--End Footer-->
+    <!--Scoll Top-->
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <!--End Scoll Top-->
 
-        <!-- Including Jquery -->
-        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/vendor/jquery.cookie.js"></script>
-        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="assets/js/vendor/wow.min.js"></script>
-        <!-- Including Javascript -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/lazysizes.js"></script>
-        <script src="assets/js/main.js"></script>
+    <!-- Including Jquery -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/vendor/jquery.cookie.js"></script>
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <!-- Including Javascript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/lazysizes.js"></script>
+    <script src="assets/js/main.js"></script>
     </div>
 </body>
 

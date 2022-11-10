@@ -49,11 +49,11 @@ if($attrname1 != ''){
         $s_attrname = $naames;
         $s_attrVal=$attrval1[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
     }
 }
 else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname]')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
 }
 
 if($sql==1){
@@ -256,25 +256,25 @@ if($sql==1){
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/*,.webp" multiple/>
+                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/webp" multiple/>
                                         </div>
                                         <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple/>
                                         </div>
 
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
-                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"/>
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
                                                     class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
-                                                    <img src="http://ecommerce.sachinenterprise.in/vendor/core/core/base/images/placeholder.png"
+                                                    <img src="auth/code/sadmin/image/icon/placeholder.png"
                                                         alt="Image" width="100">
                                                     <br>
                                                     <p style="color:#c3cfd8">Using button
@@ -295,7 +295,7 @@ if($sql==1){
                                     </div> -->
                                     <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" name="sizefile" id="sizefile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" />
                                         </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
@@ -596,10 +596,10 @@ if($sql==1){
 //     })
 // });
 
-// let a=0;
+let a=0;
 $(document).on('click','#show_attributes',function(){
-    // a++;
-    // if(a<=3){
+    a++;
+    if(a<=1){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
@@ -621,7 +621,7 @@ $(document).on('click','#show_attributes',function(){
         <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>\
     </div>\
 </div>');
-    // }
+    }
 });
  
 function get(val){

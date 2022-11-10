@@ -1,12 +1,16 @@
         <!--Top Header-->
+        <?php
+        include("currencysession.php");
+        ?>
         <div class="top-header">
         <div class="container-fluid">
             <div class="row">
             	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                    <form action="auth/code/sadmin/api.php" method="post">
+                    <form action="" method="post">
                     <div class="currency-picker">
                         <span class="selected-currency">INR</span>
                         <select name="myselect" id="" class="form-control" onchange="this.form.submit()">
+                        <option value=""></option>
                             <option value="INR">INR</option>
                             <option value="GBP">GBP</option>
                             <option value="CAD">CAD</option>

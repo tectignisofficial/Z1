@@ -4,7 +4,7 @@ include('../../../include/config.php');
 if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $company_name=$_POST['company'];
-    $message=$_POST['message'];
+    $message=mysqli_real_escape_string($conn,$_POST['message']);
    
     $sql=mysqli_query($conn,"INSERT INTO `testimonial`(`name`, `company_name`, `message`) VALUES ('$name','$company_name','$message')");
     if($sql==1){
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
       header("location:testimonials.php");
   }else {
       echo '<script>alert("oops...somthing went wrong");</script>';
-  }
+  } 
           
   }
 ?>
@@ -142,10 +142,10 @@ if(isset($_POST['submit'])){
             <div class="content-body">
             <form class="form-check" method="post" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="mb-1 col-md-9">
+                    <div class="mb-1 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                               
+                                <form>
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
@@ -163,44 +163,13 @@ if(isset($_POST['submit'])){
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="content">Message</label>                                                                         
-                                        <textarea type="text" id="content" style="height:10%;" class="form-control" name="message" placeholder="Message"></textarea>
+                                        <textarea type="text" id="content"  class="form-control" name="message" placeholder="Message"></textarea>
                                     </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-1 col-md-3">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Publish</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <button type="submit" name="submit" class="btn btn-success">Save</button>
-                                            <button type="button" class="btn btn-info">Save & Edit</button>
-                                        </div>
-                                    </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Status</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <select class="form-select" id="sbasicSelect" name="published">
-                                                <option>Published</option>
-                                                <option>Draft</option>
-                                                <option>Pending</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                <!-- </form> -->
+                                    <div class="col-12">
+                                                <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>
+                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                                            </div>
+                                </form>
                             </div>
                         </div>
                     </div>

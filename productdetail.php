@@ -277,7 +277,12 @@ height:2642px !important;
                                         <span
                                             class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
                                             <span id="ProductPrice-product-template"><span
-                                                    class="money">₹<?php echo $arr['price'] ?></span>
+                                                    class="money"> <?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$arr['price'] * $_SESSION['USD'].'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            <?php } ?></span>
                                         </span>
                                     
                                     </p>
@@ -295,14 +300,20 @@ height:2642px !important;
                                     enctype="multipart/form-data">
                                     <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                         <div class="product-form__item">
-                                            <label class="header">Size: <span class="slVariant">XS</span></label>
-                                            <div data-value="XS" class="swatch-element xs available">
-                                                <input class="swatchInput" id="swatch-1-xs" type="radio" name="option1"
-                                                    value="XS" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
-                                                <label class="swatchLbl medium rectangle" for="swatch-1-xs"
-                                                    title="XS">XS</label>
+                                            
+                                            <label class="header">Size: <span class="slVariant">xs</span></label>
+                                            <?php
+                                            $sizesql=mysqli_query($conn,"select * from products where name='$productName'");
+                                            while($sizearr=mysqli_fetch_array($sizesql)){
+                                            ?>
+                                            <div data-value="<?php echo $sizearr['attribute']; ?>" class="swatch-element xs available">
+                                                <input class="swatchInput" id="swatch-1-<?php echo $sizearr['attribute']; ?>" type="radio" name="option1"
+                                                    value="<?php echo $sizearr['attribute']; ?>" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
+                                                <label class="swatchLbl medium rectangle" for="swatch-1-<?php echo $sizearr['attribute']; ?>"
+                                                    title="<?php echo $sizearr['attribute']; ?>"><?php echo $sizearr['attribute']; ?></label>
                                             </div>
-                                            <div data-value="S" class="swatch-element s available">
+                                            <?php } ?>
+                                            <!-- <div data-value="S" class="swatch-element s available">
                                                 <input class="swatchInput" id="swatch-1-s" type="radio" name="option1"
                                                     value="S" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-s"
@@ -325,7 +336,7 @@ height:2642px !important;
                                                     value="XL" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-xl"
                                                     title="XL">XL</label>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                   <div id="sizequa"></div>
@@ -334,7 +345,10 @@ height:2642px !important;
                                        
                                             <input type="hidden" name="productid" value="<?php echo $arr['id'] ?>">
                                             <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
-                                            <input type="hidden" name="price" value="<?php echo $arr['price'] ?>">
+                                            <input type="hidden" name="price" value="<?php echo $arr['price']; ?>">
+                                            
+                                            <input type="hidden" name="producticon" value="<?php echo $_SESSION['icon'] ?>">
+                                           
                                         <div class="product-form__item--quantity">
                                             <div class="wrapQtyBtn">
                                                 <div class="qtyField">
@@ -809,7 +823,7 @@ height:2642px !important;
     <div id="tab1" class="tab_content grid-products">
         <div class="productSlider">
         <?php
-                                            $sql=mysqli_query($conn,"select * from products limit 4");
+                                            $sql=mysqli_query($conn,"select * from products group by name limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
             <div class="col-12 item">
@@ -825,10 +839,10 @@ height:2642px !important;
                                                 // }
 
                                                 ?>
-                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" alt="image" title="product">
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" alt="image" title="product"  width="300" height="300">
                                             <!-- End image -->
                                             <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product"  width="300" height="300">
                                             <!-- End hover image -->
                         <!-- product label -->
                         <?php $label=$arr['label'];
@@ -841,9 +855,9 @@ height:2642px !important;
 
                     <!-- Start product button -->
                     <form class="variants add" action="#"
-                        onclick="window.location.href='cart.html'" method="post">
-                        <button class="btn btn-addto-cart" type="button"
-                            tabindex="0">Add To Cart</button>
+                         method="post">
+                        <a href="<?php echo $arr['name']; ?>" class="btn btn-addto-cart" type="button"
+                            tabindex="0">Add To Cart</a>
                     </form>
                     <div class="button-set">
                     <a href="productdetail.php?name=<?php echo $arr['name']; ?>" title="Quick View"
@@ -861,12 +875,17 @@ height:2642px !important;
                 <div class="product-details text-center">
                     <!-- product name -->
                     <div class="product-name">
-                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
+                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name']; ?></a>
                     </div>
                     <!-- End product name -->
                     <!-- product price -->
                     <div class="product-price">
-                        <span class="price">$550.00</span>
+                        <span class="price"> <?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$arr['price'] * $_SESSION['USD'].'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            <?php } ?></span>
                     </div>
                     <!-- End product price -->
 
@@ -889,33 +908,29 @@ height:2642px !important;
 
         </div>
     </div>
-    <div id="tab2" class="tab_content grid-products">
+    <!-- <div id="tab2" class="tab_content grid-products">
         <div class="productSlider">
             <div class="col-12 item">
-                <!-- start product image -->
+              
                 <div class="product-image">
-                    <!-- start product image -->
+                  
                     <a href="short-description.html">
-                        <!-- image -->
+                       
                         <img class="primary blur-up lazyload"
                             data-src="assets/images/product-images/product-image3.jpg"
                             src="assets/images/product-images/product-image3.jpg"
                             alt="image" title="product">
-                        <!-- End image -->
-                        <!-- Hover image -->
+                       
                         <img class="hover blur-up lazyload"
                             data-src="assets/images/product-images/product-image3-1.jpg"
                             src="assets/images/product-images/product-image3-1.jpg"
                             alt="image" title="product">
-                        <!-- End hover image -->
-                        <!-- product label -->
+                     
                         <div class="product-labels rectangular"><span
                                 class="lbl pr-label2">Hot</span></div>
-                        <!-- End product label -->
+                        
                     </a>
-                    <!-- end product image -->
-
-                    <!-- Start product button -->
+                   
                     <form class="variants add" action="#"
                         onclick="window.location.href='cart.html'" method="post">
                         <button class="btn btn-addto-cart" type="button"
@@ -939,22 +954,19 @@ height:2642px !important;
                             </a>
                         </div>
                     </div>
-                    <!-- end product button -->
+                    
                 </div>
-                <!-- end product image -->
-
-                <!--start product details -->
+               
                 <div class="product-details text-center">
-                    <!-- product name -->
+                  
                     <div class="product-name">
                         <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
                     </div>
-                    <!-- End product name -->
-                    <!-- product price -->
+                  
                     <div class="product-price">
                         <span class="price">$550.00</span>
                     </div>
-                    <!-- End product price -->
+                   
 
                     <div class="product-review">
                         <i class="font-13 fa fa-star"></i>
@@ -963,37 +975,31 @@ height:2642px !important;
                         <i class="font-13 fa fa-star"></i>
                         <i class="font-13 fa fa-star-o"></i>
                     </div>
-                    <!-- Variant -->
-
-                    <!-- End Variant -->
+                  
                 </div>
-                <!-- End product details -->
+                
             </div>
             <div class="col-12 item">
-                <!-- start product image -->
+             
                 <div class="product-image">
-                    <!-- start product image -->
+                   
                     <a href="short-description.html">
-                        <!-- image -->
+                      
                         <img class="primary blur-up lazyload"
                             data-src="assets/images/product-images/product-image4.jpg"
                             src="assets/images/product-images/product-image4.jpg"
                             alt="image" title="product" />
-                        <!-- End image -->
-                        <!-- Hover image -->
+                       
                         <img class="hover blur-up lazyload"
                             data-src="assets/images/product-images/product-image4-1.jpg"
                             src="assets/images/product-images/product-image4-1.jpg"
                             alt="image" title="product" />
-                        <!-- End hover image -->
-                        <!-- product label -->
+                       
                         <div class="product-labels"><span
                                 class="lbl on-sale">Sale</span></div>
-                        <!-- End product label -->
+                      
                     </a>
-                    <!-- end product image -->
-
-                    <!-- Start product button -->
+                  
                     <form class="variants add" action="#"
                         onclick="window.location.href='cart.html'" method="post">
                         <button class="btn btn-addto-cart" type="button"
@@ -1017,23 +1023,20 @@ height:2642px !important;
                             </a>
                         </div>
                     </div>
-                    <!-- end product button -->
+                  
                 </div>
-                <!-- end product image -->
-
-                <!--start product details -->
+              
                 <div class="product-details text-center">
-                    <!-- product name -->
+                   
                     <div class="product-name">
                         <a href="short-description.html">Cape Dress</a>
                     </div>
-                    <!-- End product name -->
-                    <!-- product price -->
+                
                     <div class="product-price">
                         <span class="old-price">$900.00</span>
                         <span class="price">$788.00</span>
                     </div>
-                    <!-- End product price -->
+                  
 
                     <div class="product-review">
                         <i class="font-13 fa fa-star"></i>
@@ -1042,14 +1045,12 @@ height:2642px !important;
                         <i class="font-13 fa fa-star-o"></i>
                         <i class="font-13 fa fa-star-o"></i>
                     </div>
-                    <!-- Variant -->
-
-                    <!-- End Variant -->
+                   
                 </div>
-                <!-- End product details -->
+             
             </div>
         </div>
-    </div>
+    </div> -->
 
 </div>
 </div>
