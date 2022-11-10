@@ -1,6 +1,6 @@
 <?php
 include("include/config.php");
-$id=$_GET['eid'];
+// $id=$_GET['eid'];
 
 ?>
 

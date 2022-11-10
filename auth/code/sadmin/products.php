@@ -1,4 +1,8 @@
-<?php include('../../../include/config.php') ?>
+<?php include('../../../include/config.php');
+if(isset($_GET['did'])){
+    $did=$_GET['did'];
+    $sql=mysqli_query($conn,"delete from products where id='$did'");
+} ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -174,23 +178,23 @@
                                                         Method</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">QUANTITIY
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">SKU
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">ORDER
                                                     </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">Created AT
-                                                    </th>
+                                                    </th> -->
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">STATUS
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 70px;"
+                                                        aria-label="Status: activate to sort column ascending">Action
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -204,15 +208,16 @@
                                                 <tr class="odd">
                                                     <td class="control sorting_1" tabindex="0" style="display: none;">
                                                     </td>
-                                                    <td><?php $count; ?></td>
+                                                    <td><?php echo  $count; ?></td>
                                                     <td><img src="image/product_image_check/<?php echo $arr['hightlightfile']; ?>" width="50" height="50"></td>
                                                     <td><?php echo $arr['name']; ?></td>
                                                     <td><?php echo $arr['price']; ?></td>
                                                     <td><?php echo $arr['stock_status']; ?></td>
                                                     <td><?php echo $arr['sku']; ?></td>
                                                     <td>0</td>
-                                                    <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>  
+                                                    <!-- <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>   -->
                                                     <td><?php echo $arr['status']; ?></td> 
+                                                    <td><a href="products.php?did=<?php echo $arr['id']; ?>" class="btn btn-ouline-danger"><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                                 <?php $count++; } ?>
                                             </tbody>
