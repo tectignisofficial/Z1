@@ -596,10 +596,10 @@ if($sql==1){
 //     })
 // });
 
-// let a=0;
+let a=0;
 $(document).on('click','#show_attributes',function(){
-    // a++;
-    // if(a<=3){
+    a++;
+    if(a<=1){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
@@ -621,7 +621,7 @@ $(document).on('click','#show_attributes',function(){
         <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>\
     </div>\
 </div>');
-    // }
+    }
 });
  
 function get(val){
