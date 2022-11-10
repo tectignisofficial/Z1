@@ -109,7 +109,13 @@ if(isset($_GET['did'])){
                                     <td class="text-center small--hide"><a href="cart.php?did=<?php echo $values['itemid'] ?>" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                 </tr>
                                 <?php  
-                            $total= $total + ($values['quantity'] * $values['price']);    
+                                if(isset($_SESSION['USD'])){
+                                    $total= $total + ($values['quantity'] * $values['price'] * $_SESSION['USD']);  
+                                }
+                                else{
+
+                                    $total= $total + ($values['quantity'] * $values['price']);  }
+                             
                             }
                                 } ?>
                                 <!-- <tr class="cart__row border-bottom line1 cart-flex border-top">
@@ -164,7 +170,9 @@ if(isset($_GET['did'])){
                     <div class="solid-border">
                       <div class="row">
                       	<span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
-                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">$<?php if($_SESSION['shopping_cart']){ echo number_format($total,2);}else{ echo '0.00'; } ?></span></span>
+                        <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money"><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
+                            echo "<i class='fa fa-inr'></i> ";
+                        } if($_SESSION['shopping_cart']){ echo number_format($total,2);}else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                       <p class="cart_tearm">

@@ -94,9 +94,9 @@ include('include/config.php');
                                 	<div class="col-4 col-md-4 col-lg-4 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                    	<span class="filters-toolbar__product-count">Showing: <?php $sql=mysqli_query($conn,"select * from products");
+                                    	<!-- <span class="filters-toolbar__product-count">Showing: <?php $sql=mysqli_query($conn,"select * from products");
                                         $count=mysqli_num_rows($sql);
-                                        echo $count;  ?></span>
+                                        echo $count;  ?></span> -->
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-right">
                                     	<div class="filters-toolbar__item">
