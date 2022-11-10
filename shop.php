@@ -1,5 +1,5 @@
 <?php
-session_start();Based on 6
+session_start();
 include('include/config.php');
 ?>
 <!DOCTYPE html>
