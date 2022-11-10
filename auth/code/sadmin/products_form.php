@@ -268,7 +268,7 @@ if($sql==1){
 
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
-                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/*,.jpg,.png,.jpeg"/>
+                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"/>
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
@@ -295,7 +295,7 @@ if($sql==1){
                                     </div> -->
                                     <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" accept="image/png, image/jpeg, image/jpg"  name="sizefile" id="sizefile" />
+                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" />
                                         </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
