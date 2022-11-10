@@ -4,6 +4,7 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
     $cont=$_POST['cont'] ?? null;
+    $hightlightfile=$_FILES['hightlightfile']['name'];
     $hoverfile=$_FILES['hoverfile']['name'];
     $sizefile=$_FILES['sizefile']['name'];
     $myvideofile=$_POST['myvideofile'];
@@ -25,6 +26,7 @@ $loc="image/product_image_check/";
 // move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
+move_uploaded_file($_FILES['hightlightfile']['tmp_name'],$loc.$hightlightfile);
 
 $images_name='';
 foreach ($_FILES["myfile"]["error"] as $key => $error) {
@@ -254,10 +256,15 @@ if($sql==1){
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                       
+                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/*,.webp" multiple/>
                                         </div>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/>
+                                        <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
+
+                                        <div class="upload-btn-wrapper">
+                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/>
+                                        </div>
 
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>

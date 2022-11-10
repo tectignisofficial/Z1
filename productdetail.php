@@ -222,17 +222,17 @@ height:2642px !important;
                                            
                                                 
                                                 <?php
-                                                $image = $arr['image'];
-                                                $image = explode(',',$image);
-                                                foreach($image AS $imagess){
-                                                    echo ' ';
-                                                }
+                                                // $image = $arr['image'];
+                                                // $image = explode(',',$image);
+                                                // foreach($image AS $imagess){
+                                                //     echo ' ';
+                                                // }
 
                                                 ?>
                                                 <img class="blur-up lazyload zoompro"
-                                                data-zoom-image="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>"
+                                                data-zoom-image="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                 alt=""
-                                                src="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>" />
+                                                src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" />
                                         </div>
                                         <div class="product-labels"><span class="lbl on-sale"><?php echo $arr['label']; ?></span></div>
                                         <div class="product-buttons">
@@ -819,13 +819,13 @@ height:2642px !important;
                     <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                         <!-- image -->
                         <?php
-                                                $image = $arr['image'];
-                                                $image = explode(',',$image);
-                                                foreach($image AS $imagess){
-                                                }
+                                                // $image = $arr['image'];
+                                                // $image = explode(',',$image);
+                                                // foreach($image AS $imagess){
+                                                // }
 
                                                 ?>
-                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>" src="auth/code/sadmin/image/product_image_check/<?php echo $imagess;?>" alt="image" title="product">
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" alt="image" title="product">
                                             <!-- End image -->
                                             <!-- Hover image -->
                                             <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
