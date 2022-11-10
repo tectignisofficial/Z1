@@ -122,39 +122,36 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                            <div class="card-header border-bottom row-12">
+                                <div class="card-header border-bottom row-12">
 
-<div class="col-1">
-    <div class="btn-group">
-        <button type="button"
-            class="btn btn-outline-primary dropdown-toggle waves-effect show"
-            data-bs-toggle="dropdown" aria-expanded="true">
-            Bulk actions
-        </button>
-        <ul class="dropdown-menu "
-            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
-            data-popper-placement="bottom-start">
-            <li><a class="dropdown-item" href="#">bulk changes</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-        </ul>
-    </div>
-</div>
-<div class="col-1">
-    <button type="button" class="btn btn-primary">Filters</button></div>
-<div class="col-2">
-    <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
-        <label><input type="search" class="form-control input-sm"
-                placeholder="Search..."
-                aria-controls="botble-page-tables-page-table"></label>
-    </div>
-</div>
-<div class="col-4"></div>
-<div class="col-1">
-</div>
-<button class="btn btn-info" tabindex="0"
-    aria-controls="botble-page-tables-page-table" type="button"><span><i
-            data-feather="refresh-cw"></i> reload</span></button>
-</div>
+                                    <div class="col-12">
+                                        <!-- <div class="btn-group" style="justify-content: center;
+                                            -left: 32%; width: 25%;">
+                                            <button type="button" class="btn btn-outline-secondary">Product
+                                                Name</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">K2 Comfortline Knee Orthosis</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">K4 Osteo Align Knee Orthosis</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">K4 Osteo Align Knee Orthosis</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <div class="col-1">
+                                    </div>
+                                    <a class="btn btn-primary" href="testimonials_form.php"><i class="fa fa-plus"></i>
+                                        Create
+                                    </a>
+                                </div>
                                 <div class="card-datatable">
                                     <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5">
                                         <div class="d-flex justify-content-between align-items-center mx-0 row">
@@ -185,32 +182,34 @@
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 20px;"
-                                                        aria-label="Date: activate to sort column ascending">ID
+                                                        aria-label="Date: activate to sort column ascending">SR NO.
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 30px;"
-                                                        aria-label="Name: activate to sort column ascending">PRODUCT</TITle>
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">USER
+                                                        aria-label="Name: activate to sort column ascending">NAME
+                                                        </TITle>
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">STAR
                                                     </th>
-                                                  
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">COMMENT
+                                                        aria-label="Status: activate to sort column ascending">STAR
+                                                    </th>
+
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 70px;"
+                                                        aria-label="Status: activate to sort column ascending">
+                                                        DESCRIPTION
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">STATUS
+                                                        aria-label="Status: activate to sort column ascending">LOCATION
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">Created AT
+                                                        aria-label="Status: activate to sort column ascending">LINK
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
@@ -222,14 +221,14 @@
                                                 <tr>
                                                     <!-- <th class="control" rowspan="1" colspan="1" style="display: none;">
                                                     </th> -->
-                                                    <th rowspan="1" colspan="1">ID</th>
-                                                    <th rowspan="1" colspan="1">PRODUCT</th>
-                                                    <th rowspan="1" colspan="1">USER</th>
-                                                    <th rowspan="1" colspan="1">STAR</th>
-                                                    <th rowspan="1" colspan="1">COMMENT</th>
-                                                    <th rowspan="1" colspan="1">STATUS</th>
-                                                    <th rowspan="1" colspan="1">Created AT</th>
-                                                    <th rowspan="1" colspan="1">ACTION</th>
+                                                    <th>ID</th>
+                                                    <th>PRODUCT</th>
+                                                    <th>USER</th>
+                                                    <th>STAR</th>
+                                                    <th>COMMENT</th>
+                                                    <th>STATUS</th>
+                                                    <th>Created AT</th>
+                                                    <th>ACTION</th>
                                                 </tr>
 
                                             </tfoot>
@@ -237,15 +236,14 @@
                                                 <tr>
                                                     <!-- <td class="control sorting_1" tabindex="0" style="display: none;">g
                                                     </td> -->
-                                                    <td>111</td>
-                                                    <td>ABC</td>
-                                                    <td>XYZ</td>
-                                                    <td>3</td>
-                                                    <td>DYGKHJYOIJU</td>  
-                                                    <td>Published</td>  
-                                                    <td>12/10/22</td> 
-                                                    <td><a href=""><button
-                                                                type="button"
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a></td>
                                                 </tr>
