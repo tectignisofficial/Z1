@@ -254,9 +254,9 @@ if($sql==1){
                                        
                                         <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.jpg,.png,.jpeg" multiple/>
+                                       
                                         </div>
-                                        
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/*,.jpg,.png,.jpeg" multiple/>
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
