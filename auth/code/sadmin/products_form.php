@@ -100,7 +100,7 @@ if($sql==1){
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   
+ 
     <style>
         .widget-title {
             border-bottom: 1px solid #eeeeee;
@@ -203,9 +203,12 @@ if($sql==1){
                                             <button type="button" class="btn btn-primary">Show/hide Editor</button>
                                             <button type="button" class="btn btn-info">Add Media</button>
                                         </div> -->
-                                       
-                                        <input type="text" id="myeditor" class="form-control" name="desc"
-                                            placeholder="Description" />
+                                        <div class="mt-2">
+        <textarea class="summernote form-control" name="desc"></textarea>
+    </div>
+    
+                                        <!-- <input type="text" id="myeditor" class="form-control" name="desc"
+                                            placeholder="Description" /> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="cont">Content</label>
@@ -241,8 +244,10 @@ if($sql==1){
                                                 </div>
                                             </div>
                                         </div> -->
-                                       
-                                        <input type="text" id="cont" class="form-control" name="cont" placeholder=""/>
+                                        <div class="mt-2">
+        <textarea class="summernote form-control" name="cont"></textarea>
+    </div>
+                                        <!-- <input type="text" id="cont" class="form-control" name="cont" placeholder=""/> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="images">Images</label><br>
@@ -418,7 +423,7 @@ if($sql==1){
                                     <div class="row">
                                         <div class="col-12">
                                             <button type="submit" name="submit" class="btn btn-success">Save</button>
-                                            <button type="button" class="btn btn-info">Save & Edit</button>
+                                            <button type="button" class="btn btn-info saveEdit">Save & Edit</button>
                                         </div>
                                     </div>
                                 <!-- </form> -->
@@ -432,10 +437,10 @@ if($sql==1){
                                 <!-- <form class="form form-vertical"> -->
                                     <div class="row">
                                         <div class="col-12">
-                                            <select class="form-select" id="sbasicSelect" name="published">
-                                                <option>Published</option>
-                                                <option>Draft</option>
-                                                <option>Pending</option>
+                                            <select class="form-select" id="sbasicSelect" name="published" onChange="pub(this.value)">
+                                                <option value="Published">Published</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="Pending">Pending</option>
                                             </select>
                                         </div>
                                     </div>
@@ -623,8 +628,24 @@ function get(val){
 });
 }
 
+$(".saveEdit").css("display","none");
+function pub(val){
+    if(val=='Published'){
+        $(".saveEdit").css("display","block");
+    }
+}
+
+$(document).ready(function() {
+      $('.summernote').summernote();
+
+    });
     </script>
-   
+     <!-- include libraries(jQuery, bootstrap) -->
+    
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    
 </body>
 <!-- END: Body-->
 
