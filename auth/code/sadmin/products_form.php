@@ -31,7 +31,7 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
         $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
         $filename = $_FILES["myfile"]["name"][$key];
-        move_uploaded_file($tmp_name, $loc.$name);
+        move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
         
     }
