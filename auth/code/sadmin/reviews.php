@@ -161,11 +161,17 @@ if(isset($_GET['delid'])){
                                                     <td><?php echo $row['location'];?></td>
                                                     <td><?php echo $row['link'];?></td>
                                                     <td>
-                                                        <a href="reviews.php?delid=<?php echo $row['id']; ?>"><button
+                                                        <!-- <a href="reviews.php?delid=<?php echo $row['id']; ?>"><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                                 data-id="=<?php echo $row['id']; ?>"><i
-                                                                    data-feather="trash"></i></button></a>
+                                                                    data-feather="trash"></i></button></a> -->
+                                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        href="reviews.php?delid=<?php echo $row['id']; ?>"
+                                                        onclick="return checkDelete()"
+                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        data-id="=<?php echo $row['id']; ?>">
+                                                        <i data-feather="trash-2"></i>
                                                     </td>
                                                 </tr>
                                                 <?php $count++;  } ?>
