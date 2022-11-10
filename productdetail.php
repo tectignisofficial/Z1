@@ -453,7 +453,7 @@ height:2642px !important;
                                 <img src="assets/images/worldwide.png" alt="Worldwide Delivery"
                                     title="Worldwide Delivery" />
                                 <div class="details">
-                                    <h3>Worldwide Delivery</h3>FREE &amp; fast shipping to over 200+ countries &amp;
+                                    <h3>Worldwide Delivery</h3>FREE &amp; Shipping in India, US, UK, Canada &amp;
                                     regions.
                                 </div>
                             </div>
