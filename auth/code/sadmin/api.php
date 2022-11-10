@@ -75,5 +75,24 @@ if(isset($_POST['size'])){
 }
 
 if(isset($_POST['myselect'])){
+  $sql=mysqli_query($conn,"select price from products");
+  $arr=mysqli_fetch_array($sql);
+  $digit=$arr['price'];
+  if($currency=="USD"){
+    $output = $digit * 51.52;
+    echo"<center><label class='text-success' style='font-size:25px;'>$".$output."</label></center>";
+}else if($currency=="GBP"){
+    $output = $digit * 63.62;
+    echo"<center><label class='text-success' style='font-size:25px;'>€".$output."</label></center>";
+}else if($currency=="INR"){
+    $output = $digit;
+    echo"<center><label class='text-success' style='font-size:25px;'>₱".$output."</label></center>";
+}else if($currency=="CAD"){
+    $output = $digit * 0.47;
+    echo"<center><label class='text-success' style='font-size:25px;'>¥".$output."</label></center>";
+}else if($currency=="AUD"){
+    $output = $digit;
+    echo"<center><label class='text-success' style='font-size:25px;'>$".$output."</label></center>";
+}
 }
 ?>
