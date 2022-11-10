@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('include/config.php');
 ?>
 <!DOCTYPE html>
@@ -117,7 +118,7 @@ include('include/config.php');
                         <div class="grid-products grid--view-items">
                             <div class="row">
                             <?php
-                                            $sql=mysqli_query($conn,"select * from products");
+                                            $sql=mysqli_query($conn,"select * from products group by name");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
@@ -133,10 +134,10 @@ include('include/config.php');
                                                 // }
 
                                                 ?>
-                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" alt="image" title="product">
+                                            <img class="primary blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>" alt="image" title="product" width="300" height="300">
                                             <!-- End image -->
                                             <!-- Hover image -->
-                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product">
+                                            <img class="hover blur-up lazyload" data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>" alt="image" title="product"  width="300" height="300">
                                             <!-- End hover image -->
                                             <!-- product label -->
                                             <?php $label=$arr['label'];
@@ -165,7 +166,12 @@ include('include/config.php');
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            <span class="price">$<?php echo $arr['price'];?></span>
+                                            <span class="price"> <?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$arr['price'] * $_SESSION['USD'].'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            <?php } ?></span>
                                         </div>
                                         <!-- End product price -->
                                         

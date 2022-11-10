@@ -274,7 +274,7 @@ if($sql==1){
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
                                                     class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
-                                                    <img src="http://ecommerce.sachinenterprise.in/vendor/core/core/base/images/placeholder.png"
+                                                    <img src="auth/code/sadmin/image/icon/placeholder.png"
                                                         alt="Image" width="100">
                                                     <br>
                                                     <p style="color:#c3cfd8">Using button

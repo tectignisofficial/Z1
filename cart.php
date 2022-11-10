@@ -80,7 +80,12 @@ if(isset($_GET['did'])){
                                         </div> -->
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item">
-                                        <span class="money">$<?php echo $values['price']; ?></span>
+                                        <span class="money"> <?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$values['price'] * $_SESSION['USD'].'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo $values['price'];?>
+                                                            <?php } ?></span>
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
                                         <div><span class="quantity"><?php echo $values['quantity']; ?></span></div>
@@ -93,7 +98,13 @@ if(isset($_GET['did'])){
                                         </div> -->
                                     </td>
                                     <td class="text-right small--hide cart-price">
-                                        <div><span class="money"><?php echo number_format($values['quantity'] * $values['price'],2 ); ?></span></div>
+                                        <div><span class="money"><i class="<?php echo $_SESSION['icon'] ?>"></i><?php  
+                                              if(isset($_SESSION['USD'])){
+                                                   echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($values['quantity'] * $values['price'],2 )?>
+                                                            <?php } ?>
+                                        </span></div>
                                     </td>
                                     <td class="text-center small--hide"><a href="cart.php?did=<?php echo $values['itemid'] ?>" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                 </tr>
