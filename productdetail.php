@@ -46,7 +46,7 @@ else{
 }
 }
 
-if($_POST['review']){
+if(isset($_POST['review'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $rating=$_POST['rating'];
