@@ -478,7 +478,7 @@ transform: rotateY(180deg);
                                             <div class="shopify-payment-button col-6" data-shopify="payment-button">
                                                 <button type="button"
                                                     class="shopify-payment-button__button shopify-payment-button__button--unbranded"
-                                                    <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>Buy
+                                                    <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; }  ?> >Buy
                                                     it now</button>
                                             </div>
 
@@ -675,7 +675,8 @@ transform: rotateY(180deg);
                                                             <div class="spr-form-review-rating">
                                                                 <label class="spr-form-label">Rating</label>
                                                                 <div class="spr-form-input spr-starrating">
-                                                                    <div class="product-review rate">
+                                                                    <div class="product-review" style="width:100%">
+                                                                        <div class="rate float-left" style="width:100%;justify-content:end">
                                                                         <input type="radio" id="star1" name="rating"
                                                                             value="5">
                                                                         <label for="star1"></label>
@@ -691,6 +692,8 @@ transform: rotateY(180deg);
                                                                         <input type="radio" id="star5" name="rating"
                                                                             value="1">
                                                                         <label for="star5"></label></div>
+                                                                        </div>
+                                                                        
                                                                 </div>
                                                             </div>
 
