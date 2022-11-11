@@ -26,6 +26,11 @@ if(isset($_POST['submit'])){
     $knee=$_POST['knee'] ?? null;
     $label=$_POST['label'] ?? null;
     $tname=$_POST['tname'] ?? null;
+    $hightlightfilehide=$_POST['hightlightfilehide'];
+    $sizefilehide=$_POST['sizefilehide'];
+    $hoverfilehide=$_POST['hoverfilehide'];
+    $myfilehide=$_POST['myfilehide'];
+
 $loc="image/product_image_check/";
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
@@ -41,24 +46,35 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         
     }
 }
-if($attrname1 != ''){
-    foreach($attrname1 as $inde => $naames){
-        $s_attrname = $naames;
-        $s_attrVal=$attrval1[$inde];
-    
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
-    }
-}
-else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
-}
 
+if(empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
+
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$images_name',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+   
+}
 if($sql==1){
-    echo '<script>alert("sucessfully submitted");</script>';
+    echo '<script>alert("Update sucessfully submitted");</script>';
 }else{
     echo '<script>alert("something went wrong");</script>';
+} 
 }
-}
+
+
 
 
 ?>
@@ -214,21 +230,34 @@ if($sql==1){
                                         <label class="form-label" for="images">Images</label><br>
                                        
                                         <div class="upload-btn-wrapper">
+                                        <img src="image/product_image_check/<?php echo $editArr['hightlightfile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="hightlightfilehide" value="<?php echo $editArr['hightlightfile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
                                         <input type="file" name="hightlightfile" id="hightlightfile" value="<?php echo $editArr['hightlightfile']; ?>" accept="image/webp" />
                                         </div>
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
+                                        <?php
+                                        $image=explode(',',$editArr['image']);
+                                        $count=-5;
+                                        foreach($image as $images){
+                                            echo '<img src="image/product_image_check/'. $images .'" alt="" width="50" height="50">';
+                                            $count++; }
+                                        ?>
+                                        
+                                        <input type="hidden" name="myfilehide" value="<?php echo $editArr['image']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
                                         <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple value="<?php echo $editArr['image']; ?>"/>
                                         </div>
 
                                         <div class="upload-btn-wrapper">
+                                        <img src="image/product_image_check/<?php echo $editArr['hoverfile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="hoverfilehide" value="<?php echo $editArr['hoverfile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
                                         <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" value="<?php echo $editArr['hoverfile']; ?>"/>
                                         </div>
-                                        <div class="gallery-images-wrapper list-images">
+                                        <!-- <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
                                                     class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
@@ -238,14 +267,18 @@ if($sql==1){
                                                     <p style="color:#c3cfd8">Using button
                                                         <strong>Select image</strong> to add more images.</p>
                                                 </div>
-                                                <!-- <input type="hidden" name="images[]"> -->
+                                                <input type="hidden" name="images[]">
                                                 <ul class="list-unstyled list-gallery-media-images hidden ui-sortable"
                                                     style="">
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
+
+                                    
                                     <div class="upload-btn-wrapper">
+                                    <img src="image/product_image_check/<?php echo $editArr['sizefile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="sizefilehide" value="<?php echo $editArr['sizefile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
                                         <input type="file" accept="image/webp"  name="sizefile" id="sizefile" value="<?php echo $editArr['sizefile']; ?>"/>
                                         </div>
@@ -362,9 +395,9 @@ if($sql==1){
                                         <div class="col-12">
                                             <select class="form-select" id="sbasicSelect" name="published" onChange="pub(this.value)">
                                                 
-                                                <option value="Published" <?php if( $editArr['status'] == 'Published'){ echo $editAr['status']; } ?>>Published</option>
-                                                <option value="Draft" <?php if( $editArr['status'] == 'Draft'){ echo $editAr['status']; } ?>>Draft</option>
-                                                <option value="Pending" <?php if( $editArr['status'] == 'Pending'){ echo $editAr['status']; } ?>>Pending</option>
+                                                <option value="Published" <?php if( $editArr['status'] == 'Published'){ echo 'selected'; } ?>>Published</option>
+                                                <option value="Draft" <?php if( $editArr['status'] == 'Draft'){ echo 'selected'; } ?>>Draft</option>
+                                                <option value="Pending" <?php if( $editArr['status'] == 'Pending'){ echo 'selected'; } ?>>Pending</option>
                                             </select>
                                         </div>
                                     </div>
@@ -509,7 +542,7 @@ $(document).on('click','#show_attributes',function(){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
-        <select class="form-control" onChange="get(this.value)" name="attrname[]">\
+        <select class="form-control" onChange="get(this.value)" name="attrname">\
         <?php
         $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
         while($arr=mysqli_fetch_array($selsql)){ ?>
@@ -519,8 +552,8 @@ $(document).on('click','#show_attributes',function(){
     </div>\
     <div class="col-4">\
         <label class="form-label" for="csname">Value</label>\
-        <select class="form-control designation" name="attrnal[]">\
-        <option <?php if( $editArr['label'] == 'Hot'){ echo 'checked'; } ?>></option>\
+        <select class="form-control designation" name="attrnal">\
+        <option value="<?php echo $editArr['attribute']; ?>" selected><?php echo $editArr['attribute']; ?></option>\
         </select>\
     </div>\
     <div class="col-4 mt-2">\
