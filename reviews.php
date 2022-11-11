@@ -25,6 +25,11 @@ include('include/config.php');
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
+        @media (max-width: 600px){
+	.img_logo{
+		width: 50% !important;
+	}
+}
         .ratingCheck {
             display: flex;
             transform: rotateY(180deg);
@@ -167,7 +172,7 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <div class="logo"
+                                                <div class="img_logo"
                                                     style="display: inline-block; padding-top: 0; width:25%;">
                                                     <a href="<?php echo $row['link'];?>" target="_blank">
                                                         <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
@@ -238,7 +243,7 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                                <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%;">
                                             <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>
@@ -307,7 +312,7 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                                <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%;">
                                             <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>
