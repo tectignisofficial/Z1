@@ -1,5 +1,9 @@
 <?php
 include('../../../include/config.php');
+$eid=$_GET['eid'];
+$editSql=mysqli_query($conn,"select * from products where id='$eid'");
+$editArr=mysqli_fetch_array($editSql);
+
 if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
@@ -22,8 +26,12 @@ if(isset($_POST['submit'])){
     $knee=$_POST['knee'] ?? null;
     $label=$_POST['label'] ?? null;
     $tname=$_POST['tname'] ?? null;
+    $hightlightfilehide=$_POST['hightlightfilehide'];
+    $sizefilehide=$_POST['sizefilehide'];
+    $hoverfilehide=$_POST['hoverfilehide'];
+    $myfilehide=$_POST['myfilehide'];
+
 $loc="image/product_image_check/";
-// move_uploaded_file($_FILES['myfile']['tmp_name'],$loc);
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
 move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
 move_uploaded_file($_FILES['hightlightfile']['tmp_name'],$loc.$hightlightfile);
@@ -38,30 +46,35 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         
     }
 }
-// foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
 
-    // $myfile = $_FILES['myfile']['name'][$key];
-    //     $file_size =$_FILES['myfile']['size'][$key];
-    //     $file_tmp =$_FILES['myfile']['tmp_name'][$key];
-    //     $file_type=$_FILES['myfile']['type'][$key]; 
-if($attrname1 != ''){
-    foreach($attrname1 as $inde => $naames){
-        $s_attrname = $naames;
-        $s_attrVal=$attrval1[$inde];
-    
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
-    }
-}
-else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
-}
+if(empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
 
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$images_name',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+}
+else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide'])){
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+   
+}
 if($sql==1){
-    echo '<script>alert("sucessfully submitted");</script>';
+    echo '<script>alert("Update sucessfully submitted");</script>';
 }else{
     echo '<script>alert("something went wrong");</script>';
+} 
 }
-}
+
+
 
 
 ?>
@@ -197,80 +210,54 @@ if($sql==1){
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" />
+                                            placeholder="Name" value="<?php echo $editArr['name']; ?>"/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="desc">Description</label>
-                                        <!-- <div>
-                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
-                                            <button type="button" class="btn btn-info">Add Media</button>
-                                        </div> -->
                                         <div class="mt-2">
-        <textarea class="summernote form-control" name="desc"></textarea>
+        <textarea class="summernote form-control" name="desc"><?php echo $editArr['description']; ?></textarea>
     </div>
     
-                                        <!-- <input type="text" id="myeditor" class="form-control" name="desc"
-                                            placeholder="Description" /> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="cont">Content</label>
-                                        <!-- <div>
-                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
-                                            <button type="button" class="btn btn-info">Add Media</button>
-                                            <div class="btn-group">
-                                                <button class="btn btn-info dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    Info
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                    <a class="dropdown-item" href="#">Payment info</a>
-                                                    <a class="dropdown-item" href="#">Blog Posts</a>
-                                                    <a class="dropdown-item" href="#">Contact form</a>
-                                                    <a class="dropdown-item" href="#">Simple Slider</a>
-                                                    <a class="dropdown-item" href="#">Feature Product Categories</a>
-                                                    <a class="dropdown-item" href="#">Featured Brands</a>
-                                                    <a class="dropdown-item" href="#">Product Collections</a>
-                                                    <a class="dropdown-item" href="#">Trending Products</a>
-                                                    <a class="dropdown-item" href="#">Product blocks</a>
-                                                    <a class="dropdown-item" href="#">All products</a>
-                                                    <a class="dropdown-item" href="#">All brands</a>
-                                                    <a class="dropdown-item" href="#">Flash sale</a>
-                                                    <a class="dropdown-item" href="#">Banners</a>
-                                                    <a class="dropdown-item" href="#">Our features</a>
-                                                    <a class="dropdown-item" href="#">Testimonials</a>
-                                                    <a class="dropdown-item" href="#">Newsletter form</a>
-                                                    <a class="dropdown-item" href="#">Featured News</a>
-                                                    <a class="dropdown-item" href="#">Google maps</a>
-                                                    <a class="dropdown-item" href="#">Youtube video</a>
-                                                </div>
-                                            </div>
-                                    s    </div> -->
+
                                         <div class="mt-2">
-        <textarea class="summernote form-control" name="cont"></textarea>
+        <textarea class="summernote form-control" name="cont"><?php echo $editArr['content']; ?></textarea>
     </div>
-                                        <!-- <input type="text" id="cont" class="form-control" name="cont" placeholder=""/> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="images">Images</label><br>
                                        
                                         <div class="upload-btn-wrapper">
+                                        <img src="image/product_image_check/<?php echo $editArr['hightlightfile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="hightlightfilehide" value="<?php echo $editArr['hightlightfile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/webp" multiple/>
+                                        <input type="file" name="hightlightfile" id="hightlightfile" value="<?php echo $editArr['hightlightfile']; ?>" accept="image/webp" />
                                         </div>
-                                        <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
 
                                         <div class="upload-btn-wrapper">
+                                        <?php
+                                        $image=explode(',',$editArr['image']);
+                                        $count=-5;
+                                        foreach($image as $images){
+                                            echo '<img src="image/product_image_check/'. $images .'" alt="" width="50" height="50">';
+                                            $count++; }
+                                        ?>
+                                        
+                                        <input type="hidden" name="myfilehide" value="<?php echo $editArr['image']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple/>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple value="<?php echo $editArr['image']; ?>"/>
                                         </div>
 
                                         <div class="upload-btn-wrapper">
+                                        <img src="image/product_image_check/<?php echo $editArr['hoverfile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="hoverfilehide" value="<?php echo $editArr['hoverfile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
-                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"/>
+                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" value="<?php echo $editArr['hoverfile']; ?>"/>
                                         </div>
-                                        <div class="gallery-images-wrapper list-images">
+                                        <!-- <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
                                                     class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
@@ -285,21 +272,19 @@ if($sql==1){
                                                     style="">
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
-                                    <!-- <div class="mb-1">
-                                        <label class="form-label" for="upld">Upload video</label><br>
-                                        <button id="selectv" class="btn btn-outline-primary mb-1">
-                                            <i data-feather="file"></i> Click me to select video
-                                        </button>
-                                    </div> -->
+
+                                    
                                     <div class="upload-btn-wrapper">
+                                    <img src="image/product_image_check/<?php echo $editArr['sizefile']; ?>" alt="" width="50" height="50">
+                                        <input type="hidden" name="sizefilehide" value="<?php echo $editArr['sizefile']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" />
+                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" value="<?php echo $editArr['sizefile']; ?>"/>
                                         </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
                                     <label class="form-label" for="">Video</label>
-                                        <input type="text" name="myvideofile" class="form-control" placeholder="youtube video link"/>
+                                        <input type="text" name="myvideofile" class="form-control" placeholder="youtube video link" value="<?php echo $editArr['video']; ?>"/>
                                         </div>
                                 <!-- </form> -->
                             </div>
@@ -316,20 +301,20 @@ if($sql==1){
                                                 <div class="mb-1">
                                                     <label class="form-label" for="SKU">SKU</label>
                                                     <input type="text" id="SKU" class="form-control" name="sku"
-                                                        placeholder="" />
+                                                        placeholder="" value="<?php echo $editArr['sku']; ?>"/>
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="price">Price</label>
                                                     <input type="text" id="price" class="form-control" name="price"
-                                                        placeholder="" />
+                                                        placeholder="" value="<?php echo $editArr['price']; ?>"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
-                                            <input type="number" class="form-control" name="stock" id="">
+                                            <input type="number" class="form-control" name="stock" id="" value="<?php echo $editArr['stock_status']; ?>">
                                             
                                         </div>
                                        
@@ -350,51 +335,15 @@ if($sql==1){
                                             <p>Adding new attributes helps the product to have many options, such as
                                                 size or color.</p>
                                         </div>
-                                            <!-- <div class="row">
-                                                <div class="col-4">
-                                                    <label class="form-label" for="sname">Attribute name</label>
-                                                    <select name="attrName" class="form-control">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-4">
-                                                    <label class="form-label" for="csname">Value</label>
-                                                    <select name="attrVal" class="form-control">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                            </div> -->
                                             <div class="adddiv">
 
                                             </div>
-                                            <!-- <div class="mt-2">
-                                                <button type="button" class="btn btn-outline-primary clickadd">
-                                                    Add New Attributes
-                                                </button>
-                                            </div> -->
+                     
                                     </div>
                                 <!-- </form> -->
                             </div>
                         </div>
-                        <!-- <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Related products</h4>
-                            </div>
-                            <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label class="form-label" for="sname">Related products</label>
-                                            <input type="text" id="sname" class="form-control" name="rproduct"
-                                                placeholder="search products" />
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="form-label" for="csname">Cross-selling products</label>
-                                            <input type="text" id="csname" class="form-control" name="csproduct"
-                                                placeholder="search products" />
-                                        </div>
-                                    </div>
-                            </div>
-                        </div> -->
+                 
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Search Engine Optimize</h4>
@@ -408,12 +357,12 @@ if($sql==1){
                                         <div class="col-12">
                                             <label class="form-label" for="set">SEO Title</label>
                                             <input type="text" id="set" class="form-control" name="set"
-                                                placeholder="seo title" />
+                                                placeholder="seo title" value="<?php echo $editArr['seo_title']; ?>"/>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label" for="sedes">SEO description</label>
                                             <input type="text" id="sedes" class="form-control" name="sedes"
-                                                placeholder="seo description" />
+                                                placeholder="seo description" value="<?php echo $editArr['seo_description']; ?>"/>
                                         </div>
                                     </div>
                                 <!-- </form> -->
@@ -445,9 +394,10 @@ if($sql==1){
                                     <div class="row">
                                         <div class="col-12">
                                             <select class="form-select" id="sbasicSelect" name="published" onChange="pub(this.value)">
-                                                <option value="Published">Published</option>
-                                                <option value="Draft">Draft</option>
-                                                <option value="Pending">Pending</option>
+                                                
+                                                <option value="Published" <?php if( $editArr['status'] == 'Published'){ echo 'selected'; } ?>>Published</option>
+                                                <option value="Draft" <?php if( $editArr['status'] == 'Draft'){ echo 'selected'; } ?>>Draft</option>
+                                                <option value="Pending" <?php if( $editArr['status'] == 'Pending'){ echo 'selected'; } ?>>Pending</option>
                                             </select>
                                         </div>
                                     </div>
@@ -464,7 +414,7 @@ if($sql==1){
                                         <div class="col-12">
                                             <div class="form-check form-check-success form-switch">
                                                 <input type="checkbox" value="1" class="form-check-input"
-                                                    id="customSwitch4" name="featured"/>
+                                                    id="customSwitch4" <?php if( $editArr['featured'] == '1'){ echo 'checked'; } ?> name="featured"/>
                                             </div>
                                         </div>
                                     </div>
@@ -481,7 +431,7 @@ if($sql==1){
                                         <div class="col-12">
                                             <div class="mb-1">
                                                 <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="tv" name="knee" value="Knee Brace"/>
+                                                    <input type="checkbox" class="form-check-input" id="tv" name="knee" value="Knee Brace" <?php if( $editArr['categories'] == 'Knee Brace'){ echo 'checked'; } ?>/>
                                                     <label class="form-check-label" for="tv">Knee Brace</label>
                                                 </div>
                                             </div>
@@ -503,19 +453,19 @@ if($sql==1){
                                         <div class="col-12">
                                             <div class="mb-1">
                                                 <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck1" name="label" value="New"/>
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1" name="label" value="New" <?php if( $editArr['label'] == 'New'){ echo 'checked'; } ?>/>
                                                     <label class="form-check-label" for="customCheck1">New</label>
                                                 </div>
                                             </div>
                                             <div class="mb-1">
                                                 <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck2" name="label" value="Hot" />
+                                                    <input type="checkbox" class="form-check-input" id="customCheck2" name="label" value="Hot" <?php if( $editArr['label'] == 'Hot'){ echo 'checked'; } ?>/>
                                                     <label class="form-check-label" for="customCheck2">Hot</label>
                                                 </div>
                                             </div>
                                             <div class="mb-1">
                                                 <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck4" name="label" value="Sale" />
+                                                    <input type="checkbox" class="form-check-input" id="customCheck4" name="label" value="Sale" <?php if( $editArr['label'] == 'Sale'){ echo 'checked'; } ?>/>
                                                     <label class="form-check-label" for="customCheck4">Sale</label>
                                                 </div>
                                             </div>
@@ -534,7 +484,7 @@ if($sql==1){
                                     <div class="row">
                                         <div class="col-12">
                                             <input type="text" id="tname" class="form-control" name="tname"
-                                                placeholder="Write some tags" />
+                                                placeholder="Write some tags" value="<?php echo $editArr['tags']; ?>"/>
                                         </div>
                                     </div>
                                 
@@ -584,17 +534,6 @@ if($sql==1){
         })
     </script>
     <script>
-//         $(document).ready(function(){
-//     $('#myfile').change(function(){
-//         if(this.width != 1071 || this.height != 1500){
-//         alert('Please upload proper image with exact size : 1071 x 1500px');
-//        }
-//     });
-
-//     $(document).on('click','.cancleicon',function(){
-//         $(this).closest('.atrb').remove();
-//     })
-// });
 
 let a=0;
 $(document).on('click','#show_attributes',function(){
@@ -603,18 +542,18 @@ $(document).on('click','#show_attributes',function(){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
-        <select class="form-control" onChange="get(this.value)" name="attrname[]">\
-        <option disabled selected></option>\
+        <select class="form-control" onChange="get(this.value)" name="attrname">\
         <?php
         $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
         while($arr=mysqli_fetch_array($selsql)){ ?>
-            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>\
+            <option value="<?php if( $editArr['attrname'] == $arr['main_title']){ echo 'selected'; } else{ echo $arr['main_title'];} ?>"><?php if( $editArr['attrname'] == $arr['main_title']){ echo $editArr['attrname']; } else{ echo $arr['main_title'];} ?></option>\
             <?php } ?>
         </select>\
     </div>\
     <div class="col-4">\
         <label class="form-label" for="csname">Value</label>\
-        <select class="form-control designation" name="attrnal[]">\
+        <select class="form-control designation" name="attrnal">\
+        <option value="<?php echo $editArr['attribute']; ?>" selected><?php echo $editArr['attribute']; ?></option>\
         </select>\
     </div>\
     <div class="col-4 mt-2">\
@@ -624,6 +563,10 @@ $(document).on('click','#show_attributes',function(){
     }
 });
  
+$(document).on('click','.cancleicon',function(){
+        $(this).closest('.atrb').remove();
+    })
+
 function get(val){
     $.ajax({
   type:'POST',
@@ -644,11 +587,8 @@ function pub(val){
 
 $(document).ready(function() {
       $('.summernote').summernote();
-    });
 
-    $(document).on('click','.cancleicon',function(){
-        $(this).closest('.atrb').remove();
-    })
+    });
     </script>
      <!-- include libraries(jQuery, bootstrap) -->
     

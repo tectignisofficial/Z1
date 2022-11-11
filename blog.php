@@ -53,7 +53,7 @@ include("include/config.php");
             <!--Main Content-->
             <div class="container">
                 <div class="row">
-                                
+              
 
                     <!--Main Content-->
                     <div class="container">
@@ -61,12 +61,21 @@ include("include/config.php");
                             <!--Main Content-->
                             <?php 
                                     
-                                    $sql=mysqli_query($conn,"select * from blog ");
+                                    $sql=mysqli_query($conn,"select * from blog");
                                     $count=1;
                                     while($arr=mysqli_fetch_array($sql)){
                                 ?>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col">
-                                
+                                <div class="custom-search">
+                                    <form action="/search" method="get" class="input-group search-header search"
+                                        role="search" style="position: relative;">
+                                        <input class="search-header__input search__input input-group__field"
+                                            type="search" name="q" placeholder="Search" aria-label="Search"
+                                            autocomplete="off">
+                                        <span class="input-group__btn"><button class="btnSearch" type="submit"> <i
+                                                    class="icon anm anm-search-l"></i> </button></span>
+                                    </form>
+                                </div>
                                 <div class="blog--list-view blog--grid-load-more">
                                     <div class="article" style="display: block;">
                                         <!-- Article Image -->
@@ -84,6 +93,8 @@ include("include/config.php");
                                         <p><a href="blogs.php?eid=<?php echo $arr['id'];?>" class="btn btn-secondary btn--small">Read more <i
                                                     class="fa fa-caret-right" aria-hidden="true"></i></a></p>
                                     </div>
+
+                                   
                                 </div>
                             </div>
                             <?php $count++;  } ?>
@@ -92,7 +103,7 @@ include("include/config.php");
                             <!--End Sidebar-->
                         </div>
                     </div>
-                    
+                  
 
                     <!--End Main Content-->
                     <!--Sidebar-->
