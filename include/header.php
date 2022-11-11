@@ -6,11 +6,10 @@
             <style>
                 #select{
 	color: white;
-    /* background: #031b41; */
+    background: #031b41;
     height: fit-content;
     border-color: #031b41;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2326749a'><polygon points='0,0 100,0 50,50'/></svg>")
-    no-repeat;
+    background-image:red;
 }
             </style>
         <div class="container-fluid">
