@@ -81,10 +81,10 @@ if(isset($_POST['review'])){
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
-        
+
     @media (max-width: 600px){
 	.img_logo{
-		width: 50%;
+		width: 50% !important;
 	}
 }
         .slick-list {
@@ -750,7 +750,7 @@ transform: rotateY(180deg);
                                                         </div>
                                                         <div class="img_logo"
                                                             style="display: inline-block; padding-top: 0; width:15%;">
-                                                            <a href="<?php echo $row['link'];?>" target="_blank">
+                                                            <a href="<?php echo $fetchreview['link'];?>" target="_blank">
                                                                 <img src="assets/images/amazon_logo.png" alt="Z1"
                                                                     title="Z1" />
                                                             </a>

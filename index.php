@@ -42,9 +42,14 @@ include('include/config.php');
             .img2 {
                 display: none;
             }
-
-
         }
+
+        @media (max-width: 600px){
+	.img_logo{
+		width: 50% !important;
+	}
+}
+        
     </style>
 </head>
 
@@ -635,7 +640,7 @@ include('include/config.php');
                                         <div class="rte-setting">
                                             <p><?php echo $row['message'];?></p>
                                         </div>
-                                        <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                        <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%;">
                                             <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>
