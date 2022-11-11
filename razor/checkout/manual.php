@@ -8,10 +8,6 @@
 </head>
 <body>
     
-<?php
-$qss=mysqli_query($conn,"SELECT * FROM `client` WHERE `Client_Code`='$id'");
-$ress=mysqli_fetch_array($qss);
-?>
 <h1>Summary</h1>
 <table>
    
@@ -29,9 +25,9 @@ $ress=mysqli_fetch_array($qss);
     </tr>
     <tr>
         <td>Price</td>
-        <td><?php echo $_SESSION['price']; ?></td>
+        <td><?php echo $_SESSION['total']; ?></td>
     </tr>
-<div>Your Balance payment is : <?php echo $_SESSION['price'] ?></div>
+<div>Your Balance payment is : <?php echo $_SESSION['total'] ?></div>
 <button id="rzp-button1">Continue</button>
 </body>
 </html>

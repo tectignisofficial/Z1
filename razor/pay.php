@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("../config.php");
-$id=$_SESSION['id'];
+include("../include/config.php");
 
 include('razconf.php');
 include('razorpay-php/Razorpay.php');
@@ -13,17 +12,17 @@ $api = new Api($keyId, $keySecret);
 // We create an razorpay order using orders api
 // Docs: https://docs.razorpay.com/docs/orders
 
-$id=$_POST['id'];
-$name=$_POST['name'];
-$email=$_POST['email'];
-$phone=$_POST['phone'];
-$amount=$_POST['price'];
+$id=$_SESSION['customerid'];
+$name=$_SESSION['name'];
+$email=$_SESSION['email'];
+$phone=$_SESSION['phone'];
+$amount=$_SESSION['total'];
 
-$_SESSION['id']=$id;
-$_SESSION['name']=$name;
-$_SESSION['email']=$email;
-$_SESSION['phone']=$phone;
-$_SESSION['price']=$amount;
+// $_SESSION['id']=$id;
+// $_SESSION['name']=$name;
+// $_SESSION['email']=$email;
+// $_SESSION['phone']=$phone;
+// $_SESSION['price']=$amount;
 
 
 $orderData = [
@@ -59,7 +58,7 @@ if(isset($_GET['checkout']) and in_array($_GET['checkout'],['automatic', 'manual
 $data = [
     "key"               => $keyId,
     "amount"            => $amount,
-    "name"              => "Tectignis",
+    "name"              => "Z1",
     "description"       => "Live Transaction",
     "image"             => "https://realestate.tectignis.in/admin/dist/img/avatar1.jpeg",
     "prefill"           => [

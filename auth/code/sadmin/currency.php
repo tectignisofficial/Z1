@@ -248,10 +248,10 @@ if(isset($_GET['currid'])){
                                                 <td><?php echo $arr['currency_rate'] ?></td>
                                                 <td><?php echo $arr['default_status'] ?></td>
                                                 <td>
-                                                    <a href=""><button type="button"
+                                                   <button type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-primary btnmod1"
                                                             data-bs-toggle="modal" data-bs-target="#editUser    "><i
-                                                                data-feather="edit"></i></button></a>
+                                                                data-feather="edit"></i></button>
 
                                                     <a href="currency.php?currid=<?php echo $arr['id']; ?>"><button
                                                             type="button"

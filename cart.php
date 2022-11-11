@@ -9,6 +9,26 @@ if(isset($_GET['did'])){
         }
     }
 }
+
+if(isset($_POST['checkout'])){
+    if(!isset($_SESSION['customerid'])){
+        header('location:login.php');
+    }
+    else{
+        $id=$_SESSION['customerid'];
+        $sql=mysqli_query($conn,"select * from customers where id='$id'");
+        $fetchsql=mysqli_fetch_array($sql);
+        $_SESSION['name']=$fetchsql['name'];
+        $_SESSION['email']=$fetchsql['email'];
+        $_SESSION['phone']=$fetchsql['phone'];
+    if($_SESSION['myselect']=='INR'){
+        header('location:razor/pay.php');
+    }
+    else{
+        echo "<script>alert('only rs');</script>";
+    }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -160,7 +180,9 @@ if(isset($_GET['did'])){
                     
                     </form>                   
                	</div>
+               
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
+                <form method="post">
                 	<div class="cart-note">
                     	<div class="solid-border">
 							<h5><label for="CartSpecialInstructions" class="cart-note__label small--text-center">Add a note to your order</label></h5>
@@ -172,19 +194,22 @@ if(isset($_GET['did'])){
                       	<span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
                         <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money"><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
                             echo "<i class='fa fa-inr'></i> ";
-                        } if($_SESSION['shopping_cart']){ echo number_format($total,2);}else{ echo '0.00'; } ?></span></span>
+                        } if($_SESSION['shopping_cart']){ echo number_format($total,2);
+                        $_SESSION['total']=number_format($total,2);
+                        }else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                       <p class="cart_tearm">
                         <label>
-                          <input type="checkbox" name="tearm" id="cartTearm" class="checkbox" value="tearm" required="">
+                          <input type="checkbox" name="tearm" id="cartTearm" class="checkbox" value="tearm" >
                            I agree with the terms and conditions</label>
                       </p>
-                      <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout" disabled="disabled">
+                      <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout">
                       <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
                     </div>
-
+                    </form>
                 </div>
+                   
             </div>
         </div>
         

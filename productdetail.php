@@ -46,6 +46,29 @@ else{
 }
 }
 
+if(isset($_POST['checkout'])){
+    if(!isset($_SESSION['customerid'])){
+        header('location:login.php');
+    }
+    else{
+        $id=$_SESSION['customerid'];
+        $sql=mysqli_query($conn,"select * from customers where id='$id'");
+        $fetchsql=mysqli_fetch_array($sql);
+        $_SESSION['name']=$fetchsql['name'];
+        $_SESSION['email']=$fetchsql['email'];
+        $_SESSION['phone']=$fetchsql['phone'];
+        $_SESSION['total']=$_POST['price'];
+        $_SESSION['quantity']=$_POST['quantity'];
+        $_SESSION['productname']=$_POST['productname'];
+    if($_SESSION['myselect']=='INR'){
+        header('location:razor/pay.php');
+    }
+    else{
+        
+    }
+    }
+}
+
 if(isset($_POST['review'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
@@ -476,7 +499,7 @@ transform: rotateY(180deg);
 
                                             </div>
                                             <div class="shopify-payment-button col-6" data-shopify="payment-button">
-                                                <button type="button"
+                                                <button type="submit" name="checkout"
                                                     class="shopify-payment-button__button shopify-payment-button__button--unbranded"
                                                     <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; }  ?> >Buy
                                                     it now</button>

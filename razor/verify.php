@@ -38,12 +38,26 @@ if (empty($_POST['razorpay_payment_id']) === false)
 
 if ($success === true)
 {
+    $id=$_SESSION['customerid'];
     $rid=$_SESSION['razorpay_order_id'];
     $payment_id=$_POST['razorpay_payment_id'];
     $email=$_SESSION['email'];
     date_default_timezone_set('Asia/Kolkata');
     $date=date('Y-m-d H:i:s');
-    $q=mysqli_query($conn,"INSERT INTO `orderdetails`(`orderid`, `paymentid`, `email`, `date`) VALUES ('$rid','$payment_id','$email','$date')");
+    if(isset($_SESSION['shopping_cart'])){
+        foreach($_SESSION['shopping_cart'] as $keys => $values){
+            $product=$values['name'];
+            $qua=$values['quantity'];
+            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','')");
+        }
+    }
+    else{
+        $product=$_SESSION['productname'];
+            $qua=$_SESSION['quantity'];
+        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','')");
+    }
+    
+   
     if($q)
     {
         echo "Payment Successful";
