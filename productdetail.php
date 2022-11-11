@@ -81,6 +81,12 @@ if(isset($_POST['review'])){
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
+        
+    @media (max-width: 600px){
+	.img_logo{
+		width: 50%;
+	}
+}
         .slick-list {
             height: 489.141px !important;
         }
