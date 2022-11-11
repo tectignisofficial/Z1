@@ -75,7 +75,7 @@
                             </li>
                             <li class="lvl1 parent megamenu"><a href="contact-us.php">Contact us <i class="anm anm-angle-down-l"><?= $page == 'contact-us.php' ? 'active':'' ?></i></a>
                             </li>
-                            <li class="lvl1 parent megamenu"><a href="blogs.php">Blogs <i class="anm anm-angle-down-l"><?= $page == 'blogs.php' ? 'active':'' ?></i></a>
+                            <li class="lvl1 parent megamenu"><a href="blog.php">Blogs <i class="anm anm-angle-down-l"><?= $page == 'blog.php' ? 'active':'' ?></i></a>
                             </li>
                             <li class="lvl1 parent megamenu"><a href="reviews.php">Reviews <i class="anm anm-angle-down-l"><?= $page == 'reviews.php' ? 'active':'' ?></i></a>
                             </li>
