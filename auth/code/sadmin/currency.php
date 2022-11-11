@@ -106,8 +106,8 @@ if(isset($_GET['currid'])){
                                         <select id="status" name="status" value="<?php echo $arr['default_status'] ?>" class="form-select" aria-label="Default select example">
                                             <option selected>Status</option>
                                             <option value="1">Active</option>
-                                            <option value="2">Inactive</option>
-                                            <option value="3">Suspended</option>
+                                            <option value="2">Deactivate</option>
+                                            <!-- <option value="3">Suspended</option> -->
                                         </select>
                                     </div>
                                     <div class="col-12 text-center mt-2 pt-50">
