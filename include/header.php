@@ -5,8 +5,7 @@
         <div class="top-header">
         <div class="container-fluid">
             <div class="row">
-            	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                    <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+            	<div class="col-10 col-sm-8 col-md-5 col-lg-4 d-flex">
                     <form action="" method="post">
                     <div class="currency-picker">
                         <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span>
@@ -23,13 +22,11 @@
                         </ul> 
                     </div>
                     </form>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                   
                     <!-- <div class="language-dropdown">
                       
                       </div> -->
-                      <p class="phone-no"><i class="anm anm-phone-s"></i> +91 7300044197</p>
-                    </div>
+                      <p class="phone-no pl-4"><i class="fa fa-phone"></i> +91 7300044197</p>
                    
                    
                 </div>

@@ -218,8 +218,9 @@ if(isset($_GET['did'])){
                                                     <!-- <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>   -->
                                                     <td><?php echo $arr['status']; ?></td> 
                                                     <td>
-                                                    <a href="products.php?eid=<?php echo $arr['id']; ?>" class="btn btn-outline-primary"><i class="fa fa-edit"></i></a>    
-                                                    <a href="products.php?did=<?php echo $arr['id']; ?>" class="btn btn-outline-danger" ><i class="fa fa-trash"></i></a></td>
+                                                    <a href="editProducts.php?eid=<?php echo $arr['id']; ?>" class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
+                                                                    data-feather="edit"></i></a>    
+                                                    <a href="products.php?did=<?php echo $arr['id']; ?>" class="btn btn-icon rounded-circle btn-flat-danger" ><i data-feather="trash"></i></a></td>
                                                 </tr>
                                                 <?php $count++; } ?>
                                             </tbody>

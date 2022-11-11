@@ -65,6 +65,7 @@ $id=$_GET['eid'];
                     <div class="container">
                         <div class="row">
                             <!--Main Content-->
+                            
                             <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
                                 <div class="custom-search">
                                     <form action="/search" method="get" class="input-group search-header search"
