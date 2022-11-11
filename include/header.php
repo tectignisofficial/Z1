@@ -50,12 +50,12 @@
                         
                          <div id="cur">
                             <select name="myselect" id="select" class="" onchange="this.form.submit()">
-                           <option value=""><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></option>
-                            <option value="INR" <?php if(isset($_SESSION['USD'])=='INR'){ echo 'selected'; } ?>>INR</option>
-                            <option value="GBP" <?php if(isset($_SESSION['USD'])=='GBP'){ echo 'selected'; } ?>>GBP</option>
-                            <option value="CAD" <?php if(isset($_SESSION['USD'])=='CAD'){ echo 'selected'; } ?>>CAD</option>
-                            <option value="USD" <?php if(isset($_SESSION['USD'])=='USD'){ echo 'selected'; } ?>>USD</option>
-                            <option value="AUD" <?php if(isset($_SESSION['USD'])=='AUD'){ echo 'selected'; } ?>>AUD</option>
+                           <option value="<?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?>" selected><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></option>
+                            <option value="INR" >INR</option>
+                            <option value="GBP" >GBP</option>
+                            <option value="CAD" >CAD</option>
+                            <option value="USD" >USD</option>
+                            <option value="AUD">AUD</option>
                         </select>
                         <div class="overlay">&#9660;</div>
 </div> 
