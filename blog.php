@@ -94,9 +94,7 @@ include("include/config.php");
                                                     class="fa fa-caret-right" aria-hidden="true"></i></a></p>
                                     </div>
 
-                                    <div class="loadmore-post">
-                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>;" class="btn loadMorepost">Load More</a>
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <?php $count++;  } ?>
