@@ -144,60 +144,57 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
                                                     <label class="form-label">Content</label>
                                                     <div id="">
                                                         <div id="blog-editor-container">
-                                                            <!-- <textarea name="content" id="content"
-                                                                class="editor form-control">
-                                                            </textarea> -->
-                                                            <input type="text" name="content" id=""
-                                                                class="editor form-control"
-                                                                value="<?php echo $row['content']?>">
+                                                            <textarea class="summernote form-control" name="content"
+                                                                id="content"
+                                                                value="<?php echo $row['content']?>"><?php echo $row['content']?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 mb-2">
-                                                <div class="border rounded p-2">
-                                                    <h4 class="mb-1">Featured Image</h4>
-                                                    <div class="d-flex flex-column flex-md-row">
-                                                        <?php
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <div class="border rounded p-2">
+                                                <h4 class="mb-1">Featured Image</h4>
+                                                <div class="d-flex flex-column flex-md-row">
+                                                    <?php
                                                             if(isset($_GET['eid'])){
                                                         ?>
-                                                        <img class="rounded me-2 mb-1 mb-md-0"
-                                                            src="dist/img/<?php echo $row['file']?>" width="180"
-                                                            height="140">
-                                                        <input type="hidden" value="<?php echo $row['file']?>"
-                                                            name="img">
-                                                        <?php }  ?>
-                                                             <div class="featured-info"> 
-                                                             <large class="text-muted">Required image resolution 800x400,
-                                                                image size
-                                                                10mb.</large>
-                                                            <p class="my-80">
-                                                                
-                                                            </p>                                                  
+                                                    <img class="rounded me-2 mb-1 mb-md-0"
+                                                        src="dist/img/<?php echo $row['file']?>" width="180"
+                                                        height="140">
+                                                    <input type="hidden" value="<?php echo $row['file']?>" name="img">
+                                                    <?php }  ?>
+                                                    <div class="featured-info">
+                                                        <large class="text-muted">Required image resolution 800x400,
+                                                            image size
+                                                            10mb.</large>
+                                                        <p class="my-80">
+
+                                                        </p>
                                                         <div class="d-inline-block">
                                                             <input type="file" class="form-control" name="file">
                                                         </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-50">
-                                                <button type="submit" id="update" name="update"
-                                                    class="btn btn-primary me-1">
-                                                    Save Changes
-                                                </button>
-                                            </div>
                                         </div>
-                                    </form>
-                                    <!--/ Form -->
+                                        <div class="col-12 mt-50">
+                                            <button type="submit" id="update" name="update"
+                                                class="btn btn-primary me-1">
+                                                Save Changes
+                                            </button>
+                                        </div>
                                 </div>
+                                </form>
+                                <!--/ Form -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--/ Blog Edit -->
             </div>
+            <!--/ Blog Edit -->
         </div>
+    </div>
     </div>
     <!-- END: Content-->
 
@@ -242,6 +239,18 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
             }
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.summernote').summernote();
+
+        });
+    </script>
+    <!-- include libraries(jQuery, bootstrap) -->
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </body>
 <!-- END: Body-->
 

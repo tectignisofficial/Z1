@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("include/config.php");
+$id=$_GET['eid'];
 
 
 ?>
@@ -56,7 +57,7 @@ include("include/config.php");
                 <div class="row">
                     <?php 
                                     
-                        $sql=mysqli_query($conn,"select * from blog ");
+                        $sql=mysqli_query($conn,"select * from blog where id='$id'");
                         $count=1;
                         while($arr=mysqli_fetch_array($sql)){
                     ?>
@@ -65,7 +66,7 @@ include("include/config.php");
                         <div class="blog--list-view">
                             <div class="article">
                                 <!-- Article Image -->
-                                <a class="article_featured-image" href="#"><img style="height:400px"class="blur-up ls-is-cached lazyloaded"
+                                <a class="article_featured-image" href="#"><img style="height:800px"class="blur-up ls-is-cached lazyloaded"
                                         src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></a>
                                 <h1><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a></h1>
 
