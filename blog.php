@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("include/config.php");
-$id=$_GET['eid'];
 
 ?>
 
@@ -54,19 +53,19 @@ $id=$_GET['eid'];
             <!--Main Content-->
             <div class="container">
                 <div class="row">
-                <?php 
-                                    
-                                    $sql=mysqli_query($conn,"select * from blog");
-                                    $count=1;
-                                    while($arr=mysqli_fetch_array($sql)){
-                                ?>
+              
 
                     <!--Main Content-->
                     <div class="container">
                         <div class="row">
                             <!--Main Content-->
-                            
-                            <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
+                            <?php 
+                                    
+                                    $sql=mysqli_query($conn,"select * from blog");
+                                    $count=1;
+                                    while($arr=mysqli_fetch_array($sql)){
+                                ?>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col">
                                 <div class="custom-search">
                                     <form action="/search" method="get" class="input-group search-header search"
                                         role="search" style="position: relative;">
@@ -89,7 +88,7 @@ $id=$_GET['eid'];
                                         </h2>
                                      
                                         <div class="rte">
-                                            <p><?php echo $arr['content'];?></p>
+                                            <p><?php echo $arr['blog'];?></p>
                                         </div>
                                         <p><a href="blogs.php?eid=<?php echo $arr['id'];?>" class="btn btn-secondary btn--small">Read more <i
                                                     class="fa fa-caret-right" aria-hidden="true"></i></a></p>
@@ -100,12 +99,13 @@ $id=$_GET['eid'];
                                     </div>
                                 </div>
                             </div>
+                            <?php $count++;  } ?>
                             <!--End Main Content-->
                             <!--Sidebar-->
                             <!--End Sidebar-->
                         </div>
                     </div>
-                    <?php $count++;  } ?>
+                  
 
                     <!--End Main Content-->
                     <!--Sidebar-->
