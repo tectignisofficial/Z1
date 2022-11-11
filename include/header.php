@@ -11,6 +11,35 @@
     border-color: #031b41;
     background-image:red;
 }
+#select.dropdown{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-position:22px 3px;
+    background-size:13px 13px;
+    width:40px;
+    height:20px;
+    margin-left:4px;
+    position:absolute;
+}
+.overlay{
+    font-size:9px;
+    color:white;
+    position:absolute;
+    right:0px;
+    top:8px;
+    cursor:default;
+    line-height:1px;
+
+}
+.cur{
+    position:relative;
+    width:40px;
+    height:20px;
+    float:left;
+    margin:0;
+    padding:0;
+}
             </style>
         <div class="container-fluid">
             <div class="row">
@@ -19,7 +48,7 @@
                     <div class="currency-picker">
                         <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
                         
-                         <!-- <ul id="currencies"> -->
+                         <div id="cur">
                             <select name="myselect" id="select" class="" onchange="this.form.submit()">
                            <option value=""><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></option>
                             <option value="INR" <?php if(isset($_SESSION['USD'])=='INR'){ echo 'selected'; } ?>>INR</option>
@@ -28,7 +57,8 @@
                             <option value="USD" <?php if(isset($_SESSION['USD'])=='USD'){ echo 'selected'; } ?>>USD</option>
                             <option value="AUD" <?php if(isset($_SESSION['USD'])=='AUD'){ echo 'selected'; } ?>>AUD</option>
                         </select>
-                        <!-- </ul>  -->
+                        <div class="overlay">&#9660;</div>
+</div> 
                     </div>
                     </form>
                    
