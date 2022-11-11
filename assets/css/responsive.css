@@ -431,7 +431,7 @@
 	
 	.newsletter-section { padding:20px 0; }
 	.newsletter-section .section-header { display:block; margin:0 0 15px 0; float:none; }
-	.newsletter-section .section-header span { display:inline-block; padding-right:5px; }
+	.newsletter-section .section-header span { display:inline-block; padding-right:5px; font-size: 19px;}
 	
 	.footer-bottom .copyright { text-align:center; }
 	
