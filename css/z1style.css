@@ -213,4 +213,8 @@
 	:root{
 		--h1-font: 2.1rem;
 	}
+	.img_logo{
+		width: 50%;
+	}
+
 }

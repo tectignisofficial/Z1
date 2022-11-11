@@ -140,6 +140,7 @@ if(isset($_GET['delid'])){
                                                 <th>NAME</th>
                                                 <th>COMPANY NAME</th>
                                                 <th>MESSAGE</th>
+                                                <th>LINK</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
@@ -154,6 +155,7 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $row['name'];?></td>
                                                 <td><?php echo $row['company_name'];?></td>
                                                 <td><?php echo $row['message'];?></td>
+                                                <td><?php echo $row['link'];?></td>
                                                 <td>
                                                     <!-- <a href=""><button type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i

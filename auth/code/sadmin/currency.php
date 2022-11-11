@@ -78,7 +78,7 @@ if(isset($_GET['currid'])){
     <div class="app-content content ">
 
         <!-- Edit Modal -->
-       <!-- Edit User Modal -->
+
        <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
                         <div class="modal-content">
@@ -250,7 +250,7 @@ if(isset($_GET['currid'])){
                                                 <td>
                                                     <a href=""><button type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-primary btnmod1"
-                                                            data-bs-toggle="modal" data-bs-target="#editUser"><i
+                                                            data-bs-toggle="modal" data-bs-target="#editUser    "><i
                                                                 data-feather="edit"></i></button></a>
 
                                                     <a href="currency.php?currid=<?php echo $arr['id']; ?>"><button
@@ -327,7 +327,7 @@ if(isset($_GET['currid'])){
                     },
                     success: function (response1) {
                         $('.body1').html(response1);
-                        $('#myModal').modal('show');
+                        $('#editUser').modal('show');
                     }
                 });
             });

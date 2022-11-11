@@ -5,8 +5,9 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $company_name=$_POST['company'];
     $message=mysqli_real_escape_string($conn,$_POST['message']);
+    $link=$_POST['link'];
    
-    $sql=mysqli_query($conn,"INSERT INTO `testimonial`(`name`, `company_name`, `message`) VALUES ('$name','$company_name','$message')");
+    $sql=mysqli_query($conn,"INSERT INTO `testimonial`(`name`, `company_name`, `message`, `link`) VALUES ('$name','$company_name','$message','$link')");
     if($sql==1){
       echo '<script>alert("Successfully submitted");</script>';
       header("location:testimonials.php");
@@ -164,6 +165,11 @@ if(isset($_POST['submit'])){
                                     <div class="mb-1">
                                         <label class="form-label" for="content">Message</label>                                                                         
                                         <textarea type="text" id="content"  class="form-control" name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="name">Link</label>
+                                        <input type="text" id="link" class="form-control" name="link"
+                                            placeholder="Link" />
                                     </div>
                                     <div class="col-12">
                                                 <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>

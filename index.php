@@ -636,7 +636,7 @@ include('include/config.php');
                                             <p><?php echo $row['message'];?></p>
                                         </div>
                                         <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
-                                            <a href="https://www.amazon.com" target="_blank">
+                                            <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>
                                         </div>
