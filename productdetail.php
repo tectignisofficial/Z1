@@ -46,6 +46,18 @@ else{
 }
 }
 
+if($_POST['review']){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $rating=$_POST['rating'];
+    $title=$_POST['title'];
+    $review=$_POST['review'];
+    $body=$_POST['body'];
+    date_default_timezone_set('Asia/Kolkata');
+    $date=date('d-m-y h:i:s');
+
+    $sql=mysqli_query($conn,"INSERT INTO `product_reviews`(`name`, `email`, `rating`, `review_title`, `body_review`, `status`, `cur_date`) VALUES ('$name','$email','$rating','$title','$body','1','$date')");
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -71,11 +83,85 @@ else{
     <style>
         .slick-list{
             height:489.141px !important;
-
         }
         .slick-track{
 height:2642px !important;
         }
+        .rate{
+    display:flex;
+    transform:rotateY(180deg);
+}
+.rate label{
+    display:block;
+    cursor: pointer;
+    width:20px;
+    background:white;
+}
+.rate label:before{
+    content:'\f005';
+    font-family: FontAwesome;
+    position: relative;
+    display: block;
+    font-size:15px;
+}
+.rate label:after{
+    content:'\f005';
+    font-family: FontAwesome;
+    position: absolute;
+    display: block;
+    font-size:15px;
+    color:#ff344f;
+    top:0;
+    opacity:0;
+    transition:.5s;
+    text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.rate label:hover:after,
+.rate label:hover ~ label:after,
+.rate input:checked ~ label:after{
+    opacity:1;
+}
+.rate input{
+    display:none;
+}
+/* .ratingCheck{
+display:flex;
+transform: rotateY(180deg);
+}
+.ratingCheck label{
+    display:block;
+    cursor: pointer;
+    width:20px;
+    background:white;
+}
+.ratingCheck label:before{
+    content:'\f005';
+    font-family: FontAwesome;
+    position: relative;
+    display: block;
+    font-size:15px;
+}
+.ratingCheck label:after{
+    content:'\f005';
+    font-family: FontAwesome;
+    position: absolute;
+    display: block;
+    font-size:15px;
+    color:#ff344f;
+    top:0;
+    opacity:0;
+    transition:.5s;
+    text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.ratingCheck input{
+    display:none;
+}
+.ratingCheck>.fff {
+    color:#ff344f;
+}
+.pagination .active .fa-circle{
+  color:#ff344f !important;
+} */
         </style>
 </head>
 
@@ -546,7 +632,7 @@ height:2642px !important;
                                                                 for="review_author_10508262282">Name</label>
                                                             <input class="spr-form-input spr-form-input-text "
                                                                 id="review_author_10508262282" type="text"
-                                                                name="review[author]" value=""
+                                                                name="name" value=""
                                                                 placeholder="Enter your name">
                                                         </div>
                                                         <div class="spr-form-contact-email">
@@ -554,7 +640,7 @@ height:2642px !important;
                                                                 for="review_email_10508262282">Email</label>
                                                             <input class="spr-form-input spr-form-input-email "
                                                                 id="review_email_10508262282" type="email"
-                                                                name="review[email]" value=""
+                                                                name="email" value=""
                                                                 placeholder="john.smith@example.com">
                                                         </div>
                                                     </fieldset>
@@ -562,12 +648,17 @@ height:2642px !important;
                                                         <div class="spr-form-review-rating">
                                                             <label class="spr-form-label">Rating</label>
                                                             <div class="spr-form-input spr-starrating">
-                                                                <div class="product-review"><a class="reviewLink"
-                                                                        href="#"><i class="fa fa-star-o"></i><i
-                                                                            class="font-13 fa fa-star-o"></i><i
-                                                                            class="font-13 fa fa-star-o"></i><i
-                                                                            class="font-13 fa fa-star-o"></i><i
-                                                                            class="font-13 fa fa-star-o"></i></a></div>
+                                                                <div class="product-review rate">
+                                                                    <input type="radio" id="star1" name="rating" value="5" >
+                                                                    <label for="star1"></label>
+                                                                    <input type="radio" id="star2" name="rating" value="4" >
+                                                                    <label for="star2"></label>
+                                                                    <input type="radio" id="star3" name="rating" value="3" >
+                                                                    <label for="star3"></label>
+                                                                    <input type="radio" id="star4" name="rating" value="2">
+                                                                    <label for="star4"></label>
+                                                                    <input type="radio" id="star5" name="rating" value="1">
+                                                                    <label for="star5"></label></div>
                                                             </div>
                                                         </div>
 
@@ -576,7 +667,7 @@ height:2642px !important;
                                                                 for="review_title_10508262282">Review Title</label>
                                                             <input class="spr-form-input spr-form-input-text "
                                                                 id="review_title_10508262282" type="text"
-                                                                name="review[title]" value=""
+                                                                name="title" value=""
                                                                 placeholder="Give your review a title">
                                                         </div>
 
@@ -585,10 +676,8 @@ height:2642px !important;
                                                                 for="review_body_10508262282">Body of Review <span
                                                                     class="spr-form-review-body-charactersremaining">(1500)</span></label>
                                                             <div class="spr-form-input">
-                                                                <textarea
-                                                                    class="spr-form-input spr-form-input-textarea "
-                                                                    id="review_body_10508262282"
-                                                                    data-product-id="10508262282" name="review[body]"
+                                                                <textarea class="spr-form-input spr-form-input-textarea "  id="review_body_10508262282"
+                                                                    data-product-id="10508262282" name="body"
                                                                     rows="10"
                                                                     placeholder="Write your comments here"></textarea>
                                                             </div>
@@ -597,7 +686,7 @@ height:2642px !important;
                                                     <fieldset class="spr-form-actions">
                                                         <input type="submit"
                                                             class="spr-button spr-button-primary button button-primary btn btn-primary"
-                                                            value="Submit Review">
+                                                            value="Submit Review" name="review">
                                                     </fieldset>
                                                 </form>
                                             </div>
