@@ -104,7 +104,7 @@ if(isset($_POST['review'])){
             display: block;
             cursor: pointer;
             width: 20px;
-            background: white;
+            background: #fff;
         }
 
         .rate label:before {
@@ -121,7 +121,7 @@ if(isset($_POST['review'])){
             position: absolute;
             display: block;
             font-size: 15px;
-            color: #ff344f;
+            color: #f4760d;
             top: 0;
             opacity: 0;
             transition: .5s;
@@ -138,44 +138,76 @@ if(isset($_POST['review'])){
             display: none;
         }
 
-        /* .ratingCheck{
-display:flex;
-transform: rotateY(180deg);
-}
-.ratingCheck label{
-    display:block;
-    cursor: pointer;
-    width:20px;
-    background:white;
-}
-.ratingCheck label:before{
-    content:'\f005';
-    font-family: FontAwesome;
-    position: relative;
-    display: block;
-    font-size:15px;
-}
-.ratingCheck label:after{
-    content:'\f005';
-    font-family: FontAwesome;
-    position: absolute;
-    display: block;
-    font-size:15px;
-    color:#ff344f;
-    top:0;
-    opacity:0;
-    transition:.5s;
-    text-shadow:0 2px 5px rgba(0,0,0,.5);
-}
-.ratingCheck input{
-    display:none;
-}
-.ratingCheck>.fff {
-    color:#ff344f;
-}
-.pagination .active .fa-circle{
-  color:#ff344f !important;
-} */
+        .ratingCheck {
+            display: flex;
+            transform: rotateY(180deg);
+            justify-content: center;
+        }
+
+        .ratingCheck label {
+            display: block;
+            cursor: pointer;
+            width: 20px;
+            background: #fff;
+        }
+
+        .ratingCheck label:before {
+            content: '\f005';
+            font-family: FontAwesome;
+            position: relative;
+            display: block;
+            font-size: 15px;
+        }
+
+        .ratingCheck label:after {
+            content: '\f005';
+            font-family: FontAwesome;
+            position: absolute;
+            display: block;
+            font-size: 15px;
+            color: #ff344f;
+            top: 0;
+            opacity: 0;
+            transition: .5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+        }
+
+        .ratingCheck input {
+            display: none;
+        }
+
+        .ratingCheck>.fff {
+            color: #f7ab38f2;
+        }
+
+        .pagination .active .fa-circle {
+            color: #ff344f !important;
+        }
+
+        /* show star */
+        :root {
+            --star-size: 60px;
+            --star-color: #fff;
+            --star-colors: #676767;
+            --star-background: #ff344f;
+        }
+
+        .Stars1 {
+            --percent: calc(var(--rating) / 5 * 100%);
+
+            display: inline-block;
+            font-size: 22px;
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+        }
+
+        .Stars1:before {
+            content: '★★★★★';
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-colors) var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -735,12 +767,30 @@ transform: rotateY(180deg);
                                                     <div class="spr-review">
                                                         <div class="spr-review-header">
                                                             <span
-                                                                class="product-review spr-starratings spr-review-header-starratings"><span
-                                                                    class="reviewLink"><i class="fa fa-star"></i><i
-                                                                        class="font-13 fa fa-star"></i><i
-                                                                        class="font-13 fa fa-star"></i><i
-                                                                        class="font-13 fa fa-star"></i><i
-                                                                        class="font-13 fa fa-star"></i></span></span>
+                                                                class="product-review spr-starratings spr-review-header-starratings"><ul class="ratings ratings-three">
+                                                        <li class="ratingCheck">
+                                                            <input type="radio" id="stars5" name="rate" value="5">
+                                                            <label for="stars5"
+                                                                <?php if( ($fetchreview['stars'] >=5)){ ?>class="fff"
+                                                                <?php } ?>></label>
+                                                            <input type="radio" id="stars4" name="rate" value="4">
+                                                            <label for="stars4"
+                                                                <?php if( ($fetchreview['stars'] >= 4)){ ?>class="fff"
+                                                                <?php } ?>></label>
+                                                            <input type="radio" id="stars3" name="rate" value="3">
+                                                            <label for="stars3"
+                                                                <?php if( ($fetchreview['stars'] >= 3)){ ?>class="fff"
+                                                                <?php } ?>></label>
+                                                            <input type="radio" id="stars2" name="rate" value="2">
+                                                            <label for="stars2"
+                                                                <?php if( ($fetchreview['stars'] >= 2)){ ?>class="fff"
+                                                                <?php } ?>></label>
+                                                            <input type="radio" id="stars1" name="rate" value="1">
+                                                            <label for="stars1"
+                                                                <?php if( ($fetchreview['stars'] >= 1)){ ?>class="fff"
+                                                                <?php } ?>></label>
+                                                        </li>
+                                                    </ul></span>
                                                             <h3 class="spr-review-header-title">
                                                                 <?php echo $fetchreview['name']; ?>
                                                             </h3>
