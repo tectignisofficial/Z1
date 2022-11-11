@@ -124,9 +124,9 @@ include('include/config.php');
                             <div class="prFeatures">
                                 <h1 class="mb-5" style="text-align:center">K2 Comfortline Knee Orthosis</h1>
                                 <div class="quote-wraper">
-                              <!--Testimonial Slider Title-->
-                              <div class="section-header text-center">
-                                 
+                                    <!--Testimonial Slider Title-->
+                                    <div class="section-header text-center">
+
                                     </div>
                                     <!--End Testimonial Slider Title-->
                                     <!--Testimonial Slider Items-->
@@ -167,16 +167,21 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <p><?php echo $row['link'];?></span></p>
-                                       
+                                                <div class="logo"
+                                                    style="display: inline-block; padding-top: 0; width:25%;">
+                                                    <a href="https://www.amazon.com" target="_blank">
+                                                        <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
+                                                    </a>
+                                                </div>
+
                                             </blockquote>
-                                          
+
+                                        </div>
+                                        <?php $count++;  } ?>
+                                    </div>
+                                    <!--Testimonial Slider Items-->
                                 </div>
-                                <?php $count++;  } ?>
                             </div>
-                            <!--Testimonial Slider Items-->
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -190,9 +195,9 @@ include('include/config.php');
                             <div class="prFeatures">
                                 <h1 class="mb-5" style="text-align:center">K4 Osteo Align Knee Orthosis</h1>
                                 <div class="quote-wraper">
-                                                  <!--Testimonial Slider Title-->
-                                                  <div class="section-header text-center">
-                                      
+                                    <!--Testimonial Slider Title-->
+                                    <div class="section-header text-center">
+
                                     </div>
                                     <!--End Testimonial Slider Title-->
                                     <!--Testimonial Slider Items-->
@@ -233,15 +238,19 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <p><?php echo $row['link'];?></span></p>
-                                          
+                                                <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                            <a href="https://www.amazon.com" target="_blank">
+                                                <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
+                                            </a>
+                                        </div>
+
                                             </blockquote>
+                                        </div>
+                                        <?php $count++;  } ?>
+                                    </div>
+                                    <!--Testimonial Slider Items-->
                                 </div>
-                                <?php $count++;  } ?>
                             </div>
-                            <!--Testimonial Slider Items-->
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -255,9 +264,9 @@ include('include/config.php');
                             <div class="prFeatures">
                                 <h1 class="mb-5" style="text-align:center">K6 Dezire Knee Orthosis</h1>
                                 <div class="quote-wraper">
-                              <!--Testimonial Slider Title-->
-                              <div class="section-header text-center">
-                                      
+                                    <!--Testimonial Slider Title-->
+                                    <div class="section-header text-center">
+
                                     </div>
                                     <!--End Testimonial Slider Title-->
                                     <!--Testimonial Slider Items-->
@@ -298,15 +307,19 @@ include('include/config.php');
                                                     </ul>
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
-                                                <p><?php echo $row['link'];?></span></p>
-                                         
+                                                <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                            <a href="https://www.amazon.com" target="_blank">
+                                                <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
+                                            </a>
+                                        </div>
+
                                             </blockquote>
+                                        </div>
+                                        <?php $count++;  } ?>
+                                    </div>
+                                    <!--Testimonial Slider Items-->
                                 </div>
-                                <?php $count++;  } ?>
                             </div>
-                            <!--Testimonial Slider Items-->
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>

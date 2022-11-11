@@ -27,9 +27,9 @@
                             data-feather="mail"></i><span class="menu-title text-truncate"
                             data-i18n="Email">Testimonials</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="newsletters.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="new_products_info.php"><i
                             data-feather="message-square"></i><span class="menu-title text-truncate"
-                            data-i18n="Chat">Newsletters</span></a>
+                            data-i18n="Chat">New Products Info</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"

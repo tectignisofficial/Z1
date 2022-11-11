@@ -141,27 +141,30 @@ include('include/config.php');
                                                         <img class="primary blur-up lazyload"
                                                             data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                             src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
-                                                            alt="image" title="product"  width="300" height="300">
+                                                            alt="image" title="product" width="300" height="300">
                                                         <!-- End image -->
                                                         <!-- Hover image -->
                                                         <img class="hover blur-up lazyload"
                                                             data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>"
                                                             src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>"
-                                                            alt="image" title="product"  width="300" height="300">
+                                                            alt="image" title="product" width="300" height="300">
                                                         <!-- End hover image -->
                                                         <!-- product label -->
                                                         <?php $label=$arr['label'];
                                             if($label!=''){ ?>
-                                            <div class="product-labels rectangular"><span class="lbl pr-label2"><?php echo $arr['label'];?></span></div>
-                                            <?php } ?>
+                                                        <!-- <div class="product-labels rectangular"><span
+                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span>
+                                                        </div> -->
+                                                        <?php } ?>
                                                         <!-- End product label -->
                                                     </a>
                                                     <!-- end product image -->
 
                                                     <!-- Start product button -->
-                                                    <form class="variants add"  method="post">
-                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>" class="btn btn-addto-cart" type="button"
-                                                            tabindex="0">Add To Cart</a>
+                                                    <form class="variants add" method="post">
+                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"
+                                                            class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                                            Cart</a>
                                                     </form>
 
                                                     <!-- end product button -->
@@ -172,7 +175,8 @@ include('include/config.php');
                                                 <div class="product-details text-center">
                                                     <!-- product name -->
                                                     <div class="product-name">
-                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name'];?></a>
+                                                        <a
+                                                            href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name'];?></a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -614,9 +618,9 @@ include('include/config.php');
                             </div>
                             <!--End Testimonial Slider Title-->
                             <!--Testimonial Slider Items-->
-                           
+
                             <div class="quotes-slider">
-                           
+
                                 <?php
                          $sql=mysqli_query($conn,"SELECT * FROM testimonial");
                         $count=1;
@@ -624,27 +628,32 @@ include('include/config.php');
                          ?>
                                 <div class="quotes-slide">
                                     <blockquote class="quotes-slider__text text-center">
-                                    <p class="authour"><?php echo $row['name'];?></span></p>
+                                        <p class="authour"><?php echo $row['name'];?></span></p>
 
-                                    <p><?php echo $row['company_name'];?></p>
+                                        <p><?php echo $row['company_name'];?></p>
 
                                         <div class="rte-setting">
                                             <p><?php echo $row['message'];?></p>
                                         </div>
-                                      
-                                    
+                                        <div class="logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                            <a href="https://www.amazon.com" target="_blank">
+                                                <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
+                                            </a>
+                                        </div>
+
+
                                     </blockquote>
                                 </div>
                                 <?php $count++;  } ?>
                             </div>
-                           
+
                             <!--Testimonial Slider Items-->
                         </div>
                     </div>
                 </div>
                 <!--End Testimonial Slider-->
 
-             
+
             </div>
             <!--End Body Content-->
             <?php include("include/footer.php");?>

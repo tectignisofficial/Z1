@@ -3,9 +3,9 @@ include('../../../include/config.php');
 
 if(isset($_GET['delid'])){
     $id=mysqli_real_escape_string($conn,$_GET['delid']);
-    $sql=mysqli_query($conn,"delete from newsletter where id='$id'");
+    $sql=mysqli_query($conn,"delete from new_products_info where id='$id'");
     if($sql=1){
-      header("location:newsletters.php");
+      header("location:new_products_info.php");
     }
     else{ echo "<script>alert('Failed to Delete')</script>"; }
   }
@@ -90,11 +90,11 @@ if(isset($_GET['delid'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-                <h2 class="content-header-title float-start mb-0">Newsletters</h2>
+                <h2 class="content-header-title float-start mb-0">New Products Info</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
                         </li>
-                        <li class="breadcrumb-item active">Newsletters</li>
+                        <li class="breadcrumb-item active">New Products Info</li>
                     </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
@@ -109,7 +109,7 @@ if(isset($_GET['delid'])){
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom row-12">
-                                            <h4 class="card-title">Newsletters</h4>
+                                            <h4 class="card-title">New Products Info</h4>
                                 </div>
                                 <div class="card-datatable">
                                     <table class="dt-responsive table" id="example1">
@@ -122,7 +122,7 @@ if(isset($_GET['delid'])){
                                         </thead>
                                         <tbody>
                                             <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM newsletter");
+                         $sql=mysqli_query($conn,"SELECT * FROM new_products_info");
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
@@ -132,7 +132,7 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $row['email_id'];?></td>
                                                 <td>
                                                     <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href="newsletters.php?delid=<?php echo $row['id']; ?>"
+                                                        href="new_products_info.php?delid=<?php echo $row['id']; ?>"
                                                         onclick="return checkDelete()"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $row['id']; ?>">
@@ -245,7 +245,7 @@ if(isset($_GET['delid'])){
                             swal("Poof! Your imaginary file has been deleted!", {
                                 icon: "success",
                             });
-                            window.location.href = "newsletters.php?delid" + delid;
+                            window.location.href = "new_products_info.php?delid" + delid;
                         } else {
                             swal("Your imaginary file is safe!");
                         }
