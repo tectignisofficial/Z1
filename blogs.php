@@ -1,6 +1,7 @@
 <?php
+session_start();
 include("include/config.php");
-$id=$_GET['eid'];
+
 
 ?>
 
@@ -55,7 +56,7 @@ $id=$_GET['eid'];
                 <div class="row">
                     <?php 
                                     
-                        $sql=mysqli_query($conn,"select * from blog where id='$id'");
+                        $sql=mysqli_query($conn,"select * from blog ");
                         $count=1;
                         while($arr=mysqli_fetch_array($sql)){
                     ?>
@@ -75,10 +76,10 @@ $id=$_GET['eid'];
                                 <div class="blog-nav">
                                     <div class="text-left">
                                         <i class="icon icon-arrow-circle-left"></i>
-                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>" title="">Previous</a>
+                                        <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Previous</a>
                                     </div>
                                     <div class="text-right">
-                                        <a href="blogs.php?eid=<?php echo $arr['id'];?>" title="">Next</a>
+                                        <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Next</a>
                                         <i class="icon icon-arrow-circle-right"></i>
                                     </div>
                                 </div>

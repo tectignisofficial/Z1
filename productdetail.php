@@ -453,14 +453,14 @@ height:2642px !important;
                                 <img src="assets/images/worldwide.png" alt="Worldwide Delivery"
                                     title="Worldwide Delivery" />
                                 <div class="details">
-                                    <h3>Worldwide Delivery</h3>FREE &amp; fast shipping to over 200+ countries &amp;
+                                    <h3>Worldwide Delivery</h3>FREE &amp; Shipping in India, US, UK, Canada &amp;
                                     regions.
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
                                 <img src="assets/images/phone-call.png" alt="Hotline" title="Hotline" />
                                 <div class="details">
-                                    <h3>Hotline</h3>Talk to help line for your question on 4141 456 789, 4125 666 888
+                                    <h3>Support</h3>Talk to help line for your question on +91 7300044197
                                 </div>
                             </div>
                         </div>
@@ -472,7 +472,7 @@ height:2642px !important;
                             <li rel="tab1"><a class="tablink">Product Details</a></li>
                             <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                             <li rel="tab3"><a class="tablink">Size Chart</a></li>
-                            <li rel="tab4"><a class="tablink">Shipping &amp; Returns</a></li>
+                            <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                         </ul>
                         <div class="tab-container">
                             <div id="tab1" class="tab-content">
@@ -527,14 +527,8 @@ height:2642px !important;
                                     <div class="spr-container">
                                         <div class="spr-header clearfix">
                                             <div class="spr-summary">
-                                                <span class="product-review"><a class="reviewLink"><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star"></i><i
-                                                            class="font-13 fa fa-star-o"></i><i
-                                                            class="font-13 fa fa-star-o"></i> </a><span
-                                                        class="spr-summary-actions-togglereviews">Based on 6
-                                                        reviews456</span></span>
+                                                <span class="product-review">
+                                                    
                                                 <span class="spr-summary-actions">
                                                     <a href="#" class="spr-summary-actions-newreview btn">Write a
                                                         review</a>
@@ -740,21 +734,24 @@ height:2642px !important;
                             </div>
 
                             <div id="tab4" class="tab-content">
-                                <h4>Returns Policy</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros justo, accumsan
-                                    non dui sit amet. Phasellus semper volutpat mi sed imperdiet. Ut odio lectus,
-                                    vulputate non ex non, mattis sollicitudin purus. Mauris consequat justo a enim
-                                    interdum, in consequat dolor accumsan. Nulla iaculis diam purus, ut vehicula leo
-                                    efficitur at.</p>
-                                <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. In blandit nunc enim,
-                                    sit amet pharetra erat aliquet ac.</p>
-                                <h4>Shipping</h4>
-                                <p>Pellentesque ultrices ut sem sit amet lacinia. Sed nisi dui, ultrices ut turpis
-                                    pulvinar. Sed fringilla ex eget lorem consectetur, consectetur blandit lacus varius.
-                                    Duis vel scelerisque elit, et vestibulum metus. Integer sit amet tincidunt tortor.
-                                    Ut lacinia ullamcorper massa, a fermentum arcu vehicula ut. Ut efficitur faucibus
-                                    dui Nullam tristique dolor eget turpis consequat varius. Quisque a interdum augue.
-                                    Nam ut nibh mauris.</p>
+                            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                    <div class="rte-setting">
+                            <p>We are happy to accept a return or exchange within 15 business days from the date of delivery of the concerned product only. The buyer will have to pay the return shipping charges. Once we receive the returned item, the return process is initiated from our end and the condition email of the returned item is sent out immediately & then the refund process is initiated between the next 3-4 days.</p>
+							<p>Buyer to inform of the same on receipt of damaged product by writing to us at info@z1kneebrace.com</p>
+							<li>Buyer to ship the product back at the notified address (Jodhpur, Rajasthan, India) at its own cost after the receipt of our e-mail consent;</li>
+							<li>On receipt of the damaged product by us, we will send you the exchanged product.</li>
+							<p>Please note that no exchange / return / refund will be entertained if a customer wants to do so for the reason that he/she doesn’t like the product after delivery or feels the product doesn’t match his or her expectations. No refunds will be given in the following cases:</p>
+							<li>Incorrect or insufficient address mentioned by the customer;</li>
+							<li>Non-availability of recipient at the mentioned address and/or premises;</li>
+							<li>Refusal to accept products;</li>
+							<li>Delivered at the place/to the person specifically mentioned by the customer other than the customer himself;</li>
+							<li>Force majeure event;</li>
+							<li>In case the product has undergone any tampering by the customer.</li>
+							<p>Please note that all the shipping charges and duties incidental to the return of product shall be borne by the buyer. Z1 Knee Brace has no liability towards it.</p>
+                    </div>
+               	</div>
+            </div>
                             </div>
                         </div>
                     </div>

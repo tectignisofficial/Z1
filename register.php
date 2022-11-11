@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('include/config.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

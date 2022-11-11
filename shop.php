@@ -66,10 +66,10 @@ include('include/config.php');
                         </div>
                         <!--Banner-->
                         <!--Information-->
-                        <div class="sidebar_widget">
+                        <!-- <div class="sidebar_widget">
                             <div class="widget-title"><h2>Information</h2></div>
                             <div class="widget-content"><p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p></div>
-                        </div>
+                        </div> -->
                         <!--end Information-->
                         <!--Product Tags-->
                         

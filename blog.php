@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("include/config.php");
 $id=$_GET['eid'];
 
@@ -55,7 +56,7 @@ $id=$_GET['eid'];
                 <div class="row">
                 <?php 
                                     
-                                    $sql=mysqli_query($conn,"select * from blog where id='$id'");
+                                    $sql=mysqli_query($conn,"select * from blog");
                                     $count=1;
                                     while($arr=mysqli_fetch_array($sql)){
                                 ?>
