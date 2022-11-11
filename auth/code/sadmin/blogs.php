@@ -123,15 +123,10 @@ move_uploaded_file($tmp_name, $loc);
                                                     <label class="form-label">Content</label>
                                                     <div id="blog-editor-wrapper">
                                                         <div id="blog-editor-container">
-                                                            <div name="content" id="content" class="editor">
-                                                                <p>
-
-                                                                </p>
+                                                            <div class="">
+                                                                <textarea class="summernote form-control"
+                                                                    name="content" id="content"></textarea>
                                                             </div>
-                                                            <!-- <textarea name="content" id="content"
-                                                                class="editor form-control">
-
-                                                            </textarea> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -218,6 +213,19 @@ move_uploaded_file($tmp_name, $loc);
             }
         });
     </script>
+
+    
+    <script>
+        $(document).ready(function() {
+      $('.summernote').summernote();
+
+    });
+    </script>
+     <!-- include libraries(jQuery, bootstrap) -->
+    
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </body>
 <!-- END: Body-->
 
