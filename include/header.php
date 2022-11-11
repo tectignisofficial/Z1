@@ -9,7 +9,7 @@
                     <div class="col-5 col-sm-5 col-md-5 col-lg-5">
                     <form action="" method="post">
                     <div class="currency-picker">
-                        <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; } ?></span>
+                        <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span>
                         
                          <ul id="currencies">
                             <select name="myselect" id="" class="form-control" onchange="this.form.submit()">
