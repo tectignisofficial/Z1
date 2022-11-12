@@ -92,6 +92,7 @@ if(isset($_POST['review'])){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Product Layout Style1 &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+    <meta name="title" content="title">
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
