@@ -39,6 +39,15 @@ if(isset($_POST['submit'])){
 <!-- Main Style CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+    #map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+    </style>
+
 </head>
 <body class="contact-template page-template belle">
 <div class="pageWrapper">
@@ -53,18 +62,8 @@ if(isset($_POST['submit'])){
       		</div>
 		</div>
         <!--End Page Title-->
-        <div class="map-section map">
-        	<iframe src="https://www.google.com/maps/embed?pb=" height="350" allowfullscreen></iframe>
-            <div class="container">
-            	<div class="row">
-                	<div class="map-section__overlay-wrapper">
-                        <div class="map-section__overlay">
-                           
-                            <p><a href="https://maps.google.com/?daddr=80%20Spadina%20Ave,%20Toronto">Get directions</a></p>
-                        </div>
-                   	</div>
-                </div>
-            </div>
+        <div class="map-section map" id="map">
+        
         </div>
         <div class="bredcrumbWrap">
             <div class="container breadcrumbs">
@@ -171,6 +170,29 @@ $facebook=mysqli_fetch_array($sql);
      <script src="assets/js/popper.min.js"></script>
      <script src="assets/js/lazysizes.js"></script>
      <script src="assets/js/main.js"></script>
+     <script>
+        function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -25.344, lng: 131.031 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+        </script>
+
+     <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyk3flh2DVLF63Ug9kPICZi72a8RfJvmk&callback=initMap&v=weekly"
+      defer
+    ></script>
 </div>
 </body>
 
