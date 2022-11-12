@@ -211,6 +211,11 @@ if(isset($_POST["changepassword"])){
 
                         <!-- Address -->
                         <div id="address" class="address tab-pane">
+                            <div class="row" style="float:right" data-target="#content_quickview" data-toggle="modal">
+                                <button class="btn btn-primary" data-target="#content_quickview" data-toggle="modal">
+                                    Add Address</button>
+
+                            </div>
                             <div class="row">
                                 <div class="col-6">
 
@@ -268,9 +273,7 @@ if(isset($_POST["changepassword"])){
 
                                         </div>
 
-                                        <div class="row">
-
-                                        </div>
+                                      
                                     </fieldset>
 
                                     <button type="submit" name="changepassword"
@@ -291,115 +294,42 @@ if(isset($_POST["changepassword"])){
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                            <div class="product-single">
-                                <!-- Start model close -->
-                                <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right"
-                                    title="close"><span class="icon icon anm anm-times-l"></span></a>
-                                <!-- End model close -->
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="product-details-img">
-                                            <div class="pl-20">
-                                                <img src="assets/images/product-images/product-image1.jpg" alt="" />
+                      <div class="row">
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                                <label for="input-firstname">Select Address Type <span class="required-f">*</span></label>
+                                                <div class="row"><input name="customerName" value=""
+                                                    id="input-firstname" class="form-control" type="radio">Billing Address
+                                                      <input name="customerName" value=""
+                                                    id="input-firstname" class="form-control" type="radio">Shipping Address</div>
+                                                
                                             </div>
+                                          
+
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="product-single__meta">
-                                            <h2 class="product-single__title">Product Quick View Popup</h2>
-                                            <div class="prInfoRow">
-                                                <div class="product-stock"> <span class="instock ">In Stock</span>
-                                                    <span class="outstock hide">Unavailable</span> </div>
-                                                <div class="product-sku">SKU: <span
-                                                        class="variant-sku">19115-rdxs</span></div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-firstname">Name <span
+                                                        class="required-f">*</span></label>
+                                                <input name="customerName" value=""
+                                                    id="input-firstname" class="form-control" type="text">
                                             </div>
-                                            <p class="product-single__price product-single__price-product-template">
-                                                <span class="visually-hidden">Regular price</span>
-                                                <s id="ComparePrice-product-template"><span
-                                                        class="money">$600.00</span></s>
-                                                <span
-                                                    class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
-                                                    <span id="ProductPrice-product-template"><span
-                                                            class="money">$500.00</span></span>
-                                                </span>
-                                            </p>
-                                            <div class="product-single__description rte">
-                                                Belle Multipurpose Bootstrap 4 Html Template that will give you and
-                                                your
-                                                customers a smooth shopping experience which can be used for various
-                                                kinds of stores such as fashion,...
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-email">E-Mail <span
+                                                        class="required-f">*</span></label>
+                                                <input readonly name="customerEmail" value=""
+                                                    id="input-email" class="form-control" type="email">
                                             </div>
 
-                                            <form method="post" action="http://annimexweb.com/cart/add"
-                                                id="product_form_10508262282" accept-charset="UTF-8"
-                                                class="product-form product-form-product-template hidedropdown"
-                                                enctype="multipart/form-data">
-
-                                                <div class="swatch clearfix swatch-1 option2" data-option-index="1">
-                                                    <div class="product-form__item">
-                                                        <label class="header">Size: <span
-                                                                class="slVariant">XS</span></label>
-                                                        <div data-value="XS" class="swatch-element xs available">
-                                                            <input class="swatchInput" id="swatch-1-xs" type="radio"
-                                                                name="option-1" value="XS">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-xs"
-                                                                title="XS">XS</label>
-                                                        </div>
-                                                        <div data-value="S" class="swatch-element s available">
-                                                            <input class="swatchInput" id="swatch-1-s" type="radio"
-                                                                name="option-1" value="S">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-s"
-                                                                title="S">S</label>
-                                                        </div>
-                                                        <div data-value="M" class="swatch-element m available">
-                                                            <input class="swatchInput" id="swatch-1-m" type="radio"
-                                                                name="option-1" value="M">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-m"
-                                                                title="M">M</label>
-                                                        </div>
-                                                        <div data-value="L" class="swatch-element l available">
-                                                            <input class="swatchInput" id="swatch-1-l" type="radio"
-                                                                name="option-1" value="L">
-                                                            <label class="swatchLbl medium rectangle" for="swatch-1-l"
-                                                                title="L">L</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Product Action -->
-                                                <div class="product-action clearfix">
-                                                    <div class="product-form__item--quantity">
-                                                        <div class="wrapQtyBtn">
-                                                            <div class="qtyField">
-                                                                <a class="qtyBtn minus" href="javascript:void(0);"><i
-                                                                        class="fa anm anm-minus-r"
-                                                                        aria-hidden="true"></i></a>
-                                                                <input type="text" id="Quantity" name="quantity"
-                                                                    value="1" class="product-form__input qty">
-                                                                <a class="qtyBtn plus" href="javascript:void(0);"><i
-                                                                        class="fa anm anm-plus-r"
-                                                                        aria-hidden="true"></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-form__item--submit">
-                                                        <button type="button" name="add"
-                                                            class="btn product-form__cart-submit">
-                                                            <span>Add to cart</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Action -->
-                                            </form>
-                                            <div class="display-table shareRow">
-
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <!--End-product-single-->
-                            </div>
-                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-telephone">Telephone <span
+                                                        class="required-f">*</span></label>
+                                                <input name="customerPhone" value=""
+                                                    id="input-telephone" class="form-control" type="tel">
+                                            </div>
+
+                                        </div>
                     </div>
                 </div>
             </div>
