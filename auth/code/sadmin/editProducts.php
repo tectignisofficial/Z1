@@ -1,8 +1,20 @@
 <?php
 include('../../../include/config.php');
 $eid=$_GET['eid'];
-$editSql=mysqli_query($conn,"select * from products where id='$eid'");
+$editSql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.id='$eid'");
 $editArr=mysqli_fetch_array($editSql);
+
+if(isset($_POST['updatecurrrency'])){
+    $stock=$_POST['updaterate'];
+    $id=$_POST['id'];
+    $sql=mysqli_query($conn,"UPDATE `stock` SET `stock`='$stock' where id='$id'");
+    if($sql){
+    }
+    else{
+        echo "<script>alert('error')</script>";
+    }
+}
+
 
 if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
@@ -49,26 +61,27 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
 
 if(empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
 
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$images_name',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$images_name',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`stock_status`='$stock',`attrname`='$attrname1',`attribute`='$attrval1',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
    
 }
 if($sql==1){
     echo '<script>alert("Update sucessfully submitted");</script>';
+    header('location:products.php');
 }else{
     echo '<script>alert("something went wrong");</script>';
 } 
@@ -181,7 +194,40 @@ if($sql==1){
     ?>
     <!-- END: Main Menu-->
 
-
+    <?php  $sql=mysqli_query($conn,"select * from stock ");
+$count=1;
+while($arr=mysqli_fetch_array($sql)){
+?>
+<div class="modal fade" id="editUser<?php echo $arr['id'] ?>" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+    <div class="modal-content">
+        <div class="modal-header bg-transparent">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-5 px-sm-5 pt-50">
+            <div class="text-center mb-2">
+                <h1 class="mb-1">Edit Currency</h1>
+            </div>
+            <form id="editUserForm" method="post" class="row gy-1 pt-75">
+                <div class="col-12 col-md-12">
+                    <label class="form-label" for="modalEditUserFirstName">Stock</label>
+                    <input type="hidden" name="id" value="<?php echo $arr['id']; ?>">
+                    <input type="text" id="updaterate" name="updaterate" class="form-control" placeholder="Rate" value="<?php echo $arr['stock'] ?>"/>
+                </div>
+                <div class="col-12 text-center mt-2 pt-50">
+                    <button type="submit" name="updatecurrrency" id="updatecurrrency" class="btn btn-primary me-1">Update</button>
+                    <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
+                        Discard
+                    </button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<?php $count++; } ?>
+<!--/ Edit User Modal -->
 
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -314,7 +360,11 @@ if($sql==1){
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
-                                            <input type="number" class="form-control" name="stock" id="" value="<?php echo $editArr['stock_status']; ?>">
+                                            <!-- <input type="number" class="form-control" name="stock" id="" value="<?php echo $editArr['stock_status']; ?>"> -->
+                                            <select name="stock" id="" class="form-control">
+                                                <option value="In Stock" <?php if($editArr['stock_status']=='In Stock'){ echo 'selected'; }?>>In Stock</option>
+                                                <option value="Out Of Stock" <?php if($editArr['stock_status']=='Out Of Stock'){ echo 'selected'; }?>>Out Of Stock</option>
+                                            </select>
                                             
                                         </div>
                                        
@@ -335,6 +385,40 @@ if($sql==1){
                                             <p>Adding new attributes helps the product to have many options, such as
                                                 size or color.</p>
                                         </div>
+                                        <?php
+                                        $productname=$editArr['name'];
+                                        $query = mysqli_query($conn,"SELECT * from stock WHERE product_name ='$productname'");
+                                        while($arr=mysqli_fetch_array($query)){
+                                        ?>
+                                        <div class="row mt-2">
+  <div class="col-3">
+  <label class="form-label" for="csname">Value</label>
+  <input type="text" class="form-control" name="attrnal[]" value="<?= $arr['value'] ?>" readonly>
+</div>
+<div class="col-3">
+  <label class="form-label" for="csname">Stock</label>
+  <input type="text" class="form-control" name="stock[]" value="<?= $arr['stock'] ?>" readonly>
+</div>
+<div class="col-3 mt-2">
+<button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1"    data-bs-toggle="modal" data-bs-target="#editUser<?= $arr['id'] ?>">
+<i  data-feather="edit"></i></button>
+  <!-- <i class="fa fa-edit " style="font-size:20px;color:grey;"></i> -->
+</div>
+</div>
+<?php } ?>
+                                        <!-- <div class="col-4">
+        <label class="form-label" for="sname">Attribute name</label>
+        <select class="form-control" onChange="put(this.value)" name="attrname">
+        <option disabled selected></option>
+        <?php
+        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
+        while($arr=mysqli_fetch_array($selsql)){ ?>
+            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="designation"></div>
+</div> -->
                                             <div class="adddiv">
 
                                             </div>
@@ -535,33 +619,7 @@ if($sql==1){
     </script>
     <script>
 
-let a=0;
-$(document).on('click','#show_attributes',function(){
-    a++;
-    if(a<=1){
-    $('.adddiv').append('<div class="row mt-2 atrb">\
-    <div class="col-4">\
-        <label class="form-label" for="sname">Attribute name</label>\
-        <select class="form-control" onChange="get(this.value)" name="attrname">\
-        <?php
-        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
-        while($arr=mysqli_fetch_array($selsql)){ ?>
-            <option value="<?php if( $editArr['attrname'] == $arr['main_title']){ echo 'selected'; } else{ echo $arr['main_title'];} ?>"><?php if( $editArr['attrname'] == $arr['main_title']){ echo $editArr['attrname']; } else{ echo $arr['main_title'];} ?></option>\
-            <?php } ?>
-        </select>\
-    </div>\
-    <div class="col-4">\
-        <label class="form-label" for="csname">Value</label>\
-        <select class="form-control designation" name="attrnal">\
-        <option value="<?php echo $editArr['attribute']; ?>" selected><?php echo $editArr['attribute']; ?></option>\
-        </select>\
-    </div>\
-    <div class="col-4 mt-2">\
-        <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>\
-    </div>\
-</div>');
-    }
-});
+
  
 $(document).on('click','.cancleicon',function(){
         $(this).closest('.atrb').remove();

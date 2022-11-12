@@ -85,6 +85,10 @@
                                     data-feather="circle"></i><span class="menu-item text-truncate"
                                     data-i18n="Account">Social Media</span></a>
                         </li>
+                        <li><a class="d-flex align-items-center" href="update_password.php"><i
+                                    data-feather="circle"></i><span class="menu-item text-truncate"
+                                    data-i18n="Account">Update Password</span></a>
+                        </li>
                     </ul>
                 </li>
 
