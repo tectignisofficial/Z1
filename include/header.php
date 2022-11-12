@@ -75,8 +75,14 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
+                        <?php
+                        if(!isset($_SESSION['customerid'])){
+                        ?>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="register.php">Create Account</a></li>
+                        <?php }else{ ?>
+                        <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
