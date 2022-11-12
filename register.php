@@ -43,8 +43,7 @@ if(isset($_POST['register'])){
   $mail->setFrom('maheshniwate10@gmail.com', 'Z1 Knee Braces');
   $mail->addAddress($customerEmail, $FullName);    
   
-  //Content
-  $mail->isHTML(true);                               
+  //Content                             
   $mail->Subject = 'Verify Email';
   $mail->Body    = 'Click on this Link to Verify Your Email ID http://'.$_SERVER['SERVER_NAME'].'/verify.php?email='.$customerEmail.'';
   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
