@@ -1,6 +1,9 @@
 <?php
-$keyId= 'rzp_live_2liZeeAflRFo1O';
-$keySecret= 'rv2s004ytMddMOBOIVnnsBuB';
+include("../include/config.php");
+$sql=mysqli_query($conn,"select * from paymentmethod where name='razorpay'");
+$arr=mysqli_fetch_array($sql);
+$keyId= $arr['id/key'];
+$keySecret= $arr['secrete'];
 $displayCurrency= 'INR';
 
 // Create the Razorpay Order

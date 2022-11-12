@@ -1,6 +1,9 @@
 <?php
-include('include/config.php');
 session_start();
+include('include/config.php');
+if(isset($_SESSION['customerid'])){
+    header('location:index.php');
+}else{
 if(isset($_POST['login'])){
 
 
@@ -15,6 +18,7 @@ if(isset($_POST['login'])){
 
 	 if($verify==1){
 	  $_SESSION['customerid']=$row['id'];
+      $_SESSION['customername']=$row['name'];
        header('location:myaccount.php');
 
      }else{
@@ -86,7 +90,7 @@ if(isset($_POST['login'])){
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
                                 <input type="submit" name="login" class="btn mb-3" value="Sign In">
                                 <p class="mb-4">
-									<a href="#" id="RecoverPassword">Forgot your password?</a> &nbsp; | &nbsp;
+									<a href="forgotpassword.php" id="RecoverPassword">Forgot your password?</a> &nbsp; | &nbsp;
 								    <a href="register.php" id="customer_register_link">Create account</a>
                                 </p>
                             </div>
@@ -123,3 +127,4 @@ if(isset($_POST['login'])){
 
 <!-- belle/login.html   11 Nov 2019 12:22:27 GMT -->
 </html>
+<?php } ?>
