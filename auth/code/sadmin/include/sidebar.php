@@ -15,10 +15,6 @@
                             data-i18n="Dashboards">Dashboards</span><span
                             class="badge badge-light-warning rounded-pill ms-auto me-1">2</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="pages.php"><i
-                            data-feather="mail"></i><span class="menu-title text-truncate"
-                            data-i18n="Email">Pages</span></a>
-                </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable.php"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Blogs</span></a>
