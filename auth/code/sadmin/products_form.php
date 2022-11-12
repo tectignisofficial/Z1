@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
     $myvideofile=$_POST['myvideofile'];
     $sku=$_POST['sku'] ?? null;
     $price=$_POST['price'] ?? null;
+    $stock1=$_POST['stock1'] ?? null;
     $stock=$_POST['stock'] ?? null;
     $attrname1=$_POST['attrname'] ?? null;
     $attrval1=$_POST['attrnal'] ?? null;
@@ -47,10 +48,11 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
     }
    
 
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock_status`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock1')");
 
 if($sql==1){
     echo '<script>alert("sucessfully submitted");</script>';
+    header('location:products.php');
 }else{
     echo '<script>alert("something went wrong");</script>';
 }
@@ -95,7 +97,7 @@ if($sql==1){
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
- 
+
     <style>
         .widget-title {
             border-bottom: 1px solid #eeeeee;
@@ -114,29 +116,30 @@ if($sql==1){
             content: " *";
             color: red;
         }
+
         .upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
 
-.btn1 {
-  border: 2px solid gray;
-  color: #7367f0;
-  background-color: white;
-  padding: 8px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor:pointer;
-}
+        .btn1 {
+            border: 2px solid gray;
+            color: #7367f0;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
     </style>
     <!-- END: Custom CSS-->
 
@@ -181,12 +184,12 @@ if($sql==1){
                 </div>
             </div>
             <div class="content-body">
-            <form class="form-check" method="post" enctype="multipart/form-data">
-                <div class="row">
-                    <div class="mb-1 col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                               
+                <form class="form-check" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="mb-1 col-md-9">
+                            <div class="card">
+                                <div class="card-body">
+
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
@@ -199,9 +202,9 @@ if($sql==1){
                                             <button type="button" class="btn btn-info">Add Media</button>
                                         </div> -->
                                         <div class="mt-2">
-        <textarea class="summernote form-control" name="desc"></textarea>
-    </div>
-    
+                                            <textarea class="summernote form-control" name="desc"></textarea>
+                                        </div>
+
                                         <!-- <input type="text" id="myeditor" class="form-control" name="desc"
                                             placeholder="Description" /> -->
                                     </div>
@@ -238,37 +241,43 @@ if($sql==1){
                                                     <a class="dropdown-item" href="#">Youtube video</a>
                                                 </div>
                                             </div>
-                                    s    </div> -->
+                                      </div> -->
                                         <div class="mt-2">
-        <textarea class="summernote form-control" name="cont"></textarea>
-    </div>
+                                            <textarea class="summernote form-control" name="cont"></textarea>
+                                        </div>
                                         <!-- <input type="text" id="cont" class="form-control" name="cont" placeholder=""/> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="images">Images</label><br>
-                                       
+
                                         <div class="upload-btn-wrapper">
-                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select files</button>
-                                        <input type="file" name="hightlightfile" id="hightlightfile" accept="image/webp" multiple/>
+                                            <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
+                                                Click me to select files</button>
+                                            <input type="file" name="hightlightfile" id="hightlightfile"
+                                                accept="image/webp" multiple />
                                         </div>
                                         <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
-                                        <p style="color:red">Please upload proper image with exact size : 1071 x 1500px</p>
+                                        <p style="color:red">Please upload proper image with exact size : 1071 x 1500px
+                                        </p>
 
                                         <div class="upload-btn-wrapper">
-                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple/>
+                                            <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
+                                                Click me to select multiple files</button>
+                                            <input type="file" name="myfile[]" id="myfile" accept="image/webp"
+                                                multiple />
                                         </div>
 
                                         <div class="upload-btn-wrapper">
-                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Hover Files</button>
-                                        <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"/>
+                                            <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
+                                                Click me to select Hover Files</button>
+                                            <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" />
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
                                                 <div data-name="images[]"
                                                     class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image ">
-                                                    <img src="auth/code/sadmin/image/icon/placeholder.png"
-                                                        alt="Image" width="100">
+                                                    <img src="auth/code/sadmin/image/icon/placeholder.png" alt="Image"
+                                                        width="100">
                                                     <br>
                                                     <p style="color:#c3cfd8">Using button
                                                         <strong>Select image</strong> to add more images.</p>
@@ -287,22 +296,24 @@ if($sql==1){
                                         </button>
                                     </div> -->
                                     <div class="upload-btn-wrapper">
-                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select Size Files</button>
-                                        <input type="file" accept="image/webp"  name="sizefile" id="sizefile" />
-                                        </div>
+                                        <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click
+                                            me to select Size Files</button>
+                                        <input type="file" accept="image/webp" name="sizefile" id="sizefile" />
+                                    </div>
                                     <div class="upload-btn-wrapper" style="display:block;">
-                                    <label class="form-label" for="">Video</label>
-                                        <input type="text" name="myvideofile" class="form-control" placeholder="youtube video link"/>
-                                        </div>
-                                <!-- </form> -->
+                                        <label class="form-label" for="">Video</label>
+                                        <input type="text" name="myvideofile" class="form-control"
+                                            placeholder="youtube video link" />
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Overview</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Overview</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
                                     <div class="row">
                                         <div class="row">
                                             <div class="col-4">
@@ -323,44 +334,45 @@ if($sql==1){
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
                                             <!-- <input type="" class="form-control" name="stock" id=""> -->
-                                            <select name="stock" id="" class="form-control">
+                                            <select name="stock1" id="" class="form-control">
                                                 <option value="In Stock">In Stock</option>
                                                 <option value="Out Of Stock">Out Of Stock</option>
                                             </select>
-                                            
+
                                         </div>
-                                       
-                                        
+
+
                                     </div>
-                                <!-- </form> -->
+                                    <!-- </form> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Attributes</h4>
-                                <!-- <p id="show_attributes" class="clickadd">Add new attributes</p> -->
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Attributes</h4>
+                                    <!-- <p id="show_attributes" class="clickadd">Add new attributes</p> -->
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
                                     <div class="row">
                                         <div class="col-12">
                                             <p>Adding new attributes helps the product to have many options, such as
                                                 size or color.</p>
                                         </div>
                                         <div class="col-4">
-        <label class="form-label" for="sname">Attribute name</label>
-        <select class="form-control" onChange="put(this.value)" name="attrname">
-        <option disabled selected></option>
-        <?php
-        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
-        while($arr=mysqli_fetch_array($selsql)){ ?>
-            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
-            <?php } ?>
-        </select>
-    </div>
-    <div class="designation"></div>
-</div>
-                                            <!-- <div class="row">
+                                            <label class="form-label" for="sname">Attribute name</label>
+                                            <select class="form-control" onChange="put(this.value)" name="attrname">
+                                                <option disabled selected></option>
+                                                <?php
+                                                $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
+                                                while($arr=mysqli_fetch_array($selsql)){ ?>
+                                                <option value="<?php echo $arr['main_title']; ?>">
+                                                    <?php echo $arr['main_title']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="designation"></div>
+                                    </div>
+                                    <!-- <div class="row">
                                                 <div class="col-4">
                                                     <label class="form-label" for="sname">Attribute name</label>
                                                     <select name="attrName" class="form-control">
@@ -375,33 +387,32 @@ if($sql==1){
                                                 </div>
                                             </div> -->
 
-                                            <!-- <div class="row mt-2 atrb">
-    <div class="col-4">
-        <label class="form-label" for="sname">Attribute name</label>
-        <select class="form-control" onChange="put(this.value);" name="attrname[]">
-        <option disabled selected></option>
-        <?php
-        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
-        while($arr=mysqli_fetch_array($selsql)){ ?>
-            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
-            <?php } ?>
-        </select>
-    </div>
-  
-</div> -->
-<div class="adddiv">
+                                    <!-- <div class="row mt-2 atrb">
+                                        <div class="col-4">
+                                            <label class="form-label" for="sname">Attribute name</label>
+                                            <select class="form-control" onChange="put(this.value);" name="attrname[]">
+                                            <option disabled selected></option>
+                                            <?php
+                                            $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
+                                            while($arr=mysqli_fetch_array($selsql)){ ?>
+                                                <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    
+                                    </div> -->
+                                    <div class="adddiv">
 
-</div>
-                                            
-                                            <!-- <div class="mt-2">
+                                    </div>
+
+                                    <!-- <div class="mt-2">
                                                 <button type="button" class="btn btn-outline-primary clickadd">
                                                     Add New Attributes
                                                 </button>
                                             </div> -->
-                                    </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
-                        </div>
                         <!-- <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Related products</h4>
@@ -428,20 +439,20 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <p>Setup meta title & description to make your site easy to discovered on search
-                                        engines such as Google</p>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label class="form-label" for="set">SEO Title</label>
-                                            <input type="text" id="set" class="form-control" name="set"
-                                                placeholder="seo title" />
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="form-label" for="sedes">SEO description</label>
-                                            <input type="text" id="sedes" class="form-control" name="sedes"
-                                                placeholder="seo description" />
-                                        </div>
+                                <p>Setup meta title & description to make your site easy to discovered on search
+                                    engines such as Google</p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="form-label" for="set">SEO Title</label>
+                                        <input type="text" id="set" class="form-control" name="set"
+                                            placeholder="seo title" />
                                     </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="sedes">SEO description</label>
+                                        <input type="text" id="sedes" class="form-control" name="sedes"
+                                            placeholder="seo description" />
+                                    </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
@@ -453,12 +464,12 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <button type="submit" name="submit" class="btn btn-success">Save</button>
-                                            <button type="button" class="btn btn-info saveEdit">Save & Edit</button>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" name="submit" class="btn btn-success">Save</button>
+                                        <button type="button" class="btn btn-info saveEdit">Save & Edit</button>
                                     </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
@@ -468,15 +479,16 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <select class="form-select" id="sbasicSelect" name="published" onChange="pub(this.value)">
-                                                <option value="Published">Published</option>
-                                                <option value="Draft">Draft</option>
-                                                <option value="Pending">Pending</option>
-                                            </select>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <select class="form-select" id="sbasicSelect" name="published"
+                                            onChange="pub(this.value)">
+                                            <option value="Published">Published</option>
+                                            <option value="Draft">Draft</option>
+                                            <option value="Pending">Pending</option>
+                                        </select>
                                     </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
@@ -486,14 +498,14 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-check form-check-success form-switch">
-                                                <input type="checkbox" value="1" class="form-check-input"
-                                                    id="customSwitch4" name="featured"/>
-                                            </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-check form-check-success form-switch">
+                                            <input type="checkbox" value="1" class="form-check-input" id="customSwitch4"
+                                                name="featured" />
                                         </div>
                                     </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
@@ -503,21 +515,22 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="mb-1">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="tv" name="knee" value="Knee Brace"/>
-                                                    <label class="form-check-label" for="tv">Knee Brace</label>
-                                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-1">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="tv" name="knee"
+                                                    value="Knee Brace" />
+                                                <label class="form-check-label" for="tv">Knee Brace</label>
                                             </div>
-                                    
                                         </div>
+
                                     </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
-                    
+
 
                         <div class="card">
                             <div class="card-header">
@@ -525,52 +538,55 @@ if($sql==1){
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="mb-1">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck1" name="label" value="New"/>
-                                                    <label class="form-check-label" for="customCheck1">New</label>
-                                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-1">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck1"
+                                                    name="label" value="New" />
+                                                <label class="form-check-label" for="customCheck1">New</label>
                                             </div>
-                                            <div class="mb-1">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck2" name="label" value="Hot" />
-                                                    <label class="form-check-label" for="customCheck2">Hot</label>
-                                                </div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2"
+                                                    name="label" value="Hot" />
+                                                <label class="form-check-label" for="customCheck2">Hot</label>
                                             </div>
-                                            <div class="mb-1">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="customCheck4" name="label" value="Sale" />
-                                                    <label class="form-check-label" for="customCheck4">Sale</label>
-                                                </div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck4"
+                                                    name="label" value="Sale" />
+                                                <label class="form-check-label" for="customCheck4">Sale</label>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 <!-- </form> -->
                             </div>
                         </div>
-                       
+
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Tags</h4>
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <input type="text" id="tname" class="form-control" name="tname"
-                                                placeholder="Write some tags" />
-                                        </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="text" id="tname" class="form-control" name="tname"
+                                            placeholder="Write some tags" />
                                     </div>
-                                
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
-                </form>
             </div>
+            </form>
         </div>
+    </div>
     </div>
     <!-- END: Content-->
 
@@ -610,59 +626,60 @@ if($sql==1){
         })
     </script>
     <script>
-//         $(document).ready(function(){
-//     $('#myfile').change(function(){
-//         if(this.width != 1071 || this.height != 1500){
-//         alert('Please upload proper image with exact size : 1071 x 1500px');
-//        }
-//     });
+        //         $(document).ready(function(){
+        //     $('#myfile').change(function(){
+        //         if(this.width != 1071 || this.height != 1500){
+        //         alert('Please upload proper image with exact size : 1071 x 1500px');
+        //        }
+        //     });
 
-//     $(document).on('click','.cancleicon',function(){
-//         $(this).closest('.atrb').remove();
-//     })
-// });
+        //     $(document).on('click','.cancleicon',function(){
+        //         $(this).closest('.atrb').remove();
+        //     })
+        // });
 
-let a=0;
-$(document).on('click','#show_attributes',function(){
-    a++;
-    if(a<=1){
-    $('.adddiv').append('<div class="row mt-2 atrb">\
+        let a = 0;
+        $(document).on('click', '#show_attributes', function () {
+            a++;
+            if (a <= 1) {
+                $('.adddiv').append('<div class="row mt-2 atrb">\
    ');
-    }
-});
- 
-function put(val){
-    $.ajax({
-  type:'POST',
-  url:'api.php',
-  data:'attr='+val,
-  success:function(html){
-    $('.designation').html(html);
-  }
-});
-}
+            }
+        });
 
-$(".saveEdit").css("display","none");
-function pub(val){
-    if(val=='Published'){
-        $(".saveEdit").css("display","block");
-    }
-}
+        function put(val) {
+            $.ajax({
+                type: 'POST',
+                url: 'api.php',
+                data: 'attr=' + val,
+                success: function (html) {
+                    $('.designation').html(html);
+                }
+            });
+        }
 
-$(document).ready(function() {
-      $('.summernote').summernote();
-    });
+        $(".saveEdit").css("display", "none");
 
-    $(document).on('click','.cancleicon',function(){
-        $(this).closest('.atrb').remove();
-    })
+        function pub(val) {
+            if (val == 'Published') {
+                $(".saveEdit").css("display", "block");
+            }
+        }
+
+        $(document).ready(function () {
+            $('.summernote').summernote();
+        });
+
+        $(document).on('click', '.cancleicon', function () {
+            $(this).closest('.atrb').remove();
+        })
     </script>
-     <!-- include libraries(jQuery, bootstrap) -->
-    
+    <!-- include libraries(jQuery, bootstrap) -->
+
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    
+
 </body>
 <!-- END: Body-->
 

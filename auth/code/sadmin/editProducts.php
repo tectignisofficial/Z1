@@ -81,6 +81,7 @@ else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hig
 }
 if($sql==1){
     echo '<script>alert("Update sucessfully submitted");</script>';
+    header('location:products.php');
 }else{
     echo '<script>alert("something went wrong");</script>';
 } 
