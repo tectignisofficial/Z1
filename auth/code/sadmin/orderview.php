@@ -1,14 +1,6 @@
-<?php 
-include('../../../include/config.php');
+<?php
+include("../../../include/config.php");
 
-if(isset($_GET['delid'])){
-    $id=mysqli_real_escape_string($conn,$_GET['delid']);
-    $sql=mysqli_query($conn,"delete from contact where id='$id'");
-    if($sql=1){
-      header("location:contact.php");
-    }
-    else{ echo "<script>alert('Failed to Delete')</script>"; }
-  }
 ?>
 
 <!DOCTYPE html>
@@ -112,12 +104,14 @@ if(isset($_GET['delid'])){
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-start mb-0">
-                                Contact Table
+                                Order View Table
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Contact Us</li>
+                                    <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Order</a></li>
+                                    <li class="breadcrumb-item active">View Button</li>
+
                                 </ol>
                             </div>
                         </div>
@@ -138,38 +132,21 @@ if(isset($_GET['delid'])){
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Subject</th>
-                                            <th>Message</th>
-                                            <th>Action</th>
+                                            <th>Order No.</th>
+                                            <th>Order Date</th>
+                                            <th>Customer Name</th>
+                                            <th>Shipping Address</th>
+                                            <th>Billing Address</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM contact");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
                                         <tr>
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $row['name'];?></td>
-                                            <td><?php echo $row['email'];?></td>
-                                            <td><?php echo $row['phone'];?></td>
-                                            <td><?php echo $row['subject'];?></td>
-                                            <td><?php echo $row['message'];?></td>
-                                            <td>
-                                                <a href="contact.php?delid=<?php echo $row['id']; ?>"
-                                                    onclick="return checkDelete()"><button type="button"
-                                                        data-id="=<?php echo $row['id']; ?>"
-                                                        class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
-                                            </td>
+                                            <td>213</td>
+                                            <td>evfae</td>
+                                            <td>dip</td>
+                                            <td>vrtb</td>
+                                            <td>1999/- </td>
                                         </tr>
-                                        <?php $count++;   } ?>
-
                                     </tbody>
                                 </table>
 
@@ -235,9 +212,9 @@ if(isset($_GET['delid'])){
     <script>
         $(function () {
             $("#example1").DataTable({
-                "responsive": true,
                 "lengthChange": true,
                 "autoWidth": false,
+                "scrollX": true
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });

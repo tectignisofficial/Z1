@@ -1,14 +1,6 @@
-<?php 
-include('../../../include/config.php');
+<?php
+include("../../../include/config.php");
 
-if(isset($_GET['delid'])){
-    $id=mysqli_real_escape_string($conn,$_GET['delid']);
-    $sql=mysqli_query($conn,"delete from contact where id='$id'");
-    if($sql=1){
-      header("location:contact.php");
-    }
-    else{ echo "<script>alert('Failed to Delete')</script>"; }
-  }
 ?>
 
 <!DOCTYPE html>
@@ -112,12 +104,12 @@ if(isset($_GET['delid'])){
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-start mb-0">
-                                Contact Table
+                                Product Table
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Contact Us</li>
+                                    <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                                    <li class="breadcrumb-item active">Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -138,38 +130,35 @@ if(isset($_GET['delid'])){
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Subject</th>
-                                            <th>Message</th>
+                                            <th>SKU</th>
+                                            <th>Thumbnail</th>
+                                            <th>Product Name</th>
+                                            <th>Stock</th>
+                                            <th>Price</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM contact");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
                                         <tr>
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $row['name'];?></td>
-                                            <td><?php echo $row['email'];?></td>
-                                            <td><?php echo $row['phone'];?></td>
-                                            <td><?php echo $row['subject'];?></td>
-                                            <td><?php echo $row['message'];?></td>
+                                            <td>213</td>
+                                            <td>evfae</td>
+                                            <td>dip</td>
+                                            <td>vrtb</td>
+                                            <td>1999/- </td>
                                             <td>
-                                                <a href="contact.php?delid=<?php echo $row['id']; ?>"
-                                                    onclick="return checkDelete()"><button type="button"
-                                                        data-id="=<?php echo $row['id']; ?>"
-                                                        class="btn btn-outline-danger"><i
+                                                <a class="btn btn-outline-success eye"
+                                                    href="offerletter.php?eid=<?php echo $arr['id']; ?>">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                                <a class="btn btn-outline-primary edit"
+                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                                <a href="offerlettertable.php?delid=<?php echo $arr['id']; ?>"><button
+                                                        type="button" class="btn btn-outline-danger"><i
                                                             data-feather="trash"></i></button></a>
                                             </td>
                                         </tr>
-                                        <?php $count++;   } ?>
-
                                     </tbody>
                                 </table>
 
