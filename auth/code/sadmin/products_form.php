@@ -38,23 +38,16 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         
     }
 }
-// foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
 
-    // $myfile = $_FILES['myfile']['name'][$key];
-    //     $file_size =$_FILES['myfile']['size'][$key];
-    //     $file_tmp =$_FILES['myfile']['tmp_name'][$key];
-    //     $file_type=$_FILES['myfile']['type'][$key]; 
-if($attrname1 != ''){
-    foreach($attrname1 as $inde => $naames){
-        $s_attrname = $naames;
-        $s_attrVal=$attrval1[$inde];
+    foreach($attrval1 as $inde => $naames){
+        $s_attrVal = $naames;
+        $s_stock=$stock[$inde];
     
-        $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `attrname`,`attribute`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$s_attrname','$s_attrVal','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
+        $sql=mysqli_query($conn,"INSERT INTO `stock`(`name`, `value`, `stock`, `product_name`, `product_price`, `status`) VALUES ('$attrname1','$s_attrVal','$s_stock','$name','$price','1')");
     }
-}
-else{
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `stock_status`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$stock','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile')");
-}
+   
+
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock')");
 
 if($sql==1){
     echo '<script>alert("sucessfully submitted");</script>';
@@ -329,7 +322,11 @@ if($sql==1){
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
-                                            <input type="number" class="form-control" name="stock" id="">
+                                            <!-- <input type="" class="form-control" name="stock" id=""> -->
+                                            <select name="stock" id="" class="form-control">
+                                                <option value="In Stock">In Stock</option>
+                                                <option value="Out Of Stock">Out Of Stock</option>
+                                            </select>
                                             
                                         </div>
                                        
@@ -364,9 +361,25 @@ if($sql==1){
                                                     </select>
                                                 </div>
                                             </div> -->
-                                            <div class="adddiv">
 
-                                            </div>
+                                            <!-- <div class="row mt-2 atrb">
+    <div class="col-4">
+        <label class="form-label" for="sname">Attribute name</label>
+        <select class="form-control" onChange="put(this.value);" name="attrname[]">
+        <option disabled selected></option>
+        <?php
+        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
+        while($arr=mysqli_fetch_array($selsql)){ ?>
+            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
+            <?php } ?>
+        </select>
+    </div>
+  
+</div> -->
+<div class="adddiv">
+
+</div>
+                                            
                                             <!-- <div class="mt-2">
                                                 <button type="button" class="btn btn-outline-primary clickadd">
                                                     Add New Attributes
@@ -603,7 +616,7 @@ $(document).on('click','#show_attributes',function(){
     $('.adddiv').append('<div class="row mt-2 atrb">\
     <div class="col-4">\
         <label class="form-label" for="sname">Attribute name</label>\
-        <select class="form-control" onChange="get(this.value)" name="attrname[]">\
+        <select class="form-control" onChange="put(this.value)" name="attrname">\
         <option disabled selected></option>\
         <?php
         $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
@@ -612,19 +625,12 @@ $(document).on('click','#show_attributes',function(){
             <?php } ?>
         </select>\
     </div>\
-    <div class="col-4">\
-        <label class="form-label" for="csname">Value</label>\
-        <select class="form-control designation" name="attrnal[]">\
-        </select>\
-    </div>\
-    <div class="col-4 mt-2">\
-        <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>\
-    </div>\
+    <div class="designation"></div>\
 </div>');
     }
 });
  
-function get(val){
+function put(val){
     $.ajax({
   type:'POST',
   url:'api.php',
