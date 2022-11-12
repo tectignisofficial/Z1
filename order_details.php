@@ -1,3 +1,12 @@
+<?php
+session_start();
+include('include/config.php');
+
+if(isset($_POST['doneAddress'])){
+    $_SESSION['addressid']=$_POST['id'];
+}
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 

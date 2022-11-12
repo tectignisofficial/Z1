@@ -24,7 +24,8 @@ if(!in_array($_GET['name'],$item_array_id)){
         'itemid'   => $_POST['productid'],
         'name'     => $_GET['name'],
         'quantity' => $_POST['quantity'],
-        'price'    => $_POST['price']
+        'price'    => $_POST['price'],
+        'option1'  => $_POST['option1']
     );
     $_SESSION['shopping_cart'][$count] = $item_arr;
     header('location:productdetail.php?name='.$productName);
@@ -38,7 +39,8 @@ else{
         'itemid'   => $_POST['productid'],
         'name'     => $_GET['name'],
         'quantity' => $_POST['quantity'],
-        'price'    => $_POST['price']
+        'price'    => $_POST['price'],
+        'option1'  => $_POST['option1']
     );
     $_SESSION['shopping_cart'][0] = $item_arr;
 }
@@ -59,6 +61,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['phone']=$fetchsql['phone'];
         $_SESSION['total']=$_POST['price'];
         $_SESSION['quantity']=$_POST['quantity'];
+        $_SESSION['option1']=$_POST['option1'];
         $_SESSION['productname']=$_POST['productname'];
     if($_SESSION['myselect']=='INR'){
         header('location:checkout.php');
@@ -478,8 +481,7 @@ if(isset($_POST['review'])){
                                             ?>
                                             <div data-value="<?php echo $sizearr['value']; ?>"
                                                 class="swatch-element xs available">
-                                                <input class="swatchInput"
-                                                    id="swatch-1-<?php echo $sizearr['value']; ?>" type="radio"
+                                                <input class="swatchInput" id="swatch-1-<?php echo $sizearr['value']; ?>" type="radio"
                                                     name="option1" value="<?php echo $sizearr['value']; ?>"
                                                     <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle"

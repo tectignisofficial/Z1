@@ -121,7 +121,7 @@ if(isset($_POST['checkout'])){
                                         </div> -->
                                     </td>
                                     <td class="text-right small--hide cart-price">
-                                        <div><span class="money"><i class="<?php echo $_SESSION['icon'] ?>"></i><?php  
+                                        <div><span class="money"><i class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i><?php  
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
                                                             }else{
