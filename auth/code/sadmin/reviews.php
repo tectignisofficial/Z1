@@ -78,7 +78,7 @@ if(isset($_GET['delid'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-                <h2 class="content-header-title float-start mb-0">Reviews</h2>
+                    <h2 class="content-header-title float-start mb-0">Reviews</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
                         </li>
@@ -102,7 +102,7 @@ if(isset($_GET['delid'])){
                                     <div class="col-1">
                                         <div class="btn-group">
                                             <button type="button"
-                                            class="btn btn-outline-primary dropdown-toggle waves-effect show"
+                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
                                                 data-bs-toggle="dropdown" aria-expanded="true">
                                                 Bulk actions
                                             </button>
@@ -115,7 +115,7 @@ if(isset($_GET['delid'])){
                                         </div>
                                     </div>
                                     <div class="col-1">
-                                    <button type="button" class="btn btn-primary">Filters</button></div>
+                                        <button type="button" class="btn btn-primary">Filters</button></div>
                                     <div class="col-2">
                                         <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
                                             <label><input type="search" class="form-control input-sm"
@@ -136,40 +136,41 @@ if(isset($_GET['delid'])){
                                     <table class="dt-responsive table">
                                         <thead>
                                             <tr>
-                                            <th>SR NO.</th>
-                                                    <th>NAME</th>
-                                                    <th>PRODUCT NAME</th>
-                                                    <th>STAR</th>
-                                                    <!-- <th>DESCRIPTION</th> -->
-                                                    <th>LOCATION</th>
-                                                    <th>LINKS</th>
-                                                    <th>ACTION</th>
+                                                <th>SR NO.</th>
+                                                <th>NAME</th>
+                                                <th>PRODUCT NAME</th>
+                                                <th>STAR</th>
+                                                <!-- <th>DESCRIPTION</th> -->
+                                                <th>LOCATION</th>
+                                                <th>LINKS</th>
+                                                <th>ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php
+                                            <?php
                          $sql=mysqli_query($conn,"SELECT * FROM reviews");
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
                                             <tr>
-                                            <td><?php echo $count;?></td>
-                                                    <td><?php echo $row['name'];?></td>
-                                                    <td><?php echo $row['product_name'];?></td>
-                                                    <td><?php echo $row['stars'];?></td>
-                                                    <!-- <td></td> -->
-                                                    <td><?php echo $row['location'];?></td>
-                                                    <td><?php echo $row['link'];?></td>
-                                                    <td>
-                                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                <td><?php echo $count;?></td>
+                                                <td><?php echo $row['name'];?></td>
+                                                <td><?php echo $row['product_name'];?></td>
+                                                <td><?php echo $row['stars'];?></td>
+                                                <!-- <td></td> -->
+                                                <td><?php echo $row['location'];?></td>
+                                                <td><?php echo $row['link'];?></td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         href="reviews.php?delid=<?php echo $row['id']; ?>"
                                                         onclick="return checkDelete()"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i data-feather="trash-2"></i>
-                                                    </td>
-                                                </tr>
-                                                <?php $count++;  } ?>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <?php $count++;  } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -222,7 +223,7 @@ if(isset($_GET['delid'])){
         })
     </script>
 
-<script>
+    <script>
         $(document).ready(function () {
             $('.delbtn').click(function (e) {
                 e.preventDefault();
