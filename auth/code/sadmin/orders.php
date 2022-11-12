@@ -171,8 +171,7 @@
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 62px;"
-                                                        aria-label="Salary: activate to sort column ascending">Payment
-                                                        Method</th>
+                                                        aria-label="Salary: activate to sort column ascending">Product Name</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">Status
@@ -192,7 +191,7 @@
                                                     <th rowspan="1" colspan="1">Order No.</th>
                                                     <th rowspan="1" colspan="1">Customer</th>
                                                     <th rowspan="1" colspan="1">Country</th>
-                                                    <th rowspan="1" colspan="1">Payment Method</th>
+                                                    <th rowspan="1" colspan="1">Product Name</th>
                                                     <th rowspan="1" colspan="1">Status</th>
                                                     <th rowspan="1" colspan="1">Action</th>
                                                 </tr>
