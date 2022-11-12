@@ -45,14 +45,16 @@
                            
 
                             <div id="address" class="address tab-pane mb-4">
-<div class="row">
 
 
+<div style="float:right">
+       <button class="btn" value="Place order" type="submit">Place order</button>
+</div>
 
-                                <button class="btn" value="Place order" type="submit">Place order</button>
+                             
                             
 
-</div>
+
                            
                                 <div class="row">
                                     <div class="col-6">

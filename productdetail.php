@@ -92,6 +92,7 @@ if(isset($_POST['review'])){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Product Layout Style1 &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+    <meta name="title" content="title">
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -264,9 +265,11 @@ if(isset($_POST['review'])){
                                     <div class="product-thumb">
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
                                             <?php
+
                                             $images = $arr['image'];
                                             $images = explode(',',$images);
                                             $count=-5;
+                                      
                                             foreach($images AS $image){
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
@@ -279,6 +282,16 @@ if(isset($_POST['review'])){
                                             </a>';
                                             $count++;
                                             }
+
+                                            echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            class="slick-slide slick-cloned " data-slick-index="'.$count.'"
+                                            aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload"
+                                                data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                alt="" />
+                                            </a>';
                                             ?>
 
                                             <!-- <a data-image="assets/images/product-images/product-image1-1.jpg"
