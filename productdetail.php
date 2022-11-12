@@ -264,10 +264,8 @@ if(isset($_POST['review'])){
                                     <div class="product-thumb">
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
                                             <?php
-                                            $images = $arr['image'];
-                                            $images = explode(',',$images);
-                                            $count=-5;
-                                            echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+
+                                                  echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
                                             data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
                                             class="slick-slide slick-cloned " data-slick-index="'.$count.'"
                                             aria-hidden="true" tabindex="-1">
@@ -276,6 +274,10 @@ if(isset($_POST['review'])){
                                                 src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
                                                 alt="" />
                                             </a>';
+                                            $images = $arr['image'];
+                                            $images = explode(',',$images);
+                                            $count=-5;
+                                      
                                             foreach($images AS $image){
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
