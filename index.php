@@ -666,7 +666,7 @@ include('include/config.php');
                                         <div class="rte-setting">
                                             <p><?php echo $row['message'];?></p>
                                         </div>
-                                        <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%;">
+                                        <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%; height:100px;">
                                             <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>
