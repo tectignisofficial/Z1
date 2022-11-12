@@ -147,7 +147,7 @@ if(isset($_POST["changepassword"])){
 
                     <div class="col-xs-10 col-lg-10 col-md-12">
                         <!-- Tab panes -->
-                        <div class="tab-content dashboard-content padding-30px-all md-padding-15px-all" style="">
+                        <div class="tab-content dashboard-content padding-30px-all md-padding-15px-all">
                             <!-- Dashboard -->
                             <div id="changepassword" class="tab-pane fade">
                                 <h3>Change Password</h3>
