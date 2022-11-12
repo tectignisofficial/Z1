@@ -15,10 +15,6 @@
                             data-i18n="Dashboards">Dashboards</span><span
                             class="badge badge-light-warning rounded-pill ms-auto me-1">2</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="pages.php"><i
-                            data-feather="mail"></i><span class="menu-title text-truncate"
-                            data-i18n="Email">Pages</span></a>
-                </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable.php"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Blogs</span></a>
@@ -81,10 +77,6 @@
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span
                             class="menu-title text-truncate" data-i18n="User">Setting</span></a>
                     <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="generalsetting.php"><i
-                                    data-feather="circle"></i><span class="menu-item text-truncate"
-                                    data-i18n="List">General</span></a>
-                        </li>
                         <li><a class="d-flex align-items-center" href="emailconfiguration.php"><i
                                     data-feather="circle"></i><span class="menu-item text-truncate"
                                     data-i18n="View">Email</span></a>
