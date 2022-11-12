@@ -1,14 +1,10 @@
 <?php 
 include('../../../include/config.php');
-if(!empty($_POST["attr"])){ 
-$attr = $_POST["attr"];
-$query = mysqli_query($conn,"SELECT * from product_attribute WHERE main_title ='$attr'"); 
- ?>
- <option disabled selected>Value</option>
-   <?php while($row = $query->fetch_assoc()){  ?>
-       <option value="<?php echo $row['title'] ?>"><?php echo $row['title']?></option> 
-  <?php  } 
-}
+// if(!empty($_POST["attr"])){ 
+// $attr = $_POST["attr"];
+// $query = mysqli_query($conn,"SELECT * from product_attribute WHERE main_title ='$attr'"); 
+// \
+// }
 
 if(isset($_GET['did'])){
   $did=$_GET['did'];
@@ -21,17 +17,33 @@ if(isset($_GET['did'])){
 if(isset($_POST['size'])){
   $size=$_POST['size'];
   $productName=$_POST['productName'];
-    $sql=mysqli_query($conn,"select * from products where name='$productName' AND attribute='$size'");
+    $sql=mysqli_query($conn,"select * from stock where product_name='$productName' AND value='$size'");
     $count=mysqli_num_rows($sql);
   $arr=mysqli_fetch_array($sql);
-  $stock=$arr['stock_status'] ?? NULL;
+  $stock=$arr['stock'] ?? NULL;
   if($count==$size){
     echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
   }else{
-  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock_status'].' in Stock</p> ';
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock'].' in Stock</p> ';
   }
 
 }
 
-
+if(isset($_POST['attr'])){
+  $attr = $_POST["attr"];
+  $query = mysqli_query($conn,"SELECT * from product_attribute WHERE main_title ='$attr'");
+  while($arr=mysqli_fetch_array($query)){
+  echo '<div class="col-3">
+  <label class="form-label" for="csname">Value</label>
+  <input type="text" class="form-control" name="attrnal[]" value="'.$arr['title'].'">
+</div>
+<div class="col-3">
+  <label class="form-label" for="csname">Stock</label>
+  <input type="text" class="form-control" name="stock[]" value="">
+</div>
+<div class="col-3 mt-2">
+  <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>
+</div>';
+  }
+}
 ?>
