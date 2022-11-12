@@ -22,7 +22,8 @@ if(isset($_POST['checkout'])){
         $_SESSION['email']=$fetchsql['email'];
         $_SESSION['phone']=$fetchsql['phone'];
     if($_SESSION['myselect']=='INR'){
-        header('location:razor/pay.php');
+        header('location:checkout.php');
+        // header('location:razor/pay.php');
     }
     else{
         echo "<script>alert('only rs');</script>";

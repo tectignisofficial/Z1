@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('include/config.php');
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -31,11 +35,10 @@
         </div>
     </div>
     <!--End Search Form Drawer-->
-    <!--Top Header-->
-    
-    <?php include("include/header.php");?>
-	<!--End Mobile Menu-->
-    
+<?php
+include('include/header.php');
+?>
+
     <!--Body Content-->
     <div id="page-content">
     	<!--Page Title-->
