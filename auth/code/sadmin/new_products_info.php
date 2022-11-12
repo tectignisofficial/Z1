@@ -65,6 +65,31 @@ if(isset($_GET['delid'])){
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
 
+
+    <style>
+        .dt-button {
+            border: 1px solid !important;
+            background-color: transparent;
+            margin: 1%;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1;
+            color: #6e6b7b;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: 0.786rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 0.358rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s, border 0s;
+
+
+        }
+    </style>
+
 </head>
 <!-- END: Head-->
 
@@ -88,6 +113,8 @@ if(isset($_GET['delid'])){
 
     <!-- BEGIN: Content-->
     <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
@@ -213,7 +240,7 @@ if(isset($_GET['delid'])){
                 "responsive": true,
                 "lengthChange": true,
                 "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print"]
+                "buttons": ["csv", "excel", "pdf"]
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });

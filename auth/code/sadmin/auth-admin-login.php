@@ -11,7 +11,7 @@ if(mysqli_num_rows($sql)>0){
   $verify=password_verify($password,$row['password']);
 
  if($verify==1){
-    $_SESSION['aid']=$row['id'];
+    $_SESSION['id']=$row['id'];
    
     header("location:index.php");
     }else{
@@ -80,7 +80,7 @@ else{
             <div class="content-body">
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
-                        <!-- Brand logo--><a class="brand-logo" href="index.php">
+                        <!-- Brand logo--><a class="brand-logo" href="">
                             <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
                                 <defs>
                                     <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
@@ -107,7 +107,7 @@ else{
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                                 <h2 class="card-title fw-bold mb-1">Welcome to Z1 Knee Braces 👋</h2>
                                 <p class="card-text mb-2">Please sign-in to your account</p>
-                                <form class="auth-login-form mt-2" action="index.php" method="POST">
+                                <form class="auth-login-form mt-2" action="" method="POST">
                                     <div class="mb-1">
                                         <label class="form-label" for="login-email">Email</label>
                                         <input class="form-control" id="email" type="text" name="email" placeholder="Enter Email ID " aria-describedby="login-email" autofocus="" tabindex="1" />
@@ -121,7 +121,7 @@ else{
                                         </div>
                                     </div>
                                  
-                                    <button class="btn btn-primary w-100" name="login" id="login" tabindex="4">Sign in</button>
+                                    <button type="submit" class="btn btn-primary w-100" name="login" id="login" tabindex="4">Sign in</button>
                                 </form>
                             </div>
                         </div>
