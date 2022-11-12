@@ -265,15 +265,6 @@ if(isset($_POST['review'])){
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
                                             <?php
 
-                                                  echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            class="slick-slide slick-cloned " data-slick-index="'.$count.'"
-                                            aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload"
-                                                data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                                src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                                alt="" />
-                                            </a>';
                                             $images = $arr['image'];
                                             $images = explode(',',$images);
                                             $count=-5;
@@ -290,6 +281,16 @@ if(isset($_POST['review'])){
                                             </a>';
                                             $count++;
                                             }
+
+                                            echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            class="slick-slide slick-cloned " data-slick-index="'.$count.'"
+                                            aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload"
+                                                data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                alt="" />
+                                            </a>';
                                             ?>
 
                                             <!-- <a data-image="assets/images/product-images/product-image1-1.jpg"
