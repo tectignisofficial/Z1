@@ -79,7 +79,7 @@
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="emailconfiguration.php"><i
                                     data-feather="circle"></i><span class="menu-item text-truncate"
-                                    data-i18n="View">Email</span></a>
+                                    data-i18n="View">Email Config</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="socialmedia.php"><i
                                     data-feather="circle"></i><span class="menu-item text-truncate"
