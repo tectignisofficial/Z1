@@ -267,6 +267,15 @@ if(isset($_POST['review'])){
                                             $images = $arr['image'];
                                             $images = explode(',',$images);
                                             $count=-5;
+                                            echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            class="slick-slide slick-cloned " data-slick-index="'.$count.'"
+                                            aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload"
+                                                data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                alt="" />
+                                            </a>';
                                             foreach($images AS $image){
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"

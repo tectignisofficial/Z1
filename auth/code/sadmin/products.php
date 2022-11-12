@@ -161,12 +161,16 @@ if(isset($_GET['did'])){
                                                         aria-label="Date: activate to sort column ascending">ID
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
+                                                        rowspan="1" colspan="1" style="width: 70px;"
+                                                        aria-label="Status: activate to sort column ascending">SKU
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 30px;"
                                                         aria-label="Name: activate to sort column ascending">THUMBNAIL
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 130px;"
-                                                        aria-label="Email: activate to sort column ascending">NAME
+                                                        aria-label="Email: activate to sort column ascending">Product NAME
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 50px;"
@@ -178,22 +182,6 @@ if(isset($_GET['did'])){
                                                         Method</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">SKU
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">ORDER
-                                                    </th>
-                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">Created AT
-                                                    </th> -->
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">STATUS
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">Action
                                                     </th>
                                                 </tr>
@@ -201,7 +189,7 @@ if(isset($_GET['did'])){
                                            
                                             <tbody>
                                                 <?php
-                                                $sql=mysqli_query($conn,"select * from products");
+                                                $sql=mysqli_query($conn,"select * from products ");
                                                 $count=1;
                                                 while($arr=mysqli_fetch_array($sql)){
                                                 ?>
@@ -209,14 +197,11 @@ if(isset($_GET['did'])){
                                                     <td class="control sorting_1" tabindex="0" style="display: none;">
                                                     </td>
                                                     <td><?php echo  $count; ?></td>
+                                                    <td><?php echo $arr['sku']; ?></td>
                                                     <td><img src="image/product_image_check/<?php echo $arr['hightlightfile']; ?>" width="50" height="50"></td>
                                                     <td><?php echo $arr['name']; ?></td>
                                                     <td><?php echo $arr['price']; ?></td>
                                                     <td><?php echo $arr['stock_status']; ?></td>
-                                                    <td><?php echo $arr['sku']; ?></td>
-                                                    <td>0</td>
-                                                    <!-- <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>   -->
-                                                    <td><?php echo $arr['status']; ?></td> 
                                                     <td>
                                                     <a href="editProducts.php?eid=<?php echo $arr['id']; ?>" class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
                                                                     data-feather="edit"></i></a>    
