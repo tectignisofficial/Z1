@@ -37,15 +37,13 @@ if(isset($_POST['attr'])){
   <div class="row mt-2">
   <div class="col-3">
   <label class="form-label" for="csname">Value</label>
-  <input type="text" class="form-control" name="attrnal[]" value="'.$arr['title'].'">
+  <input type="text" class="form-control" name="attrnal[]" value="'.$arr['title'].'" readonly>
 </div>
 <div class="col-3">
   <label class="form-label" for="csname">Stock</label>
   <input type="text" class="form-control" name="stock[]" value="">
 </div>
-<div class="col-3 mt-2">
-  <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>
-</div>
+
 </div>';
   }
 }
