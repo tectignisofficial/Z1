@@ -82,6 +82,9 @@ if(isset($_POST['review'])){
 
     $sql=mysqli_query($conn,"INSERT INTO `product_reviews`(`name`, `email`, `rating`, `review_title`, `body_review`, `status`, `cur_date`) VALUES ('$name','$email','$rating','$title','$body','1','$date')");
 }
+
+$sql=mysqli_query($conn,"select * from products where name='$productName'");
+$arr=mysqli_fetch_array($sql);
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -91,9 +94,9 @@ if(isset($_POST['review'])){
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Product Layout Style1 &ndash; Belle Multipurpose Bootstrap 4 Template</title>
-    <meta name="title" content="title">
-    <meta name="description" content="description">
+    <title><?php echo $arr['name'] ?></title>
+    <meta name="<?php echo $arr['seo_title'] ?>" content="title">
+    <meta name="<?php echo $arr['seo_description'] ?> " content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
