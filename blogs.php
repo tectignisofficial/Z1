@@ -54,7 +54,7 @@ $id=$_GET['eid'];
             <!--End Sidebar-->
             <!--Main Content-->
             <div class="container">
-                <div class="row">
+                <div class="row "  style="justify-content:center">
                     <?php 
                                     
                         $sql=mysqli_query($conn,"select * from blog where id='$id'");
@@ -62,11 +62,11 @@ $id=$_GET['eid'];
                         while($arr=mysqli_fetch_array($sql)){
                     ?>
                     <!--Main Content-->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-11 main-col">
                         <div class="blog--list-view">
                             <div class="article">
                                 <!-- Article Image -->
-                                <a class="article_featured-image" href="#"><img style="height:800px"class="blur-up ls-is-cached lazyloaded"
+                                <a class="article_featured-image" href="#"><img style="height:600px"class="blur-up ls-is-cached lazyloaded"
                                         src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></a>
                                 <h1><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a></h1>
 
