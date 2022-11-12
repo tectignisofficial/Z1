@@ -61,7 +61,8 @@ if(isset($_POST['checkout'])){
         $_SESSION['quantity']=$_POST['quantity'];
         $_SESSION['productname']=$_POST['productname'];
     if($_SESSION['myselect']=='INR'){
-        header('location:razor/pay.php');
+        header('location:checkout.php');
+        // header('location:razor/pay.php');
     }
     else{
         

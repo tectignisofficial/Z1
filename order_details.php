@@ -1,7 +1,3 @@
-<?php
-session_start();
-include('include/config.php');
-?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -24,21 +20,9 @@ include('include/config.php');
 </head>
 <body class="page-template belle">
 <div class="pageWrapper">
-	<!--Search Form Drawer-->
-	<div class="search">
-        <div class="search__form">
-            <form class="search-bar__form" action="#">
-                <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
-                <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
-            </form>
-            <button type="button" class="search-trigger close-btn"><i class="icon anm anm-times-l"></i></button>
-        </div>
-    </div>
-    <!--End Search Form Drawer-->
-<?php
-include('include/header.php');
-?>
 
+	<!--End Mobile Menu-->
+    
     <!--Body Content-->
     <div id="page-content">
     	<!--Page Title-->
@@ -50,58 +34,7 @@ include('include/header.php');
         <!--End Page Title-->
         
         <div class="container">
-        	<div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
-                    <div class="customer-box returning-customer">
-                        <h3><i class="icon anm anm-user-al"></i> Returning customer? <a href="#customer-login" id="customer" class="text-white text-decoration-underline" data-toggle="collapse">Click here to login</a></h3>
-                        <div id="customer-login" class="collapse customer-content">
-                            <div class="customer-info">
-                                <p class="coupon-text">If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                            <label for="exampleInputEmail1">Email address <span class="required-f">*</span></label>
-                                            <input type="email" class="no-margin" id="exampleInputEmail1">
-                                        </div>
-                                        <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                            <label for="exampleInputPassword1">Password <span class="required-f">*</span></label>
-                                            <input type="password" id="exampleInputPassword1">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-check width-100 margin-20px-bottom">
-                                                <label class="form-check-label">
-                                                    <input type="checkbox" class="form-check-input" value=""> Remember me!
-                                                </label>
-                                                <a href="#" class="float-right">Forgot your password?</a>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
-                    <div class="customer-box customer-coupon">
-                        <h3 class="font-15 xs-font-13"><i class="icon anm anm-gift-l"></i> Have a coupon? <a href="#have-coupon" class="text-white text-decoration-underline" data-toggle="collapse">Click here to enter your code</a></h3>
-                        <div id="have-coupon" class="collapse coupon-checkout-content">
-                            <div class="discount-coupon">
-                                <div id="coupon" class="coupon-dec tab-pane active">
-                                    <p class="margin-10px-bottom">Enter your coupon code if you have one.</p>
-                                    <label class="required get" for="coupon-code"><span class="required-f">*</span> Coupon</label>
-                                    <input id="coupon-code" required="" type="text" class="mb-3">
-                                    <button class="coupon-btn btn" type="submit">Apply Coupon</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        	
             <div class="row billing-fields">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
                     <div class="create-ac-content bg-light-gray padding-20px-all">
@@ -360,7 +293,7 @@ include('include/header.php');
     <!--End Body Content-->
     
     <!--Footer-->
-    <?php include("include/footer.php");?>
+
     <!--End Footer-->
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
