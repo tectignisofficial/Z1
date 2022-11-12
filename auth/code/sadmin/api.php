@@ -6,6 +6,7 @@ include('../../../include/config.php');
 // \
 // }
 
+
 if(isset($_GET['did'])){
   $did=$_GET['did'];
   $sql=mysqli_query($conn,"DELETE from product_attribute where id='$did'");
