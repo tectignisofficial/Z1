@@ -358,47 +358,73 @@ include('include/config.php');
                 <div class="container-fluid">
                     <div class="collection-grid">
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/fashion.jpg"
-                                    src="assets/images/collection/fashion.jpg" alt="Fashion" class="blur-up lazyload" />
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace1.jpg"
+                                    src="assets/images/collection/z1kneebrace1.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
 
                             </a>
                         </div>
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img class="blur-up lazyload" data-src="assets/images/collection/cosmetic.jpg"
-                                    src="assets/images/collection/cosmetic.jpg" alt="Cosmetic" />
+                            <a href="" class="collection-grid-item__link">
+                                <img class="blur-up lazyload" data-src="assets/images/collection/z1kneebrace2.jpg"
+                                    src="assets/images/collection/z1kneebrace2.jpg" alt="Z1 Knee Brace" />
 
                             </a>
                         </div>
                         <div class="collection-grid-item blur-up lazyloaded">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/bag.jpg" src="assets/images/collection/bag.jpg"
-                                    alt="Bag" class="blur-up lazyload" />
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace3.jpg" src="assets/images/collection/z1kneebrace3.jpg"
+                                    alt="Z1 Knee Brace" class="blur-up lazyload" />
 
                             </a>
                         </div>
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/accessories.jpg"
-                                    src="assets/images/collection/accessories.jpg" alt="Accessories"
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace4.jpg"
+                                    src="assets/images/collection/z1kneebrace4.jpg" alt="Z1 Knee Brace"
                                     class="blur-up lazyload" />
 
                             </a>
                         </div>
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/shoes.jpg"
-                                    src="assets/images/collection/shoes.jpg" alt="Shoes" class="blur-up lazyload" />
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace5.jpg"
+                                    src="assets/images/collection/z1kneebrace5.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
 
                             </a>
                         </div>
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/jewellry.jpg"
-                                    src="assets/images/collection/jewellry.jpg" alt="Jewellry"
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace6.jpg"
+                                    src="assets/images/collection/z1kneebrace6.jpg" alt="Z1 Knee Brace"
                                     class="blur-up lazyload" />
-
+                            </a>
+                        </div>
+                        <div class="collection-grid-item">
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace7.jpg"
+                                    src="assets/images/collection/z1kneebrace7.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
+                            </a>
+                        </div>
+                        <div class="collection-grid-item">
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace8.jpg"
+                                    src="assets/images/collection/z1kneebrace8.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
+                            </a>
+                        </div>
+                        <div class="collection-grid-item">
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace9.jpg"
+                                    src="assets/images/collection/z1kneebrace9.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
+                            </a>
+                        </div>
+                        <div class="collection-grid-item">
+                            <a href="" class="collection-grid-item__link">
+                                <img data-src="assets/images/collection/z1kneebrace10.jpg"
+                                    src="assets/images/collection/z1kneebrace10.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
                             </a>
                         </div>
                     </div>
