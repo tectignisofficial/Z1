@@ -36,6 +36,7 @@ if(isset($_GET['delid'])){
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- END: Page CSS-->
 
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
     <link rel="stylesheet" type="text/css"
@@ -48,20 +49,20 @@ if(isset($_GET['delid'])){
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css" />
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css" />
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
 
 </head>
@@ -90,7 +91,7 @@ if(isset($_GET['delid'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-                <h2 class="content-header-title float-start mb-0">New Products Info</h2>
+                    <h2 class="content-header-title float-start mb-0">New Products Info</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
                         </li>
@@ -109,7 +110,7 @@ if(isset($_GET['delid'])){
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom row-12">
-                                            <h4 class="card-title">New Products Info</h4>
+                                    <h4 class="card-title">New Products Info</h4>
                                 </div>
                                 <div class="card-datatable">
                                     <table class="dt-responsive table" id="example1">
@@ -122,10 +123,10 @@ if(isset($_GET['delid'])){
                                         </thead>
                                         <tbody>
                                             <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM new_products_info");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
+                                                $sql=mysqli_query($conn,"SELECT * FROM new_products_info");
+                                                $count=1;
+                                                while($row=mysqli_fetch_array($sql)){ 
+                                                ?>
 
                                             <tr>
                                                 <td><?php echo $count;?></td>
