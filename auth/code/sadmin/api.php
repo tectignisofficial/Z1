@@ -33,7 +33,9 @@ if(isset($_POST['attr'])){
   $attr = $_POST["attr"];
   $query = mysqli_query($conn,"SELECT * from product_attribute WHERE main_title ='$attr'");
   while($arr=mysqli_fetch_array($query)){
-  echo '<div class="col-3">
+  echo '
+  <div class="row mt-2">
+  <div class="col-3">
   <label class="form-label" for="csname">Value</label>
   <input type="text" class="form-control" name="attrnal[]" value="'.$arr['title'].'">
 </div>
@@ -43,6 +45,7 @@ if(isset($_POST['attr'])){
 </div>
 <div class="col-3 mt-2">
   <i class="fa fa-trash cancleicon" style="font-size:20px;color:red;"></i>
+</div>
 </div>';
   }
 }
