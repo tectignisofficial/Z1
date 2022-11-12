@@ -62,7 +62,7 @@ include('include/config.php');
                      
                         <!--Banner-->
                         <div class="sidebar_widget static-banner">
-                        	<img src="assets/images/side-banner-2.jpg" alt="" />
+                        	<img src="assets/images/z1kneebanner.jpg" alt="z1knee" />
                         </div>
                         <!--Banner-->
                         <!--Information-->
