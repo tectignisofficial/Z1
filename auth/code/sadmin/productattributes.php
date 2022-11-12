@@ -93,48 +93,6 @@ include('../../../include/config.php');
 
 
     <div class="app-content content ">
-    <?php
-                                    $sql=mysqli_query($conn,"select * from product_attribute");
-                                    $count=1;
-                                    while($arr=mysqli_fetch_array($sql)){
-                                    ?>
-       <div class="modal fade" id="editUser<?php echo $arr['id'] ?>" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
-                        <div class="modal-content">
-                            <div class="modal-header bg-transparent">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body pb-5 px-sm-5 pt-50">
-                                <div class="text-center mb-2">
-                                    <h1 class="mb-1">Edit Products Attributes</h1>
-                                </div>
-                                <form id="editUserForm" class="row gy-1 pt-75" onsubmit="return false">
-                               
-                                    <div class="col-12 col-md-12">
-                                        <label class="form-label" for="modalEditUserFirstName"> Title</label>
-                                        <input type="text" id="title" name="title" class="form-control" placeholder="Slug" value="<?php echo $arr['main_title'] ?>"/>
-                                    </div>
-                                    <div class="col-12 col-md-12">
-                                        <label class="form-label" for="modalEditUserFirstName"> Slug</label>
-                                        <input type="text" id="slug" name="slug" class="form-control" placeholder="Slug" value="<?php echo $arr['main_slug'] ?>"/>
-                                    </div>
-                                    <!-- <div class="col-12 col-md-12">
-                                        <label class="form-label" for="modalEditUserFirstName"> Order</label>
-                                        <input type="text" id="order" name="order" class="form-control" placeholder="Order" value=""/>
-                                    </div> -->
-                                    <div class="col-12 text-center mt-2 pt-50">
-                                        <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>
-                                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                            Discard
-                                        </button>
-                                    </div>                                   
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php $count++; } ?>
-
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
@@ -168,7 +126,7 @@ include('../../../include/config.php');
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header border-bottom">
-                                    <h4 class="card-title">Attributes</h4>
+                                    <h4 class="card-title">Products Attributes</h4>
                                     <a class="btn btn-primary" href="product_attributes_form.php"><i
                                             class="fa fa-plus"></i>
                                         Create
@@ -187,12 +145,12 @@ include('../../../include/config.php');
                                                             <option value="100">100</option>
                                                         </select> entries</label></div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6">
+                                            <!-- <div class="col-sm-12 col-md-6">
                                                 <div id="DataTables_Table_3_filter" class="dataTables_filter">
                                                     <label>Search:<input type="search" class="form-control"
                                                             placeholder="" aria-controls="DataTables_Table_3"></label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <table class="dt-responsive table dataTable dtr-column" id="DataTables_Table_3"
                                             role="grid" aria-describedby="DataTables_Table_3_info"
@@ -214,10 +172,6 @@ include('../../../include/config.php');
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">SLUG
-                                                    </th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
-                                                        rowspan="1" colspan="1" style="width: 70px;"
-                                                        aria-label="Status: activate to sort column ascending">ORDER
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
@@ -244,14 +198,13 @@ include('../../../include/config.php');
                                                     <td><?php echo $count; ?></td>
                                                     <td><?php echo $arr['main_title'] ?></td>
                                                     <td><?php echo $arr['main_slug'] ?></td>
-                                                    <td>1200</td>
                                                     <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>
                                                    
                                                     <td>
-                                                    <button type="button"
+                                                    <!-- <button type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-primary btnmod1"
                                                             data-bs-toggle="modal" data-bs-target="#editUser<?php echo $arr['id'] ?> "><i
-                                                                data-feather="edit"></i></button>
+                                                                data-feather="edit"></i></button> -->
                                                         <a href="api.php?did=<?php echo $arr['id'] ?>"><button
                                                                 type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i

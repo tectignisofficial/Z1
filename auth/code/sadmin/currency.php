@@ -97,18 +97,9 @@ if(isset($_GET['currid'])){
 
                                
 
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-12">
                                         <label class="form-label" for="modalEditUserFirstName">CONVERSION RATE</label>
                                         <input type="text" id="rate" name="rate" class="form-control" placeholder="Rate" value="<?php echo $arr['currency_rate'] ?>"/>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label class="form-label" for="modalEditUserStatus">DEFAULT STATUS</label>
-                                        <select id="status" name="status" value="<?php echo $arr['default_status'] ?>" class="form-select" aria-label="Default select example">
-                                            <option selected>Status</option>
-                                            <option value="1">Active</option>
-                                            <option value="2">Deactivate</option>
-                                            <!-- <option value="3">Suspended</option> -->
-                                        </select>
                                     </div>
                                     <div class="col-12 text-center mt-2 pt-50">
                                         <button type="submit" class="btn btn-primary me-1">Submit</button>
@@ -128,6 +119,7 @@ if(isset($_GET['currid'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
+                <h2 class="content-header-title float-start mb-0">Currency</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                         <li class="breadcrumb-item active">Currency</li>
