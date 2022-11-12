@@ -345,7 +345,7 @@ if(isset($_POST['update'])){
                         ?>
                                         <div class="d-flex mt-2">
                                             <div class="flex-shrink-0">
-                                                <img src="image/icon/instagram.png" alt="instagram" class="me-1" height="38" width="38" />
+                                                <img src="image/icon/Instagram.png" alt="instagram" class="me-1" height="38" width="38" />
                                             </div>
                                             <div class="d-flex justify-content-between flex-grow-1">
                                                 <div class="col-md-10 col-10  position-relative">
