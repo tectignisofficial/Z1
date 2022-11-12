@@ -42,12 +42,18 @@
                 <div class="row billing-fields">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 sm-margin-30px-bottom">
                         <div class="create-ac-content bg-light-gray padding-20px-all">
-                            <div class="mb-2" style="float: inline-end;">
-                                <button class="btn" value="Place order" type="submit">Place order</button>
-                            </div>
+                           
 
                             <div id="address" class="address tab-pane mb-4">
+<div class="row">
 
+
+
+                                <button class="btn" value="Place order" type="submit">Place order</button>
+                            
+
+</div>
+                           
                                 <div class="row">
                                     <div class="col-6">
 
