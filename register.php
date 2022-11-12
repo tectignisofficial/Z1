@@ -40,7 +40,7 @@ if(isset($_POST['register'])){
   $mail->Port       = '587';                            
 
   //Recipients
-  $mail->setFrom('naiduvedant@gmail.com', 'Z1 Knee Braces');
+  $mail->setFrom('maheshniwate10@gmail.com', 'Z1 Knee Braces');
   $mail->addAddress($customerEmail, $FullName);    
   
   //Content
