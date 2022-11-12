@@ -338,7 +338,7 @@ if($sql==1){
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Attributes</h4>
-                                <p id="show_attributes" class="clickadd">Add new attributes</p>
+                                <!-- <p id="show_attributes" class="clickadd">Add new attributes</p> -->
                             </div>
                             <div class="card-body">
                                 <!-- <form class="form form-vertical"> -->
@@ -347,6 +347,19 @@ if($sql==1){
                                             <p>Adding new attributes helps the product to have many options, such as
                                                 size or color.</p>
                                         </div>
+                                        <div class="col-4">
+        <label class="form-label" for="sname">Attribute name</label>
+        <select class="form-control" onChange="put(this.value)" name="attrname">
+        <option disabled selected></option>
+        <?php
+        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
+        while($arr=mysqli_fetch_array($selsql)){ ?>
+            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>
+            <?php } ?>
+        </select>
+    </div>
+    <div class="designation"></div>
+</div>
                                             <!-- <div class="row">
                                                 <div class="col-4">
                                                     <label class="form-label" for="sname">Attribute name</label>
@@ -614,19 +627,7 @@ $(document).on('click','#show_attributes',function(){
     a++;
     if(a<=1){
     $('.adddiv').append('<div class="row mt-2 atrb">\
-    <div class="col-4">\
-        <label class="form-label" for="sname">Attribute name</label>\
-        <select class="form-control" onChange="put(this.value)" name="attrname">\
-        <option disabled selected></option>\
-        <?php
-        $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
-        while($arr=mysqli_fetch_array($selsql)){ ?>
-            <option value="<?php echo $arr['main_title']; ?>"><?php echo $arr['main_title']; ?></option>\
-            <?php } ?>
-        </select>\
-    </div>\
-    <div class="designation"></div>\
-</div>');
+   ');
     }
 });
  
