@@ -104,12 +104,14 @@ include("../../../include/config.php");
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-start mb-0">
-                                Product Table
+                                Order View Table
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
-                                    <li class="breadcrumb-item active">Product</li>
+                                    <li class="breadcrumb-item"><a href="#">Order</a></li>
+                                    <li class="breadcrumb-item active">View Button</li>
+
                                 </ol>
                             </div>
                         </div>
@@ -130,12 +132,11 @@ include("../../../include/config.php");
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>SKU</th>
-                                            <th>Thumbnail</th>
-                                            <th>Product Name</th>
-                                            <th>Stock</th>
-                                            <th>Price</th>
-                                            <th>Action</th>
+                                            <th>Order No.</th>
+                                            <th>Order Date</th>
+                                            <th>Customer Name</th>
+                                            <th>Shipping Address</th>
+                                            <th>Billing Address</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -145,19 +146,6 @@ include("../../../include/config.php");
                                             <td>dip</td>
                                             <td>vrtb</td>
                                             <td>1999/- </td>
-                                            <td>
-                                                <a class="btn btn-outline-success eye"
-                                                    href="offerletter.php?eid=<?php echo $arr['id']; ?>">
-                                                    <i data-feather="eye"></i>
-                                                </a>
-                                                <a class="btn btn-outline-primary edit"
-                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
-                                                    <i data-feather="edit"></i>
-                                                </a>
-                                                <a href="offerlettertable.php?delid=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -224,9 +212,9 @@ include("../../../include/config.php");
     <script>
         $(function () {
             $("#example1").DataTable({
-                "responsive": true,
                 "lengthChange": true,
                 "autoWidth": false,
+                "scrollX": true
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });

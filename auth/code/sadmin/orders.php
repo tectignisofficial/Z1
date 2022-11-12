@@ -171,7 +171,8 @@
                                                     </th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 62px;"
-                                                        aria-label="Salary: activate to sort column ascending">Product Name</th>
+                                                        aria-label="Salary: activate to sort column ascending">Product
+                                                        Name</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_3"
                                                         rowspan="1" colspan="1" style="width: 70px;"
                                                         aria-label="Status: activate to sort column ascending">Status
@@ -218,8 +219,7 @@
                                                             <i data-feather="eye"></i>
                                                         </button>
 
-                                                        <a href=""><button
-                                                                type="button"
+                                                        <a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
 
@@ -245,8 +245,7 @@
                                                             <i data-feather="eye"></i>
                                                         </button>
 
-                                                        <a href=""><button
-                                                                type="button"
+                                                        <a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
                                                     </td>
@@ -272,8 +271,7 @@
                                                             <i data-feather="eye"></i>
                                                         </button>
 
-                                                        <a href=""><button
-                                                                type="button"
+                                                        <a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
                                                     </td>
@@ -298,8 +296,7 @@
                                                             <i data-feather="eye"></i>
                                                         </button>
 
-                                                        <a href=""><button
-                                                                type="button"
+                                                        <a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
                                                     </td>
@@ -323,8 +320,7 @@
                                                             <i data-feather="eye"></i>
                                                         </button>
 
-                                                        <a href=""><button
-                                                                type="button"
+                                                        <a href=""><button type="button"
                                                                 class="btn btn-icon rounded-circle btn-flat-danger"><i
                                                                     data-feather="trash"></i></button></a>
                                                     </td>

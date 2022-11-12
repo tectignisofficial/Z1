@@ -151,8 +151,12 @@ include("../../../include/config.php");
                                             <td>1999/- </td>
                                             <td>evfae</td>
                                             <td>vesfdbs</td>
-                                            <td>cip</td>
                                             <td>1999/- </td>
+
+                                            <td>
+                                                <span
+                                                    class="badge rounded-pill  badge-light-success">Professional</span>
+                                            </td>
                                             <td>
                                                 <a class="btn btn-outline-success eye"
                                                     href="offerletter.php?eid=<?php echo $arr['id']; ?>">
@@ -173,10 +177,11 @@ include("../../../include/config.php");
                                             <td>evfae</td>
                                             <td>vesfdbs</td>
                                             <td>cip</td>
-                                            <td>1999/- </td>
                                             <td>
-                                                <a class="btn btn-outline-success eye"
-                                                    href="offerletter.php?eid=<?php echo $arr['id']; ?>">
+                                                <span class="badge rounded-pill  badge-light-danger">Rejected</span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-outline-success eye" href="orderview.php">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                                 <a class="btn btn-outline-primary edit"
