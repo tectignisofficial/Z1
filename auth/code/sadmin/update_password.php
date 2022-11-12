@@ -1,131 +1,35 @@
 <?php
+session_start();
 include('../../../include/config.php');
-?>
 
-<!-- facebook -->
-<?php
-if(isset($_POST['update'])){
 
-    $facebook=$_POST['facebook_link'];
-    
-      $sql="UPDATE `social_media` SET `facebook`='$facebook' ";
-    
-      if (mysqli_query($conn, $sql)){
-        header("location:socialmedia.php");
-     } else {
-        echo "connection failed !";
-    }
+$d=$_SESSION['id'];
+if(isset($_POST["submit"])){
+	$Old_password=$_POST["oldpassword"];
+	$New_password=$_POST["newpassword"];
+    $Confirm_password=$_POST["confirmpassword"];
 
-}
-?>
+	$sql = mysqli_query($conn,"SELECT * FROM adminlogin WHERE id='$d'") ;
+		$row=mysqli_fetch_assoc($sql); 
+		$verify=password_verify($Old_password,$row['password']);
+	
+	$hashpassword=password_hash($New_password,PASSWORD_BCRYPT);
 
-    <!-- twitter -->
-<?php
-        if(isset($_POST['twitterupdate'])){
-
-            $twitter=$_POST['twitter'];
-            
-              $sql="UPDATE `social_media` SET `twitter`='$twitter' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
+		if($verify==1){
+			$query=mysqli_query($conn,"UPDATE `adminlogin` SET `password`='$hashpassword' WHERE id='$d'");
+      if($query){
+        session_destroy();   // function that Destroys Session 
+        echo "<script>alert('Password Changed Successfully'),window.location='auth-admin-login.php';</script>";
+      }
+		}
+		else{
+			echo"<script>alert('Invalid Password');</script>";
+		}
+	
+	}
 
 ?>
 
- <!-- pinterest -->
-<?php
-        if(isset($_POST['pinterestupdate'])){
-
-            $pinterest=$_POST['pinterest'];
-            
-              $sql="UPDATE `social_media` SET `pinterest`='$pinterest' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
-
-?>
-
-<!-- instagram -->
-<?php
-        if(isset($_POST['instagramupdate'])){
-
-            $instagram=$_POST['instagram'];
-            
-              $sql="UPDATE `social_media` SET `instagram`='$instagram' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
-
-?>
-
-<!-- tumblr -->
-<?php
-        if(isset($_POST['tumblrupdate'])){
-
-            $tumblr=$_POST['tumblr'];
-            
-              $sql="UPDATE `social_media` SET `tumblr`='$tumblr' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
-
-?>
-
-<!-- youtube -->
-<?php
-        if(isset($_POST['youtubeupdate'])){
-
-            $youtube=$_POST['youtube'];
-            
-              $sql="UPDATE `social_media` SET `youtube`='$youtube' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
-
-?>
-
-<!-- vimeo -->
-<?php
-        if(isset($_POST['vimeoupdate'])){
-
-            $vimeo=$_POST['vimeo'];
-            
-              $sql="UPDATE `social_media` SET `vimeo`='$vimeo' ";
-            
-              if (mysqli_query($conn, $sql)){
-                header("location:socialmedia.php");
-             } else {
-                echo "connection failed !";
-            }
-             
-        }
-
-?>
 
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
@@ -238,11 +142,11 @@ if(isset($_POST['update'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-                <h2 class="content-header-title float-start mb-0">Social Media</h2>
+                    <h2 class="content-header-title float-start mb-0">Update Password</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
                         </li>
-                        <li class="breadcrumb-item ">Social Media</li>
+                        <li class="breadcrumb-item ">Update Password</li>
                     </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
@@ -252,195 +156,67 @@ if(isset($_POST['update'])){
             </div>
             <div class="content-body">
                 <form class="form-check" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-md-12">
-                        <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Social Media</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-                  <!-- form -->
-                  <!-- facebook -->
-                  <form method="post">
-                                        <?php 
-                        
-                        $sql=mysqli_query($conn,"select facebook from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/facebook.png" alt="facebook" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-sm-10 position-relative">
-                                                
-                                                <input type="url" class="form-control" name="facebook_link" id="facebook_link" placeholder="enter link" value="<?php echo $arr['facebook'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="update" type="update">Update</button>
+                <div class="col-md-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Update Password</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="form form-horizontal">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-2">
+                                                        <label class="col-form-label" for="fname-icon">Old Password</label>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group input-group-merge">
+                                                            <span class="input-group-text"><i data-feather="lock"></i></span>
+                                                            <input type="password" id="oldpassword" class="form-control" name="oldpassword" placeholder="Old Password" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form>
-
-                                        <!-- twitter -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select twitter  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/twitter.png" alt="twitter" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="twitter" id="twitter" placeholder="enter link " value="<?php echo $arr['twitter'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="twitterupdate" type="update">Update</button>
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-2">
+                                                        <label class="col-form-label" for="contact-icon">New Password</label>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group input-group-merge">
+                                                            <span class="input-group-text"><i data-feather="lock"></i></span>
+                                                            <input type="password" id="newpassword" class="form-control" name="newpassword" placeholder="New Password" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
-
-                                         <!-- pinterest -->
-                                         <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select pinterest  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/pinterest.png" alt="pinterest" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="pinterest" id="pinterest" placeholder="enter link " value="<?php echo $arr['pinterest'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="pinterestupdate" type="update">Update</button>
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-2">
+                                                        <label class="col-form-label" for="pass-icon">Confirm Password</label>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="input-group input-group-merge">
+                                                            <span class="input-group-text"><i data-feather="lock"></i></span>
+                                                            <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" placeholder="Confirm Password" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
-                                        
-                                        <!-- instagram -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select instagram  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/Instagram.png" alt="instagram" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="instagram" id="instagram" placeholder="enter link " value="<?php echo $arr['instagram'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="instagramupdate" type="update">Update</button>
+                                            <div class="col-sm-9 offset-sm-3">
+                                                <div class="mb-1">
+                                                 
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
-
-                                        <!-- tumblr -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select tumblr  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/tumblr.png" alt="tumblr" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="tumblr" id="tumblr" placeholder="enter link " value="<?php echo $arr['tumblr'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="tumblrupdate" type="update">Update</button>
-                                                </div>
+                                            <div class="col-sm-9 offset-sm-3">
+                                                <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>
+                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
                                             </div>
                                         </div>
-                                        <?php   } ?>
-                                        </form> 
-
-                                        <!-- youtube -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select youtube  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/youtube.png" alt="youtube" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="youtube" id="youtube" placeholder="enter link " value="<?php echo $arr['youtube'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="youtubeupdate" type="update">Update</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
-
-                                        <!-- vimeo -->
-                                        <form method="post">
-                                        <?php                         
-                        $sql=mysqli_query($conn,"select vimeo  from social_media");
-                       
-                         while($arr=mysqli_fetch_array($sql)){
-                        ?>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <img src="image/icon/vimeo.png" alt="vimeo" class="me-1" height="38" width="38" />
-                                            </div>
-                                            <div class="d-flex justify-content-between flex-grow-1">
-                                                <div class="col-md-10 col-10  position-relative">
-                                                
-                                                <input type="url" class="form-control" name="vimeo" id="vimeo" placeholder="enter link " value="<?php echo $arr['vimeo'];?>"  required />
-                                                
-                                            </div>
-                                                <div class="mt-50 mt-sm-0">
-                                                <button class="btn btn-primary" name="vimeoupdate" type="update">Update</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php   } ?>
-                                        </form> 
-                </div>
-                <!-- /.card-body -->
-              </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
@@ -482,7 +258,7 @@ if(isset($_POST['update'])){
             }
         })
     </script>
-   
+
 
 </body>
 <!-- END: Body-->
