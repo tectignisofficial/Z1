@@ -75,7 +75,9 @@ if(isset($_POST['checkout'])){
                             <thead class="cart__row cart__header">
                                 <tr>
                                     <th colspan="2" class="text-center">Product</th>
+                                    <th class="text-center">Size</th>
                                     <th class="text-center">Price</th>
+                                    
                                     <th class="text-center">Quantity</th>
                                     <th class="text-right">Total</th>
                                     <th class="action">&nbsp;</th>
@@ -184,12 +186,7 @@ if(isset($_POST['checkout'])){
                
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
                 <form method="post">
-                	<div class="cart-note">
-                    	<div class="solid-border">
-							<h5><label for="CartSpecialInstructions" class="cart-note__label small--text-center">Add a note to your order</label></h5>
-							<textarea name="note" id="CartSpecialInstructions" class="cart-note__input"></textarea>
-						</div>
-                    </div>
+
                     <div class="solid-border">
                       <div class="row">
                       	<span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
@@ -200,13 +197,11 @@ if(isset($_POST['checkout'])){
                         }else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
-                      <p class="cart_tearm">
-                        <label>
-                          <input type="checkbox" name="tearm" id="cartTearm" class="checkbox" value="tearm" >
-                           I agree with the terms and conditions</label>
-                      </p>
+                    <a href="checkout.php">
                       <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout">
-                      <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
+                      </a>
+                      <div class="paymnet-img">
+                        <img src="assets/images/payment-img.jpg" alt="Payment"></div>
                     </div>
                     </form>
                 </div>

@@ -347,7 +347,9 @@ include('include/header.php');
                                 </div>
 
                                 <div class="order-button-payment">
+                                    <a href="order_details.php">
                                     <button class="btn" value="Place order" type="submit">Place order</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
