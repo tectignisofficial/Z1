@@ -46,7 +46,7 @@ if(isset($_POST['register'])){
   //Content
   $mail->isHTML(true);                               
   $mail->Subject = 'Verify Email';
-  $mail->Body    = 'Click on this Link to Verify Your Email ID http://'.$_SERVER['SERVER_NAME'].'/Z1/verify.php?email='.$customerEmail.'';
+  $mail->Body    = 'Click on this Link to Verify Your Email ID http://'.$_SERVER['SERVER_NAME'].'/verify.php?email='.$customerEmail.'';
   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
   if($mail->send()){

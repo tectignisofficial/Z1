@@ -50,12 +50,12 @@
                         
                          <div id="cur">
                             <select name="myselect" id="select" class="" onchange="this.form.submit()">
-                           <option value="<?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?>" selected><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></option>
-                            <option value="INR" >INR</option>
-                            <option value="GBP" >GBP</option>
-                            <option value="CAD" >CAD</option>
-                            <option value="USD" >USD</option>
-                            <option value="AUD">AUD</option>
+                         
+                            <option value="INR" <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>INR</option>
+                            <option value="GBP" <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='GBP'){echo 'selected'; } } ?>>GBP</option>
+                            <option value="CAD" <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='CAD'){echo 'selected'; } } ?>>CAD</option>
+                            <option value="USD" <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='USD'){echo 'selected'; } } ?>>USD</option>
+                            <option value="AUD"<?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='AUD'){echo 'selected'; } } ?>>AUD</option>
                         </select>
                         <div class="overlay">&#9660;</div>
 </div> 
@@ -75,8 +75,14 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
+                        <?php
+                        if(!isset($_SESSION['customerid'])){
+                        ?>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="register.php">Create Account</a></li>
+                        <?php }else{ ?>
+                        <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

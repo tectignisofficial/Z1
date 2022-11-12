@@ -1,6 +1,9 @@
 <?php
-include('include/config.php');
 session_start();
+include('include/config.php');
+if(isset($_SESSION['customerid'])){
+    header('location:index.php');
+}else{
 if(isset($_POST['login'])){
 
 
@@ -15,6 +18,7 @@ if(isset($_POST['login'])){
 
 	 if($verify==1){
 	  $_SESSION['customerid']=$row['id'];
+      $_SESSION['customername']=$row['name'];
        header('location:myaccount.php');
 
      }else{
@@ -123,3 +127,4 @@ if(isset($_POST['login'])){
 
 <!-- belle/login.html   11 Nov 2019 12:22:27 GMT -->
 </html>
+<?php } ?>
