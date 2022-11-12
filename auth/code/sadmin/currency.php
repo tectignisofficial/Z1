@@ -5,7 +5,24 @@ if(isset($_GET['currid'])){
     if($sql){
         header('location:currency.php');
     }
-} ?>
+}
+
+if(isset($_POST['updatecurrrency'])){
+    $currency_rate=$_POST['updaterate'];
+    $id=$_POST['id'];
+    $sql=mysqli_query($conn,"UPDATE `currency` SET `currency_rate`='$currency_rate' where id='$id'");
+
+    if($sql){
+        echo "<script>alert('Successfully Submitted')</script>";
+        // header("location:currency.php");
+    }
+    else{
+        echo "<script>alert('error')</script>";
+    }
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -93,16 +110,17 @@ if(isset($_GET['currid'])){
                                 <div class="text-center mb-2">
                                     <h1 class="mb-1">Edit Currency</h1>
                                 </div>
-                                <form id="editUserForm" class="row gy-1 pt-75" onsubmit="return false">
+                                <form id="editUserForm" method="post" class="row gy-1 pt-75">
 
                                
 
                                     <div class="col-12 col-md-12">
                                         <label class="form-label" for="modalEditUserFirstName">CONVERSION RATE</label>
-                                        <input type="text" id="rate" name="rate" class="form-control" placeholder="Rate" value="<?php echo $arr['currency_rate'] ?>"/>
+                                        <input type="hidden" name="id" value="<?php echo $arr['id']; ?>">
+                                        <input type="text" id="updaterate" name="updaterate" class="form-control" placeholder="Rate" value="<?php echo $arr['currency_rate'] ?>"/>
                                     </div>
                                     <div class="col-12 text-center mt-2 pt-50">
-                                        <button type="submit" class="btn btn-primary me-1">Submit</button>
+                                        <button type="submit" name="updatecurrrency" id="updatecurrrency" class="btn btn-primary me-1">Update</button>
                                         <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
                                             Discard
                                         </button>
@@ -138,13 +156,8 @@ if(isset($_GET['currid'])){
                             <div class="card">
 
                                 <div class="card-header border-bottom row-12">
-                                    <div class="col-2">
-                                        <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
-                                            <label><input type="search" class="form-control input-sm"
-                                                    placeholder="Search..."
-                                                    aria-controls="botble-page-tables-page-table"></label>
-                                        </div>
-                                    </div>
+                                <h4 class="card-title">Currency</h4>
+                                   
                                     <div class="col-4"></div>
                                 </div>
                                 <div class="card-datatable">
@@ -156,7 +169,6 @@ if(isset($_GET['currid'])){
                                                 <th>CURRENCY NAME</th>
                                                 <th>CURRENCY ICON</th>
                                                 <th>CONVERSION RATE</th>
-                                                <th>DEFAULT STATUS</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
@@ -171,7 +183,6 @@ if(isset($_GET['currid'])){
                                                 <td><?php echo $arr['currency_name'] ?></td>
                                                 <td><i class="<?php echo $arr['currency_icon'] ?>"></i></td>
                                                 <td><?php echo $arr['currency_rate'] ?></td>
-                                                <td><?php echo $arr['default_status'] ?></td>
                                                 <td>
                                                    <button type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-primary btnmod1"

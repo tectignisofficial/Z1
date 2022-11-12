@@ -3,7 +3,7 @@
 session_start();
 include('include/config.php');
 $productName=$_GET['name'];
-$sql=mysqli_query($conn,"select * from products where name='$productName'");
+$sql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.name='$productName'");
 $arr=mysqli_fetch_array($sql);
 $id=$arr['id'];
 
@@ -420,7 +420,7 @@ if(isset($_POST['review'])){
 
                                     <div class="prInfoRow">
                                         <div class="product-stock"> <span
-                                                class="instock "><?php $status=$arr['stock_status'];if($status==0){ echo 'Out Of Stock'; }else{ echo 'In Stock'; } ?></span>
+                                                class="instock "><?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'Out Of Stock'; }else{ echo 'In Stock'; } ?></span>
                                             <span class="outstock hide">Unavailable</span> </div>
                                         <div class="product-sku">SKU: <span
                                                 class="variant-sku"><?php echo $arr['sku'] ?></span></div>
@@ -460,18 +460,18 @@ if(isset($_POST['review'])){
 
                                             <label class="header">Size: <span class="slVariant">xs</span></label>
                                             <?php
-                                            $sizesql=mysqli_query($conn,"select * from products where name='$productName'");
+                                            $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName'");
                                             while($sizearr=mysqli_fetch_array($sizesql)){
                                             ?>
-                                            <div data-value="<?php echo $sizearr['attribute']; ?>"
+                                            <div data-value="<?php echo $sizearr['value']; ?>"
                                                 class="swatch-element xs available">
                                                 <input class="swatchInput"
-                                                    id="swatch-1-<?php echo $sizearr['attribute']; ?>" type="radio"
-                                                    name="option1" value="<?php echo $sizearr['attribute']; ?>"
-                                                    <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
+                                                    id="swatch-1-<?php echo $sizearr['value']; ?>" type="radio"
+                                                    name="option1" value="<?php echo $sizearr['value']; ?>"
+                                                    <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle"
-                                                    for="swatch-1-<?php echo $sizearr['attribute']; ?>"
-                                                    title="<?php echo $sizearr['attribute']; ?>"><?php echo $sizearr['attribute']; ?></label>
+                                                    for="swatch-1-<?php echo $sizearr['value']; ?>"
+                                                    title="<?php echo $sizearr['value']; ?>"><?php echo $sizearr['value']; ?></label>
                                             </div>
                                             <?php } ?>
                                             <!-- <div data-value="S" class="swatch-element s available">
@@ -480,24 +480,7 @@ if(isset($_POST['review'])){
                                                 <label class="swatchLbl medium rectangle" for="swatch-1-s"
                                                     title="S">S</label>
                                             </div>
-                                            <div data-value="M" class="swatch-element m available">
-                                                <input class="swatchInput" id="swatch-1-m" type="radio" name="option1"
-                                                    value="M" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
-                                                <label class="swatchLbl medium rectangle" for="swatch-1-m"
-                                                    title="M">M</label>
-                                            </div>
-                                            <div data-value="L" class="swatch-element l available">
-                                                <input class="swatchInput" id="swatch-1-l" type="radio" name="option1"
-                                                    value="L" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
-                                                <label class="swatchLbl medium rectangle" for="swatch-1-l"
-                                                    title="L">L</label>
-                                            </div>
-                                            <div data-value="XL" class="swatch-element xl available">
-                                                <input class="swatchInput" id="swatch-1-xl" type="radio" name="option1"
-                                                    value="XL" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
-                                                <label class="swatchLbl medium rectangle" for="swatch-1-xl"
-                                                    title="XL">XL</label>
-                                            </div> -->
+                                          -->
                                         </div>
                                     </div>
                                     <div id="sizequa"></div>
@@ -508,7 +491,7 @@ if(isset($_POST['review'])){
                                         <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $arr['price']; ?>">
 
-                                        <input type="hidden" name="producticon" value="<?php echo $_SESSION['icon'] ?>">
+                                        <input type="hidden" name="producticon" value="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>">
 
                                         <div class="product-form__item--quantity">
                                             <div class="wrapQtyBtn">

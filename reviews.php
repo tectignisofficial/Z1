@@ -173,7 +173,7 @@ include('include/config.php');
                                                     <p><?php echo $row['description'];?></p>
                                                 </div>
                                                 <div class="img_logo"
-                                                    style="display: inline-block; padding-top: 0; width:25%;">
+                                                    style="display: inline-block; padding-top: 0; width:25%; height:100px;">
                                                     <a href="<?php echo $row['link'];?>" target="_blank">
                                                         <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                                     </a>
