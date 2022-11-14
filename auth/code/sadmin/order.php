@@ -6,6 +6,7 @@ include("../../../include/config.php");
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -120,7 +121,7 @@ include("../../../include/config.php");
                     <div class="col-12 ">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Order Table</h4>
+                                <h4 class="card-title">Order</h4>
 
 
                             </div>
@@ -142,20 +143,15 @@ include("../../../include/config.php");
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM orders");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
                                         <tr>
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $row['order_no'];?></td>
-                                            <td><?php echo $row['order_date'];?></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>50898</td>
+                                            <td>evfae</td>
+                                            <td>vesfdbs</td>
+                                            <td>cip</td>
+                                            <td>1999/- </td>
+                                            <td>evfae</td>
+                                            <td>vesfdbs</td>
+                                            <td>1999/- </td>
 
                                             <td>
                                                 <span
@@ -172,7 +168,28 @@ include("../../../include/config.php");
                                                 </a>
                                             </td>
                                         </tr>
-                                        <?php $count++;   } ?>
+                                        <tr>
+                                            <td>1000</td>
+                                            <td>evfae</td>
+                                            <td>vesfdbs</td>
+                                            <td>vrtb</td>
+                                            <td>1999/- </td>
+                                            <td>evfae</td>
+                                            <td>vesfdbs</td>
+                                            <td>cip</td>
+                                            <td>
+                                                <span class="badge rounded-pill  badge-light-danger">Rejected</span>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-outline-success eye" href="orderview.php">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                                <a class="btn btn-outline-primary edit"
+                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
+                                                    <i data-feather="edit"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
