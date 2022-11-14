@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include("config.php");
+include("../config.php");
 $id=$_SESSION['id'];
 include('razconf.php');
 require('razorpay-php/Razorpay.php');

@@ -104,11 +104,8 @@ if(isset($_POST['checkout'])){
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item">
                                         <span class="money"> <?php
-                                                            if(isset($_SESSION['USD'])){
-                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$values['price'] * $_SESSION['USD'].'';
-                                                            }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo $values['price'];?>
-                                                            <?php } ?></span>
+                                                            echo $values['option1']; ?>
+                                                           </span>
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
                                         <div><span class="quantity"><?php echo $values['quantity']; ?></span></div>
