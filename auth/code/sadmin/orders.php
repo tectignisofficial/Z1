@@ -85,13 +85,40 @@ include("../../../include/config.php");
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern navbar-floating footer-static" data-open="click"
-    data-menu="vertical-menu-modern" data-col="">
+<body class="vertical-layout vertical-menu-modern navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="">
     <!-- BEGIN: Header-->
     <?php include("include/header.php")?>
     <?php include("include/sidebar.php")?>
     </div>
     <!-- END: Main Menu-->
+
+                <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Edit Currency</h1>
+                                </div>
+                                <form id="editUserForm" method="post" class="row gy-1 pt-75">
+                                    <div class="col-12 col-md-12">
+                                        <label class="form-label" for="modalEditUserFirstName">CONVERSION RATE</label>
+                                        <input type="hidden" name="id" value="<?php echo $arr['id']; ?>">
+                                        <input type="text" id="updaterate" name="updaterate" class="form-control" placeholder="Rate" value="<?php echo $arr['currency_rate'] ?>"/>
+                                    </div>
+                                    <div class="col-12 text-center mt-2 pt-50">
+                                        <button type="submit" name="updatecurrrency" id="updatecurrrency" class="btn btn-primary me-1">Update</button>
+                                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            Discard
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     <!-- BEGIN: Content-->
     <div class="app-content content">
@@ -166,10 +193,11 @@ include("../../../include/config.php");
                                                     href="offerletter.php?eid=<?php echo $arr['id']; ?>">
                                                     <i data-feather="eye"></i>
                                                 </a>
-                                                <a class="btn btn-outline-primary edit"
+                                                <!-- <a class="btn btn-outline-primary edit"
                                                     href="addform.php?eid=<?php echo $arr['id'] ?>">
                                                     <i data-feather="edit"></i>
-                                                </a>
+                                                </a> -->
+                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1"  data-bs-toggle="modal" data-bs-target="#editUser"><i data-feather="edit"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>

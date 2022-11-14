@@ -269,11 +269,11 @@ $arr1=mysqli_fetch_array($sql1);
 ?>
                                         <h4 class="billing-address">Billing address</h4>
 
-                                        <p><?= $arr1['address1'] ?></p>
-                                        <p><?= $arr1['address2'] ?></p>
-                                        <p><?= $arr1['city'] ?></p>
-                                        <p><?= $arr1['state'] ?></p>
-                                        <p><?= $arr1['country'] ?></p>
+                                        <p><?= $arr1['address1'] ?? null ?></p>
+                                        <p><?= $arr1['address2'] ?? null ?></p>
+                                        <p><?= $arr1['city'] ?? null ?></p>
+                                        <p><?= $arr1['state'] ?? null ?></p>
+                                        <p><?= $arr1['country'] ?? null ?></p>
                                     </div>
                                     <div class="col-6">
 <?php
