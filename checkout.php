@@ -176,7 +176,7 @@ if(isset($_POST['doneAddress'])){
                                                         name="landmark"></textarea>
                                                 </div>
                                             </div>
-                                        
+
                                         </fieldset>
 
                                         <fieldset>
@@ -209,15 +209,23 @@ if(isset($_POST['doneAddress'])){
                     ?>
                         <div class="card mt-2" style="border:none;">
                             <form action="" method="post">
-                                <div class="d-flex">
-                                <h2><?= $arr['name'] ?></h2>
-                                <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>">
-                                </div>
+   
+                                    <div class="row d-flex">
+                                        <div class="col-6">
+ <h2><?= $arr['name'] ?></h2>
+                                        </div>
+                                           <div class="col-6">
+                                             <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>"style="float: right;">
+                                        </div>
+                                    </div>
+                                   
+                      
                                 <input type="hidden" name="id" value="<?= $arr['id'] ?>">
                                 <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                 </p>
                                 <p><?= $arr['phone']; ?></p>
-                                <button type="submit" class="deliver" name="doneAddress">Deliver to this address</button>
+                                <button type="submit" class="deliver" name="doneAddress">Deliver to this
+                                    address</button>
                             </form>
                         </div>
                         <?php } ?>
@@ -253,15 +261,17 @@ if(isset($_POST['doneAddress'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.$values['price'] * $_SESSION['USD'].'';
                                                             }else{
                                                             ?><i class="fa fa-inr"></i> <?php echo $values['price'];?>
-                                                            <?php } ?></td>
+                                                    <?php } ?></td>
                                                 <td><?= $values['option1']; ?></td>
                                                 <td><?= $values['quantity']; ?></td>
-                                                <td><i class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i><?php  
+                                                <td><i
+                                                        class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i><?php  
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($values['quantity'] * $values['price'],2 )?>
-                                                            <?php } ?></td>
+                                                            ?><i class="fa fa-inr"></i>
+                                                    <?php echo number_format($values['quantity'] * $values['price'],2 )?>
+                                                    <?php } ?></td>
                                             </tr>
                                             <?php  
                                 if(isset($_SESSION['USD'])){
@@ -717,9 +727,9 @@ if(isset($_POST['doneAddress'])){
     </div>
     <script>
         // $('.deliver').hide();
-        $(document).on('click','.radioselect',function(){
-    $(this).closest('.deliver').show();
-});
+        $(document).on('click', '.radioselect', function () {
+            $(this).closest('.deliver').show();
+        });
     </script>
 </body>
 
