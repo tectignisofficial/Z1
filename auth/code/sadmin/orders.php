@@ -126,7 +126,7 @@ include("../../../include/config.php");
                             </div>
 
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
+                                <table id="example1" class="table table-bordered table-striped table-responsive">
                                     <thead>
                                         <tr>
                                             <th>Order No.</th>
@@ -143,23 +143,23 @@ include("../../../include/config.php");
                                     </thead>
                                     <tbody>
                                     <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM orders");
+                         $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
                                         <tr>
-                                            <td><?php echo $count;?></td>
                                             <td><?php echo $row['order_no'];?></td>
                                             <td><?php echo $row['order_date'];?></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><?php echo $row['oname'];?></td>
+                                            <td><?php echo $row['country'];?></td>
+                                            <td><?php echo $row['sku'];?></td>
+                                            <td><?php echo $row['size'];?></td>
+                                            <td><?php echo $row['size'];?></td>
+                                            <td><?php echo $row['price'];?></td>
 
                                             <td>
                                                 <span
-                                                    class="badge rounded-pill  badge-light-success">Professional</span>
+                                                    class="badge rounded-pill  badge-light-success">Process</span>
                                             </td>
                                             <td>
                                                 <a class="btn btn-outline-success eye"

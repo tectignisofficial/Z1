@@ -139,26 +139,32 @@ include("../../../include/config.php");
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                                $sql=mysqli_query($conn,"select * from products ");
+                                                $count=1;
+                                                while($arr=mysqli_fetch_array($sql)){
+                                                ?>
                                         <tr>
-                                            <td>213</td>
-                                            <td>evfae</td>
-                                            <td>dip</td>
-                                            <td>vrtb</td>
-                                            <td>1999/- </td>
+                                            <td><?php echo $arr['sku']; ?></td>
+                                            <td><img src="image/product_image_check/<?php echo $arr['hightlightfile']; ?>" width="50" height="50"></td>
+                                            <td><?php echo $arr['name']; ?></td>
+                                            <td><?php echo $arr['stock_status']; ?></td>
+                                            <td><?php echo $arr['price']; ?></td>
                                             <td>
                                                 <a class="btn btn-outline-success eye"
-                                                    href="offerletter.php?eid=<?php echo $arr['id']; ?>">
+                                                    href="../../../productdetail.php?name=<?php echo $arr['name']; ?>">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                                 <a class="btn btn-outline-primary edit"
-                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
+                                                href="editProducts.php?eid=<?php echo $arr['id']; ?>">
                                                     <i data-feather="edit"></i>
                                                 </a>
-                                                <a href="offerlettertable.php?delid=<?php echo $arr['id']; ?>"><button
+                                                <a href="products.php?did=<?php echo $arr['id']; ?>"><button
                                                         type="button" class="btn btn-outline-danger"><i
                                                             data-feather="trash"></i></button></a>
                                             </td>
                                         </tr>
+                                        <?php $count++; } ?>
                                     </tbody>
                                 </table>
 

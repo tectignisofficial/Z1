@@ -147,13 +147,13 @@ if(isset($_POST['doneAddress'])){
                                                             class="required-f">*</span></label>
                                                     <select name="country_id" id="input-country">
                                                         <option value=""> --- Please Select --- </option>
-                                                        <option value="244">Aaland Islands</option>
-                                                        <option value="1">Afghanistan</option>
-                                                        <option value="2">Albania</option>
-                                                        <option value="3">Algeria</option>
-                                                        <option value="4">American Samoa</option>
-                                                        <option value="5">Andorra</option>
-                                                        <option value="6">Angola</option>
+                                                        <option value="Aaland Islands">Aaland Islands</option>
+                                                        <option value="Afghanistan">Afghanistan</option>
+                                                        <option value="Albania">Albania</option>
+                                                        <option value="Algeria">Algeria</option>
+                                                        <option value="American Samoa">American Samoa</option>
+                                                        <option value="Andorra">Andorra</option>
+                                                        <option value="Angola">Angola</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
@@ -161,10 +161,10 @@ if(isset($_POST['doneAddress'])){
                                                             class="required-f">*</span></label>
                                                     <select name="zone_id" id="input-zone">
                                                         <option value=""> --- Please Select --- </option>
-                                                        <option value="3513">Aberdeen</option>
-                                                        <option value="3514">Aberdeenshire</option>
-                                                        <option value="3515">Anglesey</option>
-                                                        <option value="3516">Angus</option>
+                                                        <option value="Aberdeen">Aberdeen</option>
+                                                        <option value="Aberdeenshire">Aberdeenshire</option>
+                                                        <option value="Anglesey">Anglesey</option>
+                                                        <option value="Angus">Angus</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -215,16 +215,16 @@ if(isset($_POST['doneAddress'])){
  <h2><?= $arr['name'] ?></h2>
                                         </div>
                                            <div class="col-6">
-                                             <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>"style="float: right;">
+                                             <!-- <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>"style="float: right;"> -->
                                         </div>
                                     </div>
                                    
                       
-                                <input type="hidden" name="id" value="<?= $arr['id'] ?>">
+                                <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
                                 <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                 </p>
                                 <p><?= $arr['phone']; ?></p>
-                                <button type="submit" class="deliver" name="doneAddress">Deliver to this
+                                <button type="submit" class="deliver btn btn-outline-primary" name="doneAddress">Deliver to this
                                     address</button>
                             </form>
                         </div>
@@ -249,7 +249,9 @@ if(isset($_POST['doneAddress'])){
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            
                                             <?php
+
                                          if(!empty($_SESSION['shopping_cart'])){
                                             $total=0;
                                             foreach($_SESSION['shopping_cart'] as $keys => $values){
@@ -282,34 +284,48 @@ if(isset($_POST['doneAddress'])){
                                     $total= $total + ($values['quantity'] * $values['price']);  }
                              
                            ?>
-                                            <?php } } ?>
-                                            <!-- <tr>
-                                            <td class="text-left">Argon Sweater</td>
-                                            <td>$199</td>
-                                            <td>M</td>
-                                            <td>2</td>
-                                            <td>$298</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-left">Babydoll Bow Dress</td>
-                                            <td>$299</td>
-                                            <td>XL</td>
-                                            <td>3</td>
-                                            <td>$398</td>
-                                        </tr> -->
+                                            <?php } } else{ ?>
+                                                <tr>
+                                                <td class="text-left"><?= $_SESSION['productname']; ?></td>
+                                                <td><?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$_SESSION['total'] * $_SESSION['USD'].'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i> <?php echo $_SESSION['total'];?>
+                                                    <?php } ?></td>
+                                                <td><?= $_SESSION['option1']; ?></td>
+                                                <td><?= $_SESSION['quantity']; ?></td>
+                                                <td><i
+                                                        class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i><?php  
+                                              if(isset($_SESSION['USD'])){
+                                                   echo number_format($_SESSION['quantity'] * $_SESSION['total']* $_SESSION['USD'],2 );
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i>
+                                                    <?php echo number_format($_SESSION['quantity'] * $_SESSION['total'],2 )?>
+                                                    <?php } ?></td>
+                                            </tr>
+                                            <?php 
+                                            $total=0; 
+                                if(isset($_SESSION['USD'])){
+                                    $total = $_SESSION['total'] * $_SESSION['quantity'] * $_SESSION['USD'];  
+                                }
+                                else{
+
+                                    $total = $_SESSION['total'] * $_SESSION['quantity'] ; }
+                             
+                           ?>
+                                         <?php } ?>
                                         </tbody>
                                         <tfoot class="font-weight-600">
                                             <tr>
                                                 <td colspan="4" class="text-right">Shipping </td>
-                                                <td>$50.00</td>
+                                                <td><i class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>" ></i> 50.00</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4" class="text-right">Total</td>
                                                 <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
                             echo "<i class='fa fa-inr'></i> ";
-                        } if($_SESSION['shopping_cart']){ echo number_format($total,2);
-                        $_SESSION['total']=$total;
-                        }else{ echo '0.00'; } ?></td>
+                        }  echo $total+50;?></td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -317,8 +333,20 @@ if(isset($_POST['doneAddress'])){
                             </div>
 
                             <hr />
-
                             <div class="your-payment">
+                                <h2 class="payment-title mb-3">payment method</h2>
+                            <div class="card">
+                                            <div class="card-header">
+                                                Razorpay
+                                            </div>                                                
+                                            </div>
+                                            <div class="card">
+                                            <div class="card-header">
+                                                Paypal
+                                            </div>                                                
+                                            </div>
+                    </div>
+                            <!-- <div class="your-payment">
                                 <h2 class="payment-title mb-3">payment method</h2>
                                 <div class="payment-method">
                                     <div class="payment-accordion">
@@ -439,9 +467,9 @@ if(isset($_POST['doneAddress'])){
                                         <a href="order_details.php">
                                             <button class="btn" value="Place order" type="submit">Place order</button>
                                         </a>
-                                    </div> -->
+                                    </div> 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -727,9 +755,15 @@ if(isset($_POST['doneAddress'])){
     </div>
     <script>
         // $('.deliver').hide();
-        $(document).on('click', '.radioselect', function () {
-            $(this).closest('.deliver').show();
-        });
+        // $(document).on('click', '.radioselect', function () {
+        //     // $(this).closest('.deliver').show();
+        //     $(this).find('.deliver').show();
+        // });
+        $(document).ready(function(){
+            if($(".radioselect").is(":checked")){
+                $(this).closest('.deliver').show();
+            }
+        })
     </script>
 </body>
 

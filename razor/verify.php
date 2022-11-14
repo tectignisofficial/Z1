@@ -45,16 +45,20 @@ if ($success === true)
     date_default_timezone_set('Asia/Kolkata');
     $date=date('Y-m-d H:i:s');
     if(isset($_SESSION['shopping_cart'])){
+        $addressid=$_SESSION['addressid'];
+       
         foreach($_SESSION['shopping_cart'] as $keys => $values){
             $product=$values['name'];
+            $size=$values['option1'];
             $qua=$values['quantity'];
-            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','')");
+            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size')");
         }
     }
     else{
         $product=$_SESSION['productname'];
-            $qua=$_SESSION['quantity'];
-        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','')");
+        $size=$values['option1'];
+        $qua=$_SESSION['quantity'];
+        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size')");
     }
     
    

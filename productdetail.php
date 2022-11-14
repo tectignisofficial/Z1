@@ -12,7 +12,7 @@ $quantity=$_POST['quantity'];
 $productname=$_POST['productname'];
 $price=$_POST['price'];
 if(!isset($_POST['option1'])){
-    echo "<script>alert('please');</script>";
+    echo "<script>alert('please select size');</script>";
 }
 else{
  

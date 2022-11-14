@@ -5310,7 +5310,7 @@ table {
   padding: 6px 15px;
 }
 
-.card-header:before {
+/* .card-header:before {
   content: "\f078";
   font-family: 'FontAwesome';
   font-size: 13px;
@@ -5318,7 +5318,7 @@ table {
   right: 10px;
   top: 9px;
   color: #555;
-}
+} */
 
 .payment-accordion .card .card-header {
   background-color: #fff;
