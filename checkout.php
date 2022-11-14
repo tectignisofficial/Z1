@@ -2,7 +2,7 @@
 session_start();
 include('include/config.php');
 if(isset($_POST['shipping_address'])){
-    $fullName=mysqli_real_escape_string($conn,$_POST['fullName']);
+    $fullName=mysqli_real_escape_string($conn,$_POST['fullName']) ?? null;
     $phone=mysqli_real_escape_string($conn,$_POST['number']);
     $home=mysqli_real_escape_string($conn,$_POST['home']);
     $road=mysqli_real_escape_string($conn,$_POST['road']);
