@@ -6,7 +6,92 @@ if(isset($_POST['doneAddress'])){
     $_SESSION['addressid']=$_POST['id'];
 }
 ?>
+<?php
+include('razor/razconf.php');
+include('razor/razorpay-php/Razorpay.php');
+use Razorpay\Api\Api;
+use Razorpay\Api\Errors\SignatureVerificationError;
 
+$api = new Api($keyId, $keySecret);
+
+// We create an razorpay order using orders api
+// Docs: https://docs.razorpay.com/docs/orders
+
+$id=$_SESSION['customerid'];
+$name=$_SESSION['name'];
+$email=$_SESSION['email'];
+$phone=$_SESSION['phone'];
+$amount=$_SESSION['total'];
+
+// $_SESSION['id']=$id;
+// $_SESSION['name']=$name;
+// $_SESSION['email']=$email;
+// $_SESSION['phone']=$phone;
+// $_SESSION['price']=$amount;
+
+
+$orderData = [
+    'receipt'         => 3456,
+    'amount'          => $amount * 100, // 2000 rupees in paise
+    'currency'        => 'INR',
+    'payment_capture' => 1 // auto capture
+];
+
+$razorpayOrder = $api->order->create($orderData);
+
+$razorpayOrderId = $razorpayOrder['id'];
+
+$_SESSION['razorpay_order_id'] = $razorpayOrderId;
+
+$displayAmount = $amount = $orderData['amount'];
+
+if ($displayCurrency !== 'INR')
+{
+    $url = "https://api.fixer.io/latest?symbols=$displayCurrency&base=INR";
+    $exchange = json_decode(file_get_contents($url), true);
+
+    $displayAmount = $exchange['rates'][$displayCurrency] * $amount / 100;
+}
+
+$checkout='manual';
+
+if(isset($_GET['checkout']) and in_array($_GET['checkout'],['automatic', 'manual'], true))
+{
+    $checkout = $_GET['checkout'];
+}
+
+$data = [
+    "key"               => $keyId,
+    "amount"            => $amount,
+    "name"              => "Z1",
+    "description"       => "Live Transaction",
+    "image"             => "https://realestate.tectignis.in/admin/dist/img/avatar1.jpeg",
+    "prefill"           => [
+    "name"              => $name,
+    "email"             => $email,
+    "contact"           => $phone,
+    ],
+    "notes"             => [
+    "address"           => "Hello World",
+    "merchant_order_id" => "12312321",
+    ],
+    "theme"             => [
+    "color"             => "#F37254"
+    ],
+    "order_id"          => $razorpayOrderId,
+];
+
+if ($displayCurrency !== 'INR')
+{
+    $data['display_currency']  = $displayCurrency;
+    $data['display_amount']    = $displayAmount;
+}
+
+$json = json_encode($data);
+
+require("razor/checkout/{$checkout}.php");
+
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -33,7 +118,7 @@ if(isset($_POST['doneAddress'])){
     <div class="pageWrapper">
 
         <!--End Mobile Menu-->
-
+<?php include('include/config.php'); ?>
         <!--Body Content-->
         <div id="page-content">
             <!--Page Title-->
@@ -176,3 +261,45 @@ if(isset($_POST['doneAddress'])){
 <!-- belle/checkout.html   11 Nov 2019 12:44:33 GMT -->
 
 </html>
+<!-- <button id="rzp-button1">Pay with Razorpay</button> -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<form name='razorpayform' action="verify.php" method="POST">
+    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+    <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
+</form>
+<script>
+// Checkout details as a json
+var options = <?php echo $json?>;
+
+/**
+ * The entire list of Checkout fields is available at
+ * https://docs.razorpay.com/docs/checkout-form#checkout-fields
+ */
+options.handler = function (response){
+    document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+    document.getElementById('razorpay_signature').value = response.razorpay_signature;
+    document.razorpayform.submit();
+};
+
+// Boolean whether to show image inside a white frame. (default: true)
+options.theme.image_padding = false;
+
+options.modal = {
+    ondismiss: function() {
+        console.log("This code runs when the popup is closed");
+    },
+    // Boolean indicating whether pressing escape key 
+    // should close the checkout form. (default: true)
+    escape: true,
+    // Boolean indicating whether clicking translucent blank
+    // space outside checkout form should close the form. (default: false)
+    backdropclose: false
+};
+
+var rzp = new Razorpay(options);
+
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp.open();
+    e.preventDefault();
+}
+</script>

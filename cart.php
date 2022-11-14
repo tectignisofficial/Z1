@@ -193,7 +193,8 @@ if(isset($_POST['checkout'])){
                         <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money"><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
                             echo "<i class='fa fa-inr'></i> ";
                         } if($_SESSION['shopping_cart']){ echo number_format($total,2);
-                        $_SESSION['total']=number_format($total,2);
+                        $_SESSION['total']=$total;
+                        
                         }else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>

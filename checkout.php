@@ -14,14 +14,18 @@ if(isset($_POST['shipping_address'])){
     $notes=mysqli_real_escape_string($conn,$_POST['notes']);
     $id=$_POST['id'];
     
-    $sql=mysqli_query($conn,"INSERT INTO `billing_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+    $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
 
+}
+if(isset($_POST['doneAddress'])){
+    $_SESSION['addressid']=$_POST['prid'];
+    header('location:razor/pay.php');
 }
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
-<!-- belle/checkout.html   11 Nov 2019 12:44:33 GMT -->
+<!-- belle/checkout.html 11 Nov 2019 12:44:33 GMT -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -54,9 +58,7 @@ if(isset($_POST['shipping_address'])){
             </div>
         </div>
         <!--End Search Form Drawer-->
-        <?php
-include('include/header.php');
-?>
+        <?php include('include/header.php'); ?>
 
         <!--Body Content-->
         <div id="page-content">
@@ -177,8 +179,6 @@ include('include/header.php');
                                         
                                         </fieldset>
 
-                                     
-
                                         <fieldset>
                                             <div class="row">
                                                 <div class="form-group col-md-12 col-lg-12 col-xl-12">
@@ -204,16 +204,16 @@ include('include/header.php');
                         <?php
                     $id=$_SESSION['customerid'];
                     
-                    $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id'");
+                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id'");
                     while($arr=mysqli_fetch_array($sql)){
                     ?>
                         <div class="card mt-2" style="border:none;">
-                            <form action="razor/pay.php">
-                                <div>
+                            <form action="" method="post">
+                                <div class="d-flex">
                                 <h2><?= $arr['name'] ?></h2>
-                                <input type="radio" name="id" class="radioselect" value="<?= $arr['id'] ?>">
+                                <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>">
                                 </div>
-                                
+                                <input type="hidden" name="id" value="<?= $arr['id'] ?>">
                                 <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                 </p>
                                 <p><?= $arr['phone']; ?></p>
@@ -298,7 +298,7 @@ include('include/header.php');
                                                 <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
                             echo "<i class='fa fa-inr'></i> ";
                         } if($_SESSION['shopping_cart']){ echo number_format($total,2);
-                        $_SESSION['total']=number_format($total,2);
+                        $_SESSION['total']=$total;
                         }else{ echo '0.00'; } ?></td>
                                             </tr>
                                         </tfoot>
