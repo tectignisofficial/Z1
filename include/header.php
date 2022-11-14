@@ -28,8 +28,9 @@
                     font-size: 9px;
                     color: white;
                     position: absolute;
+                    left:44px;
                     right: 0px;
-                    top: 8px;
+                    top: 24px;
                     cursor: default;
                     line-height: 1px;
 
