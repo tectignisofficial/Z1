@@ -1,6 +1,15 @@
 <?php
 include("../../../include/config.php");
 
+if(isset($_POST['updateorder'])){
+    $paymentstatus=$_POST['paymentstatus'] ?? null;
+    $orderstatus=$_POST['orderstatus'] ?? null;
+    $dlh=$_POST['dlh'] ?? null;
+    $trans=$_POST['trans'] ?? null;
+    $orderid=$_POST['orderid'];
+
+    $sql=mysqli_query($conn,"UPDATE `orders` SET `order_status`='$orderstatus',`payment_status`='$paymentstatus',`enter`='$dlh',`tracking_id`='$trans' WHERE id='$orderid'");
+}
 ?>
 
 <!DOCTYPE html>
@@ -75,8 +84,9 @@ include("../../../include/config.php");
             font-size: 1rem;
             border-radius: 0.358rem;
             transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background 0s, border 0s;
-
-
+        }
+        .hidecourier{
+            display:none;
         }
     </style>
 
@@ -98,23 +108,8 @@ include("../../../include/config.php");
                             <div class="modal-header bg-transparent">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body pb-5 px-sm-5 pt-50">
-                                <div class="text-center mb-2">
-                                    <h1 class="mb-1">Edit Currency</h1>
-                                </div>
-                                <form id="editUserForm" method="post" class="row gy-1 pt-75">
-                                    <div class="col-12 col-md-12">
-                                        <label class="form-label" for="modalEditUserFirstName">CONVERSION RATE</label>
-                                        <input type="hidden" name="id" value="<?php echo $arr['id']; ?>">
-                                        <input type="text" id="updaterate" name="updaterate" class="form-control" placeholder="Rate" value="<?php echo $arr['currency_rate'] ?>"/>
-                                    </div>
-                                    <div class="col-12 text-center mt-2 pt-50">
-                                        <button type="submit" name="updatecurrrency" id="updatecurrrency" class="btn btn-primary me-1">Update</button>
-                                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                            Discard
-                                        </button>
-                                    </div>
-                                </form>
+                            <div class="modal-body body1 pb-5 px-sm-5 pt-50">
+                                
                             </div>
                         </div>
                     </div>
@@ -164,13 +159,14 @@ include("../../../include/config.php");
                                             <th>Product Name</th>
                                             <th>Size</th>
                                             <th>Amount</th>
-                                            <th>Status</th>
+                                            <th>Order Status</th>
+                                            <th>Payment Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                         $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
+                         $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
@@ -180,24 +176,28 @@ include("../../../include/config.php");
                                             <td><?php echo $row['oname'];?></td>
                                             <td><?php echo $row['country'];?></td>
                                             <td><?php echo $row['sku'];?></td>
-                                            <td><?php echo $row['size'];?></td>
+                                            <td><?php echo $row['pname'];?></td>
                                             <td><?php echo $row['size'];?></td>
                                             <td><?php echo $row['price'];?></td>
 
                                             <td>
                                                 <span
-                                                    class="badge rounded-pill  badge-light-success">Process</span>
+                                                    class="badge rounded-pill  badge-light-success"><?= $row['orstatus']; ?></span>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge rounded-pill  badge-light-success"><?= $row['payment_status']; ?></span>
                                             </td>
                                             <td>
                                                 <a class="btn btn-outline-success eye"
-                                                    href="offerletter.php?eid=<?php echo $arr['id']; ?>">
+                                                    href="offerletter.php?eid=<?php echo $row['id']; ?>">
                                                     <i data-feather="eye"></i>
                                                 </a>
                                                 <!-- <a class="btn btn-outline-primary edit"
                                                     href="addform.php?eid=<?php echo $arr['id'] ?>">
                                                     <i data-feather="edit"></i>
                                                 </a> -->
-                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1"  data-bs-toggle="modal" data-bs-target="#editUser"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i data-feather="edit"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>
@@ -297,7 +297,32 @@ include("../../../include/config.php");
                 });
             }
         });
+        $(document).ready(function(){
+            $('.btnmod1').click(function(){
+                let val=$(this).data('id');
+                $.ajax({
+                    url:'api.php',
+                    method:'post',
+                    data:{val:val},
+                   
+                    success: function (response) {
+                        $(".body1").html(response);
+                    }
+                });
+                $('#editUser').modal('show');
+            });
+
+            
+        });
+        
     </script>
+    <script>
+function get(val){
+if(val=='Courier'){
+    $(".hidecourier").css('display','block');
+}
+}
+</script>
 </body>
 <!-- END: Body-->
 

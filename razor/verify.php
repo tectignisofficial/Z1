@@ -51,20 +51,20 @@ if ($success === true)
             $product=$values['name'];
             $size=$values['option1'];
             $qua=$values['quantity'];
-            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size')");
+            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`) VALUES ('1','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size','$rid','$payment_id')");
         }
     }
     else{
         $product=$_SESSION['productname'];
         $size=$values['option1'];
         $qua=$_SESSION['quantity'];
-        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`) VALUES ('$rid','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size')");
+        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`) VALUES ('1','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size','$rid','$payment_id')");
     }
     
    
     if($q)
     {
-        echo "Payment Successful";
+        header('location:index.php');
     }
     else
     {
