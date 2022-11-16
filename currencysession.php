@@ -8,6 +8,8 @@ if(isset($_POST['myselect'])){
     $_SESSION['myselect']=$currency;
       $_SESSION['USD']=$digit;
       $_SESSION['icon']=$curr_name;
+
+      echo '<script>window.reload(true);</script>';
   }
   
 ?>
