@@ -457,9 +457,9 @@ $arr=mysqli_fetch_array($sql);
                                             class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
                                             <span id="ProductPrice-product-template"><span class="money"> <?php
                                                             if(isset($_SESSION['USD'])){
-                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.$arr['price'] * $_SESSION['USD'].'';
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price']);?>
                                                     <?php } ?></span>
                                             </span>
 
