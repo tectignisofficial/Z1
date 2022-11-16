@@ -30,7 +30,7 @@
                     position: absolute;
                     left:44px;
                     right: 0px;
-                    top: 24px;
+                    top: 11px;
                     cursor: default;
                     line-height: 1px;
 
