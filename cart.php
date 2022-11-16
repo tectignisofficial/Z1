@@ -7,6 +7,7 @@ if(isset($_GET['did'])){
         if($values['itemid'] == $_GET['did']){
             unset($_SESSION['shopping_cart'][$keys]);
         }
+        unset($_SESSION['shopping_cart']);
     }
 }
 
@@ -69,8 +70,10 @@ if(isset($_POST['checkout'])){
         
         <div class="container">
             <?php
-            if(!isset($_SESSION['shopping_cart'])){
+            if(isset($_SESSION['shopping_cart'])){
+          
             ?>
+            
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-col">
                 	<form action="#" method="post" class="cart style2">
@@ -88,6 +91,7 @@ if(isset($_POST['checkout'])){
                             </thead>
                     		<tbody>
                                 <?php
+                                $total=0;
                                 if(!empty($_SESSION['shopping_cart'])){
                                     $total=0;
                                     foreach($_SESSION['shopping_cart'] as $keys => $values){
@@ -140,7 +144,8 @@ if(isset($_POST['checkout'])){
                                     $total= $total + ($values['quantity'] * $values['price']);  }
                              
                             }
-                                } ?>
+                                }
+                                ?>
                                 <!-- <tr class="cart__row border-bottom line1 cart-flex border-top">
                                     <td class="cart__image-wrapper cart-flex-item">
                                         <a href="#"><img class="cart__image" src="assets/images/product-images/product-image3.jpg" alt="3/4 Sleeve Kimono Dress"></a>
@@ -208,9 +213,11 @@ if(isset($_POST['checkout'])){
                 </div>
                    
             </div>
-            <?php }else{
-                echo '<div> Cart Empty </div>';
-            } ?>
+            <?php
+              }else{
+                echo '<tr><td>cart empty</td></tr>';
+            } 
+            ?>
         </div>
         
     </div>
