@@ -168,7 +168,7 @@ include('include/config.php');
                                         <div class="product-price">
                                             <span class="price"> <?php
                                                             if(isset($_SESSION['USD'])){
-                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.(int)$arr['price'] * $_SESSION['USD'].'';
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
                                                             ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
                                                             <?php } ?></span>
