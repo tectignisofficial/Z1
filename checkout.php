@@ -338,12 +338,18 @@ if(isset($_POST['doneAddress'])){
                             <div class="card">
                                             <div class="card-header">
                                                 Razorpay
-                                            </div>                                                
+
+                                                <input type="radio" name="" <?php
+                                                if($_SESSION['myselect']=='INR'){ echo 'checked'; }else{ echo 'disabled'; }
+                                                ?>  id="">
+                    </div>                                                
                                             </div>
                                             <div class="card">
                                             <div class="card-header">
-                                                Paypal
-                                            </div>                                                
+                                                Paypal 
+                                                <input type="radio" <?php
+                                                 if($_SESSION['myselect']=='GBP' || $_SESSION['myselect']=='CAD' || $_SESSION['myselect']=='USD' || $_SESSION['myselect']=='AUD'){ echo 'checked'; }else{ echo 'disabled'; }
+                                                ?> name="" ></div>                                 
                                             </div>
                     </div>
                             <!-- <div class="your-payment">

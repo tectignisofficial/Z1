@@ -53,6 +53,10 @@ if(isset($_POST['checkout'])){
         header('location:login.php');
     }
     else{
+        if(!isset($_POST['option1'])){
+            echo "<script>alert('please select size');</script>";
+        }
+        else{
         $id=$_SESSION['customerid'];
         $sql=mysqli_query($conn,"select * from customers where id='$id'");
         $fetchsql=mysqli_fetch_array($sql);
@@ -63,13 +67,10 @@ if(isset($_POST['checkout'])){
         $_SESSION['quantity']=$_POST['quantity'];
         $_SESSION['option1']=$_POST['option1'];
         $_SESSION['productname']=$_POST['productname'];
-    if($_SESSION['myselect']=='INR'){
         header('location:checkout.php');
         // header('location:razor/pay.php');
-    }
-    else{
-        
-    }
+   
+}
     }
 }
 
@@ -477,7 +478,7 @@ $arr=mysqli_fetch_array($sql);
                                     <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                         <div class="product-form__item">
 
-                                            <label class="header">Size: <span class="slVariant">xs</span></label>
+                                            <label class="header">Size: <span class="slVariant sizese">select</span></label>
                                             <?php
                                             $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName'");
                                             while($sizearr=mysqli_fetch_array($sizesql)){
@@ -1519,6 +1520,7 @@ $arr=mysqli_fetch_array($sql);
                         success: function (response) {
 
                             $("#sizequa").html(response);
+                            $('.sizese').html(size);
                         }
                     })
                 });

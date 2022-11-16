@@ -51,20 +51,30 @@ if ($success === true)
             $product=$values['name'];
             $size=$values['option1'];
             $qua=$values['quantity'];
+            $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
+            $fetch=mysqli_fetch_array($ssql);
+            $tstock=($fetch['stock']-$qua);
             $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`) VALUES ('1','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size','$rid','$payment_id')");
+
+            $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
         }
     }
     else{
         $product=$_SESSION['productname'];
-        $size=$values['option1'];
+        $size=$_SESSION['option1'];
         $qua=$_SESSION['quantity'];
+        $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
+        $fetch=mysqli_fetch_array($ssql);
+        $tstock=($fetch['stock']-$qua);
         $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`) VALUES ('1','$date','$id','razorpay','1','$product','$qua','20%','$addressid','$size','$rid','$payment_id')");
+
+        $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
     }
     
    
     if($q)
     {
-        header('location:index.php');
+        header('location:../index.php');
     }
     else
     {

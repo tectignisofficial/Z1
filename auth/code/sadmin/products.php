@@ -121,8 +121,10 @@ include("../../../include/config.php");
                     <div class="col-12 ">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Table</h4>
-
+                                <h4 class="card-title">Products</h4>
+                                <a class="btn btn-primary" href="products_form.php"><i class="fa fa-plus"></i>
+                                    Create
+                                </a>
 
                             </div>
 
