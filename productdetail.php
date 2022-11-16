@@ -228,7 +228,7 @@ $arr=mysqli_fetch_array($sql);
 
             display: inline-block;
             font-size: 22px;
-            font-family: Times; // make sure ★ appears correctly
+            font-family: Times;
             line-height: 1;
         }
 
@@ -641,7 +641,7 @@ $arr=mysqli_fetch_array($sql);
                             <ul class="product-tabs">
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
-                                <li rel="tab3"><a class="tablink">Size Chart</a></li>
+                                <li rel="tab3"><a class="tablink">Size Chart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                             </ul>
                             <div class="tab-container">
@@ -1238,7 +1238,7 @@ $arr=mysqli_fetch_array($sql);
             </div>
         </div>
     </div> -->
-
+     
                                 </div>
                             </div>
 

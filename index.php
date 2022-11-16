@@ -34,13 +34,28 @@ include('include/config.php');
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <style>
+        
+        .head{
+               padding-top: 100px;
+               font-size: large;
+            }
+        .img3{
+            display: none;
+        }
         @media screen and (max-width:990px) {
             .img1 {
                 display: none;
             }
+            .head{
+               padding-top: 0px;
+               font-size: small;
+            }
 
             .img2 {
                 display: none;
+            }
+              .img3 {
+                display: block;
             }
         }
 
@@ -500,13 +515,19 @@ include('include/config.php');
 
                 <!--Parallax Section-->
                 <div class="section" style="padding-bottom: 0px;">
-                    <div class="hero hero--large hero__overlay bg-size">
+                    <div class="hero--large hero__overlay bg-size">
                         <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg"
                             alt="K2 Comfortline Knee Orthosis" />
                         <div class="hero__inner">
                             <div class="container" style="display: flex;">
-                                <div class="wrap-text left text-small font-bold">
+                                <div class="wrap-text left text-small font-bold head">
                                     <h2 class="h2 mega-title" style="color:#ffffff">CUSTOMIZED KNEE BRACES</h2>
+                                      <div class="wrap-text text-small font-bold img3" >
+                                    <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png" style="height: 150px;"
+                                        alt="K2 Comfortline Knee Orthosis" />
+
+
+                                </div>
                                     <div class="rte-setting mega-subtitle" style="color:#ffffff">Customization is the
                                         key. In order to meet
                                         customer needs and satisfaction, customizing our healthcare products is
