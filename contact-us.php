@@ -39,6 +39,7 @@ if(isset($_POST['submit'])){
 <!-- Main Style CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.5.css">
 <style>
     #map {
   height: 400px;
@@ -163,36 +164,45 @@ $facebook=mysqli_fetch_array($sql);
      <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
      <script src="assets/js/vendor/jquery.cookie.js"></script>
      <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-jvectormap-2.0.5.min.js"></script>
      <script src="assets/js/vendor/wow.min.js"></script>
      <!-- Including Javascript -->
      <script src="assets/js/bootstrap.min.js"></script>
+         <script src="assets/js/jquery-jvectormap-world-merc.js"></script>
      <script src="assets/js/plugins.js"></script>
      <script src="assets/js/popper.min.js"></script>
      <script src="assets/js/lazysizes.js"></script>
      <script src="assets/js/main.js"></script>
-     <script>
-        function initMap() {
-  // The location of Uluru
-  const uluru = { lat: -25.344, lng: 131.031 };
-  // The map, centered at Uluru
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-  });
-  // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-  });
-}
+  <script>
+$(function(){
+      $('#map').vectorMap({map: 'world_merc',scaleColors: ['#C8EEFF', '#0071A4'],
+    normalizeFunction: 'polynomial',
+    hoverOpacity: 0.7,
+    hoverColor: false,
+    markerStyle: {
+      initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+      }
+    },
+    backgroundColor: '#383f47',
+    markers: [
 
-window.initMap = initMap;
-        </script>
+      {latLng: [20.59, 78.96], name: 'India'},
+      {latLng: [37.09, -95.71], name: 'USA'},
+      {latLng: [56.13, -106.34], name: 'Canada'},
+      {latLng: [-25.27, 133.77], name: 'Australia'},
+      {latLng: [54.52, 15.25], name: 'Europe'},
 
-     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyk3flh2DVLF63Ug9kPICZi72a8RfJvmk&callback=initMap&v=weekly"
-      defer
-    ></script>
+    ]
+      
+      
+      
+      });
+    });
+    </script>
+
+
 </div>
 </body>
 
