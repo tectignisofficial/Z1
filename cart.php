@@ -68,6 +68,9 @@ if(isset($_POST['checkout'])){
         <!--End Page Title-->
         
         <div class="container">
+            <?php
+            if(!isset($_SESSION['shopping_cart'])){
+            ?>
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-col">
                 	<form action="#" method="post" class="cart style2">
@@ -195,7 +198,7 @@ if(isset($_POST['checkout'])){
                         }else{ echo '0.00'; } ?></span></span>
                       </div>
                       <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
-                    <a href="checkout.php">
+                      <a href="checkout.php">
                       <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Checkout">
                       </a>
                       <div class="paymnet-img">
@@ -205,6 +208,9 @@ if(isset($_POST['checkout'])){
                 </div>
                    
             </div>
+            <?php }else{
+                echo '<div> Cart Empty </div>';
+            } ?>
         </div>
         
     </div>
