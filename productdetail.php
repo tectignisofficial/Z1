@@ -459,7 +459,7 @@ $arr=mysqli_fetch_array($sql);
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price']);?>
+                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
                                                     <?php } ?></span>
                                             </span>
 
