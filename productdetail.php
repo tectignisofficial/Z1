@@ -241,7 +241,7 @@ $arr=mysqli_fetch_array($sql);
             -webkit-text-fill-color: transparent;
         }
     #imagelight1{
-            display:none;
+            display:none !important;
         }
     </style>
 </head>
