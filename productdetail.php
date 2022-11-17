@@ -240,7 +240,7 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        #imagelight{
+        #imagelight,#imagelight1{
             display:none;
         }
     </style>
@@ -284,7 +284,7 @@ $arr=mysqli_fetch_array($sql);
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 class="slick-slide slick-cloned " data-slick-index="'.$count.'"
-                                                aria-hidden="true" tabindex="-1">
+                                                aria-hidden="true" tabindex="-1" id="imagelight1">
                                                 <img class="blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                     src="auth/code/sadmin/image/product_image_check/'.$image.'"
