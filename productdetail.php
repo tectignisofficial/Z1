@@ -240,7 +240,7 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        #imagelight,#imagelight1{
+    #imagelight1{
             display:none;
         }
     </style>
