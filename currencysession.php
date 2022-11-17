@@ -9,7 +9,19 @@ if(isset($_POST['myselect'])){
       $_SESSION['USD']=$digit;
       $_SESSION['icon']=$curr_name;
 
-      echo '<script>window.reload(true);</script>';
+      if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+      $url = "https://";   
+ else  
+      $url = "http://";   
+ // Append the host(domain name, ip) to the URL.   
+ $url.= $_SERVER['HTTP_HOST'];   
+ 
+ // Append the requested resource location to the URL   
+ $url.= $_SERVER['REQUEST_URI'];    
+  //  header('location:'.$CurPageURL);
+   echo "<script>window.location.href='".$url."'</script>";
+//  echo $url;  
   }
+ 
   
 ?>
