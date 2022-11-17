@@ -240,6 +240,9 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        #imagelight{
+            display:none;
+        }
     </style>
 </head>
 
@@ -426,7 +429,7 @@ $arr=mysqli_fetch_array($sql);
                                         $image = explode(',',$image);
                                         foreach($image AS $imagess){
                                             echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'"
-                                            data-size="1462x2048"></a>';
+                                            data-size="1462x2048" id="imagelight"></a>';
                                         }
                                         ?>
 
