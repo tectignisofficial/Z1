@@ -15,7 +15,6 @@ if(isset($_POST['updatecurrrency'])){
     }
 }
 
-
 if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
@@ -55,7 +54,6 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         $filename = $_FILES["myfile"]["name"][$key];
         move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
-        
     }
 }
 
@@ -69,13 +67,13 @@ else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hig
 else if(!empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide'])){
     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$images_name',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
-else if(!empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide'])){
+else if(!empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide'])){
     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
-else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide'])){
+else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide'])){
     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
    
 }
@@ -86,8 +84,6 @@ if($sql==1){
     echo '<script>alert("something went wrong");</script>';
 } 
 }
-
-
 
 
 ?>
