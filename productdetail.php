@@ -243,6 +243,9 @@ $arr=mysqli_fetch_array($sql);
     .imagelight1{
             display:none !important;
         }
+        .pswp__zoom-wrap{
+            display:none !important;
+        }
     </style>
 </head>
 
