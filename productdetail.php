@@ -1466,15 +1466,9 @@ $arr=mysqli_fetch_array($sql);
             <div class="pswp__bg"></div>
             <div class="pswp__scroll-wrap">
                 <div class="pswp__container">
-                    <?php $image = $arr['image'];
-                                        $image = explode(',',$image);
-                                        $countno1=1;
-                                        foreach($image AS $imagess){
-                                        ?>
-                    <div class="pswp__item imagelight<?php echo $countno1; ?>"></div>
-                    <?php  $countno1++; } ?>
-                    <!-- <div class="pswp__item"></div>
-                    <div class="pswp__item"></div> -->
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
                 </div>
                 <div class="pswp__ui pswp__ui--hidden">
                     <div class="pswp__top-bar">
