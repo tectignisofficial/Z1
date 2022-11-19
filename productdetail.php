@@ -402,14 +402,6 @@ $arr=mysqli_fetch_array($sql);
                                         <div class="zoompro-span">
 
 
-                                            <?php
-                                                // $image = $arr['image'];
-                                                // $image = explode(',',$image);
-                                                // foreach($image AS $imagess){
-                                                //     echo ' ';
-                                                // }
-
-                                                ?>
                                             <img class="blur-up lazyload zoompro"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                 alt=""
@@ -432,7 +424,7 @@ $arr=mysqli_fetch_array($sql);
                                         $countno1=1;
                                         foreach($image AS $imagess){
                                             echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'" class="imagelight'.$countno1.'"
-                                            data-size="1462x2048" id="imagelight"></a>';
+                                            data-size="1462x2048" ></a>';
                                             $countno1++; }
                                         ?>
 
@@ -1018,13 +1010,7 @@ $arr=mysqli_fetch_array($sql);
                                                     <!-- start product image -->
                                                     <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                                         <!-- image -->
-                                                        <?php
-                                                // $image = $arr['image'];
-                                                // $image = explode(',',$image);
-                                                // foreach($image AS $imagess){
-                                                // }
-
-                                                ?>
+                                                        
                                                         <img class="primary blur-up lazyload"
                                                             data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                             src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
