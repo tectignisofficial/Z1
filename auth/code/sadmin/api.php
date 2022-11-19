@@ -92,7 +92,7 @@ if(isset($_POST['size'])){
     $count=mysqli_num_rows($sql);
   $arr=mysqli_fetch_array($sql);
   $stock=$arr['stock'] ?? NULL;
-  if($count==$size){
+  if($stock==0){
     echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
   }else{
   echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock'].' in Stock</p> ';

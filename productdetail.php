@@ -240,7 +240,7 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    #imagelight1{
+    .imagelight1{
             display:none !important;
         }
     </style>
@@ -284,8 +284,8 @@ $arr=mysqli_fetch_array($sql);
                                             foreach($images AS $image){
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
-                                                class="slick-slide slick-cloned " data-slick-index="'.$count.'"
-                                                aria-hidden="true" tabindex="-1" id="imagelight'.$countno.'">
+                                                class="slick-slide slick-cloned " data-slick-index="'.$count.' imagelight'.$countno.'"
+                                                aria-hidden="true" tabindex="-1" id="">
                                                 <img class="blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                     src="auth/code/sadmin/image/product_image_check/'.$image.'"
@@ -532,7 +532,7 @@ $arr=mysqli_fetch_array($sql);
                                         <div class="row">
                                             <div class="product-form__item--submit col-6">
                                                 <button type="submit" id="addtocart" name="addtocart"
-                                                    class="shopify-payment-button__button shopify-payment-button__button--unbranded"
+                                                    class="shopify-payment-button__button shopify-payment-button__button--unbranded stockcheck"
                                                     <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
                                                     <span>Add to cart</span>
                                                 </button>
@@ -540,8 +540,8 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
                                             <div class="shopify-payment-button col-6" data-shopify="payment-button">
                                                 <button type="submit" name="checkout"
-                                                    class="shopify-payment-button__button shopify-payment-button__button--unbranded"
-                                                    <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; }  ?> >Buy
+                                                    class="shopify-payment-button__button shopify-payment-button__button--unbranded stockcheck"
+                                                    <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; }  ?> >Buy
                                                     it now</button>
                                             </div>
 
@@ -1526,6 +1526,7 @@ $arr=mysqli_fetch_array($sql);
 
                             $("#sizequa").html(response);
                             $('.sizese').html(size);
+                            
                         }
                     })
                 });

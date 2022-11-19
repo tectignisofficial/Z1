@@ -21,13 +21,6 @@ $email=$_SESSION['email'];
 $phone=$_SESSION['phone'];
 $amount=$_SESSION['total'];
 
-// $_SESSION['id']=$id;
-// $_SESSION['name']=$name;
-// $_SESSION['email']=$email;
-// $_SESSION['phone']=$phone;
-// $_SESSION['price']=$amount;
-
-
 $orderData = [
     'receipt'         => 3456,
     'amount'          => $amount * 100, // 2000 rupees in paise
