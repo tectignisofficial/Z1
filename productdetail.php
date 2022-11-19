@@ -1466,9 +1466,18 @@ $arr=mysqli_fetch_array($sql);
             <div class="pswp__bg"></div>
             <div class="pswp__scroll-wrap">
                 <div class="pswp__container">
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
-                    <div class="pswp__item"></div>
+                    <?php $image = $arr['image'];
+                                        $image = explode(',',$image);
+                                        $countno1=1;
+                                        foreach($image AS $imagess){
+                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'" class="imagelight'.$countno1.'"
+                                            data-size="1462x2048" ></a>';
+                                           
+                                        ?>
+                    <div class="pswp__item imagelight'.$countno1.'"></div>
+                    <?php  $countno1++; } ?>
+                    <!-- <div class="pswp__item"></div>
+                    <div class="pswp__item"></div> -->
                 </div>
                 <div class="pswp__ui pswp__ui--hidden">
                     <div class="pswp__top-bar">
