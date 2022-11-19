@@ -23,13 +23,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['name']=$fetchsql['name'];
         $_SESSION['email']=$fetchsql['email'];
         $_SESSION['phone']=$fetchsql['phone'];
-    if($_SESSION['myselect']=='INR'){
         header('location:checkout.php');
-        // header('location:razor/pay.php');
-    }
-    else{
-        echo "<script>alert('only rs');</script>";
-    }
     }
 }
 ?>
@@ -273,7 +267,7 @@ if(isset($_POST['checkout'])){
                                    <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
                                    <h3><strong>Your Cart is Empty</strong></h3>
                                    <h4>Add something to make me happy :)</h4>
-                                   <a href="index.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                                   <a href="shop.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
                                    
                                
                                </div>

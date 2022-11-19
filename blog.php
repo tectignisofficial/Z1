@@ -66,7 +66,7 @@ include("include/config.php");
                                     while($arr=mysqli_fetch_array($sql)){
                                 ?>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col">
-                                <div class="custom-search">
+                                <!-- <div class="custom-search">
                                     <form action="/search" method="get" class="input-group search-header search"
                                         role="search" style="position: relative;">
                                         <input class="search-header__input search__input input-group__field"
@@ -75,7 +75,7 @@ include("include/config.php");
                                         <span class="input-group__btn"><button class="btnSearch" type="submit"> <i
                                                     class="icon anm anm-search-l"></i> </button></span>
                                     </form>
-                                </div>
+                                </div> -->
                                 <div class="blog--list-view blog--grid-load-more">
                                     <div class="article" style="display: block;">
                                         <!-- Article Image -->

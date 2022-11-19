@@ -479,7 +479,7 @@ $arr=mysqli_fetch_array($sql);
 
                                             <label class="header">Size: <span class="slVariant sizese">select</span></label>
                                             <?php
-                                            $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName'");
+                                            $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName' and stock > 0");
                                             while($sizearr=mysqli_fetch_array($sizesql)){
                                             ?>
                                             <div data-value="<?php echo $sizearr['value']; ?>"
@@ -492,13 +492,6 @@ $arr=mysqli_fetch_array($sql);
                                                     title="<?php echo $sizearr['value']; ?>"><?php echo $sizearr['value']; ?></label>
                                             </div>
                                             <?php } ?>
-                                            <!-- <div data-value="S" class="swatch-element s available">
-                                                <input class="swatchInput" id="swatch-1-s" type="radio" name="option1"
-                                                    value="S" <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
-                                                <label class="swatchLbl medium rectangle" for="swatch-1-s"
-                                                    title="S">S</label>
-                                            </div>
-                                          -->
                                         </div>
                                     </div>
                                     <div id="sizequa"></div>
@@ -516,11 +509,12 @@ $arr=mysqli_fetch_array($sql);
                                                 <div class="qtyField">
                                                     <a class="qtyBtn minus" href="javascript:void(0);"><i
                                                             class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                    <input type="text" id="Quantity" name="quantity" value="1"
+                                                    <input type="text" id="Quantity" name="quantity" value="1" max="3"
                                                         class="product-form__input qty" readonly>
                                                     <a class="qtyBtn plus" href="javascript:void(0);"><i
                                                             class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                                 </div>
+                                                
                                             </div>
                                         </div>
                                         <div class="row">

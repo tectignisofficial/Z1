@@ -95,8 +95,15 @@ if(isset($_POST['size'])){
   if($stock==0){
     echo '<p style="font-size:15px;margin-bottom:6px">Out of Stock</p> ';
   }else{
-  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock'].' in Stock</p> ';
+  echo '<p style="font-size:15px;margin-bottom:6px"> <i class="fa fa-check" style="font-size:25px"aria-hidden="true"> </i>'.$arr['stock'].' in Stock</p> 
+  
+  
+  ';
   }
+
+  echo '
+  
+  ';
 
 }
 
