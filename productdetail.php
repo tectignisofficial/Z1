@@ -1470,11 +1470,8 @@ $arr=mysqli_fetch_array($sql);
                                         $image = explode(',',$image);
                                         $countno1=1;
                                         foreach($image AS $imagess){
-                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'" class="imagelight'.$countno1.'"
-                                            data-size="1462x2048" ></a>';
-                                           
                                         ?>
-                    <div class="pswp__item imagelight<?= $countno1; ?>"></div>
+                    <div class="pswp__item imagelight<?php echo $countno1; ?>"></div>
                     <?php  $countno1++; } ?>
                     <!-- <div class="pswp__item"></div>
                     <div class="pswp__item"></div> -->
