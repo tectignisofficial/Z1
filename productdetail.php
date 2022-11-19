@@ -429,10 +429,11 @@ $arr=mysqli_fetch_array($sql);
                                         <?php
                                         $image = $arr['image'];
                                         $image = explode(',',$image);
+                                        $countno1=1;
                                         foreach($image AS $imagess){
-                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'"
+                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'" class="imagelight'.$countno1.'"
                                             data-size="1462x2048" id="imagelight"></a>';
-                                        }
+                                            $countno1++; }
                                         ?>
 
                                     </div>
