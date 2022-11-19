@@ -17,19 +17,26 @@ if(isset($_POST['shipping_address'])){
     $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
 
 }
-if(isset($_POST['doneAddress'])){
-    if(isset($_SESSION['myselect'])=='INR'){
-    $_SESSION['addressid']=$_POST['prid'];
-    header('location:razor/pay.php');
-    }
-    else if(isset($_SESSION['myselect'])=='GBP' || isset($_SESSION['myselect'])=='CAD' || isset($_SESSION['myselect'])=='USD' || isset($_SESSION['myselect'])=='AUD'){
-        $_SESSION['addressid']=$_POST['prid'];
-        header('location:paypal.php');
+if(isset($_SESSION['myselect'])){
+    if($_SESSION['myselect']=='INR'){
+        if(isset($_POST['doneAddress'])){
+            $_SESSION['addressid']=$_POST['prid'];
+            header('location:razor/pay.php');
+        }
     }
     else{
-        $_SESSION['addressid']=$_POST['prid'];
-        header('location:razor/pay.php');
+        if(isset($_POST['doneAddress'])){
+            $_SESSION['addressid']=$_POST['prid'];
+            header('location:paypal.php');
+        }
     }
+    
+}
+else{
+if(isset($_POST['doneAddress'])){
+    $_SESSION['addressid']=$_POST['prid'];
+    header('location:razor/pay.php');
+}
 }
 ?>
 <!DOCTYPE html>
@@ -345,40 +352,32 @@ if(isset($_POST['doneAddress'])){
                             <hr />
                             <div class="your-payment">
                                 <h2 class="payment-title mb-3">payment method</h2>
+                                
                             <div class="card">
                                             <div class="card-header">
                                                 Razorpay
 <?php
-if(isset($_SESSION['myselect'])=='INR'){
-?>
-                                                <input type="radio" name="" <?php
-                                                if(isset($_SESSION['myselect'])=='INR'){ echo 'checked'; }else{ echo 'disabled'; }
+if(isset($_SESSION['myselect'])){ ?>
+ <input type="radio" name="" <?php
+                                                if($_SESSION['myselect']=='INR'){ echo 'checked'; }else{ echo 'disabled'; }
                                                 ?>  id="">
-                                                <?php
-}else { ?>
-<input type="radio" name="g" checked id="">
+<?php }else { ?>
+    <input type="radio" name="" checked  id="">
 <?php }
-                                                ?>
+?>
+                                               
                     </div>                                                
                                             </div>
                                             <div class="card">
                                             <div class="card-header">
                                                 Paypal 
-                                                <input type="radio" <?php
-                                                 if(isset($_SESSION['myselect'])=='GBP' || isset($_SESSION['myselect'])=='CAD' || isset($_SESSION['myselect'])=='USD' || isset($_SESSION['myselect'])=='AUD'){ echo 'checked'; }else{ echo 'disabled'; }
-                                                ?> name="" >
-                                            <?php
-if(isset($_SESSION['myselect'])=='INR'){
-?>
-                                                <input type="radio" name="" <?php
-                                                if(isset($_SESSION['myselect'])=='INR'){ echo 'checked'; }else{ echo 'disabled'; }
-                                                ?>  id="">
                                                 <?php
-}else { ?>
-<input type="radio" name="g" checked id="">
-<?php }
-                                                ?>    
-                                            </div>                                 
+if(isset($_SESSION['myselect'])){ ?>
+ <input type="radio" <?php
+                                                 if($_SESSION['myselect']=='GBP' || $_SESSION['myselect']=='CAD' || $_SESSION['myselect']=='USD' || $_SESSION['myselect']=='AUD'){ echo 'checked'; }else{ echo 'disabled'; }
+                                                ?> name="" >
+<?php } ?>
+                                                </div>                                 
                                             </div>
                     </div>
                             <!-- <div class="your-payment">

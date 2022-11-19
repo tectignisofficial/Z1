@@ -1,6 +1,28 @@
-<?php
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-include('../include/config.php');
+<?php
+session_start();
+include('include/config.php');
+/* 
+ * PayPal and database configuration 
+ */ 
+if(isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'])==='on')
+$url='https://';
+else
+$url='http://';
+$url1=$_SERVER['SERVER_NAME'];
+
+  
+// PayPal configuration 
+define('PAYPAL_ID', 'sb-vbt0e17808320@business.example.com'); 
+define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
+ 
+define('PAYPAL_RETURN_URL', 'http://localhost:8000/Z1/success.php'); 
+define('PAYPAL_CANCEL_URL', 'http://localhost:8000/Z1/cancel.php'); 
+define('PAYPAL_CURRENCY', $_SESSION['myselect']); 
+ 
+// Change not required 
+define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -14,14 +36,14 @@ include('../include/config.php');
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body class="page-template belle">
@@ -50,15 +72,25 @@ include('../include/config.php');
 
                             <div id="address" class="address tab-pane mb-4">
 
-
 <div style="float:right">
-       <button class="btn" id="rzp-button1" value="Place order" type="submit">Place order</button>
+<form action="<?php echo PAYPAL_URL; ?>" method="post" id="paypal_form">
+                    <input type="hidden" name="business" id="paypal_id" value="<?php echo PAYPAL_ID; ?>">
+					
+                    <!-- Important For PayPal Checkout -->
+                    <input type="hidden" value="<?php echo $_SESSION['total']; ?>" name="amount">
+                    <input type="hidden" name="currency_code" id="currency" value="<?php echo PAYPAL_CURRENCY; ?>">
+					
+                    <!-- Specify a Buy Now button. -->
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <!-- Specify URLs -->
+                    <input type="hidden" name="return" value="<?php echo PAYPAL_RETURN_URL; ?>">
+                    <input type="hidden" name="cancel_return" value="<?php echo PAYPAL_CANCEL_URL; ?>">
+					<br><br>
+                    <!-- Display the payment button. -->
+                    <input type="submit" name="submit" class="btn" value="Place order">
+                </form>
+       <!-- <button class="btn" id="rzp-button1" value="Place order" type="submit">Place order</button> -->
 </div>
-
-                             
-                            
-
-
                            
                                 <div class="row">
                                     <div class="col-6">
@@ -194,7 +226,7 @@ $arr=mysqli_fetch_array($sql);
 
                                 <h5>Razorypay</h5>
                                 <div style="float:right" class="ml-3">
-       <a class="btn" href="../index.php" id="rzp-button1" value="Place order" type="submit">back to shopping</a>
+       <a class="btn" href="index.php" id="rzp-button1" value="Place order" type="submit">back to shopping</a>
 </div>
                                
                             </div>
@@ -216,61 +248,46 @@ $arr=mysqli_fetch_array($sql);
         <!--End Scoll Top-->
 
         <!-- Including Jquery -->
-        <script src="../assets/js/vendor/jquery-3.3.1.min.js"></script>
-        <script src="../assets/js/vendor/jquery.cookie.js"></script>
-        <script src="../assets/js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="../assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/vendor/jquery.cookie.js"></script>
+        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
         <!-- Including Javascript -->
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <script src="..assets/js/plugins.js"></script>
-        <script src="../assets/js/popper.min.js"></script>
-        <script src="../assets/js/lazysizes.js"></script>
-        <script src="../assets/js/main.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/lazysizes.js"></script>
+        <script src="assets/js/main.js"></script>
+       
+
     </div>
-</body>
+
+    <script type="text/javascript">
+    // $(document).ready(function(){
+    //     $("#paypal_form").submit(function(){
+    //         let paypal_id=$('#paypal_id').val();
+    //     let amount=$('#amount').val();
+    //     let currency=$('#currency').val();
+
+    //     $.ajax({
+    //         url:'insertData.php',
+    //         method:'POST',
+    //         data:{
+    //             paypal_id:paypal_id,
+    //             amount:amount,
+    //             currency:currency
+    //         },
+    //         success: function(res){
+    //             alert(res);
+    //         }
+    //     })
+    //     })
+        
+    // })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script></body>
 
 <!-- belle/checkout.html   11 Nov 2019 12:44:33 GMT -->
 
 </html>
 <!-- <button id="rzp-button1">Pay with Razorpay</button> -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<form name='razorpayform' action="verify.php" method="POST">
-    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
-    <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
-</form>
-<script>
-// Checkout details as a json
-var options = <?php echo $json?>;
-
-/**
- * The entire list of Checkout fields is available at
- * https://docs.razorpay.com/docs/checkout-form#checkout-fields
- */
-options.handler = function (response){
-    document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
-    document.getElementById('razorpay_signature').value = response.razorpay_signature;
-    document.razorpayform.submit();
-};
-
-// Boolean whether to show image inside a white frame. (default: true)
-options.theme.image_padding = false;
-
-options.modal = {
-    ondismiss: function() {
-        console.log("This code runs when the popup is closed");
-    },
-    // Boolean indicating whether pressing escape key 
-    // should close the checkout form. (default: true)
-    escape: true,
-    // Boolean indicating whether clicking translucent blank
-    // space outside checkout form should close the form. (default: false)
-    backdropclose: false
-};
-
-var rzp = new Razorpay(options);
-
-document.getElementById('rzp-button1').onclick = function(e){
-    rzp.open();
-    e.preventDefault();
-}
-</script>
