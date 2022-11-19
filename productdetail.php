@@ -1474,7 +1474,7 @@ $arr=mysqli_fetch_array($sql);
                                             data-size="1462x2048" ></a>';
                                            
                                         ?>
-                    <div class="pswp__item imagelight'.$countno1.'"></div>
+                    <div class="pswp__item imagelight<?= $countno1; ?>"></div>
                     <?php  $countno1++; } ?>
                     <!-- <div class="pswp__item"></div>
                     <div class="pswp__item"></div> -->
