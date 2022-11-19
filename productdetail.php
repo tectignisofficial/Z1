@@ -284,7 +284,7 @@ $arr=mysqli_fetch_array($sql);
                                             foreach($images AS $image){
                                                 echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
-                                                class="slick-slide slick-cloned " data-slick-index="'.$count.' imagelight'.$countno.'"
+                                                class="slick-slide slick-cloned imagelight'.$countno.'" data-slick-index="'.$count.' "
                                                 aria-hidden="true" tabindex="-1" id="">
                                                 <img class="blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/'.$image.'"
