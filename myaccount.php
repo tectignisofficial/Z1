@@ -431,7 +431,7 @@ if(isset($_POST["changepassword"])){
             $('.product').html(product);
             $('.size').html(size);
             $('.order').html(order);
-            $('.image').attr("src",'auth/code/sadmin/image/'+image);
+            $('.image').attr("src",'auth/code/sadmin/image/product_image_check/'+image);
             $('.processing').html(processing);
 $('#viewdetailmodal').modal('show');
         })
