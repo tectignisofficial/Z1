@@ -22,7 +22,7 @@ if(isset($_SESSION['shopping_cart'])){
         $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
         $fetch=mysqli_fetch_array($ssql);
         $tstock=($fetch['stock']-$qua);
-        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_status`,`payment_id`,`amount`,`payment_currency`) VALUES ('1','$date','$id','paypal','1','Completed','$product','$qua','20%','$addressid','$size','$paypal_id','123','$amount','$currency')");
+        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_status`,`payment_id`,`amount`,`payment_currency`) VALUES ('1','$date','$id','paypal','Processing','Completed','$product','$qua','20%','$addressid','$size','$paypal_id','123','$amount','$currency')");
 
         $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
     }
@@ -36,7 +36,7 @@ else{
     $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
     $fetch=mysqli_fetch_array($ssql);
     $tstock=($fetch['stock']-$qua);
-    $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`,`payment_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,`amount`,`payment_currency`) VALUES ('1','$date','$id','paypal','1','Completed','$product','$qua','20%','$addressid','$size','$paypal_id','123','$amount','$currency')");
+    $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`,`payment_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,`amount`,`payment_currency`) VALUES ('1','$date','$id','paypal','Processing','Completed','$product','$qua','20%','$addressid','$size','$paypal_id','123','$amount','$currency')");
 
     $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
 }
