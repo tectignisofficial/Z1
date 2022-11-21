@@ -63,7 +63,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['name']=$fetchsql['name'];
         $_SESSION['email']=$fetchsql['email'];
         $_SESSION['phone']=$fetchsql['phone'];
-        $_SESSION['total']=$_POST['price'];
+        $_SESSION['total']=$_POST['price1'];
         $_SESSION['quantity']=$_POST['quantity'];
         $_SESSION['option1']=$_POST['option1'];
         $_SESSION['productname']=$_POST['productname'];
@@ -501,6 +501,9 @@ $arr=mysqli_fetch_array($sql);
                                         <input type="hidden" name="productid" value="<?php echo $arr['id'] ?>">
                                         <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $arr['price']; ?>">
+
+                                        <input type="hidden" name="price1" value="<?php  if(isset($_SESSION['USD'])){ echo $arr['price'] * $_SESSION['USD'];  }else{  ?> <?php echo $arr['price'];?><?php } ?>">
+                                       
 
                                         <input type="hidden" name="producticon" value="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>">
 

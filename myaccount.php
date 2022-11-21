@@ -122,7 +122,7 @@ if(isset($_POST["changepassword"])){
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-12">
                             <div class="d-single-info text-lg-center">
-                                <a class="view-cart" href="cart-variant1.html"><i class="icon anm anm-bag-l"></i> View
+                                <a class="view-cart" href="cart.php"><i class="icon anm anm-bag-l"></i> View
                                     Cart</a>
                             </div>
                         </div>
@@ -183,26 +183,46 @@ if(isset($_POST["changepassword"])){
                                             <th>Date</th>
                                             <th>Status</th>
                                             <th>Total</th>
-                                            <th>Actions</th>
+                                            <th>Actions
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                            $cusid=$_SESSION['customerid'];
+                                            $sql=mysqli_query($conn,"select * from orders where customer='$cusid'");
+                                            $count=1;
+                                            while($arr1=mysqli_fetch_array($sql)){
+                                            ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Minerva Dress black</td>
-                                            <td>March 04, 2018</td>
-                                            <td>Processing</td>
-                                            <td>$165.00 for 1 item </td>
-                                            <td><a class="view" href="cart-variant1.html">view</a></td>
+                                            
+                                            <td><?= $count; ?></td>
+                                            <td><?= $arr1['product'] ?></td>
+                                            <td><?php $date=$arr1['order_date'];
+                                            $date1=strtotime($date);
+                                            echo date('M d, 20y',$date1) ?>    
+                                           </td>
+                                            <td><?= $arr1['order_status'] ?></td>
+                                            <?php
+                                            $curr=$arr1['payment_currency'];
+                                            $sql1=mysqli_query($conn,"select * from currency where currency_name='$curr'");
+                                            $row1=mysqli_fetch_array($sql1);
+                                            ?>
+                                            <td><i class="<?= $row1['currency_icon'] ?>"></i> <?= $arr1['amount'] ?></td>
+                                            <?php
+                                            $pro=$arr1['product'];
+                                            $sql2=mysqli_query($conn,"select * from products where name='$pro'");
+                                            $arr2=mysqli_fetch_array($sql2);
+                                            ?>
+                                            <td>
+                                                <a class="view viewdetail" href="" data-toggle="modal" 
+                                                data-id="<?= $arr1['id']; ?>" data-product="<?= $arr1['product']; ?>" data-size="<?= $arr1['size'] ?>" data-image="<?= $arr2['hightlightfile'] ?>" data-order="<?= $arr1['order_id']; ?>" data-processing="<?= $arr1['order_status'] ?>">view</a> 
+                                                <!-- <button class="view" data-target="#viewdetail" data-toggle="modal">
+                                            view</button> -->
+                                        </td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Sueded Cotton Pant in Khaki</td>
-                                            <td>May 19, 2018</td>
-                                            <td>Processing</td>
-                                            <td>$150.00 for 1 item </td>
-                                            <td><a class="view" href="cart-variant1.html">view</a></td>
-                                        </tr>
+                                        <?php $count++; } ?>
+                                       
                                     </tbody>
                                 </table>
                             </div>
@@ -227,7 +247,7 @@ if(isset($_POST["changepassword"])){
                                     <p><?php echo $arr['state']?></p>
                                     <p><?php echo $arr['country']?></p>
                                 </div>
-                                <div class="col-6">
+                                <!-- <div class="col-6">
 
                                     <h4 class="billing-address">Shipping address</h4>
                                     <p><?php echo $shiparr['address1']?></p>
@@ -235,7 +255,7 @@ if(isset($_POST["changepassword"])){
                                     <p><?php echo $shiparr['city']?></p>
                                     <p><?php echo $shiparr['state']?></p>
                                     <p><?php echo $shiparr['country']?></p>
-                                </div>
+                                </div> -->
                             </div>
 
                         </div>
@@ -299,8 +319,10 @@ if(isset($_POST["changepassword"])){
                                                 <label for="input-firstname">Select Address Type <span class="required-f">*</span></label>
                                                 <div class="row"><input name="customerName" value=""
                                                     id="input-firstname" class="form-control" type="radio">Billing Address
-                                                      <input name="customerName" value=""
-                                                    id="input-firstname" class="form-control" type="radio">Shipping Address</div>
+                                                      <!-- <input name="customerName" value=""
+                                                    id="input-firstname" class="form-control" type="radio">
+                                                    Shipping Addres -->
+                                                </div>
                                                 
                                             </div>
                                           
@@ -334,6 +356,49 @@ if(isset($_POST["changepassword"])){
                 </div>
             </div>
         </div>
+
+        <div class="modal fade quick-view-popup" id="viewdetailmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="row">
+                      <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                      <label for="input-firstname">Order - <span class="required-f order"></span></label>
+                      <br>
+                      <hr>
+                      <br>
+                                            </div>
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                               <img src="" class="image">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                                <label for="input-firstname" class="product"></label>
+                                            </div>
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                                <label for="input-email" class="size"></label>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                                <label for="input-telephone" class="processing"> </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                            <label for="input-telephone" ></label>
+                                                <button class="btn btn-info-outline">Cancel</button>
+                                            </div>
+
+                                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--End Body Content-->
 
@@ -354,6 +419,23 @@ if(isset($_POST["changepassword"])){
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/lazysizes.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $('.viewdetail').click(function(){
+            let id=$(this).data('id');
+            let product=$(this).data('product');
+            let size=$(this).data('size');
+            let image=$(this).data('image');
+            let order=$(this).data('order');
+            let processing=$(this).data('processing');
+
+            $('.product').html(product);
+            $('.size').html(size);
+            $('.order').html(order);
+            $('.image').attr("src",'auth/code/sadmin/image/'+image);
+            $('.processing').html(processing);
+$('#viewdetailmodal').modal('show');
+        })
+    </script>
     </div>
 </body>
 
