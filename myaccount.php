@@ -360,16 +360,20 @@ if(isset($_POST["changepassword"])){
         <div class="modal fade quick-view-popup" id="viewdetailmodal">
             <div class="modal-dialog">
                 <div class="modal-content">
+                    <div class="modal-header">
+                    <label for="input-firstname">Order - <span class="required-f order"></span></label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
                     <div class="modal-body">
                       <div class="row">
                       <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                      <label for="input-firstname">Order - <span class="required-f order"></span></label>
-                      <br>
-                      <hr>
-                      <br>
+                     
+                     
                                             </div>
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                               <img src="" class="image rounded-circle text-center" width="100" height="100" >
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 text-center required">
+                                               <img src="" class="image rounded-circle " width="100" height="100" >
                                             </div>
 
                                         </div>
@@ -389,9 +393,9 @@ if(isset($_POST["changepassword"])){
 
                                         </div>
                                         <div class="row mt-2">
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                            <label for="input-telephone" ></label>
-                                                <button class="btn btn-info-outline">Cancel</button>
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                            <label for="input-telephone" >Are You Want to Cancel Order ? <a href="auth/code/sadmin/api.php" class="cancelattr">Cancel</a></label>
+                                                <!-- <button class="btn btn-info-outline">Cancel</button> -->
                                             </div>
 
                                         </div>
@@ -433,7 +437,8 @@ if(isset($_POST["changepassword"])){
             $('.order').html(order);
             $('.image').attr("src",'auth/code/sadmin/image/product_image_check/'+image);
             $('.processing').html(processing);
-$('#viewdetailmodal').modal('show');
+            $('.cancelattr').attr("href","auth/code/sadmin/api.php?orderidcancel="+id);
+            $('#viewdetailmodal').modal('show');
         })
     </script>
     </div>

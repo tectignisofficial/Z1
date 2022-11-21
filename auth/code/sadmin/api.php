@@ -125,4 +125,10 @@ if(isset($_POST['attr'])){
 </div>';
   }
 }
+
+if(isset($_GET['orderidcancel'])){
+  $orderidcancel=$_GET['orderidcancel'];
+  $sql=mysqli_query($conn,"update orders set order_status='Cancelled' where id='$orderidcancel'");
+  header("location:../../../myaccount.php");
+}
 ?>

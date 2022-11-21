@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include("../../../include/config.php");
 
 if(isset($_POST['submit'])){
@@ -230,3 +234,4 @@ move_uploaded_file($tmp_name, $loc);
 <!-- END: Body-->
 
 </html>
+<?php } ?>

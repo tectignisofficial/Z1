@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include("../../../include/config.php");
 $id=$_GET['eid'];
 
@@ -255,3 +259,4 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
 <!-- END: Body-->
 
 </html>
+<?php } ?>

@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
@@ -2169,3 +2172,4 @@ session_start();
 <!-- END: Body-->
 
 </html>
+<?php } ?>
