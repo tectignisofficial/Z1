@@ -369,7 +369,7 @@ if(isset($_POST["changepassword"])){
                       <br>
                                             </div>
                                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                               <img src="" class="image">
+                                               <img src="" class="image rounded-circle text-center" width="100" height="100" >
                                             </div>
 
                                         </div>
