@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include("../../../include/config.php");
 
 if(isset($_POST['updateorder'])){
@@ -327,3 +331,4 @@ if(val=='Courier'){
 <!-- END: Body-->
 
 </html>
+<?php } ?>

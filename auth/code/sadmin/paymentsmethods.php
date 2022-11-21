@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include('../../../include/config.php');
 $paypal=mysqli_query($conn, "Select * from paymentmethod where name='paypal'");
 $row=mysqli_fetch_array($paypal);
@@ -372,3 +376,4 @@ if($razorpay==1){
 <!-- END: Body-->
 
 </html>
+<?php } ?>

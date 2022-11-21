@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include('../../../include/config.php');
 
 if(isset($_POST['subm'])){
@@ -259,3 +263,4 @@ if(isset($_POST['subm'])){
 <!-- END: Body-->
 
 </html>
+<?php } ?>

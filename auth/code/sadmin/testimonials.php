@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include('../../../include/config.php');
 
 if(isset($_GET['delid'])){
@@ -253,3 +257,4 @@ if(isset($_GET['delid'])){
 <!-- END: Body-->
 
 </html>
+<?php } ?>

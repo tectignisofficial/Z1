@@ -1,4 +1,9 @@
-<?php include('../../../include/config.php');
+<?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
+include('../../../include/config.php');
 if(isset($_GET['currid'])){
     $currid=$_GET['currid'];
     $sql=mysqli_query($conn,"delete from currency where id ='$currid'");
@@ -275,3 +280,4 @@ if(isset($_POST['updatecurrrency'])){
 <!-- END: Body-->
 
 </html>
+<?php } ?>

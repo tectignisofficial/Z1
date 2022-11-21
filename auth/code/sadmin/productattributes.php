@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include('../../../include/config.php');
 ?>
 <!DOCTYPE html>
@@ -259,3 +263,4 @@ include('../../../include/config.php');
 <!-- END: Body-->
 
 </html>
+<?php } ?>

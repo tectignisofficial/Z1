@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header('location:auth-admin-login.php');
+}else{
 include('../../../include/config.php');
 $eid=$_GET['eid'];
 $editSql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.id='$eid'");
@@ -655,3 +659,4 @@ $(document).ready(function() {
 <!-- END: Body-->
 
 </html>
+<?php } ?>
