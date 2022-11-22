@@ -40,7 +40,7 @@ if(isset($_POST['register'])){
   $mail->Port       = '587';                            
 
   //Recipients
-  $mail->setFrom('maheshniwate10@gmail.com', 'Z1 Knee Braces');
+  $mail->setFrom('tectignisitsolutions@gmail.com', 'Z1 Knee Braces');
   $mail->addAddress($customerEmail, $FullName);    
   
   //Content                             
@@ -53,7 +53,7 @@ if(isset($_POST['register'])){
 
     if($sql==1){
         echo '<script>alert("sucessfully submitted");</script>';
-        header('location:login.php');
+        // header('location:login.php');
     }else{
         echo '<script>alert("something went wrong");</script>';
     }
@@ -135,7 +135,7 @@ if(isset($_POST['register'])){
                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="LastName">Phone No</label>
-                                    <input type="text" name="customerPhone" placeholder="" id="LastName">
+                                    <input type="tel" name="customerPhone" placeholder="" minlength="10" maxlength= "10" id="LastName">
                                 </div>
                                </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

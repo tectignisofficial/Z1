@@ -118,7 +118,7 @@ include('include/config.php');
                         <div class="grid-products grid--view-items">
                             <div class="row">
                             <?php
-                                            $sql=mysqli_query($conn,"select * from products group by name");
+                                            $sql=mysqli_query($conn,"select * from products");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">

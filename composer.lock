@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "94f873685907d08d3b832d62b5020346",
+    "packages": [
+        {
+            "name": "mailin-api/mailin-api-php",
+            "version": "v1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mailin-api/mailin-api-php.git",
+                "reference": "b437808566f46979309f01b796c31b7b6bacfb42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mailin-api/mailin-api-php/zipball/b437808566f46979309f01b796c31b7b6bacfb42",
+                "reference": "b437808566f46979309f01b796c31b7b6bacfb42",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sendinblue": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SendinBlue",
+                    "homepage": "https://www.sendinblue.com/"
+                }
+            ],
+            "description": "Official SendinBlue provided API V2 wrapper",
+            "homepage": "https://github.com/mailin-api/mailin-api-php",
+            "abandoned": "sendinblue/api-v3-sdk",
+            "time": "2017-04-19T13:00:21+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

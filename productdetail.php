@@ -999,7 +999,7 @@ $arr=mysqli_fetch_array($sql);
                                     <div id="tab1" class="tab_content grid-products">
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products group by name limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">

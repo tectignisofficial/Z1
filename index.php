@@ -142,7 +142,7 @@ include('include/config.php');
                                     <div id="tab1" class="tab_content grid-products">
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products group by name");
+                                            $sql=mysqli_query($conn,"select * from products");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
