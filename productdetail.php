@@ -524,7 +524,7 @@ $arr=mysqli_fetch_array($sql);
                                             <div class="product-form__item--submit col-6">
                                                 <button type="submit" id="addtocart" name="addtocart"
                                                     class="shopify-payment-button__button shopify-payment-button__button--unbranded stockcheck"
-                                                    <?php $status=$arr['stock_status'];if($status==0){ echo 'disabled'; } ?>>
+                                                    <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; } ?>>
                                                     <span>Add to cart</span>
                                                 </button>
 
