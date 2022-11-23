@@ -7,7 +7,7 @@ if(isset($_GET['did'])){
         if($values['itemid'] == $_GET['did']){
             unset($_SESSION['shopping_cart'][$keys]);
         }
-        unset($_SESSION['shopping_cart']);
+        // unset($_SESSION['shopping_cart']);
     }
     header('location:cart.php');
 }
@@ -136,7 +136,7 @@ if(isset($_POST['checkout'])){
                                 ?>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
                                     <td class="cart__image-wrapper cart-flex-item">
-                                        <a href="#"><img class="cart__image" src="assets/images/product-images/product-image1.jpg" alt="Elastic Waist Dress - Navy / Small"></a>
+                                        <a href="#"><img class="cart__image" src="auth/code/sadmin/image/product_image_check/<?php echo $values['image']; ?>" alt="Elastic Waist Dress - Navy / Small"></a>
                                     </td>
                                     <td class="cart__meta small--text-left cart-flex-item">
                                         <div class="list-view-item__title">
@@ -252,7 +252,42 @@ if(isset($_POST['checkout'])){
                    
             </div>
             <?php
-              }else{
+              }
+              else if(
+              isset($_SESSION['shopping_cart'])) 
+            {
+                $item_in_cart = is_array($_SESSION['shopping_cart']) ? count($_SESSION['shopping_cart']) : 0; 
+                if($item_in_cart == '0'){
+echo '<div class="container-fluid  mt-100">
+<div class="row">
+
+   <div class="col-md-12">
+   
+           <div class="card1">
+       <div class="card-header1">
+       
+       </div>
+       <div class="card-body1 cart">
+               <div class="col-sm-12 empty-cart-cls text-center">
+                   <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+                   <h3><strong>Your Cart is Empty</strong></h3>
+                   <h4>Add something to make me happy :)</h4>
+                   <a href="shop.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                   
+               
+               </div>
+       </div>
+</div>
+       
+   
+   </div>
+
+</div>
+
+</div>';
+                }
+              }
+              else{
                 echo '<div class="container-fluid  mt-100">
                 <div class="row">
                 

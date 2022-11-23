@@ -25,7 +25,8 @@ if(!in_array($_GET['name'],$item_array_id)){
         'name'     => $_GET['name'],
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
-        'option1'  => $_POST['option1']
+        'option1'  => $_POST['option1'],
+        'image'    => $_POST['image']
     );
     $_SESSION['shopping_cart'][$count] = $item_arr;
     header('location:productdetail.php?name='.$productName);
@@ -40,7 +41,8 @@ else{
         'name'     => $_GET['name'],
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
-        'option1'  => $_POST['option1']
+        'option1'  => $_POST['option1'],
+        'image'    => $_POST['image']
     );
     $_SESSION['shopping_cart'][0] = $item_arr;
 }
@@ -67,6 +69,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['quantity']=$_POST['quantity'];
         $_SESSION['option1']=$_POST['option1'];
         $_SESSION['productname']=$_POST['productname'];
+        $_SESSION['image']=$_POST['image'];
         header('location:checkout.php');
         // header('location:razor/pay.php');
    
@@ -501,6 +504,7 @@ $arr=mysqli_fetch_array($sql);
                                         <input type="hidden" name="productid" value="<?php echo $arr['id'] ?>">
                                         <input type="hidden" name="productname" value="<?php echo $arr['name'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $arr['price']; ?>">
+                                        <input type="hidden" name="image" value="<?php echo $arr['hightlightfile']; ?>">
 
                                         <input type="hidden" name="price1" value="<?php  if(isset($_SESSION['USD'])){ echo $arr['price'] * $_SESSION['USD'];  }else{  ?> <?php echo $arr['price'];?><?php } ?>">
                                        
