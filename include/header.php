@@ -6,9 +6,9 @@
             <style>
                 #select {
                     color: white;
-                    background: #031b41;
+                    background: black;
                     height: fit-content;
-                    border-color: #031b41;
+                    border-color: black;
                     background-image: red;
                 }
 

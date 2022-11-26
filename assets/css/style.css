@@ -179,7 +179,7 @@ a:focus {
 
 a:active,
 a:hover {
-  color: #031b41;
+  color: black;
   outline: 0;
 }
 
@@ -339,7 +339,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: #031b41;
+  color: black;
   margin: 0 0 10px;
   font-family: "Roboto Slab", Helvetica, Tahoma, Arial, serif;
   font-weight: 400;
@@ -630,7 +630,7 @@ th {
   border: 1px solid transparent;
   border-radius: 0;
   padding: 8px 15px 8px;
-  background-color: #031b41;
+  background-color: black;
   color: #fff;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
   font-weight: 400;
@@ -662,8 +662,8 @@ th {
 
 .btn--secondary {
   background-color: #ededed;
-  color: #031b41;
-  border: 1px solid #031b41;
+  color: black;
+  border: 1px solid black;
 }
 
 .btn--link {
@@ -780,7 +780,7 @@ textarea:-ms-input-placeholder {
   color: #fff;
   padding-top: 8px;
   padding-bottom: 10px;
-  background: #031b41;
+  background: black;
   height: 38px;
 }
 
@@ -865,7 +865,7 @@ textarea:-ms-input-placeholder {
 
 #currencies li,
 #language li {
-  color: #031b41;
+  color: black;
   font-size: 12px;
   cursor: pointer;
   padding: 5px 15px;
@@ -926,7 +926,7 @@ textarea:-ms-input-placeholder {
 }
 
 .site-header__cart {
-  color: #031b41;
+  color: black;
   text-decoration: none;
 }
 
@@ -943,7 +943,7 @@ textarea:-ms-input-placeholder {
   font-size: 11px;
   display: inline-block;
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
   border-radius: 50%;
   text-align: center;
   width: 14px;
@@ -989,7 +989,7 @@ textarea:-ms-input-placeholder {
 }
 
 #header-cart #cart-title strong {
-  color: #031b41;
+  color: black;
 }
 
 #header-cart .variant-cart {
@@ -1024,7 +1024,7 @@ textarea:-ms-input-placeholder {
 
 #header-cart .priceRow {
   margin-top: 0;
-  color: #031b41;
+  color: black;
 }
 
 .mini-products-list {
@@ -1071,7 +1071,7 @@ textarea:-ms-input-placeholder {
 }
 
 .mini-products-list li .pName {
-  color: #031b41;
+  color: black;
   font-size: 13px;
   white-space: normal;
   text-decoration: none;
@@ -1102,7 +1102,7 @@ textarea:-ms-input-placeholder {
 }
 
 .mini-products-list li .remove:hover {
-  color: #031b41;
+  color: black;
 }
 
 .mini-products-list li .edit-i.remove {
@@ -1143,7 +1143,7 @@ textarea:-ms-input-placeholder {
 }
 
 #header-cart .total .total-in {
-  color: #031b41;
+  color: black;
   margin: 10px 0;
   padding: 8px 10px;
   border-top: 1px solid #e8e9eb;
@@ -1296,7 +1296,7 @@ textarea:-ms-input-placeholder {
   }
 
   #siteNav>li>a {
-    color: #031b41;
+    color: black;
     padding: 0 20px;
     text-transform: uppercase;
     line-height: 40px;
@@ -1353,7 +1353,7 @@ textarea:-ms-input-placeholder {
   }
 
   #siteNav>li .megamenu li.lvl-1 a.lvl-1 {
-    color: #031b41;
+    color: black;
     font-size: 14px;
     text-transform: uppercase;
     padding: 0 0 8px;
@@ -1361,13 +1361,13 @@ textarea:-ms-input-placeholder {
   }
 
   #siteNav>li .megamenu li.lvl-1 li .site-nav {
-    color: #031b41;
+    color: black;
     padding: 5px 0;
     font-weight: 400;
   }
 
   #siteNav>li .megamenu li.lvl-1 li .site-nav:hover {
-    color: #031b41;
+    color: black;
   }
 
   #siteNav>li .megamenu li.lvl-1 li .site-nav:before {
@@ -1376,7 +1376,7 @@ textarea:-ms-input-placeholder {
     width: 0px;
     height: 2px;
     vertical-align: middle;
-    background-color: #031b41;
+    background-color: black;
     -ms-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1487,14 +1487,14 @@ textarea:-ms-input-placeholder {
   }
 
   #siteNav>li ul.dropdown li a {
-    color: #031b41;
+    color: black;
     font-weight: 400;
     padding: 8px 12px;
     background-color: #fff;
   }
 
   #siteNav>li ul.dropdown li a:hover {
-    color: #031b41;
+    color: black;
     background-color: #eee;
     padding-left: 17px;
   }
@@ -1687,13 +1687,13 @@ textarea:-ms-input-placeholder {
 .slideshow .slick-next:before {
   content: "\ea8c";
   font-family: "annimex-icons";
-  color: #031b41;
+  color: black;
 }
 
 .slideshow .slick-prev:before {
   content: "\ea8b";
   font-family: "annimex-icons";
-  color: #031b41;
+  color: black;
 }
 
 .slideshow .slick-prev:before,
@@ -1712,7 +1712,7 @@ textarea:-ms-input-placeholder {
 
 .slideshow .btn {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .slideshow .btn:hover,
@@ -2068,7 +2068,7 @@ textarea:-ms-input-placeholder {
   font-family: "annimex-icons";
   font-size: 20px;
   line-height: 1;
-  color: #031b41;
+  color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2225,7 +2225,7 @@ textarea:-ms-input-placeholder {
 }
 
 .sold-out span {
-  color: #031b41;
+  color: black;
   position: absolute;
   top: 50%;
   left: 0;
@@ -2236,7 +2236,7 @@ textarea:-ms-input-placeholder {
 }
 
 .variants.add button {
-  color: #031b41;
+  color: black;
   background-color: #ffffff;
   width: 100%;
   text-transform: uppercase;
@@ -2282,7 +2282,7 @@ a.quick-view,
 a.wishlist,
 .cartIcon,
 .add-to-compare {
-  color: #031b41;
+  color: black;
   background-color: #ffffff;
   border: 0;
   width: 35px;
@@ -2301,7 +2301,7 @@ a.wishlist:hover,
 .variants.add button:hover,
 .add-to-compare:hover {
   color: #ffffff;
-  background-color: #031b41;
+  background-color: black;
   opacity: 0.8;
 }
 
@@ -2326,7 +2326,7 @@ a.quick-view {
 .button-style2 .wishlist,
 .button-style2 .compare {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
   border-right: 1px solid #fff;
 }
 
@@ -2341,7 +2341,7 @@ a.quick-view {
 
 .button-style2 .variants.add button {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .grid-products .item {
@@ -2354,7 +2354,7 @@ a.quick-view {
 }
 
 .grid-products .item .product-name a {
-  color: #031b41;
+  color: black;
   font-size: 1em;
   line-height: 1.2;
   margin-bottom: 0;
@@ -2366,7 +2366,7 @@ a.quick-view {
 
 .grid-products .item .product-price {
   margin: 5px 0;
-  color: #031b41;
+  color: black;
   font-weight: 600;
 }
 
@@ -2383,7 +2383,7 @@ a.quick-view {
 }
 
 .product-price .price {
-  color: #031b41;
+  color: black;
 }
 
 .product-price__sale,
@@ -2433,8 +2433,8 @@ a.quick-view {
 }
 
 .grid-products .item .swatches li:hover {
-  box-shadow: 0 0 1px 1px #031b41;
-  -webkit-box-shadow: 0 0 1px 1px #031b41;
+  box-shadow: 0 0 1px 1px black;
+  -webkit-box-shadow: 0 0 1px 1px black;
 }
 
 .grid-products .item .swatches li.rounded {
@@ -2501,7 +2501,7 @@ a.quick-view {
 }
 
 .grid-view-item__title {
-  color: #031b41;
+  color: black;
   font-size: 1em;
   line-height: 1.2;
   margin-bottom: 0;
@@ -2512,7 +2512,7 @@ a.quick-view {
 }
 
 .product-price__price {
-  color: #031b41;
+  color: black;
   font-weight: 600;
   display: inline-block;
 }
@@ -2523,7 +2523,7 @@ a.quick-view {
 .grid-products-hover-btn .cartIcon,
 .grid-products-hover-btn .add-to-compare {
   color: #ffffff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .grid-products-hover-gry a.quick-view,
@@ -2623,12 +2623,12 @@ a.quick-view {
 
 .collection-box .collection-grid-item__title.btn--secondary {
   background-color: #ededed;
-  color: #031b41;
+  color: black;
   border: 0;
 }
 
 .collection-box-style1 .collection-grid-item__title.btn--secondary:hover {
-  background-color: #031b41;
+  background-color: black;
   color: #fff;
   border: 0;
 }
@@ -2643,7 +2643,7 @@ a.quick-view {
 
 .collection-box:hover .slick-arrow,
 .collection-grid-4item:hover .slick-arrow {
-  color: #031b41;
+  color: black;
   opacity: 1;
   visibility: visible;
 }
@@ -2659,7 +2659,7 @@ a.quick-view {
 }
 
 .collection-box .collection-grid-4item .btn--secondary {
-  background-color: #031b41;
+  background-color: black;
   color: #fff;
 }
 
@@ -2677,7 +2677,7 @@ a.quick-view {
 }
 
 .logo-bar:hover .slick-arrow {
-  color: #031b41;
+  color: black;
   opacity: 1;
 }
 
@@ -2803,7 +2803,7 @@ a.quick-view {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #031b41;
+  background-color: black;
   opacity: 0.4;
 }
 
@@ -2894,7 +2894,7 @@ a.quick-view {
   font-family: "FontAwesome";
   display: block;
   width: 12px;
-  color: #031b41;
+  color: black;
   font-size: 9px;
   line-height: 11px;
   text-align: center;
@@ -2919,16 +2919,16 @@ a.quick-view {
   text-align: center;
   font-size: 10px;
   line-height: 21px;
-  color: #031b41;
+  color: black;
   cursor: pointer;
 }
 
 .filterBox .filter-color .swacth-btn.checked {
-  border-color: #031b41;
+  border-color: black;
 }
 
 .filterBox .filter-color .black {
-  background-color: #031b41;
+  background-color: black;
 }
 
 .filterBox .filter-color .white {
@@ -2941,7 +2941,7 @@ a.quick-view {
 }
 
 .filterBox .filter-color .blue {
-  background-color: #031b41;
+  background-color: black;
 }
 
 .filterBox .filter-color .pink {
@@ -3079,7 +3079,7 @@ a.quick-view {
 
 #slider-range .ui-slider-handle {
   background: #fff;
-  border: 2px solid #031b41;
+  border: 2px solid black;
   height: 10px;
   outline: none;
   top: -4px;
@@ -3095,7 +3095,7 @@ a.quick-view {
 }
 
 #slider-range.ui-slider-horizontal .ui-slider-range~.ui-slider-range {
-  background: #031b41;
+  background: black;
 }
 
 /* Color Swatches */
@@ -3121,12 +3121,12 @@ a.quick-view {
 }
 
 .grid-products .item .swatches.color-style li input[type="checkbox"]:checked+label.color {
-  border: 1px solid #031b41;
-  box-shadow: 0 0 1px #031b41;
+  border: 1px solid black;
+  box-shadow: 0 0 1px black;
 }
 
 .grid-products .item .swatches.color-style li .black {
-  background-color: #031b41;
+  background-color: black;
 }
 
 .grid-products .item .swatches.color-style li .white {
@@ -3138,7 +3138,7 @@ a.quick-view {
 }
 
 .grid-products .item .swatches.color-style li .blue {
-  background-color: #031b41;
+  background-color: black;
 }
 
 .grid-products .item .swatches.color-style li.rounded {
@@ -3227,9 +3227,9 @@ a.quick-view {
 
 .btnview {
   background: none;
-  color: #031b41;
+  color: black;
   padding: 5px 0;
-  border-bottom: 1px solid #031b41;
+  border-bottom: 1px solid black;
   -ms-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -3238,7 +3238,7 @@ a.quick-view {
 .btnview:hover {
   background: none;
   border-color: #fff;
-  color: #031b41;
+  color: black;
 }
 
 .filters-toolbar-wrapper {
@@ -3416,7 +3416,7 @@ a.quick-view {
 
 .grid-products .countdown-deals .cdown {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .product-list .countdown-deals {
@@ -3430,7 +3430,7 @@ a.quick-view {
   width: 65px;
   text-align: center;
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .product-load-more .item {
@@ -3656,7 +3656,7 @@ a.quick-view {
   padding: 0;
   line-height: 33px;
   float: right;
-  background: #031b41;
+  background: black;
   color: #ffffff;
   opacity: 0.9;
 }
@@ -3672,7 +3672,7 @@ a.quick-view {
 
 h1.product-single__title,
 .product-single__title.h1 {
-  color: #031b41;
+  color: black;
   font-size: 23px;
   margin-bottom: 10px;
   padding-right: 60px;
@@ -3698,7 +3698,7 @@ h1.product-single__title,
   height: 20px;
   width: 20px;
   padding: 0;
-  color: #031b41;
+  color: black;
 }
 
 .product-template__container .prInfoRow {
@@ -3974,12 +3974,12 @@ h1.product-single__title,
 .infolinks .btn {
   font-size: 11px;
   background-color: transparent;
-  color: #031b41;
+  color: black;
   padding: 0;
   margin-right: 15px;
   display: inline-block;
   vertical-align: top;
-  border-bottom: 1px solid #031b41;
+  border-bottom: 1px solid black;
 }
 
 .infolinks .btn:focus {
@@ -3996,7 +3996,7 @@ h1.product-single__title,
 }
 
 #sizechart table tr th {
-  background: #031b41;
+  background: black;
   color: #fff;
   border: 0 !important;
 }
@@ -4072,7 +4072,7 @@ table {
 
 .qtyField a {
   background-color: #eee;
-  color: #031b41;
+  color: black;
 }
 
 .qtyField a .fa {
@@ -4255,13 +4255,13 @@ table {
 .template-product .product-tabs li.active a:focus {
   text-decoration: none;
   border: 0;
-  color: #031b41;
-  border-bottom: 1px solid #031b41;
+  color: black;
+  border-bottom: 1px solid black;
   opacity: 1;
 }
 
 .acor-ttl.active {
-  border-bottom: 1px solid #031b41;
+  border-bottom: 1px solid black;
 }
 
 .acor-ttl {
@@ -4302,7 +4302,7 @@ table {
 
 .template-product .prstyle2 .tabs-listing .acor-ttl.active:before {
   content: "\f106";
-  color: #031b41;
+  color: black;
 }
 
 #shopify-product-reviews {
@@ -4325,7 +4325,7 @@ table {
 
 .spr-summary-actions-newreview {
   float: right;
-  background: #031b41;
+  background: black;
   color: #fff !important;
   font-size: 12px;
   font-weight: 700;
@@ -4412,7 +4412,7 @@ table {
 }
 
 .template-product .tabs-listing .tab-container table tr th {
-  background: #031b41;
+  background: black;
   color: #fff;
   border: 0 !important;
 }
@@ -4573,7 +4573,7 @@ table {
   line-height: 18px;
   display: inline-block;
   text-align: center;
-  background: #031b41;
+  background: black;
   color: #fff;
   float: left;
 }
@@ -4705,7 +4705,7 @@ table {
 .page.section-header h1 {
   text-transform: uppercase;
   margin: 0;
-  color: #031b41;
+  color: black;
   padding: 25px 0;
   font-size: 18px;
 }
@@ -4767,8 +4767,8 @@ table {
 
 .contact-template .btn--secondary {
   background-color: #ededed;
-  color: #031b41;
-  border: 1px solid #031b41;
+  color: black;
+  border: 1px solid black;
 }
 
 .contact-form textarea {
@@ -4795,7 +4795,7 @@ table {
 }
 
 #accordionExample .panel-title.active {
-  color: #031b41;
+  color: black;
 }
 
 #accordionExample .panel-content {
@@ -4803,7 +4803,7 @@ table {
 }
 
 #accordionExample .panel-title[aria-expanded="true"] {
-  color: #031b41;
+  color: black;
 }
 
 #accordionExample .panel-title[aria-expanded="false"]:before {
@@ -4865,7 +4865,7 @@ table {
   width: 100%;
   top: 0;
   left: 0;
-  background: #031b41;
+  background: black;
   opacity: 0.2;
   visibility: visible;
 }
@@ -5165,7 +5165,7 @@ table {
 }
 
 .tags-clouds li a {
-  color: #031b41;
+  color: black;
   display: block;
   border: 1px solid #ddd;
   padding: 5px 9px !important;
@@ -5213,7 +5213,7 @@ table {
 }
 
 .compare-page .table .remove-compare:hover {
-  color: #031b41;
+  color: black;
 }
 
 .compare-page .table .featured-image {
@@ -5272,7 +5272,7 @@ table {
   margin: 0;
   padding: 15px;
   text-transform: uppercase;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .customer-box h3 i {
@@ -5443,7 +5443,7 @@ table {
 }
 
 .cart .list-view-item__title {
-  color: #031b41;
+  color: black;
   font-size: 1.15385em;
   min-width: 100px;
 }
@@ -5504,7 +5504,7 @@ table {
 .cart__footer h5 label,
 .cart__footer .h5 label,
 .cart__footer .cart__subtotal-title {
-  color: #031b41;
+  color: black;
   text-transform: uppercase;
   font-size: 14px;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -5621,7 +5621,7 @@ input.checkbox {
   text-align: center;
   position: relative;
   z-index: 5;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .notification-bar__message {
@@ -5680,7 +5680,7 @@ input.checkbox {
 
 .imgBnrOuter .inner .ttl {
   line-height: 25px;
-  color: #031b41;
+  color: black;
   font-size: 17px;
   display: inline-block;
   padding: 10px 20px;
@@ -5776,7 +5776,7 @@ input.checkbox {
 }
 
 .home2-default .top-header .user-menu .anm {
-  color: #031b41;
+  color: black;
 }
 
 .home2-default .top-header p,
@@ -5785,11 +5785,11 @@ input.checkbox {
 .home2-default .top-header .ad,
 .home2-default .top-header span.selected-currency,
 .home2-default .top-header .language-dd {
-  color: #031b41;
+  color: black;
 }
 
 .home2-default .slideshow .slideshow__title {
-  color: #031b41;
+  color: black;
   font-size: 55px;
   font-weight: 700;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -5797,7 +5797,7 @@ input.checkbox {
 }
 
 .home2-default .slideshow .slideshow__subtitle {
-  color: #031b41;
+  color: black;
   font-size: 26px;
   text-transform: none;
   line-height: 1.2;
@@ -5860,7 +5860,7 @@ input.checkbox {
 .layout-boxed .top-header .anm,
 .layout-boxed .top-header span.selected-currency,
 .layout-boxed .top-header .language-dd {
-  color: #031b41;
+  color: black;
 }
 
 .layout-boxed #siteNav>li .megamenu {
@@ -5881,7 +5881,7 @@ input.checkbox {
 
 .layout-boxed .slideshow .slideshow__title {
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
-  color: #031b41;
+  color: black;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -5890,7 +5890,7 @@ input.checkbox {
 }
 
 .layout-boxed .slideshow .slideshow__subtitle {
-  color: #031b41;
+  color: black;
   font-weight: 300;
   font-size: 20px;
   text-transform: none;
@@ -6031,7 +6031,7 @@ input.checkbox {
 }
 
 .home5-cosmetic .slideshow .slideshow__title {
-  color: #031b41;
+  color: black;
   font-weight: 700;
   font-size: 66px;
   text-transform: uppercase;
@@ -6157,7 +6157,7 @@ input.checkbox {
 }
 
 .home7-shoes .slideshow .slideshow__title {
-  color: #031b41;
+  color: black;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -6166,7 +6166,7 @@ input.checkbox {
 }
 
 .home7-shoes .slideshow .slideshow__subtitle {
-  color: #031b41;
+  color: black;
   font-weight: 400;
   font-size: 18px;
   text-transform: none;
@@ -6195,7 +6195,7 @@ input.checkbox {
 
 .home7-shoes .footer-4 .footer-top h4,
 .home7-shoes .footer-4 .footer-top .h4 {
-  color: #031b41;
+  color: black;
   font-family: Montserrat, Helvetica, Tahoma, Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -6219,7 +6219,7 @@ body.home8-jewellery {
 }
 
 .home8-jewellery-top {
-  background: #031b41;
+  background: black;
   color: #fff;
 }
 
@@ -6250,12 +6250,12 @@ body.home8-jewellery {
 
 .home8-jewellery .slideshow .slideshow__title {
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
-  color: #031b41;
+  color: black;
   font-size: 40px;
 }
 
 .home8-jewellery .slideshow .slideshow__subtitle {
-  color: #031b41;
+  color: black;
   font-size: 16px;
   line-height: normal;
   text-transform: none;
@@ -6267,7 +6267,7 @@ body.home8-jewellery {
 .home8-jewellery .cartIcon,
 .home8-jewellery .add-to-compare {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .home8-jewellery .variants.add button:hover,
@@ -6275,7 +6275,7 @@ body.home8-jewellery {
 .home15-funiture-template a.wishlist:hover,
 .home15-funiture-template .cartIcon:hover,
 .home15-funiture-template .add-to-compare:hover {
-  color: #031b41;
+  color: black;
   background-color: #fff;
 }
 
@@ -6332,7 +6332,7 @@ body.home8-jewellery {
 }
 
 .home8-jewellery .site-footer {
-  background: #031b41;
+  background: black;
 }
 
 @media (min-width: 999px) {
@@ -6365,16 +6365,16 @@ body.home8-jewellery {
 .home9-parallax #siteNav>li>a:hover,
 .home9-parallax .stickyNav .site-header__search .search-trigger,
 .home9-parallax .stickyNav .site-header__cart .icon {
-  color: #031b41;
+  color: black;
 }
 
 .home9-parallax .stickyNav .site-header__cart-count {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .home9-parallax .site-header__cart-count {
-  color: #031b41;
+  color: black;
   background-color: #fff;
 }
 
@@ -6427,7 +6427,7 @@ body.home8-jewellery {
 .home9-parallax .footer-top p,
 .home9-parallax .footer-bottom,
 .home9-parallax .footer-bottom a {
-  color: #031b41;
+  color: black;
 }
 
 .home9-parallax .site-footer hr {
@@ -6544,7 +6544,7 @@ body.home8-jewellery {
 
 .home11-grid .footer-top .footer-newsletter .btn {
   border-radius: 3px !important;
-  background-color: #031b41;
+  background-color: black;
 }
 
 /*---------------------------------------
@@ -6636,10 +6636,10 @@ body.home8-jewellery {
   28.12 Home 13 - Autoparts  ------------
   ---------------------------------------*/
 .store-feature-top {
-  background: #031b41;
+  background: black;
   padding: 7px !important;
   text-align: center;
-  border-bottom: 1px solid #031b41;
+  border-bottom: 1px solid black;
 }
 
 .flex {
@@ -6740,13 +6740,13 @@ body.home8-jewellery {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #031b41;
+  background-color: black;
   opacity: 0.4;
   z-index: 1;
 }
 
 .home13-auto-parts .footer-2 .site-footer {
-  background-color: #031b41;
+  background-color: black;
 }
 
 .home13-auto-parts .footer-2 .footer-top h4,
@@ -6812,7 +6812,7 @@ body.home8-jewellery {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #031b41;
+  background-color: black;
   opacity: 0.2;
   z-index: 1;
 }
@@ -6823,7 +6823,7 @@ body.home8-jewellery {
 }
 
 .home14-bags .footer-2 .site-footer {
-  background: #031b41;
+  background: black;
 }
 
 .home14-bags .footer-2 .footer-top h4,
@@ -6876,7 +6876,7 @@ body.home15-funiture-template {
 }
 
 .home15-funiture-top {
-  background: #031b41;
+  background: black;
   color: #fff;
 }
 
@@ -6907,7 +6907,7 @@ body.home15-funiture-template {
 .home15-funiture-template .cartIcon,
 .home15-funiture-template .add-to-compare {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .home15-funiture-template .variants.add button:hover,
@@ -6915,7 +6915,7 @@ body.home15-funiture-template {
 .home15-funiture-template a.wishlist:hover,
 .home15-funiture-template .cartIcon:hover,
 .home15-funiture-template .add-to-compare:hover {
-  color: #031b41;
+  color: black;
   background-color: #fff;
 }
 
@@ -6999,7 +6999,7 @@ body.home15-funiture-template {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #031b41;
+  color: black;
   line-height: 18px;
 }
 
@@ -7067,7 +7067,7 @@ body.home15-funiture-template {
   display: table-cell;
   vertical-align: middle;
   padding: 35px 0;
-  color: #031b41;
+  color: black;
   z-index: 2;
   text-align: center;
 }
@@ -7213,14 +7213,14 @@ body.home15-funiture-template {
   font-size: 20px;
   text-transform: uppercase;
   margin: 0 0 15px 0;
-  color: #031b41;
+  color: black;
   letter-spacing: 0.08em
 }
 
 .newsletter-left h2 {
   font-size: 20px;
   margin: 0 0 15px 0;
-  color: #031b41;
+  color: black;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -7284,7 +7284,7 @@ body.home15-funiture-template {
 
 .footer-2 .footer-top h4,
 .footer-2 .footer-top .h4 {
-  color: #031b41;
+  color: black;
   font-size: 15px;
   font-weight: 400;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -7314,7 +7314,7 @@ body.home15-funiture-template {
 
 .footer-4 .footer-top h4,
 .footer-4 .footer-top .h4 {
-  color: #031b41;
+  color: black;
   font-size: 15px;
   font-weight: 400;
   font-family: Poppins, Helvetica, Tahoma, Arial, sans-serif;
@@ -7322,8 +7322,8 @@ body.home15-funiture-template {
 }
 
 .footer-4 .newsletter-section {
-  background-color: #031b41;
-  border: 1px solid #031b41;
+  background-color: black;
+  border: 1px solid black;
 }
 
 .footer-4 .newsletter-section .section-header label,
@@ -7345,7 +7345,7 @@ body.home15-funiture-template {
 .footer-4 .footer-top p,
 .footer-4 .footer-bottom,
 .footer-4 .footer-bottom a {
-  color: #031b41;
+  color: black;
 }
 
 .footer-4 .social-icons .icon {
@@ -7367,15 +7367,15 @@ body.home15-funiture-template {
 
 .footer-5 .footer-top h4,
 .footer-5 .footer-top .h4 {
-  color: #031b41;
+  color: black;
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 15px;
 }
 
 .footer-5 .newsletter-section {
-  background-color: #031b41;
-  border: 1px solid #031b41;
+  background-color: black;
+  border: 1px solid black;
 }
 
 .footer-5 .newsletter-section .section-header label,
@@ -7389,7 +7389,7 @@ body.home15-funiture-template {
 .footer-5 .footer-top p,
 .footer-5 .footer-bottom,
 .footer-5 .footer-bottom a {
-  color: #031b41;
+  color: black;
 }
 
 .footer-5 .addressFooter .icon {
@@ -7443,7 +7443,7 @@ body.home15-funiture-template {
 .newsletter-section .section-header label {
   font-weight: 400;
   margin-bottom: 0;
-  color: #031b41;
+  color: black;
 }
 
 .newsletter-section .section-header span {
@@ -7485,7 +7485,7 @@ body.home15-funiture-template {
 
 .newsletter-section .btn {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .newsletter-section .btn:hover,
@@ -7524,7 +7524,7 @@ body.home15-funiture-template {
 /* End Social Icon */
 
 .site-footer {
-  background: #031b41;
+  background: black;
 }
 
 .site-footer ul {
@@ -7620,7 +7620,7 @@ body.home15-funiture-template {
   bottom: 50px;
   z-index: 444;
   display: none;
-  background: #031b41;
+  background: black;
 }
 
 #site-scroll i {
@@ -7665,7 +7665,7 @@ body.home15-funiture-template {
 
 .dashboard-list li a {
   border-bottom: 1px solid #ebebeb;
-  color: #031b41;
+  color: black;
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -7676,7 +7676,7 @@ body.home15-funiture-template {
 .dashboard-list li a.active,
 .dashboard-list li a:hover {
   color: #fff;
-  background-color: #031b41;
+  background-color: black;
 }
 
 .dashboard-content {
