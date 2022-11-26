@@ -515,9 +515,9 @@ include('include/config.php');
 
                 <!--Parallax Section-->
                 <div class="section" style="padding-bottom: 0px;">
-                    <div class="hero--large hero__overlay bg-size">
-                        <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg"
-                            alt="K2 Comfortline Knee Orthosis" />
+                    <div class="hero--large hero__overlay bg-size" style="background:black;">
+                        <!-- <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.jpg"
+                            alt="K2 Comfortline Knee Orthosis" /> -->
                         <div class="hero__inner">
                             <div class="container" style="display: flex;">
                                 <div class="wrap-text left text-small font-bold head">
