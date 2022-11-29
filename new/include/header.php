@@ -1,7 +1,7 @@
         <!--Top Header-->
         <?php
         $page= substr($_SERVER['SCRIPT_NAME'],STRRPOS($_SERVER['SCRIPT_NAME'],"/")+1);
-        //include("currencysession.php");
+        include("currencysession.php");
         ?>
         <div class="top-header">
             <style>
