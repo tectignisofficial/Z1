@@ -80,16 +80,17 @@ if(isset($_POST['doneAddress'])){
         <!--Body Content-->
         <div id="page-content">
             <!--Page Title-->
-            <div class="page section-header text-center">
+            <div class="page section-header text-center mb-0">
                 <div class="page-title">
-                    <div class="wrapper">
+                    <div class="wrapper headinghead">
                         <h1 class="page-width">Checkout</h1>
+                        <p><a href="index.php">Home</a> / <span>Checkout</span></p>
                     </div>
                 </div>
             </div>
             <!--End Page Title-->
 
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
                         <div class="customer-box customer-coupon mb-2">

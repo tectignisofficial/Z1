@@ -99,14 +99,18 @@ if(isset($_POST['checkout'])){
     <!--Body Content-->
     <div id="page-content">
     	<!--Page Title-->
-    	<div class="page section-header text-center">
-			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Your cart</h1></div>
-      		</div>
-		</div>
+
+        <div class="page section-header text-center mb-0">
+                <div class="page-title">
+                    <div class="wrapper headinghead">
+                        <h1 class="page-width">Your cart</h1>
+                        <p><a href="index.php">Home</a> / <span>Your cart</span></p>
+                    </div>
+                </div>
+            </div>
         <!--End Page Title-->
         
-        <div class="container">
+        <div class="container mt-5">
             <?php
             if(isset($_SESSION['shopping_cart'])){
           

@@ -34,7 +34,10 @@ $sql=mysqli_query($conn,"select url from video");
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Videos</h1></div>
+                <div class="wrapper headinghead">
+                        <h1 class="page-width">Videos</h1>
+                        <p><a href="index.php">Home</a> / <span>Videos</span></p>
+                    </div>
       		</div>
 		</div>
         <!--End Page Title-->

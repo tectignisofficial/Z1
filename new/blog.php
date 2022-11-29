@@ -43,12 +43,12 @@ include("include/config.php");
                 </div>
             </div>
             <!--End Page Title-->
-            <div class="bredcrumbWrap">
+            <!-- <div class="bredcrumbWrap">
                 <div class="container breadcrumbs">
                     <a href="index.html" title="Back to the home page">Home</a><span
                         aria-hidden="true">›</span><span>Blogs</span>
                 </div>
-            </div>
+            </div> -->
 
             <!--End Sidebar-->
             <!--Main Content-->
@@ -57,7 +57,7 @@ include("include/config.php");
               
 
                     <!--Main Content-->
-                    <div class="container">
+                    <div class="container mt-5">
                         <div class="row">
                             <!--Main Content-->
                             <?php 

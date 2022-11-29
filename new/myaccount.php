@@ -89,16 +89,17 @@ if(isset($_POST["changepassword"])){
         <!--Body Content-->
         <div id="page-content">
             <!--Page Title-->
-            <div class="page section-header text-center">
+            <div class="page section-header text-center mb-0">
                 <div class="page-title">
-                    <div class="wrapper">
+                    <div class="wrapper headinghead">
                         <h1 class="page-width">My Account</h1>
+                        <p><a href="index.php">Home</a> / <span>My Account</span></p>
                     </div>
                 </div>
             </div>
             <!--End Page Title-->
 
-            <div class="container">
+            <div class="container mt-5">
                 <div class="dashboard-upper-info">
                     <div class="row align-items-center no-gutters">
                         <div class="col-xl-3 col-lg-3 col-md-12">

@@ -29,14 +29,16 @@ include('include/config.php');
     
     <!--Body Content-->
     <div id="page-content">
-    	<!--Collection Banner-->
-    	<div class="collection-header">
-			<div class="collection-hero">
-        		<div class="collection-hero__image"><img class="blur-up lazyload" data-src="assets/images/z1kneebrace.jpg" src="assets/images/z1kneebrace.jpg" alt="Women" title="Women" /></div>
-        		<div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Shop Now</h1></div>
+    	<!--Page Title-->
+    	<div class="page section-header text-center">
+			<div class="page-title">
+                <div class="wrapper headinghead">
+                        <h1 class="page-width">Shop Now</h1>
+                        <p><a href="index.php">Home</a> / <span>Shop Now</span></p>
+                    </div>
       		</div>
 		</div>
-        <!--End Collection Banner-->
+        <!--End Page Title-->
         
         <div class="container">
         	<div class="row">

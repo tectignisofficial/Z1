@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Contact Us</h1></div>
+        		<div class="wrapper"><h1 class="page-width" style="padding:25px 0">Contact Us</h1></div>
       		</div>
 		</div>
         <!--End Page Title-->
