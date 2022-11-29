@@ -136,23 +136,21 @@
                                 <li class="lvl1 parent megamenu " ><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>">Home <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="about-us.php">About us <i
-                                            class="anm anm-angle-down-l"><?= $page == 'about-us.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="about-us.php" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="contact-us.php">Contact us <i
-                                            class="anm anm-angle-down-l"><?= $page == 'contact-us.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="contact-us.php" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="blog.php">Blogs <i
-                                            class="anm anm-angle-down-l"><?= $page == 'blog.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="blog.php" class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="reviews.php">Reviews <i
-                                            class="anm anm-angle-down-l"><?= $page == 'reviews.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="reviews.php" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="videos.php">Videos <i
-                                            class="anm anm-angle-down-l"><?= $page == 'video.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="videos.php" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="shop.php">Shop Now! <i
-                                            class="anm anm-angle-down-l"><?= $page == 'shop.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu"><a href="shop.php" class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i class="anm anm-angle-down-l"></i></a>
                                 </li>
                             </ul>
                         </nav>
