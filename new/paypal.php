@@ -18,7 +18,7 @@ define('PAYPAL_ID', 'sb-vbt0e17808320@business.example.com');
 define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
  
 define('PAYPAL_RETURN_URL', 'http://localhost:8000/Z1/success.php'); 
-define('PAYPAL_CANCEL_URL', 'http://localhost:8000/Z1/cancel.php'); 
+define('PAYPAL_CANCEL_URL', 'http://localhost:8000/Z1/index.php'); 
 define('PAYPAL_CURRENCY', $_SESSION['myselect']); 
  
 // Change not required 
@@ -55,15 +55,16 @@ define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cg
         <div id="page-content">
             <!--Page Title-->
             <div class="page section-header text-center">
-                <div class="page-title">
-                    <div class="wrapper">
+			<div class="page-title">
+                <div class="wrapper headinghead">
                         <h1 class="page-width">Review Order</h1>
+                        <p><a href="index.php">Home</a> / <span>Review Order</span></p>
                     </div>
-                </div>
-            </div>
+      		</div>
+		</div>
             <!--End Page Title-->
 
-            <div class="container">
+            <div class="container mt-5">
 
                 <div class="row billing-fields">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 sm-margin-30px-bottom">
