@@ -7709,3 +7709,7 @@ body.home15-funiture-template {
 .dashboard-content .address .view:hover {
   text-decoration: underline;
 }
+body{
+  /* background:black !important; */
+  color:white !important;
+}

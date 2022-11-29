@@ -1,0 +1,41 @@
+.uc_clean_countdown * {
+	margin: 0;
+	padding: 0;
+}
+.uc_clean_countdown {
+	box-sizing: border-box;
+	line-height: 1.7;
+	padding: 0 15px;
+	margin: 0 auto;
+	width: 100%;
+	color: #fff;
+	overflow:hidden;
+	max-width:800px;
+}
+.uc_clean_countdown .uc_countdown_content {
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+.uc_clean_countdown .uc_countdown_content .uc_countdown_section {
+	display:block;
+	margin: 0 0px;
+	float:left;
+	width:25%;
+}
+.uc_clean_countdown .uc_countdown_content .uc_countdown_section span.uc_countdown_amount {
+	display: block;
+	text-align: center;
+	line-height: 1em;
+	padding: 21px 0 12px;
+}
+.uc_clean_countdown .uc_countdown_content .uc_countdown_section span.uc_countdown_period {
+	clear: both;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 4px;
+}
+
+
+

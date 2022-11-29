@@ -1,0 +1,42 @@
+.blox-top-small-round-icon-box * { 
+	margin: 0; 
+	padding: 0; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+.blox-top-small-round-icon-box{
+	font-family: inherit;
+	padding:30px 30px 30px 30px;
+}
+
+.blox-top-small-round-icon-box .blox-top-small-round-icon-box-icon{
+	color:#ffffff;
+	font-size:28px;
+	margin:0px 0 18px 0;
+	width:62px;
+	height:62px;
+	background-color: #2ECC71;
+	position:relative;
+	border-radius:100%;
+	}
+.blox-top-small-round-icon-box .blox-top-small-round-icon-box-icon i{
+	position:absolute;
+	top:50%;
+	bottom:50%;
+	left:50%;
+	right:50%;
+	margin:-14px;
+	} 	
+	
+.blox-top-small-round-icon-box .blox-top-small-round-icon-box-heading{
+	color:#000000;
+	font-size:24px;
+	line-height:33px;
+	margin:0 0 14px 0;
+	}
+.blox-top-small-round-icon-box .blox-top-small-round-icon-box-content{
+	font-size:15px;
+	line-height:24px;
+	color: #9B9B9B;
+	}
