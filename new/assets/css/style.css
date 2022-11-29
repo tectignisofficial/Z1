@@ -4703,10 +4703,10 @@ table {
 }
 
 .page.section-header h1 {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   margin: 0;
   color: black;
-  /* padding: 35px 0; */
+  padding: 25px 0;
   font-size: 18px;
 }
 
@@ -7719,26 +7719,11 @@ body{
 }
 .page-title .headinghead{
   background-color: #0c0101;
-  padding:60px;
 }
 .page-title .headinghead>h1{
   color:white;
-  font-size:68px;
+  padding-bottom: 5px;
 }
 .page-title .headinghead>p{
-  color: whitesmoke;
-}
-.page-title .headinghead>p>a{
-  padding-top:25px;
-  color: whitesmoke;
-}
-@media only screen and (max-width:778px) {
-  .page-title .headinghead>h1{
-    color:white;
-    font-size:21px;
-  }
-  .page-title .headinghead{
-    background-color: #0c0101;
-    padding:15px;
-  }
+  padding-bottom:25px;
 }
