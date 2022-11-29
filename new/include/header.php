@@ -95,7 +95,6 @@
                         <ul class="customer-links list-inline">
                             <?php
                         if(!isset($_SESSION['customerid'])){
-                            echo $_SESSION['customerid'];
                         ?>
                             <li><a href="login.php">Login</a></li>
                             <li><a href="register.php">Create Account</a></li>
