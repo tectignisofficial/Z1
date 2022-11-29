@@ -1,3 +1,7 @@
+<?php 
+session_start();
+include('include/config.php');
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
