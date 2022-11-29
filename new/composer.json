@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mailin-api/mailin-api-php": "^1.0"
+    }
+}

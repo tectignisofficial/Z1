@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('include/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 	
@@ -863,11 +867,12 @@
 </style>
 	</head>
 	<body>
-<?php
+		<div class='uc-page-preview-wrapper'>
+    
+	<div id="uc_grid_1_40497" class="uc-grid-front">
+  <?php
 include('include/header.php');
 ?>
-		<div class='uc-page-preview-wrapper'>
-	<div id="uc_grid_1_40497" class="uc-grid-front">
 		<div id="uc_grid_1_40497_row_1" class="uc-grid-row" >
 <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'><!-- start Css Animated Squares Background -->
 
@@ -889,12 +894,12 @@ include('include/header.php');
 			<div id="uc_grid_1_40497_row_1_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-right:80px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_1" class='uc-grid-col-addon'  style="padding-top:70px;padding-bottom:50px;"><!-- start Title -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-13503093002" style="font-weight:Bold;font-size:68px;line-height:1em;color:#ffffff;">Don't miss this amazing deal!</span>
+<span  class="uc-style-13503093002" style="font-weight:Bold;font-size:68px;line-height:1em;color:#ffffff;">Don't Suffer, get a best friend!</span>
 </div>
 			<!-- end Title --></div><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_2" class='uc-grid-col-addon'  style="padding-left:30px;margin-top:0px;margin-bottom:50px;border-left:1px solid #ed1c24;"><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-24529420529" style="font-size:16px;line-height:1.7em;color:#a7a7a7;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum. Nunc blandit rhoncus consequat. Donec sodales enim et felis commodo.</span>
+<span  class="uc-style-24529420529" style="font-size:16px;line-height:1.7em;color:#a7a7a7;">The A-Z Comfort with Z1 Braces.</span>
 </div>
 			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_3" class='uc-grid-col-addon'  ><!-- start Button Group -->
 
@@ -907,7 +912,7 @@ include('include/header.php');
 			<div id="uc_grid_1_40497_row_1_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_1_container_1_col_2_addon_1" class='uc-grid-col-addon'  ><!-- start Image -->
 
 			<div style="text-align:center;font-size:0;">
-  <img src="uploads/images/blox_page_builder/headphones.png" alt="" title="" style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
+  <img src="img/products/product1.png" alt="" title="" style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
 </div>
 			<!-- end Image --></div></div></div>
 <div class="uc-col-clear"></div>
@@ -1150,10 +1155,10 @@ include('include/header.php');
 		</div>
 		<div id="uc_grid_1_40497_row_5" class="uc-grid-row" >
 			<div id='uc_grid_1_40497_row_5_container_1' class="uc-grid-row-container" style="background-color:#ffffff;">
-			<div id="uc_grid_1_40497_row_5_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-left:85px;padding-right:85px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class='uc-grid-col-addon'  style="padding-top:200px;"><!-- start Title -->
+			<div id="uc_grid_1_40497_row_5_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-left:85px;padding-right:85px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class='uc-grid-col-addon'  style="padding-top:100px;"><!-- start Title -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-197140885776" style="font-weight:Bold;font-size:36px;line-height:1.2em;">Experience your music like never before.</span>
+<span  class="uc-style-197140885776" style="font-weight:Bold;font-size:36px;line-height:1.2em;">CUSTOMIZED KNEE BRACES</span>
 </div>
 			<!-- end Title --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;"><!-- start Line Seperator -->
 
@@ -1163,66 +1168,35 @@ include('include/header.php');
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_3" class='uc-grid-col-addon'  style="margin-top:30px;padding-bottom:0px;padding-left:30px;margin-bottom:30px;border-left:1px solid lightgray;"><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit. Phasellus a odio at nisl ullamcorper elementum sollicitudin eu urna. Pellentesque venenatis ligula nisl, eu molestie tellus faucibus ac. </span>
+<span  class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">Customization is the key. In order to meet customer needs and satisfaction, customizing our healthcare products is necessary. One Size doesn’t fit all. Neither you nor us. Each and every customised Knee Braces are designed in such a unique way to fit you perfectly. Our custom Knee Braces are built to keep up with every move you make. We custom make your braces with durable materials and quality craftsmanship with extra protection and that proper support and comfort to ensure a speedy recovery.
+Now, Rehab, Train or Play but with confidence.</span>
 </div>
 			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_4" class='uc-grid-col-addon'  style="margin-top:0px;"><!-- start Button -->
 
 			<div style="text-align:left;">
-<a href="#" id="uc_solid_rounded_button358706" target="_blank"><span  class="uc-style-219468315071" style="font-size:12px;">BUY NOW</span></a>
+<a href="shop.php" id="uc_solid_rounded_button358706"><span  class="uc-style-219468315071" style="font-size:12px;">SHOP NOW</span></a>
 </div>
 			<!-- end Button --></div></div></div>
 			<div id="uc_grid_1_40497_row_5_container_1_col_2" class="uc-grid-col uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_1" class='uc-grid-col-addon'  style="margin-top:-100px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
 			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
-        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
-        	<i class="fa fa-battery-4"></i>
-        </div>
-        <div class="blox-top-small-round-icon-box-heading">
-        	<span  class="uc-style-223243352740" style="font-weight:Bold;">40-Hour Battery</span>
-        </div>
-        <div class="blox-top-small-round-icon-box-content">
-        	<span  class="uc-style-236494201147" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#000000;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
-        </div>
+      <img src="img/1A3A6535_z1.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
 			<div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;padding:50px;">
-        <div class="blox-top-small-round-icon-box-icon" style="background-color:#ed1c24;border-radius:0px;">
-        	<i class="fa fa-wifi"></i>
-        </div>
-        <div class="blox-top-small-round-icon-box-heading">
-        	<span  class="uc-style-247662789113" style="font-weight:Bold;color:#ffffff;">Wireless</span>
-        </div>
-        <div class="blox-top-small-round-icon-box-content">
-        	<span  class="uc-style-255497238888" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#ffffff;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
-        </div>
+      <img src="img/k4-ld-2_.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div></div></div>
 			<div id="uc_grid_1_40497_row_5_container_1_col_3" class="uc-grid-col uc-col-last uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_1" class='uc-grid-col-addon'  style="margin-top:-50px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
 			<div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;padding:50px;">
-        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
-        	<i class="fa fa-volume-up"></i>
-        </div>
-        <div class="blox-top-small-round-icon-box-heading">
-        	<span  class="uc-style-262312007874" style="font-weight:Bold;color:#ffffff;">Noise Canceling</span>
-        </div>
-        <div class="blox-top-small-round-icon-box-content">
-        	<span  class="uc-style-271420644193" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#ffffff;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
-        </div>
+      <img src="assets/images/z1kneebanner.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
 			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
-        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
-        	<i class="fa fa-check"></i>
-        </div>
-        <div class="blox-top-small-round-icon-box-heading">
-        	<span  class="uc-style-289653737068" style="font-weight:Bold;">Your Music Experience</span>
-        </div>
-        <div class="blox-top-small-round-icon-box-content">
-        	<span  class="uc-style-292790664717" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#000000;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
-        </div>
+      <img src="img/1A3A6439.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div></div></div>
 <div class="uc-col-clear"></div>
@@ -1356,16 +1330,17 @@ include('include/header.php');
 			<div id='uc_grid_1_40497_row_8_container_1' class="uc-grid-row-container" >
 			<div id="uc_grid_1_40497_row_8_container_1_col_1" class="uc-grid-col uc-col-first uc-col-last uc-colsize-1_1"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_8_container_1_col_1_addon_1" class='uc-grid-col-addon'  ><!-- start Paragraph -->
 
-			<div style="text-align:center;padding-top:0px;padding-bottom:0px;">
+			<!-- <div style="text-align:center;padding-top:0px;padding-bottom:0px;">
 <span  class="uc-style-345114853178" style="color:#a7a7a7;">This page was made 100% by Blox Page Builder | Copyright © Blox Themes
 </span>
-</div>
+</div> -->
 			<!-- end Paragraph --></div></div></div>
 <div class="uc-col-clear"></div>
 			</div>
 		</div>
 	</div>
 
+  <?php include('include/footer.php'); ?>
 		</div>
 
 		<script type="text/javascript" src="blox-plugin/admin/provider/assets/jquery-1.11.1.minf582.js?ucver=1.6.48"></script>
@@ -1386,7 +1361,7 @@ jQuery('#uc_clean_countdown415742').countdownUC('2020/12/31 11:21:00', function(
 });
 </script>
             <!-- Including Jquery -->
-            <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+            <!-- <script src="assets/js/vendor/jquery-3.3.1.min.js"></script> -->
             <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
             <script src="assets/js/vendor/jquery.cookie.js"></script>
             <script src="assets/js/vendor/wow.min.js"></script>
@@ -1464,5 +1439,4 @@ jQuery('#uc_clean_countdown415742').countdownUC('2020/12/31 11:21:00', function(
 
 	</body>
 
-<!-- Mirrored from bloxthemes.net/landing-pages/black-friday-simple-landing-page by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Nov 2022 10:02:32 GMT -->
 </html>

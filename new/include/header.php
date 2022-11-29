@@ -1,6 +1,7 @@
         <!--Top Header-->
         <?php
-        include("currencysession.php");
+        $page= substr($_SERVER['SCRIPT_NAME'],STRRPOS($_SERVER['SCRIPT_NAME'],"/")+1);
+        //include("currencysession.php");
         ?>
         <div class="top-header">
             <style>
@@ -94,6 +95,7 @@
                         <ul class="customer-links list-inline">
                             <?php
                         if(!isset($_SESSION['customerid'])){
+                            echo $_SESSION['customerid'];
                         ?>
                             <li><a href="login.php">Login</a></li>
                             <li><a href="register.php">Create Account</a></li>
@@ -116,6 +118,7 @@
                         <a href="index.php">
                             <img src="assets/images/logo.png" alt="Z1" title="Z1" />
                         </a>
+                        
                     </div>
                     <!--End Desktop Logo-->
                     <div class="col-2 col-sm-3 col-md-3 col-lg-8">
@@ -130,8 +133,8 @@
                         <nav class="grid__item" id="AccessibleNav">
                             <!-- for mobile -->
                             <ul id="siteNav" class="site-nav medium center hidearrow">
-                                <li class="lvl1 parent megamenu"><a href="index.php">Home <i
-                                            class="anm anm-angle-down-l"><?= $page == 'index.php' ? 'active':'' ?></i></a>
+                                <li class="lvl1 parent megamenu " ><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>">Home <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
                                 <li class="lvl1 parent megamenu"><a href="about-us.php">About us <i
                                             class="anm anm-angle-down-l"><?= $page == 'about-us.php' ? 'active':'' ?></i></a>
@@ -148,7 +151,7 @@
                                 <li class="lvl1 parent megamenu"><a href="videos.php">Videos <i
                                             class="anm anm-angle-down-l"><?= $page == 'video.php' ? 'active':'' ?></i></a>
                                 </li>
-                                <li class="lvl1"><a href="shop.php"><b>Shop Now!</b> <i
+                                <li class="lvl1 parent megamenu"><a href="shop.php">Shop Now! <i
                                             class="anm anm-angle-down-l"><?= $page == 'shop.php' ? 'active':'' ?></i></a>
                                 </li>
                             </ul>

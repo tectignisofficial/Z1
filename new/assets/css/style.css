@@ -7711,5 +7711,19 @@ body.home15-funiture-template {
 }
 body{
   /* background:black !important; */
-  color:white !important;
+  /* color:white !important; */
+}
+.lvl1 .active{
+  color: #d8691a !important;
+  font-weight: bold !important;
+}
+.page-title .headinghead{
+  background-color: #0c0101;
+}
+.page-title .headinghead>h1{
+  color:white;
+  padding-bottom: 5px;
+}
+.page-title .headinghead>p{
+  padding-bottom:25px;
 }
