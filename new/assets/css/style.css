@@ -1,73 +1,4 @@
-/*********************************************************************************
-	Template Name: Belle Multipurpose eCommerce Bootstrap4 Template
-	Description: A perfect template to build beautiful and unique Fashion websites. It comes with nice and clean design.
-	Version: 1.0
-**********************************************************************************/
 
-/* --------------------------------------------------
-Table of Content:
-
-1.  Google Fonts
-2.  Basic Styles
-3.  Typography
-4.  Utilities
-5.  Container
-6.  Button
-7.  Input Placeholder
-8.  Pre Loader
-9.  Header Style
-10. Homepage Slideshow
-11. Section
-12. Products With Tab Slider
-13. Product Grid
-14. Collection Box Slider
-15. Brands Logo Slider
-16. Latest Blog Post
-17. Store Feature
-18. Shop Pages
-19. Product Listview
-20. Bredcrumb
-21. Product Detail
-22. Categories List
-23. Pages
-24. Cart Pages
-25. Quick View
-26. Promotional Top Popup
-27. Image Banners
-28. Homepages Demo
-	28.1 Home 2 - Default
-	28.2 Home 3 - Boxed
-	28.3 Home 4 - Fulwidth
-	28.4 Home 5 - Cosmetic
-	28.5 Home 6 - Modern
-	28.6 Home 7 - Shoes
-	28.7 Home 8 - Jewellery
-	28.8 Home 9 - Parallax
-	28.9 Home 10 - Minimal
-	28.10 Home 11 - Grid
-	28.11 Home 12 - Category
-	28.12 Home 13 - Autoparts
-	28.13 Home 14 - Bags
-	28.14 Home 15 - Furniture
-29. Testimonial Slider
-30. Instagram Feed
-31. Hero Banners
-32. Newsletter Cookie Popup
-33. Footer
-=======================================================================*/
-
-
-/*======================================================================
-  1. Google Fonts
-========================================================================*/
-@import url('http://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&amp;display=swap');
-@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;display=swap');
-@import url('http://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap');
-
-
-/*======================================================================
-  2. Basic Styles
-========================================================================*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4703,10 +4634,10 @@ table {
 }
 
 .page.section-header h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 0;
   color: black;
-  padding: 25px 0;
+  /* padding: 35px 0; */
   font-size: 18px;
 }
 
@@ -7719,11 +7650,26 @@ body{
 }
 .page-title .headinghead{
   background-color: #0c0101;
+  padding:60px;
 }
 .page-title .headinghead>h1{
   color:white;
-  padding-bottom: 5px;
+  font-size:68px;
 }
 .page-title .headinghead>p{
-  padding-bottom:25px;
+  color: whitesmoke;
+}
+.page-title .headinghead>p>a{
+  padding-top:25px;
+  color: whitesmoke;
+}
+@media only screen and (max-width:778px) {
+  .page-title .headinghead>h1{
+    color:white;
+    font-size:21px;
+  }
+  .page-title .headinghead{
+    background-color: #0c0101;
+    padding:20px;
+  }
 }
