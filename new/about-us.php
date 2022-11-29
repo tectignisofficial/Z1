@@ -34,8 +34,9 @@ session_start();
             <!--Page Title-->
             <div class="page section-header text-center">
                 <div class="page-title">
-                    <div class="wrapper">
+                    <div class="wrapper headinghead">
                         <h1 class="page-width">About Us</h1>
+                        <p><a href="index.php">Home</a> / <span>About Us</span></p>
                     </div>
                 </div>
             </div>

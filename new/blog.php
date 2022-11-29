@@ -36,8 +36,9 @@ include("include/config.php");
             <!--Page Title-->
             <div class="page section-header text-center mb-0">
                 <div class="page-title">
-                    <div class="wrapper">
-                        <h1 class="page-width">Blogs</h1>
+                    <div class="wrapper headinghead">
+                        <h1 class="page-width">Blog</h1>
+                        <p><a href="index.php">Home</a> / <span>Blog</span></p>
                     </div>
                 </div>
             </div>

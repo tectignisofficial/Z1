@@ -38,8 +38,9 @@ $id=$_GET['eid'];
             <!--Page Title-->
             <div class="page section-header text-center mb-0">
                 <div class="page-title">
-                    <div class="wrapper">
-                        <h1 class="page-width">Blogs</h1>
+                    <div class="wrapper headinghead">
+                        <h1 class="page-width">Blog Details</h1>
+                        <p><a href="index.php">Home</a> / <span>Blog Details</span></p>
                     </div>
                 </div>
             </div>
