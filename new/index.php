@@ -344,7 +344,7 @@ include('include/config.php');
 	padding-top:220px;
 	padding-bottom:220px;
 	background-color:#000000;
-	background-image:url('uploads/images/blox_page_builder/girl.jpg');
+	background-image:url('uploads/images/blox_page_builder/z1_customized_knee_braces.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -965,7 +965,7 @@ include('include/header.php');
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_2_container_1_col_1_addon_4" class='uc-grid-col-addon'  ><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-65759147329" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit.</span>
+<span  class="uc-style-65759147329" style="font-size:14px;line-height:1.7em;">Powerful and firm stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</span>
 </div>
 			<!-- end Paragraph --></div></div></div>
 			<div id="uc_grid_1_40497_row_2_container_1_col_2" class="uc-grid-col uc-colsize-1_4" style="padding-left:30px;padding-right:30px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_2_container_1_col_2_addon_1" class='uc-grid-col-addon'  style="padding-bottom:20px;"><!-- start SVG Shapes -->
@@ -1002,7 +1002,7 @@ include('include/header.php');
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_2_container_1_col_2_addon_4" class='uc-grid-col-addon'  ><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-88440486866" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit.</span>
+<span  class="uc-style-88440486866" style="font-size:14px;line-height:1.7em;">Silicon coated neoprene frame liners and foam strap pads preventing orthosis from slipping down.</span>
 </div>
 			<!-- end Paragraph --></div></div></div>
 			<div id="uc_grid_1_40497_row_2_container_1_col_3" class="uc-grid-col uc-colsize-1_4" style="padding-left:30px;padding-right:30px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_2_container_1_col_3_addon_1" class='uc-grid-col-addon'  style="padding-bottom:20px;"><!-- start SVG Shapes -->
@@ -1038,7 +1038,8 @@ include('include/header.php');
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_2_container_1_col_3_addon_4" class='uc-grid-col-addon'  ><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-107414141132" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit.</span>
+<span  class="uc-style-107414141132" style="font-size:14px;line-height:1.7em;">Ultra-lightweight, therefore, can be worn under clothes easily.
+</span>
 </div>
 			<!-- end Paragraph --></div></div></div>
 			<div id="uc_grid_1_40497_row_2_container_1_col_4" class="uc-grid-col uc-col-last uc-colsize-1_4" style="padding-left:30px;padding-right:30px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_2_container_1_col_4_addon_1" class='uc-grid-col-addon'  style="padding-bottom:20px;"><!-- start SVG Shapes -->
@@ -1080,18 +1081,20 @@ include('include/header.php');
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_2_container_1_col_4_addon_4" class='uc-grid-col-addon'  ><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-120364567681" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit.</span>
+<span  class="uc-style-120364567681" style="font-size:14px;line-height:1.7em;">Flexible in the perfect areas to implement a flawless fit on the leg.</span>
 </div>
 			<!-- end Paragraph --></div></div></div>
 <div class="uc-col-clear"></div>
 			</div>
 		</div>
-		<div id="uc_grid_1_40497_row_3" class="uc-grid-row" >
+		<div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
 			<div id='uc_grid_1_40497_row_3_container_1' class="uc-grid-row-container" style="background-color:#ffffff;">
 			<div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-right:85px;padding-left:85px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class='uc-grid-col-addon'  style="padding-top:100px;"><!-- start Title -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">Anything less would<br>be too much.</span>
+<span  class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K2 Comfortline Knee Orthosis
+</span>
+
 </div>
 			<!-- end Title --></div><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_2" class='uc-grid-col-addon'  ><!-- start Line Seperator -->
 
@@ -1099,11 +1102,13 @@ include('include/header.php');
   <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;"></div>
 </div>
 			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_3" class='uc-grid-col-addon'  style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-bottom:30px;border-left:1px solid lightgray;"><!-- start Paragraph -->
-
+      <b style="font-size: 14px;">The Effective Solution for the Sportsperson in you!</b>
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit. Phasellus a odio at nisl ullamcorper elementum sollicitudin eu urna. Pellentesque venenatis ligula nisl, eu molestie tellus faucibus ac. </span>
+      
+<span  class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K2 Comfortline is an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete stability and support for efficient aid and relief from sports injuries, ligament injuries and mild osteoarthritis. </span>
 </div>
-			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class='uc-grid-col-addon'  ><!-- start Button -->
+			<!-- end Paragraph --></div>
+      <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class='uc-grid-col-addon'  ><!-- start Button -->
 
 			<div style="text-align:left;">
 <a href="http://www.google.com/" id="uc_solid_rounded_button254538" target="_blank"><span  class="uc-style-154197001924" style="font-size:12px;">BUY NOW</span></a>
@@ -1112,7 +1117,7 @@ include('include/header.php');
 			<div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2" style="padding-right:0px;padding-left:0px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class='uc-grid-col-addon'  ><!-- start Image -->
 
 			<div style="text-align:center;font-size:0;">
-  <img src="uploads/images/blox_page_builder/man1.jpg" alt="" title="" style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
+  <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.jpg" alt="" title="" style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
 </div>
 			<!-- end Image --></div></div></div>
 <div class="uc-col-clear"></div>
@@ -1128,7 +1133,7 @@ include('include/header.php');
 			<div id="uc_grid_1_40497_row_4_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2" style="padding-left:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'  style="margin-bottom:30px;"><!-- start Play Button -->
 
 			<div style="text-align:left;" id="uc_blox_play_button286402">  
-<a href="http://www.youtube.com/watch?v=XSGBVzeBUbk" data-lity>
+<a href="https://www.youtube.com/watch?v=h0oStRoxUqw" data-lity>
   <span>
   <i class="fa fa-play"> </i>
   </span>  
@@ -1137,12 +1142,12 @@ include('include/header.php');
 			<!-- end Play Button --></div><div id="uc_grid_1_40497_row_4_container_1_col_2_addon_2" class='uc-grid-col-addon'  ><!-- start Title -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-169252194065" style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Take your sound to<br>the next level</span>
+<span  class="uc-style-169252194065" style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">CUSTOMIZED KNEE BRACES</span>
 </div>
 			<!-- end Title --></div><div id="uc_grid_1_40497_row_4_container_1_col_2_addon_3" class='uc-grid-col-addon'  style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-right:100px;margin-bottom:30px;border-left:1px solid #ff5757;"><!-- start Paragraph -->
 
 			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-172745881977" style="font-size:14px;line-height:1.7em;color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit. Phasellus a odio at nisl ullamcorper elementum sollicitudin eu urna. </span>
+<span  class="uc-style-172745881977" style="font-size:14px;line-height:1.7em;color:#ffffff;">Customization is the key. In order to meet customer needs and satisfaction, customizing our healthcare products is necessary. One Size doesn’t fit all. Neither you nor us. Each and every customised Knee Braces are designed in such a unique way to fit you perfectly. Our custom Knee Braces are built to keep up with every move you make. We custom make your braces with durable materials and quality craftsmanship with extra protection and that proper support and comfort to ensure a speedy recovery. Now, Rehab, Train or Play but with confidence.</span>
 </div>
 			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_4_container_1_col_2_addon_4" class='uc-grid-col-addon'  ><!-- start Button -->
 
@@ -1202,143 +1207,61 @@ Now, Rehab, Train or Play but with confidence.</span>
 <div class="uc-col-clear"></div>
 			</div>
 		</div>
-		<div id="uc_grid_1_40497_row_6" class="uc-grid-row" >
-<div class='uc-shape-devider uc-shape-devider-top'></div> 
-			<div id='uc_grid_1_40497_row_6_container_1' class="uc-grid-row-container" >
-			<div id="uc_grid_1_40497_row_6_container_1_col_1" class="uc-grid-col uc-col-first uc-col-last uc-colsize-1_1"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_6_container_1_col_1_addon_1" class='uc-grid-col-addon'  ><!-- start Title -->
 
-			<div style="text-align:center;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-309168235200" style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Time is running out<br>Don't miss out</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
+			<div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
+			<div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-right:85px;padding-left:85px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class="uc-grid-col-addon" style="padding-top:100px;"><!-- start Title -->
+
+			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+<span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K4 OsteoAlign Knee Orthosis</span>
+
 </div>
-			<!-- end Title --></div><div id="uc_grid_1_40497_row_6_container_1_col_1_addon_2" class='uc-grid-col-addon'  ><!-- start Clean Countdown -->
+			<!-- end Title --></div><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_2" class="uc-grid-col-addon"><!-- start Line Seperator -->
 
-			<div class="uc_clean_countdown">
-<div id="uc_clean_countdown415742" class="uc_countdown_content" style="color:#ffffff;"></div>
-</div>
-			<!-- end Clean Countdown --></div><div id="uc_grid_1_40497_row_6_container_1_col_1_addon_3" class='uc-grid-col-addon'  ><!-- start Button -->
-
-			<div style="text-align:center;">
-<a href="#" id="uc_solid_rounded_button427110" target="_blank"><span  class="uc-style-319105852020" style="font-size:12px;">BUY NOW</span></a>
-</div>
-			<!-- end Button --></div></div></div>
-<div class="uc-col-clear"></div>
-			</div>
-		</div>
-		<div id="uc_grid_1_40497_row_7" class="uc-grid-row" >
-			<div id='uc_grid_1_40497_row_7_container_1' class="uc-grid-row-container" >
-			<div id="uc_grid_1_40497_row_7_container_1_col_1" class="uc-grid-col uc-col-first uc-col-last uc-colsize-1_1"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_7_container_1_col_1_addon_1" class='uc-grid-col-addon'  style="padding-bottom:10px;margin-top:30px;border-left:1px solid lightgray;"><!-- start Paragraph -->
-
-			<div style="text-align:center;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-326959301317" style="font-size:14px;line-height:1.7em;">View The Deal Pricing Plans</span>
-</div>
-			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_7_container_1_col_1_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;"><!-- start Title -->
-
-			<div style="text-align:center;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-338287493245" style="font-weight:Bold;font-size:36px;line-height:1.2em;">The Best Deal Ever</span>
-</div>
-			<!-- end Title --></div><div id="uc_grid_1_40497_row_7_container_1_col_1_addon_3" class='uc-grid-col-addon'  style="padding-bottom:50px;"><!-- start Line Seperator -->
-
-			<div style="text-align:center;">
+			<div style="text-align:left;">
   <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;"></div>
 </div>
-			<!-- end Line Seperator --></div></div></div>
-<div class="uc-col-clear"></div>
-			</div>
-			<div id='uc_grid_1_40497_row_7_container_2' class="uc-grid-row-container" >
-			<div id="uc_grid_1_40497_row_7_container_2_col_1" class="uc-grid-col uc-col-first uc-colsize-1_3"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_7_container_2_col_1_addon_1" class='uc-grid-col-addon'  ><!-- start Wave Pricing Table -->
-
-			<div id="uc_blox_wave_pricing_table462089">
-<div class='pricing-item' style="background-color:white;">
-      <div class='pricing-deco'>
-        <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-          <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-          <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-        </svg>
-        <div class='pricing-price'><span class='pricing-currency'>$</span>29
-          <span class='pricing-period'>/ mo</span>
-        </div>
-        <h3 class='pricing-title'>Enterprise</h3>
-      </div>
-      <ul class='pricing-feature-list' style="margin-top:-50px;position:relative;z-index:1;">
-        <li class='pricing-feature'>10 GB of space</li>
-<li class='pricing-feature'>Hight Quality</li>
-<li class='pricing-feature'>Customer Support</li>
-
-      </ul>
-      <a class='pricing-action' href="#">Buy Now</a>
-    </div>
+			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_3_container_1_col_1_addon_3" class="uc-grid-col-addon" style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-bottom:30px;border-left:1px solid lightgray;"><!-- start Paragraph -->
+      <b style="font-size: 14px;">The Treatment your Knee needs!</b>
+			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+      
+<span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K4 OsteoAlign Knee Brace is a custom made OA Brace best suited for active patients as it offers a convenient and appropriate fit. It is an effective and non-invasive remedy for patients with mild to moderate osteoarthritis. What sets this offloading orthosis apart from others is that it effectively transfers body weight from thigh to calf without exerting much pressure on the knee joint and thus helps stabilize the knee and prevents further deterioration.</span>
 </div>
-			<!-- end Wave Pricing Table --></div></div></div>
-			<div id="uc_grid_1_40497_row_7_container_2_col_2" class="uc-grid-col uc-colsize-1_3"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_7_container_2_col_2_addon_1" class='uc-grid-col-addon'  ><!-- start Wave Pricing Table -->
+			<!-- end Paragraph --></div>
+      <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon"><!-- start Button -->
 
-			<div id="uc_blox_wave_pricing_table479383">
-<div class='pricing-item' style="background-color:white;">
-      <div class='pricing-deco'>
-        <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-          <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-          <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-        </svg>
-        <div class='pricing-price'><span class='pricing-currency'>$</span>99
-          <span class='pricing-period'>/ mo</span>
-        </div>
-        <h3 class='pricing-title'>Enterprise</h3>
-      </div>
-      <ul class='pricing-feature-list' style="margin-top:-50px;position:relative;z-index:1;">
-        <li class='pricing-feature'>10 GB of space</li>
-<li class='pricing-feature'>Hight Quality</li>
-<li class='pricing-feature'>Customer Support</li>
-
-      </ul>
-      <a class='pricing-action' href="#">Buy Now</a>
-    </div>
+			<div style="text-align:left;">
+<a href="http://www.google.com/" id="uc_solid_rounded_button254538" target="shop.php"><span class="uc-style-154197001924" style="font-size:12px;">BUY NOW</span></a>
 </div>
-			<!-- end Wave Pricing Table --></div></div></div>
-			<div id="uc_grid_1_40497_row_7_container_2_col_3" class="uc-grid-col uc-col-last uc-colsize-1_3"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_7_container_2_col_3_addon_1" class='uc-grid-col-addon'  ><!-- start Wave Pricing Table -->
+			<!-- end Button --></div></div></div>
+			<div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2" style="padding-right:0px;padding-left:0px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon"><!-- start Image -->
 
-			<div id="uc_blox_wave_pricing_table484066">
-<div class='pricing-item' style="background-color:white;">
-      <div class='pricing-deco'>
-        <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-          <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
-          <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
-          <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
-        </svg>
-        <div class='pricing-price'><span class='pricing-currency'>$</span>49
-          <span class='pricing-period'>/ mo</span>
-        </div>
-        <h3 class='pricing-title'>Enterprise</h3>
-      </div>
-      <ul class='pricing-feature-list' style="margin-top:-50px;position:relative;z-index:1;">
-        <li class='pricing-feature'>10 GB of space</li>
-<li class='pricing-feature'>Hight Quality</li>
-<li class='pricing-feature'>Customer Support</li>
-
-      </ul>
-      <a class='pricing-action' href="#">Buy Now</a>
-    </div>
+			<div style="text-align:center;font-size:0;">
+  <img src="uploads/images/blox_page_builder/K4_OsteoAlign_Knee_Orthosis.jpg" alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis" style="max-width:100%; width:100%;border-radius:0px;margin:0;">
 </div>
-			<!-- end Wave Pricing Table --></div></div></div>
+			<!-- end Image --></div></div></div>
 <div class="uc-col-clear"></div>
 			</div>
 		</div>
-		<div id="uc_grid_1_40497_row_8" class="uc-grid-row" >
-			<div id='uc_grid_1_40497_row_8_container_1' class="uc-grid-row-container" >
-			<div id="uc_grid_1_40497_row_8_container_1_col_1" class="uc-grid-col uc-col-first uc-col-last uc-colsize-1_1"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_8_container_1_col_1_addon_1" class='uc-grid-col-addon'  ><!-- start Paragraph -->
-
-			<!-- <div style="text-align:center;padding-top:0px;padding-bottom:0px;">
-<span  class="uc-style-345114853178" style="color:#a7a7a7;">This page was made 100% by Blox Page Builder | Copyright © Blox Themes
-</span>
-</div> -->
-			<!-- end Paragraph --></div></div></div>
-<div class="uc-col-clear"></div>
-			</div>
-		</div>
-	</div>
+		
 
   <?php include('include/footer.php'); ?>
 		</div>
