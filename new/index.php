@@ -17,6 +17,25 @@
 		<link rel="stylesheet" type="text/css" href="blox-plugin/media/assets_libraries/lity/lity.minf582.css?ucver=1.6.48">
 		<link rel="stylesheet" type="text/css" href="blox-plugin/media/assets/blox-top-small-round-icon-box/blox-top-small-round-icon-boxf582.css?ucver=1.6.48">
 		<link rel="stylesheet" type="text/css" href="blox-plugin/media/assets/clean_countdown/clean_countdownf582.css?ucver=1.6.48">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Bootstap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/z1style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 
 
 <style type='text/css'>
@@ -844,7 +863,9 @@
 </style>
 	</head>
 	<body>
-
+<?php
+include('include/header.php');
+?>
 		<div class='uc-page-preview-wrapper'>
 	<div id="uc_grid_1_40497" class="uc-grid-front">
 		<div id="uc_grid_1_40497_row_1" class="uc-grid-row" >
@@ -1364,7 +1385,82 @@ jQuery('#uc_clean_countdown415742').countdownUC('2020/12/31 11:21:00', function(
 });
 });
 </script>
+            <!-- Including Jquery -->
+            <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+            <script src="assets/js/vendor/jquery.cookie.js"></script>
+            <script src="assets/js/vendor/wow.min.js"></script>
+            <!-- Including Javascript -->
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/popper.min.js"></script>
+            <script src="assets/js/lazysizes.js"></script>
+            <script src="assets/js/main.js"></script>
+            <!--For Newsletter Popup-->
+            <script>
+                jQuery(document).ready(function () {
+                    jQuery('.closepopup').on('click', function () {
+                        jQuery('#popup-container').fadeOut();
+                        jQuery('#modalOverly').fadeOut();
+                    });
 
+                    var visits = jQuery.cookie('visits') || 0;
+                    visits++;
+                    jQuery.cookie('visits', visits, {
+                        expires: 1,
+                        path: '/'
+                    });
+                    console.debug(jQuery.cookie('visits'));
+                    if (jQuery.cookie('visits') > 1) {
+                        jQuery('#modalOverly').hide();
+                        jQuery('#popup-container').hide();
+                    } else {
+                        var pageHeight = jQuery(document).height();
+                        jQuery('<div id="modalOverly"></div>').insertBefore('body');
+                        jQuery('#modalOverly').css("height", pageHeight);
+                        jQuery('#popup-container').show();
+                    }
+                    if (jQuery.cookie('noShowWelcome')) {
+                        jQuery('#popup-container').hide();
+                        jQuery('#active-popup').hide();
+                    }
+                });
+
+                jQuery(document).mouseup(function (e) {
+                    var container = jQuery('#popup-container');
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        container.fadeOut();
+                        jQuery('#modalOverly').fadeIn(200);
+                        jQuery('#modalOverly').hide();
+                    }
+                });
+            </script>
+            <script type="text/javascript">
+                function slider(anything) {
+                    document.querySelector(".one").src = anything;
+                }
+
+                let menu = document.querySelector("#menu-icon");
+                let navbar = document.querySelector(".navbar");
+
+                menu.onclick = () => {
+                    menu.classList.toggle("bx-x");
+                    navbar.classList.toggle("open");
+                };
+            </script>
+            <script type="text/javascript">
+                function slider(anything) {
+                    document.querySelector(".one").src = anything;
+                }
+
+                let menu = document.querySelector("#menu-icon");
+                let navbar = document.querySelector(".navbar");
+
+                menu.onclick = () => {
+                    menu.classList.toggle("bx-x");
+                    navbar.classList.toggle("open");
+                };
+            </script>
 
 	</body>
 
