@@ -1179,23 +1179,23 @@ Now, Rehab, Train or Play but with confidence.</span>
 			<!-- end Button --></div></div></div>
 			<div id="uc_grid_1_40497_row_5_container_1_col_2" class="uc-grid-col uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_1" class='uc-grid-col-addon'  style="margin-top:-100px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
-			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
+			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
       <img src="img/1A3A6535_z1.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
-			<div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;padding:50px;">
+			<div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;">
       <img src="img/k4-ld-2_.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div></div></div>
 			<div id="uc_grid_1_40497_row_5_container_1_col_3" class="uc-grid-col uc-col-last uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_1" class='uc-grid-col-addon'  style="margin-top:-50px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
-			<div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;padding:50px;">
+			<div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;">
       <img src="assets/images/z1kneebanner.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_2" class='uc-grid-col-addon'  style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
-			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
+			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
       <img src="img/1A3A6439.jpg" alt="">
     </div>
 			<!-- end Top Small Round Icon Box --></div></div></div>
