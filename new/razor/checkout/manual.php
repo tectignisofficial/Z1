@@ -32,16 +32,17 @@ include('../include/config.php');
                 <!--Body Content-->
         <div id="page-content">
             <!--Page Title-->
-            <div class="page section-header text-center">
+            <div class="page section-header text-center mb-0">
                 <div class="page-title">
-                    <div class="wrapper">
+                    <div class="wrapper headinghead">
                         <h1 class="page-width">Review Order</h1>
+                        <p><a href="index.php">Home</a> / <span>Review Order</span></p>
                     </div>
                 </div>
             </div>
             <!--End Page Title-->
 
-            <div class="container">
+            <div class="container mt-5">
 
                 <div class="row billing-fields">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 sm-margin-30px-bottom">

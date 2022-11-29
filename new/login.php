@@ -60,14 +60,17 @@ if(isset($_POST['login'])){
     <!--Body Content-->
     <div id="page-content">
     	<!--Page Title-->
-    	<div class="page section-header text-center">
-			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Login</h1></div>
-      		</div>
-		</div>
+        <div class="page section-header text-center mb-0">
+                <div class="page-title">
+                    <div class="wrapper headinghead">
+                        <h1 class="page-width">Login</h1>
+                        <p><a href="index.php">Home</a> / <span>Login</span></p>
+                    </div>
+                </div>
+            </div>
         <!--End Page Title-->
         
-        <div class="container">
+        <div class="container mt-5">
         	<div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
                 	<div class="">
