@@ -1,4 +1,6 @@
 <?php 
+session_start();
+include('include/config.php');
 
 if(isset($_POST['submit'])){
     $name=$_POST['name'];
@@ -25,7 +27,7 @@ if(isset($_POST['submit'])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Contact Us &ndash; </title>
+<title>Contact Us &ndash; Belle Multipurpose Bootstrap 4 Template</title>
 <meta name="description" content="description">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
@@ -50,7 +52,7 @@ if(isset($_POST['submit'])){
 </head>
 <body class="contact-template page-template belle">
 <div class="pageWrapper">
-<!-- ?php include("include/header.php");?> -->
+<?php include("include/header.php");?>
     
     <!--Body Content-->
     <div id="page-content">
