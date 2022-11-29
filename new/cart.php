@@ -84,10 +84,10 @@ if(isset($_POST['checkout'])){
     background-color: transparent;
 }
 
-.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+/* .btn-primary, .btn-primary.disabled, .btn-primary:disabled {
     background-color: #4466f2!important;
     border-color: #4466f2!important;
-}
+} */
 </style>
 </head>
 <body class="page-template belle">
