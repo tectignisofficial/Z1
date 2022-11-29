@@ -533,7 +533,7 @@ $arr=mysqli_fetch_array($sql);
                                                 </button>
 
                                             </div>
-                                            <div class="shopify-payment-button col-6" data-shopify="payment-button">
+                                            <div class="product-form__item--submit col-6" data-shopify="payment-button">
                                                 <button type="submit" name="checkout"
                                                     class="shopify-payment-button__button shopify-payment-button__button--unbranded stockcheck"
                                                     <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; }  ?> >Buy
