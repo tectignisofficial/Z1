@@ -953,8 +953,8 @@ include('include/header.php');
                 <div style="text-align:left;" id="uc_blox_btn_group48486">
                   <a href="#" id="uc_blox_btn_group48486_item1" target="_self"><span class="uc-style-32306900903"
                       style="font-size:12px;">LEARN MORE</span></a>
-                  <a href="#" id="uc_blox_btn_group48486_item2" target="_self"><span class="uc-style-49069829282"
-                      style="font-size:12px;">BUY NOW</span></a>
+                  <a href="shop.php" id="uc_blox_btn_group48486_item2" target="_self"><span class="uc-style-49069829282"
+                      style="font-size:12px;">SHOP NOW</span></a>
 
                 </div>
                 <!-- end Button Group -->
@@ -1285,7 +1285,7 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button254538" target="_blank"><span
+                  <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                       class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
@@ -1368,8 +1368,8 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="#" id="uc_solid_rounded_button314790" target="_blank"><span class="uc-style-185694847031"
-                      style="font-size:12px;">BUY NOW</span></a>
+                  <a href="shop.php" id="uc_solid_rounded_button314790" target="_self"><span class="uc-style-185694847031"
+                      style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
               </div>
@@ -1423,7 +1423,7 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button358706"><span class="uc-style-219468315071"
+                  <a href="shop.php" id="uc_solid_rounded_button358706" target="_self"><span class="uc-style-219468315071"
                       style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
@@ -1525,7 +1525,7 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button254538" target="shop.php"><span
+                  <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                       class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
@@ -1606,7 +1606,7 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button254538" target="shop.php"><span
+                  <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                       class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
