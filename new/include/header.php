@@ -132,7 +132,7 @@
                         <nav class="grid__item" id="AccessibleNav">
                             <!-- for mobile -->
                             <ul id="siteNav" class="site-nav medium center hidearrow">
-                                <li class="lvl1 parent megamenu " ><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>">Home <i
+                                <li class="lvl1 parent megamenu " ><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>" >Home <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
                                 <li class="lvl1 parent megamenu"><a href="about-us.php" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i

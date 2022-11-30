@@ -1217,7 +1217,6 @@ textarea:-ms-input-placeholder {
     display: block;
     opacity: 1;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.05em;
     position: relative;
   }
 
@@ -1233,9 +1232,9 @@ textarea:-ms-input-placeholder {
     line-height: 40px;
   }
 
-  #siteNav.medium>li a {
+  /* #siteNav.medium>li a {
     font-weight: 600;
-  }
+  } */
 
   #siteNav.medium>li>a .anm {
     display: none;

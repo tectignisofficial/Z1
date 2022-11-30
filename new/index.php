@@ -60,12 +60,7 @@ include('include/config.php');
       max-width: 1170px;
     }
 
-    #uc_grid_1_40497 {
-      font-family: Montserrat;
-    }
-
-
-
+ 
 
     #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_1 {
       padding-top: 100px;
