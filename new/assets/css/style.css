@@ -4638,7 +4638,7 @@ table {
   margin: 0;
   color: black;
   /* padding: 35px 0; */
-  font-size: 18px;
+  font-size: 50px;
 }
 
 .page-template .addressFooter {
@@ -7650,11 +7650,11 @@ body{
 }
 .page-title .headinghead{
   background-color: #0c0101;
-  padding:60px;
+  padding:25px 0;
 }
 .page-title .headinghead>h1{
   color:white;
-  font-size:68px;
+  font-size:50px;
 }
 .page-title .headinghead>p{
   color: whitesmoke;
