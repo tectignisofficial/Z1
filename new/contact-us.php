@@ -62,8 +62,8 @@ if(isset($_POST['submit'])){
       <div class="page section-header text-center">
         <div class="page-title">
           <div class="wrapper">
-            <h1 class="page-width" style="padding:25px 0">Contact Us</h1>
-            <p><a href="index.php">Home</a> / <span>Contact Us</span></p>
+            <h1 class="page-width" style="padding:25px 0 padding-bottom:0">Contact Us</h1>
+            <p style="margin-top:-25px;"><a href="index.php">Home</a> / <span>Contact Us</span></p>
           </div>
         </div>
       </div>
