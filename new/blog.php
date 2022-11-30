@@ -82,7 +82,7 @@ include("include/config.php");
                                         <!-- Article Image -->
                                         <a class="article_featured-image" href="#"><img
                                                 class="blur-up ls-is-cached lazyloaded"
-                                                data-src="assets/images/blog/blog-post-1.jpg"
+                                                data-src="assets/images/blog/blog-post-1.webp"
                                                 src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>"
                                                 alt="It's all about how you wear"></a>
                                         <h2 class="h3"><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a>

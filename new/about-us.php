@@ -63,7 +63,7 @@ session_start();
                         <div class="row">
                             <div class="feature-row">
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                    <img src="assets/images/fast-fashion_600x.jpg"
+                                    <img src="assets/images/fast-fashion_600x.webp"
                                         alt="Fast Fashion Only available at BElle"
                                         title="Fast Fashion Only available at BElle">
                                 </div>
@@ -111,7 +111,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                                    <img src="assets/images/aboutus.jpg" alt="K4 OsteoAlign Knee Orthosis"
+                                    <img src="assets/images/aboutus.webp" alt="K4 OsteoAlign Knee Orthosis"
                                         title="K4 OsteoAlign Knee Orthosis">
                                 </div>
                             </div>

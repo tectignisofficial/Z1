@@ -1438,7 +1438,7 @@ include('include/header.php');
                 <!-- start Top Small Round Icon Box -->
 
                 <div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
-                  <img src="img/1A3A6535_z1.jpg" alt="">
+                  <img src="img/1A3A6535_z1.webp" alt="">
                 </div>
                 <!-- end Top Small Round Icon Box -->
               </div>
@@ -1447,7 +1447,7 @@ include('include/header.php');
                 <!-- start Top Small Round Icon Box -->
 
                 <div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;">
-                  <img src="img/k4-ld-2_.jpg" alt="">
+                  <img src="img/k4-ld-2_.webp" alt="">
                 </div>
                 <!-- end Top Small Round Icon Box -->
               </div>
@@ -1461,7 +1461,7 @@ include('include/header.php');
                 <!-- start Top Small Round Icon Box -->
 
                 <div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;">
-                  <img src="assets/images/z1kneebanner.jpg" alt="">
+                  <img src="img/z1kneebanner.webp" alt="">
                 </div>
                 <!-- end Top Small Round Icon Box -->
               </div>
@@ -1470,7 +1470,7 @@ include('include/header.php');
                 <!-- start Top Small Round Icon Box -->
 
                 <div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
-                  <img src="img/1A3A6439.jpg" alt="">
+                  <img src="img/1A3A6439.webp" alt="">
                 </div>
                 <!-- end Top Small Round Icon Box -->
               </div>
