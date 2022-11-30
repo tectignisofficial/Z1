@@ -343,7 +343,7 @@ include('include/config.php');
       padding-top: 220px;
       padding-bottom: 220px;
       background-color: #000000;
-      background-image: url('uploads/images/blox_page_builder/z1_customized_knee_braces.jpg');
+      background-image: url('uploads/images/blox_page_builder/z1_customized_knee_braces.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -1299,7 +1299,7 @@ include('include/header.php');
                 <!-- start Image -->
 
                 <div style="text-align:center;font-size:0;">
-                  <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.jpg" alt="" title=""
+                  <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.webp" alt="" title=""
                     style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
                 </div>
                 <!-- end Image -->
@@ -1368,8 +1368,8 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button314790" target="_self"><span class="uc-style-185694847031"
-                      style="font-size:12px;">SHOP NOW</span></a>
+                  <a href="shop.php" id="uc_solid_rounded_button314790" target="_self"><span
+                      class="uc-style-185694847031" style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
               </div>
@@ -1423,8 +1423,8 @@ include('include/header.php');
                 <!-- start Button -->
 
                 <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button358706" target="_self"><span class="uc-style-219468315071"
-                      style="font-size:12px;">SHOP NOW</span></a>
+                  <a href="shop.php" id="uc_solid_rounded_button358706" target="_self"><span
+                      class="uc-style-219468315071" style="font-size:12px;">SHOP NOW</span></a>
                 </div>
                 <!-- end Button -->
               </div>
@@ -1539,7 +1539,7 @@ include('include/header.php');
                 <!-- start Image -->
 
                 <div style="text-align:center;font-size:0;">
-                  <img src="uploads/images/blox_page_builder/K4_OsteoAlign_Knee_Orthosis.jpg"
+                  <img src="uploads/images/blox_page_builder/K4_OsteoAlign_Knee_Orthosis.webp"
                     alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis"
                     style="max-width:100%; width:100%;border-radius:0px;margin:0;">
                 </div>
@@ -1554,14 +1554,14 @@ include('include/header.php');
       <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
         <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
 
-        <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
+          <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
             style="padding-right:0px;padding-left:0px;">
             <div class="uc-grid-col-inner">
               <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon">
                 <!-- start Image -->
 
                 <div style="text-align:center;font-size:0;">
-                  <img src="uploads/images/blox_page_builder/K6_Dezire_Knee_Orthosis.jpg"
+                  <img src="uploads/images/blox_page_builder/K6_Dezire_Knee_Orthosis.webp"
                     alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis"
                     style="max-width:100%; width:100%;border-radius:0px;margin:16px;">
                 </div>
@@ -1578,7 +1578,8 @@ include('include/header.php');
                 <!-- start Title -->
 
                 <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-                  <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K6 Dezire Knee Orthosis</span>
+                  <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K6
+                    Dezire Knee Orthosis</span>
 
                 </div>
                 <!-- end Title -->
@@ -1598,7 +1599,10 @@ include('include/header.php');
                 <b style="font-size: 14px;">The Treatment your Knee needs!</b>
                 <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
 
-                  <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K6 Dezire Knee Orthosis is extremely handy in making you feel complacent because of it’s lightweight and highly durable aluminum frame. It is very likely a wonderful product for all those who have pain in the knee as it is phenomenal in providing the coveted support and aid.</span>
+                  <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K6 Dezire Knee
+                    Orthosis is extremely handy in making you feel complacent because of it’s lightweight and highly
+                    durable aluminum frame. It is very likely a wonderful product for all those who have pain in the
+                    knee as it is phenomenal in providing the coveted support and aid.</span>
                 </div>
                 <!-- end Paragraph -->
               </div>
@@ -1613,7 +1617,7 @@ include('include/header.php');
               </div>
             </div>
           </div>
-         
+
           <div class="uc-col-clear"></div>
         </div>
       </div>
@@ -1640,7 +1644,7 @@ include('include/header.php');
             '<div class="uc_countdown_section secound"><span class="uc_countdown_amount">%H</span><span class="uc_countdown_period"> Hours </span></div>' +
             '<div class="uc_countdown_section third"><span class="uc_countdown_amount">%M</span><span class="uc_countdown_period"> Minutes </span></div>' +
             '<div class="uc_countdown_section fourth"><span class="uc_countdown_amount">%S</span><span class="uc_countdown_period"> Seconds </span></div>'
-            ));
+          ));
         });
       });
     </script>
