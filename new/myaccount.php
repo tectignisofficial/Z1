@@ -241,7 +241,7 @@ if(isset($_POST["changepassword"])){
                                 <div class="col-6">
 
                                     <h4 class="billing-address">Billing address</h4>
-                                    <a class="view margin-5px-bottom" style="float: right;" href="#">edit</a>
+                                    <!-- <a class="view margin-5px-bottom" style="float: right;" href="#">edit</a> -->
                                     <p><?php echo $arr['address1']?></p>
                                     <p><?php echo $arr['address2']?></p>
                                     <p><?php echo $arr['city']?></p>
@@ -318,8 +318,9 @@ if(isset($_POST["changepassword"])){
                       <div class="row">
                                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
                                                 <label for="input-firstname">Select Address Type <span class="required-f">*</span></label>
-                                                <div class="row"><input name="customerName" value=""
-                                                    id="input-firstname" class="form-control" type="radio">Billing Address
+                                                <div class="row">
+                                                    <!-- <input name="customerName" value=""
+                                                    id="input-firstname" class="form-control" type="radio">Billing Address -->
                                                       <!-- <input name="customerName" value=""
                                                     id="input-firstname" class="form-control" type="radio">
                                                     Shipping Addres -->
