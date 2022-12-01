@@ -60,7 +60,7 @@ include('include/config.php');
       max-width: 1170px;
     }
 
- 
+
 
     #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_1 {
       padding-top: 100px;
@@ -1374,106 +1374,85 @@ include('include/header.php');
         </div>
       </div>
       <div id="uc_grid_1_40497_row_5" class="uc-grid-row">
-        <div id='uc_grid_1_40497_row_5_container_1' class="uc-grid-row-container" style="background-color:#ffffff;">
-          <div id="uc_grid_1_40497_row_5_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
-            style="padding-left:85px;padding-right:85px;">
-            <div class="uc-grid-col-inner">
-              <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class='uc-grid-col-addon'
-                style="padding-top:100px;">
-                <!-- start Title -->
+			<div id="uc_grid_1_40497_row_5_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
+			<div id="uc_grid_1_40497_row_5_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-left:85px;padding-right:85px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class="uc-grid-col-addon" style="padding-top:200px;"><!-- start Title -->
 
-                <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-                  <span class="uc-style-197140885776"
-                    style="font-weight:Bold;font-size:36px;line-height:1.2em;">CUSTOMIZED KNEE BRACES</span>
-                </div>
-                <!-- end Title -->
-              </div>
-              <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_2" class='uc-grid-col-addon'
-                style="margin-top:0px;">
-                <!-- start Line Seperator -->
+			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+<span class="uc-style-197140885776" style="font-weight:Bold;font-size:36px;line-height:1.2em;">Experience your music like never before.</span>
+</div>
+			<!-- end Title --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_2" class="uc-grid-col-addon" style="margin-top:0px;"><!-- start Line Seperator -->
 
-                <div style="text-align:left;">
-                  <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
-                  </div>
-                </div>
-                <!-- end Line Seperator -->
-              </div>
-              <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_3" class='uc-grid-col-addon'
-                style="margin-top:30px;padding-bottom:0px;padding-left:30px;margin-bottom:30px;border-left:1px solid lightgray;">
-                <!-- start Paragraph -->
+			<div style="text-align:left;">
+  <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;"></div>
+</div>
+			<!-- end Line Seperator --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_3" class="uc-grid-col-addon" style="margin-top:30px;padding-bottom:0px;padding-left:30px;margin-bottom:30px;border-left:1px solid lightgray;"><!-- start Paragraph -->
 
-                <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-                  <span class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">Customization is the
-                    key. In order to meet customer needs and satisfaction, customizing our healthcare products is
-                    necessary. One Size doesn’t fit all. Neither you nor us. Each and every customised Knee Braces are
-                    designed in such a unique way to fit you perfectly. Our custom Knee Braces are built to keep up with
-                    every move you make. We custom make your braces with durable materials and quality craftsmanship
-                    with extra protection and that proper support and comfort to ensure a speedy recovery.
-                    Now, Rehab, Train or Play but with confidence.</span>
-                </div>
-                <!-- end Paragraph -->
-              </div>
-              <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_4" class='uc-grid-col-addon'
-                style="margin-top:0px;">
-                <!-- start Button -->
+			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+<span class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum in orci sit amet rutrum nunc blandit. Phasellus a odio at nisl ullamcorper elementum sollicitudin eu urna. Pellentesque venenatis ligula nisl, eu molestie tellus faucibus ac. </span>
+</div>
+			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_5_container_1_col_1_addon_4" class="uc-grid-col-addon" style="margin-top:0px;"><!-- start Button -->
 
-                <div style="text-align:left;">
-                  <a href="shop.php" id="uc_solid_rounded_button358706" target="_self"><span
-                      class="uc-style-219468315071" style="font-size:12px;">SHOP NOW</span></a>
-                </div>
-                <!-- end Button -->
-              </div>
-            </div>
-          </div>
-          <div id="uc_grid_1_40497_row_5_container_1_col_2" class="uc-grid-col uc-colsize-1_4"
-            style="padding-left:25px;padding-right:25px;">
-            <div class="uc-grid-col-inner">
-              <div id="uc_grid_1_40497_row_5_container_1_col_2_addon_1" class='uc-grid-col-addon'
-                style="margin-top:-100px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);">
-                <!-- start Top Small Round Icon Box -->
+			<div style="text-align:left;">
+<a href="#" id="uc_solid_rounded_button358706" target="_blank"><span class="uc-style-219468315071" style="font-size:12px;">BUY NOW</span></a>
+</div>
+			<!-- end Button --></div></div></div>
+			<div id="uc_grid_1_40497_row_5_container_1_col_2" class="uc-grid-col uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_1" class="uc-grid-col-addon" style="margin-top:-100px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
 
-                <div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
-                  <img src="img/1A3A6535_z1.webp" alt="">
-                </div>
-                <!-- end Top Small Round Icon Box -->
-              </div>
-              <div id="uc_grid_1_40497_row_5_container_1_col_2_addon_2" class='uc-grid-col-addon'
-                style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);">
-                <!-- start Top Small Round Icon Box -->
-
-                <div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;">
-                  <img src="img/k4-ld-2_.webp" alt="">
-                </div>
-                <!-- end Top Small Round Icon Box -->
-              </div>
-            </div>
-          </div>
-          <div id="uc_grid_1_40497_row_5_container_1_col_3" class="uc-grid-col uc-col-last uc-colsize-1_4"
-            style="padding-left:25px;padding-right:25px;">
-            <div class="uc-grid-col-inner">
-              <div id="uc_grid_1_40497_row_5_container_1_col_3_addon_1" class='uc-grid-col-addon'
-                style="margin-top:-50px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);">
-                <!-- start Top Small Round Icon Box -->
-
-                <div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;">
-                  <img src="img/z1kneebanner.webp" alt="">
-                </div>
-                <!-- end Top Small Round Icon Box -->
-              </div>
-              <div id="uc_grid_1_40497_row_5_container_1_col_3_addon_2" class='uc-grid-col-addon'
-                style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);">
-                <!-- start Top Small Round Icon Box -->
-
-                <div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;">
-                  <img src="img/1A3A6439.webp" alt="">
-                </div>
-                <!-- end Top Small Round Icon Box -->
-              </div>
-            </div>
-          </div>
-          <div class="uc-col-clear"></div>
+			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
+        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
+        	<i class="fa fa-battery-4"></i>
         </div>
-      </div>
+        <div class="blox-top-small-round-icon-box-heading">
+        	<span class="uc-style-223243352740" style="font-weight:Bold;">40-Hour Battery</span>
+        </div>
+        <div class="blox-top-small-round-icon-box-content">
+        	<span class="uc-style-236494201147" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#000000;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
+        </div>
+    </div>
+			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_2_addon_2" class="uc-grid-col-addon" style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
+
+			<div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;padding:50px;">
+        <div class="blox-top-small-round-icon-box-icon" style="background-color:#ed1c24;border-radius:0px;">
+        	<i class="fa fa-wifi"></i>
+        </div>
+        <div class="blox-top-small-round-icon-box-heading">
+        	<span class="uc-style-247662789113" style="font-weight:Bold;color:#ffffff;">Wireless</span>
+        </div>
+        <div class="blox-top-small-round-icon-box-content">
+        	<span class="uc-style-255497238888" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#ffffff;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
+        </div>
+    </div>
+			<!-- end Top Small Round Icon Box --></div></div></div>
+			<div id="uc_grid_1_40497_row_5_container_1_col_3" class="uc-grid-col uc-col-last uc-colsize-1_4" style="padding-left:25px;padding-right:25px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_1" class="uc-grid-col-addon" style="margin-top:-50px;margin-bottom:50px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
+
+			<div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;padding:50px;">
+        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
+        	<i class="fa fa-volume-up"></i>
+        </div>
+        <div class="blox-top-small-round-icon-box-heading">
+        	<span class="uc-style-262312007874" style="font-weight:Bold;color:#ffffff;">Noise Canceling</span>
+        </div>
+        <div class="blox-top-small-round-icon-box-content">
+        	<span class="uc-style-271420644193" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#ffffff;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
+        </div>
+    </div>
+			<!-- end Top Small Round Icon Box --></div><div id="uc_grid_1_40497_row_5_container_1_col_3_addon_2" class="uc-grid-col-addon" style="margin-top:0px;box-shadow:3px 10px 40px  rgba(0,0,0,0.1);"><!-- start Top Small Round Icon Box -->
+
+			<div class="blox-top-small-round-icon-box" style="background:#fdfdfd; text-align:left;padding:50px;">
+        <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
+        	<i class="fa fa-check"></i>
+        </div>
+        <div class="blox-top-small-round-icon-box-heading">
+        	<span class="uc-style-289653737068" style="font-weight:Bold;">Your Music Experience</span>
+        </div>
+        <div class="blox-top-small-round-icon-box-content">
+        	<span class="uc-style-292790664717" style="font-weight:Normal;font-size:14px;line-height:1.7em;color:#000000;">Cras sagittis. Vivamus in erat urna cursus vestibulum. </span>
+        </div>
+    </div>
+			<!-- end Top Small Round Icon Box --></div></div></div>
+<div class="uc-col-clear"></div>
+			</div>
+		</div>
 
 
       <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
