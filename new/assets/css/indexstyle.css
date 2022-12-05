@@ -1,0 +1,822 @@
+
+    #uc_grid_1_40497 .uc-grid-row {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+  
+      #uc_grid_1_40497 .uc-grid-row .uc-grid-row-container {
+        max-width: 1170px;
+      }
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_1 {
+        padding-top: 100px;
+        padding-bottom: 200px;
+        background-color: #000000;
+      }
+  
+      /* addon: Css Animated Squares Background */
+  
+      #uc_css_animated_squares_background_bg_addon18229 {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background-color: #ffffff;
+        opacity: 0.2;
+        animation: animate-bg-squares 25s linear infinite;
+        bottom: -150px;
+        border-radius: 10px;
+  
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+      }
+  
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(5) {
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(6) {
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(7) {
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(8) {
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(9) {
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+      }
+  
+      #uc_css_animated_squares_background_bg_addon18229 .uc-circles li:nth-child(10) {
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+      }
+  
+  
+  
+      @keyframes animate-bg-squares {
+  
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+  
+        100% {
+          transform: translateY(-2000px) rotate(720deg);
+        }
+  
+  
+      }
+  
+  
+      /* addon: Button Group */
+  
+  
+      #uc_blox_btn_group48486 #uc_blox_btn_group48486_item1 {
+        display: inline-block;
+        font-size: 16px;
+        color: #ed1c24;
+        padding: 14px 36px;
+        border-radius: 3px;
+        /* background-color: ; */
+        text-decoration: none;
+        transition: 0.3s;
+        border: 1px solid #ed1c24;
+        margin: 0 14px 0 0px;
+      }
+  
+      #uc_blox_btn_group48486 #uc_blox_btn_group48486_item1:hover {
+        background-color: #ed1c24;
+        border: 1px solid #ed1c24;
+        color: #ffffff;
+      }
+  
+      #uc_blox_btn_group48486 #uc_blox_btn_group48486_item2 {
+        display: inline-block;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 3px;
+        background-color: #ed1c24;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 1px solid #ed1c24;
+        margin: 0 14px 0 0px;
+      }
+  
+      #uc_blox_btn_group48486 #uc_blox_btn_group48486_item2:hover {
+        background-color: #ff4c53;
+        border: 1px solid #ed1c24;
+        color: #ffffff;
+      }
+  
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_2 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+  
+      /* addon: SVG Shapes */
+  
+      #uc_blox_svg_icon68727 svg {
+        width: 100%;
+        max-width: 48px;
+        height: auto !important;
+      }
+  
+      #uc_blox_svg_icon68727 svg g {
+        fill: #000000;
+  
+      }
+  
+  
+      /* addon: SVG Shapes */
+  
+      #uc_blox_svg_icon103537 svg {
+        width: 100%;
+        max-width: 48px;
+        height: auto !important;
+      }
+  
+      #uc_blox_svg_icon103537 svg g {
+        fill: #000000;
+  
+      }
+  
+  
+      /* addon: SVG Shapes */
+  
+      #uc_blox_svg_icon142708 svg {
+        width: 100%;
+        max-width: 48px;
+        height: auto !important;
+      }
+  
+      #uc_blox_svg_icon142708 svg g {
+        fill: #000000;
+  
+      }
+  
+  
+      /* addon: SVG Shapes */
+  
+      #uc_blox_svg_icon189302 svg {
+        width: 100%;
+        max-width: 48px;
+        height: auto !important;
+      }
+  
+      #uc_blox_svg_icon189302 svg g {
+        fill: #000000;
+  
+      }
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_3 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+  
+      /* addon: Button */
+  
+      #uc_solid_rounded_button254538 {
+        display: inline-block;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 3px;
+        background-color: #ed1c24;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 0px solid #000000;
+      }
+  
+      #uc_solid_rounded_button254538:hover {
+        display: inline-block;
+        background-color: #fc3535;
+        border: 0px solid #000000;
+        color: #ffffff;
+      }
+  
+      /* addon: Empty Space */
+  
+      #uc_blox_empty_space273609 {
+        height: 40px;
+      }
+  
+      @media (max-width:768px) {
+  
+        #uc_blox_empty_space273609 {
+          height: 40px;
+        }
+  
+      }
+  
+      @media (max-width:520px) {
+  
+        #uc_blox_empty_space273609 {
+          height: 40px;
+        }
+  
+      }
+  
+  
+      /* addon: Play Button */
+  
+      #uc_blox_play_button286402 {
+        width: 100%;
+      }
+  
+      #uc_blox_play_button286402 a {
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+      }
+  
+      #uc_blox_play_button286402 a:hover {
+        transform: scale(1.1, 1.1);
+      }
+  
+      #uc_blox_play_button286402 a span {
+        display: inline-block;
+        height: 80px;
+        width: 80px;
+        background-color: #ffffff;
+        border-radius: 80px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        border: 0px solid #ffffff;
+        position: relative;
+      }
+  
+      #uc_blox_play_button286402 i {
+        font-size: 24px;
+        color: #000000;
+        vertical-align: middle;
+      }
+  
+  
+  
+  
+      /* addon: Button */
+  
+      #uc_solid_rounded_button314790 {
+        display: inline-block;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 3px;
+        background-color: #ed1c24;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 0px solid #000000;
+      }
+  
+      #uc_solid_rounded_button314790:hover {
+        display: inline-block;
+        background-color: #fc3535;
+        border: 0px solid #000000;
+        color: #ffffff;
+      }
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_5 {
+        padding-top: 0px;
+      }
+  
+      /* addon: Button */
+  
+      #uc_solid_rounded_button358706 {
+        display: inline-block;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 3px;
+        background-color: #ed1c24;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 0px solid #000000;
+      }
+  
+      #uc_solid_rounded_button358706:hover {
+        display: inline-block;
+        background-color: #fc3535;
+        border: 0px solid #000000;
+        color: #ffffff;
+      }
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_6 {
+        padding-top: 200px;
+        padding-bottom: 100px;
+        background-color: #ed1c24;
+      }
+  
+  
+  
+  
+      #uc_grid_1_40497_row_6>.uc-shape-devider-top {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik01MDQuODU0LDgwLjA2NmM3LjgxMiwwLDE0Ljg5MywwLjMxOCwyMS40MSwwLjg3OSBjLTI1LjkyNSwyMi40NzUtNTYuMDkzLDQwLjg1Mi0xMDIuOTQ2LDQwLjg1MmMtMjAuNzc5LDAtMzcuOTk2LTIuMzQ5LTUyLjg5OC02LjA3QzQxMy41MTcsMTA3LjI5NSw0MzQuMDU2LDgwLjA2Niw1MDQuODU0LDgwLjA2NnogTTc3NS45MzgsNTEuOTQ3YzE5LjE0NSwxOC41OTYsMzkuMDk3LDM1LjA1MSw3Ny45NTYsMzUuMDUxYzQ2LjkwNywwLDYyLjI5OS0xNC45ODYsODAuOTEyLTI0Ljk4IGMtMjEuMzU3LTE1Ljc4My00Ni44MDQtMjguMzQ4LTg1LjQ4OS0yOC4zNDhDODE2LjgyOSwzMy42NzEsNzk0LjIzMyw0MS40MTEsNzc1LjkzOCw1MS45NDd6IiBmaWxsLW9wYWNpdHk9Ii4zIi8+PHBhdGggZD0iTTEyMDAuMTEyLDQ2LjI5MmMzOS44MDQsMCw1OS45ODYsMjIuNDc5LDc5Ljg4OCwzOS42OXYxNi44MDUgYy0xOS45MDMtMTAuODM1LTQwLjA4NC0yMS43NzctNzkuODg4LTIxLjc3N2MtNzIuMDE0LDAtNzguNzE1LDQzLjU1OS0xNDcuOTY0LDQzLjU1OWMtNTYuODQsMC04MS4yNDctMzUuODc2LTExNy4zNDItNjIuNTUyIGM5LjMwOS00Ljk5OCwxOS40MjMtOC43NDksMzQuNjktOC43NDljNTUuODQ2LDAsNjEuOTksMzkuNjE3LDExNS42MDIsMzkuNjE3QzExNDMuMTc3LDkyLjg4NywxMTQyLjYxOCw0Ni4yOTIsMTIwMC4xMTIsNDYuMjkyeiBNODAuMDExLDExNS40ODhjLTQwLjAwNiwwLTYwLjAwOC0xMi4yMDYtODAuMDExLTI5LjUwNnYxNi44MDZjMjAuMDAzLDEwLjg5MSw0MC4wMDUsMjEuNzgyLDgwLjAxMSwyMS43ODIgYzgwLjAwNCwwLDc4LjU5Ny0zMC40MDcsMTM3LjY2OS0zMC40MDdjNTUuOTcxLDAsNjIuNTI2LDI0LjAyNiwxMjYuMzM3LDI0LjAyNmM5Ljg1OCwwLDE4LjUwOS0wLjkxNiwyNi40MDQtMi40NjEgYy01Ny4xODYtMTQuMjc4LTgwLjE3Ny00OC44MDgtMTM4LjY2LTQ4LjgwOEMxNTQuNjk4LDY2LjkxOSwxMzEuODAxLDExNS40ODgsODAuMDExLDExNS40ODh6IE01MjYuMjY1LDgwLjk0NSBjNTYuODQ4LDQuOTAyLDcwLjA1NiwyOC43MjYsMTM3LjE5MywyOC43MjZjNTQuMDAxLDAsNzMuNDMtMzUuMjM3LDExMi40OC01Ny43MjRDNzUxLjA2LDI3Ljc4Miw3MjcuNTQ4LDAsNjY1LjY5MSwwIEM1OTcuMzgxLDAsNTY3LjA4Niw0NS41NTUsNTI2LjI2NSw4MC45NDV6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTAsMHY4NS45ODJjMjAuMDAzLDE3LjMsNDAuMDA1LDI5LjUwNiw4MC4wMTEsMjkuNTA2YzUxLjc5MSwwLDc0LjY4OC00OC41NjksMTUxLjc1MS00OC41NjkgYzU4LjQ4MiwwLDgxLjQ3MywzNC41MzEsMTM4LjY2LDQ4LjgwOGM0My4wOTYtOC40MzIsNjMuNjM0LTM1LjY2MiwxMzQuNDMzLTM1LjY2MmM3LjgxMiwwLDE0Ljg5MywwLjMxOCwyMS40MSwwLjg3OSBDNTY3LjA4Niw0NS41NTUsNTk3LjM4MSwwLDY2NS42OTEsMGM2MS44NTYsMCw4NS4zNjksMjcuNzgyLDExMC4yNDYsNTEuOTQ3YzE4LjI5NS0xMC41MzYsNDAuODkxLTE4LjI3Niw3My4zNzgtMTguMjc2IGMzOC42ODUsMCw2NC4xMzIsMTIuNTY0LDg1LjQ4OSwyOC4zNDhjOS4zMDktNC45OTgsMTkuNDIzLTguNzQ5LDM0LjY5LTguNzQ5YzU1Ljg0NiwwLDYxLjk5LDM5LjYxNywxMTUuNjAyLDM5LjYxNyBjNTguMDgsMCw1Ny41MjEtNDYuNTk1LDExNS4wMTUtNDYuNTk1YzM5LjgwNCwwLDU5Ljk4NiwyMi40NzksNzkuODg4LDM5LjY5VjBIMHoiLz48L2c+PC9zdmc+');
+        height: 150px;
+        background-size: 100% 150px;
+        z-index: 0;
+      }
+  
+      /* addon: Clean Countdown */
+  
+      .uc_clean_countdown .uc_countdown_content .uc_countdown_section span.uc_countdown_amount {
+        font-size: 50px;
+      }
+  
+      @media (max-width: 768px) {
+        .uc_clean_countdown .uc_countdown_content .uc_countdown_section span.uc_countdown_amount {
+          font-size: 21px;
+        }
+      }
+  
+  
+      /* addon: Button */
+  
+      #uc_solid_rounded_button427110 {
+        display: inline-block;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 3px;
+        background-color: #000000;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 0px solid #000000;
+      }
+  
+      #uc_solid_rounded_button427110:hover {
+        display: inline-block;
+        background-color: #ffffff;
+        border: 0px solid #000000;
+        color: #000000;
+      }
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_7 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+  
+      /* addon: Wave Pricing Table */
+  
+      #uc_blox_wave_pricing_table462089 * {
+        box-sizing: border-box;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-item {
+        position: relative;
+  
+        text-align: center;
+  
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-action {
+        color: inherit;
+        border: none;
+        background: none;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-feature-list {
+        text-align: left;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-item {
+        color: #000;
+        border-radius: 10px;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-deco {
+        border-radius: 10px 10px 0 0;
+        background: #000000;
+        padding: 4em 0 9em;
+        position: relative;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-deco-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 160px;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-title {
+        font-size: 0.75em;
+        margin: 0;
+        color: #fff;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .deco-layer {
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-item:hover .deco-layer--1 {
+        -webkit-transform: translate3d(15px, 0, 0);
+        transform: translate3d(15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-item:hover .deco-layer--2 {
+        -webkit-transform: translate3d(-15px, 0, 0);
+        transform: translate3d(-15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table462089 .icon {
+        font-size: 2.5em;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-price {
+        font-size: 78px;
+        padding: 0;
+        color: #fff;
+        line-height: 1em;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-currency {
+        font-size: 18px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-period {
+        font-size: 14px;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing__sentence {
+        margin: 0 0 1em 0;
+        padding: 0 0 0.5em;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-feature-list {
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        text-align: center;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-feature {
+        padding: 1em 0;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-action {
+        margin: auto 3em 2em 3em;
+        padding: 1em 2em;
+        color: #fff;
+        border-radius: 3px;
+        background: #ed1c24;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+  
+      #uc_blox_wave_pricing_table462089 .pricing-action:hover {
+  
+        background: #000000;
+  
+      }
+  
+  
+      /* addon: Wave Pricing Table */
+  
+      #uc_blox_wave_pricing_table479383 * {
+        box-sizing: border-box;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-item {
+        position: relative;
+  
+        text-align: center;
+  
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-action {
+        color: inherit;
+        border: none;
+        background: none;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-feature-list {
+        text-align: left;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-item {
+        color: #000;
+        border-radius: 10px;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-deco {
+        border-radius: 10px 10px 0 0;
+        background: #ed1c24;
+        padding: 4em 0 9em;
+        position: relative;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-deco-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 160px;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-title {
+        font-size: 0.75em;
+        margin: 0;
+        color: #fff;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .deco-layer {
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-item:hover .deco-layer--1 {
+        -webkit-transform: translate3d(15px, 0, 0);
+        transform: translate3d(15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-item:hover .deco-layer--2 {
+        -webkit-transform: translate3d(-15px, 0, 0);
+        transform: translate3d(-15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table479383 .icon {
+        font-size: 2.5em;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-price {
+        font-size: 78px;
+        padding: 0;
+        color: #fff;
+        line-height: 1em;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-currency {
+        font-size: 18px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-period {
+        font-size: 14px;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing__sentence {
+        margin: 0 0 1em 0;
+        padding: 0 0 0.5em;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-feature-list {
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        text-align: center;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-feature {
+        padding: 1em 0;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-action {
+        margin: auto 3em 2em 3em;
+        padding: 1em 2em;
+        color: #fff;
+        border-radius: 3px;
+        background: #000000;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+  
+      #uc_blox_wave_pricing_table479383 .pricing-action:hover {
+  
+        background: #ed1c24;
+  
+      }
+  
+  
+      /* addon: Wave Pricing Table */
+  
+      #uc_blox_wave_pricing_table484066 * {
+        box-sizing: border-box;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-item {
+        position: relative;
+  
+        text-align: center;
+  
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-action {
+        color: inherit;
+        border: none;
+        background: none;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-feature-list {
+        text-align: left;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-item {
+        color: #000;
+        border-radius: 10px;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-deco {
+        border-radius: 10px 10px 0 0;
+        background: #000000;
+        padding: 4em 0 9em;
+        position: relative;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-deco-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 160px;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-title {
+        font-size: 0.75em;
+        margin: 0;
+        color: #fff;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .deco-layer {
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-item:hover .deco-layer--1 {
+        -webkit-transform: translate3d(15px, 0, 0);
+        transform: translate3d(15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-item:hover .deco-layer--2 {
+        -webkit-transform: translate3d(-15px, 0, 0);
+        transform: translate3d(-15px, 0, 0);
+      }
+  
+      #uc_blox_wave_pricing_table484066 .icon {
+        font-size: 2.5em;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-price {
+        font-size: 78px;
+        padding: 0;
+        color: #fff;
+        line-height: 1em;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-currency {
+        font-size: 18px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-period {
+        font-size: 14px;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing__sentence {
+        margin: 0 0 1em 0;
+        padding: 0 0 0.5em;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-feature-list {
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        text-align: center;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-feature {
+        padding: 1em 0;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-action {
+        margin: auto 3em 2em 3em;
+        padding: 1em 2em;
+        color: #fff;
+        border-radius: 3px;
+        background: #ed1c24;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+  
+      #uc_blox_wave_pricing_table484066 .pricing-action:hover {
+  
+        background: #000000;
+  
+      }
+  
+  
+  
+  
+  
+      #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_8 {
+  
+        border-top: 1px solid lightgray;
+      }

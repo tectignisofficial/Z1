@@ -17,6 +17,14 @@ if(!isset($_POST['option1'])){
 else{
  
 if(isset($_SESSION['shopping_cart'])){
+    $size=$_POST['option1'];
+    $qua=$_POST['quantity'];
+    $sql=mysqli_query($conn,"select * from stock where product_name='$productName' AND value='$size'");
+    $arr=mysqli_fetch_array($sql);
+    $stock=$arr['stock'] ?? NULL;
+    if($qua > $stock){
+        echo "<script>alert('Only ".$stock." or less quantities allowed');</script>";
+    }else{
 $item_array_id=array_column($_SESSION['shopping_cart'], "name");
 if(!in_array($_GET['name'],$item_array_id)){
     $count=count($_SESSION['shopping_cart']);
@@ -35,6 +43,7 @@ else{
     echo "<script>alert('already Added');</script>";
     header('location:productdetail.php?name='.$productName);
 }
+    }
 }else{
     $item_arr=array(
         'itemid'   => $_POST['productid'],
@@ -59,6 +68,16 @@ if(isset($_POST['checkout'])){
             echo "<script>alert('please select size');</script>";
         }
         else{
+            
+            $size=$_POST['option1'];
+            $qua=$_POST['quantity'];
+            $sql=mysqli_query($conn,"select * from stock where product_name='$productName' AND value='$size'");
+            $arr=mysqli_fetch_array($sql);
+            $stock=$arr['stock'] ?? NULL;
+            if($qua > $stock){
+                echo "<script>alert('Only ".$stock." or less quantities allowed');</script>";
+            }else{
+        
         $id=$_SESSION['customerid'];
         $sql=mysqli_query($conn,"select * from customers where id='$id'");
         $fetchsql=mysqli_fetch_array($sql);
@@ -72,7 +91,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['image']=$_POST['image'];
         header('location:checkout.php');
         // header('location:razor/pay.php');
-   
+            }
 }
     }
 }
