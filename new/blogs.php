@@ -3,7 +3,6 @@ session_start();
 include("include/config.php");
 $id=$_GET['eid'];
 
-
 ?>
 
 <!DOCTYPE html>
