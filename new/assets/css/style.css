@@ -7072,7 +7072,7 @@ body.home15-funiture-template {
   right: 0;
   top: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
   -ms-transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);
   -webkit-transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);
   transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);

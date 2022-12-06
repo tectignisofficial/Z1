@@ -49,6 +49,15 @@ if(isset($_POST['login'])){
 <!-- Main Style CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+    .eye{
+        float: right;
+    position: absolute;
+    right: 25px;
+    font-size: 18px;
+    top: 37px
+    }
+</style>
 </head>
 <body class="page-template belle">
 <div class="pageWrapper">
@@ -85,13 +94,15 @@ if(isset($_POST['login'])){
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label for="CustomerPassword">Password</label>
-                                    <input type="password" value="" name="customerPassword" placeholder="" id="CustomerPassword" class="">                        	
+                                    <input type="password" value="" name="customerPassword" placeholder="" id="CustomerPassword" class="" />
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password eye"></span>                        	
                                 </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                <input type="submit" name="login" class="btn mb-3" value="Sign In">
+                                <input type="submit" name="login" class="btn mb-3" value="Sign In" >
+                                
                                 <p class="mb-4">
 									<a href="forgotpassword.php" id="RecoverPassword">Forgot your password?</a> &nbsp; | &nbsp;
 								    <a href="register.php" id="customer_register_link">Create account</a>
@@ -125,6 +136,15 @@ if(isset($_POST['login'])){
      <script src="assets/js/popper.min.js"></script>
      <script src="assets/js/lazysizes.js"></script>
      <script src="assets/js/main.js"></script>
+     <script>
+        $(document).on('click', '.toggle-password', function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+
+let input = $("#CustomerPassword");
+input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+});
+     </script>
 </div>
 </body>
 
