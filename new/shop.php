@@ -10,7 +10,7 @@ include('include/config.php');
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Women &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+    <title>Shop &ndash; Z1KneeBrace</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->

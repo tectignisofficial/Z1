@@ -11,7 +11,7 @@ include('include/config.php');
 <!-- /Added by HTTrack -->
 
 <head>
-  <title>Black Friday Simple Landing Page</title>
+  <title>Home &ndash; Z1KneeBrace</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
