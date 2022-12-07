@@ -234,14 +234,18 @@ while($arr=mysqli_fetch_array($sql)){
     <div class="app-content content ">
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="http://ecommerce.sachinenterprise.in/admin">Dashboard</a>
-                        </li>
-                        <li class="breadcrumb-item ">Ecommerce</li>
-                        <li class="breadcrumb-item active">New product</li>
-                    </ol>
-                </div>
+            <div class="col-12">
+                            <h2 class="content-header-title float-start mb-0">
+                                Edit Product
+                            </h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item active">Ecommerce</li>
+                                    <li class="breadcrumb-item active">Product</li>
+                                </ol>
+                            </div>
+                        </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
                     <div class="mb-1 breadcrumb-right">
                     </div>
@@ -257,7 +261,7 @@ while($arr=mysqli_fetch_array($sql)){
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" value="<?php echo $editArr['name']; ?>"/>
+                                            placeholder="Name" value="<?php echo $editArr['name']; ?>" required/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="desc">Description</label>

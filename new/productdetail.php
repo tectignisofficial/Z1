@@ -281,7 +281,7 @@ $arr=mysqli_fetch_array($sql);
                 <!--Breadcrumb-->
                 <div class="bredcrumbWrap">
                     <div class="container breadcrumbs">
-                        <a href="index.html" title="Back to the home page">Home</a><span
+                        <a href="index.php" title="Back to the home page">Home</a><span
                             aria-hidden="true">›</span><span><?php echo $arr['name']; ?></span>
                     </div>
                 </div>

@@ -31,9 +31,6 @@
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Ecommerce</span></a>
                     <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="Report.php"><i data-feather="circle"></i><span
-                                    class="menu-item text-truncate" data-i18n="List">Report</span></a>
-                        </li>
                         <li><a class="d-flex align-items-center" href="orders.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Preview">Orders</span></a>
                         </li>

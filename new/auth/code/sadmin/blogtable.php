@@ -9,7 +9,8 @@ include("../../../include/config.php");
     $id=mysqli_real_escape_string($conn,$_GET['delid']);
     $sql=mysqli_query($conn,"delete from blog where id='$id'");
     if($sql=1){
-      header("location:blogtable.php");
+        // echo '<script>alert("Successfully deleted");window.location.href="blogtable.php"</script>';
+        header('location:blogtable.php');
     }
   }
 ?>
@@ -119,29 +120,9 @@ include("../../../include/config.php");
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active">Blogs</li>
                                 </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
-                    <div class="mb-1 breadcrumb-right">
-                        <div class="dropdown">
-                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="grid"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="app-todo.html"><i class="me-1"
-                                        data-feather="check-square"></i><span class="align-middle">Todo</span></a><a
-                                    class="dropdown-item" href="app-chat.html"><i class="me-1"
-                                        data-feather="message-square"></i><span class="align-middle">Chat</span></a><a
-                                    class="dropdown-item" href="app-email.html"><i class="me-1"
-                                        data-feather="mail"></i><span class="align-middle">Email</span></a><a
-                                    class="dropdown-item" href="app-calendar.html"><i class="me-1"
-                                        data-feather="calendar"></i><span class="align-middle">Calendar</span></a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +133,7 @@ include("../../../include/config.php");
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Table</h4>
+                                <h4 class="card-title">Blog Table</h4>
                                 <a href="blogs.php" class="btn btn-primary mb-1">Add New Blog
                                 </a>
 
@@ -186,11 +167,12 @@ include("../../../include/config.php");
                                                     <i data-feather="edit"></i>
                                                 </a>
 
-                                                <a href="blogtable.php?delid=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
-
-
+                                                <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        href=""
+                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        data-id="=<?php echo $arr['id']; ?>">
+                                                        <i data-feather="trash-2"></i>
+                                                    </a>
                                             </td>
                                         </tr>
                                         <?php $count++;  } ?>
@@ -263,7 +245,32 @@ include("../../../include/config.php");
 
         });
     </script>
-
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.delbtn').click(function (e) {
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "blogtable.php?delid" + delid;
+                        } else {
+                            // swal("Your imaginary file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
 
     <!-- END: Page Vendor JS-->
 

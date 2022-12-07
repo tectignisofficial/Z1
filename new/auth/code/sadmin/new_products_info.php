@@ -124,7 +124,7 @@ if(isset($_GET['delid'])){
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <h2 class="content-header-title float-start mb-0">New Products Info</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
                         <li class="breadcrumb-item active">New Products Info</li>
                     </ol>
@@ -138,13 +138,13 @@ if(isset($_GET['delid'])){
                 <!-- Responsive Datatable -->
                 <section id="responsive-datatable">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <div class="card">
                                 <div class="card-header border-bottom row-12">
                                     <h4 class="card-title">New Products Info</h4>
                                 </div>
-                                <div class="card-datatable">
-                                    <table class="dt-responsive table" id="example1">
+                                <div class="card-datatable p-2">
+                                    <table class="dt-responsive table " id="example1">
                                         <thead>
                                             <tr>
                                                 <th>Sr No.</th>
@@ -279,7 +279,7 @@ if(isset($_GET['delid'])){
                             });
                             window.location.href = "new_products_info.php?delid" + delid;
                         } else {
-                            swal("Your imaginary file is safe!");
+                            // swal("Your imaginary file is safe!");
                         }
                     });
             })

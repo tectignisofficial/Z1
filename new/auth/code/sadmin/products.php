@@ -5,6 +5,17 @@ if(!isset($_SESSION['id'])){
 }else{
 include("../../../include/config.php");
 
+if(isset($_GET['delid'])){
+    $id=mysqli_real_escape_string($conn,$_GET['delid']);
+    $sql=mysqli_query($conn,"delete from products where id='$id'");
+    if($sql=1){
+        // echo "<script>alert('Successfully deleted');window.location.href='testimonials.php';</script>";
+        header('location:products.php');
+    }
+    else{ echo "<script>alert('Failed to Delete')</script>"; }
+  }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +123,8 @@ include("../../../include/config.php");
                             </h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Ecommerce</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item">Ecommerce</li>
                                     <li class="breadcrumb-item active">Product</li>
                                 </ol>
                             </div>
@@ -165,9 +177,11 @@ include("../../../include/config.php");
                                                 href="editProducts.php?eid=<?php echo $arr['id']; ?>">
                                                     <i data-feather="edit"></i>
                                                 </a>
-                                                <a href="products.php?did=<?php echo $arr['id']; ?>"><button
-                                                        type="button" class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
+                                                        <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        data-id="=<?php echo $arr['id']; ?>">
+                                                        <i data-feather="trash-2"></i>
+                                                    </a>
                                             </td>
                                         </tr>
                                         <?php $count++; } ?>
@@ -254,6 +268,7 @@ include("../../../include/config.php");
 
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/tables/table-datatables-basic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Page JS-->
 
     <script>
@@ -266,6 +281,32 @@ include("../../../include/config.php");
             }
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.delbtn').click(function (e) {
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "products.php?delid" + delid;
+                        } else {
+                            // swal("Your imaginary file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
+
 </body>
 <!-- END: Body-->
 

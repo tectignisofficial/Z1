@@ -9,7 +9,8 @@ if(isset($_GET['delid'])){
     $id=mysqli_real_escape_string($conn,$_GET['delid']);
     $sql=mysqli_query($conn,"delete from testimonial where id='$id'");
     if($sql=1){
-      header("location:testimonials.php");
+        // echo "<script>alert('Successfully deleted');window.location.href='testimonials.php';</script>";
+        header('location:testimonials.php');
     }
     else{ echo "<script>alert('Failed to Delete')</script>"; }
   }
@@ -82,9 +83,9 @@ if(isset($_GET['delid'])){
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
-                <h2 class="content-header-title float-start mb-0">Testimonials</h2>
+                <h2 class="content-header-title float-start mb-0">Testimonials Table</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
                         <li class="breadcrumb-item active">Testimonials</li>
                     </ol>
@@ -102,38 +103,18 @@ if(isset($_GET['delid'])){
                             <div class="card">
 
                                 <div class="card-header border-bottom row-12">
-
-                                    <div class="col-1">
-                                        <div class="btn-group">
-                                            <button type="button"
-                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
-                                                data-bs-toggle="dropdown" aria-expanded="true">
-                                                Bulk actions
-                                            </button>
-                                            <ul class="dropdown-menu "
-                                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
-                                                data-popper-placement="bottom-start">
-                                                <li><a class="dropdown-item" href="#">bulk changes</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="button" class="btn btn-primary">Filters</button></div>
                                     <div class="col-2">
-                                        <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
+                                        <!-- <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
                                             <label><input type="search" class="form-control input-sm"
                                                     placeholder="Search..."
                                                     aria-controls="botble-page-tables-page-table"></label>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-4"></div>
                                     <a class="btn btn-primary" href="testimonials_form.php"><i class="fa fa-plus"></i>
                                         Create
                                     </a>
-                                    <button class="btn btn-info" tabindex="0"
-                                        aria-controls="botble-page-tables-page-table" type="button"><span><i
-                                                data-feather="refresh-cw"></i> reload</span></button>
+
                                 </div>
 
                                 <div class="card-datatable">
@@ -158,14 +139,11 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['name'];?></td>
                                                 <td><?php echo $row['company_name'];?></td>
-                                                <td><?php echo $row['message'];?></td>
-                                                <td><?php echo $row['link'];?></td>
-                                                <td>
-                                                    <!-- <a href=""><button type="button"
-                                                            class="btn btn-icon rounded-circle btn-flat-primary btnmod1"><i
-                                                                data-feather="edit"></i></button></a> -->
-
-                                                                <a class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                <td width="100px"><div style="overflow:auto; width:100%;height:100px;"><?php echo $row['message'];?></div> 
+    </td>
+                                                <td width="100px"><div style="overflow:auto; width:200px;height:100px;"><?php echo $row['link'];?></div> 
+    </td>
+                                                <td> <a class="btn btn-danger btn-rounded btn-icon delbtn" 
                                                         href="testimonials.php?delid=<?php echo $row['id']; ?>"
                                                         onclick="return checkDelete()"
                                                         class="btn btn-primary btn-rounded btn-icon"
@@ -247,7 +225,7 @@ if(isset($_GET['delid'])){
                             });
                             window.location.href = "testimonials.php?delid" + delid;
                         } else {
-                            swal("Your imaginary file is safe!");
+                            // swal("Your imaginary file is safe!");
                         }
                     });
             })

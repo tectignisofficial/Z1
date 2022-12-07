@@ -131,12 +131,12 @@ if(isset($_POST['submit'])){
     <div class="app-content content ">
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <h2 class="content-header-title float-start mb-0">Testimonials</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
-                        <li class="breadcrumb-item ">Testimonial</li>
-                        <li class="breadcrumb-item active">New Testimonial</li>
+                        <li class="breadcrumb-item active">Testimonials</li>
                     </ol>
                 </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
@@ -150,11 +150,11 @@ if(isset($_POST['submit'])){
                     <div class="mb-1 col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form method="post">
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" />
+                                            placeholder="Name" required/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="company">Company Name</label>
@@ -164,16 +164,16 @@ if(isset($_POST['submit'])){
                                         </div> -->
                                        
                                         <input type="text" id="myeditor" class="form-control" name="company"
-                                            placeholder="Company Name" />
+                                            placeholder="Company Name" required/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="content">Message</label>                                                                         
-                                        <textarea type="text" id="content"  class="form-control" name="message" placeholder="Message"></textarea>
+                                        <textarea type="text" id="content"  class="form-control" name="message" placeholder="Message" required></textarea>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Link</label>
                                         <input type="text" id="link" class="form-control" name="link"
-                                            placeholder="Link" />
+                                            placeholder="Link" required/>
                                     </div>
                                     <div class="col-12">
                                                 <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>

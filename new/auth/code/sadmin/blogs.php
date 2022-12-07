@@ -92,7 +92,7 @@ move_uploaded_file($tmp_name, $loc);
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Blogs Edit</h2>
+                            <h2 class="content-header-title float-start mb-0">Add New Blogs</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
@@ -119,7 +119,7 @@ move_uploaded_file($tmp_name, $loc);
                                                 <div class="mb-2">
                                                     <label class="form-label" for="blog-edit-title">Title</label>
                                                     <input type="text" id="title" name="title" class="form-control"
-                                                        value="" />
+                                                        value="" required/>
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -129,7 +129,7 @@ move_uploaded_file($tmp_name, $loc);
                                                         <div id="blog-editor-container">
                                                             <div class="">
                                                                 <textarea class="summernote form-control"
-                                                                    name="content" id="content"></textarea>
+                                                                    name="content" id="content" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -139,9 +139,6 @@ move_uploaded_file($tmp_name, $loc);
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Featured Image</h4>
                                                     <div class="d-flex flex-column flex-md-row">
-                                                        <img src="dist/img/" id="blog-feature-image"
-                                                            class="rounded me-2 mb-1 mb-md-0" width="170" height="110"
-                                                            alt="&nbsp;&nbsp;Image" />
                                                         <div class="featured-info">
                                                             <large class="text-muted">Required image resolution 800x400,
                                                                 image size
@@ -150,7 +147,7 @@ move_uploaded_file($tmp_name, $loc);
                                                             </p>
                                                             <div class="d-inline-block">
                                                                 <input class="form-control" type="file" id="file"
-                                                                    name="file" accept="" />
+                                                                    name="file" accept="image/png, image/jpg, image/jpeg,image/webp" required/>
                                                             </div>
                                                         </div>
                                                     </div>
