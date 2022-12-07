@@ -104,6 +104,7 @@ if(isset($_GET['delid'])){
 
                                 <div class="card-header border-bottom row-12">
                                     <div class="col-2">
+                                    <h4 class="card-title">Testimonial Table</h4>
                                         <!-- <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
                                             <label><input type="search" class="form-control input-sm"
                                                     placeholder="Search..."
