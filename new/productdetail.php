@@ -26,7 +26,7 @@ if(isset($_SESSION['shopping_cart'])){
         echo "<script>alert('Only ".$stock." or less quantities allowed');</script>";
     }else{
 $item_array_id=array_column($_SESSION['shopping_cart'], "name");
-if(!in_array($_GET['name'],$item_array_id)){
+if(!in_array($_POST['option1'],$item_array_id)){
     $count=count($_SESSION['shopping_cart']);
     $item_arr=array(
         'itemid'   => $_POST['productid'],

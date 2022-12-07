@@ -7066,8 +7066,8 @@ body.home15-funiture-template {
 ========================================================================*/
 #modalOverly {
   height: auto !important;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
   left: 0;
   right: 0;
   top: 0;

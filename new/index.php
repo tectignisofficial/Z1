@@ -120,10 +120,10 @@ include('include/header.php');
                 <!-- start Button Group -->
 
                 <div style="text-align:left;" id="uc_blox_btn_group48486">
-                  <a href="#" id="uc_blox_btn_group48486_item1" target="_self"><span class="uc-style-32306900903"
-                      style="font-size:12px;">LEARN MORE</span></a>
-                  <a href="shop.php" id="uc_blox_btn_group48486_item2" target="_self"><span class="uc-style-49069829282"
+                  <a href="shop.php" id="uc_blox_btn_group48486_item1" target="_self"><span class="uc-style-32306900903"
                       style="font-size:12px;">SHOP NOW</span></a>
+                  <!-- <a href="" id="uc_blox_btn_group48486_item2" target="_self"><span class="uc-style-49069829282"
+                      style="font-size:12px;"></span></a> -->
 
                 </div>
                 <!-- end Button Group -->
