@@ -54,7 +54,7 @@ if(isset($_GET['checkout']) and in_array($_GET['checkout'],['automatic', 'manual
 $data = [
     "key"               => $keyId,
     "amount"            => $amount,
-    "name"              => "Z1",
+    "name"              => "Zodiacal Overseas Pvt. Ltd.",
     "description"       => "Live Transaction",
     "image"             => "https://realestate.tectignis.in/admin/dist/img/avatar1.jpeg",
     "prefill"           => [

@@ -102,7 +102,7 @@ $facebook=mysqli_fetch_array($sql);
                              <li><a href="index.php">Home</a></li>
                              <li><a href="about-us.php">About Us</a></li>
                              <li><a href="contact-us.php">Contact Us</a></li>
-                             <li><a href="blogs.php">Blogs</a></li>
+                             <li><a href="blog.php">Blogs</a></li>
                              <li><a href="videos.php">Video</a></li>
                          </ul>
                      </div>

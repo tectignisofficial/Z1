@@ -53,7 +53,7 @@ include('../include/config.php');
 
                             <div id="address" class="address tab-pane mb-4">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12 col-md-6">
                                     <?php
 $id1=$_SESSION['customerid'];
 $sql1=mysqli_query($conn,"select * from billing_address where customer_id='$id1'");
@@ -67,7 +67,7 @@ $arr1=mysqli_fetch_array($sql1);
                                         <p><?= $arr1['state'] ?? null ?></p>
                                         <p><?= $arr1['country'] ?? null ?></p>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12 col-md-6">
 <?php
 $id=$_SESSION['addressid'];
 $sql=mysqli_query($conn,"select * from shipping_address where id='$id'");
@@ -181,7 +181,7 @@ $arr=mysqli_fetch_array($sql);
                                 </tbody>
                             </table>
 
-                            <h4 class="billing-address">Payment Method</h4><h5>Razorypay</h5>
+                            <h5 class="billing-address">Payment Method - Razorypay</h5>
                             <div class="row p-4">
 
                                 

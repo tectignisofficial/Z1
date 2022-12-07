@@ -55,8 +55,30 @@ if(isset($_POST["changepassword"])){
 		else{
 			echo"<script>alert('Invalid Password');</script>";
 		}
-	
 	}
+
+    if(isset($_POST['shipping_address'])){
+        $customerName=$_POST['customerName'];
+        if($customerName == 'Shipping'){
+        $fullName=mysqli_real_escape_string($conn,$_POST['fullName']) ?? null;
+        $phone=mysqli_real_escape_string($conn,$_POST['number']);
+        $home=mysqli_real_escape_string($conn,$_POST['home']);
+        $road=mysqli_real_escape_string($conn,$_POST['road']);
+        $pincode=$_POST['pincode'];
+        $city=mysqli_real_escape_string($conn,$_POST['city']);
+        $country_id=mysqli_real_escape_string($conn,$_POST['country_id']);
+        $zone_id=mysqli_real_escape_string($conn,$_POST['zone_id']);
+        $landmark=mysqli_real_escape_string($conn,$_POST['landmark']);
+        $notes=mysqli_real_escape_string($conn,$_POST['notes']);
+        $id=$_POST['id'];
+        
+        $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+        }
+        else if($customerName == 'Billing'){
+
+        }
+    
+    }
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -112,13 +134,13 @@ if(isset($_POST["changepassword"])){
                         <div class="col-xl-4 col-lg-4 col-md-12">
                             <div class="d-single-info">
                                 <p>Need Assistance? Customer service at.</p>
-                                <p>admin@yoursite.com.</p>
+                                <p>info@z1kneebrace.com</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-12">
                             <div class="d-single-info">
                                 <p>E-mail them at </p>
-                                <p>support@yoursite.com</p>
+                                <p>info@z1kneebrace.com</p>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-12">
@@ -189,41 +211,47 @@ if(isset($_POST["changepassword"])){
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
+                                        <?php
                                             $cusid=$_SESSION['customerid'];
                                             $sql=mysqli_query($conn,"select * from orders where customer='$cusid'");
                                             $count=1;
                                             while($arr1=mysqli_fetch_array($sql)){
                                             ?>
                                         <tr>
-                                            
+
                                             <td><?= $count; ?></td>
                                             <td><?= $arr1['product'] ?></td>
                                             <td><?php $date=$arr1['order_date'];
                                             $date1=strtotime($date);
-                                            echo date('M d, 20y',$date1) ?>    
-                                           </td>
+                                            echo date('M d, 20y',$date1) ?>
+                                            </td>
                                             <td><?= $arr1['order_status'] ?></td>
                                             <?php
                                             $curr=$arr1['payment_currency'];
                                             $sql1=mysqli_query($conn,"select * from currency where currency_name='$curr'");
                                             $row1=mysqli_fetch_array($sql1);
                                             ?>
-                                            <td><i class="<?= $row1['currency_icon'] ?>"></i> <?= $arr1['amount'] ?></td>
+                                            <td><i class="<?= $row1['currency_icon'] ?>"></i> <?= $arr1['amount'] ?>
+                                            </td>
                                             <?php
                                             $pro=$arr1['product'];
                                             $sql2=mysqli_query($conn,"select * from products where name='$pro'");
                                             $arr2=mysqli_fetch_array($sql2);
                                             ?>
                                             <td>
-                                                <a class="view viewdetail" href="" data-toggle="modal" 
-                                                data-id="<?= $arr1['id']; ?>" data-product="<?= $arr1['product']; ?>" data-size="<?= $arr1['size'] ?>" data-image="<?= $arr2['hightlightfile'] ?>" data-order="<?= $arr1['order_id']; ?>" data-processing="<?= $arr1['order_status'] ?>">view</a> 
+                                                <a class="view viewdetail" href="" data-toggle="modal"
+                                                    data-id="<?= $arr1['id']; ?>"
+                                                    data-product="<?= $arr1['product']; ?>"
+                                                    data-size="<?= $arr1['size'] ?>"
+                                                    data-image="<?= $arr2['hightlightfile'] ?>"
+                                                    data-order="<?= $arr1['order_id']; ?>"
+                                                    data-processing="<?= $arr1['order_status'] ?>">view</a>
                                                 <!-- <button class="view" data-target="#viewdetail" data-toggle="modal">
                                             view</button> -->
-                                        </td>
+                                            </td>
                                         </tr>
                                         <?php $count++; } ?>
-                                       
+
                                     </tbody>
                                 </table>
                             </div>
@@ -232,8 +260,8 @@ if(isset($_POST["changepassword"])){
 
                         <!-- Address -->
                         <div id="address" class="address tab-pane">
-                            <div class="row" style="float:right" data-target="#content_quickview" data-toggle="modal">
-                                <button class="btn btn-primary" data-target="#content_quickview" data-toggle="modal">
+                            <div class="row" style="float:right" data-target="#content" data-toggle="modal">
+                                <button class="btn btn-primary" data-target="#content" data-toggle="modal">
                                     Add Address</button>
 
                             </div>
@@ -294,7 +322,7 @@ if(isset($_POST["changepassword"])){
 
                                         </div>
 
-                                      
+
                                     </fieldset>
 
                                     <button type="submit" name="changepassword"
@@ -309,98 +337,167 @@ if(isset($_POST["changepassword"])){
                     <!-- End Tab panes -->
                 </div>
             </div>
-
         </div>
-        <div class="modal fade quick-view-popup" id="content_quickview">
-            <div class="modal-dialog">
+        <div class="modal fade" tabindex="-1" role="dialog" id="content">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                      <div class="row">
+                        <div class="row">
+                            <form method="post">
+                                <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                    <label for="input-firstname">Select Address Type <span
+                                            class="required-f">*</span></label>
+                                    <div class="row" style="margin-left:-5px;">
+                                        <input name="customerName" value="Billing" id="input-firstname" class="form-control"
+                                            type="radio">&nbsp;Billing Address &nbsp;&nbsp;&nbsp;
+                                        <input name="customerName" value="Shipping" id="input-firstname" class="form-control"
+                                            type="radio">&nbsp;
+                                        Shipping Address
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group col-md-12 col-lg-12 col-xl12 required">
+
+                                    <fieldset>
+                                        <div class="row">
+                                            <input type="hidden" name="id" value='<?= $_SESSION['customerid']; ?>'>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-firstname">Full Name <span
+                                                        class="required-f">*</span></label>
+                                                <input name="fullName" value="" id="input-firstname" type="text">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-lastname">phone <span
+                                                        class="required-f">*</span></label>
+                                                <input value="2" name="number" id="input-lastname" type="tel">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-email">House no./Building Name <span
+                                                        class="required-f">*</span></label>
+                                                <input name="home" value="" id="input-email" type="text">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-telephone">Road name/Area/Colony <span
+                                                        class="required-f">*</span></label>
+                                                <input name="road" value="" id="input-telephone" type="text">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                <label for="input-company">Pin Code</label>
+                                                <input name="pincode" value="" id="input-company" type="number">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-country">Country <span
+                                                        class="required-f">*</span></label>
+                                                <select name="country" class="countries form-control" id="countryId">
+                                                    <option value="">Select Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-zone">Region / State <span
+                                                        class="required-f">*</span></label>
+                                                <select name="state" class="states form-control" id="stateId">
+                                                    <option value="">Select State</option>
+                                                </select> </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-address-1">City<span
+                                                        class="required-f">*</span></label>
+                                                <select name="city" class="cities form-control" id="cityId">
+                                                    <option value="">Select City</option>
+                                                </select>
+                                                <!-- <input name="city" value="" id="input-address-1" type="text"> -->
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
                                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                                <label for="input-firstname">Select Address Type <span class="required-f">*</span></label>
-                                                <div class="row">
-                                                    <!-- <input name="customerName" value=""
-                                                    id="input-firstname" class="form-control" type="radio">Billing Address -->
-                                                      <!-- <input name="customerName" value=""
-                                                    id="input-firstname" class="form-control" type="radio">
-                                                    Shipping Addres -->
-                                                </div>
-                                                
+                                                <label for="input-postcode">Landmark <span
+                                                        class="required-f">*</span></label>
+                                                <textarea class="form-control resize-both" rows="3"
+                                                    name="landmark"></textarea>
                                             </div>
-                                          
-
                                         </div>
+
+                                    </fieldset>
+
+                                    <fieldset>
                                         <div class="row">
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-firstname">Name <span
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12">
+                                                <label for="input-company">Order Notes <span
                                                         class="required-f">*</span></label>
-                                                <input name="customerName" value=""
-                                                    id="input-firstname" class="form-control" type="text">
+                                                <textarea class="form-control resize-both" rows="3"
+                                                    name="notes"></textarea>
                                             </div>
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-email">E-Mail <span
-                                                        class="required-f">*</span></label>
-                                                <input readonly name="customerEmail" value=""
-                                                    id="input-email" class="form-control" type="email">
-                                            </div>
-
                                         </div>
+                                    </fieldset>
+                                    <fieldset>
                                         <div class="row">
-                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                <label for="input-telephone">Telephone <span
-                                                        class="required-f">*</span></label>
-                                                <input name="customerPhone" value=""
-                                                    id="input-telephone" class="form-control" type="tel">
+                                            <div class="form-group col-md-12 col-lg-12 col-xl-12">
+                                                <button type="submit" name="shipping_address"
+                                                    class="btn btn-primary">Submit</button>
                                             </div>
-
                                         </div>
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+
         <div class="modal fade quick-view-popup" id="viewdetailmodal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <label for="input-firstname">Order - <span class="required-f order"></span></label>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                        <label for="input-firstname">Order - <span class="required-f order"></span></label>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
-                      <div class="row">
-                      <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                     
-                     
-                                            </div>
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 text-center required">
-                                               <img src="" class="image rounded-circle " width="100" height="100" >
-                                            </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
 
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                                <label for="input-firstname" class="product"></label>
-                                            </div>
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                                <label for="input-email" class="size"></label>
-                                            </div>
 
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                                <label for="input-telephone" class="processing"> </label>
-                                            </div>
+                            </div>
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 text-center required">
+                                <img src="" class="image rounded-circle " width="100" height="100">
+                            </div>
 
-                                        </div>
-                                        <div class="row mt-2">
-                                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                            <label for="input-telephone" >Are You Want to Cancel Order ? <a href="auth/code/sadmin/api.php" class="cancelattr">Cancel</a></label>
-                                                <!-- <button class="btn btn-info-outline">Cancel</button> -->
-                                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                <label for="input-firstname" class="product"></label>
+                            </div>
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                <label for="input-email" class="size"></label>
+                            </div>
 
-                                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                <label for="input-telephone" class="processing"> </label>
+                            </div>
+
+                        </div>
+                        <div class="row mt-2">
+                            <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
+                                <label for="input-telephone">Are You Want to Cancel Order ? <a
+                                        href="auth/code/sadmin/api.php" class="cancelattr">Cancel</a></label>
+                                <!-- <button class="btn btn-info-outline">Cancel</button> -->
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -426,20 +523,20 @@ if(isset($_POST["changepassword"])){
     <script src="assets/js/lazysizes.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        $('.viewdetail').click(function(){
-            let id=$(this).data('id');
-            let product=$(this).data('product');
-            let size=$(this).data('size');
-            let image=$(this).data('image');
-            let order=$(this).data('order');
-            let processing=$(this).data('processing');
+        $('.viewdetail').click(function () {
+            let id = $(this).data('id');
+            let product = $(this).data('product');
+            let size = $(this).data('size');
+            let image = $(this).data('image');
+            let order = $(this).data('order');
+            let processing = $(this).data('processing');
 
             $('.product').html(product);
             $('.size').html(size);
             $('.order').html(order);
-            $('.image').attr("src",'auth/code/sadmin/image/product_image_check/'+image);
+            $('.image').attr("src", 'auth/code/sadmin/image/product_image_check/' + image);
             $('.processing').html(processing);
-            $('.cancelattr').attr("href","auth/code/sadmin/api.php?orderidcancel="+id);
+            $('.cancelattr').attr("href", "auth/code/sadmin/api.php?orderidcancel=" + id);
             $('#viewdetailmodal').modal('show');
         })
     </script>
