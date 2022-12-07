@@ -47,20 +47,11 @@ include('../include/config.php');
                 <div class="row billing-fields">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 sm-margin-30px-bottom">
                         <div class="create-ac-content bg-light-gray padding-20px-all">
-                           
-
-                            <div id="address" class="address tab-pane mb-4">
-
-
-<div style="float:right">
+                        <div style="float:right">
        <button class="btn" id="rzp-button1" value="Place order" type="submit">Place order</button>
 </div>
 
-                             
-                            
-
-
-                           
+                            <div id="address" class="address tab-pane mb-4">
                                 <div class="row">
                                     <div class="col-6">
                                     <?php
@@ -68,7 +59,7 @@ $id1=$_SESSION['customerid'];
 $sql1=mysqli_query($conn,"select * from billing_address where customer_id='$id1'");
 $arr1=mysqli_fetch_array($sql1);
 ?>
-                                        <h4 class="billing-address">Billing address</h4>
+                                        <h2 class="billing-address">Billing address</h2>
 
                                         <p><?= $arr1['address1'] ?? null ?></p>
                                         <p><?= $arr1['address2'] ?? null ?></p>
@@ -82,9 +73,9 @@ $id=$_SESSION['addressid'];
 $sql=mysqli_query($conn,"select * from shipping_address where id='$id'");
 $arr=mysqli_fetch_array($sql);
 ?>
-                                        <h4 class="billing-address">Shipping address</h4>
+                                        <h2 class="billing-address">Shipping address</h2>
                                         <div>
-                                <h2><?= $arr['name'] ?></h2>
+                                <h3><?= $arr['name'] ?></h3>
                                 </div>
                                 <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                 </p>
@@ -190,10 +181,10 @@ $arr=mysqli_fetch_array($sql);
                                 </tbody>
                             </table>
 
-                            <h4 class="billing-address">Payment Method</h4>
+                            <h4 class="billing-address">Payment Method</h4><h5>Razorypay</h5>
                             <div class="row p-4">
 
-                                <h5>Razorypay</h5>
+                                
                                 <div style="float:right" class="ml-3">
        <a class="btn" href="../index.php" id="rzp-button1" value="Place order" type="submit">back to shopping</a>
 </div>
