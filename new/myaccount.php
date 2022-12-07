@@ -75,7 +75,19 @@ if(isset($_POST["changepassword"])){
         $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
         }
         else if($customerName == 'Billing'){
-
+            $fullName=mysqli_real_escape_string($conn,$_POST['fullName']) ?? null;
+            $phone=mysqli_real_escape_string($conn,$_POST['number']);
+            $home=mysqli_real_escape_string($conn,$_POST['home']);
+            $road=mysqli_real_escape_string($conn,$_POST['road']);
+            $pincode=$_POST['pincode'];
+            $city=mysqli_real_escape_string($conn,$_POST['city']);
+            $country_id=mysqli_real_escape_string($conn,$_POST['country_id']);
+            $zone_id=mysqli_real_escape_string($conn,$_POST['zone_id']);
+            $landmark=mysqli_real_escape_string($conn,$_POST['landmark']);
+            $notes=mysqli_real_escape_string($conn,$_POST['notes']);
+            $id=$_POST['id'];
+            
+            $sql=mysqli_query($conn,"INSERT INTO `billing_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
         }
     
     }
@@ -100,6 +112,10 @@ if(isset($_POST["changepassword"])){
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/countrystatecity.js?v2"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body class="page-template belle">
@@ -266,25 +282,21 @@ if(isset($_POST["changepassword"])){
 
                             </div>
                             <div class="row">
+                            <?php
+                    $id=$_SESSION['customerid'];
+                    
+                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id'");
+                    while($arr=mysqli_fetch_array($sql)){
+                    ?>
                                 <div class="col-6">
 
-                                    <h4 class="billing-address">Billing address</h4>
-                                    <!-- <a class="view margin-5px-bottom" style="float: right;" href="#">edit</a> -->
-                                    <p><?php echo $arr['address1']?></p>
-                                    <p><?php echo $arr['address2']?></p>
-                                    <p><?php echo $arr['city']?></p>
-                                    <p><?php echo $arr['state']?></p>
-                                    <p><?php echo $arr['country']?></p>
+                                <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
+                                <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
+                                </p>
+                                <p><?= $arr['phone']; ?></p>
+                                <p><a href="">Edit</a> | <a href="">Set Default</a></p>
                                 </div>
-                                <!-- <div class="col-6">
-
-                                    <h4 class="billing-address">Shipping address</h4>
-                                    <p><?php echo $shiparr['address1']?></p>
-                                    <p><?php echo $shiparr['address2']?></p>
-                                    <p><?php echo $shiparr['city']?></p>
-                                    <p><?php echo $shiparr['state']?></p>
-                                    <p><?php echo $shiparr['country']?></p>
-                                </div> -->
+                                <?php } ?>
                             </div>
 
                         </div>
@@ -349,9 +361,9 @@ if(isset($_POST["changepassword"])){
                                             class="required-f">*</span></label>
                                     <div class="row" style="margin-left:-5px;">
                                         <input name="customerName" value="Billing" id="input-firstname" class="form-control"
-                                            type="radio">&nbsp;Billing Address &nbsp;&nbsp;&nbsp;
+                                            type="radio" required>&nbsp;Billing Address &nbsp;&nbsp;&nbsp;
                                         <input name="customerName" value="Shipping" id="input-firstname" class="form-control"
-                                            type="radio">&nbsp;
+                                            type="radio" required>&nbsp;
                                         Shipping Address
                                     </div>
                                     
@@ -364,24 +376,24 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-firstname">Full Name <span
                                                         class="required-f">*</span></label>
-                                                <input name="fullName" value="" id="input-firstname" type="text">
+                                                <input name="fullName" value="" id="input-firstname" type="text" required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-lastname">phone <span
                                                         class="required-f">*</span></label>
-                                                <input value="2" name="number" id="input-lastname" type="tel">
+                                                <input value="" name="number" id="input-lastname" type="tel" minlength="12" maxlength="12" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-email">House no./Building Name <span
                                                         class="required-f">*</span></label>
-                                                <input name="home" value="" id="input-email" type="text">
+                                                <input name="home" value="" id="input-email" type="text" required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-telephone">Road name/Area/Colony <span
                                                         class="required-f">*</span></label>
-                                                <input name="road" value="" id="input-telephone" type="text">
+                                                <input name="road" value="" id="input-telephone" type="text" required>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -390,12 +402,12 @@ if(isset($_POST["changepassword"])){
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                 <label for="input-company">Pin Code</label>
-                                                <input name="pincode" value="" id="input-company" type="number">
+                                                <input name="pincode" value="" id="input-company" type="number" required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-country">Country <span
                                                         class="required-f">*</span></label>
-                                                <select name="country" class="countries form-control" id="countryId">
+                                                <select name="country_id" class="countries form-control" id="countryId" required>
                                                     <option value="">Select Country</option>
                                                 </select>
                                             </div>
@@ -404,13 +416,13 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-zone">Region / State <span
                                                         class="required-f">*</span></label>
-                                                <select name="state" class="states form-control" id="stateId">
+                                                <select name="zone_id" class="states form-control" id="stateId" required>
                                                     <option value="">Select State</option>
                                                 </select> </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-address-1">City<span
                                                         class="required-f">*</span></label>
-                                                <select name="city" class="cities form-control" id="cityId">
+                                                <select name="city" class="cities form-control" id="cityId" required>
                                                     <option value="">Select City</option>
                                                 </select>
                                                 <!-- <input name="city" value="" id="input-address-1" type="text"> -->
@@ -422,7 +434,7 @@ if(isset($_POST["changepassword"])){
                                                 <label for="input-postcode">Landmark <span
                                                         class="required-f">*</span></label>
                                                 <textarea class="form-control resize-both" rows="3"
-                                                    name="landmark"></textarea>
+                                                    name="landmark"required></textarea>
                                             </div>
                                         </div>
 
@@ -434,7 +446,7 @@ if(isset($_POST["changepassword"])){
                                                 <label for="input-company">Order Notes <span
                                                         class="required-f">*</span></label>
                                                 <textarea class="form-control resize-both" rows="3"
-                                                    name="notes"></textarea>
+                                                    name="notes" required></textarea>
                                             </div>
                                         </div>
                                     </fieldset>

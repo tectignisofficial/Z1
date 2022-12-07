@@ -157,14 +157,6 @@ include('include/config.php');
                                         <div class="product-image">
                                             <!-- start product image -->
                                             <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
-                                                <!-- image -->
-                                                <?php
-                                                // $image = $arr['image'];
-                                                // $image = explode(',',$image);
-                                                // foreach($image AS $imagess){
-                                                // }
-
-                                                ?>
                                                 <img class="primary blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                     src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
@@ -216,13 +208,6 @@ include('include/config.php');
                                             </div>
                                             <!-- End product price -->
 
-                                            <div class="product-review">
-                                                <i class="font-13 fa fa-star"></i>
-                                                <i class="font-13 fa fa-star"></i>
-                                                <i class="font-13 fa fa-star"></i>
-                                                <i class="font-13 fa fa-star"></i>
-                                                <i class="font-13 fa fa-star-o"></i>
-                                            </div>
                                             <!-- Variant -->
 
                                             <!-- End Variant -->

@@ -54,26 +54,14 @@ $facebook=mysqli_fetch_array($sql);
                                      title="Belle Multipurpose Bootstrap 4 Template on Twitter"><i
                                          class="icon icon-twitter"></i> <span
                                          class="icon__fallback-text">Twitter</span></a></li>
-                             <li><a class="social-icons__link" href="<?php echo $facebook['pinterest']?>" target="_blank"
-                                     title="Belle Multipurpose Bootstrap 4 Template on Pinterest"><i
-                                         class="icon icon-pinterest"></i> <span
-                                         class="icon__fallback-text">Pinterest</span></a></li>
                              <li><a class="social-icons__link" href="<?php echo $facebook['instagram']?>" target="_blank"
                                      title="Belle Multipurpose Bootstrap 4 Template on Instagram"><i
                                          class="icon icon-instagram"></i> <span
                                          class="icon__fallback-text">Instagram</span></a></li>
-                             <li><a class="social-icons__link" href="<?php echo $facebook['tumblr']?>" target="_blank"
-                                     title="Belle Multipurpose Bootstrap 4 Template on Tumblr"><i
-                                         class="icon icon-tumblr-alt"></i> <span
-                                         class="icon__fallback-text">Tumblr</span></a></li>
                              <li><a class="social-icons__link" href="<?php echo $facebook['youtube']?>" target="_blank"
                                      title="Belle Multipurpose Bootstrap 4 Template on YouTube"><i
                                          class="icon icon-youtube"></i> <span
                                          class="icon__fallback-text">YouTube</span></a></li>
-                             <li><a class="social-icons__link" href="<?php echo $facebook['vimeo']?>" target="_blank"
-                                     title="Belle Multipurpose Bootstrap 4 Template on Vimeo"><i
-                                         class="icon icon-vimeo-alt"></i> <span
-                                         class="icon__fallback-text">Vimeo</span></a></li>
                          </ul>
                      </div>
                  </div>

@@ -163,7 +163,7 @@ if(isset($_POST['doneAddress'])){
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-country">Country <span
                                                             class="required-f">*</span></label>
-                                                    <select name="country" class="countries form-control"
+                                                    <select name="country_id" class="countries form-control"
                                                         id="countryId">
                                                         <option value="">Select Country</option>
                                                     </select>
@@ -173,7 +173,7 @@ if(isset($_POST['doneAddress'])){
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-zone">Region / State <span
                                                             class="required-f">*</span></label>
-                                                    <select name="state" class="states form-control" id="stateId">
+                                                    <select name="zone_id" class="states form-control" id="stateId">
                                                         <option value="">Select State</option>
                                                     </select> </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">

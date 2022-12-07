@@ -43,17 +43,8 @@ $id=$_GET['eid'];
                     </div>
                 </div>
             </div>
-            <!--End Page Title-->
-            <div class="bredcrumbWrap">
-                <div class="container breadcrumbs">
-                    <a href="index.html" title="Back to the home page">Home</a><span
-                        aria-hidden="true">›</span><span>Blogs</span>
-                </div>
-            </div>
-
-            <!--End Sidebar-->
             <!--Main Content-->
-            <div class="container">
+            <div class="container mt-4">
                 <div class="row "  style="justify-content:center">
                     <?php 
                                     
@@ -68,13 +59,13 @@ $id=$_GET['eid'];
                                 <!-- Article Image -->
                                 <a class="article_featured-image" href="#"><img style="height:600px"class="blur-up ls-is-cached lazyloaded"
                                         src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></a>
-                                <h1><a href="blog-left-sidebar.html"><?php echo $arr['title'];?></a></h1>
+                                <h1><?php echo $arr['title'];?></h1>
 
                                 <div class="rte">
                                 <?php echo $arr['content'];?>
                                 </div>
                                 <hr>
-                                <div class="blog-nav">
+                                <!-- <div class="blog-nav">
                                     <div class="text-left">
                                         <i class="icon icon-arrow-circle-left"></i>
                                         <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Previous</a>
@@ -83,7 +74,7 @@ $id=$_GET['eid'];
                                         <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Next</a>
                                         <i class="icon icon-arrow-circle-right"></i>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

@@ -329,96 +329,6 @@ $arr=mysqli_fetch_array($sql);
                                             </a>';
                                             ?>
 
-                                            <!-- <a data-image="assets/images/product-images/product-image1-1.jpg"
-                                                data-zoom-image="assets/images/product-images/product-image1-1.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="-3"
-                                                aria-hidden="true" tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-images/product-image2-1.jpg"
-                                                    src="assets/images/product-images/product-image2-1.jpg"
-                                                    alt="" />
-                                            </a> 
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big3.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big3.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="-2"
-                                                aria-hidden="true" tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible6.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible6.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible7-big.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible7-big.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="-1"
-                                                aria-hidden="true" tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible7.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible7.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big4.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big4.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible8.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible8.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big5.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big5.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible9.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible9.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big6.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big6.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible1.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible1.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big7.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big7.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="3" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible2.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible2.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big8.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big8.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible3.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible3.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big9.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big9.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible4.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible4.jpg"
-                                                    alt="" />
-                                            </a>
-                                            <a data-image="assets/images/product-detail-page/camelia-reversible-big10.jpg"
-                                                data-zoom-image="assets/images/product-detail-page/camelia-reversible-big10.jpg"
-                                                class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true"
-                                                tabindex="-1">
-                                                <img class="blur-up lazyload"
-                                                    data-src="assets/images/product-detail-page/camelia-reversible5.jpg"
-                                                    src="assets/images/product-detail-page/camelia-reversible5.jpg"
-                                                    alt="" />
-                                            </a> -->
                                         </div>
                                     </div>
                                     <div class="zoompro-wrap product-zoom-right pl-20">
@@ -465,12 +375,14 @@ $arr=mysqli_fetch_array($sql);
                                             <span class="outstock hide">Unavailable</span> </div>
                                         <div class="product-sku">SKU: <span
                                                 class="variant-sku"><?php echo $arr['sku'] ?></span></div>
-                                        <div class="product-review"><a class="reviewLink" href="#tab2"><i
+                                        <div class="product-review">
+                                            <!-- <a class="reviewLink" href="#tab2"><i
                                                     class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i
                                                     class="font-13 fa fa-star"></i><i
                                                     class="font-13 fa fa-star-o"></i><i
                                                     class="font-13 fa fa-star-o"></i><span class="spr-badge-caption">6
-                                                    reviews</span></a></div>
+                                                    reviews</span></a> -->
+                                                </div>
                                     </div>
                                     <p class="product-single__price product-single__price-product-template">
 
@@ -565,14 +477,7 @@ $arr=mysqli_fetch_array($sql);
                                     <!-- End Product Action -->
                                 </form>
                                 <div class="display-table shareRow">
-                                    <!-- <div class="display-table-cell medium-up--one-third">
-                                        <div class="wishlist-btn">
-                                            <a class="wishlist add-to-wishlist" href="#" title="Add to Wishlist"><i
-                                                    class="icon anm anm-heart-l" aria-hidden="true"></i> <span>Add to
-                                                    Wishlist</span></a>
-                                        </div>
-                                    </div> -->
-                                    <div class="display-table-cell text-right">
+                                    <!-- <div class="display-table-cell text-right">
                                         <div class="social-sharing">
                                             <a target="_blank"
                                                 href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $baseurl; ?>"
@@ -609,15 +514,8 @@ $arr=mysqli_fetch_array($sql);
                                                     class="share-title" aria-hidden="true">Email</span>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
-
-                                <!-- <p id="freeShipMsg" class="freeShipMsg" data-price="199"><i class="fa fa-truck"
-                                        aria-hidden="true"></i> Express Shipping to USA, Europe, Canada, India & Australia.</p>
-                                <p class="shippingMsg"><li>Premium Quality Knee Braces.</li>
-                                </p>
-                                <p class="shippingMsg"><li>ISO, FDA & FIEO & CEO Certified Company.</li>
-                                </p> -->
                                 <div class="paymnet-img">
                                     <img src="assets/images/payment-img.jpg" alt="Payment"></div>
 
@@ -1090,13 +988,13 @@ $arr=mysqli_fetch_array($sql);
                                                     </div>
                                                     <!-- End product price -->
 
-                                                    <div class="product-review">
+                                                    <!-- <div class="product-review">
                                                         <i class="font-13 fa fa-star"></i>
                                                         <i class="font-13 fa fa-star"></i>
                                                         <i class="font-13 fa fa-star"></i>
                                                         <i class="font-13 fa fa-star"></i>
                                                         <i class="font-13 fa fa-star-o"></i>
-                                                    </div>
+                                                    </div> -->
                                                     <!-- Variant -->
 
                                                     <!-- End Variant -->
@@ -1109,150 +1007,6 @@ $arr=mysqli_fetch_array($sql);
 
                                         </div>
                                     </div>
-                                    <!-- <div id="tab2" class="tab_content grid-products">
-        <div class="productSlider">
-            <div class="col-12 item">
-              
-                <div class="product-image">
-                  
-                    <a href="short-description.html">
-                       
-                        <img class="primary blur-up lazyload"
-                            data-src="assets/images/product-images/product-image3.jpg"
-                            src="assets/images/product-images/product-image3.jpg"
-                            alt="image" title="product">
-                       
-                        <img class="hover blur-up lazyload"
-                            data-src="assets/images/product-images/product-image3-1.jpg"
-                            src="assets/images/product-images/product-image3-1.jpg"
-                            alt="image" title="product">
-                     
-                        <div class="product-labels rectangular"><span
-                                class="lbl pr-label2">Hot</span></div>
-                        
-                    </a>
-                   
-                    <form class="variants add" action="#"
-                        onclick="window.location.href='cart.html'" method="post">
-                        <button class="btn btn-addto-cart" type="button"
-                            tabindex="0">Add To Cart</button>
-                    </form>
-                    <div class="button-set">
-                        <a href="javascript:void(0)" title="Quick View"
-                            class="quick-view-popup quick-view" data-toggle="modal"
-                            data-target="#content_quickview">
-                            <i class="icon anm anm-search-plus-r"></i>
-                        </a>
-                        <div class="wishlist-btn">
-                            <a class="wishlist add-to-wishlist" href="wishlist.html">
-                                <i class="icon anm anm-heart-l"></i>
-                            </a>
-                        </div>
-                        <div class="compare-btn">
-                            <a class="compare add-to-compare" href="compare.html"
-                                title="Add to Compare">
-                                <i class="icon anm anm-random-r"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
-               
-                <div class="product-details text-center">
-                  
-                    <div class="product-name">
-                        <a href="short-description.html">3/4 Sleeve Kimono Dress</a>
-                    </div>
-                  
-                    <div class="product-price">
-                        <span class="price">$550.00</span>
-                    </div>
-                   
-
-                    <div class="product-review">
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star-o"></i>
-                    </div>
-                  
-                </div>
-                
-            </div>
-            <div class="col-12 item">
-             
-                <div class="product-image">
-                   
-                    <a href="short-description.html">
-                      
-                        <img class="primary blur-up lazyload"
-                            data-src="assets/images/product-images/product-image4.jpg"
-                            src="assets/images/product-images/product-image4.jpg"
-                            alt="image" title="product" />
-                       
-                        <img class="hover blur-up lazyload"
-                            data-src="assets/images/product-images/product-image4-1.jpg"
-                            src="assets/images/product-images/product-image4-1.jpg"
-                            alt="image" title="product" />
-                       
-                        <div class="product-labels"><span
-                                class="lbl on-sale">Sale</span></div>
-                      
-                    </a>
-                  
-                    <form class="variants add" action="#"
-                        onclick="window.location.href='cart.html'" method="post">
-                        <button class="btn btn-addto-cart" type="button"
-                            tabindex="0">Add To Cart</button>
-                    </form>
-                    <div class="button-set">
-                        <a href="javascript:void(0)" title="Quick View"
-                            class="quick-view-popup quick-view" data-toggle="modal"
-                            data-target="#content_quickview">
-                            <i class="icon anm anm-search-plus-r"></i>
-                        </a>
-                        <div class="wishlist-btn">
-                            <a class="wishlist add-to-wishlist" href="wishlist.html">
-                                <i class="icon anm anm-heart-l"></i>
-                            </a>
-                        </div>
-                        <div class="compare-btn">
-                            <a class="compare add-to-compare" href="compare.html"
-                                title="Add to Compare">
-                                <i class="icon anm anm-random-r"></i>
-                            </a>
-                        </div>
-                    </div>
-                  
-                </div>
-              
-                <div class="product-details text-center">
-                   
-                    <div class="product-name">
-                        <a href="short-description.html">Cape Dress</a>
-                    </div>
-                
-                    <div class="product-price">
-                        <span class="old-price">$900.00</span>
-                        <span class="price">$788.00</span>
-                    </div>
-                  
-
-                    <div class="product-review">
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star"></i>
-                        <i class="font-13 fa fa-star-o"></i>
-                        <i class="font-13 fa fa-star-o"></i>
-                    </div>
-                   
-                </div>
-             
-            </div>
-        </div>
-    </div> -->
-     
                                 </div>
                             </div>
 
@@ -1262,10 +1016,6 @@ $arr=mysqli_fetch_array($sql);
 
                         </div>
                         <!--End Related Product Slider-->
-
-                        <!--Recently Product Slider-->
-
-                        <!--End Recently Product Slider-->
                     </div>
                     <!--#ProductSection-product-template-->
                 </div>

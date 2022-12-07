@@ -34,37 +34,39 @@ include('include/config.php');
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <style>
-        
-        .head{
-               padding-top: 100px;
-               font-size: large;
-            }
-        .img3{
+        .head {
+            padding-top: 100px;
+            font-size: large;
+        }
+
+        .img3 {
             display: none;
         }
+
         @media screen and (max-width:990px) {
             .img1 {
                 display: none;
             }
-            .head{
-               padding-top: 0px;
-               font-size: small;
+
+            .head {
+                padding-top: 0px;
+                font-size: small;
             }
 
             .img2 {
                 display: none;
             }
-              .img3 {
+
+            .img3 {
                 display: block;
             }
         }
 
-        @media (max-width: 600px){
-	.img_logo{
-		width: 50% !important;
-	}
-}
-        
+        @media (max-width: 600px) {
+            .img_logo {
+                width: 50% !important;
+            }
+        }
     </style>
 </head>
 
@@ -375,7 +377,8 @@ include('include/config.php');
                         <div class="collection-grid-item">
                             <a href="" class="collection-grid-item__link">
                                 <img data-src="assets/images/collection/z1kneebrace1.jpg"
-                                    src="assets/images/collection/z1kneebrace1.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
+                                    src="assets/images/collection/z1kneebrace1.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
 
                             </a>
                         </div>
@@ -388,8 +391,9 @@ include('include/config.php');
                         </div>
                         <div class="collection-grid-item blur-up lazyloaded">
                             <a href="" class="collection-grid-item__link">
-                                <img data-src="assets/images/collection/z1kneebrace3.jpg" src="assets/images/collection/z1kneebrace3.jpg"
-                                    alt="Z1 Knee Brace" class="blur-up lazyload" />
+                                <img data-src="assets/images/collection/z1kneebrace3.jpg"
+                                    src="assets/images/collection/z1kneebrace3.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
 
                             </a>
                         </div>
@@ -404,7 +408,8 @@ include('include/config.php');
                         <div class="collection-grid-item">
                             <a href="" class="collection-grid-item__link">
                                 <img data-src="assets/images/collection/z1kneebrace5.jpg"
-                                    src="assets/images/collection/z1kneebrace5.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
+                                    src="assets/images/collection/z1kneebrace5.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
 
                             </a>
                         </div>
@@ -439,7 +444,8 @@ include('include/config.php');
                         <div class="collection-grid-item">
                             <a href="" class="collection-grid-item__link">
                                 <img data-src="assets/images/collection/z1kneebrace10.jpg"
-                                    src="assets/images/collection/z1kneebrace10.jpg" alt="Z1 Knee Brace" class="blur-up lazyload" />
+                                    src="assets/images/collection/z1kneebrace10.jpg" alt="Z1 Knee Brace"
+                                    class="blur-up lazyload" />
                             </a>
                         </div>
                     </div>
@@ -522,12 +528,12 @@ include('include/config.php');
                             <div class="container" style="display: flex;">
                                 <div class="wrap-text left text-small font-bold head">
                                     <h2 class="h2 mega-title" style="color:#ffffff">CUSTOMIZED KNEE BRACES</h2>
-                                      <div class="wrap-text text-small font-bold img3" >
-                                    <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png" style="height: 150px;"
-                                        alt="K2 Comfortline Knee Orthosis" />
+                                    <div class="wrap-text text-small font-bold img3">
+                                        <img src="assets/images/product-images/K2 Comfortline Knee Orthosis.png"
+                                            style="height: 150px;" alt="K2 Comfortline Knee Orthosis" />
 
 
-                                </div>
+                                    </div>
                                     <div class="rte-setting mega-subtitle" style="color:#ffffff">Customization is the
                                         key. In order to meet
                                         customer needs and satisfaction, customizing our healthcare products is
@@ -687,7 +693,8 @@ include('include/config.php');
                                         <div class="rte-setting">
                                             <p><?php echo $row['message'];?></p>
                                         </div>
-                                        <div class="img_logo" style="display: inline-block; padding-top: 0; width:25%; height:100px;">
+                                        <div class="img_logo"
+                                            style="display: inline-block; padding-top: 0; width:25%; height:100px;">
                                             <a href="<?php echo $row['link'];?>" target="_blank">
                                                 <img src="assets/images/amazon_logo.png" alt="Z1" title="Z1" />
                                             </a>

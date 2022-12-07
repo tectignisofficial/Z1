@@ -29,14 +29,17 @@
                     font-size: 9px;
                     color: white;
                     position: absolute;
-                    left:44px;
                     right: 0px;
                     top: 11px;
                     cursor: default;
                     line-height: 1px;
 
                 }
-
+@media screen and (max-width:768px){
+    .overlay {
+        left: 0 !important;
+    }
+}
                 .cur {
                     position: relative;
                     width: 40px;
@@ -48,34 +51,7 @@
             </style>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-10 col-sm-8 col-md-5 col-lg-4 d-flex">
-                        <form action="" method="post">
-                            <div class="currency-picker">
-                                <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
-
-                                <div id="cur">
-                                    <select name="myselect" id="select" class="" onchange="this.form.submit()">
-
-                                        <option value="INR"
-                                            <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>
-                                            INR</option>
-                                        <option value="GBP"
-                                            <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='GBP'){echo 'selected'; } } ?>>
-                                            GBP</option>
-                                        <option value="CAD"
-                                            <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='CAD'){echo 'selected'; } } ?>>
-                                            CAD</option>
-                                        <option value="USD"
-                                            <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='USD'){echo 'selected'; } } ?>>
-                                            USD</option>
-                                        <option value="AUD"
-                                            <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='AUD'){echo 'selected'; } } ?>>
-                                            AUD</option>
-                                    </select>
-                                    <div class="overlay">&#9660;</div>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 d-flex">
 
                         <!-- <div class="language-dropdown">
                       
@@ -89,19 +65,56 @@
                             <p class="top-header_middle-text"> Worldwide Express Shipping</p>
                         </div>
                     </div>
-                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al"
-                                aria-hidden="true"></i></span>
-                        <ul class="customer-links list-inline">
-                            <?php
-                        if(!isset($_SESSION['customerid'])){
-                        ?>
-                            <li><a href="login.php">Login</a></li>
-                            <li><a href="register.php">Create Account</a></li>
-                            <?php }else{ ?>
-                            <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
-                            <?php } ?>
-                        </ul>
+                    <div class="col-6 col-sm-8 col-md-4 col-lg-4 text-right">
+                        <div class="row">
+                            <div class="col-4 d-md-none d-lg-none"></div>
+                            <div class="col-3 col-md-9 pr-1">
+                                <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al"
+                                        aria-hidden="true"></i></span>
+                                <ul class="customer-links list-inline">
+                                    <?php
+                                if(!isset($_SESSION['customerid'])){
+                                ?>
+                                    <li><a href="login.php">Login</a></li>
+                                    <li><a href="register.php">Create Account</a></li>
+                                    <?php }else{ ?>
+                                    <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                            <div class="col-5 col-md-3 pr-1">
+                                <form action="" method="post" style="text-align:center" >
+                                    <div class="currency-picker">
+                                        <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
+
+                                        <div id="cur">
+                                            <select name="myselect" id="select" class="" onchange="this.form.submit()">
+
+                                                <option value="INR"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>
+                                                    INR</option>
+                                                <option value="GBP"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='GBP'){echo 'selected'; } } ?>>
+                                                    GBP</option>
+                                                <option value="CAD"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='CAD'){echo 'selected'; } } ?>>
+                                                    CAD</option>
+                                                <option value="USD"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='USD'){echo 'selected'; } } ?>>
+                                                    USD</option>
+                                                <option value="AUD"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='AUD'){echo 'selected'; } } ?>>
+                                                    AUD</option>
+                                            </select>
+                                            <div class="overlay">&#9660;</div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -117,7 +130,7 @@
                         <a href="index.php">
                             <img src="assets/images/logo.png" alt="Z1" title="Z1" />
                         </a>
-                        
+
                     </div>
                     <!--End Desktop Logo-->
                     <div class="col-2 col-sm-3 col-md-3 col-lg-8">
@@ -132,24 +145,33 @@
                         <nav class="grid__item" id="AccessibleNav">
                             <!-- for mobile -->
                             <ul id="siteNav" class="site-nav medium center hidearrow">
-                                <li class="lvl1 parent megamenu " ><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>" >Home <i
+                                <li class="lvl1 parent megamenu "><a href="index.php"
+                                        class="<?= $page == 'index.php' ? 'active':'' ?>">Home <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="about-us.php" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i
+                                <li class="lvl1 parent megamenu"><a href="about-us.php"
+                                        class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="contact-us.php" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i class="anm anm-angle-down-l"></i></a>
-                                </li>
-                                <li class="lvl1 parent megamenu"><a href="blog.php" class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
+                                <li class="lvl1 parent megamenu"><a href="contact-us.php"
+                                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="reviews.php" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews <i
+                                <li class="lvl1 parent megamenu"><a href="blog.php"
+                                        class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="videos.php" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos <i
+                                <li class="lvl1 parent megamenu"><a href="reviews.php"
+                                        class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="shop.php" class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i class="anm anm-angle-down-l"></i></a>
+                                <li class="lvl1 parent megamenu"><a href="videos.php"
+                                        class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos <i
+                                            class="anm anm-angle-down-l"></i></a>
+                                </li>
+                                <li class="lvl1 parent megamenu"><a href="shop.php"
+                                        class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i
+                                            class="anm anm-angle-down-l"></i></a>
                                 </li>
                             </ul>
                         </nav>
@@ -165,6 +187,7 @@
                     </div>
                     <!--Mobile Logo-->
                     <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+
                         <div class="site-cart">
                             <a href="cart.php" class="" title="Cart" style="font-size:20px">
                                 <i class="icon anm anm-bag-l"></i>
