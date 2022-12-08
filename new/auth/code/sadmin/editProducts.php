@@ -5,7 +5,7 @@ if(!isset($_SESSION['id'])){
 }else{
 include('../../../include/config.php');
 $eid=$_GET['eid'];
-$editSql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.id='$eid'");
+$editSql=mysqli_query($conn,"select *,products.name as products from products inner join stock on products.name=stock.product_name where products.id='$eid'");
 $editArr=mysqli_fetch_array($editSql);
 $pname=$editArr['products'];
 if(isset($_POST['updatecurrrency'])){
