@@ -60,7 +60,10 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         $images_name =$images_name.",".$filename;
 
         $sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
-        $sql=mysqli_query($conn,"UPDATE `product_image` SET `image`='[value-3]' WHERE name='$pname'");
+        if($sql1==1){
+            $sql=mysqli_query($conn,"UPDATE `product_image` SET `image`='[value-3]' WHERE name='$pname'");
+        }
+        
         
     }
 }
