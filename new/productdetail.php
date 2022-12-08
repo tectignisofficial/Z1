@@ -441,7 +441,7 @@ $arr=mysqli_fetch_array($sql);
                                         <input type="hidden" name="price" value="<?php echo $arr['price']; ?>">
                                         <input type="hidden" name="image" value="<?php echo $arr['hightlightfile']; ?>">
 
-                                        <input type="hidden" name="price1" value="<?php  if(isset($_SESSION['USD'])){ echo $arr['price'] * $_SESSION['USD'];  }else{  ?> <?php echo $arr['price'];?><?php } ?>">
+                                        <input type="hidden" name="price1" value="<?php  echo $arr['price'] ?> ">
                                        
 
                                         <input type="hidden" name="producticon" value="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>">

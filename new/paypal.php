@@ -3,6 +3,12 @@
 <?php
 session_start();
 include('include/config.php');
+$total_price='';
+$address_id=$_SESSION['addressid'];
+$sql=mysqli_query($conn,"select * from shipping_address where id='$address_id'");
+$arr=mysqli_fetch_array($sql);
+$country=$arr['country'];
+
 /* 
  * PayPal and database configuration 
  */ 
@@ -17,8 +23,8 @@ $url1=$_SERVER['SERVER_NAME'];
 define('PAYPAL_ID', 'sb-vbt0e17808320@business.example.com'); 
 define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
  
-define('PAYPAL_RETURN_URL', 'http://localhost:8000/Z1/success.php'); 
-define('PAYPAL_CANCEL_URL', 'http://localhost:8000/Z1/index.php'); 
+define('PAYPAL_RETURN_URL', 'http://localhost:8000/Z1/new/success.php'); 
+define('PAYPAL_CANCEL_URL', 'http://localhost:8000/Z1/new/index.php'); 
 define('PAYPAL_CURRENCY', $_SESSION['myselect']); 
  
 // Change not required 
@@ -90,7 +96,18 @@ define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cg
                     <input type="hidden" name="business" id="paypal_id" value="<?php echo PAYPAL_ID; ?>">
 					
                     <!-- Important For PayPal Checkout -->
-                    <input type="hidden" value="<?php echo $_SESSION['total']; ?>" name="amount">
+                    <input type="hidden" value="<?php 
+                    if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
+                        if(isset($_SESSION['USD'])){
+                           $totalprice =$_SESSION['total'] * $_SESSION['USD'].'';
+                           $priceship1=200*$_SESSION['USD'];
+                           $price=$totalprice+$priceship1;
+                           echo $price;
+                        }
+}
+else{
+    echo $_SESSION['total'] * $_SESSION['USD'];
+} ?>" name="amount">
                     <input type="hidden" name="currency_code" id="currency" value="<?php echo PAYPAL_CURRENCY; ?>">
 					
                     <!-- Specify a Buy Now button. -->
@@ -136,7 +153,7 @@ define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cg
 
                             </div>
 
-                            <h4 class="billing-address">Product details</h4>
+                            <h5 class="billing-address"><b>Product details</b></h5>
                             <table class=" table-responsive bg-white table table-bordered table-hover text-center">
                                 <thead>
                                     <tr>
@@ -218,17 +235,45 @@ define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cg
                              
                            ?>
                                          <?php } ?>
-                                            <tr>
-                                                <td colspan="4">Subtotal</td>
-                                                <td><?php
-                                                 if(isset($_SESSION['USD'])){
-                                                    echo '<i class=
-                                                    "'.$_SESSION['icon'].'"></i>'.number_format($total,2);  
+                                         <tr>
+                                        <td colspan="4" class="text-right">Shipping Charge</td>
+                                        <td>
+                                            <?php
+                                                if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
+                                                    if(isset($_SESSION['USD'])){
+                                                        $priceship=200*$_SESSION['USD'];
+                                                        echo '<i class=
+                                                        "'.$_SESSION['icon'].'"></i> '. $priceship;
+                                                    }
+                                                    else{
+                                                        echo '<i class="fa fa-inr"></i> 200';
+                                                    }
                                                 }
                                                 else{
-                                                    echo number_format($total,2); }
+                                                    echo 'Free Delivery';
+                                                }
+                                                    ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">Subtotal</td>
+                                        <td>
+
+                                            <?php
+                                                 if(isset($_SESSION['USD'])){
+                                                    echo '<i class=
+                                                    "'.$_SESSION['icon'].'"></i>';  
+                                                }
+                                                else{ echo '<i class="fa fa-inr"></i>'; }
+                                                if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
+                                                    $priceship1=200*$_SESSION['USD'];
+                                                    $price=$total+$priceship1;
+                                                    echo number_format($price,2);
+                                                }
+                                                else{
+                                                    echo number_format($total,2);
+                                                }
                                                  ?></td>
-                                            </tr>
+                                    </tr>
                                 </tbody>
                             </table>
 

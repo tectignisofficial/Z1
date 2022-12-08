@@ -30,6 +30,7 @@
                     color: white;
                     position: absolute;
                     right: 0px;
+                    left:0;
                     top: 11px;
                     cursor: default;
                     line-height: 1px;
@@ -88,7 +89,7 @@
                                         <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
 
                                         <div id="cur">
-                                            <select name="myselect" id="select" class="" onchange="this.form.submit()">
+                                            <select name="myselect" id="select" class="text-center" onchange="this.form.submit()">
 
                                                 <option value="INR"
                                                     <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>
