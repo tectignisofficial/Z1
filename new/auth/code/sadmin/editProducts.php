@@ -7,7 +7,7 @@ include('../../../include/config.php');
 $eid=$_GET['eid'];
 $editSql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.id='$eid'");
 $editArr=mysqli_fetch_array($editSql);
-$pname=$editArr['name'];
+$pname=$editArr['products'];
 if(isset($_POST['updatecurrrency'])){
     $stock=$_POST['updaterate'];
     $id=$_POST['id'];
