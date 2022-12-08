@@ -1,10 +1,17 @@
 <?php
 session_start();
 include('../include/config.php');
-
-
 ?>
 <?php
+$max_total='';
+$address_id=$_SESSION['addressid'];
+$sql=mysqli_query($conn,"select * from shipping_address where id='$address_id'");
+$arr=mysqli_fetch_array($sql);
+$state=$arr['country'];
+if($state != 'India' || 'Canada' || 'United States' || 'United Kingdom'){
+    $max_total=$_SESSION['total'] * 200;
+}
+
 include('razconf.php');
 include('razorpay-php/Razorpay.php');
 use Razorpay\Api\Api;
@@ -19,7 +26,7 @@ $id=$_SESSION['customerid'];
 $name=$_SESSION['name'];
 $email=$_SESSION['email'];
 $phone=$_SESSION['phone'];
-$amount=$_SESSION['total'];
+$amount=$max_total;
 
 $orderData = [
     'receipt'         => 3456,

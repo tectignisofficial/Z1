@@ -337,17 +337,17 @@ if(isset($_POST['doneAddress'])){
                                             <?php } ?>
                                         </tbody>
                                         <tfoot class="font-weight-600">
-                                            <tr>
+                                            <!-- <tr>
                                                 <td colspan="4" class="text-right">Shipping </td>
                                                 <td><i
                                                         class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i>
                                                     50.00</td>
-                                            </tr>
+                                            </tr> -->
                                             <tr>
                                                 <td colspan="4" class="text-right">Total</td>
                                                 <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
                             echo "<i class='fa fa-inr'></i> ";
-                        }  echo $total+50;?></td>
+                        }  echo $total;?></td>
                                             </tr>
                                         </tfoot>
                                     </table>
