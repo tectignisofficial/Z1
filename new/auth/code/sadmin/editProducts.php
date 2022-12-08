@@ -59,7 +59,9 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
 
+        $sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
         $sql=mysqli_query($conn,"UPDATE `product_image` SET `image`='[value-3]' WHERE name='$pname'");
+        
     }
 }
 
@@ -263,7 +265,7 @@ while($arr=mysqli_fetch_array($sql)){
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" value="<?php echo $editArr['name']; ?>" required/>
+                                            placeholder="Name" value="<?php echo $editArr['products']; ?>" required/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="desc">Description</label>
@@ -392,7 +394,7 @@ while($arr=mysqli_fetch_array($sql)){
                                                 size or color.</p>
                                         </div>
                                         <?php
-                                        $productname=$editArr['name'];
+                                        $productname=$editArr['products'];
                                         $query = mysqli_query($conn,"SELECT * from stock WHERE product_name ='$productname'");
                                         while($arr=mysqli_fetch_array($query)){
                                         ?>
