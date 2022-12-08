@@ -91,17 +91,17 @@ include('include/header.php');
                 <div class="main">
                     <div class="masterRow">
                         <li>
-                            <img src="img/main1.webp" onclick="slider('img/product1.webp')" />
+                            <img src="img/main1.webp" class="onclick" onclick="slider('img/product1.webp')" />
                         </li>
                     </div>
                     <div class="masterRow row2">
                         <li>
-                            <img src="img/main2.webp" onclick="slider('img/product2.webp')" />
+                            <img src="img/main2.webp" class="" onclick="slider('img/product2.webp')" />
                         </li>
                     </div>
                     <div class="masterRow row3">
                         <li>
-                            <img src="img/main3.webp" onclick="slider('img/product3.webp')" />
+                            <img src="img/main3.webp" class="" onclick="slider('img/product3.webp')" />
                         </li>
                     </div>
                 </div>
@@ -773,17 +773,25 @@ include('include/header.php');
         }
       });
     </script>
-    <script type="text/javascript">
-      function slider(anything) {
-        document.querySelector(".one").src = anything;
-      }
-      let menu = document.querySelector("#menu-icon");
-      let navbar = document.querySelector(".navbar");
+    <script>
+      // function slider(anything) {
+      //   document.querySelector(".one").src = anything;
+      // }
 
-      menu.onclick = () => {
-        menu.classList.toggle("bx-x");
-        navbar.classList.toggle("open");
-      };
+      $(document).ready(function(){
+        $('.onclick').click(function(){
+          // let click=$(this).src();
+          // $('.one').src(click);
+          alert('gff');
+        })
+      })
+      // let menu = document.querySelector("#menu-icon");
+      // let navbar = document.querySelector(".navbar");
+
+      // menu.onclick = () => {
+      //   menu.classList.toggle("bx-x");
+      //   navbar.classList.toggle("open");
+      // };
     </script>
 
 </body>
