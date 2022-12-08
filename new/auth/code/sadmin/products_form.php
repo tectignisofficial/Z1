@@ -40,6 +40,8 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         $filename = $_FILES["myfile"]["name"][$key];
         move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.$filename.",";
+
+        $sql=mysqli_query($conn,"INSERT INTO `product_image`(`name`, `image`) VALUES ('$name','$filename')");
         
     }
 }
@@ -52,7 +54,7 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
     }
    
 
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock_status`) VALUES ('$images_name','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock1')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock_status`) VALUES ('null','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock1')");
 
 if($sql==1){
     echo '<script>alert("sucessfully submitted");</script>';

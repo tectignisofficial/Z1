@@ -133,7 +133,7 @@ $arr=mysqli_fetch_array($sql);
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <style>
 
     @media (max-width: 600px){
@@ -262,7 +262,11 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    .imagelight1{
+    /* .imagelight1{
+            display:none !important;
+        } */
+
+        .pswp__item>.pswp__zoom-wrap>.pswp__error-msg{
             display:none !important;
         }
         
@@ -297,44 +301,41 @@ $arr=mysqli_fetch_array($sql);
                                 <div class="product-details-img">
                                     <div class="product-thumb">
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                            <?php
-
-                                            $images = $arr['image'];
-                                            $images = explode(',',$images);
-                                            $count=-5;
-                                            $countno=1;
                                       
-                                            foreach($images AS $image){
-                                                echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image.'"
-                                                data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image.'"
+                                            <?php
+                                            $count=-10;
+                                            $countno=1;
+                                            echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                            class="slick-slide slick-cloned " data-slick-index="'.$count.'"
+                                            aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload"
+                                                data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
+                                                alt="" />
+                                            </a>';
+                                            $imagequery=mysqli_query($conn,"select * from product_image where name='$productName'");
+                                            while($image=mysqli_fetch_array($imagequery)){
+                                                echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$image['image'].'"
+                                                data-zoom-image="auth/code/sadmin/image/product_image_check/'.$image['image'].'"
                                                 class="slick-slide slick-cloned imagelight'.$countno.'" data-slick-index="'.$count.' "
                                                 aria-hidden="true" tabindex="-1" id="">
                                                 <img class="blur-up lazyload"
-                                                    data-src="auth/code/sadmin/image/product_image_check/'.$image.'"
-                                                    src="auth/code/sadmin/image/product_image_check/'.$image.'"
+                                                    data-src="auth/code/sadmin/image/product_image_check/'.$image['image'].'"
+                                                    src="auth/code/sadmin/image/product_image_check/'.$image['image'].'"
                                                     alt="" />
                                             </a>';
                                             $count++;
                                             $countno++;
                                             }
 
-                                            // echo '<a data-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            // data-zoom-image="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            // class="slick-slide slick-cloned " data-slick-index="'.$count.'"
-                                            // aria-hidden="true" tabindex="-1">
-                                            // <img class="blur-up lazyload"
-                                            //     data-src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            //     src="auth/code/sadmin/image/product_image_check/'.$arr['hightlightfile'].'"
-                                            //     alt="" />
-                                            // </a>';
+                                          
                                             ?>
 
                                         </div>
                                     </div>
                                     <div class="zoompro-wrap product-zoom-right pl-20">
                                         <div class="zoompro-span">
-
-
                                             <img class="blur-up lazyload zoompro"
                                                 data-zoom-image="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                 alt=""
@@ -352,13 +353,16 @@ $arr=mysqli_fetch_array($sql);
                                     </div>
                                     <div class="lightboximages">
                                         <?php
-                                        $image = $arr['image'];
-                                        $image = explode(',',$image);
+                                         $imagequery=mysqli_query($conn,"select * from product_image where name='$productName'");
                                         $countno1=1;
-                                        foreach($image AS $imagess){
-                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $imagess.'" class="imagelight'.$countno1.'"
+                                        echo ' <a href="auth/code/sadmin/image/product_image_check/'. $arr['hightlightfile'].'" class="imagelight'.$countno1.'"
+                                        data-size="1462x2048" ></a>';
+                                        while($image=mysqli_fetch_array($imagequery)){
+                                            echo ' <a href="auth/code/sadmin/image/product_image_check/'. $image['image'].'" class="imagelight'.$countno1.'"
                                             data-size="1462x2048" ></a>';
-                                            $countno1++; }
+                                            $countno1++;   }
+                                           ?> 
+                                       <?php  
                                         ?>
 
                                     </div>
@@ -1286,7 +1290,8 @@ $arr=mysqli_fetch_array($sql);
                             $('.sizese').html(size);
                             
                         }
-                    })
+                    });
+                    
                 });
                 $("#sizequa").change(function () {
                     let val = $("#sizequa").html();
@@ -1296,7 +1301,8 @@ $arr=mysqli_fetch_array($sql);
                 });
             })
         </script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    
 </body>
 
 <!-- belle/product-layout-1.html   11 Nov 2019 12:42:26 GMT -->

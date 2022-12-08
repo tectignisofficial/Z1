@@ -7,7 +7,7 @@ include('../../../include/config.php');
 $eid=$_GET['eid'];
 $editSql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.id='$eid'");
 $editArr=mysqli_fetch_array($editSql);
-
+$pname=$editArr['name'];
 if(isset($_POST['updatecurrrency'])){
     $stock=$_POST['updaterate'];
     $id=$_POST['id'];
@@ -58,14 +58,16 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         $filename = $_FILES["myfile"]["name"][$key];
         move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
+
+        $sql=mysqli_query($conn,"UPDATE `product_image` SET `image`='[value-3]' WHERE name='$pname'");
     }
 }
 
-if(empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
+// if(empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
 
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
-}
-else if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["myfile"]["tmp_name"][$key]) && empty($_POST['myfilehide']) || !empty($_FILES["myfile"]["tmp_name"][$key]) && !empty($_POST['myfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
+//     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+// }
+if(!empty($_FILES["hightlightfile"]["tmp_name"][$key]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"][$key]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"][$key]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"][$key]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"][$key]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"][$key]) && !empty($_POST['sizefilehide'])){
     $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
 }
 else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide'])){
@@ -290,11 +292,10 @@ while($arr=mysqli_fetch_array($sql)){
 
                                         <div class="upload-btn-wrapper">
                                         <?php
-                                        $image=explode(',',$editArr['image']);
-                                        $count=-5;
-                                        foreach($image as $images){
-                                            echo '<img src="image/product_image_check/'. $images .'" alt="" width="50" height="50">';
-                                            $count++; }
+                                        $imagequery=mysqli_query($conn,"select * from product_image where name='$pname'");
+                                        while($image=mysqli_fetch_array($imagequery)){
+                                            echo '<img src="image/product_image_check/'. $image['image'] .'" alt="" width="50" height="50">';
+                                             }
                                         ?>
                                         
                                         <input type="hidden" name="myfilehide" value="<?php echo $editArr['image']; ?>">
