@@ -52,6 +52,8 @@ move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
 move_uploaded_file($_FILES['hightlightfile']['tmp_name'],$loc.$hightlightfile);
 
 $images_name='';
+$sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
+
 foreach ($_FILES["myfile"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
         $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
@@ -59,7 +61,6 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
         move_uploaded_file($tmp_name, $loc.$filename);
         $images_name =$images_name.",".$filename;
 
-        $sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
             $sql=mysqli_query($conn,"INSERT INTO `product_image`(`name`, `image`) VALUES ('$pname','$filename')");
         
         
