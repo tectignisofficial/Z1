@@ -71,7 +71,8 @@ include('include/config.php');
       <?php
 include('include/header.php');
 ?>
-      <div id="uc_grid_1_40497_row_1" class="uc-grid-row">
+      <div id="uc_grid_1_40497_row_1" class="uc-grid-row" style="
+    padding-bottom: unset;">
         <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'>
           <!-- start Css Animated Squares Background -->
           <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
