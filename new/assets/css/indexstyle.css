@@ -1,7 +1,7 @@
 
     #uc_grid_1_40497 .uc-grid-row {
         padding-top: 30px;
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
       }
   
       #uc_grid_1_40497 .uc-grid-row .uc-grid-row-container {
@@ -12,7 +12,7 @@
   
       #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_1 {
         padding-top: 145px;
-        padding-bottom: 200px;
+        /* padding-bottom: 200px; */
         /* background-color: #000000; */
       }
   
