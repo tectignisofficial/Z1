@@ -96,16 +96,9 @@ session_start();
                                     <div class="row-text" style="margin-left:0px">
                                         <h2 class="h1"><b>WE ARE CERTIFIED BY</b></h2>
                                         <div class="rte-setting featured-row__subtext" style="font-size:15px">
-                                            <p>We are certified by ISO 9001:2015. All the products manufactured at
-                                                Zodiacal Overseas Pvt. Ltd. hold the CE marking on all our manufactured
-                                                products which ensures docility of safety, wellness, as well as
-                                                environmentally friendly models for all the products, made and sold in
-                                                European regions. We are also certified by FDA, The Food and Drug
-                                                Administration of the United States Department of Health and Human
-                                                Services. </p>
+                                            <p>We are certified by ISO 9001:2015. All the products manufactured at Zodiacal Overseas Pvt. Ltd. are CE certified products which ensures docility of safety, wellness, as well as environmentally friendly models for all the products, made and sold in European regions. We are also certified by FDA, The Food and Drug Administration of the United States Department of Health and Human Services. </p>
                                             <p>Our braces and various other healthcare products are of the leading quality. We at Z1 guarantee on taking into consideration the needs of
-                                                our customers and meeting them, providing them complete satisfaction by
-                                                regular checks and up-gradation in the various processes involved.</p>
+                                                our customers and meeting them, providing them complete satisfaction by regular checks and up-gradation in the various processes involved.</p>
                                         </div>
 
                                     </div>

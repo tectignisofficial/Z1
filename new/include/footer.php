@@ -105,11 +105,18 @@ $facebook=mysqli_fetch_array($sql);
                          </ul>
                      </div>
                      <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
-                         <h4 class="h4">Contact Us</h4>
+                    
                          <ul class="addressFooter">
+                            <h4 class="h4">Corporate Office Address</h4>
                              <li><i class="icon anm anm-map-marker-al"></i>
-                                 <p>D-114, 5th road Shakti Nagar,<br> Paota c road Jodhpur, Rajasthan 342010</p>
+                                 <p>D-114, 5th road Shakti Nagar,<br> Paotac road Jodhpur, Rajasthan, India - 342010</p>
                              </li>
+                             <h4 class="h4">Branch Office Address</h4>
+                            <li><i class="icon anm anm-map-marker-al"></i>
+                                 <p>Plot No. 23, Park Residency Society,<br> Near Indana Hotel Jodhpur, Rajasthan, India - 342015</p>
+                             </li>
+
+
                              <li class="phone"><i class="icon anm anm-phone-s"></i>
                                  <p>+91 7300044197</p>
                              </li>
@@ -140,7 +147,7 @@ $facebook=mysqli_fetch_array($sql);
                              <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
                              <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
                          </ul>
-                         <p>Developed By: <a href="tectignis.in" target="_blank">Tectignis IT Solutions.</a></p>
+                         <p>Developed By: <a href="tectignis.in" target="_blank">Tectignis IT Solutions</a></p>
                      </div>
                      <!--End Footer Payment Icon-->
                  </div>

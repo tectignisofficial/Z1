@@ -78,7 +78,7 @@ session_start();
             	<div class="col-12">
 					<p><strong></strong></p>
                     <h2>Age of Consent</h2>
-                    <p>By using tis site, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you consent to any of your minor dependents using this site.</p> 
+                    <p>By using this site, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you consent to any of your minor dependents using this site.</p> 
                 </div>
             </div>
 			

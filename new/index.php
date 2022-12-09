@@ -437,15 +437,15 @@ include('include/header.php');
               <div class="uc-grid-col-inner">
                 <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
                   style="margin-bottom:30px;">
-                  <!-- start Play Button -->
+                  <!-- Youtube Video Company Overview -->
 
-                  <div style="text-align:left;" id="uc_blox_play_button286402">
+                  <!-- <div style="text-align:left;" id="uc_blox_play_button286402">
                     <a href="https://www.youtube.com/watch?v=h0oStRoxUqw" data-lity>
                       <span>
                         <i class="fa fa-play"> </i>
                       </span>
                     </a>
-                  </div>
+                  </div> -->
                   <!-- end Play Button -->
                 </div>
                 <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_2" class='uc-grid-col-addon'>
@@ -453,8 +453,7 @@ include('include/header.php');
 
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-169252194065"
-                      style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">CUSTOMIZED KNEE
-                      BRACES</span>
+                      style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Why Z1 knee braces?</span>
                   </div>
                   <!-- end Title -->
                 </div>
@@ -464,15 +463,7 @@ include('include/header.php');
 
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-172745881977"
-                      style="font-size:14px;line-height:1.7em;color:#ffffff;">Customization is the key. In order to meet
-                      customer needs and satisfaction, customizing our healthcare products is necessary. One Size
-                      doesn’t
-                      fit all. Neither you nor us. Each and every customised Knee Braces are designed in such a unique
-                      way
-                      to fit you perfectly. Our custom Knee Braces are built to keep up with every move you make. We
-                      custom make your braces with durable materials and quality craftsmanship with extra protection and
-                      that proper support and comfort to ensure a speedy recovery. Now, Rehab, Train or Play but with
-                      confidence.</span>
+                      style="font-size:14px;line-height:1.7em;color:#ffffff;">Customization is the key. In order to meet customer needs and satisfaction, customizing our healthcare products is necessary. All of us are different shapes and sizes, so a customized size is what everyone needs. We specially customize knee braces as per your thigh and calf measurement. It will help you to recover faster. We custom make your braces with durable materials and quality craftsmanship with extra protection and that proper support and comfort to ensure a speedy recovery. </span>
                   </div>
                   <!-- end Paragraph -->
                 </div>
@@ -480,8 +471,8 @@ include('include/header.php');
                   <!-- start Button -->
 
                   <div style="text-align:left;">
-                    <a href="shop.php" id="uc_solid_rounded_button314790" target="_self"><span
-                        class="uc-style-185694847031" style="font-size:12px;">SHOP NOW</span></a>
+                    <a href="about-us.php" id="uc_solid_rounded_button314790" target="_self"><span
+                        class="uc-style-185694847031" style="font-size:12px;">About us</span></a>
                   </div>
                   <!-- end Button -->
                 </div>
@@ -522,7 +513,7 @@ include('include/header.php');
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">At Z1, you can find a
                       variety of customized knee braces according to customers need with high-quality material at very
-                      affordable prices providing online delivery options to Buy Knee Brace in USA, making the buyers
+                      affordable prices providing online delivery option to buy knee braces worldwide., making the buyers
                       happy and comfortable while using them.</span>
                   </div>
                   <!-- end Paragraph -->
