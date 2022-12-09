@@ -15,16 +15,17 @@ if(!isset($_POST['option1'])){
     echo "<script>alert('please select size');</script>";
 }
 else{
- 
-if(isset($_SESSION['shopping_cart'])){
     $size=$_POST['option1'];
     $qua=$_POST['quantity'];
     $sql=mysqli_query($conn,"select * from stock where product_name='$productName' AND value='$size'");
     $arr=mysqli_fetch_array($sql);
     $stock=$arr['stock'] ?? NULL;
+
     if($qua > $stock){
         echo "<script>alert('Only ".$stock." or less quantities allowed');</script>";
     }else{
+if(isset($_SESSION['shopping_cart'])){
+   
 $item_array_id=array_column($_SESSION['shopping_cart'], "name");
 if(!in_array($_POST['option1'],$item_array_id)){
     $count=count($_SESSION['shopping_cart']);
@@ -43,7 +44,6 @@ else{
     echo "<script>alert('already Added');</script>";
     header('location:productdetail.php?name='.$productName);
 }
-    }
 }else{
     $item_arr=array(
         'itemid'   => $_POST['productid'],
@@ -55,7 +55,7 @@ else{
     );
     $_SESSION['shopping_cart'][0] = $item_arr;
 }
-
+    }
 }
 }
 
@@ -301,7 +301,6 @@ $arr=mysqli_fetch_array($sql);
                                 <div class="product-details-img">
                                     <div class="product-thumb">
                                         <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                      
                                             <?php
                                             $count=-10;
                                             $countno=1;
@@ -328,10 +327,7 @@ $arr=mysqli_fetch_array($sql);
                                             $count++;
                                             $countno++;
                                             }
-
-                                          
                                             ?>
-
                                         </div>
                                     </div>
                                     <div class="zoompro-wrap product-zoom-right pl-20">
@@ -396,7 +392,7 @@ $arr=mysqli_fetch_array($sql);
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD'],2).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price'],2);?>
                                                     <?php } ?></span>
                                             </span>
 
@@ -741,8 +737,6 @@ $arr=mysqli_fetch_array($sql);
                                                             <h3 class="spr-review-header-title">
                                                                 <?php echo $fetchreview['name']; ?>
                                                             </h3>
-                                                            <!-- <span class="spr-review-header-byline"><strong>dsacc</strong> on
-                                                            <strong>Apr 09, 2019</strong></span> -->
                                                         </div>
                                                         <div class="spr-review-content">
                                                             <p class="spr-review-content-body">
@@ -758,8 +752,6 @@ $arr=mysqli_fetch_array($sql);
 
                                                     </div>
                                                     <?php } ?>
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -767,100 +759,6 @@ $arr=mysqli_fetch_array($sql);
                                 </div>
 
                                 <div id="tab3" class="tab-content">
-                                    <!-- <h3>WOMEN'S BODY SIZING CHART</h3>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <th>Size</th>
-                                            <th>XS</th>
-                                            <th>S</th>
-                                            <th>M</th>
-                                            <th>L</th>
-                                            <th>XL</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Chest</td>
-                                            <td>31" - 33"</td>
-                                            <td>33" - 35"</td>
-                                            <td>35" - 37"</td>
-                                            <td>37" - 39"</td>
-                                            <td>39" - 42"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Waist</td>
-                                            <td>24" - 26"</td>
-                                            <td>26" - 28"</td>
-                                            <td>28" - 30"</td>
-                                            <td>30" - 32"</td>
-                                            <td>32" - 35"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hip</td>
-                                            <td>34" - 36"</td>
-                                            <td>36" - 38"</td>
-                                            <td>38" - 40"</td>
-                                            <td>40" - 42"</td>
-                                            <td>42" - 44"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Regular inseam</td>
-                                            <td>30"</td>
-                                            <td>30½"</td>
-                                            <td>31"</td>
-                                            <td>31½"</td>
-                                            <td>32"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Long (Tall) Inseam</td>
-                                            <td>31½"</td>
-                                            <td>32"</td>
-                                            <td>32½"</td>
-                                            <td>33"</td>
-                                            <td>33½"</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <h3>MEN'S BODY SIZING CHART</h3>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <th>Size</th>
-                                            <th>XS</th>
-                                            <th>S</th>
-                                            <th>M</th>
-                                            <th>L</th>
-                                            <th>XL</th>
-                                            <th>XXL</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Chest</td>
-                                            <td>33" - 36"</td>
-                                            <td>36" - 39"</td>
-                                            <td>39" - 41"</td>
-                                            <td>41" - 43"</td>
-                                            <td>43" - 46"</td>
-                                            <td>46" - 49"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Waist</td>
-                                            <td>27" - 30"</td>
-                                            <td>30" - 33"</td>
-                                            <td>33" - 35"</td>
-                                            <td>36" - 38"</td>
-                                            <td>38" - 42"</td>
-                                            <td>42" - 45"</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hip</td>
-                                            <td>33" - 36"</td>
-                                            <td>36" - 39"</td>
-                                            <td>39" - 41"</td>
-                                            <td>41" - 43"</td>
-                                            <td>43" - 46"</td>
-                                            <td>46" - 49"</td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
                                     <div class="text-center">
                                         <img src="auth/code/sadmin/image/product_image_check/<?php echo $arr['sizefile'] ?>"
                                             alt="" />
@@ -947,7 +845,7 @@ $arr=mysqli_fetch_array($sql);
                                                         <!-- End hover image -->
                                                         <!-- product label -->
                                                         <?php $label=$arr['label'];
-                                            if($label!=''){ ?>
+                                                        if($label!=''){ ?>
                                                         <div class="product-labels rectangular"><span
                                                                 class="lbl pr-label2"><?php echo $arr['label'];?></span>
                                                         </div>
@@ -967,7 +865,6 @@ $arr=mysqli_fetch_array($sql);
                                                             data-toggle="modal" data-target="#content_quickview">
                                                             <i class="icon anm anm-search-plus-r"></i>
                                                         </a>
-
                                                     </div>
                                                     <!-- end product button -->
                                                 </div>
@@ -987,7 +884,7 @@ $arr=mysqli_fetch_array($sql);
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo $arr['price'];?>
+                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price'],2) ;?>
                                                             <?php } ?></span>
                                                     </div>
                                                     <!-- End product price -->

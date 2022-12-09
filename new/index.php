@@ -38,12 +38,11 @@ include('include/config.php');
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/z1style.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-  <!-- or -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" /> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/indexstyle.css">
@@ -75,7 +74,7 @@ include('include/header.php');
     padding-bottom: unset;">
         <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'>
           <!-- start Css Animated Squares Background -->
-          <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -87,24 +86,24 @@ include('include/header.php');
                   alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
+                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
                   alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
+                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
                   alt="Third slide">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
-            </a>
-          </div> -->
-          <div class="slideshow slideshow-wrapper pb-section">
+            </a> -->
+          </div>
+          <!-- <div class="slideshow slideshow-wrapper pb-section">
             <div class="home-slideshow">
               <div class="slide">
                 <div class="blur-up lazyload">
@@ -131,7 +130,7 @@ include('include/header.php');
               </div>
 
             </div>
-          </div>
+          </div> -->
           <!-- <div id='uc_grid_1_40497_row_1_container_1' class="uc-grid-row-container">
           <div id="uc_grid_1_40497_row_1_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
             style="padding-right:80px;">
@@ -454,7 +453,8 @@ include('include/header.php');
 
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-169252194065"
-                      style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Why Z1 knee braces?</span>
+                      style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Why Z1 knee
+                      braces?</span>
                   </div>
                   <!-- end Title -->
                 </div>
@@ -464,7 +464,12 @@ include('include/header.php');
 
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-172745881977"
-                      style="font-size:14px;line-height:1.7em;color:#ffffff;">Customization is the key. In order to meet customer needs and satisfaction, customizing our healthcare products is necessary. All of us are different shapes and sizes, so a customized size is what everyone needs. We specially customize knee braces as per your thigh and calf measurement. It will help you to recover faster. We custom make your braces with durable materials and quality craftsmanship with extra protection and that proper support and comfort to ensure a speedy recovery. </span>
+                      style="font-size:14px;line-height:1.7em;color:#ffffff;">Customization is the key. In order to meet
+                      customer needs and satisfaction, customizing our healthcare products is necessary. All of us are
+                      different shapes and sizes, so a customized size is what everyone needs. We specially customize
+                      knee braces as per your thigh and calf measurement. It will help you to recover faster. We custom
+                      make your braces with durable materials and quality craftsmanship with extra protection and that
+                      proper support and comfort to ensure a speedy recovery. </span>
                   </div>
                   <!-- end Paragraph -->
                 </div>
@@ -514,7 +519,8 @@ include('include/header.php');
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                     <span class="uc-style-209018488809" style="font-size:14px;line-height:1.7em;">At Z1, you can find a
                       variety of customized knee braces according to customers need with high-quality material at very
-                      affordable prices providing online delivery option to buy knee braces worldwide., making the buyers
+                      affordable prices providing online delivery option to buy knee braces worldwide., making the
+                      buyers
                       happy and comfortable while using them.</span>
                   </div>
                   <!-- end Paragraph -->
@@ -807,42 +813,42 @@ include('include/header.php');
       <script src="assets/js/main.js"></script>
       <!--For Newsletter Popup-->
       <script>
-        jQuery(document).ready(function () {
-          jQuery('.closepopup').on('click', function () {
-            jQuery('#popup-container').fadeOut();
-            jQuery('#modalOverly').fadeOut();
-          });
+        // jQuery(document).ready(function () {
+        //   jQuery('.closepopup').on('click', function () {
+        //     jQuery('#popup-container').fadeOut();
+        //     jQuery('#modalOverly').fadeOut();
+        //   });
 
-          var visits = jQuery.cookie('visits') || 0;
-          visits++;
-          jQuery.cookie('visits', visits, {
-            expires: 1,
-            path: '/'
-          });
-          console.debug(jQuery.cookie('visits'));
-          if (jQuery.cookie('visits') > 1) {
-            jQuery('#modalOverly').hide();
-            jQuery('#popup-container').hide();
-          } else {
-            var pageHeight = jQuery(document).height();
-            jQuery('<div id="modalOverly"></div>').insertBefore('body');
-            jQuery('#modalOverly').css("height", pageHeight);
-            jQuery('#popup-container').show();
-          }
-          if (jQuery.cookie('noShowWelcome')) {
-            jQuery('#popup-container').hide();
-            jQuery('#active-popup').hide();
-          }
-        });
+        //   var visits = jQuery.cookie('visits') || 0;
+        //   visits++;
+        //   jQuery.cookie('visits', visits, {
+        //     expires: 1,
+        //     path: '/'
+        //   });
+        //   console.debug(jQuery.cookie('visits'));
+        //   if (jQuery.cookie('visits') > 1) {
+        //     jQuery('#modalOverly').hide();
+        //     jQuery('#popup-container').hide();
+        //   } else {
+        //     var pageHeight = jQuery(document).height();
+        //     jQuery('<div id="modalOverly"></div>').insertBefore('body');
+        //     jQuery('#modalOverly').css("height", pageHeight);
+        //     jQuery('#popup-container').show();
+        //   }
+        //   if (jQuery.cookie('noShowWelcome')) {
+        //     jQuery('#popup-container').hide();
+        //     jQuery('#active-popup').hide();
+        //   }
+        // });
 
-        jQuery(document).mouseup(function (e) {
-          var container = jQuery('#popup-container');
-          if (!container.is(e.target) && container.has(e.target).length === 0) {
-            container.fadeOut();
-            jQuery('#modalOverly').fadeIn(200);
-            jQuery('#modalOverly').hide();
-          }
-        });
+        // jQuery(document).mouseup(function (e) {
+        //   var container = jQuery('#popup-container');
+        //   if (!container.is(e.target) && container.has(e.target).length === 0) {
+        //     container.fadeOut();
+        //     jQuery('#modalOverly').fadeIn(200);
+        //     jQuery('#modalOverly').hide();
+        //   }
+        // });
       </script>
       <script>
         function slider(anything) {

@@ -72,7 +72,12 @@ if(isset($_POST["changepassword"])){
         $notes=mysqli_real_escape_string($conn,$_POST['notes']);
         $id=$_POST['id'];
         
-        $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+        $checksql=mysqli_query($conn,"select * from shipping_address");
+        if(mysqli_num_rows($checksql)==0){
+            $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`,`set_default`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id','1')");
+        }else{
+            $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+        }
         }
         else if($customerName == 'Billing'){
             $fullName=mysqli_real_escape_string($conn,$_POST['fullName']) ?? null;
@@ -86,8 +91,13 @@ if(isset($_POST["changepassword"])){
             $landmark=mysqli_real_escape_string($conn,$_POST['landmark']);
             $notes=mysqli_real_escape_string($conn,$_POST['notes']);
             $id=$_POST['id'];
-            
-            $sql=mysqli_query($conn,"INSERT INTO `billing_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+
+            $checksql=mysqli_query($conn,"select * from billing_address");
+            if(mysqli_num_rows($checksql)==0){
+            $sql=mysqli_query($conn,"INSERT INTO `billing_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`,`set_default`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id','1')");
+            }else{
+                $sql=mysqli_query($conn,"INSERT INTO `billing_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+            }
         }
     
     }
@@ -115,7 +125,19 @@ if(isset($_POST["changepassword"])){
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="assets/js/countrystatecity.js?v2"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        .modal {
+            overflow-y: auto !important;
+        }
 
+        label {
+            text-align: start !important
+        }
+
+        p {
+            text-transform: capitalize;
+        }
+    </style>
 </head>
 
 <body class="page-template belle">
@@ -279,24 +301,48 @@ if(isset($_POST["changepassword"])){
                             <div class="row" style="float:right" data-target="#content" data-toggle="modal">
                                 <button class="btn btn-primary" data-target="#content" data-toggle="modal">
                                     Add Address</button>
-
                             </div>
                             <div class="row">
-                            <?php
-                    $id=$_SESSION['customerid'];
-                    
-                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id'");
-                    while($arr=mysqli_fetch_array($sql)){
-                    ?>
                                 <div class="col-6">
+                                    <h2 style="display: -webkit-inline-box;">Billing Address</h2>&nbsp;&nbsp;&nbsp;<a
+                                        href="#billingmodalRegister" data-toggle="modal"
+                                        data-target="#billingmodalRegister">Change</a>
+                                    <?php
+                                    $id=$_SESSION['customerid'];
+                                    
+                                    $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id' and set_default='1'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
 
-                                <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
-                                <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
-                                </p>
-                                <p><?= $arr['phone']; ?></p>
-                                <p><a href="">Edit</a> | <a href="">Set Default</a></p>
+
+                                    <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
+                                    <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                    </p>
+                                    <p><?= $arr['phone']; ?></p>
+                                    <p>
+                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                            data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p>
+                                        <?php } ?>
                                 </div>
-                                <?php } ?>
+                                <div class="col-6">
+                                    <h2 style="display: -webkit-inline-box;">Shipping Address</h2>&nbsp;&nbsp;&nbsp;<a
+                                        href="#shippingmodalRegister" data-toggle="modal"
+                                        data-target="#shippingmodalRegister">Change</a>
+                                    <?php
+                                    $id=$_SESSION['customerid'];
+                                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id' and set_default='1'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+
+                                    <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
+                                    <p><?= $arr['house_building']. ',' .$arr['road_area_colony']. ', Near by '.$arr['landmark'].' , '.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                    </p>
+                                    <p><?= $arr['phone']; ?></p>
+                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                            data-id='<?= $arr['id'] ?>' data-name="shipping">Edit</p>
+
+                                        <?php } ?>
+                                </div>
                             </div>
 
                         </div>
@@ -334,15 +380,12 @@ if(isset($_POST["changepassword"])){
 
                                         </div>
 
-
                                     </fieldset>
-
                                     <button type="submit" name="changepassword"
                                         class="btn margin-15px-top btn-primary">Save</button>
                                 </form>
 
                             </div>
-
                         </div>
                         <!-- End Account Details -->
                     </div>
@@ -350,23 +393,30 @@ if(isset($_POST["changepassword"])){
                 </div>
             </div>
         </div>
-        <div class="modal fade" tabindex="-1" role="dialog" id="content">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade quick-view-popup" tabindex="-1" role="dialog" id="content">
+            <div class="modal-dialog">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-tital">Address</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <div class="modal-body">
                         <div class="row">
                             <form method="post">
                                 <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-                                    <label for="input-firstname">Select Address Type <span
-                                            class="required-f">*</span></label>
+                                    <label for="" style="font-size:15px;"><b>Select Address Type </b><span
+                                            style="color:red;margin-right:14px">*</span></label>
                                     <div class="row" style="margin-left:-5px;">
-                                        <input name="customerName" value="Billing" id="input-firstname" class="form-control"
-                                            type="radio" required>&nbsp;Billing Address &nbsp;&nbsp;&nbsp;
-                                        <input name="customerName" value="Shipping" id="input-firstname" class="form-control"
-                                            type="radio" required>&nbsp;
+                                        <input name="customerName" value="Billing" id="input-firstname"
+                                            class="form-control" type="radio" required>&nbsp;Billing Address
+                                        &nbsp;&nbsp;&nbsp;
+                                        <input name="customerName" value="Shipping" id="input-firstname"
+                                            class="form-control" type="radio" required>&nbsp;
                                         Shipping Address
                                     </div>
-                                    
+
                                 </div>
                                 <div class="form-group col-md-12 col-lg-12 col-xl12 required">
 
@@ -376,12 +426,14 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-firstname">Full Name <span
                                                         class="required-f">*</span></label>
-                                                <input name="fullName" value="" id="input-firstname" type="text" required>
+                                                <input name="fullName" value="" id="input-firstname" type="text"
+                                                    required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-lastname">phone <span
                                                         class="required-f">*</span></label>
-                                                <input value="" name="number" id="input-lastname" type="tel" minlength="12" maxlength="12" required>
+                                                <input value="" name="number" id="input-lastname" type="tel"
+                                                    minlength="12" maxlength="12" required>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -402,12 +454,14 @@ if(isset($_POST["changepassword"])){
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                 <label for="input-company">Pin Code</label>
-                                                <input name="pincode" value="" id="input-company" type="number" required>
+                                                <input name="pincode" value="" id="input-company" type="number"
+                                                    required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-country">Country <span
                                                         class="required-f">*</span></label>
-                                                <select name="country_id" class="countries form-control" id="countryId" required>
+                                                <select name="country_id" class="countries form-control" id="countryId"
+                                                    required>
                                                     <option value="">Select Country</option>
                                                 </select>
                                             </div>
@@ -416,7 +470,8 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-zone">Region / State <span
                                                         class="required-f">*</span></label>
-                                                <select name="zone_id" class="states form-control" id="stateId" required>
+                                                <select name="zone_id" class="states form-control" id="stateId"
+                                                    required>
                                                     <option value="">Select State</option>
                                                 </select> </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
@@ -425,7 +480,6 @@ if(isset($_POST["changepassword"])){
                                                 <select name="city" class="cities form-control" id="cityId" required>
                                                     <option value="">Select City</option>
                                                 </select>
-                                                <!-- <input name="city" value="" id="input-address-1" type="text"> -->
                                             </div>
 
                                         </div>
@@ -433,8 +487,8 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
                                                 <label for="input-postcode">Landmark <span
                                                         class="required-f">*</span></label>
-                                                <textarea class="form-control resize-both" rows="3"
-                                                    name="landmark"required></textarea>
+                                                <textarea class="form-control resize-both" rows="3" name="landmark"
+                                                    required></textarea>
                                             </div>
                                         </div>
 
@@ -445,8 +499,8 @@ if(isset($_POST["changepassword"])){
                                             <div class="form-group col-md-12 col-lg-12 col-xl-12">
                                                 <label for="input-company">Order Notes <span
                                                         class="required-f">*</span></label>
-                                                <textarea class="form-control resize-both" rows="3"
-                                                    name="notes" required></textarea>
+                                                <textarea class="form-control resize-both" rows="3" name="notes"
+                                                    required></textarea>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -479,13 +533,10 @@ if(isset($_POST["changepassword"])){
                     <div class="modal-body">
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
-
-
                             </div>
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 text-center required">
                                 <img src="" class="image rounded-circle " width="100" height="100">
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
@@ -494,13 +545,11 @@ if(isset($_POST["changepassword"])){
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
                                 <label for="input-email" class="size"></label>
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
                                 <label for="input-telephone" class="processing"> </label>
                             </div>
-
                         </div>
                         <div class="row mt-2">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
@@ -514,6 +563,91 @@ if(isset($_POST["changepassword"])){
                 </div>
             </div>
         </div>
+
+        <!-- Edit User Modal -->
+        <div class="modal fade" id="billingmodal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                <div class="modal-content">
+                    <div class="modal-body pb-5 px-sm-5 pt-50">
+                        <div class=" mb-2">
+                            <form method="post" action="api.php">
+                                <div id="billingbody">
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Edit User Modal -->
+
+        <div class="modal fade quick-view-popup" id="billingmodalRegister">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <label for="input-firstname">Billing Address <span class="required-f order"></span></label>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <?php
+                                    $id=$_SESSION['customerid'];
+                                    $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id' and set_default='0'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+                            <div class="col-6">
+                                <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                </p>
+                                <p><?= $arr['phone']; ?></p>
+                                <p>
+                                    <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultbilling=<?= $arr['id'] ?>">Set
+                                        Default</a>
+                                </p>
+                            </div>
+                            <hr>
+                            <?php } ?> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade quick-view-popup" id="shippingmodalRegister">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <label for="input-firstname">Shipping Address <span class="required-f order"></span></label>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <?php
+                                    $id=$_SESSION['customerid'];
+                                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id' and set_default='0'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+                            <div class="col-6">
+                                <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                </p>
+                                <p><?= $arr['phone']; ?></p>
+                                <p>
+                                    <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultshipping=<?= $arr['id'] ?>">Set
+                                        Default</a>
+                                </p>
+                            </div>
+                            <hr>
+                            <?php } ?> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!--End Body Content-->
 
@@ -522,6 +656,28 @@ if(isset($_POST["changepassword"])){
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
+    <script>
+        $(document).ready(function () {
+            $('.billingmodal').click(function () {
+                let billingId = $(this).data('id');
+                let billaddname = $(this).data('name');
+                $.ajax({
+                    url: 'api.php',
+                    type: 'POST',
+                    data: {
+                        billingId: billingId,
+                        billaddname: billaddname
+                    },
+                    success: function (data) {
+                        $('#billingbody').html(data);
+                        $('#shippingmodalRegister').modal('hide');
+                        $("#billingmodalRegister").modal('hide');
+                        $('#billingmodal').modal('show');
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Including Jquery -->
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
