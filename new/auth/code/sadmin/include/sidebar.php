@@ -2,7 +2,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item me-auto"><a class="navbar-brand">
-                        <h2 class="brand-text">ADMIN PANEL</h2>
+                        <h2 class="brand-text">Z1KneeBrace</h2>
                     </a></li>
 
             </ul>

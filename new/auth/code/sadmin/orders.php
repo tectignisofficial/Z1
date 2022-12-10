@@ -171,7 +171,7 @@ if(isset($_POST['updateorder'])){
                                     </thead>
                                     <tbody>
                                     <?php
-                         $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
+                         $sql=mysqli_query($conn,'SELECT * from orders where customer="'.$_SESSION['id'].'"');
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>

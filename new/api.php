@@ -249,6 +249,18 @@ if(isset($_GET['defaultshipping'])){
         }
     }
     header('location:'.$url);
+}
 
+if(isset($_POST['gst'])){
+    $id=$_POST['id'];
+    $gst=$_POST['gst'];
+    $checksql=mysqli_query($conn,"select * from shipping_address where customer_id='$id'");
+    $arr=mysqli_fetch_array($checksql);
+    if($arr['customer_id']==$id){
+        $sql=mysqli_query($conn,"UPDATE `gst` SET `gstno`='$gst' WHERE customer_id='$id'");
+    }
+    else{
+        $sql=mysqli_query($conn,"INSERT INTO `gst`(`gstno`, `customer_id`) VALUES ('$gst','$id')"); 
+    }
 }
 ?>

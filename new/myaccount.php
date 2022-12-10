@@ -224,13 +224,13 @@ if(isset($_POST["changepassword"])){
                                             <label for="input-firstname">Current Password <span
                                                     class="required-f">*</span></label>
                                             <input name="confirmpassword" value="" id="input-firstname"
-                                                class="form-control" type="text">
+                                                class="form-control" type="text" required>
                                         </div>
                                         <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                             <label for="input-email">New Password<span
                                                     class="required-f">*</span></label>
                                             <input name="newPassword" value="" id="input-email" class="form-control"
-                                                type="text">
+                                                type="text" required>
                                         </div> <button type="submit" name="changepassword"
                                             class="btn margin-15px-top btn-primary">Save</button>
                                 </form>
@@ -324,7 +324,7 @@ if(isset($_POST["changepassword"])){
                                     </p>
                                     <p><?= $arr['phone']; ?></p>
                                     <p>
-                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                             data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p>
                                         <?php } ?>
                                 </div>
@@ -342,7 +342,7 @@ if(isset($_POST["changepassword"])){
                                     <p><?= $arr['house_building']. ',' .$arr['road_area_colony']. ', Near by '.$arr['landmark'].' , '.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
                                     </p>
                                     <p><?= $arr['phone']; ?></p>
-                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                             data-id='<?= $arr['id'] ?>' data-name="shipping">Edit</p>
 
                                         <?php } ?>
@@ -364,13 +364,13 @@ if(isset($_POST["changepassword"])){
                                                 <label for="input-firstname">Name <span
                                                         class="required-f">*</span></label>
                                                 <input name="customerName" value="<?php echo $row['name'] ?>"
-                                                    id="input-firstname" class="form-control" type="text">
+                                                    id="input-firstname" class="form-control" type="text" required>
                                             </div>
                                             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                 <label for="input-email">E-Mail <span
                                                         class="required-f">*</span></label>
                                                 <input readonly name="customerEmail" value="<?php echo $row['email'] ?>"
-                                                    id="input-email" class="form-control" type="email">
+                                                    id="input-email" class="form-control" type="email" required>
                                             </div>
 
                                         </div>
@@ -379,7 +379,7 @@ if(isset($_POST["changepassword"])){
                                                 <label for="input-telephone">Telephone <span
                                                         class="required-f">*</span></label>
                                                 <input name="customerPhone" value="<?php echo $row['phone'] ?>"
-                                                    id="input-telephone" class="form-control" type="tel">
+                                                    id="input-telephone" class="form-control" type="tel" required>
                                             </div>
 
                                         </div>
@@ -607,7 +607,7 @@ if(isset($_POST["changepassword"])){
                                 </p>
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
-                                    <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                    <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                         data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>
@@ -640,7 +640,7 @@ if(isset($_POST["changepassword"])){
                                 </p>
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
-                                    <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                    <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                         data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>

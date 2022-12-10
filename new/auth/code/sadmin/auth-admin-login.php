@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+    header("location:index.php");
+}
 include('../../../include/config.php');
 if(isset($_POST['login'])){
 $email=$_POST['email'];
@@ -12,7 +15,6 @@ if(mysqli_num_rows($sql)>0){
 
  if($verify==1){
     $_SESSION['id']=$row['id'];
-   
     header("location:index.php");
     }else{
         echo "<script>alert('Password is incorrect');</script>";

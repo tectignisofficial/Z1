@@ -147,24 +147,24 @@ if(isset($_POST['doneAddress'])){
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-firstname">Full Name <span
                                                             class="required-f">*</span></label>
-                                                    <input name="fullName" value="" id="input-firstname" type="text">
+                                                    <input name="fullName" value="" id="input-firstname" type="text" required>
                                                 </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-lastname">phone <span
                                                             class="required-f">*</span></label>
-                                                    <input value="2" name="number" id="input-lastname" type="tel">
+                                                    <input value="2" name="number" id="input-lastname" type="tel" required>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-email">House no./Building Name <span
                                                             class="required-f">*</span></label>
-                                                    <input name="home" value="" id="input-email" type="text">
+                                                    <input name="home" value="" id="input-email" type="text" required>
                                                 </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-telephone">Road name/Area/Colony <span
                                                             class="required-f">*</span></label>
-                                                    <input name="road" value="" id="input-telephone" type="text">
+                                                    <input name="road" value="" id="input-telephone" type="text" required>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -173,13 +173,13 @@ if(isset($_POST['doneAddress'])){
                                             <div class="row">
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                     <label for="input-company">Pin Code</label>
-                                                    <input name="pincode" value="" id="input-company" type="number">
+                                                    <input name="pincode" value="" id="input-company" type="number" required>
                                                 </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-country">Country <span
                                                             class="required-f">*</span></label>
                                                     <select name="country_id" class="countries form-control"
-                                                        id="countryId">
+                                                        id="countryId" required>
                                                         <option value="">Select Country</option>
                                                     </select>
                                                 </div>
@@ -188,16 +188,15 @@ if(isset($_POST['doneAddress'])){
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-zone">Region / State <span
                                                             class="required-f">*</span></label>
-                                                    <select name="zone_id" class="states form-control" id="stateId">
+                                                    <select name="zone_id" class="states form-control" id="stateId" required>
                                                         <option value="">Select State</option>
                                                     </select> </div>
                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
                                                     <label for="input-address-1">City<span
                                                             class="required-f">*</span></label>
-                                                    <select name="city" class="cities form-control" id="cityId">
+                                                    <select name="city" class="cities form-control" id="cityId" required>
                                                         <option value="">Select City</option>
                                                     </select>
-                                                    <!-- <input name="city" value="" id="input-address-1" type="text"> -->
                                                 </div>
 
                                             </div>
@@ -206,7 +205,7 @@ if(isset($_POST['doneAddress'])){
                                                     <label for="input-postcode">Landmark <span
                                                             class="required-f">*</span></label>
                                                     <textarea class="form-control resize-both" rows="3"
-                                                        name="landmark"></textarea>
+                                                        name="landmark" required></textarea>
                                                 </div>
                                             </div>
 
@@ -218,14 +217,16 @@ if(isset($_POST['doneAddress'])){
                                                     <label for="input-company">Order Notes <span
                                                             class="required-f">*</span></label>
                                                     <textarea class="form-control resize-both" rows="3"
-                                                        name="notes"></textarea>
+                                                        name="notes" required></textarea>
                                                 </div>
                                             </div>
+
                                         </fieldset>
                                         <fieldset>
                                             <div class="row">
                                                 <div class="form-group col-md-12 col-lg-12 col-xl-12">
-                                                    <button type="submit" name="shipping_address">Submit</button>
+                                                    <button type="submit" name="shipping_address"
+                                                        class="btn">Submit</button>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -234,7 +235,23 @@ if(isset($_POST['doneAddress'])){
 
                             </div>
                         </div>
-
+                        <div class="customer-box mt-2">
+                            <div class="row">
+                                <div class="form-group col-md-4 col-lg-4 col-xl-4">
+                                </div>
+                                <div class="form-group col-md-2 col-lg-2 col-xl-2">
+                                    <h4 class="mt-2 display-5"><b>GST No.</b><span class="required-f">*</span></h4>
+                                </div>
+                                <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                    <?php
+                                    $id=$_SESSION['customerid'];
+                                    $checksqlgst=mysqli_query($conn,"select * from gst where customer_id='$id'");
+                                    $arrgst=mysqli_fetch_array($checksqlgst);
+                                    ?>
+                                    <input type="text" id="gst" name="gst" class="form-control" value="<?= $arrgst['gstno']; ?>">
+                                </div>
+                            </div>
+                        </div>
                         <div class="card mt-2" style="border:none;">
                             <form action="" method="post">
 
@@ -254,7 +271,7 @@ if(isset($_POST['doneAddress'])){
                                         <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                         </p>
                                         <p><?= $arr['phone']; ?></p>
-                                        <p style="cursor:pointer" class="billingmodal" data-id='<?= $arr['id'] ?>'
+                                        <p style="cursor:pointer;color:black" class="billingmodal" data-id='<?= $arr['id'] ?>'
                                             data-name="shipping">Edit</p>
                                         <button type="submit" class="deliver btn btn-outline-primary"
                                             name="doneAddress">Deliver
@@ -277,7 +294,7 @@ if(isset($_POST['doneAddress'])){
                                         <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
                                         </p>
                                         <p><?= $arr['phone']; ?></p>
-                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                             data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p>
                                     </div>
                                     <?php } ?>
@@ -409,14 +426,6 @@ if(isset($_POST['doneAddress'])){
                     </div>
                 </div>
 
-                <div class="row billing-fields">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
-
-                    </div>
-
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    </div>
-                </div>
             </div>
             <!--modal-->
             <div class="modal fade quick-view-popup" id="shippingmodalRegister">
@@ -440,7 +449,7 @@ if(isset($_POST['doneAddress'])){
                                     </p>
                                     <p><?= $arr['phone']; ?></p>
                                     <p>
-                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                             data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
                                             href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                             Default</a>
@@ -474,7 +483,7 @@ if(isset($_POST['doneAddress'])){
                                     </p>
                                     <p><?= $arr['phone']; ?></p>
                                     <p>
-                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
                                             data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
                                             href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                             Default</a>
@@ -521,7 +530,7 @@ if(isset($_POST['doneAddress'])){
                 $('.billingmodal').click(function () {
                     let billingId = $(this).data('id');
                     let billaddname = $(this).data('name');
-                    let pageurl = '<?= $url; ?>' ;
+                    let pageurl = '<?= $url; ?>';
                     $.ajax({
                         url: 'api.php',
                         type: 'POST',
@@ -538,6 +547,21 @@ if(isset($_POST['doneAddress'])){
                         }
                     });
                 });
+
+                $("#gst").focusout(function () {
+                    let gst = $("#gst").val();
+                    let id = '<?= $_SESSION['customerid']; ?>';
+                    $.ajax({
+                        url: 'api.php',
+                        method: 'post',
+                        data: {
+                            gst: gst,
+                            id: id
+                        },
+                        success: function (data) {
+                        }
+                    })
+                })
             });
         </script>
 
