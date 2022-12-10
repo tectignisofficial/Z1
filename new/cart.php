@@ -5,9 +5,15 @@ include('include/config.php');
 if(isset($_GET['did'])){
     foreach($_SESSION['shopping_cart'] as $keys => $values){
         if($values['itemid'] == $_GET['did']){
+            if($values['option1'] == $_GET['option']){
             unset($_SESSION['shopping_cart'][$keys]);
+            }
+            $session_check=count($_SESSION['shopping_cart']);
+            if($session_check==0){
+            unset($_SESSION['shopping_cart']);
+            }
         }
-        // unset($_SESSION['shopping_cart']);
+        
     }
     header('location:cart.php');
 }
@@ -158,13 +164,6 @@ if(isset($_POST['checkout'])){
                                     </td>
                                     <td class="cart__update-wrapper cart-flex-item text-right">
                                         <div><span class="quantity"><?php echo $values['quantity']; ?></span></div>
-                                        <!-- <div class="cart__qty text-center">
-                                            <div class="qtyField">
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
-                                                <input class="cart__qty-input qty" type="text" name="updates[]" id="qty" value="1" pattern="[0-9]*">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
-                                            </div>
-                                        </div> -->
                                     </td>
                                     <td class="text-right small--hide cart-price">
                                         <div><span class="money"><i class="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>"></i><?php  
@@ -175,7 +174,7 @@ if(isset($_POST['checkout'])){
                                                             <?php } ?>
                                         </span></div>
                                     </td>
-                                    <td class="text-center small--hide"><a href="cart.php?did=<?php echo $values['itemid'] ?>" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
+                                    <td class="text-center small--hide"><a href="cart.php?did=<?php echo $values['itemid'] ?>&option=<?= $values['option1']; ?>" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                 </tr>
                                 <?php  
                                 if(isset($_SESSION['USD'])){
