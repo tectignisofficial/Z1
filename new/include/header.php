@@ -54,11 +54,9 @@
                 <div class="row">
                     <div class="col-6 col-sm-4 col-md-3 col-lg-4 d-flex">
 
-                        <!-- <div class="language-dropdown">
-                      
-                      </div> -->
+                     
+                    <p><a href="auth/code/sadmin/auth-admin-login.php">Admin Login</a></p>
                         <p class="phone-no pl-4"><i class="fa fa-phone"></i> +91 7300044197</p>
-
 
                     </div>
                     <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
@@ -76,6 +74,7 @@
                                     <?php
                                 if(!isset($_SESSION['customerid'])){
                                 ?>
+                               
                                     <li><a href="login.php">Login</a></li>
                                     <li><a href="register.php">Create Account</a></li>
                                     <?php }else{ ?>
