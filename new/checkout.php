@@ -1,4 +1,10 @@
 <?php
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+$url = "https://";   
+else  
+$url = "http://";   
+$url.= $_SERVER['HTTP_HOST'];   
+$url.= $_SERVER['REQUEST_URI']; 
 session_start();
 include('include/config.php');
 if(isset($_POST['shipping_address'])){
@@ -14,19 +20,26 @@ if(isset($_POST['shipping_address'])){
     $notes=mysqli_real_escape_string($conn,$_POST['notes']);
     $id=$_POST['id'];
     
-    $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+    $checksql=mysqli_query($conn,"select * from shipping_address");
+    if(mysqli_num_rows($checksql)==0){
+        $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`,`set_default`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id','1')");
+    }else{
+        $sql=mysqli_query($conn,"INSERT INTO `shipping_address`(`name`, `phone`, `house_building`, `country`, `state`, `city`, `road_area_colony`, `pin_code`, `landmark`, `order_note`, `customer_id`) VALUES ('$fullName','$phone','$home','$country_id','$zone_id','$city','$road','$pincode','$landmark','$notes','$id')");
+    }
 
 }
 if(isset($_SESSION['myselect'])){
     if($_SESSION['myselect']=='INR'){
         if(isset($_POST['doneAddress'])){
             $_SESSION['addressid']=$_POST['prid'];
+            $_SESSION['billingaddressrid']=$_POST['billingaddressrid'];
             header('location:razor/pay.php');
         }
     }
     else{
         if(isset($_POST['doneAddress'])){
             $_SESSION['addressid']=$_POST['prid'];
+            $_SESSION['billingaddressrid']=$_POST['billingaddressrid'];
             header('location:paypal.php');
         }
     }
@@ -35,6 +48,7 @@ if(isset($_SESSION['myselect'])){
 else{
 if(isset($_POST['doneAddress'])){
     $_SESSION['addressid']=$_POST['prid'];
+    $_SESSION['billingaddressrid']=$_POST['billingaddressrid'];
     header('location:razor/pay.php');
 }
 }
@@ -116,6 +130,7 @@ if(isset($_POST['doneAddress'])){
                                 </div>
                             </div>
                         </div>
+
                         <div class="customer-box returning-customer">
                             <h3><i class="icon anm anm-user-al"></i> <a href="#customer-login" id="customer"
                                     class="text-white text-decoration-underline" data-toggle="collapse">Add Address</a>
@@ -219,35 +234,56 @@ if(isset($_POST['doneAddress'])){
 
                             </div>
                         </div>
-                        <?php
-                    $id=$_SESSION['customerid'];
-                    
-                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id'");
-                    while($arr=mysqli_fetch_array($sql)){
-                    ?>
+
                         <div class="card mt-2" style="border:none;">
                             <form action="" method="post">
 
                                 <div class="row d-flex">
-                                    <div class="col-6">
-                                        <h2><?= $arr['name'] ?></h2>
+                                    <?php
+                                    $id=$_SESSION['customerid'];
+                                    
+                                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id' and set_default='1'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <h2 style="display: -webkit-inline-box;">Shipping Address</h2>
+                                        &nbsp;&nbsp;&nbsp;<a href="#shippingmodalRegister" data-toggle="modal"
+                                            data-target="#shippingmodalRegister" style="color:#0874c3">Change</a>
+                                        <h3><?= $arr['name'] ?></h3>
+                                        <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
+                                        <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
+                                        </p>
+                                        <p><?= $arr['phone']; ?></p>
+                                        <p style="cursor:pointer" class="billingmodal" data-id='<?= $arr['id'] ?>'
+                                            data-name="shipping">Edit</p>
+                                        <button type="submit" class="deliver btn btn-outline-primary"
+                                            name="doneAddress">Deliver
+                                            to this
+                                            address</button>
                                     </div>
-                                    <div class="col-6">
-                                        <!-- <input type="radio" name="prid" class="radioselect" value="<?= $arr['id'] ?>"style="float: right;"> -->
+                                    <?php } ?>
+                                    <?php
+                                    $id=$_SESSION['customerid'];
+                                    
+                                    $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id' and set_default='1'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <h2 style="display: -webkit-inline-box;">Billing Address</h2>
+                                        &nbsp;&nbsp;&nbsp;<a href="#billingmodalRegister" data-toggle="modal"
+                                            data-target="#billingmodalRegister" style="color:#0874c3">Change</a>
+                                        <h3><?= $arr['name'] ?></h3>
+                                        <input type="hidden" name="billingaddressrid" value="<?= $arr['id'] ?>">
+                                        <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
+                                        </p>
+                                        <p><?= $arr['phone']; ?></p>
+                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                            data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p>
                                     </div>
+                                    <?php } ?>
                                 </div>
-
-
-                                <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
-                                <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
-                                </p>
-                                <p><?= $arr['phone']; ?></p>
-                                <button type="submit" class="deliver btn btn-outline-primary" name="doneAddress">Deliver
-                                    to this
-                                    address</button>
                             </form>
                         </div>
-                        <?php } ?>
                     </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
@@ -273,8 +309,7 @@ if(isset($_POST['doneAddress'])){
 
                                          if(!empty($_SESSION['shopping_cart'])){
                                             $total=0;
-                                            foreach($_SESSION['shopping_cart'] as $keys => $values){
-                                        ?>
+                                            foreach($_SESSION['shopping_cart'] as $keys => $values){ ?>
                                             <tr>
                                                 <td class="text-left"><?= $values['name']; ?></td>
                                                 <td><?php
@@ -295,14 +330,10 @@ if(isset($_POST['doneAddress'])){
                                                     <?php } ?></td>
                                             </tr>
                                             <?php  
-                                if(isset($_SESSION['USD'])){
-                                    $total= $total + ($values['quantity'] * $values['price'] * $_SESSION['USD']);  
-                                }
-                                else{
-
-                                    $total= $total + ($values['quantity'] * $values['price']);  }
-                             
-                           ?>
+                                            if(isset($_SESSION['USD'])){
+                                                $total= $total + ($values['quantity'] * $values['price'] * $_SESSION['USD']);  
+                                            }
+                                            else{ $total= $total + ($values['quantity'] * $values['price']);  } ?>
                                             <?php } } else{ ?>
                                             <tr>
                                                 <td class="text-left"><?= $_SESSION['productname']; ?></td>
@@ -326,22 +357,19 @@ if(isset($_POST['doneAddress'])){
                                             </tr>
                                             <?php 
                                             $total=0; 
-                                if(isset($_SESSION['USD'])){
-                                    $total = $_SESSION['total'] * $_SESSION['quantity'] * $_SESSION['USD'];  
-                                }
-                                else{
+                                        if(isset($_SESSION['USD'])){
+                                            $total = $_SESSION['total'] * $_SESSION['quantity'] * $_SESSION['USD'];  
+                                        }
+                                        else{
 
-                                    $total = $_SESSION['total'] * $_SESSION['quantity'] ; }
-                             
-                           ?>
+                                    $total = $_SESSION['total'] * $_SESSION['quantity'] ; }  ?>
                                             <?php } ?>
                                         </tbody>
                                         <tfoot class="font-weight-600">
                                             <tr>
                                                 <td colspan="4" class="text-right">Total</td>
-                                                <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
-                            echo "<i class='fa fa-inr'></i> ";
-                        }  echo number_format($total,2);?></td>
+                                                <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{   echo "<i class='fa fa-inr'></i> ";  }  echo number_format($total,2);?>
+                                                </td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -356,22 +384,20 @@ if(isset($_POST['doneAddress'])){
                                     <div class="card-header">
                                         Razorpay
                                         <?php
-if(isset($_SESSION['myselect'])){ ?>
+                                            if(isset($_SESSION['myselect'])){ ?>
                                         <input type="radio" name="" class="mt-1" <?php
                                                 if($_SESSION['myselect']=='INR'){ echo 'checked'; }else{ echo 'disabled'; }
                                                 ?> id="">
                                         <?php }else { ?>
                                         <input type="radio" name="" checked class="mt-1" id="">
-                                        <?php }
-?>
+                                        <?php } ?>
 
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-header">
                                         Paypal
-                                        <?php
-if(isset($_SESSION['myselect'])){ ?>
+                                        <?php if(isset($_SESSION['myselect'])){ ?>
                                         <input type="radio" <?php
                                                  if($_SESSION['myselect']=='GBP' || $_SESSION['myselect']=='CAD' || $_SESSION['myselect']=='USD' || $_SESSION['myselect']=='AUD'){ echo 'checked'; }else{ echo 'disabled'; }
                                                 ?> name="">
@@ -392,7 +418,93 @@ if(isset($_SESSION['myselect'])){ ?>
                     </div>
                 </div>
             </div>
+            <!--modal-->
+            <div class="modal fade quick-view-popup" id="shippingmodalRegister">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <label for="input-firstname">Shipping Address <span class="required-f order"></span></label>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <?php
+                                    $id=$_SESSION['customerid'];
+                                    $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id' and set_default='0'");
+                                    while($arr=mysqli_fetch_array($sql)){
+                                    ?>
+                                <div class="col-6">
+                                    <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                    </p>
+                                    <p><?= $arr['phone']; ?></p>
+                                    <p>
+                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                            data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
+                                            href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
+                                            Default</a>
+                                    </p>
+                                </div>
+                                <hr>
+                                <?php } ?> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="modal fade quick-view-popup" id="billingmodalRegister">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <label for="input-firstname">Billing Address <span class="required-f order"></span></label>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <?php
+                                        $id=$_SESSION['customerid'];
+                                        $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id' and set_default='0'");
+                                        while($arr=mysqli_fetch_array($sql)){
+                                        ?>
+                                <div class="col-6">
+                                    <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                    </p>
+                                    <p><?= $arr['phone']; ?></p>
+                                    <p>
+                                        <p style="cursor:pointer;display:inline-block" class="billingmodal"
+                                            data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
+                                            href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
+                                            Default</a>
+                                    </p>
+                                </div>
+                                <hr>
+                                <?php } ?> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="billingmodal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                    <div class="modal-content">
+                        <div class="modal-body pb-5 px-sm-5 pt-50">
+                            <div class=" mb-2">
+                                <form method="post" action="api.php">
+                                    <div id="billingbody">
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--modal-->
         </div>
         <!--End Body Content-->
 
@@ -404,8 +516,31 @@ if(isset($_SESSION['myselect'])){ ?>
         <!--End Scoll Top-->
 
         <!-- Including Jquery -->
-        <!-- <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/vendor/jquery.cookie.js"></script> -->
+        <script>
+            $(document).ready(function () {
+                $('.billingmodal').click(function () {
+                    let billingId = $(this).data('id');
+                    let billaddname = $(this).data('name');
+                    let pageurl = '<?= $url; ?>' ;
+                    $.ajax({
+                        url: 'api.php',
+                        type: 'POST',
+                        data: {
+                            billingId: billingId,
+                            billaddname: billaddname,
+                            pageurl: pageurl
+                        },
+                        success: function (data) {
+                            $('#billingbody').html(data);
+                            $('#shippingmodalRegister').modal('hide');
+                            $("#billingmodalRegister").modal('hide');
+                            $('#billingmodal').modal('show');
+                        }
+                    });
+                });
+            });
+        </script>
+
         <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
         <script src="assets/js/vendor/wow.min.js"></script>
         <!-- Including Javascript -->

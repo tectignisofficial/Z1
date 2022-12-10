@@ -1,4 +1,10 @@
 <?php
+ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+ $url = "https://";   
+else  
+ $url = "http://";   
+$url.= $_SERVER['HTTP_HOST'];   
+$url.= $_SERVER['REQUEST_URI'];    
 session_start();
 if(!isset($_SESSION['customerid'])) 
 {
@@ -284,8 +290,6 @@ if(isset($_POST["changepassword"])){
                                                     data-image="<?= $arr2['hightlightfile'] ?>"
                                                     data-order="<?= $arr1['order_id']; ?>"
                                                     data-processing="<?= $arr1['order_status'] ?>">view</a>
-                                                <!-- <button class="view" data-target="#viewdetail" data-toggle="modal">
-                                            view</button> -->
                                             </td>
                                         </tr>
                                         <?php $count++; } ?>
@@ -303,10 +307,10 @@ if(isset($_POST["changepassword"])){
                                     Add Address</button>
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <h2 style="display: -webkit-inline-box;">Billing Address</h2>&nbsp;&nbsp;&nbsp;<a
                                         href="#billingmodalRegister" data-toggle="modal"
-                                        data-target="#billingmodalRegister">Change</a>
+                                        data-target="#billingmodalRegister" style="color:#0874c3">Change</a>
                                     <?php
                                     $id=$_SESSION['customerid'];
                                     
@@ -324,10 +328,10 @@ if(isset($_POST["changepassword"])){
                                             data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p>
                                         <?php } ?>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <h2 style="display: -webkit-inline-box;">Shipping Address</h2>&nbsp;&nbsp;&nbsp;<a
                                         href="#shippingmodalRegister" data-toggle="modal"
-                                        data-target="#shippingmodalRegister">Change</a>
+                                        data-target="#shippingmodalRegister" style="color:#0874c3">Change</a>
                                     <?php
                                     $id=$_SESSION['customerid'];
                                     $sql=mysqli_query($conn,"select * from shipping_address where customer_id='$id' and set_default='1'");
@@ -604,7 +608,7 @@ if(isset($_POST["changepassword"])){
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
                                     <p style="cursor:pointer;display:inline-block" class="billingmodal"
-                                        data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultbilling=<?= $arr['id'] ?>">Set
+                                        data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>
                             </div>
@@ -637,7 +641,7 @@ if(isset($_POST["changepassword"])){
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
                                     <p style="cursor:pointer;display:inline-block" class="billingmodal"
-                                        data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultshipping=<?= $arr['id'] ?>">Set
+                                        data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>
                             </div>
@@ -661,12 +665,14 @@ if(isset($_POST["changepassword"])){
             $('.billingmodal').click(function () {
                 let billingId = $(this).data('id');
                 let billaddname = $(this).data('name');
+                let pageurl= <?= $url; ?>;
                 $.ajax({
                     url: 'api.php',
                     type: 'POST',
                     data: {
                         billingId: billingId,
-                        billaddname: billaddname
+                        billaddname: billaddname,
+                        pageurl:pageurl
                     },
                     success: function (data) {
                         $('#billingbody').html(data);

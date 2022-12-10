@@ -70,12 +70,11 @@ include('include/config.php');
       <?php
 include('include/header.php');
 ?>
-      <div id="" class="" style=" padding-bottom: unset;">
-        <!-- <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'> -->
+      <div id="uc_grid_1_40497_row_1" class="uc-grid-row" style="
+    padding-bottom: unset;">
+        <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'>
           <!-- start Css Animated Squares Background -->
-        <!-- </div> -->
-        <div id="uc_grid_1_40497_row_2" class="uc-grid-row">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -95,8 +94,330 @@ include('include/header.php');
                   alt="Third slide">
               </div>
             </div>
+            <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
           </div>
+          <!-- <div class="slideshow slideshow-wrapper pb-section">
+            <div class="home-slideshow">
+              <div class="slide">
+                <div class="blur-up lazyload">
+                  <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
+                    src="assets/images/slideshow-banners/z1kneebracebanner1.jpg" alt="z1 knee braces"
+                    title="z1 knee braces" />
 
+                </div>
+              </div>
+              <div class="slide">
+                <div class="blur-up lazyload">
+                  <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
+                    src="assets/images/slideshow-banners/z1kneebracebanner3.jpg" alt="z1 knee braces"
+                    title="z1 knee braces" />
+
+                </div>
+              </div>
+              <div class="slide">
+                <div class="blur-up lazyload">
+                  <img class="blur-up lazyload" data-src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
+                    src="assets/images/slideshow-banners/z1kneebracebanner2.jpg" alt="z1 knee braces"
+                    title="z1 knee braces" />
+                </div>
+              </div>
+
+            </div>
+          </div> -->
+          <!-- <div id='uc_grid_1_40497_row_1_container_1' class="uc-grid-row-container">
+          <div id="uc_grid_1_40497_row_1_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
+            style="padding-right:80px;">
+            <div class="uc-grid-col-inner">
+              <div id="uc_grid_1_40497_row_1_container_1_col_1_addon_1" class='uc-grid-col-addon'
+                style="padding-top:70px;padding-bottom:50px;">
+
+                <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                  <span class="uc-style-13503093002"
+                    style="font-weight:Bold;font-size:68px;line-height:1em;color:#ffffff;">Don't Suffer, get a best
+                    friend!</span>
+                </div>
+              </div>
+              <div id="uc_grid_1_40497_row_1_container_1_col_1_addon_2" class='uc-grid-col-addon'
+                style="padding-left:30px;margin-top:0px;margin-bottom:50px;border-left:1px solid #ed1c24;">
+
+                <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                  <span class="uc-style-24529420529" style="font-size:16px;line-height:1.7em;color:#a7a7a7;">The A-Z
+                    Comfort with Z1 Braces.</span>
+                </div>
+              </div>
+              <div id="uc_grid_1_40497_row_1_container_1_col_1_addon_3" class='uc-grid-col-addon'>
+
+                <div style="text-align:left;" id="uc_blox_btn_group48486">
+                  <a href="shop.php" id="uc_blox_btn_group48486_item1" target="_self"><span class="uc-style-32306900903"
+                      style="font-size:12px;">SHOP NOW</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="uc_grid_1_40497_row_1_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2">
+            <div class="uc-grid-col-inner">
+              <div id="uc_grid_1_40497_row_1_container_1_col_2_addon_1" class='uc-grid-col-addon'>
+
+                <div style="text-align:center;font-size:0;">
+                  <img src="img/products/product1.png" alt="" title=""
+                    style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uc-col-clear"></div>
+        </div> -->
+        </div>
+        <div id="uc_grid_1_40497_row_2" class="uc-grid-row rowe">
+          <div id='uc_grid_1_40497_row_2_container_1' class="uc-grid-row-container"
+            style="padding-top:70px;padding-right:50px;padding-bottom:80px;padding-left:50px;margin-top:-100px;background-color:#ffffff;">
+            <div id="uc_grid_1_40497_row_2_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_4"
+              style="padding-left:30px;padding-right:30px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_2_container_1_col_1_addon_1" class='uc-grid-col-addon'
+                  style="padding-bottom:20px;">
+                  <!-- start SVG Shapes -->
+
+                  <div id="uc_blox_svg_icon68727" style="text-align:left;">
+                    <img src="img/products/icon2.jpg" style="width:50px;height:50px;" alt=""> </div>
+
+
+
+                  <!-- end SVG Shapes -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_1_addon_2" class='uc-grid-col-addon'>
+                  <!-- start Title -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-53303413443" style="font-size:18px;line-height:1em;color:#a7a7a7;"></span>
+                  </div>
+                  <!-- end Title -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_1_addon_3" class='uc-grid-col-addon'>
+                  <!-- start Line Seperator -->
+
+                  <div style="text-align:left;">
+                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                    </div>
+                  </div>
+                  <!-- end Line Seperator -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_1_addon_4" class='uc-grid-col-addon'>
+                  <!-- start Paragraph -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-65759147329" style="font-size:14px;line-height:1.7em;">Powerful and firm
+                      stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</span>
+                  </div>
+                  <!-- end Paragraph -->
+                </div>
+              </div>
+            </div>
+            <div id="uc_grid_1_40497_row_2_container_1_col_2" class="uc-grid-col uc-colsize-1_4"
+              style="padding-left:30px;padding-right:30px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_2_container_1_col_2_addon_1" class='uc-grid-col-addon'
+                  style="padding-bottom:20px;">
+                  <!-- start SVG Shapes -->
+
+                  <div id="uc_blox_svg_icon68727" style="text-align:left;">
+                    <img src="img/products/icon1.webp" style="width:50px;height:50px;" alt=""> </div>
+
+
+
+                  <!-- end SVG Shapes -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_2_addon_2" class='uc-grid-col-addon'>
+                  <!-- start Title -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-75380631975" style="font-size:18px;line-height:1em;color:#a7a7a7;"></span>
+                  </div>
+                  <!-- end Title -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_2_addon_3" class='uc-grid-col-addon'>
+                  <!-- start Line Seperator -->
+
+                  <div style="text-align:left;">
+                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                    </div>
+                  </div>
+                  <!-- end Line Seperator -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_2_addon_4" class='uc-grid-col-addon'>
+                  <!-- start Paragraph -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-88440486866" style="font-size:14px;line-height:1.7em;">Silicon coated neoprene
+                      frame liners and foam strap pads preventing orthosis from slipping down.</span>
+                  </div>
+                  <!-- end Paragraph -->
+                </div>
+              </div>
+            </div>
+            <div id="uc_grid_1_40497_row_2_container_1_col_3" class="uc-grid-col uc-colsize-1_4"
+              style="padding-left:30px;padding-right:30px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_2_container_1_col_3_addon_1" class='uc-grid-col-addon'
+                  style="padding-bottom:20px;">
+                  <!-- start SVG Shapes -->
+
+                  <div id="uc_blox_svg_icon68727" style="text-align:left;">
+                    <img src="img/products/icon3.jpg" style="width:50px;height:50px;" alt=""> </div>
+
+
+                  <!-- end SVG Shapes -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_3_addon_2" class='uc-grid-col-addon'>
+                  <!-- start Title -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-92179602472" style="font-size:18px;line-height:1em;color:#a7a7a7;"></span>
+                  </div>
+                  <!-- end Title -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_3_addon_3" class='uc-grid-col-addon'>
+                  <!-- start Line Seperator -->
+
+                  <div style="text-align:left;">
+                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                    </div>
+                  </div>
+                  <!-- end Line Seperator -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_3_addon_4" class='uc-grid-col-addon'>
+                  <!-- start Paragraph -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-107414141132" style="font-size:14px;line-height:1.7em;">Ultra-lightweight,
+                      therefore, can be worn under clothes easily.
+                    </span>
+                  </div>
+                  <!-- end Paragraph -->
+                </div>
+              </div>
+            </div>
+            <div id="uc_grid_1_40497_row_2_container_1_col_4" class="uc-grid-col uc-col-last uc-colsize-1_4"
+              style="padding-left:30px;padding-right:30px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_2_container_1_col_4_addon_1" class='uc-grid-col-addon'
+                  style="padding-bottom:20px;">
+                  <!-- start SVG Shapes -->
+
+                  <div id="uc_blox_svg_icon68727" style="text-align:left;">
+                    <img src="img/products/icon4.jpg" style="width:50px;height:50px;" alt=""> </div>
+
+                  <!-- end SVG Shapes -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_4_addon_2" class='uc-grid-col-addon'>
+                  <!-- start Title -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-118355640010" style="font-size:18px;line-height:1em;color:#a7a7a7;"></span>
+                  </div>
+                  <!-- end Title -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_4_addon_3" class='uc-grid-col-addon'>
+                  <!-- start Line Seperator -->
+
+                  <div style="text-align:left;">
+                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                    </div>
+                  </div>
+                  <!-- end Line Seperator -->
+                </div>
+                <div id="uc_grid_1_40497_row_2_container_1_col_4_addon_4" class='uc-grid-col-addon'>
+                  <!-- start Paragraph -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-120364567681" style="font-size:14px;line-height:1.7em;">Flexible in the
+                      perfect
+                      areas to implement a flawless fit on the leg.</span>
+                  </div>
+                  <!-- end Paragraph -->
+                </div>
+              </div>
+            </div>
+            <div class="uc-col-clear"></div>
+          </div>
+        </div>
+        <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
+          <div id='uc_grid_1_40497_row_3_container_1' class="uc-grid-row-container" style="background-color:#ffffff;">
+            <div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
+              style="padding-right:85px;padding-left:85px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class='uc-grid-col-addon'
+                  style="padding-top:100px;">
+                  <!-- start Title -->
+
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                    <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K2
+                      Comfortline Knee Orthosis
+                    </span>
+
+                  </div>
+                  <!-- end Title -->
+                </div>
+                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_2" class='uc-grid-col-addon'>
+                  <!-- start Line Seperator -->
+
+                  <div style="text-align:left;">
+                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                    </div>
+                  </div>
+                  <!-- end Line Seperator -->
+                </div>
+                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_3" class='uc-grid-col-addon'
+                  style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-bottom:30px;border-left:1px solid lightgray;">
+                  <!-- start Paragraph -->
+                  <b style="font-size: 14px;">The Effective Solution for the Sportsperson in you!</b>
+                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+
+                    <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K2 Comfortline
+                      is
+                      an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable
+                      support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and
+                      takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete
+                      stability and support for efficient aid and relief from sports injuries, ligament injuries and
+                      mild
+                      osteoarthritis. </span>
+                  </div>
+                  <!-- end Paragraph -->
+                </div>
+                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class='uc-grid-col-addon'>
+                  <!-- start Button -->
+
+                  <div style="text-align:left;">
+                    <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
+                        class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
+                  </div>
+                  <!-- end Button -->
+                </div>
+              </div>
+            </div>
+            <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
+              style="padding-right:0px;padding-left:0px;">
+              <div class="uc-grid-col-inner">
+                <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class='uc-grid-col-addon'>
+                  <!-- start Image -->
+
+                  <div style="text-align:center;font-size:0;">
+                    <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.webp" alt="" title=""
+                      style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
+                  </div>
+                  <!-- end Image -->
+                </div>
+              </div>
+            </div>
+            <div class="uc-col-clear"></div>
+          </div>
         </div>
         <div id="uc_grid_1_40497_row_4" class="uc-grid-row">
           <div id='uc_grid_1_40497_row_4_container_1' class="uc-grid-row-container">
@@ -243,6 +564,9 @@ include('include/header.php');
                   <!-- start Top Small Round Icon Box -->
 
                   <div class="blox-top-small-round-icon-box" style="background:#000000; text-align:left;padding:50px;">
+                    <!-- <div class="blox-top-small-round-icon-box-icon" style="background-color:#ed1c24;border-radius:0px;">
+        	<i class="fa fa-wifi"></i>
+        </div> -->
                     <div class="blox-top-small-round-icon-box-heading">
                       <span class="uc-style-247662789113" style="font-weight:Bold;color:#ffffff;">Prophylactic
                         Braces</span>
@@ -265,6 +589,9 @@ include('include/header.php');
                   <!-- start Top Small Round Icon Box -->
 
                   <div class="blox-top-small-round-icon-box" style="background:#ed1c24; text-align:left;padding:50px;">
+                    <!-- <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
+        	<i class="fa fa-volume-up"></i>
+        </div> -->
                     <div class="blox-top-small-round-icon-box-heading">
                       <span class="uc-style-262312007874" style="font-weight:Bold;color:#ffffff;">Rehabilitative
                         Braces</span>
@@ -299,83 +626,6 @@ include('include/header.php');
                 </div>
               </div>
             </div>
-            <div class="uc-col-clear"></div>
-          </div>
-        </div>
-
-        <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
-          <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
-
-            <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
-              style="padding-right:0px;padding-left:0px;">
-              <div class="uc-grid-col-inner">
-                <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon">
-                  <!-- start Image -->
-
-                  <div style="text-align:center;font-size:0;">
-                    <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.webp"
-                      alt="K2_Comfortline_Knee_Orthosis" title=""
-                      style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
-                    <!-- <img src="uploads/images/blox_page_builder/K6_Dezire_Knee_Orthosis.webp"
-                      alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis"
-                      style="max-width:100%; width:100%;border-radius:0px;margin:16px;"> -->
-                  </div>
-                  <!-- end Image -->
-                </div>
-              </div>
-            </div>
-
-            <div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
-              style="padding-right:85px;padding-left:85px;">
-              <div class="uc-grid-col-inner">
-                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class="uc-grid-col-addon"
-                  style="padding-top:100px;">
-                  <!-- start Title -->
-                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-                    <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K2
-                      Comfortline Knee Orthosis</span>
-
-                  </div>
-                  <!-- end Title -->
-                </div>
-                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_2" class="uc-grid-col-addon">
-                  <!-- start Line Seperator -->
-
-                  <div style="text-align:left;">
-                    <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
-                    </div>
-                  </div>
-                  <!-- end Line Seperator -->
-                </div>
-                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_3" class="uc-grid-col-addon"
-                  style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-bottom:30px;border-left:1px solid lightgray;">
-                  <!-- start Paragraph -->
-                  <b style="font-size: 14px;">The Effective Solution for the Sportsperson in you!</b>
-                  <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-
-                    <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K2 Comfortline
-                      is
-                      an utterly comforting, light in weight and an easy to use knee brace. It renders rigid and durable
-                      support to your knee ensuring quick healing. The Z1 K2 Knee Orthosis fits ideally onto the leg and
-                      takes the shape of the leg instantly. It is an everyday wear knee orthosis that provides complete
-                      stability and support for efficient aid and relief from sports injuries, ligament injuries and
-                      mild
-                      osteoarthritis.</span>
-                  </div>
-                  <!-- end Paragraph -->
-                </div>
-                <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
-                  <!-- start Button -->
-
-                  <div style="text-align:left;">
-                    <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
-                        class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
-                  </div>
-                  <!-- end Button -->
-                </div>
-              </div>
-            </div>
-
             <div class="uc-col-clear"></div>
           </div>
         </div>

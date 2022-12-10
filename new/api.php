@@ -2,6 +2,7 @@
 session_start();
 include('include/config.php');
 if(isset($_POST['billingId'])){
+    echo '<input type="hidden" value="'.$_POST['pageurl'].'" name="url">';
     $name=$_POST['billaddname'];
     if($_POST['billaddname'] == 'billing'){
     $sql=mysqli_query($conn,"select * from billing_address where id='".$_POST['billingId']."'");
@@ -194,10 +195,11 @@ if(isset($_POST['billingId'])){
         $landmark=mysqli_real_escape_string($conn,$_POST['landmark']);
         $notes=mysqli_real_escape_string($conn,$_POST['notes']);
         $id=$_POST['id'];
+        $url=$_POST['url'];
 
         $sql=mysqli_query($conn,"UPDATE `shipping_address` SET `name`='$fullName',`phone`='$phone',`house_building`='$home',`country`='$country_id',`state`='$zone_id',`city`='$city',`road_area_colony`='$road',`pin_code`='$pincode',`landmark`='$landmark',`order_note`='$notes' WHERE id='$id'");
         if($sql==1){
-            echo '<script>alert("Successfully Updated");window.location.href="myaccount.php";</script>';
+            echo '<script>alert("Successfully Updated");window.location.href="'.$url.'";</script>';
         }
   }
 
@@ -216,12 +218,13 @@ if(isset($_POST['billingId'])){
 
     $sql=mysqli_query($conn,"UPDATE `billing_address` SET `name`='$fullName',`phone`='$phone',`house_building`='$home',`country`='$country_id',`state`='$zone_id',`city`='$city',`road_area_colony`='$road',`pin_code`='$pincode',`landmark`='$landmark',`order_note`='$notes' WHERE id='$id'");
     if($sql==1){
-        echo '<script>alert("Successfully Updated");window.location.href="myaccount.php";</script>';
+        echo '<script>alert("Successfully Updated");window.location.href="'.$url.'";</script>';
     }
 }
 
 if(isset($_GET['defaultbilling'])){
     $defaultbilling=$_GET['defaultbilling'];
+    $url=$_GET['url'];
     $id=$_SESSION['customerid'];
     $sql=mysqli_query($conn,"select * from billing_address where set_default='1' and customer_id='$id'");
     if(mysqli_num_rows($sql)>0){
@@ -230,12 +233,13 @@ if(isset($_GET['defaultbilling'])){
             $set=mysqli_query($conn,"UPDATE `billing_address` SET `set_default`='1' WHERE id='$defaultbilling'");
         }
     }
-    header('location:myaccount.php');
+    header('location:'.$url);
 
 }
 
 if(isset($_GET['defaultshipping'])){
     $defaultshipping=$_GET['defaultshipping'];
+    $url=$_GET['url'];
     $id=$_SESSION['customerid'];
     $sql=mysqli_query($conn,"select * from shipping_address where set_default='1' and customer_id='$id'");
     if(mysqli_num_rows($sql)>0){
@@ -244,7 +248,7 @@ if(isset($_GET['defaultshipping'])){
             $set=mysqli_query($conn,"UPDATE `shipping_address` SET `set_default`='1' WHERE id='$defaultshipping'");
         }
     }
-    header('location:myaccount.php');
+    header('location:'.$url);
 
 }
 ?>

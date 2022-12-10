@@ -125,28 +125,30 @@ else{
                                     <div class="col-12 col-md-6">
                                     <?php
                                     $id1=$_SESSION['customerid'];
-                                    $sql1=mysqli_query($conn,"select * from billing_address where customer_id='$id1'");
+                                    $bill_id=$_SESSION['billingaddressrid'];
+                                    $sql1=mysqli_query($conn,"select * from billing_address where customer_id='$id1' and id='$bill_id'");
                                     $arr1=mysqli_fetch_array($sql1);
                                     ?>
                                         <h2 class="billing-address">Billing address</h2>
-                                        <p><?= $arr1['address1'] ?? null ?></p>
-                                        <p><?= $arr1['address2'] ?? null ?></p>
-                                        <p><?= $arr1['city'] ?? null ?></p>
-                                        <p><?= $arr1['state'] ?? null ?></p>
-                                        <p><?= $arr1['country'] ?? null ?></p>
+                                        <div>
+                                            <h3><?= $arr1['name'] ?></h3>
+                                        </div>
+                                        <p><?= $arr['house_building'].' , '.$arr1['road_area_colony'].' , Near by '.$arr1['landmark'].' , '.$arr1['city'].' , '.$arr1['state'].' , '.$arr1['country'].' , '.$arr1['pin_code'] ?>
+                                        </p>
+                                        <p><?= $arr1['phone']; ?></p>
                                     </div>
                                     <div class="col-12 col-md-6">
                                     <?php
                                     $id=$_SESSION['addressid'];
-                                    $sql=mysqli_query($conn,"select * from shipping_address where id='$id'");
+                                    $sql=mysqli_query($conn,"select * from shipping_address where id='$id' and customer_id='$id1'");
                                     $arr=mysqli_fetch_array($sql);
                                     ?>
                                         <h2 class="billing-address">Shipping address</h2>
                                         <div>
                                 <h3><?= $arr['name'] ?></h3>
                                 </div>
-                                <p><?= $arr['house_building'].','.$arr['road_area_colony'].', Near by'.$arr['landmark'].','.$arr['city'].','.$arr['state'].','.$arr['country'].','.$arr['pin_code'] ?>
-                                </p>
+                                <p><?= $arr['house_building'].' ,' .$arr['road_area_colony'].' , Near by' .$arr['landmark'].' , '.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
+                                        </p>
                                 <p><?= $arr['phone']; ?></p>
                                     </div>
                                 </div>
