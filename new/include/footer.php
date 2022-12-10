@@ -109,7 +109,7 @@ $facebook=mysqli_fetch_array($sql);
                          <ul class="addressFooter">
                             <h4 class="h4">Corporate Office Address</h4>
                              <li><i class="icon anm anm-map-marker-al"></i>
-                                 <p>D-114, 5th road Shakti Nagar,<br> Paotac road Jodhpur, Rajasthan, India - 342010</p>
+                                 <p>D-114, 5th road Shakti Nagar,<br> Paota c road Jodhpur, Rajasthan, India - 342010</p>
                              </li>
                              <h4 class="h4">Branch Office Address</h4>
                             <li><i class="icon anm anm-map-marker-al"></i>
