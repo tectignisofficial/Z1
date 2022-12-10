@@ -153,10 +153,11 @@
                                         class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="contact-us.php"
-                                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i
+                                <li class="lvl1 parent megamenu"><a href="shop.php"
+                                        class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
+                                
                                 <li class="lvl1 parent megamenu"><a href="blog.php"
                                         class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
                                             class="anm anm-angle-down-l"></i></a>
@@ -169,8 +170,8 @@
                                         class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="shop.php"
-                                        class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i
+                                <li class="lvl1 parent megamenu"><a href="contact-us.php"
+                                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
                             </ul>
