@@ -30,32 +30,49 @@ if(isset($_GET['delid'])){
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Review &ndash; Z1KneeBrace</title>
-    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
-        rel="stylesheet">
+        rel="stylesheet" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- END: Page CSS-->
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css" />
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css" />
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css" />
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css" />
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
 
+    <style>
+        /* .dataTables_filter{
+            text-align:right !important;
+        } */
+    </style>
 </head>
 <!-- END: Head-->
 
@@ -84,8 +101,9 @@ if(isset($_GET['delid'])){
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <h2 class="content-header-title float-start mb-0">Reviews</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
+                        <li class="breadcrumb-item active">Ecommerce</li>
                         <li class="breadcrumb-item active">Reviews</li>
                     </ol>
                 </div>
@@ -101,77 +119,53 @@ if(isset($_GET['delid'])){
                         <div class="col-12">
                             <div class="card">
 
-                                <div class="card-header border-bottom row-12">
+                                <div class="card-header">
 
-                                    <div class="col-1">
-                                        <div class="btn-group">
-                                            <button type="button"
-                                                class="btn btn-outline-primary dropdown-toggle waves-effect show"
-                                                data-bs-toggle="dropdown" aria-expanded="true">
-                                                Bulk actions
-                                            </button>
-                                            <ul class="dropdown-menu "
-                                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);"
-                                                data-popper-placement="bottom-start">
-                                                <li><a class="dropdown-item" href="#">bulk changes</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <button type="button" class="btn btn-primary">Filters</button></div>
                                     <div class="col-2">
-                                        <div id="botble-page-tables-page-table_filter" class="dataTables_filter">
-                                            <label><input type="search" class="form-control input-sm"
-                                                    placeholder="Search..."
-                                                    aria-controls="botble-page-tables-page-table"></label>
-                                        </div>
+                                        <h4 class="card-title">Review Table</h4>
                                     </div>
                                     <div class="col-4"></div>
                                     <a class="btn btn-primary" href="reviews_form.php"><i class="fa fa-plus"></i>
-                                        Create
+                                        Add Review
                                     </a>
-                                    <button class="btn btn-info" tabindex="0"
-                                        aria-controls="botble-page-tables-page-table" type="button"><span><i
-                                                data-feather="refresh-cw"></i> reload</span></button>
+
                                 </div>
 
-                                <div class="card-datatable">
-                                    <table class="dt-responsive table">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-striped" id="example1">
                                         <thead>
                                             <tr>
                                                 <th>SR NO.</th>
                                                 <th>NAME</th>
                                                 <th>PRODUCT NAME</th>
                                                 <th>STAR</th>
-                                                <!-- <th>DESCRIPTION</th> -->
-                                                <th>LOCATION</th>
                                                 <th>LINKS</th>
+                                                <th>LOCATION</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                         $sql=mysqli_query($conn,"SELECT * FROM reviews");
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
+                                            $sql=mysqli_query($conn,"SELECT * FROM reviews");
+                                            $count=1;
+                                            while($row=mysqli_fetch_array($sql)){ 
+                                            ?>
                                             <tr>
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['name'];?></td>
                                                 <td><?php echo $row['product_name'];?></td>
                                                 <td><?php echo $row['stars'];?></td>
-                                                <!-- <td></td> -->
+                                                <td width="100px">
+                                                    <div style="overflow:auto; width:200px;height:100px;">
+                                                        <?php echo $row['link'];?></div>
+                                                </td>
                                                 <td><?php echo $row['location'];?></td>
-                                                <td><?php echo $row['link'];?></td>
+
                                                 <td>
-                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href="reviews.php?delid=<?php echo $row['id']; ?>"
-                                                        onclick="return checkDelete()"
-                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                    <button class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         data-id="=<?php echo $row['id']; ?>">
-                                                        <i data-feather="trash-2"></i>
-                                                    </a>
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <?php $count++;  } ?>
@@ -195,26 +189,62 @@ if(isset($_GET['delid'])){
 
     <!-- BEGIN: Footer-->
     <?php include("include/footer.php")?>
-
-    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-    <!-- END: Footer-->
-
-
+    <!-- BEGIN: Page Vendor JS-->
     <!-- BEGIN: Vendor JS-->
     <script src="app-assets/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
-    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
+
+
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/tables/table-datatables-basic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Page JS-->
+
 
     <script>
         $(window).on('load', function () {

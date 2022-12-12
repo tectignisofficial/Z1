@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-$sql=mysqli_query($conn,"select * from adminlogin where email='$email'");
+$sql=mysqli_query($conn,"select * from adminlogin where email='$email' and status='0'");
 if(mysqli_num_rows($sql)>0){
   $row=mysqli_fetch_assoc($sql); 
   $verify=password_verify($password,$row['password']);

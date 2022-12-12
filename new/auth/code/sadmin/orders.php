@@ -197,7 +197,7 @@ if(isset($_POST['updateorder'])){
                                             <!-- <a class="btn btn-outline-success eye" href="orderview.php">
                                                     <i data-feather="eye"></i>
                                                 </a> -->
-                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>

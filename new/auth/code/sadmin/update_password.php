@@ -5,7 +5,6 @@ if(!isset($_SESSION['id'])){
 }else{
 include('../../../include/config.php');
 
-
 $d=$_SESSION['id'];
 if(isset($_POST["submit"])){
 	$Old_password=$_POST["oldpassword"];
@@ -28,9 +27,7 @@ if(isset($_POST["submit"])){
 		else{
 			echo"<script>alert('Invalid Password');</script>";
 		}
-	
 	}
-
 ?>
 
 
@@ -147,7 +144,7 @@ if(isset($_POST["submit"])){
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <h2 class="content-header-title float-start mb-0">Update Password</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
                         <li class="breadcrumb-item ">Update Password</li>
                     </ol>
@@ -203,7 +200,9 @@ if(isset($_POST["submit"])){
                                                             <span class="input-group-text"><i data-feather="lock"></i></span>
                                                             <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" placeholder="Confirm Password" />
                                                         </div>
+                                                        <span id="message"></span>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-sm-9 offset-sm-3">
@@ -212,7 +211,7 @@ if(isset($_POST["submit"])){
                                                 </div>
                                             </div>
                                             <div class="col-sm-9 offset-sm-3">
-                                                <button type="submit" name="submit" id="submit" class="btn btn-primary me-1">Submit</button>
+                                                <button type="submit" name="submit" id="send_pass" class="btn btn-primary me-1">Submit</button>
                                                 <button type="reset" class="btn btn-outline-secondary">Reset</button>
                                             </div>
                                         </div>
@@ -260,6 +259,28 @@ if(isset($_POST["submit"])){
                 });
             }
         })
+    </script>
+<script>
+    $(document).ready(function(){
+        $("#confirmpassword").keyup(function(){
+            fun_check();
+        });
+        function fun_check(){
+            let password = $("#newpassword").val();
+            let confirmPassword = $("#confirmpassword").val();
+            if (password != confirmPassword) {
+                $("#message").show().html('Password do not match').css('color','red');
+                $("#send_pass").prop('disabled',true);
+                // alert("Passwords do not match.");
+                return false;
+            }
+            else{
+                $("#message").hide();
+                $("#send_pass").prop('disabled',false);
+            }
+            return true;
+        }
+    })
     </script>
 
 

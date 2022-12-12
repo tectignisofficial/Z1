@@ -164,14 +164,14 @@ include("../../../include/config.php");
                                             <td>
                                                 <a class="btn btn-outline-primary edit"
                                                     href="blogedit.php?eid=<?php echo $arr['id'] ?>">
-                                                    <i data-feather="edit"></i>
+                                                    <i class="fa fa-edit"></i>
                                                 </a>
 
                                                 <a class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         href=""
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $arr['id']; ?>">
-                                                        <i data-feather="trash-2"></i>
+                                                        <i class="fa fa-trash"></i>
                                                     </a>
                                             </td>
                                         </tr>
@@ -253,14 +253,14 @@ include("../../../include/config.php");
                 let delid = $(this).data('id');
                 swal({
                         title: "Are you sure?",
-                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        text: "Once deleted, you will not be able to recover this file!",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            swal("Poof! Your imaginary file has been deleted!", {
+                            swal("Poof! Your file has been deleted!", {
                                 icon: "success",
                             });
                             window.location.href = "blogtable.php?delid" + delid;

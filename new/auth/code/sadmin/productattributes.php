@@ -10,26 +10,24 @@ include('../../../include/config.php');
 <!-- BEGIN: Head-->
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui" />
     <meta name="description"
-        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+        content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities." />
     <meta name="keywords"
-        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
+        content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app" />
+    <meta name="author" content="PIXINVENT" />
     <title>Product Atrribute &ndash; Z1KneeBrace</title>
-    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
-        rel="stylesheet">
-
+        rel="stylesheet" />
     <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- END: Page CSS-->
-
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
@@ -58,7 +56,6 @@ include('../../../include/config.php');
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
-
 </head>
 <!-- END: Head-->
 
@@ -87,8 +84,9 @@ include('../../../include/config.php');
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <h2 class="content-header-title float-start mb-0">Products Attributes</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a>
                         </li>
+                        <li class="breadcrumb-item active">Ecommerce</li>
                         <li class="breadcrumb-item active">Products Attributes</li>
                     </ol>
                 </div>
@@ -103,15 +101,15 @@ include('../../../include/config.php');
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header border-bottom row-12">
+                                <div class="card-header">
                                     <h4 class="card-title">Products Attributes</h4>
                                     <a class="btn btn-primary" href="product_attributes_form.php"><i
                                             class="fa fa-plus"></i>
                                         Create
                                     </a>
                                 </div>
-                                <div class="card-datatable">
-                                    <table class="dt-responsive table" id="example1">
+                                <div class="card-body">
+                                    <table class="table table-bordered table-striped" id="example1">
                                         <thead>
                                             <tr>
                                                 <th>Sr No.</th>
@@ -136,14 +134,9 @@ include('../../../include/config.php');
                                                     <td><?php $date=strtotime($arr['create_date']); echo date('d/m/y',$date); ?></td>
                                                    
                                                     <td>
-                                                    <!-- <button type="button"
-                                                            class="btn btn-icon rounded-circle btn-flat-primary btnmod1"
-                                                            data-bs-toggle="modal" data-bs-target="#editUser<?php echo $arr['id'] ?> "><i
-                                                                data-feather="edit"></i></button> -->
-                                                        <a href="api.php?did=<?php echo $arr['id'] ?>"><button
+                                                       <button
                                                                 type="button"
-                                                                class="btn btn-icon rounded-circle btn-flat-danger delbtn"><i
-                                                                    data-feather="trash"></i></button></a></td>
+                                                                class="btn btn-icon rounded-circle btn-flat-danger delbtn" data-id='<?php echo $arr['id'] ?>'><i class="fa fa-trash"></i></button></td>
 
                                                 </tr>
                                                 <?php $count++; } ?>
@@ -167,16 +160,11 @@ include('../../../include/config.php');
 
     <!-- BEGIN: Footer-->
     <?php include("include/footer.php")?>
-
-    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-    <!-- END: Footer-->
-
-
-    <!-- BEGIN: Vendor JS-->
-    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN: Page Vendor JS-->
+        <!-- BEGIN: Vendor JS-->
+        <script src="app-assets/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
-    <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
     <script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
     <script src="app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
@@ -190,13 +178,6 @@ include('../../../include/config.php');
     <script src="app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
     <script src="app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-    <!-- END: Page Vendor JS-->
-
-    <!-- BEGIN: Theme JS-->
-    <script src="app-assets/js/core/app-menu.js"></script>
-    <script src="app-assets/js/core/app.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- END: Theme JS-->
 
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -210,7 +191,6 @@ include('../../../include/config.php');
     <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
 
     <script>
         $(function () {
@@ -218,11 +198,24 @@ include('../../../include/config.php');
                 "responsive": true,
                 "lengthChange": true,
                 "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print"]
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
         });
     </script>
+
+
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/tables/table-datatables-basic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- END: Page JS-->
+
 
     <script>
         $(window).on('load', function () {
@@ -241,19 +234,19 @@ include('../../../include/config.php');
                 let delid = $(this).data('id');
                 swal({
                         title: "Are you sure?",
-                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        text: "Once deleted, you will not be able to recover this file!",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            swal("Poof! Your imaginary file has been deleted!", {
+                            swal("Poof! Your file has been deleted!", {
                                 icon: "success",
                             });
-                            window.location.href = "productattributes.php?delid" + delid;
+                            window.location.href = "api.php?did=" + delid;
                         } else {
-                            swal("Your imaginary file is safe!");
+                            // swal("Your imaginary file is safe!");
                         }
                     });
             })

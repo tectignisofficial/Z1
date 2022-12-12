@@ -83,6 +83,9 @@ if(isset($_GET['did'])){
   if($sql==1){
     header('location:productattributes.php');
   }
+  else{
+    echo '<script>alert("something Went Wrong");</script>';
+  }
 }
 
 if(isset($_POST['size'])){

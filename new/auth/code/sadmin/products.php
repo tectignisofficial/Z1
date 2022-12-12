@@ -9,21 +9,18 @@ if(isset($_GET['delid'])){
     $id=mysqli_real_escape_string($conn,$_GET['delid']);
     $sql=mysqli_query($conn,"delete from products where id='$id'");
     if($sql=1){
-        // echo "<script>alert('Successfully deleted');window.location.href='testimonials.php';</script>";
+        // echo "<script>alert('Successfully deleted');window.location.href='products.php';</script>";
         header('location:products.php');
     }
     else{ echo "<script>alert('Failed to Delete')</script>"; }
   }
-
-
 ?>
 
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui" />
     <meta name="description"
@@ -36,13 +33,11 @@ if(isset($_GET['delid'])){
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet" />
-
     <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- END: Page CSS-->
-
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
@@ -137,11 +132,10 @@ if(isset($_GET['delid'])){
                     <div class="col-12 ">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Products</h4>
+                                <h4 class="card-title">Product List</h4>
                                 <a class="btn btn-primary" href="products_form.php"><i class="fa fa-plus"></i>
                                     Create
                                 </a>
-
                             </div>
 
                             <div class="card-body">
@@ -158,7 +152,7 @@ if(isset($_GET['delid'])){
                                     </thead>
                                     <tbody>
                                     <?php
-                                                $sql=mysqli_query($conn,"select * from products ");
+                                                $sql=mysqli_query($conn,"select * from products");
                                                 $count=1;
                                                 while($arr=mysqli_fetch_array($sql)){
                                                 ?>
@@ -171,29 +165,26 @@ if(isset($_GET['delid'])){
                                             <td>
                                                 <a class="btn btn-outline-success eye"
                                                     href="../../../productdetail.php?name=<?php echo $arr['name']; ?>">
-                                                    <i data-feather="eye"></i>
+                                                    <i class="fa fa-eye"></i>
                                                 </a>
                                                 <a class="btn btn-outline-primary edit"
                                                 href="editProducts.php?eid=<?php echo $arr['id']; ?>">
-                                                    <i data-feather="edit"></i>
+                                                <i class="fa fa-edit"></i>
                                                 </a>
                                                         <a class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $arr['id']; ?>">
-                                                        <i data-feather="trash-2"></i>
+                                                        <i class="fa fa-trash"></i>
                                                     </a>
                                             </td>
                                         </tr>
                                         <?php $count++; } ?>
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -227,12 +218,6 @@ if(isset($_GET['delid'])){
     <script src="app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
 
-
-
-
-
-
-
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -245,7 +230,6 @@ if(isset($_GET['delid'])){
     <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
 
     <script>
         $(function () {
@@ -288,14 +272,14 @@ if(isset($_GET['delid'])){
                 let delid = $(this).data('id');
                 swal({
                         title: "Are you sure?",
-                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        text: "Once deleted, you will not be able to recover this file!",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            swal("Poof! Your imaginary file has been deleted!", {
+                            swal("Poof! Your file has been deleted!", {
                                 icon: "success",
                             });
                             window.location.href = "products.php?delid" + delid;

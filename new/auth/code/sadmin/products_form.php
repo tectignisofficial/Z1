@@ -7,7 +7,7 @@ include('../../../include/config.php');
 if(isset($_POST['submit'])){
     $name=$_POST['name'] ?? null;
     $desc=mysqli_real_escape_string($conn,$_POST['desc']);
-    $cont=$_POST['cont'] ?? null;
+    $cont=mysqli_real_escape_string($conn,$_POST['cont']);
     $hightlightfile=$_FILES['hightlightfile']['name'];
     $hoverfile=$_FILES['hoverfile']['name'];
     $sizefile=$_FILES['sizefile']['name'];
@@ -203,59 +203,19 @@ if($sql==1){
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" />
+                                            placeholder="Name" required/>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="desc">Description</label>
-                                        <!-- <div>
-                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
-                                            <button type="button" class="btn btn-info">Add Media</button>
-                                        </div> -->
                                         <div class="mt-2">
-                                            <textarea class="summernote form-control" name="desc"></textarea>
+                                            <textarea class="summernote form-control" name="desc" required></textarea>
                                         </div>
-
-                                        <!-- <input type="text" id="myeditor" class="form-control" name="desc"
-                                            placeholder="Description" /> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="cont">Content</label>
-                                        <!-- <div>
-                                            <button type="button" class="btn btn-primary">Show/hide Editor</button>
-                                            <button type="button" class="btn btn-info">Add Media</button>
-                                            <div class="btn-group">
-                                                <button class="btn btn-info dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    Info
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                                    <a class="dropdown-item" href="#">Payment info</a>
-                                                    <a class="dropdown-item" href="#">Blog Posts</a>
-                                                    <a class="dropdown-item" href="#">Contact form</a>
-                                                    <a class="dropdown-item" href="#">Simple Slider</a>
-                                                    <a class="dropdown-item" href="#">Feature Product Categories</a>
-                                                    <a class="dropdown-item" href="#">Featured Brands</a>
-                                                    <a class="dropdown-item" href="#">Product Collections</a>
-                                                    <a class="dropdown-item" href="#">Trending Products</a>
-                                                    <a class="dropdown-item" href="#">Product blocks</a>
-                                                    <a class="dropdown-item" href="#">All products</a>
-                                                    <a class="dropdown-item" href="#">All brands</a>
-                                                    <a class="dropdown-item" href="#">Flash sale</a>
-                                                    <a class="dropdown-item" href="#">Banners</a>
-                                                    <a class="dropdown-item" href="#">Our features</a>
-                                                    <a class="dropdown-item" href="#">Testimonials</a>
-                                                    <a class="dropdown-item" href="#">Newsletter form</a>
-                                                    <a class="dropdown-item" href="#">Featured News</a>
-                                                    <a class="dropdown-item" href="#">Google maps</a>
-                                                    <a class="dropdown-item" href="#">Youtube video</a>
-                                                </div>
-                                            </div>
-                                      </div> -->
                                         <div class="mt-2">
                                             <textarea class="summernote form-control" name="cont"></textarea>
                                         </div>
-                                        <!-- <input type="text" id="cont" class="form-control" name="cont" placeholder=""/> -->
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="images">Images</label><br>
@@ -264,7 +224,7 @@ if($sql==1){
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select files</button>
                                             <input type="file" name="hightlightfile" id="hightlightfile"
-                                                accept="image/webp" multiple />
+                                                accept="image/webp" required/>
                                         </div>
                                         <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px
@@ -274,13 +234,13 @@ if($sql==1){
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select multiple files</button>
                                             <input type="file" name="myfile[]" id="myfile" accept="image/webp"
-                                                multiple />
+                                                multiple required/>
                                         </div>
 
                                         <div class="upload-btn-wrapper">
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select Hover Files</button>
-                                            <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" />
+                                            <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" required/>
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
@@ -330,21 +290,21 @@ if($sql==1){
                                                 <div class="mb-1">
                                                     <label class="form-label" for="SKU">SKU</label>
                                                     <input type="text" id="SKU" class="form-control" name="sku"
-                                                        placeholder="" />
+                                                        placeholder="" required/>
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="price">Price</label>
                                                     <input type="text" id="price" class="form-control" name="price"
-                                                        placeholder="" />
+                                                        placeholder="" required/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
                                             <!-- <input type="" class="form-control" name="stock" id=""> -->
-                                            <select name="stock1" id="" class="form-control">
+                                            <select name="stock1" id="" class="form-control" required>
                                                 <option value="In Stock">In Stock</option>
                                                 <option value="Out Of Stock">Out Of Stock</option>
                                             </select>
@@ -359,7 +319,6 @@ if($sql==1){
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Attributes</h4>
-                                    <!-- <p id="show_attributes" class="clickadd">Add new attributes</p> -->
                                 </div>
                                 <div class="card-body">
                                     <!-- <form class="form form-vertical"> -->
@@ -423,25 +382,6 @@ if($sql==1){
                                 </div>
                                 <!-- </form> -->
                             </div>
-                        <!-- <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Related products</h4>
-                            </div>
-                            <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label class="form-label" for="sname">Related products</label>
-                                            <input type="text" id="sname" class="form-control" name="rproduct"
-                                                placeholder="search products" />
-                                        </div>
-                                        <div class="col-12">
-                                            <label class="form-label" for="csname">Cross-selling products</label>
-                                            <input type="text" id="csname" class="form-control" name="csproduct"
-                                                placeholder="search products" />
-                                        </div>
-                                    </div>
-                            </div>
-                        </div> -->
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Search Engine Optimize</h4>
@@ -530,8 +470,8 @@ if($sql==1){
                                         <div class="mb-1">
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input" id="tv" name="knee"
-                                                    value="Knee Brace" />
-                                                <label class="form-check-label" for="tv">Knee Brace</label>
+                                                    value="accessories" />
+                                                <label class="form-check-label" for="tv">Accessories</label>
                                             </div>
                                         </div>
 

@@ -1,3 +1,24 @@
+<?php
+session_start();
+if(isset($_SESSION['id'])){
+    header("location:index.php");
+}
+include('../../../include/config.php');
+if(isset($_POST['forgot'])){
+    $Email=mysqli_real_escape_string($conn,$_POST['forgot-password-email']);
+  
+    $sql=mysqli_query($conn,"select * from adminlogin where email='$Email' and status='0'");
+    $count=mysqli_num_rows($sql);
+    $arr=mysqli_fetch_array($sql);
+    $id=$arr['id'] ?? null;
+    if($count == 1){
+      echo '<script>alert("data successfully submitted");</script>';
+          header("location:password.php?id=".$id);
+    }else{
+      echo '<script>alert("oops...somthing went wrong");</script>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -68,14 +89,14 @@
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                                 <h2 class="card-title fw-bold mb-1">Forgot Password? 🔒</h2>
                                 <p class="card-text mb-2">Enter your email and we'll send you instructions to reset your password</p>
-                                <form class="auth-forgot-password-form mt-2" action="auth-reset-password-cover.html" method="POST">
+                                <form class="auth-forgot-password-form mt-2" method="POST">
                                     <div class="mb-1">
                                         <label class="form-label" for="forgot-password-email">Email</label>
-                                        <input class="form-control" id="forgot-password-email" type="text" name="forgot-password-email" placeholder="Enter Email ID" aria-describedby="forgot-password-email" autofocus="" tabindex="1" />
+                                        <input class="form-control" id="forgot-password-email" type="email" name="forgot-password-email" placeholder="Enter Email ID" aria-describedby="forgot-password-email" autofocus="" tabindex="1" />
                                     </div>
-                                    <button class="btn btn-primary w-100" tabindex="2">Send reset link</button>
+                                    <button class="btn btn-primary w-100" tabindex="2" name="forgot">Send reset link</button>
                                 </form>
-                                <p class="text-center mt-2"><a href="auth-login-cover.html"><i data-feather="chevron-left"></i> Back to login</a></p>
+                                <p class="text-center mt-2"><a href="auth-admin-login.php"><i data-feather="chevron-left"></i> Back to login</a></p>
                             </div>
                         </div>
                         <!-- /Forgot password-->

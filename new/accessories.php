@@ -10,7 +10,7 @@ include('include/config.php');
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shop &ndash; Z1KneeBrace</title>
+    <title>Accessories &ndash; Z1KneeBrace</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -35,8 +35,8 @@ include('include/config.php');
             <div class="page section-header text-center">
                 <div class="page-title">
                     <div class="wrapper headinghead">
-                        <h1 class="page-width">Shop Now</h1>
-                        <p><a href="index.php">Home</a> / <span>Shop Now</span></p>
+                        <h1 class="page-width">Accessories</h1>
+                        <p><a href="index.php">Home</a> / <span>Accessories</span></p>
                     </div>
                 </div>
             </div>
@@ -49,36 +49,11 @@ include('include/config.php');
                         <div class="closeFilter d-block d-md-none d-lg-none"><i class="icon icon anm anm-times-l"></i>
                         </div>
                         <div class="sidebar_tags">
-                            <!--Categories-->
-
-                            <!--Categories-->
-                            <!--Price Filter-->
-
-                            <!--End Price Filter-->
-                            <!--Size Swatches-->
-
-                            <!--End Size Swatches-->
-                            <!--Color Swatches-->
-
-                            <!--End Color Swatches-->
-                            <!--Brand-->
-
-                            <!--End Brand-->
 
                             <!--Banner-->
                             <div class="sidebar_widget static-banner">
                                 <img src="assets/images/z1kneebanner.webp" alt="z1knee" />
                             </div>
-                            <!--Banner-->
-                            <!--Information-->
-                            <!-- <div class="sidebar_widget">
-                            <div class="widget-title"><h2>Information</h2></div>
-                            <div class="widget-content"><p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p></div>
-                        </div> -->
-                            <!--end Information-->
-                            <!--Product Tags-->
-
-                            <!--end Product Tags-->
                         </div>
                     </div>
                     <!--End Sidebar-->
@@ -109,9 +84,6 @@ include('include/config.php');
                                         </div>
                                         <div
                                             class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                            <!-- <span class="filters-toolbar__product-count">Showing: <?php $sql=mysqli_query($conn,"select * from products");
-                                        $count=mysqli_num_rows($sql);
-                                        echo $count;  ?></span> -->
                                         </div>
                                         <div class="col-4 col-md-4 col-lg-4 text-right">
                                             <div class="filters-toolbar__item">
@@ -140,10 +112,10 @@ include('include/config.php');
                                             }else{ $pageno = 1; }
                                             $no_of_record_per_page=6;
                                             $occ=($pageno-1)*$no_of_record_per_page;
-                                            $total_page=mysqli_query($conn,"select count(*) from products  where categories IS NULL");
+                                            $total_page=mysqli_query($conn,"select count(*) from products where categories='accessories'");
                                             $total_rows = mysqli_fetch_array($total_page)[0];
                                             $total_pages = ceil($total_rows / $no_of_record_per_page);
-                                            $sql=mysqli_query($conn,"select * from products where categories IS NULL  LIMIT $occ, $no_of_record_per_page");
+                                            $sql=mysqli_query($conn,"select * from products where categories='accessories'  LIMIT $occ, $no_of_record_per_page");
                                             if(mysqli_num_rows($sql)>0){
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
@@ -231,7 +203,7 @@ include('include/config.php');
                                                 ?>
                                     </ul>
                                 </div>
-                                <?php } else{ echo '<script>window.location.href="shop.php";</script>' ;} ?>
+                                <?php } else{ echo '<script>window.location.href="accessories.php";</script>' ;} ?>
 
 
 

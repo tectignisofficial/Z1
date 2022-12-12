@@ -133,9 +133,7 @@ if(isset($_GET['delid'])){
                     <div class="col-12 ">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Table</h4>
-
-
+                                <h4 class="card-title">Contact Table</h4>
                             </div>
 
                             <div class="card-body">
@@ -165,11 +163,10 @@ if(isset($_GET['delid'])){
                                             <td><?php echo $row['subject'];?></td>
                                             <td><?php echo $row['message'];?></td>
                                             <td>
-                                                <a href="contact.php?delid=<?php echo $row['id']; ?>"
-                                                    onclick="return checkDelete()"><button type="button"
+                                                <button type="button"
                                                         data-id="=<?php echo $row['id']; ?>"
-                                                        class="btn btn-outline-danger"><i
-                                                            data-feather="trash"></i></button></a>
+                                                        class="btn btn-outline-danger delbtn"><i
+                                                            class="fa fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>
@@ -216,12 +213,6 @@ if(isset($_GET['delid'])){
     <script src="app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
 
-
-
-
-
-
-
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -258,6 +249,32 @@ if(isset($_GET['delid'])){
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/tables/table-datatables-basic.js"></script>
     <!-- END: Page JS-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.delbtn').click(function (e) {
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "contact.php?delid" + delid;
+                        } else {
+                            // swal("Your imaginary file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
 
     <script>
         $(window).on("load", function () {

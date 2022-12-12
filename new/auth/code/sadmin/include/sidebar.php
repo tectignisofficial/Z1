@@ -4,7 +4,6 @@
                 <li class="nav-item me-auto"><a class="navbar-brand">
                         <h2 class="brand-text">Z1KneeBrace</h2>
                     </a></li>
-
             </ul>
         </div>
         <div class="shadow-bottom"></div>
@@ -47,9 +46,6 @@
                         </li>
                         <li><a class="d-flex align-items-center" href="reviews.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Add">Reviews</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="discount.php"><i data-feather="circle"></i><span
-                                    class="menu-item text-truncate" data-i18n="Add">Discount</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="customers.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Add">Customers</span></a>

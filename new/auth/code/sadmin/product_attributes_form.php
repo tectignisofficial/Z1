@@ -5,8 +5,8 @@ if(!isset($_SESSION['id'])){
 }else{
 include('../../../include/config.php');
 if(isset($_POST['submit'])){
-    $maintitle=$_POST['maintitle'];
-    $mainslug=$_POST['mainslug'];
+    $maintitle=mysqli_real_escape_string($conn,$_POST['maintitle']);
+    $mainslug=mysqli_real_escape_string($conn,$_POST['mainslug']);
     $title=$_POST['title'];
     $slug=$_POST['slug'];
    
@@ -16,13 +16,13 @@ if(isset($_POST['submit'])){
         $s_title = $titles;
         $s_slug = $slug[$index];
 
-        $sql=mysqli_query($conn,"INSERT INTO `product_attribute`(`main_title`, `main_slug`, `title`, `slug`) VALUES ('$maintitle','$mainslug','$s_title','$s_slug')");
+        $sql=mysqli_query($conn,"INSERT INTO `product_attribute`(`main_title`, `main_slug`, `title`, `slug`,`is_default`) VALUES ('$maintitle','$mainslug','$s_title','$s_slug','1')");
        
     }
     if($sql==1){
-        echo '<script>alert("sucessfully submitted");</script>';
+        echo '<script>alert("Sucessfully Submitted");window.location.href="productattributes.php"</script>';
     }else{
-        echo '<script>alert("something went wrong");</script>';
+        echo '<script>alert("Something Went Wrong");</script>';
     }
 }
 ?>
@@ -114,13 +114,13 @@ if(isset($_POST['submit'])){
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">Orders</h2>
+                            <h2 class="content-header-title float-start mb-0">Product Attribute Form</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active">Ecommerce</li>
-                                    <li class="breadcrumb-item active">New Products</li>
+                                    <li class="breadcrumb-item active">Product Attribute Form</li>
                                 </ol>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ if(isset($_POST['submit'])){
                                                         <label class="control-label required"
                                                             for="email-id">TITLE</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="maintitle" />
+                                                            name="maintitle" required/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,7 +158,7 @@ if(isset($_POST['submit'])){
                                                         <label class="control-label required"
                                                             for="email-id">SLUG</label>
                                                         <input type="text" id="first-name" class="form-control"
-                                                            name="mainslug" />
+                                                            name="mainslug" required/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -176,67 +176,29 @@ if(isset($_POST['submit'])){
                                                     <div class="head-label">
                                                         <h6 class="mb-0">Attributes list</h6>
                                                     </div>
-                                                    <!-- <div class="dt-action-buttons text-end">
-                                                        <div class="dt-buttons d-inline-flex"> <button
-                                                                class="dt-button create-new btn btn-primary"
-                                                                tabindex="0" aria-controls="DataTables_Table_0"
-                                                                type="button" data-bs-toggle="modal"
-                                                                data-bs-target="#modals-slide-in"><span><svg
-                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                        height="24" viewBox="0 0 24 24" fill="none"
-                                                                        stroke="currentColor" stroke-width="2"
-                                                                        stroke-linecap="round" stroke-linejoin="round"
-                                                                        class="feather feather-plus me-50 font-small-4">
-                                                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                                    </svg>Add New Attributes</span></button> </div>
-                                                    </div> -->
                                                 </div>
                                                 <table
-                                                    class="datatables-basic table dataTable no-footer dtr-column collapsed"
+                                                    class="datatables-basic table dataTable no-footer dtr-column collapsed p-2"
                                                     id="DataTables_Table_0" role="grid"
-                                                    aria-describedby="DataTables_Table_0_info" style="width: 942px;">
+                                                    aria-describedby="DataTables_Table_0_info" style="width: 942px;padding:20px;">
                                                     <thead>
                                                         <tr role="row">
-                                                            <th class="control sorting_disabled" rowspan="1" colspan="1"
-                                                                style="width: 1px;" aria-label="">#</th>
-                                                            <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all"
-                                                                rowspan="1" colspan="1" style="width: 25px;"
-                                                                data-col="1" aria-label="">
+                                                            <th>#</th>
+                                                            <th>
                                                                 <div class="form-check"> <label
                                                                         class="form-check-label"
                                                                         for="checkboxSelectAll">Is default?</label> 
                                                                 </div>
                                                             </th>
-                                                            <th class="sorting" tabindex="0"
-                                                                aria-controls="DataTables_Table_0" rowspan="1"
-                                                                colspan="1" style="width: 252px;"
-                                                                aria-label="Name: activate to sort column ascending">
-                                                                TITLE</TItle></th>
-                                                            <th class="sorting" tabindex="0"
-                                                                aria-controls="DataTables_Table_0" rowspan="1"
-                                                                colspan="1" style="width: 242px;"
-                                                                aria-label="Email: activate to sort column ascending">
+                                                            <th>TITLE</th>
+                                                            <th>
                                                                 SLUG</th>
-                                                            <th class="sorting" tabindex="0"
-                                                                aria-controls="DataTables_Table_0" rowspan="1"
-                                                                colspan="1" style="width: 69px;"
-                                                                aria-label="Date: activate to sort column ascending">
+                                                            <th>
                                                                 REMOVE</th>
 
                                                         </tr>
                                                     </thead>
                                                     <tbody class="tabletr">
-                                                        <!-- <tr>
-                                                            <td>1</td>
-                                                            <td><input type="radio" name="defaultselect" value="1" selected></td>
-                                                            <td><input type="text" class="form-control" ></td>
-                                                            <td><input type="text" class="form-control"></td>
-                                                            <td> <a href=""><button
-                                                                type="button"
-                                                                class="btn btn-icon rounded-circle btn-flat-danger"><i
-                                                                    data-feather="trash"></i></button></a></td>
-                                                        </tr> -->
                                                     </tbody>
                                                     
                                                 </table>
@@ -244,94 +206,11 @@ if(isset($_POST['submit'])){
                                                       <button id="addattr" type="button"
                                                                 class="btn btn-primary">+ Add New Attributes</button> 
                                                     </div>
-                                                <!-- <div class="d-flex justify-content-between mx-0 row">
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="dataTables_info" id="DataTables_Table_0_info"
-                                                            role="status" aria-live="polite">Showing 1 to 7 of 100
-                                                            entries</div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="dataTables_paginate paging_simple_numbers"
-                                                            id="DataTables_Table_0_paginate">
-                                                            <ul class="pagination">
-                                                                <li class="paginate_button page-item previous disabled"
-                                                                    id="DataTables_Table_0_previous"><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="0" tabindex="0"
-                                                                        class="page-link">&nbsp;</a></li>
-                                                                <li class="paginate_button page-item active"><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="1" tabindex="0"
-                                                                        class="page-link">1</a></li>
-                                                                <li class="paginate_button page-item "><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="2" tabindex="0"
-                                                                        class="page-link">2</a></li>
-                                                                <li class="paginate_button page-item "><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="3" tabindex="0"
-                                                                        class="page-link">3</a></li>
-                                                                <li class="paginate_button page-item "><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="4" tabindex="0"
-                                                                        class="page-link">4</a></li>
-                                                                <li class="paginate_button page-item "><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="5" tabindex="0"
-                                                                        class="page-link">5</a></li>
-                                                                <li class="paginate_button page-item disabled"
-                                                                    id="DataTables_Table_0_ellipsis"><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="6" tabindex="0"
-                                                                        class="page-link">…</a></li>
-                                                                <li class="paginate_button page-item "><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="7" tabindex="0"
-                                                                        class="page-link">15</a></li>
-                                                                <li class="paginate_button page-item next"
-                                                                    id="DataTables_Table_0_next"><a href="#"
-                                                                        aria-controls="DataTables_Table_0"
-                                                                        data-dt-idx="8" tabindex="0"
-                                                                        class="page-link">&nbsp;</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="modal modal-slide-in fade" id="modals-slide-in">
-                                    <div class="modal-dialog sidebar-sm">
-                                        <form class="add-new-record modal-content pt-0">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close">×</button>
-                                            <div class="modal-header mb-1">
-                                                <h5 class="modal-title" id="exampleModalLabel">New Attributes</h5>
-                                            </div>
-                                            <div class="modal-body flex-grow-1">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="basic-icon-default-fullname">TITLE</TITle></TItle></label>
-                                                    <input type="text" class="form-control dt-full-name"
-                                                        id="basic-icon-default-fullname" 
-                                                        aria-label="John Doe">
-                                                </div>
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="basic-icon-default-post">SLUG</label>
-                                                    <input type="text" id="basic-icon-default-post"
-                                                        class="form-control dt-post"
-                                                        aria-label="Web Developer">
-                                                </div>
-                                                <button type="button"
-                                                    class="btn btn-primary data-submit me-1 waves-effect waves-float waves-light">Submit</button>
-                                                <button type="reset" class="btn btn-outline-secondary waves-effect"
-                                                    data-bs-dismiss="modal">Cancel</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div> -->
                             </div>
-                           
                         </div>
                         <div class="col-md-3 col-12">
                             <div class="card">
@@ -346,31 +225,9 @@ if(isset($_POST['submit'])){
                                             <i class="fa fa-save"></i> Save
                                         </button>
                                         &nbsp;
-                                        <!-- <button type="submit" name="submit" value="apply" class="btn btn-success">
-                                            <i class="fa fa-check-circle"></i> Save &amp; Edit
-                                        </button> -->
                                     </div>
                                 </div>
-                              
                             </div>
-                            <!-- <div class="card">
-                                <div class="pd-all-10-20 border-top-color">
-                                    <div class="widget-title">
-                                        <h4 class="card-title"><label for="status" class="control-label required"
-                                                aria-required="true">Status</label></h4>
-                                    </div>
-                                </div>
-                                <div class="widget-body">
-                                    <div class="ui-select-wrapper form-group">
-                                        <select class="form-control ui-select ui-select" id="status" name="status">
-                                            <option value="published">Published</option>
-                                            <option value="draft">Draft</option>
-                                            <option value="pending">Pending</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> -->
-                           
                         </div>
                         </form>
                 </section>

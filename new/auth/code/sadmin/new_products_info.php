@@ -168,7 +168,7 @@ if(isset($_GET['delid'])){
                                                         onclick="return checkDelete()"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $row['id']; ?>">
-                                                        <i data-feather="trash-2"></i>
+                                                        <i class="fa fa-trash"></i>
                                                     </a>
                                                 </td>
                                             </tr>

@@ -11,8 +11,8 @@ if(isset($_POST['submit'])){
    
     $sql=mysqli_query($conn,"INSERT INTO `contact`(`name`, `email`, `phone`, `subject`, `message`) VALUES ('$name','$email','$phone','$subject','$message')");
     if($sql==1){
-      echo '<script>alert("Successfully submitted");</script>';
-      header("location:contact-us.php");
+      echo '<script>alert("Thanks for contacting us! We will be in touch with you shortly.");window.location.href="contact-us.php"</script>';
+      // header("location:contact-us.php");
   }else {
       echo '<script>alert("oops...somthing went wrong");</script>';
   }
@@ -82,9 +82,9 @@ if(isset($_POST['submit'])){
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-4">
-            <h2>Drop Us A Line</h2>
+            <h2>Contact Form</h2>
 
-            <div class="formFeilds contact-form form-vertical">
+            <div class="formFeilds contact-form form-vertical mt-4">
               <form action="" method="post" id="contact_form" class="contact-form">
                 <div class="row">
                   <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -150,13 +150,13 @@ if(isset($_POST['submit'])){
               </li>
             </ul>
             <hr />
-            <ul class="list--inline site-footer__social-icons social-icons">
+            <!-- <ul class="list--inline site-footer__social-icons social-icons">
               <?php                         
-$sql=mysqli_query($conn,"select * from social_media");
-$facebook=mysqli_fetch_array($sql);
+              $sql=mysqli_query($conn,"select * from social_media");
+              $facebook=mysqli_fetch_array($sql);
 
-?>
-              <li><a class="social-icons__link" href="<?php echo $facebook['facebook']?>" target="_blank"
+              ?>
+                            <li><a class="social-icons__link" href="<?php echo $facebook['facebook']?>" target="_blank"
                   title="Belle Multipurpose Bootstrap 4 Template on Facebook"><i class="icon icon-facebook"></i></a>
               </li>
               <li><a class="social-icons__link" href="<?php echo $facebook['twitter']?>" target="_blank"
@@ -177,7 +177,7 @@ $facebook=mysqli_fetch_array($sql);
               <li><a class="social-icons__link" href="<?php echo $facebook['vimeo']?>" target="_blank"
                   title="Belle Multipurpose Bootstrap 4 Template on Vimeo"><i class="icon icon-vimeo-alt"></i> <span
                     class="icon__fallback-text">Vimeo</span></a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>

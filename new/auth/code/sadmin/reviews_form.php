@@ -132,70 +132,114 @@ if(isset($_POST['subm'])){
 
 
     <!-- BEGIN: Content-->
-    <div class="app-content content ">
-    <section id="multiple-column-form">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Create Reviews</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form class="form" method="POST">
-                                        <div class="row">
-                                            <div class="col-md-6 col-12">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="first-name-column">Name</label>
-                                                    <input type="text" id="name" class="form-control" placeholder="Name" name="name" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="mb-1">
-                                                <label class="form-label" for="select-country1">Product Name</label>
-                                            <select class="form-select" id="pname"  name="pname" required>
-                                                <option value="">Select Product</option>
-                                                <option value="K2">K2 Comfortline Knee Orthosis</option>
-                                                <option value="K4">K4 Osteo Align Knee Orthosis</option>
-                                                <option value="K6">K6 Dezire Knee Orthosis</option>
-                                            </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="city-column">Location</label>
-                                                    <input type="text" id="location" class="form-control" placeholder="Location" name="location" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="country-floating">Stars</label>
-                                                    <input type="text" id="stars" class="form-control" name="stars" placeholder="Stars" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-12">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="company-column">Links</label>
-                                                    <input type="text" id="link" class="form-control" name="link" placeholder="href" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-12">
-                                                <div class="mb-1">
-                                                    <label class="form-label" for="email-id-column">Description</label>
-                                                    <textarea type="text" id="description" class="form-control" name="description" placeholder="Description"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" name="subm" id="subm" class="btn btn-primary me-1">Submit</button>
-                                                <button type="reset" class="btn btn-outline-secondary">Reset</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                <div class="app-content content">
+                    <div class="content-wrapper container-xxl p-0">
+                        <div class="content-header row">
+                            <div class="content-header-left col-md-9 col-12 mb-2">
+                                <h2 class="content-header-title float-start mb-0">Reviews</h2>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Ecommerce</li>
+                                    <li class="breadcrumb-item active">Reviews</li>
+                                </ol>
+                            </div>
+                            <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                                <div class="mb-1 breadcrumb-right">
                                 </div>
                             </div>
                         </div>
+                        <div class="content-body">
+                            <!-- Responsive Datatable -->
+                            <section id="responsive-datatable">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+
+                                                <div class="col-2">
+                                                    <h4 class="card-title">Create Reviews</h4>
+                                                </div>
+                                                <div class="col-4"></div>
+
+                                            </div>
+                                            <div class="card-body">
+                                                <form class="form" method="POST">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label"
+                                                                    for="first-name-column">Name</label>
+                                                                <input type="text" id="name" class="form-control"
+                                                                    placeholder="Name" name="name" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label" for="select-country1">Product
+                                                                    Name</label>
+                                                                <select class="form-select" id="pname" name="pname"
+                                                                    required>
+                                                                    <option value="">Select Product</option>
+                                                                    <option value="K2">K2 Comfortline Knee Orthosis
+                                                                    </option>
+                                                                    <option value="K4">K4 Osteo Align Knee Orthosis
+                                                                    </option>
+                                                                    <option value="K6">K6 Dezire Knee Orthosis</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label"
+                                                                    for="city-column">Location</label>
+                                                                <input type="text" id="location" class="form-control"
+                                                                    placeholder="Location" name="location" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label"
+                                                                    for="country-floating">Stars</label>
+                                                                <input type="text" id="stars" class="form-control"
+                                                                    name="stars" placeholder="Stars" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label"
+                                                                    for="company-column">Links</label>
+                                                                <input type="text" id="link" class="form-control"
+                                                                    name="link" placeholder="href" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label"
+                                                                    for="email-id-column">Description</label>
+                                                                <textarea type="text" id="description"
+                                                                    class="form-control" name="description"
+                                                                    placeholder="Description" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button type="submit" name="subm" id="subm"
+                                                                class="btn btn-primary me-1">Submit</button>
+                                                            <button type="reset"
+                                                                class="btn btn-outline-secondary">Reset</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--/ Responsive Datatable -->
+
+                        </div>
                     </div>
-                </section>
-    </div>
+                </div>
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
