@@ -7677,3 +7677,11 @@ body{
   height: 10px !important;
   border-radius: 50% !important;
 }
+@media only screen and (max-width: 767px){
+	.mobileview{
+		display:flex !important;
+	}
+}
+.mobileview{
+	display:none;
+}

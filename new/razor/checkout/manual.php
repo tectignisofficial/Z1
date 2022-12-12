@@ -272,7 +272,7 @@ $country=$arr['country'];
 </form>
 <script>
     // Checkout details as a json
-    var options = < ? php echo $json ? > ;
+    var options = <?= $json ?> ;
 
     /**
      * The entire list of Checkout fields is available at

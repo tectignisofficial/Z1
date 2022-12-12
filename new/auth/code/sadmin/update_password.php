@@ -3,7 +3,6 @@ session_start();
 if(!isset($_SESSION['id'])){
     header('location:auth-admin-login.php');
 }else{
-session_start();
 include('../../../include/config.php');
 
 

@@ -171,7 +171,7 @@ if(isset($_POST['updateorder'])){
                                     </thead>
                                     <tbody>
                                     <?php
-                         $sql=mysqli_query($conn,'SELECT * from orders where customer="'.$_SESSION['id'].'"');
+                         $sql=mysqli_query($conn,'SELECT *,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name ');
                         $count=1;
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
@@ -194,13 +194,8 @@ if(isset($_POST['updateorder'])){
                                                     class="badge rounded-pill  badge-light-success"><?= $row['payment_status']; ?></span>
                                             </td>
                                             <td>
-                                                <a class="btn btn-outline-success eye"
-                                                    href="offerletter.php?eid=<?php echo $row['id']; ?>">
+                                            <!-- <a class="btn btn-outline-success eye" href="orderview.php">
                                                     <i data-feather="eye"></i>
-                                                </a>
-                                                <!-- <a class="btn btn-outline-primary edit"
-                                                    href="addform.php?eid=<?php echo $arr['id'] ?>">
-                                                    <i data-feather="edit"></i>
                                                 </a> -->
                                                 <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i data-feather="edit"></i></button>
                                             </td>
