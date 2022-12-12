@@ -156,7 +156,7 @@ include('include/config.php');
                                         <!-- start product image -->
                                         <div class="product-image">
                                             <!-- start product image -->
-                                            <a href="productdetail/<?php echo $arr['name']; ?>">
+                                            <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                                 <img class="primary blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                     src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
