@@ -9,20 +9,20 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item"><a class="d-flex align-items-center" href="index.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="index"><i
                             data-feather="home"></i><span class="menu-title text-truncate"
                             data-i18n="Dashboards">Dashboards</span><span
                             class="badge badge-light-warning rounded-pill ms-auto me-1">2</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Blogs</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="testimonials.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="testimonials"><i
                             data-feather="mail"></i><span class="menu-title text-truncate"
                             data-i18n="Email">Testimonials</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="new_products_info.php"><i
+                <li class=" nav-item"><a class="d-flex align-items-center" href="new_products_info"><i
                             data-feather="message-square"></i><span class="menu-title text-truncate"
                             data-i18n="Chat">New Products Info</span></a>
                 </li>

@@ -118,6 +118,7 @@ $arr=mysqli_fetch_array($sql);
 <!-- belle/product-layout-1.html   11 Nov 2019 12:41:15 GMT -->
 
 <head>
+    <base href="http://localhost:8000/Z1/new/">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $arr['name'] ?></title>
@@ -135,18 +136,19 @@ $arr=mysqli_fetch_array($sql);
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <style>
+        @media (max-width: 600px) {
+            .img_logo {
+                width: 50% !important;
+            }
+        }
 
-    @media (max-width: 600px){
-	.img_logo{
-		width: 50% !important;
-	}
-}
         .slick-list {
             height: 489.141px !important;
         }
 
-        .slick-track {
+        #gallery>.draggable>.slick-track {
             height: 2642px !important;
+            /* transform: translate3d(0px, -521px, 0px) !important;  */
         }
 
         .rate {
@@ -262,14 +264,14 @@ $arr=mysqli_fetch_array($sql);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    /* .imagelight1{
+
+        /* .imagelight1{
             display:none !important;
         } */
 
-        .pswp__item>.pswp__zoom-wrap>.pswp__error-msg{
-            display:none !important;
+        .pswp__item>.pswp__zoom-wrap>.pswp__error-msg {
+            display: none !important;
         }
-        
     </style>
 </head>
 
@@ -357,8 +359,8 @@ $arr=mysqli_fetch_array($sql);
                                             echo ' <a href="auth/code/sadmin/image/product_image_check/'. $image['image'].'" class="imagelight'.$countno1.'"
                                             data-size="1462x2048" ></a>';
                                             $countno1++;   }
-                                           ?> 
-                                       <?php  
+                                           ?>
+                                        <?php  
                                         ?>
 
                                     </div>
@@ -382,7 +384,7 @@ $arr=mysqli_fetch_array($sql);
                                                     class="font-13 fa fa-star-o"></i><i
                                                     class="font-13 fa fa-star-o"></i><span class="spr-badge-caption">6
                                                     reviews</span></a> -->
-                                                </div>
+                                        </div>
                                     </div>
                                     <p class="product-single__price product-single__price-product-template">
 
@@ -392,7 +394,8 @@ $arr=mysqli_fetch_array($sql);
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD'],2).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price'],2);?>
+                                                            ?><i class="fa fa-inr"></i>
+                                                    <?php echo number_format($arr['price'],2);?>
                                                     <?php } ?></span>
                                             </span>
 
@@ -411,14 +414,16 @@ $arr=mysqli_fetch_array($sql);
                                     <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                         <div class="product-form__item">
 
-                                            <label class="header">Size: <span class="slVariant sizese">select</span></label>
+                                            <label class="header">Size: <span
+                                                    class="slVariant sizese">select</span></label>
                                             <?php
                                             $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName' and stock > 0");
                                             while($sizearr=mysqli_fetch_array($sizesql)){
                                             ?>
                                             <div data-value="<?php echo $sizearr['value']; ?>"
                                                 class="swatch-element xs available">
-                                                <input class="swatchInput" id="swatch-1-<?php echo $sizearr['value']; ?>" type="radio"
+                                                <input class="swatchInput"
+                                                    id="swatch-1-<?php echo $sizearr['value']; ?>" type="radio"
                                                     name="option1" value="<?php echo $sizearr['value']; ?>"
                                                     <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; } ?>>
                                                 <label class="swatchLbl medium rectangle"
@@ -438,9 +443,10 @@ $arr=mysqli_fetch_array($sql);
                                         <input type="hidden" name="image" value="<?php echo $arr['hightlightfile']; ?>">
 
                                         <input type="hidden" name="price1" value="<?php  echo $arr['price'] ?> ">
-                                       
 
-                                        <input type="hidden" name="producticon" value="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>">
+
+                                        <input type="hidden" name="producticon"
+                                            value="<?php if(isset($_SESSION['icon'])){ echo $_SESSION['icon']; } ?>">
 
                                         <div class="product-form__item--quantity">
                                             <div class="wrapQtyBtn">
@@ -452,7 +458,7 @@ $arr=mysqli_fetch_array($sql);
                                                     <a class="qtyBtn plus" href="javascript:void(0);"><i
                                                             class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="row">
@@ -467,7 +473,7 @@ $arr=mysqli_fetch_array($sql);
                                             <div class="product-form__item--submit col-6" data-shopify="payment-button">
                                                 <button type="submit" name="checkout"
                                                     class="shopify-payment-button__button shopify-payment-button__button--unbranded stockcheck"
-                                                    <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; }  ?> >Buy
+                                                    <?php $status=$arr['stock_status'];if($status=='Out Of Stock'){ echo 'disabled'; }  ?>>Buy
                                                     it now</button>
                                             </div>
 
@@ -559,54 +565,14 @@ $arr=mysqli_fetch_array($sql);
                             <ul class="product-tabs">
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
-                                <li rel="tab3"><a class="tablink">Size Chart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                <li rel="tab3"><a class="tablink">Size Chart
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                             </ul>
                             <div class="tab-container">
                                 <div id="tab1" class="tab-content">
                                     <div class="product-description rte">
                                         <?php echo $arr['description'];?>
-                                        <!-- <p>
-                                        The K2 Comfortline Knee Orthosis is profoundly near to custom fit knee orthosis in the market and suitable for ligament injuries (such as ACL Knee Brace, PCL Knee Brace, MCL Knee Brace), Sports Injuries, Mild Osteoarthritis (OA) as well as for prevention of the knee joint from degeneration and maximizes comfort & minimizes brace migration. The brace construction is Low profile & Lightweight, which makes it extremely easy to use with daily activities.</p>
-                                    <ul>
-                                        <li>A unique stainless steel reinforced plastic frame.</li>
-                                        <li>Flexible in the perfect areas to implement a flawless fit on the leg</li>
-                                        <li>Powerful and firm stainless steel equipped polycentric hinges present that offload bodyweight off the knee.</li>
-                                        <li>Silicon coated neoprene frame liners and foam strap pads preventing orthosis from slipping down.</li>
-                                    </ul>
-                                    <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
-                                    <p>You can change the position of any sections such as slider, banner, products,
-                                        collection and so on by just dragging and dropping.&nbsp;</p>
-                                    <h3>Lorem Ipsum is not simply random text.</h3>
-                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
-                                        praising pain was born and I will give you a complete account of the system, and
-                                        expound the actual teachings of the great explorer of the truth, the
-                                        master-builder of human happiness.</p>
-                                    <p>Change colors, fonts, banners, megamenus and more. Preview changes are live
-                                        before saving them.</p>
-                                    <h3>1914 translation by H. Rackham</h3>
-                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
-                                        praising pain was born and I will give you a complete account of the system, and
-                                        expound the actual teachings of the great explorer of the truth, the
-                                        master-builder of human happiness.</p>
-                                    <h3>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                                    </h3>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                        praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                                        officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                    <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-                                    <p>You can use variant style from colors, images or variant images. Also available
-                                        differnt type of design styles and size.</p>
-                                    <h3>Lorem Ipsum is not simply random text.</h3>
-                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
-                                        praising pain was born and I will give you a complete account of the system, and
-                                        expound the actual teachings of the great explorer of the truth, the
-                                        master-builder of human happiness.</p>
-                                    <h3>Proin ut lacus eget elit molestie posuere.</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled.</p> -->
                                     </div>
                                 </div>
 
@@ -651,24 +617,25 @@ $arr=mysqli_fetch_array($sql);
                                                                 <label class="spr-form-label">Rating</label>
                                                                 <div class="spr-form-input spr-starrating">
                                                                     <div class="product-review" style="width:100%">
-                                                                        <div class="rate float-left" style="width:100%;justify-content:end">
-                                                                        <input type="radio" id="star1" name="rating"
-                                                                            value="5">
-                                                                        <label for="star1"></label>
-                                                                        <input type="radio" id="star2" name="rating"
-                                                                            value="4">
-                                                                        <label for="star2"></label>
-                                                                        <input type="radio" id="star3" name="rating"
-                                                                            value="3">
-                                                                        <label for="star3"></label>
-                                                                        <input type="radio" id="star4" name="rating"
-                                                                            value="2">
-                                                                        <label for="star4"></label>
-                                                                        <input type="radio" id="star5" name="rating"
-                                                                            value="1">
-                                                                        <label for="star5"></label></div>
-                                                                        </div>
-                                                                        
+                                                                        <div class="rate float-left"
+                                                                            style="width:100%;justify-content:end">
+                                                                            <input type="radio" id="star1" name="rating"
+                                                                                value="5">
+                                                                            <label for="star1"></label>
+                                                                            <input type="radio" id="star2" name="rating"
+                                                                                value="4">
+                                                                            <label for="star2"></label>
+                                                                            <input type="radio" id="star3" name="rating"
+                                                                                value="3">
+                                                                            <label for="star3"></label>
+                                                                            <input type="radio" id="star4" name="rating"
+                                                                                value="2">
+                                                                            <label for="star4"></label>
+                                                                            <input type="radio" id="star5" name="rating"
+                                                                                value="1">
+                                                                            <label for="star5"></label></div>
+                                                                    </div>
+
                                                                 </div>
                                                             </div>
 
@@ -710,30 +677,37 @@ $arr=mysqli_fetch_array($sql);
                                                     <div class="spr-review">
                                                         <div class="spr-review-header">
                                                             <span
-                                                                class="product-review spr-starratings spr-review-header-starratings"><ul class="ratings ratings-three">
-                                                        <li class="ratingCheck">
-                                                            <input type="radio" id="stars5" name="rate" value="5">
-                                                            <label for="stars5"
-                                                                <?php if( ($fetchreview['stars'] >=5)){ ?>class="fff"
-                                                                <?php } ?>></label>
-                                                            <input type="radio" id="stars4" name="rate" value="4">
-                                                            <label for="stars4"
-                                                                <?php if( ($fetchreview['stars'] >= 4)){ ?>class="fff"
-                                                                <?php } ?>></label>
-                                                            <input type="radio" id="stars3" name="rate" value="3">
-                                                            <label for="stars3"
-                                                                <?php if( ($fetchreview['stars'] >= 3)){ ?>class="fff"
-                                                                <?php } ?>></label>
-                                                            <input type="radio" id="stars2" name="rate" value="2">
-                                                            <label for="stars2"
-                                                                <?php if( ($fetchreview['stars'] >= 2)){ ?>class="fff"
-                                                                <?php } ?>></label>
-                                                            <input type="radio" id="stars1" name="rate" value="1">
-                                                            <label for="stars1"
-                                                                <?php if( ($fetchreview['stars'] >= 1)){ ?>class="fff"
-                                                                <?php } ?>></label>
-                                                        </li>
-                                                    </ul></span>
+                                                                class="product-review spr-starratings spr-review-header-starratings">
+                                                                <ul class="ratings ratings-three">
+                                                                    <li class="ratingCheck">
+                                                                        <input type="radio" id="stars5" name="rate"
+                                                                            value="5">
+                                                                        <label for="stars5"
+                                                                            <?php if( ($fetchreview['stars'] >=5)){ ?>class="fff"
+                                                                            <?php } ?>></label>
+                                                                        <input type="radio" id="stars4" name="rate"
+                                                                            value="4">
+                                                                        <label for="stars4"
+                                                                            <?php if( ($fetchreview['stars'] >= 4)){ ?>class="fff"
+                                                                            <?php } ?>></label>
+                                                                        <input type="radio" id="stars3" name="rate"
+                                                                            value="3">
+                                                                        <label for="stars3"
+                                                                            <?php if( ($fetchreview['stars'] >= 3)){ ?>class="fff"
+                                                                            <?php } ?>></label>
+                                                                        <input type="radio" id="stars2" name="rate"
+                                                                            value="2">
+                                                                        <label for="stars2"
+                                                                            <?php if( ($fetchreview['stars'] >= 2)){ ?>class="fff"
+                                                                            <?php } ?>></label>
+                                                                        <input type="radio" id="stars1" name="rate"
+                                                                            value="1">
+                                                                        <label for="stars1"
+                                                                            <?php if( ($fetchreview['stars'] >= 1)){ ?>class="fff"
+                                                                            <?php } ?>></label>
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
                                                             <h3 class="spr-review-header-title">
                                                                 <?php echo $fetchreview['name']; ?>
                                                             </h3>
@@ -744,7 +718,8 @@ $arr=mysqli_fetch_array($sql);
                                                         </div>
                                                         <div class="img_logo"
                                                             style="display: inline-block; padding-top: 0; width:15%;">
-                                                            <a href="<?php echo $fetchreview['link'];?>" target="_blank">
+                                                            <a href="<?php echo $fetchreview['link'];?>"
+                                                                target="_blank">
                                                                 <img src="assets/images/amazon_logo.png" alt="Z1"
                                                                     title="Z1" />
                                                             </a>
@@ -820,9 +795,13 @@ $arr=mysqli_fetch_array($sql);
 
                                 <div class="tab_container">
                                     <div id="tab1" class="tab_content grid-products">
+                                        <?php
+                                        $checksql=mysqli_query($conn,"select * from products where name!='$productName' and categories='accessories'");
+                                        if(mysqli_num_rows($checksql)>0){
+                                        ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories IS NULL limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -831,7 +810,7 @@ $arr=mysqli_fetch_array($sql);
                                                     <!-- start product image -->
                                                     <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
                                                         <!-- image -->
-                                                        
+
                                                         <img class="primary blur-up lazyload"
                                                             data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                             src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
@@ -884,21 +863,12 @@ $arr=mysqli_fetch_array($sql);
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo number_format($arr['price'],2) ;?>
+                                                            ?><i class="fa fa-inr"></i>
+                                                            <?php echo number_format($arr['price'],2) ;?>
                                                             <?php } ?></span>
                                                     </div>
                                                     <!-- End product price -->
 
-                                                    <!-- <div class="product-review">
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star"></i>
-                                                        <i class="font-13 fa fa-star-o"></i>
-                                                    </div> -->
-                                                    <!-- Variant -->
-
-                                                    <!-- End Variant -->
                                                 </div>
                                                 <!-- End product details -->
                                             </div>
@@ -907,14 +877,87 @@ $arr=mysqli_fetch_array($sql);
 
 
                                         </div>
+                                        <?php }else{ ?>
+                                        <div class="productSlider">
+                                            <?php
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories IS NOT NULL limit 4");
+                                            while($arr=mysqli_fetch_array($sql)){
+                                            ?>
+                                            <div class="col-12 item">
+                                                <!-- start product image -->
+                                                <div class="product-image">
+                                                    <!-- start product image -->
+                                                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
+                                                        <!-- image -->
+
+                                                        <img class="primary blur-up lazyload"
+                                                            data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
+                                                            src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
+                                                            alt="image" title="product" width="300" height="300">
+                                                        <!-- End image -->
+                                                        <!-- Hover image -->
+                                                        <img class="hover blur-up lazyload"
+                                                            data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>"
+                                                            src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hoverfile'];?>"
+                                                            alt="image" title="product" width="300" height="300">
+                                                        <!-- End hover image -->
+                                                        <!-- product label -->
+                                                        <?php $label=$arr['label'];
+                                                        if($label!=''){ ?>
+                                                        <div class="product-labels rectangular"><span
+                                                                class="lbl pr-label2"><?php echo $arr['label'];?></span>
+                                                        </div>
+                                                        <?php } ?>
+                                                        <!-- End product label -->
+                                                    </a>
+                                                    <!-- end product image -->
+
+                                                    <!-- Start product button -->
+                                                    <form class="variants add" action="#" method="post">
+                                                        <a href="<?php echo $arr['name']; ?>" class="btn btn-addto-cart"
+                                                            type="button" tabindex="0">Add To Cart</a>
+                                                    </form>
+                                                    <div class="button-set">
+                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"
+                                                            title="Quick View" class="quick-view-popup quick-view"
+                                                            data-toggle="modal" data-target="#content_quickview">
+                                                            <i class="icon anm anm-search-plus-r"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!-- end product button -->
+                                                </div>
+                                                <!-- end product image -->
+
+                                                <!--start product details -->
+                                                <div class="product-details text-center">
+                                                    <!-- product name -->
+                                                    <div class="product-name">
+                                                        <a
+                                                            href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name']; ?></a>
+                                                    </div>
+                                                    <!-- End product name -->
+                                                    <!-- product price -->
+                                                    <div class="product-price">
+                                                        <span class="price"> <?php
+                                                            if(isset($_SESSION['USD'])){
+                                                                echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
+                                                            }else{
+                                                            ?><i class="fa fa-inr"></i>
+                                                            <?php echo number_format($arr['price'],2) ;?>
+                                                            <?php } ?></span>
+                                                    </div>
+                                                    <!-- End Variant -->
+                                                </div>
+                                                <!-- End product details -->
+                                            </div>
+                                            <?php } ?>
+
+                                        </div>
+
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
                         <!--End Related Product Slider-->
                     </div>
@@ -1185,10 +1228,10 @@ $arr=mysqli_fetch_array($sql);
 
                             $("#sizequa").html(response);
                             $('.sizese').html(size);
-                            
+
                         }
                     });
-                    
+
                 });
                 $("#sizequa").change(function () {
                     let val = $("#sizequa").html();
@@ -1199,7 +1242,7 @@ $arr=mysqli_fetch_array($sql);
             })
         </script>
 
-    
+
 </body>
 
 <!-- belle/product-layout-1.html   11 Nov 2019 12:42:26 GMT -->

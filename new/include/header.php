@@ -145,36 +145,36 @@
                         <nav class="grid__item" id="AccessibleNav">
                             <!-- for mobile -->
                             <ul id="siteNav" class="site-nav medium center hidearrow">
-                                <li class="lvl1 parent megamenu "><a href="index.php"
+                                <li class="lvl1 parent megamenu "><a href="index"
                                         class="<?= $page == 'index.php' ? 'active':'' ?>">Home <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="about-us.php"
+                                <li class="lvl1 parent megamenu"><a href="about-us"
                                         class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="shop.php"
+                                <li class="lvl1 parent megamenu"><a href="shop"
                                         class="<?= $page == 'shop.php' ? 'active':'' ?>">Shop Now! <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
 
-                                <li class="lvl1 parent megamenu"><a href="accessories.php"
+                                <li class="lvl1 parent megamenu"><a href="accessories"
                                         class="<?= $page == 'accessories.php' ? 'active':'' ?>">Accessories</a>
                                 </li>
                                 
-                                <li class="lvl1 parent megamenu"><a href="blog.php"
+                                <li class="lvl1 parent megamenu"><a href="blog"
                                         class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="reviews.php"
+                                <li class="lvl1 parent megamenu"><a href="reviews"
                                         class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="videos.php"
+                                <li class="lvl1 parent megamenu"><a href="videos"
                                         class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
-                                <li class="lvl1 parent megamenu"><a href="contact-us.php"
+                                <li class="lvl1 parent megamenu"><a href="contact-us"
                                         class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us <i
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
@@ -212,14 +212,14 @@
         <div class="mobile-nav-wrapper" role="navigation">
             <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
             <ul id="MobileNav" class="mobile-nav">
-                <li class="lvl1 parent megamenu"><a href="index.php" class="<?= $page == 'index.php' ? 'active':'' ?>">Home </a>
-                <li class="lvl1 parent megamenu"><a href="about-us.php" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us </a>
-                <li class="lvl1 parent megamenu"><a href="contact-us.php" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us </a>
-                <li class="lvl1 parent megamenu"><a href="blogs.php" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs </a>
-                <li class="lvl1 parent megamenu"><a href="reviews.php" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews</a>
-                <li class="lvl1 parent megamenu"><a href="videos.php" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos </a>
-                <li class="lvl1"><a href="shop.php" class="<?= $page == 'shop.php' ? 'active':'' ?>"><b>Shop Now!</b></a></li>
-                <li class="lvl1 parent megamenu"><a href="accessories.php"
+                <li class="lvl1 parent megamenu"><a href="index" class="<?= $page == 'index.php' ? 'active':'' ?>">Home </a>
+                <li class="lvl1 parent megamenu"><a href="about-us" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us </a>
+                <li class="lvl1 parent megamenu"><a href="contact-us" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us </a>
+                <li class="lvl1 parent megamenu"><a href="blogs" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs </a>
+                <li class="lvl1 parent megamenu"><a href="reviews" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews</a>
+                <li class="lvl1 parent megamenu"><a href="videos" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos </a>
+                <li class="lvl1"><a href="shop" class="<?= $page == 'shop.php' ? 'active':'' ?>"><b>Shop Now!</b></a></li>
+                <li class="lvl1 parent megamenu"><a href="accessories"
                                         class="<?= $page == 'accessories.php' ? 'active':'' ?>">Accessories</a>
                                 </li>
                 <ul>
