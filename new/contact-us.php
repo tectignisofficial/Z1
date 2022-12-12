@@ -136,7 +136,7 @@ if(isset($_POST['submit'])){
             <ul class="addressFooter">
             <h4 class="h4"><strong>Corporate Office Address</strong></h4>
                              <li><i class="icon anm anm-map-marker-al"></i>
-                                 <p>D-114, 5th road Shakti Nagar,<br> Paota c road Jodhpur, Rajasthan, India - 342010</p>
+                                 <p>D-114, 5th road Shakti Nagar,<br> Paota&nbsp;c road Jodhpur, Rajasthan, India - 342010</p>
                              </li>
                              <h4 class="h4"><strong>Branch Office Address</strong></h4>
                             <li><i class="icon anm anm-map-marker-al"></i>
