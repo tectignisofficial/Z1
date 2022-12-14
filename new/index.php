@@ -118,13 +118,13 @@ include('include/header.php');
                   style="margin-bottom:30px;">
                   <!-- Youtube Video Company Overview -->
 
-                  <!-- <div style="text-align:left;" id="uc_blox_play_button286402">
+                  <div style="text-align:left;" id="uc_blox_play_button286402">
                     <a href="https://www.youtube.com/watch?v=h0oStRoxUqw" data-lity>
                       <span>
                         <i class="fa fa-play"> </i>
                       </span>
                     </a>
-                  </div> -->
+                  </div> 
                   <!-- end Play Button -->
                 </div>
                 <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_2" class='uc-grid-col-addon'>
@@ -366,7 +366,19 @@ include('include/header.php');
                 </div>
                 <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
                   <!-- start Button -->
+                  <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
+                  style="margin-bottom:30px;">
+                  <!-- Youtube Video Company Overview -->
 
+                  <div style="text-align:left;" id="uc_blox_play_button286402">
+                    <a href="https://www.youtube.com/shorts/XylwMyEnK0M" data-lity>
+                      <span style="background-color: red;">
+                        <i class="fa fa-play" style="color: white;"> </i>
+                      </span>
+                    </a>
+                  </div> 
+                  <!-- end Play Button -->
+                </div>
                   <div style="text-align:left;">
                     <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                         class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
@@ -423,7 +435,20 @@ include('include/header.php');
                 </div>
                 <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
                   <!-- start Button -->
+              
+                  <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
+                  style="margin-bottom:30px;">
+                  <!-- Youtube Video Company Overview -->
 
+                  <div style="text-align:left;" id="uc_blox_play_button286402">
+                    <a href="https://www.youtube.com/shorts/RQkIKYxUHvg" data-lity>
+                      <span style="background-color: red;">
+                        <i class="fa fa-play" style="color: white;"> </i>
+                      </span>
+                    </a>
+                  </div> 
+                  <!-- end Play Button -->
+                </div>
                   <div style="text-align:left;">
                     <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                         class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
@@ -508,7 +533,20 @@ include('include/header.php');
                 </div>
                 <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
                   <!-- start Button -->
+               
+                  <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
+                  style="margin-bottom:30px;">
+                  <!-- Youtube Video Company Overview -->
 
+                  <div style="text-align:left;" id="uc_blox_play_button286402">
+                    <a href="https://youtube.com/shorts/QPv2zBhMPdY" data-lity>
+                      <span style="background-color: red;">
+                        <i class="fa fa-play" style="color: white;"> </i>
+                      </span>
+                    </a>
+                  </div> 
+                  <!-- end Play Button -->
+                </div>
                   <div style="text-align:left;">
                     <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
                         class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
