@@ -84,7 +84,7 @@ include('include/config.php');
                     <!--End Sidebar-->
                     <!--Main Content-->
                     <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
-                        <div class="category-description">
+                        <!-- <div class="category-description">
                             <h3>About us</h3>
                             <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in
                                 2012 as a professional manufacturing and marketing company dealing in various healthcare
@@ -95,8 +95,8 @@ include('include/config.php');
                                 guarantee on taking into consideration the needs of our customers and meeting them,
                                 providing them complete satisfaction by regular checks and up-gradation in the various
                                 processes involved.</p>
-                        </div>
-                        <hr>
+                        </div> 
+                        <hr>-->
                         <div class="productList">
                             <!--Toolbar-->
                             <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product
