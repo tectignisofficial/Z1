@@ -140,7 +140,7 @@ if(isset($_POST['submit'])){
                              </li>
                              <h4 class="h4"><strong>Branch Office Address</strong></h4>
                             <li><i class="icon anm anm-map-marker-al"></i>
-                                 <p>Plot No. 23, Park Residency Society,<br> Near Indana Hotel Jodhpur, Rajasthan, India - 342015</p>
+                                 <p>Plot No. 23, Park Residency Society,<br> Near Indana Hotel Jodhpur, Rajasthan, India - 342001</p>
                              </li>
               <li class="phone"><i class="icon anm anm-phone-s"></i>
                 <p>+91 7300044197</p>

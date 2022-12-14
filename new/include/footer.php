@@ -113,7 +113,7 @@ $facebook=mysqli_fetch_array($sql);
                              </li>
                              <h4 class="h4">Branch Office Address</h4>
                             <li><i class="icon anm anm-map-marker-al"></i>
-                                 <p>Plot No. 23, Park Residency Society,<br> Near Indana Hotel Jodhpur, Rajasthan, India - 342015</p>
+                                 <p>Plot No. 23, Park Residency Society,<br> Near Indana Hotel Jodhpur, Rajasthan, India - 342001</p>
                              </li>
 
 
