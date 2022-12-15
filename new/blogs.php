@@ -25,6 +25,11 @@ $id=$_GET['eid'];
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .rte{
+            font-family: "Roboto Slab", Helvetica, Tahoma, Arial, serif;
+        }
+    </style>
 </head>
 
 <body class="template-blog belle">
@@ -65,16 +70,6 @@ $id=$_GET['eid'];
                                 <?php echo $arr['content'];?>
                                 </div>
                                 <hr>
-                                <!-- <div class="blog-nav">
-                                    <div class="text-left">
-                                        <i class="icon icon-arrow-circle-left"></i>
-                                        <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Previous</a>
-                                    </div>
-                                    <div class="text-right">
-                                        <a href="blog.php?eid=<?php echo $arr['id'];?>" title="">Next</a>
-                                        <i class="icon icon-arrow-circle-right"></i>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>

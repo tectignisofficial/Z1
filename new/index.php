@@ -117,7 +117,7 @@ include('include/header.php');
 
               <div class="masterRow row2">
                 <li>
-                  <img src="img/1A3A6558.png" onclick="slider('img/1A3A6558.png')" />
+                  <img src="img/z1 knee brace banner 2.png" onclick="slider('img/z1 knee brace banner 2.png')" />
                 </li>
               </div>
             </div>
@@ -147,7 +147,7 @@ include('include/header.php');
                   </div>
                 </div>
               </div> <!-- end Image -->
-              <div class="text-center">
+              <div class="text-center mt-2">
                 <h5 style="letter-spacing:0.10em">Fullfilled By Amazon</h5>
                 <img src="img/amazon.webp" alt="united state flag" width="100"/>
               </div>
