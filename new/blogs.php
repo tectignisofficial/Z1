@@ -31,7 +31,7 @@ $id=$_GET['eid'];
         }
         @media screen and (max-width: 600px) {
             .lazyloaded{
-                height: 342px !important;
+                height: 314px !important;
             }
         }
     </style>
