@@ -215,7 +215,7 @@
                 <li class="lvl1 parent megamenu"><a href="index" class="<?= $page == 'index.php' ? 'active':'' ?>">Home </a>
                 <li class="lvl1 parent megamenu"><a href="about-us" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us </a>
                 <li class="lvl1 parent megamenu"><a href="contact-us" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us </a>
-                <li class="lvl1 parent megamenu"><a href="blogs" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs </a>
+                <li class="lvl1 parent megamenu"><a href="blog" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs </a>
                 <li class="lvl1 parent megamenu"><a href="reviews" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews</a>
                 <li class="lvl1 parent megamenu"><a href="videos" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos </a>
                 <li class="lvl1"><a href="shop" class="<?= $page == 'shop.php' ? 'active':'' ?>"><b>Shop Now!</b></a></li>
