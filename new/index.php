@@ -161,10 +161,10 @@ include('include/header.php');
           </div>
 
         </div> -->
-          <!--<div class="slideshow slideshow-wrapper pb-section sliderFull">
+          <div class="slideshow slideshow-wrapper pb-section sliderFull">
                 <section class="home hero">
                     <div class="home-img">
-                        <img src="img/product1.webp" class="one" />
+                        <img src="img/1A3A7046.png" class="one" />
                     </div>
 
                     <div class="home-text">
@@ -179,23 +179,23 @@ include('include/header.php');
                 <div class="main">
                     <div class="masterRow">
                         <li>
-                            <img src="img/main1.webp" onclick="slider('img/product1.webp')" />
+                            <img src="img/1A3A7046.png" onclick="slider('img/1A3A7046.png')" />
                         </li>
                     </div>
 
                     <div class="masterRow row2">
                         <li>
-                            <img src="img/main2.webp" onclick="slider('img/product2.webp')" />
+                            <img src="img/1A3A6558.png" onclick="slider('img/1A3A6558.png')" />
                         </li>
                     </div>
 
-                    <div class="masterRow row3">
+                    <!-- <div class="masterRow row3">
                         <li>
                             <img src="img/main3.webp" onclick="slider('img/product3.webp')" />
                         </li>
-                    </div>
+                    </div> -->
                 </div>
-              </div> -->
+              </div>
 
           <div id="uc_grid_1_40497_row_4" class="uc-grid-row">
             <div id='uc_grid_1_40497_row_4_container_1' class="uc-grid-row-container">
