@@ -9,23 +9,23 @@ if(isset($_POST['val'])){
   <h1 class="mb-1">Edit Orders</h1>
 </div>
 <form id="editUserForm" method="post" class="row gy-1 pt-75">
-  <div class="col-12 col-md-12">
-      <label class="form-label" for="modalEditUserFirstName">'.$arr['order_no'].'</label>
-  </div>
-  <div class="col-12 col-md-12">
-      <label class="form-label" for="modalEditUserFirstName">'.$arr['order_date'].'</label>
-  </div>
-  <div class="col-12 col-md-12">
-      <label class="form-label" for="modalEditUserFirstName">'.$arr['pname'].'</label>
-  </div>
-  <div class="col-12 col-md-12">
-      <label class="form-label" for="modalEditUserFirstName">'.$arr['size'].'</label>
-  </div>
-  <div class="col-12 col-md-12">
-      <label class="form-label" for="modalEditUserFirstName">'.$arr['price'].'</label>
+  <div class="col-6 col-md-6">
+      <p><b>Order No:</b> '.$arr['order_no'].'</p>
   </div>
   <div class="col-6 col-md-6">
-      <label class="form-label" for="modalEditUserFirstName">Payment Status</label>
+      <p><b>Order Date:</b> '.$arr['order_date'].'</p>
+  </div>
+  <div class="col-6 col-md-6">
+      <p><b>Product Name:</b> '.$arr['pname'].'</p>
+  </div>
+  <div class="col-6 col-md-6">
+      <p><b>Size:</b> '.$arr['size'].'</p>
+  </div>
+  <div class="col-12 col-md-12">
+      <p><b>Price:</b> <i class="fa fa-inr"> </i> '.$arr['price'].'</p>
+  </div>
+  <div class="col-6 col-md-6">
+      <p><b>Payment Status</b></p>
   </div>
   <div class="col-6 col-md-6">
   <select class="form-control" name="paymentstatus">
@@ -36,7 +36,7 @@ if(isset($_POST['val'])){
 </div>
 <input type="hidden" name="orderid" value="'.$arr['id'].'">
 <div class="col-6 col-md-6">
-      <label class="form-label" for="modalEditUserFirstName">Order Status</label>
+      <p><b>Order Status</b></p>
   </div>
   <div class="col-6 col-md-6">
   <select class="form-control" name="orderstatus" onchange="get(this.value)">
@@ -49,7 +49,7 @@ if(isset($_POST['val'])){
 </div>
 
 <div class="col-6 col-md-6 hidecourier">
-      <label class="form-label" for="modalEditUserFirstName">Enter</label>
+      <p><b>Courier Name</b></p>
   </div>
   <div class="col-6 col-md-6 hidecourier">
   <select class="form-control" name="dlh">
@@ -59,7 +59,7 @@ if(isset($_POST['val'])){
   </select>
 </div>
 <div class="col-6 col-md-6 hidecourier">
-      <label class="form-label" for="modalEditUserFirstName">Tracking Id</label>
+      <p><b>Tracking Id</b></p>
   </div>
   <div class="col-6 col-md-6 hidecourier">
  <input type="number" name="trans" class="form-control">

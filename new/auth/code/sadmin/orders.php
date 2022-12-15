@@ -153,7 +153,7 @@ if(isset($_POST['updateorder'])){
                             </div>
 
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped table-responsive">
+                                <table id="example1" class="table table-bordered table-striped ">
                                     <thead>
                                         <tr>
                                             <th>Order No.</th>
@@ -166,6 +166,7 @@ if(isset($_POST['updateorder'])){
                                             <th>Amount</th>
                                             <th>Order Status</th>
                                             <th>Payment Status</th>
+                                            <th>Tracking Id</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -176,14 +177,14 @@ if(isset($_POST['updateorder'])){
                          while($row=mysqli_fetch_array($sql)){ 
                          ?>
                                         <tr>
-                                            <td><?php echo $row['order_no'];?></td>
-                                            <td><?php echo $row['order_date'];?></td>
-                                            <td><?php echo $row['oname'];?></td>
-                                            <td><?php echo $row['country'];?></td>
-                                            <td><?php echo $row['sku'];?></td>
-                                            <td><?php echo $row['pname'];?></td>
-                                            <td><?php echo $row['size'];?></td>
-                                            <td><?php echo $row['price'];?></td>
+                                            <td><?= $row['order_no'];?></td>
+                                            <td><?= $row['order_date'];?></td>
+                                            <td><?= $row['oname'];?></td>
+                                            <td><?= $row['country'];?></td>
+                                            <td><?= $row['sku'];?></td>
+                                            <td><?= $row['pname'];?></td>
+                                            <td><?= $row['size'];?></td>
+                                            <td><i class="fa fa-inr"></i> <?= $row['price'];?></td>
 
                                             <td>
                                                 <span

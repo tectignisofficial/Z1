@@ -176,13 +176,13 @@ include('include/header.php');
                     style="margin-bottom:30px;">
                     <!-- Youtube Video Company Overview -->
 
-                    <div style="text-align:left;" id="uc_blox_play_button286402">
+                    <!-- <div style="text-align:left;" id="uc_blox_play_button286402">
                       <a href="https://www.youtube.com/watch?v=h0oStRoxUqw" data-lity>
                         <span>
                           <i class="fa fa-play"> </i>
                         </span>
                       </a>
-                    </div>
+                    </div> -->
                     <!-- end Play Button -->
                   </div>
                   <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_2" class='uc-grid-col-addon'>
