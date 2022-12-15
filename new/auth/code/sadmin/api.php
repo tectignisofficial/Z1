@@ -6,7 +6,7 @@ if(isset($_POST['val'])){
   $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
   $arr=mysqli_fetch_array($sql);
   echo '<div class="text-center mb-2">
-  <h1 class="mb-1">Edit Currency</h1>
+  <h1 class="mb-1">Edit Orders</h1>
 </div>
 <form id="editUserForm" method="post" class="row gy-1 pt-75">
   <div class="col-12 col-md-12">
