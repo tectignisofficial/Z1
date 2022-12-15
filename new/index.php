@@ -120,14 +120,41 @@ include('include/header.php');
                   <img src="img/1A3A6558.png" onclick="slider('img/1A3A6558.png')" />
                 </li>
               </div>
-
-              <!-- <div class="masterRow row3">
-                        <li>
-                            <img src="img/main3.webp" onclick="slider('img/product3.webp')" />
-                        </li>
-                    </div> -->
             </div>
           </div>
+
+          <!--country logo-->
+          <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;padding-top:50px;background: rgb(0 0 0 / 0%);">
+            <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;background: rgb(0 0 0 / 0%);">
+
+              <div class="card-columns">
+                <div class="card" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                  <div class="card-body text-center">
+                    <img src="img/canada.webp" alt="canada flag" width="100"/>
+                    <p class="card-text mt-2" style="letter-spacing:0.5px">Canada</p>
+                  </div>
+                </div>
+                <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                  <div class="card-body text-center">
+                  <img src="img/uk.webp" alt="united kingdom flag" width="100"/>
+                    <p class="card-text mt-2" style="letter-spacing:0.5px">United Kingdom</p>
+                  </div>
+                </div>
+                <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                  <div class="card-body text-center">
+                  <img src="img/us.webp" alt="united state flag" width="100"/>
+                    <p class="card-text mt-2" style="letter-spacing:0.5px">United State</p>
+                  </div>
+                </div>
+              </div> <!-- end Image -->
+              <div class="text-center">
+                <h5 style="letter-spacing:0.10em">Fullfilled By Amazon</h5>
+                <img src="img/amazon.webp" alt="united state flag" width="100"/>
+              </div>
+              <div class="uc-col-clear"></div>
+            </div>
+          </div>
+          <!-- country logo-->
 
           <div id="uc_grid_1_40497_row_4" class="uc-grid-row">
             <div id='uc_grid_1_40497_row_4_container_1' class="uc-grid-row-container">
@@ -258,9 +285,6 @@ include('include/header.php');
 
                     <div class="blox-top-small-round-icon-box"
                       style="background:#fdfdfd; text-align:left;padding:50px;">
-                      <!-- <div class="blox-top-small-round-icon-box-icon" style="background-color:#000000;border-radius:0px;">
-        	<i class="fa fa-battery-4"></i>
-        </div> -->
                       <div class="blox-top-small-round-icon-box-heading">
                         <span class="uc-style-223243352740" style="font-weight:Bold;">Functional Braces</span>
                       </div>
