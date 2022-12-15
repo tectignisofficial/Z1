@@ -75,10 +75,12 @@ include('include/config.php');
     .kneebrace {
       padding-top: 200px;
     }
+
     .uc-grid-row#uc_grid_1_40497_row_1 {
-    padding-top: 100px;
-    padding-bottom: 200px;
-    background-color: #000000;}
+      padding-top: 100px;
+      padding-bottom: 200px;
+      background-color: #000000;
+    }
   </style>
 </head>
 
@@ -90,112 +92,42 @@ include('include/config.php');
 include('include/header.php');
 ?>
       <div id="" class="" style=" padding-bottom: unset;">
-      <div id="uc_grid_1_40497_row_1" class="uc-grid-row">
-<div id="uc_grid_1_40497_row_1_bg_overlay" class="uc-grid-background-overlay"><!-- start Css Animated Squares Background -->
-
-			<div class="uc-squaresbg-area" id="uc_css_animated_squares_background_bg_addon18229">
-            <ul class="uc-circles" style="margin:0;padding:0;">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div>
-			<!-- end Css Animated Squares Background --></div>			<div id="uc_grid_1_40497_row_1_container_1" class="uc-grid-row-container">
-			<div id="uc_grid_1_40497_row_1_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2" style="padding-right:80px;"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_1" class="uc-grid-col-addon" style="padding-top:70px;padding-bottom:50px;"><!-- start Title -->
-
-			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span class="uc-style-13503093002" style="font-weight:Bold;font-size:68px;line-height:1em;color:#ffffff;">Don't Suffer, get a best friend!</span>
-</div>
-			<!-- end Title --></div><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_2" class="uc-grid-col-addon" style="padding-left:30px;margin-top:0px;margin-bottom:50px;border-left:1px solid #ed1c24;"><!-- start Paragraph -->
-
-			<div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-<span class="uc-style-24529420529" style="font-size:16px;line-height:1.7em;color:#a7a7a7;">The A-Z Comfort with Z1 Braces</span>
-</div>
-			<!-- end Paragraph --></div><div id="uc_grid_1_40497_row_1_container_1_col_1_addon_3" class="uc-grid-col-addon"><!-- start Button Group -->
-
-			<div style="text-align:left;" id="uc_blox_btn_group48486">
-<a href="shop" id="uc_blox_btn_group48486_item1" target="_self"><span class="uc-style-32306900903" style="font-size:12px;">BUY NOW</span></a>
-
-</div>
-			<!-- end Button Group --></div></div></div>
-			<div id="uc_grid_1_40497_row_1_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"><div class="uc-grid-col-inner"><div id="uc_grid_1_40497_row_1_container_1_col_2_addon_1" class="uc-grid-col-addon"><!-- start Image -->
-
-			<div style="text-align:center;font-size:0;">
-  <img src="img/1A3A6558.png" alt="" title="" style="max-width:100%; width:100%;border-radius:0px;margin:0;">
-</div>
-			<!-- end Image --></div></div></div>
-<div class="uc-col-clear"></div>
-			</div>
-		</div>
-        <!-- <div id='uc_grid_1_40497_row_1_bg_overlay' class='uc-grid-background-overlay'> -->
-        <!-- start Css Animated Squares Background -->
-        <!-- </div> -->
         <div id="uc_grid_1_40497_row_2" class="uc-grid-row">
-          <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
-                  alt="First slide">
+          <div class="slideshow slideshow-wrapper sliderFull">
+            <section class="home hero">
+              <div class="home-img">
+                <img src="img/1A3A7046.png" class="one" />
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
-                  alt="Second slide">
+
+              <div class="home-text">
+                <h1 style="color:white; font-weight: bold;">
+                  Don't Suffer, get a best friend! <br />
+                </h1>
+                <h5 style="color:white">The A-Z Comfort with Z1 Braces</h5>
+                <a href="shop.php" class="shop">Shop Now</a>
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
-                  alt="Third slide">
+            </section>
+
+            <div class="main">
+              <div class="masterRow">
+                <li>
+                  <img src="img/1A3A7046.png" onclick="slider('img/1A3A7046.png')" />
+                </li>
               </div>
-            </div>
-          </div>
 
-        </div> -->
-          <div class="slideshow slideshow-wrapper pb-section sliderFull">
-                <section class="home hero">
-                    <div class="home-img">
-                        <img src="img/1A3A7046.png" class="one" />
-                    </div>
+              <div class="masterRow row2">
+                <li>
+                  <img src="img/1A3A6558.png" onclick="slider('img/1A3A6558.png')" />
+                </li>
+              </div>
 
-                    <div class="home-text">
-                        <h1 style="color:white; font-weight: bold;">
-                            Don't Suffer, get a best friend! <br />
-                        </h1>
-                        <h5 style="color:white">The A-Z Comfort with Z1 Braces</h5>
-                        <a href="shop.php" class="shop">Shop Now</a>
-                    </div>
-                </section>
-
-                <div class="main">
-                    <div class="masterRow">
-                        <li>
-                            <img src="img/1A3A7046.png" onclick="slider('img/1A3A7046.png')" />
-                        </li>
-                    </div>
-
-                    <div class="masterRow row2">
-                        <li>
-                            <img src="img/1A3A6558.png" onclick="slider('img/1A3A6558.png')" />
-                        </li>
-                    </div>
-
-                    <!-- <div class="masterRow row3">
+              <!-- <div class="masterRow row3">
                         <li>
                             <img src="img/main3.webp" onclick="slider('img/product3.webp')" />
                         </li>
                     </div> -->
-                </div>
-              </div>
+            </div>
+          </div>
 
           <div id="uc_grid_1_40497_row_4" class="uc-grid-row">
             <div id='uc_grid_1_40497_row_4_container_1' class="uc-grid-row-container">
