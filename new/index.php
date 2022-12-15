@@ -124,32 +124,34 @@ include('include/header.php');
           </div>
 
           <!--country logo-->
-          <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;padding-top:50px;background: rgb(0 0 0 / 0%);">
-            <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;background: rgb(0 0 0 / 0%);">
+          <div id="uc_grid_1_40497_row_3" class="uc-grid-row"
+            style="padding-bottom: 22px;padding-top:50px;background: rgb(0 0 0 / 0%);">
+            <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container"
+              style="background-color:#ffffff;background: rgb(0 0 0 / 0%);">
 
               <div class="card-columns">
+              <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                  <div class="card-body text-center">
+                    <img src="img/us.webp" alt="united state flag" width="100" />
+                    <p class="card-text mt-2" style="letter-spacing:0.5px">United State</p>
+                  </div>
+                </div>
                 <div class="card" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                   <div class="card-body text-center">
-                    <img src="img/canada.webp" alt="canada flag" width="100"/>
+                    <img src="img/canada.webp" alt="canada flag" width="100" />
                     <p class="card-text mt-2" style="letter-spacing:0.5px">Canada</p>
                   </div>
                 </div>
                 <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                   <div class="card-body text-center">
-                  <img src="img/uk.webp" alt="united kingdom flag" width="100"/>
+                    <img src="img/uk.webp" alt="united kingdom flag" width="100" />
                     <p class="card-text mt-2" style="letter-spacing:0.5px">United Kingdom</p>
-                  </div>
-                </div>
-                <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                  <div class="card-body text-center">
-                  <img src="img/us.webp" alt="united state flag" width="100"/>
-                    <p class="card-text mt-2" style="letter-spacing:0.5px">United State</p>
                   </div>
                 </div>
               </div> <!-- end Image -->
               <div class="text-center mt-2">
                 <h5 style="letter-spacing:0.10em">Fullfilled By Amazon</h5>
-                <img src="img/amazon.webp" alt="united state flag" width="100"/>
+                <img src="img/amazon.webp" alt="united state flag" width="100" />
               </div>
               <div class="uc-col-clear"></div>
             </div>
@@ -380,9 +382,6 @@ include('include/header.php');
                       <img src="uploads/images/blox_page_builder/K2_Comfortline_Knee_Orthosis.webp"
                         alt="K2_Comfortline_Knee_Orthosis" title=""
                         style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
-                      <!-- <img src="uploads/images/blox_page_builder/K6_Dezire_Knee_Orthosis.webp"
-                      alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis"
-                      style="max-width:100%; width:100%;border-radius:0px;margin:16px;"> -->
                     </div>
                     <!-- end Image -->
                   </div>
@@ -448,7 +447,11 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                      <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
+                    <?php
+                    $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
+                    $arr=mysqli_fetch_array($sql);
+                    ?>
+                      <a href="productdetail.php?name=<?= $arr['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
@@ -509,7 +512,6 @@ include('include/header.php');
                     <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
                       style="margin-bottom:30px;">
                       <!-- Youtube Video Company Overview -->
-
                       <div style="text-align:left;" id="uc_blox_play_button286402">
                         <a href="https://www.youtube.com/watch?v=RQkIKYxUHvg" data-lity>
                           <span style="background-color: red;">
@@ -520,7 +522,11 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                      <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
+                    <?php
+                    $sql1=mysqli_query($conn,"select * from products where id='2'");
+                    $arr1=mysqli_fetch_array($sql1);
+                    ?>
+                      <a href="productdetail.php?name=<?= $arr1['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
@@ -619,7 +625,11 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                      <a href="shop.php" id="uc_solid_rounded_button254538" target="_self"><span
+                    <?php
+                    $sql2=mysqli_query($conn,"select * from products where id='3'");
+                    $arr2=mysqli_fetch_array($sql2);
+                    ?>
+                      <a href="productdetail.php?name=<?= $arr2['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->

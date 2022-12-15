@@ -50,53 +50,14 @@ include('include/config.php');
                         </div>
                         <div class="sidebar_tags">
                             <!--Categories-->
-
-                            <!--Categories-->
-                            <!--Price Filter-->
-
-                            <!--End Price Filter-->
-                            <!--Size Swatches-->
-
-                            <!--End Size Swatches-->
-                            <!--Color Swatches-->
-
-                            <!--End Color Swatches-->
-                            <!--Brand-->
-
-                            <!--End Brand-->
-
-                            <!--Banner-->
                             <div class="sidebar_widget static-banner">
                                 <img src="assets/images/z1kneebanner.webp" alt="z1knee" />
                             </div>
-                            <!--Banner-->
-                            <!--Information-->
-                            <!-- <div class="sidebar_widget">
-                            <div class="widget-title"><h2>Information</h2></div>
-                            <div class="widget-content"><p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p></div>
-                        </div> -->
-                            <!--end Information-->
-                            <!--Product Tags-->
-
-                            <!--end Product Tags-->
                         </div>
                     </div>
                     <!--End Sidebar-->
                     <!--Main Content-->
                     <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
-                        <!-- <div class="category-description">
-                            <h3>About us</h3>
-                            <p>Zodiacal Overseas Pvt. Ltd. has pioneered the healthcare industry since it’s inception in
-                                2012 as a professional manufacturing and marketing company dealing in various healthcare
-                                products based in India. With unique product and flawless marketing strategies, ZOPL has
-                                been a global market leader in the course of a very short span of time. Z1, Z-ONE & Z1
-                                KNEEBRACE all our brands.</p>
-                            <p>Our braces and various other healthcare products are of the leading quality. We at Z1
-                                guarantee on taking into consideration the needs of our customers and meeting them,
-                                providing them complete satisfaction by regular checks and up-gradation in the various
-                                processes involved.</p>
-                        </div> 
-                        <hr>-->
                         <div class="productList">
                             <!--Toolbar-->
                             <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product

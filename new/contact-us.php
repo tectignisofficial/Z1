@@ -129,8 +129,7 @@ if(isset($_POST['submit'])){
           <div class="col-12 col-sm-12 col-md-4 col-lg-4">
             <div class="open-hours">
               <strong>Opening Hours</strong><br>
-              Mon - Sat : 9am - 11pm<br>
-              Sunday: 11am - 5pm
+              Mon - Sat : 10am - 5pm<br>
             </div>
             <hr />
             <ul class="addressFooter">
