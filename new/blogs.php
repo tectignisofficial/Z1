@@ -29,6 +29,11 @@ $id=$_GET['eid'];
         .rte{
             font-family: "Roboto Slab", Helvetica, Tahoma, Arial, serif;
         }
+        @media screen and (max-width: 600px) {
+            .lazyloaded{
+                height: 342px !important;
+            }
+        }
     </style>
 </head>
 
