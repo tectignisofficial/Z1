@@ -75,15 +75,7 @@ include('include/config.php');
         <img src="assets/images/loader.gif" alt="Loading..." />
     </div>
     <div class="pageWrapper">
-
-
-
-
         <?php include("include/header.php");?>
-
-
-
-
 
         <!--Body Content-->
         <div id="page-content">
