@@ -51,7 +51,7 @@ include('include/config.php');
   <style type='text/css'>
     /* blox page builder grid css */
     #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_4 {
-      padding-top: 220px;
+      padding-top: 150px;
       padding-bottom: 220px;
       background-color: #000000;
       background-image: url('uploads/images/blox_page_builder/z1_customized_knee_braces.webp');
@@ -60,6 +60,18 @@ include('include/config.php');
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
+   @media only screen and (max-width: 600px) {
+  #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_4 {
+      padding-top: 0px;
+      padding-bottom:50px;
+    }
+    .kneebrace{
+  padding-top:45px !important;
+}
+}
+.kneebrace{
+  padding-top:200px;
+}
   </style>
 </head>
 
@@ -171,8 +183,8 @@ include('include/header.php');
             <div id="uc_grid_1_40497_row_5_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
               style="padding-left:85px;padding-right:85px;">
               <div class="uc-grid-col-inner">
-                <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class="uc-grid-col-addon"
-                  style="padding-top:200px;">
+                <div id="uc_grid_1_40497_row_5_container_1_col_1_addon_1" class="uc-grid-col-addon kneebrace"
+                 >
                   <!-- start Title -->
 
                   <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
@@ -371,7 +383,7 @@ include('include/header.php');
                   <!-- Youtube Video Company Overview -->
 
                   <div style="text-align:left;" id="uc_blox_play_button286402">
-                    <a href="https://www.youtube.com/shorts/XylwMyEnK0M" data-lity>
+                    <a href="https://youtube.com/watch?v=XylwMyEnK0M" data-lity>
                       <span style="background-color: red;">
                         <i class="fa fa-play" style="color: white;"> </i>
                       </span>
@@ -441,7 +453,7 @@ include('include/header.php');
                   <!-- Youtube Video Company Overview -->
 
                   <div style="text-align:left;" id="uc_blox_play_button286402">
-                    <a href="https://www.youtube.com/shorts/RQkIKYxUHvg" data-lity>
+                    <a href="https://www.youtube.com/watch?v=RQkIKYxUHvg" data-lity>
                       <span style="background-color: red;">
                         <i class="fa fa-play" style="color: white;"> </i>
                       </span>
@@ -539,7 +551,7 @@ include('include/header.php');
                   <!-- Youtube Video Company Overview -->
 
                   <div style="text-align:left;" id="uc_blox_play_button286402">
-                    <a href="https://youtube.com/shorts/QPv2zBhMPdY" data-lity>
+                    <a href="https://youtube.com/watch?v=QPv2zBhMPdY" data-lity>
                       <span style="background-color: red;">
                         <i class="fa fa-play" style="color: white;"> </i>
                       </span>
