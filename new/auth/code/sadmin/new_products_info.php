@@ -163,13 +163,11 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['email_id'];?></td>
                                                 <td>
-                                                    <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href="new_products_info.php?delid=<?php echo $row['id']; ?>"
-                                                        onclick="return checkDelete()"
-                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                    <button class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                        class="btn btn-primary btn-rounded btn-icon "
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i class="fa fa-trash"></i>
-                                                    </a>
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <?php $count++; }  ?>

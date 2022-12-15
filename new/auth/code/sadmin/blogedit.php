@@ -11,6 +11,7 @@ if(isset($_POST['update'])){
 $title=$_POST['title'];
 $content=$_POST['content'];
 $file=$_FILES['file']['name'];
+$metatitle=$_POST['metatitle'];
 $tmp_name = $_FILES['file']['tmp_name']; 
 $loc="dist/img/".$file;
 move_uploaded_file($tmp_name, $loc);
@@ -20,7 +21,8 @@ if(empty($_FILES['file']['tmp_name']) && ($_POST['img']) && ($_GET['eid'])){
     $id=$_GET['eid'];
     $img = $_POST['img'];
     
-    $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$img' WHERE id='$id'");
+    $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$img',`blog`='$metatitle' WHERE id='$id'");
+    // echo "<script>alert('hyg');</script>";
    
     }
    
@@ -28,7 +30,8 @@ if(empty($_FILES['file']['tmp_name']) && ($_POST['img']) && ($_GET['eid'])){
     $id=$_GET['eid'];
 move_uploaded_file($tmp_name, $loc);
 
-$sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$file' WHERE id='$id'");
+$sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content', `file`='$file',`blog`='$metatitle' WHERE id='$id'");
+// echo "<script>alert('hyg4');</script>";
      
 
   }
@@ -72,6 +75,8 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="app-assets/css/components.css" />
     <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css" />
@@ -86,6 +91,17 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    
+    <style>
+        .note-editable { 
+    font-family: 'Poppins' !important; 
+    font-size: 15px !important; 
+    text-align: left !important; 
+    
+    height: 350px !important;
+    
+}
+    </style>
     <!-- END: Custom CSS-->
 </head>
 <!-- END: Head-->
@@ -143,14 +159,20 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
                                                         value="<?php echo $row['title']?>" />
                                                 </div>
                                             </div>
+                                            <div class="col-md-12 col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label" for="blog-edit-title">Meta Title</label>
+                                                    <input type="text" id="title" name="metatitle" class="form-control"
+                                                        value="<?= $row['blog']?>" required/>
+                                                </div>
+                                            </div>
                                             <div class="col-12">
                                                 <div class="mb-2">
                                                     <label class="form-label">Content</label>
                                                     <div id="">
                                                         <div id="blog-editor-container">
                                                             <textarea class="summernote form-control" name="content"
-                                                                id="content"
-                                                                value="<?php echo $row['content']?>"><?php echo $row['content']?></textarea>
+                                                                id="content"><?php echo $row['content']?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -246,15 +268,28 @@ $sql=mysqli_query($conn,"UPDATE `blog` SET `title`='$title', `content`='$content
 
     <script>
         $(document).ready(function () {
-            $('.summernote').summernote();
+            $('.summernote').summernote({
+                placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+            });
 
         });
     </script>
-    <!-- include libraries(jQuery, bootstrap) -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    
 </body>
 <!-- END: Body-->
 

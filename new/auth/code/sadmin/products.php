@@ -266,8 +266,7 @@ if(isset($_GET['delid'])){
         });
     </script>
     <script>
-        $(document).ready(function () {
-            $('.delbtn').click(function (e) {
+        $(document).on("click",".delbtn",function(e){
                 e.preventDefault();
                 let delid = $(this).data('id');
                 swal({
@@ -288,7 +287,6 @@ if(isset($_GET['delid'])){
                         }
                     });
             })
-        });
     </script>
 
 </body>

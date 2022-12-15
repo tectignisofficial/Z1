@@ -33,10 +33,10 @@
                         <li><a class="d-flex align-items-center" href="orders.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Preview">Orders</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="incompleteorders.php"><i
+                        <!-- <li><a class="d-flex align-items-center" href="incompleteorders.php"><i
                                     data-feather="circle"></i><span class="menu-item text-truncate"
                                     data-i18n="Edit">Incomplete orders</span></a>
-                        </li>
+                        </li> -->
                         <li><a class="d-flex align-items-center" href="products.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Add">Product</span></a>
                         </li>

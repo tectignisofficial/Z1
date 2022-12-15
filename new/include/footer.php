@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
                              <form method="post">
                                  <div class="input-group">
                                      <input type="email" class="input-group__field newsletter__input" name="email_id"
-                                         id="email_id" value="" placeholder="Email address" required="">
+                                         id="email_id" value="" placeholder="Email address" required>
                                      <span class="input-group__btn">
                                          <button type="submit" class="btn newsletter__submit" name="submit" id="submit"
                                              id="Subscribe"><span

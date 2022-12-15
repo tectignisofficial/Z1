@@ -194,9 +194,6 @@ if(isset($_POST['updateorder'])){
                                                     class="badge rounded-pill  badge-light-success"><?= $row['payment_status']; ?></span>
                                             </td>
                                             <td>
-                                            <!-- <a class="btn btn-outline-success eye" href="orderview.php">
-                                                    <i data-feather="eye"></i>
-                                                </a> -->
                                                 <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
                                             </td>
                                         </tr>
@@ -297,8 +294,8 @@ if(isset($_POST['updateorder'])){
                 });
             }
         });
-        $(document).ready(function(){
-            $('.btnmod1').click(function(){
+
+        $(document).on('click','.btnmod1',function(){
                 let val=$(this).data('id');
                 $.ajax({
                     url:'api.php',
@@ -311,10 +308,6 @@ if(isset($_POST['updateorder'])){
                 });
                 $('#editUser').modal('show');
             });
-
-            
-        });
-        
     </script>
     <script>
 function get(val){
@@ -323,6 +316,32 @@ if(val=='Courier'){
 }
 }
 </script>
+<script>
+        $(document).ready(function () {
+            $(document).on("click",".delbtn",function(e){
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "reviews.php?delid" + delid;
+                        } else {
+                            swal("Your file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
+
 </body>
 <!-- END: Body-->
 

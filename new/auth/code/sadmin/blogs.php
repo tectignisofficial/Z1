@@ -10,11 +10,12 @@ if(isset($_POST['submit'])){
 $title=$_POST['title'];
 $content=mysqli_real_escape_string($conn,$_POST['content']);
 $file=$_FILES['file']['name'];
+$metatitle=$_POST['metatitle'];
 $tmp_name = $_FILES['file']['tmp_name']; 
 $loc="dist/img/".$file;
 move_uploaded_file($tmp_name, $loc);
 {
-        $sql=mysqli_query($conn,"INSERT INTO `blog`(`title`, `content`, `file`) VALUES ('$title','$content','$file')");
+        $sql=mysqli_query($conn,"INSERT INTO `blog`(`title`, `content`, `file`,`blog`) VALUES ('$title','$content','$file','$metatitle')");
  }   
  if($sql==1){
     header("location:blogtable.php");
@@ -66,10 +67,21 @@ move_uploaded_file($tmp_name, $loc);
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css" />
     <link rel="stylesheet" type="text/css" href="app-assets/css/pages/page-blog.css" />
     <!-- END: Page CSS-->
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
+    <style>
+        .note-editable { 
+    font-family: 'Poppins' !important; 
+    font-size: 15px !important; 
+    text-align: left !important; 
+    
+    height: 350px !important;
+    
+}
+    </style>
 </head>
 <!-- END: Head-->
 
@@ -119,6 +131,13 @@ move_uploaded_file($tmp_name, $loc);
                                                 <div class="mb-2">
                                                     <label class="form-label" for="blog-edit-title">Title</label>
                                                     <input type="text" id="title" name="title" class="form-control"
+                                                        value="" required/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label" for="blog-edit-title">Meta Title</label>
+                                                    <input type="text" id="title" name="metatitle" class="form-control"
                                                         value="" required/>
                                                 </div>
                                             </div>
@@ -216,17 +235,27 @@ move_uploaded_file($tmp_name, $loc);
     </script>
 
     
-    <script>
-        $(document).ready(function() {
-      $('.summernote').summernote();
+<script>
+        $(document).ready(function () {
+            $('.summernote').summernote({
+                placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+            });
 
-    });
+        });
     </script>
-     <!-- include libraries(jQuery, bootstrap) -->
-    
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </body>
 <!-- END: Body-->
 

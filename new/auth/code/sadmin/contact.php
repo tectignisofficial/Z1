@@ -251,8 +251,7 @@ if(isset($_GET['delid'])){
     <!-- END: Page JS-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.delbtn').click(function (e) {
+       $(document).on("click",".delbtn",function(e){
                 e.preventDefault();
                 let delid = $(this).data('id');
                 swal({
@@ -273,7 +272,6 @@ if(isset($_GET['delid'])){
                         }
                     });
             })
-        });
     </script>
 
     <script>

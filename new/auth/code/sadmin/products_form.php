@@ -146,6 +146,15 @@ if($sql==1){
             top: 0;
             opacity: 0;
         }
+
+        .note-editable {
+            font-family: 'Poppins' !important;
+            font-size: 16px !important;
+            text-align: left !important;
+
+            height: 350px !important;
+
+        }
     </style>
     <!-- END: Custom CSS-->
 
@@ -176,18 +185,18 @@ if($sql==1){
     <div class="app-content content ">
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row">
-            <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">
-                                Product Form
-                            </h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item active">Ecommerce</li>
-                                    <li class="breadcrumb-item active">Product Form</li>
-                                </ol>
-                            </div>
-                        </div>
+                <div class="col-12">
+                    <h2 class="content-header-title float-start mb-0">
+                        Product Form
+                    </h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                            <li class="breadcrumb-item active">Ecommerce</li>
+                            <li class="breadcrumb-item active">Product Form</li>
+                        </ol>
+                    </div>
+                </div>
                 <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
                     <div class="mb-1 breadcrumb-right">
                     </div>
@@ -202,8 +211,8 @@ if($sql==1){
 
                                     <div class="mb-1">
                                         <label class="form-label" for="name">Name</label>
-                                        <input type="text" id="name" class="form-control" name="name"
-                                            placeholder="Name" required/>
+                                        <input type="text" id="name" class="form-control" name="name" placeholder="Name"
+                                            required />
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="desc">Description</label>
@@ -224,7 +233,7 @@ if($sql==1){
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select files</button>
                                             <input type="file" name="hightlightfile" id="hightlightfile"
-                                                accept="image/webp" required/>
+                                                accept="image/webp" required />
                                         </div>
                                         <!-- <input type="file" name="myfile[]" id="myfile" accept="image/*,.webp" multiple/> -->
                                         <p style="color:red">Please upload proper image with exact size : 1071 x 1500px
@@ -233,14 +242,15 @@ if($sql==1){
                                         <div class="upload-btn-wrapper">
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select multiple files</button>
-                                            <input type="file" name="myfile[]" id="myfile" accept="image/webp"
-                                                multiple required/>
+                                            <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple
+                                                required />
                                         </div>
 
                                         <div class="upload-btn-wrapper">
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select Hover Files</button>
-                                            <input type="file" name="hoverfile" id="hoverfile" accept="image/webp" required/>
+                                            <input type="file" name="hoverfile" id="hoverfile" accept="image/webp"
+                                                required />
                                         </div>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper" style="border: thin #000000">
@@ -290,14 +300,14 @@ if($sql==1){
                                                 <div class="mb-1">
                                                     <label class="form-label" for="SKU">SKU</label>
                                                     <input type="text" id="SKU" class="form-control" name="sku"
-                                                        placeholder="" required/>
+                                                        placeholder="" required />
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="price">Price</label>
                                                     <input type="text" id="price" class="form-control" name="price"
-                                                        placeholder="" required/>
+                                                        placeholder="" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -382,161 +392,161 @@ if($sql==1){
                                 </div>
                                 <!-- </form> -->
                             </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Search Engine Optimize</h4>
-                                <p>Edit SEO meta</p>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <p>Setup meta title & description to make your site easy to discovered on search
-                                    engines such as Google</p>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label class="form-label" for="set">SEO Title</label>
-                                        <input type="text" id="set" class="form-control" name="set"
-                                            placeholder="seo title" />
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label" for="sedes">SEO description</label>
-                                        <input type="text" id="sedes" class="form-control" name="sedes"
-                                            placeholder="seo description" />
-                                    </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Search Engine Optimize</h4>
+                                    <p>Edit SEO meta</p>
                                 </div>
-                                <!-- </form> -->
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <p>Setup meta title & description to make your site easy to discovered on search
+                                        engines such as Google</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label" for="set">SEO Title</label>
+                                            <input type="text" id="set" class="form-control" name="set"
+                                                placeholder="seo title" />
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="sedes">SEO description</label>
+                                            <input type="text" id="sedes" class="form-control" name="sedes"
+                                                placeholder="seo description" />
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-1 col-md-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Publish</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="submit" name="submit" class="btn btn-success">Save</button>
+                                            <button type="button" class="btn btn-info saveEdit">Save & Edit</button>
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Status</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <select class="form-select" id="sbasicSelect" name="published"
+                                                onChange="pub(this.value)">
+                                                <option value="Published">Published</option>
+                                                <option value="Draft">Draft</option>
+                                                <option value="Pending">Pending</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Is featured?</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-check form-check-success form-switch">
+                                                <input type="checkbox" value="1" class="form-check-input"
+                                                    id="customSwitch4" name="featured" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Categories</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="tv" name="knee"
+                                                        value="accessories" />
+                                                    <label class="form-check-label" for="tv">Accessories</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Label</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck1"
+                                                        name="label" value="New" />
+                                                    <label class="form-check-label" for="customCheck1">New</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck2"
+                                                        name="label" value="Hot" />
+                                                    <label class="form-check-label" for="customCheck2">Hot</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="customCheck4"
+                                                        name="label" value="Sale" />
+                                                    <label class="form-check-label" for="customCheck4">Sale</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Tags</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form class="form form-vertical"> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input type="text" id="tname" class="form-control" name="tname"
+                                                placeholder="Write some tags" />
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-1 col-md-3">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Publish</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <button type="submit" name="submit" class="btn btn-success">Save</button>
-                                        <button type="button" class="btn btn-info saveEdit">Save & Edit</button>
-                                    </div>
-                                </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Status</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <select class="form-select" id="sbasicSelect" name="published"
-                                            onChange="pub(this.value)">
-                                            <option value="Published">Published</option>
-                                            <option value="Draft">Draft</option>
-                                            <option value="Pending">Pending</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Is featured?</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-check form-check-success form-switch">
-                                            <input type="checkbox" value="1" class="form-check-input" id="customSwitch4"
-                                                name="featured" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Categories</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="mb-1">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="tv" name="knee"
-                                                    value="accessories" />
-                                                <label class="form-check-label" for="tv">Accessories</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Label</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="mb-1">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="customCheck1"
-                                                    name="label" value="New" />
-                                                <label class="form-check-label" for="customCheck1">New</label>
-                                            </div>
-                                        </div>
-                                        <div class="mb-1">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="customCheck2"
-                                                    name="label" value="Hot" />
-                                                <label class="form-check-label" for="customCheck2">Hot</label>
-                                            </div>
-                                        </div>
-                                        <div class="mb-1">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="customCheck4"
-                                                    name="label" value="Sale" />
-                                                <label class="form-check-label" for="customCheck4">Sale</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Tags</h4>
-                            </div>
-                            <div class="card-body">
-                                <!-- <form class="form form-vertical"> -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <input type="text" id="tname" class="form-control" name="tname"
-                                            placeholder="Write some tags" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
     </div>
     <!-- END: Content-->
 
@@ -616,17 +626,31 @@ if($sql==1){
             }
         }
 
-        $(document).ready(function () {
-            $('.summernote').summernote();
-        });
-
         $(document).on('click', '.cancleicon', function () {
             $(this).closest('.atrb').remove();
         })
     </script>
     <!-- include libraries(jQuery, bootstrap) -->
 
-    <!-- include summernote css/js -->
+    <script>
+        $(document).ready(function () {
+            $('.summernote').summernote({
+                placeholder: 'Hello stand alone ui',
+                tabsize: 2,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 

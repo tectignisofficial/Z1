@@ -162,6 +162,7 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $row['location'];?></td>
 
                                                 <td>
+
                                                     <button class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i class="fa fa-trash"></i>
@@ -258,29 +259,27 @@ if(isset($_GET['delid'])){
     </script>
 
     <script>
-        $(document).ready(function () {
-            $('.delbtn').click(function (e) {
+            $(document).on("click",".delbtn",function(e){
                 e.preventDefault();
                 let delid = $(this).data('id');
                 swal({
                         title: "Are you sure?",
-                        text: "Once deleted, you will not be able to recover this imaginary file!",
+                        text: "Once deleted, you will not be able to recover this file!",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            swal("Poof! Your imaginary file has been deleted!", {
+                            swal("Poof! Your file has been deleted!", {
                                 icon: "success",
                             });
                             window.location.href = "reviews.php?delid" + delid;
                         } else {
-                            swal("Your imaginary file is safe!");
+                            swal("Your file is safe!");
                         }
                     });
             })
-        });
     </script>
 </body>
 <!-- END: Body-->

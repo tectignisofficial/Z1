@@ -162,7 +162,6 @@ include('../../../include/config.php');
                                             <td><?php echo $arr['phone'];?> </td>
                                             <td><?php echo $arr['email'];?> </td>
                                             <td><?php echo $arr['created_at'];?> </td>
-                                           
                                         </tr>
                                         <?php $count++;  } ?>
                                     </tbody>

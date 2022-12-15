@@ -194,10 +194,11 @@ if(isset($_POST['updatecurrrency'])){
                                                             data-bs-toggle="modal" data-bs-target="#editUser<?php echo $arr['id'] ?>    "><i
                                                                 data-feather="edit"></i></button>
 
-                                                    <a href="currency.php?currid=<?php echo $arr['id']; ?>"><button
+                                                    <button
                                                             type="button"
-                                                            class="btn btn-icon rounded-circle btn-flat-danger"><i
-                                                                data-feather="trash"></i></button></a>
+                                                            class="btn btn-icon rounded-circle btn-flat-danger delbtn"
+                                                        data-id="=<?php echo $arr['id']; ?>"><i
+                                                                data-feather="trash"></i></button>
 
                                                 </td>
                                             </tr>
@@ -255,6 +256,31 @@ if(isset($_POST['updatecurrrency'])){
         })
     </script>
 
+<script>
+        $(document).ready(function () {
+            $(document).on("click",".delbtn",function(e){
+                e.preventDefault();
+                let delid = $(this).data('id');
+                swal({
+                        title: "Are you sure?",
+                        text: "Once deleted, you will not be able to recover this file!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your file has been deleted!", {
+                                icon: "success",
+                            });
+                            window.location.href = "currency.php?currid" + delid;
+                        } else {
+                            swal("Your file is safe!");
+                        }
+                    });
+            })
+        });
+    </script>
     <!-- <script>
         $(document).ready(function () {
             $('.modal').click(function () {

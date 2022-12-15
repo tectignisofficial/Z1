@@ -167,12 +167,11 @@ include("../../../include/config.php");
                                                     <i class="fa fa-edit"></i>
                                                 </a>
 
-                                                <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        href=""
+                                                <button class="btn btn-danger btn-rounded btn-icon delbtn"
                                                         class="btn btn-primary btn-rounded btn-icon"
                                                         data-id="=<?php echo $arr['id']; ?>">
                                                         <i class="fa fa-trash"></i>
-                                                    </a>
+                                    </button>
                                             </td>
                                         </tr>
                                         <?php $count++;  } ?>
@@ -247,8 +246,7 @@ include("../../../include/config.php");
     </script>
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.delbtn').click(function (e) {
+       $(document).on("click",".delbtn",function(e){
                 e.preventDefault();
                 let delid = $(this).data('id');
                 swal({
@@ -269,7 +267,6 @@ include("../../../include/config.php");
                         }
                     });
             })
-        });
     </script>
 
     <!-- END: Page Vendor JS-->
