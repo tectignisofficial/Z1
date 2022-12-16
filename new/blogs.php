@@ -67,8 +67,8 @@ $id=$_GET['eid'];
                         <div class="blog--list-view">
                             <div class="article">
                                 <!-- Article Image -->
-                                <a class="article_featured-image" href="#"><img style="height:600px"class="blur-up ls-is-cached lazyloaded"
-                                        src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></a>
+                                <p class="article_featured-image"><img style="height:600px"class="blur-up ls-is-cached lazyloaded"
+                                        src="auth\code\sadmin\dist\img\<?php echo $arr['file'];?>" alt="It's all about how you wear"></p>
                                 <h1><?php echo $arr['title'];?></h1>
 
                                 <div class="rte">

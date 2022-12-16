@@ -45,19 +45,18 @@ include('include/config.php');
             <div class="container">
                 <div class="row">
                     <!--Sidebar-->
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
+                    <!-- <div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
                         <div class="closeFilter d-block d-md-none d-lg-none"><i class="icon icon anm anm-times-l"></i>
                         </div>
                         <div class="sidebar_tags">
-                            <!--Categories-->
                             <div class="sidebar_widget static-banner">
                                 <img src="assets/images/z1kneebanner.webp" alt="z1knee" />
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!--End Sidebar-->
                     <!--Main Content-->
-                    <div class="col-12 col-sm-12 col-md-9 col-lg-9 main-col">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
                         <div class="productList">
                             <!--Toolbar-->
                             <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product
@@ -70,7 +69,7 @@ include('include/config.php');
                                         </div>
                                         <div
                                             class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                                            <!-- <span class="filters-toolbar__product-count">Showing: <?php $sql=mysqli_query($conn,"select * from products");
+                                            <!-- <span class="filters-toolbar__product-count">Showing: <?php $sql=mysqli_query($conn,"select * from products ");
                                         $count=mysqli_num_rows($sql);
                                         echo $count;  ?></span> -->
                                         </div>
@@ -108,7 +107,7 @@ include('include/config.php');
                                             if(mysqli_num_rows($sql)>0){
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
-                                    <li class="col-6 col-sm-6 col-md-4 col-lg-4 item " data-price="<?php
+                                    <li class="col-6 col-sm-6 col-md-3 col-lg-3 item " data-price="<?php
                                                             if(isset($_SESSION['USD'])){
                                                                 echo number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{

@@ -251,9 +251,17 @@ if(isset($_POST['checkout'])){
                                             $total= $total + ($values['quantity'] * $values['price']);  } ?>
                             <?php } } ?>
                             <!--mobile-->
-                            <div class="currencymsg">We processes all orders in USD. While the content of your cart is
-                                currently displayed in USD, the checkout will use USD at the most current exchange rate.
+                            <?php
+                           if(isset($_SESSION['USD'])){
+                            ?>
+                            <div class="currencymsg">We processes all orders in <?= $_SESSION['myselect'] ?>. While the content of your cart is
+                                currently displayed in <?= $_SESSION['myselect'] ?>, the checkout will use <?= $_SESSION['myselect'] ?> at the most current exchange rate.
                             </div>
+                            <?php } else{ ?>
+                                <div class="currencymsg">We processes all orders in INR. While the content of your cart is
+                                currently displayed in INR, the checkout will use INR at the most current exchange rate.
+                            </div>
+                            <?php } ?>
                             <hr>
 
 
