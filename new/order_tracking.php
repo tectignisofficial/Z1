@@ -1,3 +1,15 @@
+<?php 
+session_start();
+if(!isset($_SESSION['customerid'])) 
+{
+ header("Location:login.php"); 
+}
+
+include('include/config.php');
+$order=$_GET['order'];
+$sql=mysqli_query($conn,"select * from orders inner join customers on customers.id=orders.customer where orders.id='$order'");
+$arr=mysqli_fetch_array($sql);
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -225,14 +237,14 @@
                 <article class="card">
                     <header class="card-header"> My Orders / Tracking </header>
                     <div class="card-body">
-                        <h6>Order ID: OD45345345435</h6>
+                        <h6>Order ID: <?= $arr['order_no'] ?></h6>
                         <article class="card">
                             <div class="card-body row">
                                 <div class="col"> <strong>Estimated Delivery time:</strong> <br>29 nov 2019 </div>
                                 <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i
-                                        class="fa fa-phone"></i> +1598675986 </div>
+                                        class="fa fa-phone"></i> <?= $arr['phone']; ?> </div>
                                 <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
-                                <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div>
+                                <div class="col"> <strong>Tracking :</strong> <br> <?= $arr['tracking_id']?> </div>
                             </div>
                         </article>
                         <div class="track">
@@ -246,7 +258,7 @@
                                     class="text">Ready for pickup</span> </div>
                         </div>
                         <hr>
-                        <ul class="row">
+                        <!-- <ul class="row">
                             <li class="col-md-4">
                                 <figure class="itemside mb-3">
                                     <div class="aside"><img src="https://i.imgur.com/iDwDQ4o.png" class="img-sm border">
@@ -277,9 +289,9 @@
                                     </figcaption>
                                 </figure>
                             </li>
-                        </ul>
+                        </ul> -->
                         <hr>
-                        <a href="#" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to
+                        <a href="myaccount" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to
                             orders</a>
                     </div>
                 </article>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['customerid'])) 
+{
+ header("Location:login.php"); 
+}
+
+include('include/config.php');
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
