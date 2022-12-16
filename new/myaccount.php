@@ -286,7 +286,11 @@ if(isset($_POST["changepassword"])){
                                                     data-size="<?= $arr1['size'] ?>"
                                                     data-image="<?= $arr2['hightlightfile'] ?>"
                                                     data-order="<?= $arr1['order_id']; ?>"
-                                                    data-processing="<?= $arr1['order_status'] ?>">view</a>
+                                                    data-processing="<?= $arr1['order_status'] ?>">
+                                                    <!-- <i class="fa fa-eye"></i> -->
+                                                    View &nbsp;&nbsp;
+                                                </a>
+                                                <a href="order_tracking">Track Your Order</a>
                                             </td>
                                         </tr>
                                         <?php $count++; } ?>
@@ -314,7 +318,6 @@ if(isset($_POST["changepassword"])){
                                     $sql=mysqli_query($conn,"select * from billing_address where customer_id='$id' and set_default='1'");
                                     while($arr=mysqli_fetch_array($sql)){
                                     ?>
-
 
                                     <input type="hidden" name="prid" value="<?= $arr['id'] ?>">
                                     <p><?= $arr['house_building'].' , '.$arr['road_area_colony'].' ,  Near by' .$arr['landmark'].','.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>

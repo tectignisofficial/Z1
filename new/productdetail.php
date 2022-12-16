@@ -278,6 +278,18 @@ $arr=mysqli_fetch_array($sql);
             margin-bottom: 25px;
     margin-top: 5%;
     font-size: 22px;
+    font-family:auto;
+    color:black;
+        }
+        .step_process a{
+            font-size: 21px;
+    letter-spacing: 1.2px;
+    color: red;
+    font-weight: 800;
+    padding-left:10px;
+        }
+        .step_process a:hover{
+    color: red;
         }
     </style>
 </head>
@@ -485,7 +497,7 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
 
                                         </div>
-<p class="step_process">How To Wear <a href="step-process.php">Click here</a></p>
+<p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
