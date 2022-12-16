@@ -98,12 +98,12 @@ include('include/config.php');
                                             if(isset($_GET['pageno'])){
                                                 $pageno=$_GET['pageno'];
                                             }else{ $pageno = 1; }
-                                            $no_of_record_per_page=6;
+                                            $no_of_record_per_page=8;
                                             $occ=($pageno-1)*$no_of_record_per_page;
-                                            $total_page=mysqli_query($conn,"select count(*) from products  where categories IS NULL");
+                                            $total_page=mysqli_query($conn,"select count(*) from products  where categories = ''");
                                             $total_rows = mysqli_fetch_array($total_page)[0];
                                             $total_pages = ceil($total_rows / $no_of_record_per_page);
-                                            $sql=mysqli_query($conn,"select * from products where categories IS NULL  LIMIT $occ, $no_of_record_per_page");
+                                            $sql=mysqli_query($conn,"select * from products where categories =''  LIMIT $occ, $no_of_record_per_page");
                                             if(mysqli_num_rows($sql)>0){
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
@@ -191,7 +191,7 @@ include('include/config.php');
                                                 ?>
                                     </ul>
                                 </div>
-                                <?php } else{ echo '<script>window.location.href="shop.php";</script>' ;} ?>
+                                <?php } else{ echo '<div> No Record Found </div>' ;} ?>
 
 
 

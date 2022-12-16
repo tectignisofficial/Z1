@@ -803,7 +803,7 @@ $arr=mysqli_fetch_array($sql);
                                         ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories IS NULL limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -882,7 +882,7 @@ $arr=mysqli_fetch_array($sql);
                                         <?php }else{ ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories IS NOT NULL limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories !='' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">

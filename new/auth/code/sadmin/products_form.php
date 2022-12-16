@@ -339,7 +339,7 @@ if($sql==1){
                                         </div>
                                         <div class="col-4">
                                             <label class="form-label" for="sname">Attribute name</label>
-                                            <select class="form-control" onChange="put(this.value)" name="attrname">
+                                            <select class="form-control" onChange="put(this.value)" name="attrname" required>
                                                 <option disabled selected></option>
                                                 <?php
                                                 $selsql=mysqli_query($conn,"select * from product_attribute group by main_title");
