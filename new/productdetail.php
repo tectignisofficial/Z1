@@ -38,11 +38,11 @@ if(!in_array($_POST['option1'],$item_array_id)){
         'image'    => $_POST['image']
     );
     $_SESSION['shopping_cart'][$count] = $item_arr;
-    header('location:productdetail.php?name='.$productName);
+    header('location:productdetail/'.$seo_title);
 }
 else{
     echo "<script>alert('already Added');</script>";
-    header('location:productdetail.php?name='.$productName);
+    header('location:productdetail/'.$seo_title);
 }
 }else{
     $item_arr=array(
@@ -808,7 +808,7 @@ $arr=mysqli_fetch_array($sql);
                                                 <!-- start product image -->
                                                 <div class="product-image">
                                                     <!-- start product image -->
-                                                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
+                                                    <a href="productdetail/<?= $arr['seo_title']; ?>">
                                                         <!-- image -->
 
                                                         <img class="primary blur-up lazyload"
@@ -839,7 +839,7 @@ $arr=mysqli_fetch_array($sql);
                                                             type="button" tabindex="0">Add To Cart</a>
                                                     </form>
                                                     <div class="button-set">
-                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
                                                             title="Quick View" class="quick-view-popup quick-view"
                                                             data-toggle="modal" data-target="#content_quickview">
                                                             <i class="icon anm anm-search-plus-r"></i>
@@ -854,7 +854,7 @@ $arr=mysqli_fetch_array($sql);
                                                     <!-- product name -->
                                                     <div class="product-name">
                                                         <a
-                                                            href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name']; ?></a>
+                                                            href="productdetail/<?php echo $arr['seo_title']; ?>"><?php echo $arr['name']; ?></a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
@@ -887,7 +887,7 @@ $arr=mysqli_fetch_array($sql);
                                                 <!-- start product image -->
                                                 <div class="product-image">
                                                     <!-- start product image -->
-                                                    <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
+                                                    <a href="productdetail/<?php echo $arr['seo_title']; ?>">
                                                         <!-- image -->
 
                                                         <img class="primary blur-up lazyload"
@@ -918,7 +918,7 @@ $arr=mysqli_fetch_array($sql);
                                                             type="button" tabindex="0">Add To Cart</a>
                                                     </form>
                                                     <div class="button-set">
-                                                        <a href="productdetail.php?name=<?php echo $arr['name']; ?>"
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
                                                             title="Quick View" class="quick-view-popup quick-view"
                                                             data-toggle="modal" data-target="#content_quickview">
                                                             <i class="icon anm anm-search-plus-r"></i>
@@ -933,7 +933,7 @@ $arr=mysqli_fetch_array($sql);
                                                     <!-- product name -->
                                                     <div class="product-name">
                                                         <a
-                                                            href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name']; ?></a>
+                                                            href="productdetail/<?php echo $arr['seo_title']; ?>"><?php echo $arr['name']; ?></a>
                                                     </div>
                                                     <!-- End product name -->
                                                     <!-- product price -->
