@@ -87,21 +87,22 @@ $facebook=mysqli_fetch_array($sql);
                      <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                          <h4 class="h4">Quick Links</h4>
                          <ul>
-                             <li><a href="index.php">Home</a></li>
-                             <li><a href="about-us.php">About Us</a></li>
-                             <li><a href="contact-us.php">Contact Us</a></li>
-                             <li><a href="blog.php">Blogs</a></li>
-                             <li><a href="videos.php">Video</a></li>
+                             <li><a href="index">Home</a></li>
+                             <li><a href="about-us">About Us</a></li>
+                             <li><a href="contact-us">Contact Us</a></li>
+                             <li><a href="blog">Blogs</a></li>
+                             <li><a href="videos">Video</a></li>
+                             <li><a href="bulkorder">Bulk Orders</a></li>
                          </ul>
                      </div>
                      <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                          <h4 class="h4">Disclaimer</h4>
                          <ul>
-                             <li><a href="privacy-policy.php" target="-blank">Privacy Policy</a></li>
-                             <li><a href="term-conditions.php" target="-blank">Terms & Conditions</a></li>
-                             <li><a href="returns-refund.php" target="-blank">Returns & Refunds</a></li>
-                             <li><a href="shipping-delivery.php" target="-blank">Shipping & Delivery</a></li>
-                             <li><a href="myaccount.php">My Account</a></li>
+                             <li><a href="privacy-policy" target="-blank">Privacy Policy</a></li>
+                             <li><a href="term-conditions" target="-blank">Terms & Conditions</a></li>
+                             <li><a href="returns-refund" target="-blank">Returns & Refunds</a></li>
+                             <li><a href="shipping-delivery" target="-blank">Shipping & Delivery</a></li>
+                             <li><a href="myaccount">My Account</a></li>
                          </ul>
                      </div>
                      <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">

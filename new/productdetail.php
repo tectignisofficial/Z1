@@ -274,6 +274,11 @@ $arr=mysqli_fetch_array($sql);
         .pswp__item>.pswp__zoom-wrap>.pswp__error-msg {
             display: none !important;
         }
+        .step_process{
+            margin-bottom: 25px;
+    margin-top: 5%;
+    font-size: 22px;
+        }
     </style>
 </head>
 
@@ -480,7 +485,7 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
 
                                         </div>
-
+<p class="step_process">How To Wear <a href="step-process.php">Click here</a></p>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>

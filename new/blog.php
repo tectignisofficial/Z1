@@ -50,10 +50,6 @@ include("include/config.php");
                 </div>
             </div> -->
 
-            <!--End Sidebar-->
-            <!--Main Content-->
-            <div class="container">
-                <div class="row">
               
 
                     <!--Main Content-->
@@ -106,12 +102,6 @@ include("include/config.php");
                     </div>
                   
 
-                    <!--End Main Content-->
-                    <!--Sidebar-->
-
-                    <!--End Sidebar-->
-                </div>
-            </div>
             <!--End Main Content-->
         </div>
     </div>

@@ -35,9 +35,6 @@ if(isset($_POST['update'])){
     }else{
         echo '<script>alert("something went wrong");</script>';
     }
-
-
-
 }
 
 if(isset($_POST["changepassword"])){
@@ -342,10 +339,10 @@ if(isset($_POST["changepassword"])){
                                     <p><?= $arr['house_building']. ',' .$arr['road_area_colony']. ', Near by '.$arr['landmark'].' , '.$arr['city'].' , '.$arr['state'].' , '.$arr['country'].' , '.$arr['pin_code'] ?>
                                     </p>
                                     <p><?= $arr['phone']; ?></p>
-                                        <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
-                                            data-id='<?= $arr['id'] ?>' data-name="shipping">Edit</p>
+                                    <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
+                                        data-id='<?= $arr['id'] ?>' data-name="shipping">Edit</p>
 
-                                        <?php } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
 
@@ -608,7 +605,8 @@ if(isset($_POST["changepassword"])){
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
                                     <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
-                                        data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
+                                        data-name="billing" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
+                                        href="api.php?defaultbilling=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>
                             </div>
@@ -641,7 +639,8 @@ if(isset($_POST["changepassword"])){
                                 <p><?= $arr['phone']; ?></p>
                                 <p>
                                     <p style="cursor:pointer;display:inline-block;color:black" class="billingmodal"
-                                        data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
+                                        data-name="shipping" data-id='<?= $arr['id'] ?>'>Edit</p> | <a
+                                        href="api.php?defaultshipping=<?= $arr['id'] ?>&url=<?= $url ?>">Set
                                         Default</a>
                                 </p>
                             </div>
@@ -665,14 +664,14 @@ if(isset($_POST["changepassword"])){
             $('.billingmodal').click(function () {
                 let billingId = $(this).data('id');
                 let billaddname = $(this).data('name');
-                let pageurl= <?= $url; ?>;
+                let pageurl = <?= $url; ?> ;
                 $.ajax({
                     url: 'api.php',
                     type: 'POST',
                     data: {
                         billingId: billingId,
                         billaddname: billaddname,
-                        pageurl:pageurl
+                        pageurl: pageurl
                     },
                     success: function (data) {
                         $('#billingbody').html(data);
@@ -712,7 +711,7 @@ if(isset($_POST["changepassword"])){
             $('.processing').html(processing);
             $('.cancelattr').attr("href", "auth/code/sadmin/api.php?orderidcancel=" + id);
             $('#viewdetailmodal').modal('show');
-        })
+        });
     </script>
     </div>
 </body>

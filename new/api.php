@@ -263,4 +263,26 @@ if(isset($_POST['gst'])){
         $sql=mysqli_query($conn,"INSERT INTO `gst`(`gstno`, `customer_id`) VALUES ('$gst','$id')"); 
     }
 }
+
+if(isset($_POST['bulk_order'])){
+    $first_name=$_POST['first_name'];
+    $company_name=$_POST['company_name'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $Address=$_POST['Address'];
+    $street_address=$_POST['street_address'];
+    $city=$_POST['city'];
+    $zip=$_POST['zip'];
+    $state=$_POST['state'];
+    $country=$_POST['country'];
+    $enquiry=$_POST['enquiry'];
+    date_default_timezone_set('Asia/Kolkata');
+    $date=date('Y-m-d h:i');
+
+    $sql=mysqli_query($conn,"INSERT INTO `bulk_order`(`name`, `company_name`, `email`, `phone`, `address`, `street_address`, `city`, `zip`,`state`, `country`, `enquiry_product`, `cur_date`) VALUES ('$first_name','$company_name','$email','$phone','$Address','$street_address','$city','$zip','$state','$country','$enquiry','$date')");
+
+    if($sql==1){
+        header('location:bulkorder.php');
+    }
+}
 ?>

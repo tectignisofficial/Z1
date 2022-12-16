@@ -198,7 +198,6 @@ if(isset($_POST['doneAddress'])){
                                                         <option value="">Select City</option>
                                                     </select>
                                                 </div>
-
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-md-12 col-lg-12 col-xl-12 required">
