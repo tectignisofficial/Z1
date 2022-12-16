@@ -32,6 +32,7 @@ if(!in_array($_POST['option1'],$item_array_id)){
     $item_arr=array(
         'itemid'   => $_POST['productid'],
         'name'     => $productName,
+        'productName' => $seo_title,
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
         'option1'  => $_POST['option1'],
@@ -48,6 +49,7 @@ else{
     $item_arr=array(
         'itemid'   => $_POST['productid'],
         'name'     => $productName,
+        'productName' => $seo_title,
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
         'option1'  => $_POST['option1'],
