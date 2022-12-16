@@ -837,7 +837,7 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="<?php echo $arr['productName']; ?>" class="btn btn-addto-cart"
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
                                                             type="button" tabindex="0">Add To Cart</a>
                                                     </form>
                                                     <div class="button-set">
@@ -916,7 +916,7 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="<?php echo $arr['productName']; ?>" class="btn btn-addto-cart"
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
                                                             type="button" tabindex="0">Add To Cart</a>
                                                     </form>
                                                     <div class="button-set">
