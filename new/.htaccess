@@ -1,8 +1,6 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
 
-RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ productdetail.php?name=$1
-RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/$ productdetail.php?name=$1
-
+RewriteRule ^productdetail/([a-zA-Z0-9-/]+)?$ productdetail.php?name=$1
 RewriteRule ^([^\.]+)$ $1.php [NC,L]

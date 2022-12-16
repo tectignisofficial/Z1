@@ -2,10 +2,10 @@
 <?php
 session_start();
 include('include/config.php');
-$productName=$_GET['name'];
-$sql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.name='$productName'");
+$seo_title=$_GET['name'];
+$sql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.seo_title='$seo_title'");
 $arr=mysqli_fetch_array($sql);
-$id=$arr['id'];
+$productName=$arr['name'];
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
@@ -31,7 +31,7 @@ if(!in_array($_POST['option1'],$item_array_id)){
     $count=count($_SESSION['shopping_cart']);
     $item_arr=array(
         'itemid'   => $_POST['productid'],
-        'name'     => $_GET['name'],
+        'name'     => $productName,
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
         'option1'  => $_POST['option1'],
@@ -47,7 +47,7 @@ else{
 }else{
     $item_arr=array(
         'itemid'   => $_POST['productid'],
-        'name'     => $_GET['name'],
+        'name'     => $productName,
         'quantity' => $_POST['quantity'],
         'price'    => $_POST['price'],
         'option1'  => $_POST['option1'],

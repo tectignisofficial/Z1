@@ -115,7 +115,7 @@ include('include/config.php');
                                         <!-- start product image -->
                                         <div class="product-image">
                                             <!-- start product image -->
-                                            <a href="productdetail.php?name=<?php echo $arr['name']; ?>">
+                                            <a href="productdetail/<?php echo $arr['seo_title']; ?>">
                                                 <img class="primary blur-up lazyload"
                                                     data-src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
                                                     src="auth/code/sadmin/image/product_image_check/<?php echo $arr['hightlightfile'];?>"
@@ -140,7 +140,7 @@ include('include/config.php');
                                             <!-- Start product button -->
                                             <form class="variants add" action="#"
                                                 onclick="window.location.href='cart.html'" method="post">
-                                                <a href="productdetail.php?name=<?php echo $arr['name']; ?>"
+                                                <a href="productdetail/<?php echo $arr['seo_title']; ?>"
                                                     class="btn btn-addto-cart" type="button">Add To Cart</a>
                                             </form>
 
@@ -153,7 +153,7 @@ include('include/config.php');
                                             <!-- product name -->
                                             <div class="product-name">
                                                 <a
-                                                    href="productdetail.php?name=<?php echo $arr['name']; ?>"><?php echo $arr['name'];?></a>
+                                                    href="productdetail/<?php echo $arr['seo_title']; ?>"><?php echo $arr['name'];?></a>
                                             </div>
                                             <!-- End product name -->
                                             <!-- product price -->

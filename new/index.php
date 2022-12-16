@@ -451,7 +451,7 @@ include('include/header.php');
                     $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
                     $arr=mysqli_fetch_array($sql);
                     ?>
-                      <a href="productdetail.php?name=<?= $arr['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
+                      <a href="productdetail/<?= $arr['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
@@ -526,7 +526,7 @@ include('include/header.php');
                     $sql1=mysqli_query($conn,"select * from products where id='2'");
                     $arr1=mysqli_fetch_array($sql1);
                     ?>
-                      <a href="productdetail.php?name=<?= $arr1['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
+                      <a href="productdetail/<?= $arr1['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
@@ -629,7 +629,7 @@ include('include/header.php');
                     $sql2=mysqli_query($conn,"select * from products where id='3'");
                     $arr2=mysqli_fetch_array($sql2);
                     ?>
-                      <a href="productdetail.php?name=<?= $arr2['name']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
+                      <a href="productdetail/<?= $arr2['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
                           class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
