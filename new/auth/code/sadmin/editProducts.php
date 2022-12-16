@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
     $sizefilehide=$_POST['sizefilehide'];
     $hoverfilehide=$_POST['hoverfilehide'];
     $myfilehide=$_POST['myfilehide'];
+    $fileNames = array_filter($_FILES['myfile']['name']);
 
 $loc="image/product_image_check/";
 move_uploaded_file($_FILES['hoverfile']['tmp_name'],$loc.$hoverfile);
@@ -52,65 +53,51 @@ move_uploaded_file($_FILES['sizefile']['tmp_name'],$loc.$sizefile);
 move_uploaded_file($_FILES['hightlightfile']['tmp_name'],$loc.$hightlightfile);
 
 $images_name='';
-    // foreach ($_FILES["myfile"]["error"] as $key => $error) {
-    //     if ($error == UPLOAD_ERR_OK) {
-    //         $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
-    //         $filename = $_FILES["myfile"]["name"][$key];
-    //         move_uploaded_file($tmp_name, $loc.$filename);
-    //         $images_name =$images_name.",".$filename;
-    //         $sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
-    //             $sql2=mysqli_query($conn,"INSERT INTO `product_image`(`name`, `image`) VALUES ('$pname','$filename')");
+if(!empty($fileNames)){
+    $sql1=mysqli_query($conn,"DELETE FROM `product_image` WHERE name='$pname'");
+    foreach ($_FILES["myfile"]["error"] as $key => $error) {
+        
+        if ($error == UPLOAD_ERR_OK) {
+            $tmp_name = $_FILES["myfile"]["tmp_name"][$key];
+            $filename = $_FILES["myfile"]["name"][$key];
+            move_uploaded_file($tmp_name, $loc.$filename);
+            $images_name =$images_name.",".$filename;
+                $sql2=mysqli_query($conn,"INSERT INTO `product_image`(`name`, `image`) VALUES ('$pname','$filename')");
             
-            
-    //     }
-    //     if($sql==1){
-    //         echo '<script>alert("Update sucessfully submitted"7);</script>';
-    //         header('location:products.php');
-    //     }else{
-    //         echo '<script>alert("something went wrong7");</script>';
-    //     }
-    // }
+        }
+    }
+}
     
 
-if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    if(empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['myfilehide']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
+        // echo '<script>alert("something went wrong1");</script>';
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    }
+    else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide'])){
+        // echo '<script>alert("something went wrong2");</script>';
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    }
+    else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide'])){
+        // echo '<script>alert("something went wrong3");</script>';
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+       
+    }
+    else if(!empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide'])){
+        // echo '<script>alert("something went wrong5");</script>';
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    }
+    else if(!empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide'])){
+        // echo '<script>alert("something went wrong6");</script>';
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+    }
+    
     if($sql==1){
-        echo '<script>alert("Update sucessfully submitted5");</script>';
+        echo '<script>alert("Update sucessfully submitted"7);</script>';
         header('location:products.php');
     }else{
-        echo '<script>alert("something went wrong5");</script>';
+        echo '<script>alert("something went wrong7");</script>';
     }
-}
-else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
-    if($sql==1){
-        echo '<script>alert("Update sucessfully submitted4");</script>';
-        header('location:products.php');
-    }else{
-        echo '<script>alert("something went wrong4");</script>';
-    }
-   
-}
-else if(!empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
-    if($sql==1){
-        echo '<script>alert("Update sucessfully submitted2");</script>';
-        header('location:products.php');
-    }else{
-        echo '<script>alert("something went wrong2");</script>';
-    }
-}
-else if(!empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide'])){
-    $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
-    if($sql==1){
-        echo '<script>alert("Update sucessfully submitted1");</script>';
-        header('location:products.php');
-    }else{
-        echo '<script>alert("something went wrong1");</script>';
-    }
-}
 
- 
 }
 
 
@@ -329,7 +316,7 @@ while($arr=mysqli_fetch_array($sql)){
                                         
                                         <input type="hidden" name="myfilehide" value="<?php echo $editArr['image']; ?>">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click me to select multiple files</button>
-                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple value="<?php echo $editArr['image']; ?>"/>
+                                        <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple />
                                         </div>
 
                                         <div class="upload-btn-wrapper">
