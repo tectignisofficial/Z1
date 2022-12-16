@@ -147,7 +147,7 @@ if(isset($_POST['checkout'])){
                                 ?>
                                     <tr class="cart__row border-bottom line1 cart-flex border-top">
                                         <td class="cart__image-wrapper cart-flex-item small--hide">
-                                            <a href="productdetail.php?name=<?php echo $values['name']; ?>"><img
+                                            <a href="productdetail/<?php echo $values['name']; ?>"><img
                                                     class="cart__image"
                                                     src="auth/code/sadmin/image/product_image_check/<?php echo $values['image']; ?>"
                                                     alt="Elastic Waist Dress - Navy / Small"></a>
@@ -217,7 +217,7 @@ if(isset($_POST['checkout'])){
                                 ?>
                             <div class="row mobileview">
                                 <div class="col-3">
-                                    <a href="productdetail.php?name=<?php echo $values['name']; ?>"><img
+                                    <a href="productdetail.php/<?php echo $values['name']; ?>"><img
                                             class="cart__image"
                                             src="auth/code/sadmin/image/product_image_check/<?php echo $values['image']; ?>"
                                             alt="Elastic Waist Dress - Navy / Small"></a>
