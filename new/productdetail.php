@@ -6,6 +6,9 @@ $seo_title=$_GET['name'];
 $sql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.seo_title='$seo_title'");
 $arr=mysqli_fetch_array($sql);
 $productName=$arr['name'];
+$accessories=$arr['categories'] ?? null;
+$sizefile=$arr['sizefile'] ?? null;
+$video=$arr['video'] ?? null;
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
@@ -121,6 +124,7 @@ $arr=mysqli_fetch_array($sql);
 
 <head>
     <base href="https://z1design.tectignis.in/new/">
+    <!-- <base href="http://localhost:8000/kneebrace/Z1/new/"> -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $arr['name'] ?></title>
@@ -274,22 +278,25 @@ $arr=mysqli_fetch_array($sql);
         .pswp__item>.pswp__zoom-wrap>.pswp__error-msg {
             display: none !important;
         }
-        .step_process{
+
+        .step_process {
             margin-bottom: 25px;
-    margin-top: 5%;
-    font-size: 22px;
-    font-family:auto;
-    color:black;
+            margin-top: 5%;
+            font-size: 22px;
+            font-family: auto;
+            color: black;
         }
-        .step_process a{
+
+        .step_process a {
             font-size: 21px;
-    letter-spacing: 1.2px;
-    color: red;
-    font-weight: 800;
-    padding-left:10px;
+            letter-spacing: 1.2px;
+            color: red;
+            font-weight: 800;
+            padding-left: 10px;
         }
-        .step_process a:hover{
-    color: red;
+
+        .step_process a:hover {
+            color: red;
         }
     </style>
 </head>
@@ -361,9 +368,11 @@ $arr=mysqli_fetch_array($sql);
                                         <div class="product-labels"><span
                                                 class="lbl on-sale"><?php echo $arr['label']; ?></span></div>
                                         <div class="product-buttons">
+                                            <?php if($video!=''){ ?>
                                             <a href="https://www.youtube.com/watch?v=<?php echo $arr['video']; ?>"
                                                 class="btn popup-video" title="View Video"><i
                                                     class="icon anm anm-play-r" aria-hidden="true"></i></a>
+                                                    <?php } ?>
                                             <a href="#" class="btn prlightbox" title="Zoom"><i
                                                     class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                         </div>
@@ -497,7 +506,7 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
 
                                         </div>
-<p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
+                                        <p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
@@ -584,8 +593,13 @@ $arr=mysqli_fetch_array($sql);
                             <ul class="product-tabs">
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
-                                <li rel="tab3"><a class="tablink">Size Chart
+                                <?php
+                                 if($sizefile!=''){
+                                        if($accessories == ''){
+                                        ?>
+                                        <li rel="tab3"><a class="tablink">Size Chart
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                        <?php } } ?>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                             </ul>
                             <div class="tab-container">
@@ -811,16 +825,15 @@ $arr=mysqli_fetch_array($sql);
                             </header>
 
                             <div class="tabs-listing">
-
                                 <div class="tab_container">
                                     <div id="tab1" class="tab_content grid-products">
                                         <?php
-                                        $checksql=mysqli_query($conn,"select * from products where name!='$productName' and categories='accessories'");
-                                        if(mysqli_num_rows($checksql)>0){
+                                        
+                                        if($accessories == 'accessories'){
                                         ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='' limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='accessories' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -854,8 +867,9 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
-                                                            type="button" tabindex="0">Add To Cart</a>
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
+                                                            class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                                            Cart</a>
                                                     </form>
                                                     <div class="button-set">
                                                         <a href="productdetail/<?php echo $arr['seo_title']; ?>"
@@ -892,14 +906,11 @@ $arr=mysqli_fetch_array($sql);
                                                 <!-- End product details -->
                                             </div>
                                             <?php } ?>
-
-
-
                                         </div>
                                         <?php }else{ ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories !='' limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -933,8 +944,9 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
-                                                            type="button" tabindex="0">Add To Cart</a>
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
+                                                            class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                                            Cart</a>
                                                     </form>
                                                     <div class="button-set">
                                                         <a href="productdetail/<?php echo $arr['seo_title']; ?>"
@@ -993,7 +1005,7 @@ $arr=mysqli_fetch_array($sql);
             <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
             <!--End Scoll Top-->
 
-            <div class="hide">
+            <!-- <div class="hide">
                 <div id="sizechart">
                     <h3>WOMEN'S BODY SIZING CHART</h3>
                     <table>
@@ -1091,8 +1103,8 @@ $arr=mysqli_fetch_array($sql);
                     </table>
                     <div style="padding-left: 30px;"><img src="assets/images/size.jpg" alt=""></div>
                 </div>
-            </div>
-            <div class="hide">
+            </div> -->
+            <!-- <div class="hide">
                 <div id="productInquiry">
                     <div class="contact-form form-vertical">
                         <div class="page-title">
@@ -1136,7 +1148,7 @@ $arr=mysqli_fetch_array($sql);
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
             <!-- Including Jquery -->

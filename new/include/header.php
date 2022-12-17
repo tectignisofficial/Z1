@@ -74,12 +74,11 @@
                                     <?php
                                 if(!isset($_SESSION['customerid'])){
                                 ?>
-                               
                                     <li><a href="login.php">Login</a></li>
-                                    <li><a href="register.php">Create Account</a></li>
                                     <?php }else{ ?>
                                     <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
                                     <?php } ?>
+                                    <li><a href="order_tracking">Track Order</a></li>
                                 </ul>
                             </div>
                             <div class="col-5 col-md-3 pr-1">
