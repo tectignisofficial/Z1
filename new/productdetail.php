@@ -6,6 +6,7 @@ $seo_title=$_GET['name'];
 $sql=mysqli_query($conn,"select *,products.name from products inner join stock on products.name=stock.product_name where products.seo_title='$seo_title'");
 $arr=mysqli_fetch_array($sql);
 $productName=$arr['name'];
+$accessories=$arr['categories'] ?? null;
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
@@ -589,8 +590,7 @@ $arr=mysqli_fetch_array($sql);
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                                 <?php
-                                        $checksql=mysqli_query($conn,"select * from products where name!='$productName' and categories!='accessories'");
-                                        if(mysqli_num_rows($checksql)>0){ 
+                                        if($accessories == ''){
                                         ?>
                                 <li rel="tab3"><a class="tablink">Size Chart
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -823,12 +823,12 @@ $arr=mysqli_fetch_array($sql);
                                 <div class="tab_container">
                                     <div id="tab1" class="tab_content grid-products">
                                         <?php
-                                        $checksql=mysqli_query($conn,"select * from products where name!='$productName' and categories='accessories'");
-                                        if(mysqli_num_rows($checksql)>0){
+                                        
+                                        if($accessories == 'accessories'){
                                         ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='' limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='accessories' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -905,7 +905,7 @@ $arr=mysqli_fetch_array($sql);
                                         <?php }else{ ?>
                                         <div class="productSlider">
                                             <?php
-                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories !='' limit 4");
+                                            $sql=mysqli_query($conn,"select * from products where name!='$productName' and categories ='' limit 4");
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
                                             <div class="col-12 item">
@@ -1000,7 +1000,7 @@ $arr=mysqli_fetch_array($sql);
             <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
             <!--End Scoll Top-->
 
-            <div class="hide">
+            <!-- <div class="hide">
                 <div id="sizechart">
                     <h3>WOMEN'S BODY SIZING CHART</h3>
                     <table>
@@ -1098,8 +1098,8 @@ $arr=mysqli_fetch_array($sql);
                     </table>
                     <div style="padding-left: 30px;"><img src="assets/images/size.jpg" alt=""></div>
                 </div>
-            </div>
-            <div class="hide">
+            </div> -->
+            <!-- <div class="hide">
                 <div id="productInquiry">
                     <div class="contact-form form-vertical">
                         <div class="page-title">
@@ -1143,7 +1143,7 @@ $arr=mysqli_fetch_array($sql);
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
             <!-- Including Jquery -->
