@@ -4,7 +4,7 @@ if(!isset($_SESSION['customerid']))
 {
  header("Location:login.php"); 
 }
-
+$message='';
 include('include/config.php');
 $order=$_GET['order'];
 $sql=mysqli_query($conn,"select * from orders inner join customers on customers.id=orders.customer where orders.id='$order'");
@@ -34,7 +34,6 @@ $arr=mysqli_fetch_array($sql);
     <script src="assets/js/countrystatecity.js?v2"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <style>
-
         .card {
             position: relative;
             display: -webkit-box;
@@ -177,6 +176,135 @@ $arr=mysqli_fetch_array($sql);
             border-color: #ff2b00;
             border-radius: 1px
         }
+
+        .group {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .inputgroup {
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid #757575;
+        }
+
+        .inputgroup:focus {
+            outline: none;
+        }
+
+        /* LABEL ======================================= */
+        .label {
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        /* active state */
+        .inputgroup:focus~label,
+        .inputgroup:valid~label {
+            top: -20px;
+            font-size: 14px;
+            color: #0d0e0e;
+        }
+
+        /* BOTTOM BARS ================================= */
+        .bar {
+            position: relative;
+            display: block;
+            color:black;
+        }
+
+        .bar:before,
+        .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #0d0e0e;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        .bar:before {
+            left: 50%;
+        }
+
+        .bar:after {
+            right: 50%;
+        }
+
+        /* active state */
+        .inputgroup:focus~.bar:before,
+        .inputgroup:focus~.bar:after {
+            width: 50%;
+        }
+
+        /* HIGHLIGHTER ================================== */
+        .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* active state */
+        input:focus~.highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease;
+        }
+
+        /* ANIMATIONS ================ */
+        @-webkit-keyframes inputHighlighter {
+            from {
+                background: #0d0e0e;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+
+        @-moz-keyframes inputHighlighter {
+            from {
+                background: #0d0e0e;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+
+        @keyframes inputHighlighter {
+            from {
+                background: #0d0e0e;
+            }
+
+            to {
+                width: 0;
+                background: transparent;
+            }
+        }
+        .orderpara{
+            padding-bottom: 30px;
+            font-size: initial;
+        }
     </style>
 </head>
 
@@ -199,40 +327,57 @@ $arr=mysqli_fetch_array($sql);
             </div>
             <!--End Page Title-->
 
-            <!-- <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
-                            <div class="mb-4">
-                                <form method="post" action="api.php" id="CustomerLoginForm" accept-charset="UTF-8"
-                                    class="contact-form">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label for="FirstName">Name</label>
-                                                <input type="text" name="first_name" placeholder="Your Name"
-                                                    id="FirstName" autofocus="" required>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <div class="form-group">
-                                                <label for="CustomerPassword">Enquiry For Product</label>
-                                                <input type="text" value="" name="enquiry"
-                                                    placeholder="Enquiry For Product" class="" required>
-                                            </div>
+            <div class="container mt-5">
+                <?php if($message){?>
+                <div class="alert alert-danger">
+                    <p class="orderpara"><?php echo $message; ?></p>
+                </div>
+                <?php } ?>
+                <p class="orderpara">To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col ">
+                        <div class="mb-4">
+                            <form method="post"  id="CustomerLoginForm" accept-charset="UTF-8"
+                                class="contact-form">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="group">
+                                            <input type="text" class="inputgroup" name="oderid" required>
+                                            <span class="highlight" ></span>
+                                            <span class="bar"></span>
+                                            <label class="label">Order Id</label>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <input type="submit" name="bulk_order" class="btn mb-3" value="Create">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="group">
+                                            <input type="email" name="email" class="inputgroup" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label class="label">Billing Email</label>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <input type="submit" name="track" class="btn mb-3" value="Track">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-            </div> -->
+                </div>
+            </div>
+            <?php
+            
+            if(isset($_POST['track'])){ 
+                $oderid=$_POST['oderid'];
+                $emailid=$_POST['email'];
+                $sql=mysqli_query($conn,"select * from orders inner join customers on orders.customer=customers.id where orders.order_no='$oderid' and customers.email='$emailid'");
+                $arr=mysqli_fetch_array($sql);
+                $order=$arr['order_no'] ?? null;
+                $email=$arr['email'] ?? null;
+                if(($oderid==$order) && ($emailid==$email)){
+                ?>
             <div class="container mt-5">
                 <article class="card">
                     <header class="card-header"> My Orders / Tracking </header>
@@ -240,7 +385,7 @@ $arr=mysqli_fetch_array($sql);
                         <h6>Order ID: <?= $arr['order_no'] ?></h6>
                         <article class="card">
                             <div class="card-body row">
-                                <div class="col"> <strong>Estimated Delivery time:</strong> <br>29 nov 2019 </div>
+                                <!-- <div class="col"> <strong>Estimated Delivery time:</strong> <br>29 nov 2019 </div> -->
                                 <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i
                                         class="fa fa-phone"></i> <?= $arr['phone']; ?> </div>
                                 <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
@@ -291,12 +436,15 @@ $arr=mysqli_fetch_array($sql);
                             </li>
                         </ul> -->
                         <hr>
-                        <a href="myaccount" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to
+                        <a href="myaccount" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i>
+                            Back to
                             orders</a>
                     </div>
                 </article>
             </div>
-
+<?php }else{
+    $message='Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.';
+} } ?>
         </div>
         <!--End Body Content-->
 
