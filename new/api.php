@@ -27,7 +27,7 @@ if(isset($_POST['billingId'])){
                         class="required-f">*</span></label>
                 <input value="'.$arr['phone'].'" name="number" id="input-lastname" type="tel"
                     minlength="12" maxlength="12" required>
-            </div>
+            </div>email
         </div>
         <div class="row">
             <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
