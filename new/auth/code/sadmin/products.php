@@ -171,8 +171,7 @@ if(isset($_GET['delid'])){
                                                 href="editProducts.php?eid=<?php echo $arr['id']; ?>">
                                                 <i class="fa fa-edit"></i>
                                                 </a>
-                                                        <a class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                        <a class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                         data-id="=<?php echo $arr['id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </a>

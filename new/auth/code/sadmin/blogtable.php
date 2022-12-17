@@ -162,13 +162,12 @@ include("../../../include/config.php");
                                             <td><img src="dist/img/<?php echo $arr['file'];?>" width="70" alt="Image"></td>
 
                                             <td>
-                                                <a class="btn btn-outline-primary edit"
+                                                <a class="btn btn-icon rounded-circle btn-flat-primary edit"
                                                     href="blogedit.php?eid=<?php echo $arr['id'] ?>">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
 
-                                                <button class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        class="btn btn-primary btn-rounded btn-icon"
+                                                <button class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                         data-id="=<?php echo $arr['id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                     </button>

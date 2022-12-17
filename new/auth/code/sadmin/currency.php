@@ -197,8 +197,7 @@ if(isset($_POST['updatecurrrency'])){
                                                     <button
                                                             type="button"
                                                             class="btn btn-icon rounded-circle btn-flat-danger delbtn"
-                                                        data-id="=<?php echo $arr['id']; ?>"><i
-                                                                data-feather="trash"></i></button>
+                                                        data-id="=<?php echo $arr['id']; ?>"><i class="fa fa-trash"></i></button>
 
                                                 </td>
                                             </tr>

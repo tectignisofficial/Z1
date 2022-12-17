@@ -165,7 +165,7 @@ if(isset($_POST['updateorder'])){
                                             <th>Action</th>
                                         </tr>
                                     <?php
-                                    $sql=mysqli_query($conn,'SELECT *,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name ');
+                                    $sql=mysqli_query($conn,'SELECT *,orders.id as oid,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name ');
                                     $count=1;
                                     while($row=mysqli_fetch_array($sql)){ 
                                     ?>
@@ -184,7 +184,7 @@ if(isset($_POST['updateorder'])){
                                             </td>
                                             <td><?= $row['tracking_id']; ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
+                                                <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['oid'] ?>"><i class="fa fa-edit"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>
@@ -254,8 +254,6 @@ if(isset($_POST['updateorder'])){
 
         });
     </script>
-
-
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -289,6 +287,7 @@ if(isset($_POST['updateorder'])){
                     }
                 });
                 $('#editUser').modal('show');
+
             });
     </script>
     <script>

@@ -66,7 +66,7 @@ else{
 
 if(isset($_POST['checkout'])){
     if(!isset($_SESSION['customerid'])){
-        header('location:login.php');
+        header('location:../login.php');
     }
     else{
         if(!isset($_POST['option1'])){
@@ -94,7 +94,7 @@ if(isset($_POST['checkout'])){
         $_SESSION['option1']=$_POST['option1'];
         $_SESSION['productname']=$_POST['productname'];
         $_SESSION['image']=$_POST['image'];
-        header('location:checkout.php');
+        header('location:../checkout.php');
         // header('location:razor/pay.php');
             }
 }

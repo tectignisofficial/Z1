@@ -163,8 +163,7 @@ if(isset($_GET['delid'])){
                                                 <td><?php echo $count;?></td>
                                                 <td><?php echo $row['email_id'];?></td>
                                                 <td>
-                                                    <button class="btn btn-danger btn-rounded btn-icon delbtn"
-                                                        class="btn btn-primary btn-rounded btn-icon "
+                                                    <button class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>

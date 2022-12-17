@@ -3,7 +3,7 @@ include('../../../include/config.php');
 
 if(isset($_POST['val'])){
   $val=$_POST['val'];
-  $sql=mysqli_query($conn,"SELECT *,stock.value as size,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size");
+  $sql=mysqli_query($conn,"SELECT *,orders.id as oid,stock.value as size,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name inner join stock on stock.value=orders.size where orders.id='$val'");
   $arr=mysqli_fetch_array($sql);
   echo '<div class="text-center mb-2">
   <h1 class="mb-1">Edit Orders</h1>
@@ -34,7 +34,7 @@ if(isset($_POST['val'])){
   <option value="Refunded">Refunded</option>
   </select>
 </div>
-<input type="hidden" name="orderid" value="'.$arr['id'].'">
+<input type="hidden" name="orderid" value="'.$arr['oid'].'">
 <div class="col-6 col-md-6">
       <p><b>Order Status</b></p>
   </div>
