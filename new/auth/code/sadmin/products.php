@@ -162,12 +162,12 @@ if(isset($_GET['delid'])){
                                             <td><?php echo $arr['name']; ?></td>
                                             <td><?php echo $arr['stock_status']; ?></td>
                                             <td><?php echo $arr['price']; ?></td>
-                                            <td>
-                                                <a class="btn btn-outline-success eye"
+                                            <td class='d-flex'>
+                                                <a class="btn btn-icon rounded-circle btn-flat-success eye"
                                                     href="../../../productdetail.php?name=<?php echo $arr['name']; ?>">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <a class="btn btn-outline-primary edit"
+                                                <a class="btn btn-icon rounded-circle btn-flat-primary"
                                                 href="editProducts.php?eid=<?php echo $arr['id']; ?>">
                                                 <i class="fa fa-edit"></i>
                                                 </a>

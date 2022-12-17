@@ -25,7 +25,7 @@ $email=$_SESSION['email'];
 $phone=$_SESSION['phone'];
 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
     $amount1=$_SESSION['total'];
-    $amount=($amount1+200);
+    $amount=($amount1+16547);
     $_SESSION['shippingFee']=$amount;
 }
 else{

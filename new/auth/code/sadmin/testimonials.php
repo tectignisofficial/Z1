@@ -154,7 +154,7 @@ if(isset($_GET['delid'])){
                                                     <div style="overflow:auto; width:200px;height:100px;">
                                                         <?php echo $row['link'];?></div>
                                                 </td>
-                                                <td> <button class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                <td> <button class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>

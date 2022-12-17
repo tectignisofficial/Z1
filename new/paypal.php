@@ -100,7 +100,7 @@ define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cg
                     if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
                         if(isset($_SESSION['USD'])){
                            $totalprice =$_SESSION['total'] * $_SESSION['USD'].'';
-                           $priceship1=200*$_SESSION['USD'];
+                           $priceship1=16547*$_SESSION['USD'];
                            $price=$totalprice+$priceship1;
                            echo $price;
                         }
@@ -243,12 +243,12 @@ else{
                                             <?php
                                                 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
                                                     if(isset($_SESSION['USD'])){
-                                                        $priceship=200*$_SESSION['USD'];
+                                                        $priceship=16547*$_SESSION['USD'];
                                                         echo '<i class=
                                                         "'.$_SESSION['icon'].'"></i> '. $priceship;
                                                     }
                                                     else{
-                                                        echo '<i class="fa fa-inr"></i> 200';
+                                                        echo '<i class="fa fa-inr"></i> 16547';
                                                     }
                                                 }
                                                 else{
@@ -267,7 +267,7 @@ else{
                                                 }
                                                 else{ echo '<i class="fa fa-inr"></i>'; }
                                                 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
-                                                    $priceship1=200*$_SESSION['USD'];
+                                                    $priceship1=16547*$_SESSION['USD'];
                                                     $price=$total+$priceship1;
                                                     echo number_format($price,2);
                                                 }

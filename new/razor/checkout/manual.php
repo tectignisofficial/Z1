@@ -185,12 +185,12 @@ $country=$arr['country'];
                                             <?php
                                                 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
                                                     if(isset($_SESSION['USD'])){
-                                                        $priceship=200*$_SESSION['USD'];
+                                                        $priceship=16547*$_SESSION['USD'];
                                                         echo '<i class=
                                                         "'.$_SESSION['icon'].'"></i> '. $priceship;
                                                     }
                                                     else{
-                                                        echo '<i class="fa fa-inr"></i> 200';
+                                                        echo '<i class="fa fa-inr"></i> 16547';
                                                     }
                                                 }
                                                 else{
@@ -209,7 +209,7 @@ $country=$arr['country'];
                                                 }
                                                 else{ echo '<i class="fa fa-inr"></i>'; }
                                                 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
-                                                    $price=$total+200;
+                                                    $price=$total+16547;
                                                     echo number_format($price,2);
                                                 }
                                                 else{

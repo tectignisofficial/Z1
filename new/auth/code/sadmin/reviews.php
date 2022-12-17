@@ -163,7 +163,7 @@ if(isset($_GET['delid'])){
 
                                                 <td>
 
-                                                    <button class="btn btn-danger btn-rounded btn-icon delbtn"
+                                                    <button class="btn btn-icon rounded-circle btn-flat-danger delbtn"
                                                         data-id="=<?php echo $row['id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
