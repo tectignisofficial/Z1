@@ -6,9 +6,9 @@ if(!isset($_SESSION['customerid']))
 }
 $message='';
 include('include/config.php');
-$order=$_GET['order'];
-$sql=mysqli_query($conn,"select * from orders inner join customers on customers.id=orders.customer where orders.id='$order'");
-$arr=mysqli_fetch_array($sql);
+// $order=$_GET['order'];
+// $sql=mysqli_query($conn,"select * from orders inner join customers on customers.id=orders.customer where orders.id='$order'");
+// $arr=mysqli_fetch_array($sql);
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -444,6 +444,9 @@ $arr=mysqli_fetch_array($sql);
             </div>
 <?php }else{
     $message='Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.';
+    echo '<div class="container"><div class="alert alert-danger">
+    <span class="">Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.</span>
+</div></div>';
 } } ?>
         </div>
         <!--End Body Content-->
