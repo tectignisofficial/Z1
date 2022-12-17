@@ -92,7 +92,7 @@ include('include/config.php');
                             </div>
                             <!--End Toolbar-->
                             <div class="grid-products grid--view-items">
-                                <ul class="row outer">
+                                <ul class="row outer" style="justify-content: center;">
                                     <?php
                                             if(isset($_GET['pageno'])){
                                                 $pageno=$_GET['pageno'];
@@ -106,7 +106,7 @@ include('include/config.php');
                                             if(mysqli_num_rows($sql)>0){
                                             while($arr=mysqli_fetch_array($sql)){
                                             ?>
-                                    <li class="col-6 col-sm-6 col-md-3 col-lg-3 item " data-price="<?php
+                                    <li class="col-6 col-sm-6 col-md-4 col-lg-4 item " data-price="<?php
                                                             if(isset($_SESSION['USD'])){
                                                                 echo number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{

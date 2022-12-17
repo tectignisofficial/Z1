@@ -30,17 +30,19 @@
                     color: white;
                     position: absolute;
                     right: 0px;
-                    left:0;
+                    left: 0;
                     top: 11px;
                     cursor: default;
                     line-height: 1px;
 
                 }
-@media screen and (max-width:768px){
-    .overlay {
-        left: 0 !important;
-    }
-}
+
+                @media screen and (max-width:768px) {
+                    .overlay {
+                        left: 0 !important;
+                    }
+                }
+
                 .cur {
                     position: relative;
                     width: 40px;
@@ -54,8 +56,8 @@
                 <div class="row">
                     <div class="col-6 col-sm-4 col-md-3 col-lg-4 d-flex">
 
-                     
-                    <p><a href="auth/code/sadmin/auth-admin-login.php">Admin Login</a></p>
+
+                        <p><a href="auth/code/sadmin/auth-admin-login.php">Admin Login</a></p>
                         <p class="phone-no pl-4"><i class="fa fa-phone"></i> +91 7300044197</p>
 
                     </div>
@@ -65,29 +67,25 @@
                         </div>
                     </div>
                     <div class="col-6 col-sm-8 col-md-4 col-lg-4 text-right">
-                        <div class="row">
-                            <div class="col-4 d-md-none d-lg-none"></div>
-                            <div class="col-3 col-md-9 pr-1">
                                 <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al"
                                         aria-hidden="true"></i></span>
-                                <ul class="customer-links list-inline">
+                                <ul class="customer-links list-inline" style="display:inline-block;">
                                     <?php
-                                if(!isset($_SESSION['customerid'])){
-                                ?>
+                                    if(!isset($_SESSION['customerid'])){
+                                    ?>
                                     <li><a href="login.php">Login</a></li>
                                     <?php }else{ ?>
                                     <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
                                     <?php } ?>
                                     <li><a href="order_tracking">Track Order</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-5 col-md-3 pr-1">
-                                <form action="" method="post" style="text-align:center" >
+                                <form action="" method="post"  style="text-align:center;width:30px;display:inline-block;text-align: -webkit-right;width: 45px;">
                                     <div class="currency-picker">
                                         <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
 
                                         <div id="cur">
-                                            <select name="myselect" id="select" class="text-center" onchange="this.form.submit()">
+                                            <select name="myselect" id="select" class="text-center"
+                                                style="padding-left:0" onchange="this.form.submit()">
 
                                                 <option value="INR"
                                                     <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>
@@ -109,11 +107,6 @@
                                         </div>
                                     </div>
                                 </form>
-
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -160,7 +153,7 @@
                                 <li class="lvl1 parent megamenu"><a href="accessories"
                                         class="<?= $page == 'accessories.php' ? 'active':'' ?>">Accessories</a>
                                 </li>
-                                
+
                                 <li class="lvl1 parent megamenu"><a href="blog"
                                         class="<?= $page == 'blog.php' ? 'active':'' ?>">Blogs <i
                                             class="anm anm-angle-down-l"></i></a>
@@ -211,16 +204,23 @@
         <div class="mobile-nav-wrapper" role="navigation">
             <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
             <ul id="MobileNav" class="mobile-nav">
-                <li class="lvl1 parent megamenu"><a href="index" class="<?= $page == 'index.php' ? 'active':'' ?>">Home </a>
-                <li class="lvl1 parent megamenu"><a href="about-us" class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us </a>
-                <li class="lvl1 parent megamenu"><a href="contact-us" class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us </a>
-                <li class="lvl1 parent megamenu"><a href="blog" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs </a>
-                <li class="lvl1 parent megamenu"><a href="reviews" class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews</a>
-                <li class="lvl1 parent megamenu"><a href="videos" class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos </a>
-                <li class="lvl1"><a href="shop" class="<?= $page == 'shop.php' ? 'active':'' ?>"><b>Shop Now!</b></a></li>
+                <li class="lvl1 parent megamenu"><a href="index" class="<?= $page == 'index.php' ? 'active':'' ?>">Home
+                    </a>
+                <li class="lvl1 parent megamenu"><a href="about-us"
+                        class="<?= $page == 'about-us.php' ? 'active':'' ?>">About us </a>
+                <li class="lvl1 parent megamenu"><a href="contact-us"
+                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Contact us </a>
+                <li class="lvl1 parent megamenu"><a href="blog" class="<?= $page == 'blogs.php' ? 'active':'' ?>">Blogs
+                    </a>
+                <li class="lvl1 parent megamenu"><a href="reviews"
+                        class="<?= $page == 'reviews.php' ? 'active':'' ?>">Reviews</a>
+                <li class="lvl1 parent megamenu"><a href="videos"
+                        class="<?= $page == 'videos.php' ? 'active':'' ?>">Videos </a>
+                <li class="lvl1"><a href="shop" class="<?= $page == 'shop.php' ? 'active':'' ?>"><b>Shop Now!</b></a>
+                </li>
                 <li class="lvl1 parent megamenu"><a href="accessories"
-                                        class="<?= $page == 'accessories.php' ? 'active':'' ?>">Accessories</a>
-                                </li>
+                        class="<?= $page == 'accessories.php' ? 'active':'' ?>">Accessories</a>
+                </li>
                 <ul>
                 </ul>
         </div>
