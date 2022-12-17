@@ -8,6 +8,7 @@ $arr=mysqli_fetch_array($sql);
 $productName=$arr['name'];
 $accessories=$arr['categories'] ?? null;
 $sizefile=$arr['sizefile'] ?? null;
+$video=$arr['video'] ?? null;
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
@@ -367,9 +368,11 @@ $arr=mysqli_fetch_array($sql);
                                         <div class="product-labels"><span
                                                 class="lbl on-sale"><?php echo $arr['label']; ?></span></div>
                                         <div class="product-buttons">
+                                            <?php if($video!=''){ ?>
                                             <a href="https://www.youtube.com/watch?v=<?php echo $arr['video']; ?>"
                                                 class="btn popup-video" title="View Video"><i
                                                     class="icon anm anm-play-r" aria-hidden="true"></i></a>
+                                                    <?php } ?>
                                             <a href="#" class="btn prlightbox" title="Zoom"><i
                                                     class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                         </div>

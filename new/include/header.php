@@ -71,7 +71,6 @@
                                 <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al"
                                         aria-hidden="true"></i></span>
                                 <ul class="customer-links list-inline">
-                                <li><a href="order_tracking">Track Order</a></li>
                                     <?php
                                 if(!isset($_SESSION['customerid'])){
                                 ?>
@@ -79,6 +78,7 @@
                                     <?php }else{ ?>
                                     <li><a href="myaccount.php">Hello &nbsp;<?= $_SESSION['customername'] ?></a></li>
                                     <?php } ?>
+                                    <li><a href="order_tracking">Track Order</a></li>
                                 </ul>
                             </div>
                             <div class="col-5 col-md-3 pr-1">

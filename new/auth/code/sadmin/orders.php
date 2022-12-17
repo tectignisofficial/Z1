@@ -6,10 +6,10 @@ if(!isset($_SESSION['id'])){
 include("../../../include/config.php");
 
 if(isset($_POST['updateorder'])){
-    $paymentstatus=$_POST['paymentstatus'] ?? null;
-    $orderstatus=$_POST['orderstatus'] ?? null;
-    $dlh=$_POST['dlh'] ?? null;
-    $trans=$_POST['trans'] ?? null;
+    $paymentstatus=$_POST['paymentstatus'] ;
+    $orderstatus=$_POST['orderstatus'];
+    $dlh=$_POST['dlh'] ;
+    $trans=$_POST['trans'] ;
     $orderid=$_POST['orderid'];
 
     $sql=mysqli_query($conn,"UPDATE `orders` SET `order_status`='$orderstatus',`payment_status`='$paymentstatus',`enter`='$dlh',`tracking_id`='$trans' WHERE id='$orderid'");
@@ -39,7 +39,6 @@ if(isset($_POST['updateorder'])){
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- END: Page CSS-->
-
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css" />
@@ -105,7 +104,6 @@ if(isset($_POST['updateorder'])){
     <?php include("include/sidebar.php")?>
     </div>
     <!-- END: Main Menu-->
-
                 <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
                         <div class="modal-content">
@@ -148,13 +146,10 @@ if(isset($_POST['updateorder'])){
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Order Table</h4>
-
-
                             </div>
 
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped ">
-                                    <thead>
+                                <table id="example1" class="table table-bordered table-responsive">
                                         <tr>
                                             <th>Order No.</th>
                                             <th>Order Date</th>
@@ -169,13 +164,11 @@ if(isset($_POST['updateorder'])){
                                             <th>Tracking Id</th>
                                             <th>Action</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
                                     <?php
-                         $sql=mysqli_query($conn,'SELECT *,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name ');
-                        $count=1;
-                         while($row=mysqli_fetch_array($sql)){ 
-                         ?>
+                                    $sql=mysqli_query($conn,'SELECT *,products.name as pname,shipping_address.name as oname,orders.order_status as orstatus FROM orders inner join shipping_address on shipping_address.id=orders.address_id inner join products on orders.product=products.name ');
+                                    $count=1;
+                                    while($row=mysqli_fetch_array($sql)){ 
+                                    ?>
                                         <tr>
                                             <td><?= $row['order_no'];?></td>
                                             <td><?= $row['order_date'];?></td>
@@ -185,23 +178,17 @@ if(isset($_POST['updateorder'])){
                                             <td><?= $row['pname'];?></td>
                                             <td><?= $row['size'];?></td>
                                             <td><i class="fa fa-inr"></i> <?= $row['price'];?></td>
-
-                                            <td>
-                                                <span
-                                                    class="badge rounded-pill  badge-light-success"><?= $row['orstatus']; ?></span>
+                                            <td><span class="badge rounded-pill  badge-light-success"><?= $row['orstatus']; ?></span>
                                             </td>
-                                            <td>
-                                                <span
-                                                    class="badge rounded-pill  badge-light-success"><?= $row['payment_status']; ?></span>
+                                            <td><span class="badge rounded-pill  badge-light-success"><?= $row['payment_status']; ?></span>
                                             </td>
+                                            <td><?= $row['tracking_id']; ?></td>
                                             <td>
                                                 <button type="button" class="btn btn-icon rounded-circle btn-flat-primary btnmod1" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
                                             </td>
                                         </tr>
                                         <?php $count++;   } ?>
-                                    </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
@@ -242,11 +229,6 @@ if(isset($_POST['updateorder'])){
     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
 
 
-
-
-
-
-
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -264,7 +246,6 @@ if(isset($_POST['updateorder'])){
     <script>
         $(function () {
             $("#example1").DataTable({
-
                 "lengthChange": true,
                 "autoWidth": false,
                 "scrollX": true,
