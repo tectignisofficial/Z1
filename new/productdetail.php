@@ -7,6 +7,7 @@ $sql=mysqli_query($conn,"select *,products.name from products inner join stock o
 $arr=mysqli_fetch_array($sql);
 $productName=$arr['name'];
 $accessories=$arr['categories'] ?? null;
+$sizefile=$arr['sizefile'] ?? null;
 
 if(isset($_POST['addtocart'])){
 $quantity=$_POST['quantity'];
@@ -590,11 +591,12 @@ $arr=mysqli_fetch_array($sql);
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                                 <?php
+                                 if($sizefile!=''){
                                         if($accessories == ''){
                                         ?>
-                                <li rel="tab3"><a class="tablink">Size Chart
+                                        <li rel="tab3"><a class="tablink">Size Chart
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                        <?php } ?>
+                                        <?php } } ?>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                             </ul>
                             <div class="tab-container">
