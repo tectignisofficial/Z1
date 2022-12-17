@@ -120,7 +120,8 @@ $arr=mysqli_fetch_array($sql);
 <!-- belle/product-layout-1.html   11 Nov 2019 12:41:15 GMT -->
 
 <head>
-    <base href="https://z1design.tectignis.in/new/">
+    <!-- <base href="https://z1design.tectignis.in/new/"> -->
+    <base href="http://localhost:8000/kneebrace/Z1/new/">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $arr['name'] ?></title>
@@ -274,22 +275,25 @@ $arr=mysqli_fetch_array($sql);
         .pswp__item>.pswp__zoom-wrap>.pswp__error-msg {
             display: none !important;
         }
-        .step_process{
+
+        .step_process {
             margin-bottom: 25px;
-    margin-top: 5%;
-    font-size: 22px;
-    font-family:auto;
-    color:black;
+            margin-top: 5%;
+            font-size: 22px;
+            font-family: auto;
+            color: black;
         }
-        .step_process a{
+
+        .step_process a {
             font-size: 21px;
-    letter-spacing: 1.2px;
-    color: red;
-    font-weight: 800;
-    padding-left:10px;
+            letter-spacing: 1.2px;
+            color: red;
+            font-weight: 800;
+            padding-left: 10px;
         }
-        .step_process a:hover{
-    color: red;
+
+        .step_process a:hover {
+            color: red;
         }
     </style>
 </head>
@@ -497,7 +501,7 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
 
                                         </div>
-<p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
+                                        <p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
@@ -584,8 +588,13 @@ $arr=mysqli_fetch_array($sql);
                             <ul class="product-tabs">
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
+                                <?php
+                                        $checksql=mysqli_query($conn,"select * from products where name!='$productName' and categories!='accessories'");
+                                        if(mysqli_num_rows($checksql)>0){ 
+                                        ?>
                                 <li rel="tab3"><a class="tablink">Size Chart
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                        <?php } ?>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
                             </ul>
                             <div class="tab-container">
@@ -811,7 +820,6 @@ $arr=mysqli_fetch_array($sql);
                             </header>
 
                             <div class="tabs-listing">
-
                                 <div class="tab_container">
                                     <div id="tab1" class="tab_content grid-products">
                                         <?php
@@ -854,8 +862,9 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
-                                                            type="button" tabindex="0">Add To Cart</a>
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
+                                                            class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                                            Cart</a>
                                                     </form>
                                                     <div class="button-set">
                                                         <a href="productdetail/<?php echo $arr['seo_title']; ?>"
@@ -892,9 +901,6 @@ $arr=mysqli_fetch_array($sql);
                                                 <!-- End product details -->
                                             </div>
                                             <?php } ?>
-
-
-
                                         </div>
                                         <?php }else{ ?>
                                         <div class="productSlider">
@@ -933,8 +939,9 @@ $arr=mysqli_fetch_array($sql);
 
                                                     <!-- Start product button -->
                                                     <form class="variants add" action="#" method="post">
-                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>" class="btn btn-addto-cart"
-                                                            type="button" tabindex="0">Add To Cart</a>
+                                                        <a href="productdetail/<?php echo $arr['seo_title']; ?>"
+                                                            class="btn btn-addto-cart" type="button" tabindex="0">Add To
+                                                            Cart</a>
                                                     </form>
                                                     <div class="button-set">
                                                         <a href="productdetail/<?php echo $arr['seo_title']; ?>"

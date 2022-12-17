@@ -243,7 +243,7 @@ if($sql==1){
                                             <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i>
                                                 Click me to select multiple files</button>
                                             <input type="file" name="myfile[]" id="myfile" accept="image/webp" multiple
-                                                required />
+                                                />
                                         </div>
 
                                         <div class="upload-btn-wrapper">
@@ -405,7 +405,7 @@ if($sql==1){
                                         <div class="col-12">
                                             <label class="form-label" for="set">SEO Title</label>
                                             <input type="text" id="set" class="form-control" name="set"
-                                                placeholder="seo title" />
+                                                placeholder="seo title" required/>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label" for="sedes">SEO description</label>
