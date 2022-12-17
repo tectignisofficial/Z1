@@ -1,9 +1,9 @@
 <?php 
 session_start();
-if(!isset($_SESSION['customerid'])) 
-{
- header("Location:login.php"); 
-}
+// if(!isset($_SESSION['customerid'])) 
+// {
+//  header("Location:login.php"); 
+// }
 $message='';
 include('include/config.php');
 // $order=$_GET['order'];
