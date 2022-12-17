@@ -106,7 +106,7 @@ include('include/header.php');
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner1old.jpg"
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
                   alt="First slide">
               </div>
               <div class="carousel-item">
