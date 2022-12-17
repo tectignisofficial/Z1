@@ -2,7 +2,6 @@
 session_start();
 include('include/config.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,9 +81,14 @@ include('include/config.php');
       padding-bottom: 200px;
       background-color: #000000;
     }
+    .uc_grid_1_40497_row_2{
+      height:450px;
+    }
+    .bannerimg{
+      height:450px;
+    }
   </style>
 </head>
-
 <body>
   <div class='uc-page-preview-wrapper'>
 
@@ -94,7 +98,35 @@ include('include/header.php');
 ?>
       <div id="" class="" style=" padding-bottom: unset;">
         <div id="uc_grid_1_40497_row_2" class="uc-grid-row">
-          <div class="slideshow slideshow-wrapper sliderFull">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner1old.jpg"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
+                  alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
+                  alt="Third slide">
+              </div>
+            </div>
+          </div>
+<?php
+$postTitle = 'Generate SEO Friendly URL from String in PHP'; 
+ 
+$seoFriendlyURL = generateSeoURL($postTitle, 4); 
+alert($seoFriendlyURL);
+?>
+  </div>
+          <!-- <div class="slideshow slideshow-wrapper sliderFull">
             <section class="home hero">
               <div class="home-img">
                 <img src="img/1A3A7046.png" class="one" />
@@ -122,7 +154,7 @@ include('include/header.php');
                 </li>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!--country logo-->
           <div id="uc_grid_1_40497_row_3" class="uc-grid-row"
@@ -131,7 +163,7 @@ include('include/header.php');
               style="background-color:#ffffff;background: rgb(0 0 0 / 0%);">
 
               <div class="card-columns">
-              <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                <div class="card " style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                   <div class="card-body text-center">
                     <img src="img/us.webp" alt="united state flag" width="100" />
                     <p class="card-text mt-2" style="letter-spacing:0.5px">United State</p>
@@ -448,12 +480,12 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                    <?php
+                      <?php
                     $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
                     $arr=mysqli_fetch_array($sql);
                     ?>
-                      <a href="productdetail/<?= $arr['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
-                          class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
+                      <a href="productdetail/<?= $arr['seo_title']; ?>" id="uc_solid_rounded_button254538"
+                        target="_self"><span class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
                   </div>
@@ -523,12 +555,12 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                    <?php
+                      <?php
                     $sql1=mysqli_query($conn,"select * from products where id='2'");
                     $arr1=mysqli_fetch_array($sql1);
                     ?>
-                      <a href="productdetail/<?= $arr1['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
-                          class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
+                      <a href="productdetail/<?= $arr1['seo_title']; ?>" id="uc_solid_rounded_button254538"
+                        target="_self"><span class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
                   </div>
@@ -626,12 +658,12 @@ include('include/header.php');
                       <!-- end Play Button -->
                     </div>
                     <div style="text-align:left;">
-                    <?php
+                      <?php
                     $sql2=mysqli_query($conn,"select * from products where id='3'");
                     $arr2=mysqli_fetch_array($sql2);
                     ?>
-                      <a href="productdetail/<?= $arr2['seo_title']; ?>" id="uc_solid_rounded_button254538" target="_self"><span
-                          class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
+                      <a href="productdetail/<?= $arr2['seo_title']; ?>" id="uc_solid_rounded_button254538"
+                        target="_self"><span class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
                   </div>
@@ -642,7 +674,7 @@ include('include/header.php');
             </div>
           </div>
 
-           
+
 
           <?php include('include/footer.php'); ?>
         </div>
