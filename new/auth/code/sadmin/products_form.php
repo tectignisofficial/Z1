@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     $stock=$_POST['stock'] ?? null;
     $attrname1=$_POST['attrname'] ?? null;
     $attrval1=$_POST['attrnal'] ?? null;
-    $rproduct=$_POST['rproduct'] ?? null;
+    $measurement_video=$_POST['measurement_video'] ?? null;
     $csproduct=$_POST['csproduct'] ?? null;
     $set=$_POST['set'] ?? null;
     $sedes=$_POST['sedes'] ?? null;
@@ -54,7 +54,7 @@ foreach ($_FILES["myfile"]["error"] as $key => $error) {
     }
    
 
-    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock_status`) VALUES ('null','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$rproduct','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock1')");
+    $sql=mysqli_query($conn,"INSERT INTO `products`(`image`, `description`, `content`, `name`,`hoverfile`,`sizefile`, `video`, `sku`, `price`, `related_product`, `cross_product`, `seo_title`, `seo_description`, `status`, `featured`, `categories`, `label`, `tags`,`hightlightfile`,`stock_status`) VALUES ('null','$desc','$cont','$name','$hoverfile','$sizefile','$myvideofile','$sku','$price','$measurement_video','$csproduct','$set','$sedes','$published','$featured','$knee','$label','$tname','$hightlightfile','$stock1')");
 
 if($sql==1){
     echo '<script>alert("sucessfully submitted");</script>';
@@ -269,12 +269,6 @@ if($sql==1){
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="mb-1">
-                                        <label class="form-label" for="upld">Upload video</label><br>
-                                        <button id="selectv" class="btn btn-outline-primary mb-1">
-                                            <i data-feather="file"></i> Click me to select video
-                                        </button>
-                                    </div> -->
                                     <div class="upload-btn-wrapper">
                                         <button class="btn1 btn-outline-primary mb-1"><i data-feather="file"></i> Click
                                             me to select Size Files</button>
@@ -283,6 +277,12 @@ if($sql==1){
                                     <div class="upload-btn-wrapper" style="display:block;">
                                         <label class="form-label" for="">Video</label>
                                         <input type="text" name="myvideofile" class="form-control"
+                                            placeholder="youtube video link" />
+                                    </div>
+
+                                    <div class="upload-btn-wrapper" style="display:block;">
+                                        <label class="form-label" for="">Measurement Video</label>
+                                        <input type="text" name="measurement_video" class="form-control"
                                             placeholder="youtube video link" />
                                     </div>
                                     <!-- </form> -->

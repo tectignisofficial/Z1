@@ -506,7 +506,11 @@ $arr=mysqli_fetch_array($sql);
                                             </div>
 
                                         </div>
-                                        <p class="step_process">How To Wear <a href="step-process">Click Here</a></p>
+                                        <?php if($video!=''){ ?>
+                                            <p class="step_process">How To take measurement and size chart
+                                            <a href="https://www.youtube.com/watch?v=<?php echo $arr['measurement_video']; ?>"
+                                                class="popup-video" title="View Video">Click Here</a></p>
+                                                    <?php } ?>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
