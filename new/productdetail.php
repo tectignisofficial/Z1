@@ -458,7 +458,10 @@
                                     ?>
                                 <li rel="tab5"><a class="tablink">How to wear</a></li>
                                 <?php } ?>
+                                <?php  if($accessories == ''){
+                                        ?>
                                 <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
+                                <?php } ?>
                                 <?php if($sizefile!=''){
                                         if($accessories == ''){
                                         ?>
