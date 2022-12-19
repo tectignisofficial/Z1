@@ -514,7 +514,7 @@ $arr=mysqli_fetch_array($sql);
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
-                                <div class="display-table shareRow">
+                                <!-- <div class="display-table shareRow"> -->
                                     <!-- <div class="display-table-cell text-right">
                                         <div class="social-sharing">
                                             <a target="_blank"
@@ -553,7 +553,7 @@ $arr=mysqli_fetch_array($sql);
                                             </a>
                                         </div>
                                     </div> -->
-                                </div>
+                                <!-- </div> -->
                                 <div class="paymnet-img">
                                     <img src="assets/images/payment-img.jpg" alt="Payment"></div>
 
