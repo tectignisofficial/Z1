@@ -290,7 +290,6 @@ if(isset($_POST["changepassword"])){
                                                     <!-- <i class="fa fa-eye"></i> -->
                                                     View &nbsp;&nbsp;
                                                 </a>
-                                                <a href="order_tracking?order=<?= $arr1['id'] ?>">Track Your Order</a>
                                             </td>
                                         </tr>
                                         <?php $count++; } ?>
