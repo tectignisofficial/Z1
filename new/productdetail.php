@@ -324,11 +324,11 @@
                                 <div class="product-single__description rte">
                                     <ul>
                                         <?php echo $arr['content'] ?>
-                                        <li style="color:black;font-size:16px;margin-top:-12px;">
                                         <?php if($video!=''){ ?>
+                                        <li style="color:black;font-size:16px;margin-top:-12px;">
                                             360-degree view.
-                                            <?php } ?> 
                                         </li>
+                                        <?php } ?> 
                                     </ul>
                                 </div>
 
@@ -337,9 +337,10 @@
                                     enctype="multipart/form-data">
                                     <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                         <div class="product-form__item">
-
+                                        <?php $status=$arr['stock_status'];if($status=='In Stock'){ ?>
                                             <label class="header">Size: <span
-                                                    class="slVariant sizese">select</span></label>
+                                                    class="slVariant sizese"></span></label>
+                                                    <?php } ?>
                                             <?php
                                             $sizesql=mysqli_query($conn,"select * from stock where product_name='$productName' and stock > 0");
                                             while($sizearr=mysqli_fetch_array($sizesql)){
