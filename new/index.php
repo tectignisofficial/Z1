@@ -119,12 +119,7 @@ include('include/header.php');
               </div>
             </div>
           </div>
-<?php
-// $postTitle = 'Generate SEO Friendly URL from String in PHP'; 
- 
-// $seoFriendlyURL = generateSeoURL($postTitle, 4); 
-// echo $seoFriendlyURL;
-?>
+
   </div>
           <!-- <div class="slideshow slideshow-wrapper sliderFull">
             <section class="home hero">

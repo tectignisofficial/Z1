@@ -43,8 +43,11 @@ if ($success === true)
     $payment_id=$_POST['razorpay_payment_id'];
     $email=$_SESSION['email'];
     date_default_timezone_set('Asia/Kolkata');
-    $date=date('Y-m-d H:i:s');
-    if(isset($_SESSION['shopping_cart'])){
+    $date=date('Y-m-d');
+    $time = date('h:i:s a', time());
+    $order_no=date ('Ymd').Str_pad (Mt_rand (1,9999999),7, '0 ', STR_PAD_LEFT);
+
+        if(isset($_SESSION['shopping_cart'])){
         $addressid=$_SESSION['addressid'];
         $bill_id=$_SESSION['billingaddressrid'];
        
@@ -58,7 +61,7 @@ if ($success === true)
             $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
             $fetch=mysqli_fetch_array($ssql);
             $tstock=($fetch['stock']-$qua);
-            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,`amount`,`payment_currency`,`billing_address_id`) VALUES ('1','$date','$id','razorpay','Processing','$product','$qua','20%','$addressid','$size','$unique_id','$payment_id','$amount','INR','$bill_id')");
+            $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,`amount`,`payment_currency`,`billing_address_id`,`time`) VALUES ('$order_no','$date','$id','razorpay','Processing','$product','$qua','20%','$addressid','$size','$unique_id','$payment_id','$amount','INR','$bill_id','$time')");
 
             $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
         }
@@ -74,7 +77,7 @@ if ($success === true)
         $ssql=mysqli_query($conn,"select * from stock where product_name='$product' and value='$size'");
         $fetch=mysqli_fetch_array($ssql);
         $tstock=($fetch['stock']-$qua);
-        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,amount,`payment_currency`,`billing_address_id`) VALUES ('1','$date','$id','razorpay','Processing','$product','$qua','20%','$addressid','$size','$unique_id','$payment_id','$amount','INR','$bill_id')");
+        $q=mysqli_query($conn," INSERT INTO `orders`(`order_no`, `order_date`, `customer`, `payment_method`, `order_status`, `product`, `quantity`, `discount`,`address_id`,`size`,`order_id`,`payment_id`,amount,`payment_currency`,`billing_address_id`,`time`) VALUES ('$order_no','$date','$id','razorpay','Processing','$product','$qua','20%','$addressid','$size','$unique_id','$payment_id','$amount','INR','$bill_id','$time')");
 
         $usql=mysqli_query($conn,"update `stock` SET `stock`='$tstock' WHERE product_name='$product' and value='$size'");
     }
