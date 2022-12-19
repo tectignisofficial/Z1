@@ -368,7 +368,7 @@ if(isset($_POST['doneAddress'])){
                                                    echo number_format($_SESSION['quantity'] * $_SESSION['total']* $_SESSION['USD'],2 );
                                                             }else{
                                                             ?><i class="fa fa-inr"></i>
-                                                    <?php echo number_format($_SESSION['quantity'] * $_SESSION['total'],2 )?>
+                                                    <?php echo $_SESSION['quantity'] * $_SESSION['total']?>
                                                     <?php } ?></td>
                                             </tr>
                                             <?php 
@@ -378,7 +378,7 @@ if(isset($_POST['doneAddress'])){
                                         }
                                         else{
 
-                                    $total = ($_SESSION['total'] * $_SESSION['quantity']) ; }  ?>
+                                    $total = $_SESSION['total'] * $_SESSION['quantity'] ; }  ?>
                                             <?php } ?>
                                         </tbody>
                                         <tfoot class="font-weight-600">
