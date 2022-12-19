@@ -1168,7 +1168,16 @@
                     let size = $(this).val();
                     let pro = '<?php echo $productName ?>';
                     if(size=='k2'){
-                        $(".zoomWindow").css({"background-image": "url(img/1A3A7046.png)"});  
+                        $(".zoomWindow").css({"background-image": "url(img/z1kneepastic1.webp)"}); 
+                        $(".zoompro").attr('src','img/z1kneeplastic1.webp');  
+                    }
+                    else if(size=='k4'){
+                        $(".zoomWindow").css({"background-image": "url(img/z1kneeplastic2.webp)"}); 
+                        $(".zoompro").attr('src','img/z1kneeplastic2.webp');  
+                    }
+                    else if(size=='k6'){
+                        $(".zoomWindow").css({"background-image": "url(img/z1kneepastic3.webp)"}); 
+                        $(".zoompro").attr('src','img/z1kneeplastic3.webp');  
                     }
                     $.ajax({
                         type: 'post',
@@ -1181,7 +1190,6 @@
 
                             $("#sizequa").html(response);
                             $('.sizese').html(size);
-                            alert(size);
                         }
                      
                     });
