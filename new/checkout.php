@@ -378,7 +378,7 @@ if(isset($_POST['doneAddress'])){
                                         }
                                         else{
 
-                                    $total = $_SESSION['total'] * $_SESSION['quantity'] ; }  ?>
+                                    $total = ($_SESSION['total'] * $_SESSION['quantity']) ; }  ?>
                                             <?php } ?>
                                         </tbody>
                                         <tfoot class="font-weight-600">

@@ -6,8 +6,8 @@
 <!-- belle/product-layout-1.html   11 Nov 2019 12:41:15 GMT -->
 
 <head>
-    <base href="https://z1design.tectignis.in/new/">
-    <!-- <base href="http://localhost:8000/kneebrace/Z1/new/"> -->
+    <!-- <base href="https://z1design.tectignis.in/new/"> -->
+    <base href="http://localhost:8000/kneebrace/Z1/new/">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $arr['name'] ?></title>
