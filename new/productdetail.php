@@ -436,8 +436,7 @@
                                     <img src="assets/images/worldwide.png" alt="Worldwide Delivery"
                                         title="Worldwide Delivery" />
                                     <div class="details">
-                                        <h3>Worldwide Delivery</h3>FREE &amp; Shipping in India, US, UK, Canada &amp;
-                                        regions.
+                                        <h3>Worldwide Delivery</h3> Worldwide free Shipping 
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
