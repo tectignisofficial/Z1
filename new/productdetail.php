@@ -294,7 +294,11 @@ $arr=mysqli_fetch_array($sql);
             font-weight: 800;
             padding-left: 10px;
         }
-
+.pswp__img{
+    width:400px !important;
+    height:450px !important;
+    top:10% !important;
+}
         .step_process a:hover {
             color: red;
         }
@@ -372,7 +376,7 @@ $arr=mysqli_fetch_array($sql);
                                             <a href="https://www.youtube.com/watch?v=<?php echo $arr['video']; ?>"
                                                 class="btn popup-video" title="View Video"><i
                                                     class="icon anm anm-play-r" aria-hidden="true"></i></a>
-                                                    <?php } ?>
+                                            <?php } ?>
                                             <a href="#" class="btn prlightbox" title="Zoom"><i
                                                     class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                         </div>
@@ -507,53 +511,14 @@ $arr=mysqli_fetch_array($sql);
 
                                         </div>
                                         <?php if($video!=''){ ?>
-                                            <p class="step_process">How To take measurement and size chart
+                                        <p class="step_process">How To take measurement and size chart
                                             <a href="https://www.youtube.com/watch?v=<?php echo $arr['measurement_video']; ?>"
                                                 class="popup-video" title="View Video">Click Here</a></p>
-                                                    <?php } ?>
+                                        <?php } ?>
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
-                                <!-- <div class="display-table shareRow"> -->
-                                    <!-- <div class="display-table-cell text-right">
-                                        <div class="social-sharing">
-                                            <a target="_blank"
-                                                href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $baseurl; ?>"
-                                                class="btn btn--small btn--secondary btn--share share-facebook"
-                                                title="Share on Facebook">
-                                                <i class="fa fa-facebook-square" aria-hidden="true"></i> <span
-                                                    class="share-title" aria-hidden="true">Share</span>
-                                            </a>
 
-                                            <a target="_blank"
-                                                href="https://twitter.com/share?url=<?php echo $baseurl; ?>"
-                                                class="btn btn--small btn--secondary btn--share share-twitter"
-                                                title="Tweet on Twitter">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i> <span
-                                                    class="share-title" aria-hidden="true">Tweet</span>
-                                            </a>
-                                            <a href="https://plus.google.com/share?url=<?php echo $baseurl; ?>"
-                                                title="Share on google+"
-                                                class="btn btn--small btn--secondary btn--share">
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i> <span
-                                                    class="share-title" aria-hidden="true">Google+</span>
-                                            </a>
-                                            <a target="_blank"
-                                                href="http://pinterest.com/pin/create/button/?url=<?php echo $baseurl; ?>"
-                                                class="btn btn--small btn--secondary btn--share share-pinterest"
-                                                title="Pin on Pinterest">
-                                                <i class="fa fa-pinterest" aria-hidden="true"></i> <span
-                                                    class="share-title" aria-hidden="true">Pin it</span>
-                                            </a>
-                                            <a href="mailto:?subject=<?php echo $baseurl; ?>"
-                                                class="btn btn--small btn--secondary btn--share share-pinterest"
-                                                title="Share by Email" target="_blank">
-                                                <i class="fa fa-envelope" aria-hidden="true"></i> <span
-                                                    class="share-title" aria-hidden="true">Email</span>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                                <!-- </div> -->
                                 <div class="paymnet-img">
                                     <img src="assets/images/payment-img.jpg" alt="Payment"></div>
 
@@ -598,13 +563,17 @@ $arr=mysqli_fetch_array($sql);
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                                 <?php
-                                 if($sizefile!=''){
+                                    if($productName=='Z1 K6 Dezire Knee Orthosis '){
+                                    ?>
+                                <li rel="tab5"><a class="tablink">How to wear</a></li>
+                                <?php } ?>
+                                <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
+                                <?php if($sizefile!=''){
                                         if($accessories == ''){
                                         ?>
-                                        <li rel="tab3"><a class="tablink">Size Chart
+                                <li rel="tab3"><a class="tablink">Size Chart
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                        <?php } } ?>
-                                <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
+                                <?php } } ?>
                             </ul>
                             <div class="tab-container">
                                 <div id="tab1" class="tab-content">
@@ -811,6 +780,66 @@ $arr=mysqli_fetch_array($sql);
                                                 <p>Please note that all the shipping charges and duties incidental to
                                                     the return of product shall be borne by the buyer. Z1 Knee Brace has
                                                     no liability towards it.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab5" class="tab-content">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                                            <div class="rte-setting">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/STEP.webp" alt="step1"
+                                                                style="width:100%;height:300px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 1</b></p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/Step 2.webp" alt="step1"
+                                                                style="width:100%;height:300px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 2</b></p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/STEP 3.webp" alt="step1"
+                                                                style="width:100%;height:300px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 3</b></p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/STEP 4.webp" alt="step1"
+                                                                style="width:100%;height:300px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 4</b></p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/STEP 5.webp" alt="step1"
+                                                                style="width:100%;height:300px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 5</b></p>
+                                                    </div>
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
+                                                        <div class="card"
+                                                            style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;border:none;width:90%">
+                                                            <img src="img/STEP 6.webp" alt="step1"
+                                                                style="width:100%;height:300px;">
+                                                        </div>
+                                                        <p class="text-center" style="font-size:20px;"><b>Step 6</b></p>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
