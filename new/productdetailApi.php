@@ -41,11 +41,11 @@ if(!in_array($_POST['option1'],$item_array_id)){
         'image'    => $_POST['image']
     );
     $_SESSION['shopping_cart'][$count] = $item_arr;
-    header('location:productdetail/'.$seo_title);
+    header('location:'.$seo_title);
 }
 else{
     echo "<script>alert('already Added');</script>";
-    header('location:productdetail/'.$seo_title);
+    header('location:'.$seo_title);
 }
 }else{
     $item_arr=array(
