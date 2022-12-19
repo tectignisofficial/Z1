@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <style>
+    .slick-slide>div>a{
+    border: 1px solid #7c6f6f !important;
+    margin-bottom: 5px !important;
+}
         @media (max-width: 600px) {
             .img_logo {
                 width: 50% !important;
