@@ -99,11 +99,11 @@ include('include/header.php');
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <!-- <div class="carousel-item active">
                 <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew1.jpg"
                   alt="First slide">
-              </div>
-              <div class="carousel-item">
+              </div> -->
+              <div class="carousel-item active">
                 <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew2.jpg"
                   alt="Second slide">
               </div>
