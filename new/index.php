@@ -82,10 +82,10 @@ include('include/config.php');
       background-color: #000000;
     }
     .uc_grid_1_40497_row_2{
-      height:510px;
+      height:450px;
     }
     .bannerimg{
-      height:450px;
+      height:510px;
     }
   </style>
 </head>
