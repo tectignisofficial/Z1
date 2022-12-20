@@ -81,12 +81,15 @@
                                 </ul>
                                 <form action="" method="post"  style="text-align:center;width:30px;display:inline-block;text-align: -webkit-right;width: 45px;">
                                     <div class="currency-picker">
-                                        <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'INR'; } ?></span> -->
+                                        <!-- <span class="selected-currency"><?php if(isset($_SESSION['USD'])){ echo $_SESSION['myselect']; }else { echo 'USD'; } ?></span> -->
 
                                         <div id="cur">
                                             <select name="myselect" id="select" class="text-center"
                                                 style="padding-left:0" onchange="this.form.submit()">
-
+                                                
+                                                <option value="USD"
+                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='USD'){echo 'selected'; } } ?>>
+                                                    USD</option>
                                                 <option value="INR"
                                                     <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='INR'){echo 'selected'; } } ?>>
                                                     INR</option>
@@ -96,9 +99,7 @@
                                                 <option value="CAD"
                                                     <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='CAD'){echo 'selected'; } } ?>>
                                                     CAD</option>
-                                                <option value="USD"
-                                                    <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='USD'){echo 'selected'; } } ?>>
-                                                    USD</option>
+                                                
                                                 <option value="AUD"
                                                     <?php if(isset($_SESSION['USD'])){ if($_SESSION['myselect']=='AUD'){echo 'selected'; } } ?>>
                                                     AUD</option>

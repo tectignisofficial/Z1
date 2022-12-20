@@ -169,7 +169,7 @@ if(isset($_POST['checkout'])){
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                             <?php echo number_format($values['price'],2 )?>
                                             <?php } ?>
                                         </td>
@@ -182,7 +182,7 @@ if(isset($_POST['checkout'])){
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                     <?php echo number_format($values['quantity'] * $values['price'],2 )?>
                                                     <?php } ?>
                                                 </span></div>
@@ -229,7 +229,7 @@ if(isset($_POST['checkout'])){
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                         <?php echo number_format($values['price'],2 )?>
                                         <?php } ?></div>
                                     <div>Size: <?php echo $values['option1']; ?> &nbsp; &nbsp; <span>Qty:
@@ -258,8 +258,8 @@ if(isset($_POST['checkout'])){
                                 currently displayed in <?= $_SESSION['myselect'] ?>, the checkout will use <?= $_SESSION['myselect'] ?> at the most current exchange rate.
                             </div>
                             <?php } else{ ?>
-                                <div class="currencymsg">We processes all orders in INR. While the content of your cart is
-                                currently displayed in INR, the checkout will use INR at the most current exchange rate.
+                                <div class="currencymsg">We processes all orders in USD. While the content of your cart is
+                                currently displayed in USD, the checkout will use USD at the most current exchange rate.
                             </div>
                             <?php } ?>
                             <hr>
@@ -276,7 +276,7 @@ if(isset($_POST['checkout'])){
                                     <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Subtotal</strong></span>
                                     <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span
                                             class="money"><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{
-                            echo "<i class='fa fa-inr'></i> ";
+                            echo "<i class='fa fa-usd'></i> ";
                         } if(isset($_SESSION['shopping_cart'])){ echo number_format($total,2);
                         $_SESSION['total']=$total;
                         

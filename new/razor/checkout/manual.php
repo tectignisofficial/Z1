@@ -123,7 +123,7 @@ $country=$arr['country'];
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($values['price'] * $_SESSION['USD'],2).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                             <?php echo number_format($values['price'],2);?>
                                             <?php } ?></td>
                                         <td><?= $values['option1']; ?></td>
@@ -133,7 +133,7 @@ $country=$arr['country'];
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                             <?php echo number_format($values['quantity'] * $values['price'],2 )?>
                                             <?php } ?></td>
                                     </tr>
@@ -154,7 +154,7 @@ $country=$arr['country'];
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.$_SESSION['total'] * $_SESSION['USD'].'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                             <?php echo number_format($_SESSION['total']);?>
                                             <?php } ?></td>
                                         <td><?= $_SESSION['option1']; ?></td>
@@ -164,7 +164,7 @@ $country=$arr['country'];
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($_SESSION['quantity'] * $_SESSION['total']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                             <?php echo number_format($_SESSION['quantity'] * $_SESSION['total'],2 )?>
                                             <?php } ?></td>
                                     </tr>
@@ -190,7 +190,7 @@ $country=$arr['country'];
                                                         "'.$_SESSION['icon'].'"></i> '. $priceship;
                                                     }
                                                     else{
-                                                        echo '<i class="fa fa-inr"></i> 16547';
+                                                        echo '<i class="fa fa-usd"></i> 16547';
                                                     }
                                                 }
                                                 else{
@@ -207,7 +207,7 @@ $country=$arr['country'];
                                                     echo '<i class=
                                                     "'.$_SESSION['icon'].'"></i>';  
                                                 }
-                                                else{ echo '<i class="fa fa-inr"></i>'; }
+                                                else{ echo '<i class="fa fa-usd"></i>'; }
                                                 if(($country != 'Canada') && ($country != 'India') && ($country != 'United Kingdom') && ($country != 'United States')){
                                                     $price=$total+16547;
                                                     echo number_format($price,2);

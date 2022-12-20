@@ -313,7 +313,7 @@
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD'],2).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                     <?php echo number_format($arr['price'],2);?>
                                                     <?php } ?></span>
                                             </span>
@@ -823,7 +823,7 @@
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                             <?php echo number_format($arr['price'],2) ;?>
                                                             <?php } ?></span>
                                                     </div>
@@ -900,7 +900,7 @@
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.number_format($arr['price'] * $_SESSION['USD']).'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                             <?php echo number_format($arr['price'],2) ;?>
                                                             <?php } ?></span>
                                                     </div>

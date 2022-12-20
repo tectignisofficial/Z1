@@ -332,7 +332,7 @@ if(isset($_POST['doneAddress'])){
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.$values['price'] * $_SESSION['USD'].'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i> <?php echo $values['price'];?>
+                                                            ?><i class="fa fa-usd"></i> <?php echo $values['price'];?>
                                                     <?php } ?></td>
                                                 <td><?= $values['option1']; ?></td>
                                                 <td><?= $values['quantity']; ?></td>
@@ -341,7 +341,7 @@ if(isset($_POST['doneAddress'])){
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($values['quantity'] * $values['price']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                     <?php echo number_format($values['quantity'] * $values['price'],2 )?>
                                                     <?php } ?></td>
                                             </tr>
@@ -357,7 +357,7 @@ if(isset($_POST['doneAddress'])){
                                                             if(isset($_SESSION['USD'])){
                                                                 echo '<i class="'.$_SESSION['icon'].'"></i>'.$_SESSION['total'] * $_SESSION['USD'].'';
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                     <?php echo $_SESSION['total'];?>
                                                     <?php } ?></td>
                                                 <td><?= $_SESSION['option1']; ?></td>
@@ -367,7 +367,7 @@ if(isset($_POST['doneAddress'])){
                                               if(isset($_SESSION['USD'])){
                                                    echo number_format($_SESSION['quantity'] * $_SESSION['total']* $_SESSION['USD'],2 );
                                                             }else{
-                                                            ?><i class="fa fa-inr"></i>
+                                                            ?><i class="fa fa-usd"></i>
                                                     <?php echo number_format($_SESSION['quantity'] * $_SESSION['total'],2 )?>
                                                     <?php } ?></td>
                                             </tr>
@@ -384,7 +384,7 @@ if(isset($_POST['doneAddress'])){
                                         <tfoot class="font-weight-600">
                                             <tr>
                                                 <td colspan="4" class="text-right">Total</td>
-                                                <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{   echo "<i class='fa fa-inr'></i> ";  }  echo number_format($total,2);?>
+                                                <td><?php if(isset($_SESSION['USD'])){ echo "<i class='".$_SESSION['icon']."'></i>"; }else{   echo "<i class='fa fa-usd'></i> ";  }  echo number_format($total,2);?>
                                                 </td>
                                             </tr>
                                         </tfoot>
