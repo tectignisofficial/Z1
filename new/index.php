@@ -79,7 +79,7 @@ include('include/config.php');
       height:450px;
     }
     .bannerimg{
-      height:510px;
+      height:600px;
     }
   </style>
 </head>
