@@ -46,8 +46,6 @@ include('include/config.php');
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/indexstyle.css">
-
-
   <style type='text/css'>
     /* blox page builder grid css */
     #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_4 {
@@ -60,22 +58,18 @@ include('include/config.php');
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-
     @media only screen and (max-width: 600px) {
       #uc_grid_1_40497 .uc-grid-row#uc_grid_1_40497_row_4 {
         padding-top: 0px;
         padding-bottom: 50px;
       }
-
       .kneebrace {
         padding-top: 45px !important;
       }
     }
-
     .kneebrace {
       padding-top: 200px;
     }
-
     .uc-grid-row#uc_grid_1_40497_row_1 {
       padding-top: 100px;
       padding-bottom: 200px;
@@ -110,11 +104,11 @@ include('include/header.php');
                   alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew2.jpg"
                   alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
+                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew3.jpg"
                   alt="Third slide">
               </div>
             </div>
