@@ -121,7 +121,7 @@
                 <div class="row align-items-center">
                     <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                         <a href="index.php">
-                            <img src="assets/images/logo.png" alt="Z1" title="Z1" />
+                            <img src="assets/images/logo.png" alt="Z1 Knee Braces" title="Z1 Knee Braces" />
                         </a>
 
                     </div>
