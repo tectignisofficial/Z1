@@ -16,31 +16,23 @@ if(isset($_POST['submit'])){
 
  <!--Footer-->
  <footer id="footer">
-     <div class="newsletter-section">
+    
+     <div class="site-footer">
          <div class="container">
-             <div class="row">
-                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 w-100 d-flex justify-content-start align-items-center">
-                     <div class="display-table">
-                         <div class="display-table-cell footer-newsletter">
-                             <div class="section-header text-center">
-                                 <label class="h2"><span>sign up for </span>New Products Info</label>
-                             </div>
-                             <form method="post">
-                                 <div class="input-group">
-                                     <input type="email" class="input-group__field newsletter__input" name="email_id"
-                                         id="email_id" value="" placeholder="Email address" required>
-                                     <span class="input-group__btn">
-                                         <button type="submit" class="btn newsletter__submit" name="submit" id="submit"
-                                             id="Subscribe"><span
-                                                 class="newsletter__submit-text--large">Subscribe</span></button>
-                                     </span>
-                                 </div>
-                             </form>
+             <!--Footer Links-->
+             <div class="footer-top">
+                 <div class="row">
+                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                         <div class="logo" style="padding-top: 0;">
+                             <a href="index.html">
+                                 <img src="assets/images/logo.png" alt="Z1" title="Z1" />
+                             </a>
                          </div>
-                     </div>
-                 </div>
-                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex justify-content-end align-items-center">
-                     <div class="footer-social">
+                         <h4 class="h4">About us</h4>
+                         <p>Zodiacal Overseas Pvt. Ltd. is an India based professional manufacturing and marketing
+                             company dealing in health products. Established in 2012, ZOPL has already created a strong
+                             presence in the global online sales market as well the domestic Indian market.</p>
+                             <div class="footer-social">
                          <ul class="list--inline site-footer__social-icons social-icons">
                          <?php                         
 $sql=mysqli_query($conn,"select * from social_media");
@@ -64,25 +56,6 @@ $facebook=mysqli_fetch_array($sql);
                                          class="icon__fallback-text">YouTube</span></a></li>
                          </ul>
                      </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <div class="site-footer">
-         <div class="container">
-             <!--Footer Links-->
-             <div class="footer-top">
-                 <div class="row">
-                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                         <div class="logo" style="padding-top: 0;">
-                             <a href="index.html">
-                                 <img src="assets/images/logo.png" alt="Z1" title="Z1" />
-                             </a>
-                         </div>
-                         <h4 class="h4">About us</h4>
-                         <p>Zodiacal Overseas Pvt. Ltd. is an India based professional manufacturing and marketing
-                             company dealing in health products. Established in 2012, ZOPL has already created a strong
-                             presence in the global online sales market as well the domestic Indian market.</p>
                      </div>
                      <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                          <h4 class="h4">Quick Links</h4>
