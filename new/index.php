@@ -646,19 +646,23 @@ include('include/header.php');
             </div>
           </div>
 
+<!-- SECTION 2   -->
 
-          <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
+<div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
             <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
+
+              
+
+
+
               <div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
                 style="padding-right:85px;padding-left:85px;">
                 <div class="uc-grid-col-inner">
                   <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class="uc-grid-col-addon"
                     style="padding-top:100px;">
                     <!-- start Title -->
-
                     <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
-                      <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K4
-                        OsteoAlign Knee Orthosis</span>
+                      <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K4 OsteoAlign Knee Orthosis</span>
 
                     </div>
                     <!-- end Title -->
@@ -678,50 +682,52 @@ include('include/header.php');
                     <b style="font-size: 14px;">The Treatment your Knee needs!</b>
                     <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
 
-                      <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K4 OsteoAlign
-                        Knee Brace is a custom made OA Brace best suited for active patients as it offers a convenient
-                        and
-                        appropriate fit. It is an effective and non-invasive remedy for patients with mild to moderate
-                        osteoarthritis. What sets this offloading orthosis apart from others is that it effectively
-                        transfers body weight from thigh to calf without exerting much pressure on the knee joint and
-                        thus
-                        helps stabilize the knee and prevents further deterioration.</span>
+                      <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K4 OsteoAlign Knee Brace is a custom made OA Brace best suited for active patients as it offers a convenient and appropriate fit. It is an effective and non-invasive remedy for patients with mild to moderate osteoarthritis. What sets this offloading orthosis apart from others is that it effectively transfers body weight from thigh to calf without exerting much pressure on the knee joint and thus helps stabilize the knee and prevents further deterioration.</span>
                     </div>
                     <!-- end Paragraph -->
                   </div>
                   <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
-          
-                    </div>
+                    <!-- start Button -->
+                    
                     <div style="text-align:left;">
                       <?php
-                    $sql1=mysqli_query($conn,"select * from products where id='2'");
-                    $arr1=mysqli_fetch_array($sql1);
+                    $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
+                    $arr=mysqli_fetch_array($sql);
                     ?>
-                      <a href="productdetail/<?= $arr1['seo_title']; ?>" id="uc_solid_rounded_button254538"
+                      <a href="productdetail/<?= $arr['seo_title']; ?>" id="uc_solid_rounded_button254538"
                         target="_self"><span class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
                     </div>
                     <!-- end Button -->
                   </div>
                 </div>
               </div>
+
+
               <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
-                style="padding-right:85px;padding-left:0px;">
+                style="padding-right:0px;padding-left:0px;">
                 <div class="uc-grid-col-inner">
                   <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon">
                     <!-- start Image -->
 
                     <div style="text-align:center;font-size:0;">
                       <img src="uploads/images/blox_page_builder/K4_OsteoAlign_Knee_Orthosis.webp"
-                        alt="K4 OsteoAlign Knee Orthosis" title="K4 OsteoAlign Knee Orthosis"
-                        style="max-width:100%; width:100%;border-radius:0px;margin:0;">
+                        alt="K4_Comfortline_Knee_Orthosis" title=""
+                        style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
                     </div>
                     <!-- end Image -->
                   </div>
                 </div>
               </div>
+
               <div class="uc-col-clear"></div>
             </div>
           </div>
+
+
+
+<!-- SECTION 3 -->
+
+          
 
           <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
             <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
