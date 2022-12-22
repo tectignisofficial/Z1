@@ -105,7 +105,7 @@ include('include/header.php');
                   alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
+                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner4.jpg"
                   alt="Second slide">
               </div>
               <div class="carousel-item">
@@ -113,7 +113,7 @@ include('include/header.php');
                   alt="Third slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner4.jpg"
+                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
                   alt="fourth slide">
               </div>
             </div>
@@ -396,6 +396,172 @@ include('include/header.php');
             </div>
           </div>
 
+
+        <!--Featured Product-->
+        <!-- <div class="product-rows section">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        				<div class="section-header text-center">
+                            <h2 class="h2">Featured collection</h2>
+                            <p>Our most popular products based on sales</p>
+                        </div>
+            		</div>
+                </div>
+                <div class="grid-products">
+	                <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
+                        	<div class="grid-view_image">
+                           
+                                <a href="product-accordion.html" class="grid-view-item__link">
+                                 
+                                    <img class="grid-view-item__image primary blur-up lazyload" data-src="assets/images/product-images/product-image1.jpg" src="assets/images/product-images/product-image1.jpg" alt="image" title="product">
+                              
+                     
+                                    <img class="grid-view-item__image hover blur-up lazyload" data-src="assets/images/product-images/product-image1-1.jpg" src="assets/images/product-images/product-image1-1.jpg" alt="image" title="product">
+                                
+                                    <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
+                                  
+                                </a>
+                             
+                                <div class="product-details hoverDetails text-center mobile">
+                              
+                                    <div class="product-name">
+                                        <a href="product-accordion.html">Edna Dress</a>
+                                    </div>
+                               
+                                    <div class="product-price">
+                                        <span class="old-price">$500.00</span>
+                                        <span class="price">$600.00</span>
+                                    </div>
+                               
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                                   
+                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                            <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i class="icon anm anm-bag-l"></i></button>
+                                        </form>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html" title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
+                        	<div class="grid-view_image">
+                       
+                                <a href="product-accordion.html" class="grid-view-item__link">
+                     
+                                    <img class="grid-view-item__image primary blur-up lazyload" data-src="assets/images/product-images/product-image2.jpg" src="assets/images/product-images/product-image2.jpg" alt="image" title="product">
+                                
+                                    <img class="grid-view-item__image hover blur-up lazyload" data-src="assets/images/product-images/product-image2-1.jpg" src="assets/images/product-images/product-image2-1.jpg" alt="image" title="product">
+                                  
+                                    <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
+                                 
+                                </a>
+                       
+                                <div class="product-details hoverDetails text-center mobile">
+                        
+                                    <div class="product-name">
+                                        <a href="product-accordion.html">Elastic Waist Dress</a>
+                                    </div>
+                         
+                                    <div class="product-price">
+                                        <span class="price">$748.00</span>
+                                    </div>
+                            
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                           
+                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                            <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i class="icon anm anm-bag-l"></i></button>
+                                        </form>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html" title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                               
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
+                        	<div class="grid-view_image">
+              
+                                <a href="product-accordion.html" class="grid-view-item__link">
+                           
+                                    <img class="grid-view-item__image primary blur-up lazyload" data-src="assets/images/product-images/product-image3.jpg" src="assets/images/product-images/product-image3.jpg" alt="image" title="product">
+  
+                                    <img class="grid-view-item__image hover blur-up lazyload" data-src="assets/images/product-images/product-image3-1.jpg" src="assets/images/product-images/product-image3-1.jpg" alt="image" title="product">
+                      
+                                    <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
+                       
+                                </a>
+          
+                                <div class="product-details hoverDetails text-center mobile">
+                           
+                                    <div class="product-name">
+                                        <a href="product-accordion.html">3/4 Sleeve Kimono Dress</a>
+                                    </div>
+                  
+                                    <div class="product-price">
+                                        <span class="price">$550.00</span>
+                                    </div>
+                          
+                                    <div class="button-set">
+                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
+                                            <i class="icon anm anm-search-plus-r"></i>
+                                        </a>
+                               
+                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                            <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i class="icon anm anm-bag-l"></i></button>
+                                        </form>
+                                        <div class="wishlist-btn">
+                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                <i class="icon anm anm-heart-l"></i>
+                                            </a>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a class="compare add-to-compare" href="compare.html" title="Add to Compare">
+                                                <i class="icon anm anm-random-r"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                         
+                                </div>
+                          
+                            </div>
+                        </div>
+                        
+                	</div>
+                </div>
+           </div>
+        </div>	 -->
+        <!--End Featured Product-->
+
+
+
           <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
             <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
 
@@ -414,6 +580,8 @@ include('include/header.php');
                   </div>
                 </div>
               </div>
+
+
 
               <div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
                 style="padding-right:85px;padding-left:85px;">
@@ -537,7 +705,7 @@ include('include/header.php');
                 </div>
               </div>
               <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
-                style="padding-right:0px;padding-left:0px;">
+                style="padding-right:85px;padding-left:0px;">
                 <div class="uc-grid-col-inner">
                   <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon">
                     <!-- start Image -->

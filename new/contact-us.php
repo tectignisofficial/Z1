@@ -131,7 +131,7 @@ if(isset($_POST['submit'])){
               <strong>Opening Hours</strong><br>
               Mon - Sat : 10am - 5pm<br>
             </div>
-            <hr />
+            <!-- <hr />
             <ul class="addressFooter">
             <h4 class="h4"><strong>Corporate Office Address</strong></h4>
                              <li><i class="icon anm anm-map-marker-al"></i>
@@ -148,7 +148,7 @@ if(isset($_POST['submit'])){
                 <p>info@z1kneebrace.com</p>
               </li>
             </ul>
-            <hr />
+            <hr /> -->
             <!-- <ul class="list--inline site-footer__social-icons social-icons">
               <?php                         
               $sql=mysqli_query($conn,"select * from social_media");
