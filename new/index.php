@@ -52,7 +52,7 @@ include('include/config.php');
       padding-top: 150px;
       padding-bottom: 220px;
       background-color: #000000;
-      background-image: url('uploads/images/blox_page_builder/z1_customized_knee_braces.webp');
+      background-image: url('uploads/images/blox_page_builder/z1_customized_knee_braces.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
