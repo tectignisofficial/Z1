@@ -131,7 +131,9 @@ $facebook=mysqli_fetch_array($sql);
              <!--End Footer Links-->
              <hr>
              <div class="footer-bottom">
+             <p style="color: white;">Neither Z1 nor any of its subsidiaries dispense medical advice. Information related to various health, medical, and fitness conditions and their treatment is not meant to be a substitute for the advice provided by a physician or other medical professional. The contents of this website do not constitute medical, legal, or any other type of professional advice. You should not use the information contained herein for diagnosing a health or fitness problem or disease. Rather, please consult your healthcare professional for information on the courses of treatment, if any, which may be appropriate for you.</p>
                  <div class="row">
+                    
                      <!--Footer Copyright-->
                      <div
                          class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left">
