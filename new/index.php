@@ -460,19 +460,7 @@ include('include/header.php');
                   </div>
                   <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
                     <!-- start Button -->
-                    <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
-                      style="margin-bottom:30px;">
-                      <!-- Youtube Video Company Overview -->
-
-                      <div style="text-align:left;" id="uc_blox_play_button286402">
-                        <a href="https://youtube.com/watch?v=XylwMyEnK0M" data-lity>
-                          <span style="background-color: red;">
-                            <i class="fa fa-play" style="color: white;"> </i>
-                          </span>
-                        </a>
-                      </div>
-                      <!-- end Play Button -->
-                    </div>
+                    
                     <div style="text-align:left;">
                       <?php
                     $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
@@ -534,19 +522,7 @@ include('include/header.php');
                     <!-- end Paragraph -->
                   </div>
                   <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
-                    <!-- start Button -->
-
-                    <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
-                      style="margin-bottom:30px;">
-                      <!-- Youtube Video Company Overview -->
-                      <div style="text-align:left;" id="uc_blox_play_button286402">
-                        <a href="https://www.youtube.com/watch?v=RQkIKYxUHvg" data-lity>
-                          <span style="background-color: red;">
-                            <i class="fa fa-play" style="color: white;"> </i>
-                          </span>
-                        </a>
-                      </div>
-                      <!-- end Play Button -->
+          
                     </div>
                     <div style="text-align:left;">
                       <?php
@@ -635,22 +611,7 @@ include('include/header.php');
                     </div>
                     <!-- end Paragraph -->
                   </div>
-                  <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
-                    <!-- start Button -->
-
-                    <div id="uc_grid_1_40497_row_4_container_1_col_2_addon_1" class='uc-grid-col-addon'
-                      style="margin-bottom:30px;">
-                      <!-- Youtube Video Company Overview -->
-
-                      <div style="text-align:left;" id="uc_blox_play_button286402">
-                        <a href="https://youtube.com/watch?v=QPv2zBhMPdY" data-lity>
-                          <span style="background-color: red;">
-                            <i class="fa fa-play" style="color: white;"> </i>
-                          </span>
-                        </a>
-                      </div>
-                      <!-- end Play Button -->
-                    </div>
+       
                     <div style="text-align:left;">
                       <?php
                     $sql2=mysqli_query($conn,"select * from products where id='3'");
