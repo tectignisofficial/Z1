@@ -78,9 +78,9 @@ include('include/config.php');
     .uc_grid_1_40497_row_2{
       height:450px;
     }
-    .bannerimg{
+    /* .bannerimg{
       height:650px;
-    }
+    } */
   </style>
 </head>
 <body>
@@ -96,20 +96,25 @@ include('include/header.php');
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
-              <!-- <div class="carousel-item active">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew1.jpg"
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner1.jpg"
                   alt="First slide">
-              </div> -->
-              <div class="carousel-item active">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew2.jpg"
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner2.jpg"
                   alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 bannerimg" src="assets/images/slideshow-banners/bannernew3.jpg"
+                <img class="d-block w-100" src="assets/images/slideshow-banners/z1kneebracebanner3.jpg"
                   alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 " src="assets/images/slideshow-banners/z1kneebracebanner4.jpg"
+                  alt="fourth slide">
               </div>
             </div>
           </div>
