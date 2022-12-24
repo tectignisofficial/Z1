@@ -183,7 +183,7 @@
                                             class="anm anm-angle-down-l"></i></a>
                                 </li>
                                 <li class="lvl1 parent megamenu"><a href="about-us.php"
-                                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">ABOUT US</a>
+                                        class="<?= $page == 'about-us.php' ? 'active':'' ?>">ABOUT US</a>
                                 </li>
                             </ul>
                         </nav>
