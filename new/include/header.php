@@ -230,7 +230,7 @@
           </ul>
         </li> -->
 
-        <li class="lvl1 parent megamenu"><a href="blog-left-sidebar.html">SHOP NOW <i class="anm anm-plus-l"></i></a>
+        <li class="lvl1 parent megamenu"><a href="#">SHOP NOW <i class="anm anm-plus-l"></i></a>
           <ul>
             <li><a href="shop.php" class="site-nav < $page == 'shop.php' ? 'active':'' ?>">PRODUCTS</a></li>
             <li><a href="accessories.php" class="site-nav < $page == 'shop.php' ? 'active':'' ?>">ACCESSORIES</a></li>
@@ -264,7 +264,7 @@
                                         class="<?= $page == 'contact-us.php' ? 'active':'' ?>">Associate with us</a>
                                 </li>
                                 <li class="lvl1 parent megamenu"><a href="about-us.php"
-                                        class="<?= $page == 'contact-us.php' ? 'active':'' ?>">ABOUT US</a>
+                                        class="<?= $page == 'about-us.php' ? 'active':'' ?>">ABOUT US</a>
                                 </li>
 
 
