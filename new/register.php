@@ -132,7 +132,7 @@ if(isset($_POST['register'])){
                                     <?php
     $otp = rand(0,9999); 
                                     ?>
-                        <input type="hidden" name="otp" placeholder="" id="otp" value="<?php echo $otp ?>" autofocus="">
+                        <input type="text" name="otp" placeholder="" id="otp" value="<?php echo $otp ?>" autofocus="">
                                     <label for="FirstName">Full Name</label>
                                     <input type="text" name="customerName" placeholder="" id="FirstName" autofocus="">
                                 </div>
