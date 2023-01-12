@@ -220,7 +220,7 @@ include('include/header.php');
                     <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
                       <span class="uc-style-169252194065"
                         style="font-weight:Bold;font-size:36px;line-height:1.2em;color:#ffffff;">Why Z1 knee
-                        braces?</span>
+                        braces HELLO?</span>
                     </div>
                     <!-- end Title -->
                   </div>
