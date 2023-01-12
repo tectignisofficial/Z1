@@ -130,9 +130,9 @@ if(isset($_POST['register'])){
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <?php
-    $otp = rand(0,9999); 
+  echo  $otp = rand(0,9999); 
                                     ?>
-                        <input type="text" name="otp" placeholder="" id="otp" value="<?php echo $otp ?>" autofocus="">
+                        <input type="text" name="otp"  id="otp" value="<?php echo $otp ?>" autofocus="">
                                     <label for="FirstName">Full Name</label>
                                     <input type="text" name="customerName" placeholder="" id="FirstName" autofocus="">
                                 </div>
