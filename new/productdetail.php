@@ -452,6 +452,8 @@
                         <div class="tabs-listing">
                             <ul class="product-tabs">
                                 <li rel="tab1"><a class="tablink">Product Details</a></li>
+                                <li rel="tab3"><a class="tablink">How to take measurements ?
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                                 <li rel="tab2"><a class="tablink">Product Reviews</a></li>
                                 <?php
                                     if($productName=='Z1 K6 Dezire Knee Orthosis '){
@@ -460,13 +462,12 @@
                                 <?php } ?>
                                 <?php  if($accessories == ''){
                                         ?>
-                                <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
-                                <?php } ?>
+                                <!-- <li rel="tab4"><a class="tablink">Returns &amp; Refund</a></li>
+                                <?php } ?> -->
                                 <?php if($sizefile!=''){
                                         if($accessories == ''){
                                         ?>
-                                <li rel="tab3"><a class="tablink">Size Chart
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                
                                 <?php } } ?>
                             </ul>
                             <div class="tab-container">
