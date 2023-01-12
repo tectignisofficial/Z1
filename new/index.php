@@ -727,8 +727,78 @@ include('include/header.php');
 
 <!-- SECTION 3 -->
 
-          
+<div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
+            <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
 
+              <div id="uc_grid_1_40497_row_3_container_1_col_2" class="uc-grid-col uc-col-last uc-colsize-1_2"
+                style="padding-right:0px;padding-left:0px;">
+                <div class="uc-grid-col-inner">
+                  <div id="uc_grid_1_40497_row_3_container_1_col_2_addon_1" class="uc-grid-col-addon">
+                    <!-- start Image -->
+
+                    <div style="text-align:center;font-size:0;">
+                      <img src="uploads/images/blox_page_builder/K6_Dezire_Knee_Orthosis.webp"
+                        alt="K2_Comfortline_Knee_Orthosis" title=""
+                        style="max-width:100%; width:100%;border-radius:0px;margin:0;" />
+                    </div>
+                    <!-- end Image -->
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div id="uc_grid_1_40497_row_3_container_1_col_1" class="uc-grid-col uc-col-first uc-colsize-1_2"
+                style="padding-right:85px;padding-left:85px;">
+                <div class="uc-grid-col-inner">
+                  <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_1" class="uc-grid-col-addon"
+                    style="padding-top:100px;">
+                    <!-- start Title -->
+                    <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+                      <span class="uc-style-133880281481" style="font-weight:Bold;font-size:36px;line-height:1.2em;">K6 Dezire Knee Orthosis</span>
+
+                    </div>
+                    <!-- end Title -->
+                  </div>
+                  <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_2" class="uc-grid-col-addon">
+                    <!-- start Line Seperator -->
+
+                    <div style="text-align:left;">
+                      <div style="display:inline-block;height:3px;max-width:30px;width:100%;background-color:#ed1c24;">
+                      </div>
+                    </div>
+                    <!-- end Line Seperator -->
+                  </div>
+                  <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_3" class="uc-grid-col-addon"
+                    style="padding-bottom:0px;padding-left:30px;margin-top:30px;margin-bottom:30px;border-left:1px solid lightgray;">
+                    <!-- start Paragraph -->
+                    <b style="font-size: 14px;">The Treatment your Knee needs!</b>
+                    <div style="text-align:left;padding-top:0px;padding-bottom:0px;">
+
+                      <span class="uc-style-145931617431" style="font-size:14px;line-height:1.7em;">The Z1 K6 Dezire Knee Orthosis is extremely handy in making you feel complacent because of it’s lightweight and highly durable aluminum frame. It is very likely a wonderful product for all those who have pain in the knee as it is phenomenal in providing the coveted support and aid.</span>
+                    </div>
+                    <!-- end Paragraph -->
+                  </div>
+                  <div id="uc_grid_1_40497_row_3_container_1_col_1_addon_4" class="uc-grid-col-addon">
+                    <!-- start Button -->
+                    
+                    <div style="text-align:left;">
+                      <?php
+                    $sql2=mysqli_query($conn,"select * from products where id='3'");
+                    $arr2=mysqli_fetch_array($sql2);
+                    ?>
+                      <a href="productdetail/<?= $arr2['seo_title']; ?>" id="uc_solid_rounded_button254538"
+                        target="_self"><span class="uc-style-154197001924" style="font-size:12px;">SHOP NOW</span></a>
+                    </div>
+                    <!-- end Button -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="uc-col-clear"></div>
+            </div>
+          </div>
+////////////////////////////////////
           <div id="uc_grid_1_40497_row_3" class="uc-grid-row" style="padding-bottom: 22px;">
             <div id="uc_grid_1_40497_row_3_container_1" class="uc-grid-row-container" style="background-color:#ffffff;">
 
