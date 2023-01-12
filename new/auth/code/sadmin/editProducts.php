@@ -411,7 +411,7 @@ while($arr=mysqli_fetch_array($sql)){
                                                 <div class="mb-1">
                                                     <label class="form-label" for="price">INR Price</label>
                                                     <input type="text" id="price" class="form-control" name="price_inr"
-                                                        placeholder="" value="123" />
+                                                        placeholder="" value="<?php echo $editArr['price_INR']; ?>" />
                                                 </div>
                                             </div>
                                             </div>
