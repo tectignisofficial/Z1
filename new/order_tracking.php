@@ -349,7 +349,7 @@ include('include/config.php');
                                             <input type="email" name="email" class="inputgroup" required>
                                             <span class="highlight"></span>
                                             <span class="bar"></span>
-                                            <label class="label">Billing Email</label>
+                                            <label class="label">Email ID</label>
                                         </div>
                                     </div>
                                 </div>
