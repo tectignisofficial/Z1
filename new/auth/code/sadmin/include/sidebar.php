@@ -2,7 +2,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item me-auto"><a class="navbar-brand">
-                        <h2 class="brand-text">Z1KneeBrace</h2>
+                        <h2 class="brand-text">ADMIN PANEL</h2>
                     </a></li>
             </ul>
         </div>
@@ -11,8 +11,7 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item"><a class="d-flex align-items-center" href="index"><i
                             data-feather="home"></i><span class="menu-title text-truncate"
-                            data-i18n="Dashboards">Dashboards</span><span
-                            class="badge badge-light-warning rounded-pill ms-auto me-1">2</span></a>
+                            data-i18n="Dashboards">Dashboard</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="blogtable"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
@@ -22,10 +21,6 @@
                             data-feather="mail"></i><span class="menu-title text-truncate"
                             data-i18n="Email">Testimonials</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="new_products_info"><i
-                            data-feather="message-square"></i><span class="menu-title text-truncate"
-                            data-i18n="Chat">New Products Info</span></a>
-                </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i
                             data-feather="file-text"></i><span class="menu-title text-truncate"
                             data-i18n="Invoice">Ecommerce</span></a>
@@ -33,10 +28,7 @@
                         <li><a class="d-flex align-items-center" href="orders.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Preview">Orders</span></a>
                         </li>
-                        <!-- <li><a class="d-flex align-items-center" href="incompleteorders.php"><i
-                                    data-feather="circle"></i><span class="menu-item text-truncate"
-                                    data-i18n="Edit">Incomplete orders</span></a>
-                        </li> -->
+                   
                         <li><a class="d-flex align-items-center" href="products.php"><i data-feather="circle"></i><span
                                     class="menu-item text-truncate" data-i18n="Add">Product</span></a>
                         </li>
@@ -85,10 +77,7 @@
                     </ul>
                 </li>
 
-                <li><a class="d-flex align-items-center" href="currency.php"><i
-                                    data-feather="dollar-sign"></i><span class="menu-item text-truncate"
-                                    data-i18n="Account">Currency</span></a>
-                        </li>
+
 
             </ul>
         </div>
