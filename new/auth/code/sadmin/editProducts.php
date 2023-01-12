@@ -29,6 +29,11 @@ if(isset($_POST['submit'])){
     $myvideofile=$_POST['myvideofile'];
     $sku=$_POST['sku'] ?? null;
     $price=$_POST['price'] ?? null;
+    $price_inr=$_POST['price_inr'] ?? null;   
+    $price_usd=$_POST['price_usd'] ?? null;
+    $price_gbp=$_POST['price_gbp'] ?? null;
+    $price_cad=$_POST['price_cad'] ?? null;
+    $price_aud=$_POST['price_aud'] ?? null;
     $stock=$_POST['stock'] ?? null;
     $attrname1=$_POST['attrname'] ?? null;
     $attrval1=$_POST['attrnal'] ?? null;
@@ -71,24 +76,24 @@ if(!empty($fileNames)){
 
     if(empty($_FILES['hoverfile']['tmp_name']) && empty($_FILES['sizefile']['tmp_name']) && empty($_FILES['hightlightfile']['tmp_name']) && ($_POST['hoverfilehide']) && ($_POST['sizefilehide']) && ($_POST['hightlightfilehide'])){
         // echo '<script>alert("something went wrong1");</script>';
-        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`measurement_video`='$measurement_video',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`price_INR`='$price_inr',`price_USD`='$price_usd',`price_GBP`='$price_gbp',`price_CAD`='$price_cad',`price_AUD`='$price_aud',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`measurement_video`='$measurement_video',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
     }
     else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide']) || empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) && !empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide']) || empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) && !empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide']) || empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide'])){
         // echo '<script>alert("something went wrong2");</script>';
-        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`measurement_video`='$measurement_video',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`video`='$myvideofile',`sku`='$sku',`price`='$price',`price_INR`='$price_inr',`price_USD`='$price_usd',`price_GBP`='$price_gbp',`price_CAD`='$price_cad',`price_AUD`='$price_aud',`seo_title`='$set',`measurement_video`='$measurement_video',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
     }
     else if(!empty($_FILES["hightlightfile"]["tmp_name"]) && empty($_POST['hightlightfilehide']) || !empty($_FILES["hightlightfile"]["tmp_name"]) && !empty($_POST['hightlightfilehide'])){
         // echo '<script>alert("something went wrong3");</script>';
-        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfile',`hoverfile`='$hoverfilehide',`sizefile`='$sizefilehide',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku', `price_INR`='$price_inr',`price_USD`='$price_usd',`price_GBP`='$price_gbp',`price_CAD`='$price_cad',`price_AUD`='$price_aud',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
        
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                       
     else if(!empty($_FILES["hoverfile"]["tmp_name"]) && empty($_POST['hoverfilehide']) || !empty($_FILES["hoverfile"]["tmp_name"]) && !empty($_POST['hoverfilehide'])){
         // echo '<script>alert("something went wrong5");</script>';
-        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfile',`sizefile`='$sizefilehide',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku',`price_INR`='$price_inr',`price_USD`='$price_usd',`price_GBP`='$price_gbp',`price_CAD`='$price_cad',`price_AUD`='$price_aud',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
     }
     else if(!empty($_FILES["sizefile"]["tmp_name"]) && empty($_POST['sizefilehide']) || !empty($_FILES["sizefile"]["tmp_name"]) && !empty($_POST['sizefilehide'])){
         // echo '<script>alert("something went wrong6");</script>';
-        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
+        $sql=mysqli_query($conn,"UPDATE `products` SET `name`='$name',`description`='$desc',`content`='$cont',`image`='$myfilehide',`hightlightfile`='$hightlightfilehide',`hoverfile`='$hoverfilehide',`sizefile`='$sizefile',`measurement_video`='$measurement_video',`video`='$myvideofile',`sku`='$sku',`price_INR`='$price_inr',`price_USD`='$price_usd',`price_GBP`='$price_gbp',`price_CAD`='$price_cad',`price_AUD`='$price_aud',`price`='$price',`seo_title`='$set',`seo_description`='$sedes',`status`='$published',`featured`='$published',`categories`='$knee',`label`='$label',`tags`='$tname' WHERE id='$eid'");
     }
     
     if($sql==1){
@@ -404,12 +409,81 @@ while($arr=mysqli_fetch_array($sql)){
                                             </div>
                                             <div class="col-4">
                                                 <div class="mb-1">
-                                                    <label class="form-label" for="price">Price</label>
-                                                    <input type="text" id="price" class="form-control" name="price"
-                                                        placeholder="" value="<?php echo $editArr['price']; ?>" />
+                                                    <label class="form-label" for="price">INR Price</label>
+                                                    <input type="text" id="price" class="form-control" name="price_inr"
+                                                        placeholder="" value="<?php echo $editArr['price_INR']; ?>" />
+                                                </div>
+                                            </div>
+                                            </div>
+                                             
+                                        <div class="row">
+                                         
+                                            <div class="col-4">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="SKU"> </label>
+                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-4" style="margin-right:0px;">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="price">USD Price</label>
+                                                    <input type="text" id="price" class="form-control" name="price_usd"
+                                                        placeholder="" value="<?php echo intval($editArr['price_USD']); ?>" />
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="row">
+                                         
+                                            <div class="col-4">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="SKU"> </label>
+                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-4" style="margin-right:0px;">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="price">GBP Price</label>
+                                                    <input type="text" id="price" class="form-control" name="price_gbp"
+                                                        placeholder="" value="<?php echo intval($editArr['price_GBP']); ?>" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                         
+                                            <div class="col-4">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="SKU"> </label>
+                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-4" style="margin-right:0px;">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="price">CAD Price</label>
+                                                    <input type="text" id="price" class="form-control" name="price_cad"
+                                                        placeholder="" value="<?php echo $editArr['price_CAD']; ?>" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                         
+                                            <div class="col-4">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="SKU"> </label>
+                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-4" style="margin-right:0px;">
+                                                <div class="mb-1">
+                                                    <label class="form-label" for="price">AUD Price</label>
+                                                    <input type="text" id="price" class="form-control" name="price_aud"
+                                                        placeholder="" value="<?php echo $editArr['price_AUD']; ?>" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+
                                         <div class="col-12">
                                             <label class="form-label">Stock status</label>
                                             <!-- <input type="number" class="form-control" name="stock" id="" value="<?php echo $editArr['stock_status']; ?>"> -->

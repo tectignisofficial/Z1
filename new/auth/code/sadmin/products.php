@@ -161,7 +161,7 @@ if(isset($_GET['delid'])){
                                             <td><img src="image/product_image_check/<?php echo $arr['hightlightfile']; ?>" width="50" height="50"></td>
                                             <td><?php echo $arr['name']; ?></td>
                                             <td><?php echo $arr['stock_status']; ?></td>
-                                            <td><?php echo $arr['price']; ?></td>
+                                            <td><?php echo $arr['price_INR']; ?></td>
                                             <td class='d-flex'>
                                                 <a class="btn btn-icon rounded-circle btn-flat-success eye"
                                                     href="../../../productdetail.php?name=<?php echo $arr['name']; ?>">
