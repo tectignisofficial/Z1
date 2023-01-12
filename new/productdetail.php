@@ -325,9 +325,9 @@
                                     <ul>
                                         <?php echo $arr['content'] ?>
                                         <?php if($video!=''){ ?>
-                                        <li style="color:black;font-size:16px;margin-top:-12px;">
+                                        <!-- <li style="color:black;font-size:16px;margin-top:-12px;">
                                             360-degree view.
-                                        </li>
+                                        </li> -->
                                         <?php } ?> 
                                     </ul>
                                 </div>
@@ -402,11 +402,7 @@
                                             </div>
 
                                         </div>
-                                        <?php if($video!=''){ ?>
-                                        <p class="step_process">How To take measurement and size chart
-                                            <a href="https://www.youtube.com/watch?v=<?php echo $arr['measurement_video']; ?>"
-                                                class="popup-video" title="View Video">Click Here</a></p>
-                                        <?php } ?>
+                                      
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
