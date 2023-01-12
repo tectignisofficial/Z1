@@ -64,7 +64,7 @@ if(isset($_POST['login'])){
 	<!--Search Form Drawer-->
 
   <?php include("include/header.php");?>
-	<!--End Mobile Menu-->
+	<!--End Mobile Menu--> 
     
     <!--Body Content-->
     <div id="page-content">

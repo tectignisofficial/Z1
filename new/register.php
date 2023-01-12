@@ -21,10 +21,10 @@ if(isset($_POST['register'])){
     $customerPhone=$_POST['customerPhone'];
     $customerEmail=$_POST['customerEmail'];
     $customerPassword=$_POST['customerPassword'];
-
+    $otp = $_POST['otp'];
      $to=$customerEmail;
    $sub="Password";
-   $otp = rand(0,9999);
+   
     $password=password_hash($customerPassword,PASSWORD_BCRYPT);
 
  $mail = new PHPMailer(true);
@@ -130,8 +130,9 @@ if(isset($_POST['register'])){
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <?php
-  
+    $otp = rand(0,9999); 
                                     ?>
+                        <input type="hidden" name="otp" placeholder="" id="otp" value="<?php echo $otp ?>" autofocus="">
                                     <label for="FirstName">Full Name</label>
                                     <input type="text" name="customerName" placeholder="" id="FirstName" autofocus="">
                                 </div>
