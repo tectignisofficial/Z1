@@ -691,7 +691,7 @@ include('include/header.php');
                     
                     <div style="text-align:left;">
                       <?php
-                    $sql=mysqli_query($conn,"select * from products where name='Z1 K2 Comfortline Knee Orthosis'");
+                    $sql=mysqli_query($conn,"select * from products where name='Z1 K4 OsteoAlign Knee Orthosis'");
                     $arr=mysqli_fetch_array($sql);
                     ?>
                       <a href="productdetail/<?= $arr['seo_title']; ?>" id="uc_solid_rounded_button254538"
