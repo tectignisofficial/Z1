@@ -24,7 +24,7 @@ if(isset($_POST['register'])){
 
      $to=$customerEmail;
    $sub="Password";
-
+   $otp = rand(0,9999);
     $password=password_hash($customerPassword,PASSWORD_BCRYPT);
 
  $mail = new PHPMailer(true);
@@ -45,15 +45,16 @@ if(isset($_POST['register'])){
   
   //Content                             
   $mail->Subject = 'Verify Email';
-  $mail->Body    = 'Click on this Link to Verify Your Email ID http://'.$_SERVER['SERVER_NAME'].'/verify.php?email='.$customerEmail.'';
-  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+  //$mail->Body    = 'Click on this Link to Verify Your Email ID http://'.$_SERVER['SERVER_NAME'].'/verify.php?email='.$customerEmail.'';
+   $mail->Body    = 'OTP For Verify Email Id :'.$otp.'';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
   if($mail->send()){
-  $sql=mysqli_query($conn, "INSERT INTO `customers`(`name`, `phone`, `email`, `password`) VALUES ('$FullName','$customerPhone','$customerEmail','$password')");
+  $sql=mysqli_query($conn, "INSERT INTO `customers`(`name`, `phone`, `email`,`otp`, `password`) VALUES ('$FullName','$customerPhone','$customerEmail','$otp','$password')");
 
     if($sql==1){
         echo '<script>alert("sucessfully submitted");</script>';
-        // header('location:login.php');
+         header('location:otp.php?email='.$customerEmail);
     }else{
         echo '<script>alert("something went wrong");</script>';
     }
@@ -128,6 +129,9 @@ if(isset($_POST['register'])){
                           <div class="row">
 	                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
+                                    <?php
+  
+                                    ?>
                                     <label for="FirstName">Full Name</label>
                                     <input type="text" name="customerName" placeholder="" id="FirstName" autofocus="">
                                 </div>
